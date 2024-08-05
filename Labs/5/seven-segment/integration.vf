@@ -1,0 +1,224 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : integration.vf
+// /___/   /\     Timestamp : 08/05/2024 12:43:43
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Classes-2024/Digital System Fundamentals/Labs/5/seven-segment/integration.vf" -w "D:/Classes-2024/Digital System Fundamentals/Labs/5/seven-segment/integration.sch"
+//Design Name: integration
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module ssd4_MUSER_integration(A0, 
+                              A1, 
+                              A2, 
+                              A3, 
+                              a, 
+                              b, 
+                              c, 
+                              d, 
+                              e, 
+                              f, 
+                              g);
+
+    input A0;
+    input A1;
+    input A2;
+    input A3;
+   output a;
+   output b;
+   output c;
+   output d;
+   output e;
+   output f;
+   output g;
+   
+   wire XLXN_109;
+   wire XLXN_111;
+   wire XLXN_113;
+   wire XLXN_114;
+   wire XLXN_117;
+   wire XLXN_118;
+   wire XLXN_119;
+   wire XLXN_125;
+   wire XLXN_129;
+   wire XLXN_130;
+   wire XLXN_131;
+   wire XLXN_132;
+   wire XLXN_134;
+   wire XLXN_135;
+   wire b_DUMMY;
+   wire e_DUMMY;
+   
+   assign b = b_DUMMY;
+   assign e = e_DUMMY;
+   AND2  XLXI_92 (.I0(A0), 
+                 .I1(A1), 
+                 .O(XLXN_129));
+   INV  XLXI_93 (.I(A1), 
+                .O(XLXN_109));
+   INV  XLXI_94 (.I(A0), 
+                .O(XLXN_111));
+   OR2  XLXI_95 (.I0(A0), 
+                .I1(A1), 
+                .O(XLXN_118));
+   NOR2  XLXI_96 (.I0(A2), 
+                 .I1(XLXN_109), 
+                 .O(XLXN_113));
+   AND2  XLXI_97 (.I0(XLXN_109), 
+                 .I1(A2), 
+                 .O(XLXN_114));
+   AND2  XLXI_98 (.I0(A2), 
+                 .I1(XLXN_111), 
+                 .O(XLXN_135));
+   NOR2  XLXI_99 (.I0(A0), 
+                 .I1(XLXN_113), 
+                 .O(XLXN_131));
+   OR2  XLXI_100 (.I0(A0), 
+                 .I1(XLXN_114), 
+                 .O(XLXN_117));
+   INV  XLXI_101 (.I(XLXN_117), 
+                 .O(e_DUMMY));
+   NAND2  XLXI_102 (.I0(XLXN_117), 
+                   .I1(A1), 
+                   .O(XLXN_119));
+   NAND3  XLXI_103 (.I0(XLXN_118), 
+                   .I1(XLXN_119), 
+                   .I2(A2), 
+                   .O(b_DUMMY));
+   NAND3  XLXI_104 (.I0(b_DUMMY), 
+                   .I1(A1), 
+                   .I2(e_DUMMY), 
+                   .O(c));
+   NOR2  XLXI_105 (.I0(XLXN_111), 
+                  .I1(b_DUMMY), 
+                  .O(XLXN_125));
+   OR2  XLXI_106 (.I0(XLXN_125), 
+                 .I1(A3), 
+                 .O(XLXN_130));
+   OR2  XLXI_107 (.I0(XLXN_113), 
+                 .I1(XLXN_130), 
+                 .O(XLXN_134));
+   NOR2  XLXI_108 (.I0(XLXN_129), 
+                  .I1(XLXN_130), 
+                  .O(XLXN_132));
+   OR2  XLXI_109 (.I0(XLXN_135), 
+                 .I1(XLXN_134), 
+                 .O(g));
+   OR2  XLXI_110 (.I0(e_DUMMY), 
+                 .I1(XLXN_134), 
+                 .O(d));
+   NAND2  XLXI_111 (.I0(XLXN_132), 
+                   .I1(XLXN_117), 
+                   .O(a));
+   OR2  XLXI_112 (.I0(XLXN_131), 
+                 .I1(XLXN_130), 
+                 .O(f));
+endmodule
+`timescale 1ns / 1ps
+
+module integration(SW0_P66, 
+                   SW1_P62, 
+                   SW2_P61, 
+                   SW3_P59, 
+                   SW4_P58, 
+                   SW5_P57, 
+                   SW6_P56, 
+                   SW7_P55, 
+                   SSD_A_P41, 
+                   SSD_B_P40, 
+                   SSD_COM_0_P44, 
+                   SSD_COM_1_P43, 
+                   SSD_COM_2_P33, 
+                   SSD_COM_3_P30, 
+                   SSD_C_P35, 
+                   SSD_D_P34, 
+                   SSD_E_P32, 
+                   SSD_F_P29, 
+                   SSD_G_P27);
+
+    input SW0_P66;
+    input SW1_P62;
+    input SW2_P61;
+    input SW3_P59;
+    input SW4_P58;
+    input SW5_P57;
+    input SW6_P56;
+    input SW7_P55;
+   output SSD_A_P41;
+   output SSD_B_P40;
+   output SSD_COM_0_P44;
+   output SSD_COM_1_P43;
+   output SSD_COM_2_P33;
+   output SSD_COM_3_P30;
+   output SSD_C_P35;
+   output SSD_D_P34;
+   output SSD_E_P32;
+   output SSD_F_P29;
+   output SSD_G_P27;
+   
+   wire DATA0;
+   wire DATA1;
+   wire DATA2;
+   wire DATA3;
+   wire SSD0;
+   wire SSD1;
+   wire SSD2;
+   wire SSD3;
+   wire SSD5;
+   wire SSD6;
+   wire SSD7;
+   
+   ssd4_MUSER_integration  XLXI_1 (.A0(DATA0), 
+                                  .A1(DATA1), 
+                                  .A2(DATA2), 
+                                  .A3(DATA3), 
+                                  .a(SSD0), 
+                                  .b(SSD1), 
+                                  .c(SSD2), 
+                                  .d(SSD3), 
+                                  .e(SSD5), 
+                                  .f(SSD6), 
+                                  .g(SSD7));
+   BUF  XLXI_2 (.I(SW4_P58), 
+               .O(DATA0));
+   BUF  XLXI_3 (.I(SW5_P57), 
+               .O(DATA1));
+   BUF  XLXI_4 (.I(SW6_P56), 
+               .O(DATA2));
+   BUF  XLXI_5 (.I(SW7_P55), 
+               .O(DATA3));
+   BUF  XLXI_6 (.I(SW3_P59), 
+               .O(SSD_COM_3_P30));
+   BUF  XLXI_7 (.I(SW2_P61), 
+               .O(SSD_COM_2_P33));
+   BUF  XLXI_8 (.I(SW1_P62), 
+               .O(SSD_COM_1_P43));
+   BUF  XLXI_9 (.I(SW0_P66), 
+               .O(SSD_COM_0_P44));
+   BUF  XLXI_10 (.I(SSD0), 
+                .O(SSD_A_P41));
+   BUF  XLXI_11 (.I(SSD1), 
+                .O(SSD_B_P40));
+   BUF  XLXI_12 (.I(SSD2), 
+                .O(SSD_C_P35));
+   BUF  XLXI_13 (.I(SSD3), 
+                .O(SSD_D_P34));
+   BUF  XLXI_14 (.I(SSD5), 
+                .O(SSD_E_P32));
+   BUF  XLXI_15 (.I(SSD6), 
+                .O(SSD_F_P29));
+   BUF  XLXI_16 (.I(SSD7), 
+                .O(SSD_G_P27));
+endmodule

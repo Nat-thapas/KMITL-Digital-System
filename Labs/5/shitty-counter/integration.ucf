@@ -1,0 +1,13 @@
+
+NET "OSC_P123" LOC = P123;
+
+# PlanAhead Generated physical constraints 
+
+NET "LED0_P82" LOC = P82;
+NET "LED1_P81" LOC = P81;
+NET "LED2_P80" LOC = P80;
+NET "LED3_P79" LOC = P79;
+NET "LED4_P78" LOC = P78;
+NET "LED5_P75" LOC = P75;
+NET "LED6_P74" LOC = P74;
+NET "LED7_P67" LOC = P67;

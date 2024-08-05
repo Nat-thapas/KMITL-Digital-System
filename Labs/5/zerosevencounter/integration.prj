@@ -1,0 +1,4 @@
+verilog work "ssd1d09.vf"
+verilog work "clkdiv1ki.vf"
+verilog work "clkdiv18.vf"
+verilog work "integration.vf"

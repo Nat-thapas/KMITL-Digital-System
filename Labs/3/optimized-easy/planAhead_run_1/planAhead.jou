@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7
+# Build 321239 by xbuild on Fri Sep 27 19:31:35 MDT 2013
+# Start of session at: Tue Jul 16 13:44:07 2024
+# Process ID: 6728
+# Log file: D:/Classes-2024/Digital System Fundamentals/Labs/3/optimized-easy/planAhead_run_1/planAhead.log
+# Journal file: D:/Classes-2024/Digital System Fundamentals/Labs/3/optimized-easy/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source {D:/Classes-2024/Digital System Fundamentals/Labs/3/optimized-easy/pa.fromHdl.tcl}
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin P59 [get_ports A_SW3_P59]
+endgroup
+startgroup
+set_property package_pin P61 [get_ports B__SW2_P61]
+endgroup
+startgroup
+set_property package_pin P62 [get_ports C_SW1_P62]
+endgroup
+startgroup
+set_property package_pin P66 [get_ports D_SW0_P66]
+endgroup
+startgroup
+set_property package_pin P82 [get_ports X_L0_P82]
+endgroup
+save_constraints

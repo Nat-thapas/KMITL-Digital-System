@@ -1,0 +1,378 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : integration.vf
+// /___/   /\     Timestamp : 08/04/2024 00:02:10
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Personal/Projects/Digital Labs/counter/integration.vf" -w "D:/Personal/Projects/Digital Labs/counter/integration.sch"
+//Design Name: integration
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module CB4CE_HXILINX_integration(CEO, Q0, Q1, Q2, Q3, TC, C, CE, CLR);
+   
+   localparam TERMINAL_COUNT = 4'b1111;
+   
+   output             CEO;
+   output             Q0;
+   output             Q1;
+   output             Q2;
+   output             Q3;
+   output             TC;
+
+   input 	      C;	
+   input 	      CE;	
+   input 	      CLR;	
+   
+   reg                Q0;
+   reg                Q1;
+   reg                Q2;
+   reg                Q3;
+   
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  {Q3, Q2, Q1, Q0} <= 4'b0000;
+	else if (CE)
+	  {Q3, Q2, Q1,Q0} <= {Q3, Q2, Q1,Q0} + 1;
+     end
+   
+   assign CEO = TC & CE;
+   assign TC = ({Q3, Q2, Q1, Q0} == TERMINAL_COUNT);
+   
+endmodule
+`timescale 100 ps / 10 ps
+
+module CB16CE_HXILINX_integration(CEO, Q, TC, C, CE, CLR);
+   
+   localparam TERMINAL_COUNT = 16'b1111_1111_1111_1111;
+   
+   output             CEO;
+   output [15:0]      Q;
+   output             TC;
+
+   input 	      C;	
+   input 	      CE;	
+   input 	      CLR;	
+   
+   reg    [15:0]      Q;
+   
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 16'b0000_0000_0000_0000;
+	else if (CE)
+	  Q <= Q + 1;
+     end
+   
+   assign CEO = TC & CE;
+   assign TC = (Q == TERMINAL_COUNT);
+   
+endmodule
+`timescale 1ns / 1ps
+
+module ssd4_MUSER_integration(DATA, 
+                              SSD_GA);
+
+    input [3:0] DATA;
+   output [6:0] SSD_GA;
+   
+   wire XLXN_26;
+   wire XLXN_30;
+   wire XLXN_35;
+   wire XLXN_37;
+   wire XLXN_40;
+   wire XLXN_41;
+   wire XLXN_43;
+   wire XLXN_44;
+   wire XLXN_46;
+   wire XLXN_47;
+   wire XLXN_48;
+   wire XLXN_49;
+   wire XLXN_51;
+   wire XLXN_52;
+   wire XLXN_54;
+   wire XLXN_55;
+   wire XLXN_56;
+   wire XLXN_57;
+   wire XLXN_58;
+   wire XLXN_59;
+   wire XLXN_61;
+   wire XLXN_62;
+   wire XLXN_63;
+   wire XLXN_65;
+   wire XLXN_67;
+   wire XLXN_68;
+   wire XLXN_71;
+   wire XLXN_72;
+   wire XLXN_74;
+   wire XLXN_75;
+   wire XLXN_77;
+   wire XLXN_78;
+   wire XLXN_79;
+   wire XLXN_82;
+   wire XLXN_83;
+   wire XLXN_84;
+   wire XLXN_85;
+   wire XLXN_86;
+   wire XLXN_88;
+   wire XLXN_90;
+   wire XLXN_91;
+   wire [6:0] SSD_GA_DUMMY;
+   
+   assign SSD_GA[6:0] = SSD_GA_DUMMY[6:0];
+   INV  XLXI_2 (.I(DATA[3]), 
+               .O(XLXN_40));
+   INV  XLXI_3 (.I(DATA[2]), 
+               .O(XLXN_35));
+   OR2  XLXI_4 (.I0(DATA[2]), 
+               .I1(DATA[1]), 
+               .O(XLXN_57));
+   INV  XLXI_5 (.I(DATA[0]), 
+               .O(XLXN_30));
+   INV  XLXI_6 (.I(DATA[1]), 
+               .O(XLXN_71));
+   OR2  XLXI_7 (.I0(DATA[3]), 
+               .I1(DATA[0]), 
+               .O(XLXN_26));
+   OR3  XLXI_50 (.I0(DATA[2]), 
+                .I1(DATA[0]), 
+                .I2(XLXN_40), 
+                .O(XLXN_37));
+   AND4  XLXI_51 (.I0(DATA[0]), 
+                 .I1(DATA[3]), 
+                 .I2(DATA[1]), 
+                 .I3(XLXN_35), 
+                 .O(XLXN_55));
+   OR2  XLXI_52 (.I0(XLXN_57), 
+                .I1(DATA[0]), 
+                .O(XLXN_72));
+   OR2  XLXI_53 (.I0(DATA[1]), 
+                .I1(XLXN_30), 
+                .O(XLXN_49));
+   AND2  XLXI_54 (.I0(XLXN_57), 
+                 .I1(DATA[0]), 
+                 .O(XLXN_41));
+   NAND2  XLXI_55 (.I0(DATA[2]), 
+                  .I1(XLXN_26), 
+                  .O(XLXN_43));
+   NAND2  XLXI_56 (.I0(XLXN_57), 
+                  .I1(DATA[3]), 
+                  .O(XLXN_85));
+   AND2  XLXI_57 (.I0(XLXN_30), 
+                 .I1(DATA[1]), 
+                 .O(XLXN_44));
+   AND2  XLXI_58 (.I0(XLXN_35), 
+                 .I1(XLXN_57), 
+                 .O(XLXN_46));
+   NAND2  XLXI_59 (.I0(XLXN_37), 
+                  .I1(XLXN_30), 
+                  .O(XLXN_47));
+   NAND2  XLXI_60 (.I0(XLXN_35), 
+                  .I1(XLXN_37), 
+                  .O(XLXN_48));
+   OR3  XLXI_61 (.I0(DATA[3]), 
+                .I1(XLXN_35), 
+                .I2(XLXN_49), 
+                .O(XLXN_77));
+   OR3  XLXI_62 (.I0(XLXN_49), 
+                .I1(XLXN_35), 
+                .I2(XLXN_40), 
+                .O(XLXN_52));
+   OR2  XLXI_63 (.I0(DATA[3]), 
+                .I1(XLXN_41), 
+                .O(XLXN_51));
+   NAND2  XLXI_64 (.I0(XLXN_43), 
+                  .I1(XLXN_57), 
+                  .O(XLXN_78));
+   OR2  XLXI_65 (.I0(DATA[3]), 
+                .I1(XLXN_44), 
+                .O(XLXN_54));
+   OR2  XLXI_66 (.I0(DATA[0]), 
+                .I1(XLXN_46), 
+                .O(XLXN_68));
+   NAND2  XLXI_67 (.I0(XLXN_57), 
+                  .I1(XLXN_47), 
+                  .O(XLXN_79));
+   NAND2  XLXI_68 (.I0(XLXN_48), 
+                  .I1(XLXN_49), 
+                  .O(XLXN_56));
+   NAND2  XLXI_69 (.I0(DATA[3]), 
+                  .I1(XLXN_52), 
+                  .O(XLXN_67));
+   AND2  XLXI_70 (.I0(XLXN_51), 
+                 .I1(XLXN_52), 
+                 .O(XLXN_58));
+   NAND2  XLXI_71 (.I0(XLXN_54), 
+                  .I1(XLXN_49), 
+                  .O(XLXN_59));
+   OR2  XLXI_72 (.I0(DATA[2]), 
+                .I1(XLXN_55), 
+                .O(XLXN_62));
+   NAND2  XLXI_73 (.I0(XLXN_57), 
+                  .I1(XLXN_56), 
+                  .O(XLXN_84));
+   NOR2  XLXI_74 (.I0(DATA[1]), 
+                 .I1(XLXN_58), 
+                 .O(XLXN_61));
+   NAND2  XLXI_75 (.I0(XLXN_77), 
+                  .I1(XLXN_59), 
+                  .O(XLXN_63));
+   NAND2  XLXI_76 (.I0(XLXN_62), 
+                  .I1(XLXN_63), 
+                  .O(SSD_GA_DUMMY[1]));
+   OR2  XLXI_77 (.I0(XLXN_61), 
+                .I1(XLXN_55), 
+                .O(XLXN_65));
+   NAND3  XLXI_78 (.I0(XLXN_68), 
+                  .I1(XLXN_67), 
+                  .I2(SSD_GA_DUMMY[1]), 
+                  .O(SSD_GA_DUMMY[5]));
+   NAND2  XLXI_79 (.I0(SSD_GA_DUMMY[1]), 
+                  .I1(DATA[3]), 
+                  .O(XLXN_74));
+   OR2  XLXI_80 (.I0(SSD_GA_DUMMY[1]), 
+                .I1(XLXN_71), 
+                .O(XLXN_75));
+   NAND2  XLXI_81 (.I0(XLXN_72), 
+                  .I1(XLXN_65), 
+                  .O(SSD_GA_DUMMY[0]));
+   NAND2  XLXI_82 (.I0(SSD_GA_DUMMY[5]), 
+                  .I1(XLXN_40), 
+                  .O(XLXN_90));
+   AND4  XLXI_83 (.I0(XLXN_74), 
+                 .I1(XLXN_75), 
+                 .I2(XLXN_77), 
+                 .I3(XLXN_78), 
+                 .O(XLXN_82));
+   NAND2  XLXI_84 (.I0(SSD_GA_DUMMY[0]), 
+                  .I1(XLXN_79), 
+                  .O(XLXN_83));
+   NAND2  XLXI_85 (.I0(SSD_GA_DUMMY[0]), 
+                  .I1(XLXN_30), 
+                  .O(XLXN_86));
+   INV  XLXI_86 (.I(XLXN_82), 
+                .O(SSD_GA_DUMMY[6]));
+   NAND2  XLXI_87 (.I0(XLXN_83), 
+                  .I1(XLXN_84), 
+                  .O(SSD_GA_DUMMY[3]));
+   NAND2  XLXI_88 (.I0(XLXN_86), 
+                  .I1(XLXN_85), 
+                  .O(SSD_GA_DUMMY[4]));
+   NAND2  XLXI_89 (.I0(DATA[0]), 
+                  .I1(SSD_GA_DUMMY[3]), 
+                  .O(XLXN_88));
+   AND4  XLXI_90 (.I0(SSD_GA_DUMMY[4]), 
+                 .I1(XLXN_88), 
+                 .I2(XLXN_37), 
+                 .I3(XLXN_90), 
+                 .O(XLXN_91));
+   INV  XLXI_91 (.I(XLXN_91), 
+                .O(SSD_GA_DUMMY[2]));
+endmodule
+`timescale 1ns / 1ps
+
+module integration(OSC_P123, 
+                   L0_P82, 
+                   L1_P81, 
+                   L2_P80, 
+                   SSD_A_P41, 
+                   SSD_B_P40, 
+                   SSD_COM0_P44, 
+                   SSD_C_P35, 
+                   SSD_D_P34, 
+                   SSD_E_P32, 
+                   SSD_F_P29, 
+                   SSD_G_P27);
+
+    input OSC_P123;
+   output L0_P82;
+   output L1_P81;
+   output L2_P80;
+   output SSD_A_P41;
+   output SSD_B_P40;
+   output SSD_COM0_P44;
+   output SSD_C_P35;
+   output SSD_D_P34;
+   output SSD_E_P32;
+   output SSD_F_P29;
+   output SSD_G_P27;
+   
+   wire [3:0] DATA;
+   wire [15:0] NUM_OFFSET_16;
+   wire [6:0] SSD;
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_17;
+   wire XLXN_47;
+   wire XLXN_51;
+   wire L1_P81_DUMMY;
+   
+   assign L1_P81 = L1_P81_DUMMY;
+   (* HU_SET = "XLXI_1_0" *) 
+   CB16CE_HXILINX_integration  XLXI_1 (.C(OSC_P123), 
+                                      .CE(XLXN_3), 
+                                      .CLR(L1_P81_DUMMY), 
+                                      .CEO(XLXN_4), 
+                                      .Q(), 
+                                      .TC(L0_P82));
+   (* HU_SET = "XLXI_2_1" *) 
+   CB16CE_HXILINX_integration  XLXI_2 (.C(OSC_P123), 
+                                      .CE(XLXN_4), 
+                                      .CLR(L1_P81_DUMMY), 
+                                      .CEO(), 
+                                      .Q(NUM_OFFSET_16[15:0]), 
+                                      .TC());
+   VCC  XLXI_3 (.P(XLXN_3));
+   AND4  XLXI_5 (.I0(NUM_OFFSET_16[8]), 
+                .I1(NUM_OFFSET_16[5]), 
+                .I2(NUM_OFFSET_16[3]), 
+                .I3(NUM_OFFSET_16[2]), 
+                .O(L1_P81_DUMMY));
+   (* HU_SET = "XLXI_6_2" *) 
+   CB4CE_HXILINX_integration  XLXI_6 (.C(L1_P81_DUMMY), 
+                                     .CE(XLXN_51), 
+                                     .CLR(XLXN_17), 
+                                     .CEO(), 
+                                     .Q0(DATA[0]), 
+                                     .Q1(DATA[1]), 
+                                     .Q2(DATA[2]), 
+                                     .Q3(DATA[3]), 
+                                     .TC());
+   AND2  XLXI_8 (.I0(DATA[3]), 
+                .I1(DATA[1]), 
+                .O(XLXN_17));
+   ssd4_MUSER_integration  XLXI_9 (.DATA(DATA[3:0]), 
+                                  .SSD_GA(SSD[6:0]));
+   BUF  XLXI_10 (.I(SSD[0]), 
+                .O(SSD_A_P41));
+   BUF  XLXI_11 (.I(SSD[1]), 
+                .O(SSD_B_P40));
+   BUF  XLXI_12 (.I(SSD[2]), 
+                .O(SSD_C_P35));
+   BUF  XLXI_13 (.I(SSD[3]), 
+                .O(SSD_D_P34));
+   BUF  XLXI_14 (.I(SSD[4]), 
+                .O(SSD_E_P32));
+   BUF  XLXI_15 (.I(SSD[5]), 
+                .O(SSD_F_P29));
+   BUF  XLXI_16 (.I(SSD[6]), 
+                .O(SSD_G_P27));
+   BUF  XLXI_17 (.I(XLXN_47), 
+                .O(SSD_COM0_P44));
+   GND  XLXI_18 (.G(XLXN_47));
+   BUF  XLXI_19 (.I(OSC_P123), 
+                .O(L2_P80));
+   VCC  XLXI_20 (.P(XLXN_51));
+endmodule

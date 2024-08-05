@@ -1,0 +1,4 @@
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,D:/Classes-2024/Digital System Fundamentals/Labs/5/shitty-counter/integration.vf,-w,D:/Classes-2024/Digital System Fundamentals/Labs/5/shitty-counter/integration.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,D:/Classes-2024/Digital System Fundamentals/Labs/5/shitty-counter/clkdivh10.vf,-w,D:/Classes-2024/Digital System Fundamentals/Labs/5/shitty-counter/clkdivh10.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,D:/Classes-2024/Digital System Fundamentals/Labs/5/shitty-counter/clkdiv20.vf,-w,D:/Classes-2024/Digital System Fundamentals/Labs/5/shitty-counter/clkdiv20.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,D:/Classes-2024/Digital System Fundamentals/Labs/5/shitty-counter/integration.vf,-w,D:/Classes-2024/Digital System Fundamentals/Labs/5/shitty-counter/integration.sch

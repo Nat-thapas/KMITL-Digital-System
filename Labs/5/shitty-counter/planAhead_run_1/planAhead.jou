@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7
+# Build 321239 by xbuild on Fri Sep 27 19:31:35 MDT 2013
+# Start of session at: Mon Aug 05 13:13:34 2024
+# Process ID: 18068
+# Log file: D:/Classes-2024/Digital System Fundamentals/Labs/5/shitty-counter/planAhead_run_1/planAhead.log
+# Journal file: D:/Classes-2024/Digital System Fundamentals/Labs/5/shitty-counter/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source {D:/Classes-2024/Digital System Fundamentals/Labs/5/shitty-counter/pa.fromHdl.tcl}
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin P82 [get_ports LED0_P82]
+endgroup
+startgroup
+set_property package_pin P123 [get_ports OSC_P123]
+endgroup
+save_constraints

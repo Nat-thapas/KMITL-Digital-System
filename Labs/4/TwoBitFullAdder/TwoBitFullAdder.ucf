@@ -1,0 +1,9 @@
+# PlanAhead Generated physical constraints 
+
+NET "A_SW0_P66" LOC = P66;
+NET "B_SW1_P62" LOC = P62;
+NET "C1_LED0_P82" LOC = P82;
+NET "C_SW2_P61" LOC = P61;
+NET "D_SW3_P59" LOC = P59;
+NET "S0_LED2_P80" LOC = P80;
+NET "S1_LED1_P81" LOC = P81;

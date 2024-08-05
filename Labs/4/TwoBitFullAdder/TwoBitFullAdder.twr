@@ -1,0 +1,62 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml TwoBitFullAdder.twx TwoBitFullAdder.ncd -o
+TwoBitFullAdder.twr TwoBitFullAdder.pcf -ucf TwoBitFullAdder.ucf
+
+Design file:              TwoBitFullAdder.ncd
+Physical constraint file: TwoBitFullAdder.pcf
+Device,package,speed:     xc6slx9,tqg144,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+A_SW0_P66      |C1_LED0_P82    |    8.274|
+A_SW0_P66      |S0_LED2_P80    |    7.124|
+A_SW0_P66      |S1_LED1_P81    |    7.971|
+B_SW1_P62      |C1_LED0_P82    |    8.217|
+B_SW1_P62      |S0_LED2_P80    |    7.199|
+B_SW1_P62      |S1_LED1_P81    |    7.914|
+C_SW2_P61      |C1_LED0_P82    |    8.027|
+C_SW2_P61      |S1_LED1_P81    |    7.892|
+D_SW3_P59      |C1_LED0_P82    |    8.315|
+D_SW3_P59      |S1_LED1_P81    |    8.180|
+---------------+---------------+---------+
+
+
+Analysis completed Tue Jul 23 13:13:44 2024 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4569 MB
+
+
+

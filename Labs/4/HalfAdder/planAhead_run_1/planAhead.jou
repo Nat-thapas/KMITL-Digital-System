@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7
+# Build 321239 by xbuild on Fri Sep 27 19:31:35 MDT 2013
+# Start of session at: Tue Jul 23 09:26:55 2024
+# Process ID: 368
+# Log file: D:/Classes-2024/Digital System Fundamentals/Labs/4/HalfAdder/planAhead_run_1/planAhead.log
+# Journal file: D:/Classes-2024/Digital System Fundamentals/Labs/4/HalfAdder/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source {D:/Classes-2024/Digital System Fundamentals/Labs/4/HalfAdder/pa.fromHdl.tcl}
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin P55 [get_ports A_SW7_P55]
+endgroup
+startgroup
+set_property package_pin P56 [get_ports B_SW6_P56]
+endgroup
+startgroup
+set_property package_pin P67 [get_ports X_LED7_P67]
+endgroup
+startgroup
+set_property package_pin P74 [get_ports Y_LED6_P74]
+endgroup
+save_constraints

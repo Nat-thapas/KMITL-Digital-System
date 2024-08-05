@@ -1,0 +1,3 @@
+verilog work "clkdivh10.vf"
+verilog work "clkdiv20.vf"
+verilog work "integration.vf"

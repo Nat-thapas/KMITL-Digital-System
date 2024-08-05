@@ -1,0 +1,19 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sun Aug 04 00:02:24 2024
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "SSD_F_P29" LOCATE = SITE "P29" LEVEL 1;
+COMP "L1_P81" LOCATE = SITE "P81" LEVEL 1;
+COMP "SSD_G_P27" LOCATE = SITE "P27" LEVEL 1;
+COMP "SSD_COM0_P44" LOCATE = SITE "P44" LEVEL 1;
+COMP "SSD_A_P41" LOCATE = SITE "P41" LEVEL 1;
+COMP "L2_P80" LOCATE = SITE "P80" LEVEL 1;
+COMP "SSD_B_P40" LOCATE = SITE "P40" LEVEL 1;
+COMP "SSD_C_P35" LOCATE = SITE "P35" LEVEL 1;
+COMP "SSD_D_P34" LOCATE = SITE "P34" LEVEL 1;
+COMP "OSC_P123" LOCATE = SITE "P123" LEVEL 1;
+COMP "SSD_E_P32" LOCATE = SITE "P32" LEVEL 1;
+COMP "L0_P82" LOCATE = SITE "P82" LEVEL 1;
+SCHEMATIC END;
+

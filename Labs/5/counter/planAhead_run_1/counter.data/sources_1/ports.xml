@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<Interface Version="1" Minor="1">
+	<Ifc Id="ROOT" Top="1">
+		<Port Id="OSC_P123" Dir="IN"/>
+		<Port Id="SSD_A_P41" Dir="OUT"/>
+		<Port Id="SSD_B_P40" Dir="OUT"/>
+		<Port Id="SSD_COM0_P44" Dir="OUT"/>
+		<Port Id="SSD_C_P35" Dir="OUT"/>
+		<Port Id="SSD_D_P34" Dir="OUT"/>
+		<Port Id="SSD_E_P32" Dir="OUT"/>
+		<Port Id="SSD_F_P29" Dir="OUT"/>
+		<Port Id="SSD_G_P27" Dir="OUT"/>
+	</Ifc>
+</Interface>
+

@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\Personal\Projects\Digital Labs\counter\integration.ncd
+OUTFILE=D:\Personal\Projects\Digital Labs\counter\integration.bit
+FAMILY=Spartan6
+PART=xc6slx9-3tqg144
+WORKINGDIR=D:\Personal\Projects\Digital Labs\counter
+LICENSE=WebPack
+USER_INFO=__0_0_0

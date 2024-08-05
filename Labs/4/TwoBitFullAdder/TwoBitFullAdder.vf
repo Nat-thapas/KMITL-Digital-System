@@ -1,0 +1,65 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : TwoBitFullAdder.vf
+// /___/   /\     Timestamp : 07/23/2024 09:41:32
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Classes-2024/Digital System Fundamentals/Labs/4/TwoBitFullAdder/TwoBitFullAdder.vf" -w "D:/Classes-2024/Digital System Fundamentals/Labs/4/TwoBitFullAdder/TwoBitFullAdder.sch"
+//Design Name: TwoBitFullAdder
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module TwoBitFullAdder(A_SW0_P66, 
+                       B_SW1_P62, 
+                       C_SW2_P61, 
+                       D_SW3_P59, 
+                       C1_LED0_P82, 
+                       S0_LED2_P80, 
+                       S1_LED1_P81);
+
+    input A_SW0_P66;
+    input B_SW1_P62;
+    input C_SW2_P61;
+    input D_SW3_P59;
+   output C1_LED0_P82;
+   output S0_LED2_P80;
+   output S1_LED1_P81;
+   
+   wire XLXN_2;
+   wire XLXN_9;
+   wire XLXN_10;
+   wire XLXN_11;
+   
+   XOR2  XLXI_1 (.I0(B_SW1_P62), 
+                .I1(A_SW0_P66), 
+                .O(S0_LED2_P80));
+   AND2  XLXI_2 (.I0(B_SW1_P62), 
+                .I1(A_SW0_P66), 
+                .O(XLXN_2));
+   XOR2  XLXI_5 (.I0(XLXN_9), 
+                .I1(XLXN_2), 
+                .O(S1_LED1_P81));
+   AND2  XLXI_6 (.I0(XLXN_9), 
+                .I1(XLXN_2), 
+                .O(XLXN_10));
+   XOR2  XLXI_7 (.I0(D_SW3_P59), 
+                .I1(C_SW2_P61), 
+                .O(XLXN_9));
+   AND2  XLXI_8 (.I0(D_SW3_P59), 
+                .I1(C_SW2_P61), 
+                .O(XLXN_11));
+   OR2  XLXI_9 (.I0(XLXN_11), 
+               .I1(XLXN_10), 
+               .O(C1_LED0_P82));
+endmodule

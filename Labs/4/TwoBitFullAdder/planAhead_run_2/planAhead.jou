@@ -1,0 +1,33 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7
+# Build 321239 by xbuild on Fri Sep 27 19:31:35 MDT 2013
+# Start of session at: Tue Jul 23 09:41:44 2024
+# Process ID: 13248
+# Log file: D:/Classes-2024/Digital System Fundamentals/Labs/4/TwoBitFullAdder/planAhead_run_2/planAhead.log
+# Journal file: D:/Classes-2024/Digital System Fundamentals/Labs/4/TwoBitFullAdder/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source {D:/Classes-2024/Digital System Fundamentals/Labs/4/TwoBitFullAdder/pa.fromHdl.tcl}
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin P66 [get_ports A_SW0_P66]
+endgroup
+startgroup
+set_property package_pin P62 [get_ports B_SW1_P62]
+endgroup
+startgroup
+set_property package_pin P82 [get_ports C1_LED0_P82]
+endgroup
+startgroup
+set_property package_pin P61 [get_ports C_SW2_P61]
+endgroup
+startgroup
+set_property package_pin P59 [get_ports D_SW3_P59]
+endgroup
+startgroup
+set_property package_pin P80 [get_ports S0_LED2_P80]
+endgroup
+startgroup
+set_property package_pin P81 [get_ports S1_LED1_P81]
+endgroup
+save_constraints
