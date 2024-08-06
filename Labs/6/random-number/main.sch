@@ -8,14 +8,9 @@
     <netlist>
         <signal name="XLXN_1" />
         <signal name="OSC" />
-        <signal name="XLXN_6" />
-        <signal name="XLXN_11" />
-        <signal name="XLXN_7" />
-        <signal name="XLXN_15" />
         <signal name="XLXN_16" />
         <signal name="XLXN_17" />
-        <signal name="erinstinfs">
-        </signal>
+        <signal name="erinstinfs" />
         <signal name="D0(3:0)" />
         <signal name="D0(0)" />
         <signal name="D0(1)" />
@@ -26,8 +21,6 @@
         <signal name="D1(1)" />
         <signal name="D1(2)" />
         <signal name="D1(3)" />
-        <signal name="XLXN_32(3:0)" />
-        <signal name="XLXN_33(3:0)" />
         <signal name="SSD(6:0)" />
         <signal name="COM(1:0)" />
         <signal name="SSD(0)" />
@@ -50,7 +43,6 @@
         <signal name="SSD_COM0" />
         <signal name="XLXN_65" />
         <signal name="BTN3" />
-        <signal name="XLXN_70" />
         <signal name="MN3" />
         <signal name="MN2" />
         <signal name="MN1" />
@@ -60,24 +52,13 @@
         <signal name="MN5" />
         <signal name="MN4" />
         <signal name="XLXN_91" />
-        <signal name="XLXN_92" />
-        <signal name="XLXN_93" />
-        <signal name="XLXN_8" />
-        <signal name="XLXN_95" />
-        <signal name="XLXN_96" />
-        <signal name="XLXN_97" />
-        <signal name="XLXN_99(3:0)" />
-        <signal name="XLXN_100(3:0)" />
-        <signal name="XLXN_101(3:0)" />
         <signal name="Z(3:0)" />
         <signal name="Z(3)" />
         <signal name="Z(2)" />
         <signal name="Z(1)" />
         <signal name="Z(0)" />
-        <signal name="rstarst">
-        </signal>
-        <signal name="arstarst">
-        </signal>
+        <signal name="rstarst" />
+        <signal name="arstarst" />
         <signal name="XLXN_111(3:0)" />
         <signal name="O(3:0)" />
         <signal name="O(3)" />
@@ -93,6 +74,7 @@
         <signal name="LED1" />
         <signal name="LED2" />
         <signal name="LED3" />
+        <signal name="XLXN_115" />
         <port polarity="Input" name="OSC" />
         <port polarity="Output" name="SSD_b" />
         <port polarity="Output" name="SSD_c" />
@@ -181,23 +163,6 @@
             <line x2="144" y1="-144" y2="-144" x1="64" />
             <line x2="64" y1="-48" y2="-144" x1="64" />
         </blockdef>
-        <blockdef name="cd4ce">
-            <timestamp>2000-1-1T10:10:10</timestamp>
-            <line x2="320" y1="-192" y2="-192" x1="384" />
-            <rect width="256" x="64" y="-512" height="448" />
-            <line x2="64" y1="-128" y2="-144" x1="80" />
-            <line x2="80" y1="-112" y2="-128" x1="64" />
-            <line x2="64" y1="-32" y2="-32" x1="192" />
-            <line x2="192" y1="-64" y2="-32" x1="192" />
-            <line x2="320" y1="-128" y2="-128" x1="384" />
-            <line x2="320" y1="-256" y2="-256" x1="384" />
-            <line x2="320" y1="-320" y2="-320" x1="384" />
-            <line x2="320" y1="-384" y2="-384" x1="384" />
-            <line x2="320" y1="-448" y2="-448" x1="384" />
-            <line x2="64" y1="-32" y2="-32" x1="0" />
-            <line x2="64" y1="-192" y2="-192" x1="0" />
-            <line x2="64" y1="-128" y2="-128" x1="0" />
-        </blockdef>
         <blockdef name="clkdiv128">
             <timestamp>2024-8-6T4:9:8</timestamp>
             <rect width="256" x="64" y="-64" height="64" />
@@ -222,6 +187,16 @@
             <rect width="64" x="0" y="-108" height="24" />
             <line x2="0" y1="-32" y2="-32" x1="64" />
             <rect width="64" x="0" y="-44" height="24" />
+            <line x2="384" y1="-96" y2="-96" x1="320" />
+        </blockdef>
+        <blockdef name="counterbcd">
+            <timestamp>2024-8-6T7:31:26</timestamp>
+            <rect width="256" x="64" y="-320" height="320" />
+            <line x2="0" y1="-288" y2="-288" x1="64" />
+            <line x2="384" y1="-32" y2="-32" x1="320" />
+            <line x2="384" y1="-288" y2="-288" x1="320" />
+            <line x2="384" y1="-224" y2="-224" x1="320" />
+            <line x2="384" y1="-160" y2="-160" x1="320" />
             <line x2="384" y1="-96" y2="-96" x1="320" />
         </blockdef>
         <block symbolname="clkdiv1ki" name="XLXI_1">
@@ -321,37 +296,6 @@
             <blockpin signalname="D1(0)" name="I" />
             <blockpin signalname="MN4" name="O" />
         </block>
-        <block symbolname="cd4ce" name="XLXI_38">
-            <blockpin signalname="erinstinfs" name="C" />
-            <blockpin signalname="XLXN_8" name="CE" />
-            <blockpin signalname="XLXN_96" name="CLR" />
-            <blockpin signalname="XLXN_92" name="CEO" />
-            <blockpin signalname="D0(0)" name="Q0" />
-            <blockpin signalname="D0(1)" name="Q1" />
-            <blockpin signalname="D0(2)" name="Q2" />
-            <blockpin signalname="D0(3)" name="Q3" />
-            <blockpin name="TC" />
-        </block>
-        <block symbolname="cd4ce" name="XLXI_39">
-            <blockpin signalname="erinstinfs" name="C" />
-            <blockpin signalname="XLXN_92" name="CE" />
-            <blockpin signalname="XLXN_97" name="CLR" />
-            <blockpin name="CEO" />
-            <blockpin signalname="D1(0)" name="Q0" />
-            <blockpin signalname="D1(1)" name="Q1" />
-            <blockpin signalname="D1(2)" name="Q2" />
-            <blockpin signalname="D1(3)" name="Q3" />
-            <blockpin name="TC" />
-        </block>
-        <block symbolname="vcc" name="XLXI_7">
-            <blockpin signalname="XLXN_8" name="P" />
-        </block>
-        <block symbolname="gnd" name="XLXI_41">
-            <blockpin signalname="XLXN_96" name="G" />
-        </block>
-        <block symbolname="gnd" name="XLXI_42">
-            <blockpin signalname="XLXN_97" name="G" />
-        </block>
         <block symbolname="clkdiv128" name="XLXI_44">
             <blockpin signalname="XLXN_91" name="CLK" />
             <blockpin signalname="XLXN_1" name="CLKO" />
@@ -417,6 +361,22 @@
             <blockpin signalname="D0(3:0)" name="D0(3:0)" />
             <blockpin signalname="Z(3:0)" name="D1(3:0)" />
             <blockpin signalname="arstarst" name="EQ" />
+        </block>
+        <block symbolname="counterbcd" name="XLXI_71">
+            <blockpin signalname="erinstinfs" name="CLK" />
+            <blockpin signalname="XLXN_115" name="CLKO" />
+            <blockpin signalname="D0(0)" name="Q0" />
+            <blockpin signalname="D0(1)" name="Q1" />
+            <blockpin signalname="D0(2)" name="Q2" />
+            <blockpin signalname="D0(3)" name="Q3" />
+        </block>
+        <block symbolname="counterbcd" name="XLXI_72">
+            <blockpin signalname="XLXN_115" name="CLK" />
+            <blockpin name="CLKO" />
+            <blockpin signalname="D1(0)" name="Q0" />
+            <blockpin signalname="D1(1)" name="Q1" />
+            <blockpin signalname="D1(2)" name="Q2" />
+            <blockpin signalname="D1(3)" name="Q3" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="5440" height="3520">
@@ -729,35 +689,6 @@
         <branch name="XLXN_91">
             <wire x2="800" y1="160" y2="160" x1="704" />
         </branch>
-        <instance x="320" y="1360" name="XLXI_38" orien="R0" />
-        <instance x="944" y="1360" name="XLXI_39" orien="R0" />
-        <branch name="XLXN_92">
-            <wire x2="944" y1="1168" y2="1168" x1="704" />
-        </branch>
-        <branch name="XLXN_8">
-            <wire x2="176" y1="1072" y2="1168" x1="176" />
-            <wire x2="320" y1="1168" y2="1168" x1="176" />
-        </branch>
-        <instance x="112" y="1072" name="XLXI_7" orien="R0" />
-        <instance x="208" y="1520" name="XLXI_41" orien="R0" />
-        <instance x="848" y="1536" name="XLXI_42" orien="R0" />
-        <branch name="XLXN_96">
-            <wire x2="320" y1="1328" y2="1328" x1="272" />
-            <wire x2="272" y1="1328" y2="1392" x1="272" />
-        </branch>
-        <branch name="XLXN_97">
-            <wire x2="944" y1="1328" y2="1328" x1="912" />
-            <wire x2="912" y1="1328" y2="1408" x1="912" />
-        </branch>
-        <branch name="erinstinfs">
-            <wire x2="256" y1="704" y2="1232" x1="256" />
-            <wire x2="320" y1="1232" y2="1232" x1="256" />
-            <wire x2="864" y1="704" y2="704" x1="256" />
-            <wire x2="864" y1="704" y2="1232" x1="864" />
-            <wire x2="944" y1="1232" y2="1232" x1="864" />
-            <wire x2="864" y1="512" y2="512" x1="672" />
-            <wire x2="864" y1="512" y2="704" x1="864" />
-        </branch>
         <branch name="BTN3">
             <wire x2="416" y1="480" y2="480" x1="384" />
         </branch>
@@ -941,6 +872,22 @@
             <wire x2="1136" y1="2448" y2="2448" x1="992" />
             <wire x2="1136" y1="2448" y2="2656" x1="1136" />
             <wire x2="1296" y1="2656" y2="2656" x1="1136" />
+        </branch>
+        <branch name="XLXN_115">
+            <wire x2="880" y1="1168" y2="1168" x1="704" />
+            <wire x2="944" y1="912" y2="912" x1="880" />
+            <wire x2="880" y1="912" y2="1168" x1="880" />
+        </branch>
+        <instance x="320" y="1200" name="XLXI_71" orien="R0">
+        </instance>
+        <instance x="944" y="1200" name="XLXI_72" orien="R0">
+        </instance>
+        <branch name="erinstinfs">
+            <wire x2="256" y1="704" y2="912" x1="256" />
+            <wire x2="320" y1="912" y2="912" x1="256" />
+            <wire x2="896" y1="704" y2="704" x1="256" />
+            <wire x2="896" y1="512" y2="512" x1="672" />
+            <wire x2="896" y1="512" y2="704" x1="896" />
         </branch>
     </sheet>
 </drawing>

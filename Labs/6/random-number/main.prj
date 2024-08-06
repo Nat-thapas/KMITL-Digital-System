@@ -1,6 +1,8 @@
 verilog work "ssd2d09b.vf"
 verilog work "mux4.vf"
+verilog work "counterbcd.vf"
 verilog work "compare4.vf"
 verilog work "clkdiv1ki.vf"
 verilog work "clkdiv128.vf"
 verilog work "main.vf"
+verilog work "comp4.vf"

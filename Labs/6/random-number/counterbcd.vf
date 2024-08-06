@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : counterbcd.vf
-// /___/   /\     Timestamp : 08/06/2024 11:01:34
+// /___/   /\     Timestamp : 08/06/2024 14:32:26
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -57,90 +57,69 @@ module FJKC_HXILINX_counterbcd(Q, C, CLR, J, K);
 endmodule
 `timescale 1ns / 1ps
 
-module counterbcd(CE, 
-                  CLK, 
-                  CEO, 
+module counterbcd(CLK, 
+                  CLKO, 
                   Q0, 
                   Q1, 
                   Q2, 
-                  Q3, 
-                  TC);
+                  Q3);
 
-    input CE;
     input CLK;
-   output CEO;
+   output CLKO;
    output Q0;
    output Q1;
    output Q2;
    output Q3;
-   output TC;
    
-   wire XLXN_1;
    wire XLXN_12;
-   wire XLXN_14;
-   wire XLXN_22;
-   wire XLXN_29;
-   wire XLXN_31;
-   wire XLXN_33;
-   wire XLXN_35;
+   wire XLXN_77;
+   wire XLXN_78;
    wire Q0_DUMMY;
    wire Q1_DUMMY;
    wire Q2_DUMMY;
    wire Q3_DUMMY;
-   wire TC_DUMMY;
+   wire CLKO_DUMMY;
    
+   assign CLKO = CLKO_DUMMY;
    assign Q0 = Q0_DUMMY;
    assign Q1 = Q1_DUMMY;
    assign Q2 = Q2_DUMMY;
    assign Q3 = Q3_DUMMY;
-   assign TC = TC_DUMMY;
-   (* HU_SET = "XLXI_1_0" *) 
-   FJKC_HXILINX_counterbcd  XLXI_1 (.C(XLXN_1), 
-                                   .CLR(XLXN_35), 
+   (* HU_SET = "XLXI_1_23" *) 
+   FJKC_HXILINX_counterbcd  XLXI_1 (.C(CLK), 
+                                   .CLR(CLKO_DUMMY), 
                                    .J(XLXN_12), 
                                    .K(XLXN_12), 
                                    .Q(Q0_DUMMY));
-   (* HU_SET = "XLXI_2_1" *) 
-   FJKC_HXILINX_counterbcd  XLXI_2 (.C(XLXN_1), 
-                                   .CLR(XLXN_35), 
-                                   .J(XLXN_14), 
-                                   .K(XLXN_14), 
+   (* HU_SET = "XLXI_2_24" *) 
+   FJKC_HXILINX_counterbcd  XLXI_2 (.C(CLK), 
+                                   .CLR(CLKO_DUMMY), 
+                                   .J(Q0_DUMMY), 
+                                   .K(Q0_DUMMY), 
                                    .Q(Q1_DUMMY));
-   (* HU_SET = "XLXI_3_2" *) 
-   FJKC_HXILINX_counterbcd  XLXI_3 (.C(XLXN_1), 
-                                   .CLR(XLXN_35), 
-                                   .J(XLXN_22), 
-                                   .K(XLXN_22), 
+   (* HU_SET = "XLXI_3_26" *) 
+   FJKC_HXILINX_counterbcd  XLXI_3 (.C(CLK), 
+                                   .CLR(CLKO_DUMMY), 
+                                   .J(XLXN_77), 
+                                   .K(XLXN_77), 
                                    .Q(Q2_DUMMY));
-   (* HU_SET = "XLXI_4_3" *) 
-   FJKC_HXILINX_counterbcd  XLXI_4 (.C(XLXN_1), 
-                                   .CLR(XLXN_35), 
-                                   .J(XLXN_31), 
-                                   .K(XLXN_31), 
+   (* HU_SET = "XLXI_4_25" *) 
+   FJKC_HXILINX_counterbcd  XLXI_4 (.C(CLK), 
+                                   .CLR(CLKO_DUMMY), 
+                                   .J(XLXN_78), 
+                                   .K(XLXN_78), 
                                    .Q(Q3_DUMMY));
-   AND2  XLXI_25 (.I0(CE), 
-                 .I1(CLK), 
-                 .O(XLXN_1));
    VCC  XLXI_31 (.P(XLXN_12));
-   AND2  XLXI_32 (.I0(Q0_DUMMY), 
-                 .I1(XLXN_33), 
-                 .O(XLXN_14));
-   AND2  XLXI_33 (.I0(Q1_DUMMY), 
-                 .I1(Q0_DUMMY), 
-                 .O(XLXN_22));
-   AND2  XLXI_34 (.I0(Q2_DUMMY), 
-                 .I1(XLXN_22), 
-                 .O(XLXN_29));
-   AND2  XLXI_35 (.I0(Q0_DUMMY), 
-                 .I1(Q3_DUMMY), 
-                 .O(TC_DUMMY));
-   OR2  XLXI_36 (.I0(XLXN_29), 
-                .I1(TC_DUMMY), 
-                .O(XLXN_31));
-   INV  XLXI_37 (.I(Q3_DUMMY), 
-                .O(XLXN_33));
-   GND  XLXI_38 (.G(XLXN_35));
-   AND2  XLXI_39 (.I0(CE), 
-                 .I1(TC_DUMMY), 
-                 .O(CEO));
+   AND2  XLXI_54 (.I0(Q0_DUMMY), 
+                 .I1(Q1_DUMMY), 
+                 .O(XLXN_77));
+   AND3  XLXI_55 (.I0(Q0_DUMMY), 
+                 .I1(Q1_DUMMY), 
+                 .I2(Q2_DUMMY), 
+                 .O(XLXN_78));
+   AND4B2  XLXI_67 (.I0(Q0_DUMMY), 
+                   .I1(Q2_DUMMY), 
+                   .I2(Q1_DUMMY), 
+                   .I3(Q3_DUMMY), 
+                   .O(CLKO_DUMMY));
 endmodule
