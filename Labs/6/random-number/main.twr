@@ -1,0 +1,87 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf -ucf main.ucf
+
+Design file:              main.ncd
+Physical constraint file: main.pcf
+Device,package,speed:     xc6slx9,tqg144,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock BTN3 to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+LED0        |        12.418(R)|      SLOW  |         6.602(R)|      FAST  |erinstinfs        |   0.000|
+LED1        |        12.482(R)|      SLOW  |         6.728(R)|      FAST  |erinstinfs        |   0.000|
+LED2        |        12.525(R)|      SLOW  |         6.474(R)|      FAST  |erinstinfs        |   0.000|
+LED3        |        12.558(R)|      SLOW  |         6.360(R)|      FAST  |erinstinfs        |   0.000|
+MN0         |        10.744(R)|      SLOW  |         6.496(R)|      FAST  |erinstinfs        |   0.000|
+MN1         |        10.950(R)|      SLOW  |         6.636(R)|      FAST  |erinstinfs        |   0.000|
+MN2         |        10.955(R)|      SLOW  |         6.643(R)|      FAST  |erinstinfs        |   0.000|
+MN3         |        10.817(R)|      SLOW  |         6.554(R)|      FAST  |erinstinfs        |   0.000|
+MN4         |        10.537(R)|      SLOW  |         6.360(R)|      FAST  |erinstinfs        |   0.000|
+MN5         |        10.545(R)|      SLOW  |         6.383(R)|      FAST  |erinstinfs        |   0.000|
+MN6         |        10.782(R)|      SLOW  |         6.523(R)|      FAST  |erinstinfs        |   0.000|
+MN7         |        10.616(R)|      SLOW  |         6.421(R)|      FAST  |erinstinfs        |   0.000|
+SSD_a       |        14.905(R)|      SLOW  |         7.280(R)|      FAST  |erinstinfs        |   0.000|
+SSD_b       |        13.782(R)|      SLOW  |         7.425(R)|      FAST  |erinstinfs        |   0.000|
+SSD_c       |        14.101(R)|      SLOW  |         7.407(R)|      FAST  |erinstinfs        |   0.000|
+SSD_d       |        15.201(R)|      SLOW  |         7.493(R)|      FAST  |erinstinfs        |   0.000|
+SSD_e       |        13.689(R)|      SLOW  |         7.600(R)|      FAST  |erinstinfs        |   0.000|
+SSD_f       |        14.375(R)|      SLOW  |         7.010(R)|      FAST  |erinstinfs        |   0.000|
+SSD_g       |        15.991(R)|      SLOW  |         6.931(R)|      FAST  |erinstinfs        |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock BTN3
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+BTN3           |    2.088|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock OSC
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+OSC            |    0.909|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Tue Aug 06 11:54:59 2024 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4586 MB
+
+
+

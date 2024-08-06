@@ -1,0 +1,5 @@
+select figure at 6962 3310 8 -wires -sn=1
+select all in -1425 -495 6962 3310 -wires -enclosed -sn=1
+select figure at 5796 3181 8 -wires -sn=1
+select all in -2147483648 -2147483648 2147483647 2147483647 -sn=1
+select all in -2147483648 -2147483648 2147483647 2147483647 -sn=1

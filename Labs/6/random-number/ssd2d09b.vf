@@ -1,0 +1,210 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : ssd2d09b.vf
+// /___/   /\     Timestamp : 08/06/2024 10:11:02
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Classes-2024/Digital System Fundamentals Shared/Labs/6/random-number/ssd2d09b.vf" -w "D:/Classes-2024/Digital System Fundamentals Shared/Labs/6/random-number/ssd2d09b.sch"
+//Design Name: ssd2d09b
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module FJKC_HXILINX_ssd2d09b(Q, C, CLR, J, K);
+   
+   output             Q;
+
+   input 	      C;	
+   input 	      CLR;	
+   input              J;
+   input              K;
+   
+   parameter INIT = 1'b0;
+   reg                Q = INIT;
+
+
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 1'b0;
+	else
+        begin
+           if(!J)
+           begin
+              if(K)
+              Q <= 1'b0;
+           end
+           else
+           begin
+              if(!K)
+              Q <= 1'b1;
+              else 
+              Q <= !Q;
+           end
+        end
+     end
+   
+endmodule
+`timescale 1ns / 1ps
+
+module ssd2d09b(CLK, 
+                D0, 
+                D1, 
+                COM, 
+                SSD_GA);
+
+    input CLK;
+    input [3:0] D0;
+    input [3:0] D1;
+   output [1:0] COM;
+   output [6:0] SSD_GA;
+   
+   wire [3:0] DATA;
+   wire XLXN_109;
+   wire XLXN_111;
+   wire XLXN_113;
+   wire XLXN_114;
+   wire XLXN_117;
+   wire XLXN_118;
+   wire XLXN_119;
+   wire XLXN_125;
+   wire XLXN_129;
+   wire XLXN_130;
+   wire XLXN_131;
+   wire XLXN_132;
+   wire XLXN_134;
+   wire XLXN_135;
+   wire XLXN_136;
+   wire XLXN_137;
+   wire XLXN_139;
+   wire XLXN_141;
+   wire XLXN_142;
+   wire XLXN_143;
+   wire XLXN_146;
+   wire XLXN_147;
+   wire XLXN_148;
+   wire XLXN_149;
+   wire [1:0] COM_DUMMY;
+   wire [6:0] SSD_GA_DUMMY;
+   
+   assign COM[1:0] = COM_DUMMY[1:0];
+   assign SSD_GA[6:0] = SSD_GA_DUMMY[6:0];
+   AND2  XLXI_92 (.I0(DATA[0]), 
+                 .I1(DATA[1]), 
+                 .O(XLXN_129));
+   INV  XLXI_93 (.I(DATA[1]), 
+                .O(XLXN_109));
+   INV  XLXI_94 (.I(DATA[0]), 
+                .O(XLXN_111));
+   OR2  XLXI_95 (.I0(DATA[0]), 
+                .I1(DATA[1]), 
+                .O(XLXN_118));
+   NOR2  XLXI_96 (.I0(DATA[2]), 
+                 .I1(XLXN_109), 
+                 .O(XLXN_113));
+   AND2  XLXI_97 (.I0(XLXN_109), 
+                 .I1(DATA[2]), 
+                 .O(XLXN_114));
+   AND2  XLXI_98 (.I0(DATA[2]), 
+                 .I1(XLXN_111), 
+                 .O(XLXN_135));
+   NOR2  XLXI_99 (.I0(DATA[0]), 
+                 .I1(XLXN_113), 
+                 .O(XLXN_131));
+   OR2  XLXI_100 (.I0(DATA[0]), 
+                 .I1(XLXN_114), 
+                 .O(XLXN_117));
+   INV  XLXI_101 (.I(XLXN_117), 
+                 .O(SSD_GA_DUMMY[4]));
+   NAND2  XLXI_102 (.I0(XLXN_117), 
+                   .I1(DATA[1]), 
+                   .O(XLXN_119));
+   NAND3  XLXI_103 (.I0(XLXN_118), 
+                   .I1(XLXN_119), 
+                   .I2(DATA[2]), 
+                   .O(SSD_GA_DUMMY[1]));
+   NAND3  XLXI_104 (.I0(SSD_GA_DUMMY[1]), 
+                   .I1(DATA[1]), 
+                   .I2(SSD_GA_DUMMY[4]), 
+                   .O(SSD_GA_DUMMY[2]));
+   NOR2  XLXI_105 (.I0(XLXN_111), 
+                  .I1(SSD_GA_DUMMY[1]), 
+                  .O(XLXN_125));
+   OR2  XLXI_106 (.I0(XLXN_125), 
+                 .I1(DATA[3]), 
+                 .O(XLXN_130));
+   OR2  XLXI_107 (.I0(XLXN_113), 
+                 .I1(XLXN_130), 
+                 .O(XLXN_134));
+   NOR2  XLXI_108 (.I0(XLXN_129), 
+                  .I1(XLXN_130), 
+                  .O(XLXN_132));
+   OR2  XLXI_109 (.I0(XLXN_135), 
+                 .I1(XLXN_134), 
+                 .O(SSD_GA_DUMMY[6]));
+   OR2  XLXI_110 (.I0(SSD_GA_DUMMY[4]), 
+                 .I1(XLXN_134), 
+                 .O(SSD_GA_DUMMY[3]));
+   NAND2  XLXI_111 (.I0(XLXN_132), 
+                   .I1(XLXN_117), 
+                   .O(SSD_GA_DUMMY[0]));
+   OR2  XLXI_112 (.I0(XLXN_131), 
+                 .I1(XLXN_130), 
+                 .O(SSD_GA_DUMMY[5]));
+   AND2  XLXI_114 (.I0(COM_DUMMY[1]), 
+                  .I1(D0[3]), 
+                  .O(XLXN_136));
+   AND2B1  XLXI_115 (.I0(COM_DUMMY[1]), 
+                    .I1(D1[3]), 
+                    .O(XLXN_137));
+   OR2  XLXI_116 (.I0(XLXN_137), 
+                 .I1(XLXN_136), 
+                 .O(DATA[3]));
+   (* HU_SET = "XLXI_117_46" *) 
+   FJKC_HXILINX_ssd2d09b  XLXI_117 (.C(CLK), 
+                                   .CLR(XLXN_141), 
+                                   .J(XLXN_139), 
+                                   .K(XLXN_139), 
+                                   .Q(COM_DUMMY[1]));
+   VCC  XLXI_118 (.P(XLXN_139));
+   GND  XLXI_119 (.G(XLXN_141));
+   AND2  XLXI_120 (.I0(COM_DUMMY[1]), 
+                  .I1(D0[2]), 
+                  .O(XLXN_142));
+   OR2  XLXI_121 (.I0(XLXN_143), 
+                 .I1(XLXN_142), 
+                 .O(DATA[2]));
+   AND2B1  XLXI_122 (.I0(COM_DUMMY[1]), 
+                    .I1(D1[2]), 
+                    .O(XLXN_143));
+   AND2  XLXI_126 (.I0(COM_DUMMY[1]), 
+                  .I1(D0[1]), 
+                  .O(XLXN_146));
+   OR2  XLXI_127 (.I0(XLXN_147), 
+                 .I1(XLXN_146), 
+                 .O(DATA[1]));
+   AND2B1  XLXI_128 (.I0(COM_DUMMY[1]), 
+                    .I1(D1[1]), 
+                    .O(XLXN_147));
+   AND2  XLXI_129 (.I0(COM_DUMMY[1]), 
+                  .I1(D0[0]), 
+                  .O(XLXN_148));
+   OR2  XLXI_130 (.I0(XLXN_149), 
+                 .I1(XLXN_148), 
+                 .O(DATA[0]));
+   AND2B1  XLXI_131 (.I0(COM_DUMMY[1]), 
+                    .I1(D1[0]), 
+                    .O(XLXN_149));
+   INV  XLXI_156 (.I(COM_DUMMY[1]), 
+                 .O(COM_DUMMY[0]));
+endmodule

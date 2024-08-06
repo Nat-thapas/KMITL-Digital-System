@@ -1,0 +1,131 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : clkdiv128.vf
+// /___/   /\     Timestamp : 08/06/2024 11:09:25
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Classes-2024/Digital System Fundamentals Shared/Labs/6/random-number/clkdiv128.vf" -w "D:/Classes-2024/Digital System Fundamentals Shared/Labs/6/random-number/clkdiv128.sch"
+//Design Name: clkdiv128
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module FJKC_HXILINX_clkdiv128(Q, C, CLR, J, K);
+   
+   output             Q;
+
+   input 	      C;	
+   input 	      CLR;	
+   input              J;
+   input              K;
+   
+   parameter INIT = 1'b0;
+   reg                Q = INIT;
+
+
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 1'b0;
+	else
+        begin
+           if(!J)
+           begin
+              if(K)
+              Q <= 1'b0;
+           end
+           else
+           begin
+              if(!K)
+              Q <= 1'b1;
+              else 
+              Q <= !Q;
+           end
+        end
+     end
+   
+endmodule
+`timescale 1ns / 1ps
+
+module clkdiv128(CLK, 
+                 CLKO);
+
+    input CLK;
+   output CLKO;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_6;
+   wire XLXN_7;
+   wire XLXN_8;
+   wire XLXN_9;
+   wire XLXN_10;
+   wire XLXN_11;
+   wire XLXN_12;
+   wire XLXN_13;
+   wire XLXN_14;
+   wire XLXN_22;
+   
+   (* HU_SET = "XLXI_1_21" *) 
+   FJKC_HXILINX_clkdiv128  XLXI_1 (.C(CLK), 
+                                  .CLR(XLXN_22), 
+                                  .J(XLXN_8), 
+                                  .K(XLXN_8), 
+                                  .Q(XLXN_1));
+   (* HU_SET = "XLXI_2_22" *) 
+   FJKC_HXILINX_clkdiv128  XLXI_2 (.C(XLXN_1), 
+                                  .CLR(XLXN_22), 
+                                  .J(XLXN_9), 
+                                  .K(XLXN_9), 
+                                  .Q(XLXN_2));
+   (* HU_SET = "XLXI_3_23" *) 
+   FJKC_HXILINX_clkdiv128  XLXI_3 (.C(XLXN_2), 
+                                  .CLR(XLXN_22), 
+                                  .J(XLXN_10), 
+                                  .K(XLXN_10), 
+                                  .Q(XLXN_3));
+   (* HU_SET = "XLXI_4_24" *) 
+   FJKC_HXILINX_clkdiv128  XLXI_4 (.C(XLXN_3), 
+                                  .CLR(XLXN_22), 
+                                  .J(XLXN_11), 
+                                  .K(XLXN_11), 
+                                  .Q(XLXN_7));
+   (* HU_SET = "XLXI_5_25" *) 
+   FJKC_HXILINX_clkdiv128  XLXI_5 (.C(XLXN_7), 
+                                  .CLR(XLXN_22), 
+                                  .J(XLXN_12), 
+                                  .K(XLXN_12), 
+                                  .Q(XLXN_4));
+   (* HU_SET = "XLXI_6_26" *) 
+   FJKC_HXILINX_clkdiv128  XLXI_6 (.C(XLXN_4), 
+                                  .CLR(XLXN_22), 
+                                  .J(XLXN_13), 
+                                  .K(XLXN_13), 
+                                  .Q(XLXN_6));
+   (* HU_SET = "XLXI_7_27" *) 
+   FJKC_HXILINX_clkdiv128  XLXI_7 (.C(XLXN_6), 
+                                  .CLR(XLXN_22), 
+                                  .J(XLXN_14), 
+                                  .K(XLXN_14), 
+                                  .Q(CLKO));
+   VCC  XLXI_9 (.P(XLXN_8));
+   VCC  XLXI_10 (.P(XLXN_9));
+   VCC  XLXI_11 (.P(XLXN_10));
+   VCC  XLXI_12 (.P(XLXN_11));
+   VCC  XLXI_13 (.P(XLXN_12));
+   VCC  XLXI_14 (.P(XLXN_13));
+   VCC  XLXI_15 (.P(XLXN_14));
+   GND  XLXI_18 (.G(XLXN_22));
+endmodule
