@@ -17,7 +17,7 @@
 </TR>
 <TR ALIGN=LEFT>
 <TD BGCOLOR='#FFFF99'><B>Project ID (random number)</B></TD>
-<TD><xtag-property name="RandomID">b45b48000dd4412fa69f44c14b2e8b67</xtag-property>.<xtag-property name="ProjectID">66A9589AFCF048529B2AE419A1B4FC9F</xtag-property>.<xtag-property name="ProjectIteration">1</xtag-property></TD>
+<TD><xtag-property name="RandomID">b45b48000dd4412fa69f44c14b2e8b67</xtag-property>.<xtag-property name="ProjectID">66A9589AFCF048529B2AE419A1B4FC9F</xtag-property>.<xtag-property name="ProjectIteration">2</xtag-property></TD>
 <TD BGCOLOR='#FFFF99'><B>Target Package:</B></TD>
 <TD><xtag-property name="TargetPackage">tqg144</xtag-property></TD>
 </TR>
@@ -29,7 +29,7 @@
 </TR>
 <TR ALIGN=LEFT>
 <TD BGCOLOR='#FFFF99'><B>Date Generated</B></TD>
-<TD><xtag-property name="Date Generated">2024-08-05T14:39:57</xtag-property></TD>
+<TD><xtag-property name="Date Generated">2024-08-06T12:42:49</xtag-property></TD>
 <TD BGCOLOR='#FFFF99'><B>Tool Flow</B></TD>
 <TD><xtag-property name="ToolFlow">ISE</xtag-property></TD>
 </TR>
@@ -183,7 +183,7 @@
 </xtag-group>
 <xtag-group><xtag-group-name name="REG_SR">REG_SR</xtag-group-name>
 <UL>
-<LI><xtag-item3>CK=[CK:28] [CK_INV:0]</xtag-item3></LI>
+<LI><xtag-item3>CK=[CK:26] [CK_INV:2]</xtag-item3></LI>
 <LI><xtag-item3>LATCH_OR_FF=[FF:28]</xtag-item3></LI>
 <LI><xtag-item3>SRINIT=[SRINIT0:28]</xtag-item3></LI>
 <LI><xtag-item3>SYNC_ATTR=[ASYNC:28]</xtag-item3></LI>
@@ -193,7 +193,7 @@
 </xtag-group>
 <xtag-group><xtag-group-name name="SLICEX">SLICEX</xtag-group-name>
 <UL>
-<LI><xtag-item3>CLK=[CLK:28] [CLK_INV:0]</xtag-item3></LI>
+<LI><xtag-item3>CLK=[CLK:26] [CLK_INV:2]</xtag-item3></LI>
 </UL>
 </xtag-group>
 </TD>
@@ -311,6 +311,12 @@
 <LI><xtag-cmdline>par -w -intstyle ise -ol high -mt off &lt;fname&gt;.ncd &lt;fname&gt;.ncd &lt;fname&gt;.pcf</xtag-cmdline></LI>
 <LI><xtag-cmdline>trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml &lt;fname&gt;.twx &lt;fname&gt;.ncd -o &lt;fname&gt;.twr &lt;fname&gt;.pcf -ucf &lt;fname&gt;.ucf</xtag-cmdline></LI>
 <LI><xtag-cmdline>bitgen -intstyle ise -f &lt;fname&gt;.ut &lt;fname&gt;.ncd</xtag-cmdline></LI>
+<LI><xtag-cmdline>xst -intstyle ise -ifn &lt;ise_file&gt;</xtag-cmdline></LI>
+<LI><xtag-cmdline>ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc &lt;fname&gt;.ucf -p xc6slx9-tqg144-3 &lt;ise_file&gt; &lt;fname&gt;.ngd</xtag-cmdline></LI>
+<LI><xtag-cmdline>map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o &lt;fname&gt;.ncd &lt;fname&gt;.ngd &lt;fname&gt;.pcf</xtag-cmdline></LI>
+<LI><xtag-cmdline>par -w -intstyle ise -ol high -mt off &lt;fname&gt;.ncd &lt;fname&gt;.ncd &lt;fname&gt;.pcf</xtag-cmdline></LI>
+<LI><xtag-cmdline>trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml &lt;fname&gt;.twx &lt;fname&gt;.ncd -o &lt;fname&gt;.twr &lt;fname&gt;.pcf -ucf &lt;fname&gt;.ucf</xtag-cmdline></LI>
+<LI><xtag-cmdline>bitgen -intstyle ise -f &lt;fname&gt;.ut &lt;fname&gt;.ncd</xtag-cmdline></LI>
 </xtag-section></UL></TD></TR>
 </TABLE>
 &nbsp;<BR><TABLE BORDER CELLSPACING=0 WIDTH='100%'><xtag-section name="RunStatistics"><TR ALIGN=CENTER BGCOLOR='#99CCFF'><TD COLSPAN=8><B>Software Quality</B></TD></TR><TR ALIGN=LEFT><TD COLSPAN=8><B>Run Statistics</B></TD></TR><TR ALIGN=CENTER BGCOLOR='#FFFF99'><TD><B>Program Name</B></TD><TD><B>Runs Started</B></TD><TD><B>Runs Finished</B></TD><TD><B>Errors</B></TD><TD><B>Fatal Errors</B></TD><TD><B>Internal Errors</B></TD><TD><B>Exceptions</B></TD><TD><B>Core Dumps</B></TD></TR>
@@ -327,8 +333,8 @@
 </tr>
 <tr>
   <td><xtag-program-name>bitgen</xtag-program-name></td>
-  <td><xtag-total-run-started>25</xtag-total-run-started></td>
-  <td><xtag-total-run-finished>25</xtag-total-run-finished></td>
+  <td><xtag-total-run-started>49</xtag-total-run-started></td>
+  <td><xtag-total-run-finished>49</xtag-total-run-finished></td>
   <td><xtag-total-error>0</xtag-total-error></td>
   <td><xtag-total-fatal-error>0</xtag-total-fatal-error></td>
   <td><xtag-total-internal-error>0</xtag-total-internal-error></td>
@@ -337,8 +343,8 @@
 </tr>
 <tr>
   <td><xtag-program-name>map</xtag-program-name></td>
-  <td><xtag-total-run-started>27</xtag-total-run-started></td>
-  <td><xtag-total-run-finished>25</xtag-total-run-finished></td>
+  <td><xtag-total-run-started>51</xtag-total-run-started></td>
+  <td><xtag-total-run-finished>49</xtag-total-run-finished></td>
   <td><xtag-total-error>0</xtag-total-error></td>
   <td><xtag-total-fatal-error>0</xtag-total-fatal-error></td>
   <td><xtag-total-internal-error>0</xtag-total-internal-error></td>
@@ -347,8 +353,8 @@
 </tr>
 <tr>
   <td><xtag-program-name>ngdbuild</xtag-program-name></td>
-  <td><xtag-total-run-started>32</xtag-total-run-started></td>
-  <td><xtag-total-run-finished>32</xtag-total-run-finished></td>
+  <td><xtag-total-run-started>57</xtag-total-run-started></td>
+  <td><xtag-total-run-finished>57</xtag-total-run-finished></td>
   <td><xtag-total-error>0</xtag-total-error></td>
   <td><xtag-total-fatal-error>0</xtag-total-fatal-error></td>
   <td><xtag-total-internal-error>0</xtag-total-internal-error></td>
@@ -357,8 +363,8 @@
 </tr>
 <tr>
   <td><xtag-program-name>par</xtag-program-name></td>
-  <td><xtag-total-run-started>25</xtag-total-run-started></td>
-  <td><xtag-total-run-finished>25</xtag-total-run-finished></td>
+  <td><xtag-total-run-started>49</xtag-total-run-started></td>
+  <td><xtag-total-run-finished>49</xtag-total-run-finished></td>
   <td><xtag-total-error>0</xtag-total-error></td>
   <td><xtag-total-fatal-error>0</xtag-total-fatal-error></td>
   <td><xtag-total-internal-error>0</xtag-total-internal-error></td>
@@ -367,8 +373,8 @@
 </tr>
 <tr>
   <td><xtag-program-name>trce</xtag-program-name></td>
-  <td><xtag-total-run-started>25</xtag-total-run-started></td>
-  <td><xtag-total-run-finished>25</xtag-total-run-finished></td>
+  <td><xtag-total-run-started>49</xtag-total-run-started></td>
+  <td><xtag-total-run-finished>49</xtag-total-run-finished></td>
   <td><xtag-total-error>0</xtag-total-error></td>
   <td><xtag-total-fatal-error>0</xtag-total-fatal-error></td>
   <td><xtag-total-internal-error>0</xtag-total-internal-error></td>
@@ -377,8 +383,8 @@
 </tr>
 <tr>
   <td><xtag-program-name>xst</xtag-program-name></td>
-  <td><xtag-total-run-started>42</xtag-total-run-started></td>
-  <td><xtag-total-run-finished>42</xtag-total-run-finished></td>
+  <td><xtag-total-run-started>68</xtag-total-run-started></td>
+  <td><xtag-total-run-finished>68</xtag-total-run-finished></td>
   <td><xtag-total-error>0</xtag-total-error></td>
   <td><xtag-total-fatal-error>0</xtag-total-fatal-error></td>
   <td><xtag-total-internal-error>0</xtag-total-internal-error></td>
@@ -392,10 +398,13 @@
 <TR VALIGN=TOP><TD COLSPAN=2><xtag-group><B><xtag-group-name name="OpenedHelpFiles">
 Help files</xtag-group-name></B></TD></TR>
 <TR><TD><xtag-search-item>/doc/usenglish/isehelp/pn_p_showing_hiding_panels.htm</xtag-search-item> ( <xtag-count-property>1</xtag-count-property> )</TD>
-<TD><xtag-search-item>/doc/usenglish/isehelp/spartan6/libs_le_buf.htm</xtag-search-item> ( <xtag-count-property>1</xtag-count-property> )</TD>
+<TD><xtag-search-item>/doc/usenglish/isehelp/spartan6/libs_le_and2.htm</xtag-search-item> ( <xtag-count-property>1</xtag-count-property> )</TD>
 
-</TR><TR><TD><xtag-search-item>/doc/usenglish/isehelp/spartan6/libs_le_bufio2.htm</xtag-search-item> ( <xtag-count-property>1</xtag-count-property> )</TD>
-<TD><xtag-search-item>/doc/usenglish/isehelp/spartan6/libs_le_cb16ce.htm</xtag-search-item> ( <xtag-count-property>1</xtag-count-property> )</TD>
+</TR><TR><TD><xtag-search-item>/doc/usenglish/isehelp/spartan6/libs_le_buf.htm</xtag-search-item> ( <xtag-count-property>1</xtag-count-property> )</TD>
+<TD><xtag-search-item>/doc/usenglish/isehelp/spartan6/libs_le_bufio2.htm</xtag-search-item> ( <xtag-count-property>1</xtag-count-property> )</TD>
+
+</TR><TR><TD><xtag-search-item>/doc/usenglish/isehelp/spartan6/libs_le_cb16ce.htm</xtag-search-item> ( <xtag-count-property>1</xtag-count-property> )</TD>
+<TD><xtag-search-item>/doc/usenglish/isehelp/spartan6/libs_le_cd4ce.htm</xtag-search-item> ( <xtag-count-property>2</xtag-count-property> )</TD>
 
 </TR><TR><TD><xtag-search-item>/doc/usenglish/isehelp/spartan6/libs_le_dcm_clkgen.htm</xtag-search-item> ( <xtag-count-property>1</xtag-count-property> )</TD>
 <TD><xtag-search-item>/doc/usenglish/isehelp/spartan6/libs_le_decode8.htm</xtag-search-item> ( <xtag-count-property>1</xtag-count-property> )</TD>
@@ -403,22 +412,28 @@ Help files</xtag-group-name></B></TD></TR>
 </TR><TR><TD><xtag-search-item>/doc/usenglish/isehelp/spartan6/libs_le_fd.htm</xtag-search-item> ( <xtag-count-property>1</xtag-count-property> )</TD>
 <TD><xtag-search-item>/doc/usenglish/isehelp/spartan6/libs_le_fdc.htm</xtag-search-item> ( <xtag-count-property>1</xtag-count-property> )</TD>
 
-</TR><TR><TD><xtag-search-item>/doc/usenglish/isehelp/spartan6/libs_le_fjkc.htm</xtag-search-item> ( <xtag-count-property>3</xtag-count-property> )</TD>
-<TD><xtag-search-item>/doc/usenglish/isehelp/spartan6/libs_le_fjkce.htm</xtag-search-item> ( <xtag-count-property>1</xtag-count-property> )</TD>
+</TR><TR><TD><xtag-search-item>/doc/usenglish/isehelp/spartan6/libs_le_fds_1.htm</xtag-search-item> ( <xtag-count-property>1</xtag-count-property> )</TD>
+<TD><xtag-search-item>/doc/usenglish/isehelp/spartan6/libs_le_fjkc.htm</xtag-search-item> ( <xtag-count-property>1</xtag-count-property> )</TD>
 
-</TR><TR><TD><xtag-search-item>/doc/usenglish/isehelp/spartan6/libs_le_fjkp.htm</xtag-search-item> ( <xtag-count-property>1</xtag-count-property> )</TD>
-<TD><xtag-search-item>/doc/usenglish/isehelp/spartan6/libs_le_fjkpe.htm</xtag-search-item> ( <xtag-count-property>1</xtag-count-property> )</TD>
+</TR><TR><TD><xtag-search-item>/doc/usenglish/isehelp/spartan6/libs_le_fjkce.htm</xtag-search-item> ( <xtag-count-property>1</xtag-count-property> )</TD>
+<TD><xtag-search-item>/doc/usenglish/isehelp/spartan6/libs_le_fjkp.htm</xtag-search-item> ( <xtag-count-property>1</xtag-count-property> )</TD>
 
-</TR><TR><TD><xtag-search-item>/doc/usenglish/isehelp/spartan6/libs_le_ifd.htm</xtag-search-item> ( <xtag-count-property>1</xtag-count-property> )</TD>
-<TD><xtag-search-item>/doc/usenglish/isehelp/spartan6/libs_le_ifdi.htm</xtag-search-item> ( <xtag-count-property>1</xtag-count-property> )</TD>
+</TR><TR><TD><xtag-search-item>/doc/usenglish/isehelp/spartan6/libs_le_fjkpe.htm</xtag-search-item> ( <xtag-count-property>1</xtag-count-property> )</TD>
+<TD><xtag-search-item>/doc/usenglish/isehelp/spartan6/libs_le_ifd.htm</xtag-search-item> ( <xtag-count-property>1</xtag-count-property> )</TD>
 
-</TR><TR><TD><xtag-search-item>/doc/usenglish/isehelp/spartan6/libs_le_ifdx.htm</xtag-search-item> ( <xtag-count-property>1</xtag-count-property> )</TD>
-<TD><xtag-search-item>/doc/usenglish/isehelp/spartan6/libs_le_ildx.htm</xtag-search-item> ( <xtag-count-property>1</xtag-count-property> )</TD>
+</TR><TR><TD><xtag-search-item>/doc/usenglish/isehelp/spartan6/libs_le_ifdi.htm</xtag-search-item> ( <xtag-count-property>1</xtag-count-property> )</TD>
+<TD><xtag-search-item>/doc/usenglish/isehelp/spartan6/libs_le_ifdx.htm</xtag-search-item> ( <xtag-count-property>1</xtag-count-property> )</TD>
+
+</TR><TR><TD><xtag-search-item>/doc/usenglish/isehelp/spartan6/libs_le_ildx.htm</xtag-search-item> ( <xtag-count-property>1</xtag-count-property> )</TD>
+<TD><xtag-search-item>/doc/usenglish/isehelp/spartan6/libs_le_iodelay2.htm</xtag-search-item> ( <xtag-count-property>1</xtag-count-property> )</TD>
 
 </TR><TR><TD><xtag-search-item>/doc/usenglish/isehelp/spartan6/libs_le_ld.htm</xtag-search-item> ( <xtag-count-property>1</xtag-count-property> )</TD>
+<TD><xtag-search-item>/doc/usenglish/isehelp/spartan6/libs_le_muxcy.htm</xtag-search-item> ( <xtag-count-property>1</xtag-count-property> )</TD>
+
+</TR><TR><TD><xtag-search-item>/doc/usenglish/isehelp/spartan6/libs_le_muxf5.htm</xtag-search-item> ( <xtag-count-property>1</xtag-count-property> )</TD>
 <TD><xtag-search-item>/doc/usenglish/isehelp/spartan6/libs_le_ofde.htm</xtag-search-item> ( <xtag-count-property>1</xtag-count-property> )</TD>
 
-</TR><TR><TD><xtag-search-item>http://www.xilinx.com/cgi-bin/docs/ndoc?t=user+guides+s6</xtag-search-item> ( <xtag-count-property>1</xtag-count-property> )</TD>
+</TR><TR><TD><xtag-search-item>http://www.xilinx.com/cgi-bin/docs/ndoc?t=user+guides+s6</xtag-search-item> ( <xtag-count-property>2</xtag-count-property> )</TD>
 </TR></xtag-group></xtag-section></TABLE>
 &nbsp;<BR><TABLE BORDER CELLSPACING=0 WIDTH='100%'>
 <xtag-section name="Project Statistics">
@@ -443,27 +458,28 @@ Help files</xtag-group-name></B></TD></TR>
 <TD><xtag-design-property-name>PROP_intProjectCreationTimestamp</xtag-design-property-name>=<xtag-design-property-value>2024-08-05T14:07:38</xtag-design-property-value></TD>
 
 </TR><TR><TD><xtag-design-property-name>PROP_intWbtProjectID</xtag-design-property-name>=<xtag-design-property-value>66A9589AFCF048529B2AE419A1B4FC9F</xtag-design-property-value></TD>
-<TD><xtag-process-property-name>PROP_intWbtProjectIteration</xtag-process-property-name>=<xtag-process-property-value>1</xtag-process-property-value></TD>
+<TD><xtag-process-property-name>PROP_intWbtProjectIteration</xtag-process-property-name>=<xtag-process-property-value>2</xtag-process-property-value></TD>
 
 </TR><TR><TD><xtag-design-property-name>PROP_intWorkingDirLocWRTProjDir</xtag-design-property-name>=<xtag-design-property-value>Same</xtag-design-property-value></TD>
 <TD><xtag-design-property-name>PROP_intWorkingDirUsed</xtag-design-property-name>=<xtag-design-property-value>No</xtag-design-property-value></TD>
 
 </TR><TR><TD><xtag-process-property-name>PROP_lockPinsUcfFile</xtag-process-property-name>=<xtag-process-property-value>changed</xtag-process-property-value></TD>
-<TD><xtag-design-property-name>PROP_AutoTop</xtag-design-property-name>=<xtag-design-property-value>true</xtag-design-property-value></TD>
+<TD><xtag-process-property-name>PROP_xilxBitgStart_IntDone</xtag-process-property-name>=<xtag-process-property-value>true</xtag-process-property-value></TD>
 
-</TR><TR><TD><xtag-design-property-name>PROP_DevFamily</xtag-design-property-name>=<xtag-design-property-value>Spartan6</xtag-design-property-value></TD>
-<TD><xtag-design-property-name>PROP_DevDevice</xtag-design-property-name>=<xtag-design-property-value>xc6slx9</xtag-design-property-value></TD>
+</TR><TR><TD><xtag-design-property-name>PROP_AutoTop</xtag-design-property-name>=<xtag-design-property-value>true</xtag-design-property-value></TD>
+<TD><xtag-design-property-name>PROP_DevFamily</xtag-design-property-name>=<xtag-design-property-value>Spartan6</xtag-design-property-value></TD>
 
-</TR><TR><TD><xtag-design-property-name>PROP_DevFamilyPMName</xtag-design-property-name>=<xtag-design-property-value>spartan6</xtag-design-property-value></TD>
-<TD><xtag-design-property-name>PROP_DevPackage</xtag-design-property-name>=<xtag-design-property-value>tqg144</xtag-design-property-value></TD>
+</TR><TR><TD><xtag-design-property-name>PROP_DevDevice</xtag-design-property-name>=<xtag-design-property-value>xc6slx9</xtag-design-property-value></TD>
+<TD><xtag-design-property-name>PROP_DevFamilyPMName</xtag-design-property-name>=<xtag-design-property-value>spartan6</xtag-design-property-value></TD>
 
-</TR><TR><TD><xtag-design-property-name>PROP_Synthesis_Tool</xtag-design-property-name>=<xtag-design-property-value>XST (VHDL/Verilog)</xtag-design-property-value></TD>
-<TD><xtag-design-property-name>PROP_DevSpeed</xtag-design-property-name>=<xtag-design-property-value>-3</xtag-design-property-value></TD>
+</TR><TR><TD><xtag-design-property-name>PROP_DevPackage</xtag-design-property-name>=<xtag-design-property-value>tqg144</xtag-design-property-value></TD>
+<TD><xtag-design-property-name>PROP_Synthesis_Tool</xtag-design-property-name>=<xtag-design-property-value>XST (VHDL/Verilog)</xtag-design-property-value></TD>
 
-</TR><TR><TD><xtag-design-property-name>PROP_PreferredLanguage</xtag-design-property-name>=<xtag-design-property-value>Verilog</xtag-design-property-value></TD>
-<TD><xtag-source-property-name>FILE_SCHEMATIC</xtag-source-property-name>=<xtag-source-property-value>4</xtag-source-property-value></TD>
+</TR><TR><TD><xtag-design-property-name>PROP_DevSpeed</xtag-design-property-name>=<xtag-design-property-value>-3</xtag-design-property-value></TD>
+<TD><xtag-design-property-name>PROP_PreferredLanguage</xtag-design-property-name>=<xtag-design-property-value>Verilog</xtag-design-property-value></TD>
 
-</TR><TR><TD><xtag-source-property-name>FILE_UCF</xtag-source-property-name>=<xtag-source-property-value>1</xtag-source-property-value></TD>
+</TR><TR><TD><xtag-source-property-name>FILE_SCHEMATIC</xtag-source-property-name>=<xtag-source-property-value>4</xtag-source-property-value></TD>
+<TD><xtag-source-property-name>FILE_UCF</xtag-source-property-name>=<xtag-source-property-value>1</xtag-source-property-value></TD>
 </TR></xtag-section></TABLE>
 &nbsp;<BR><TABLE BORDER CELLSPACING=0 WIDTH='100%'>
 <xtag-section name="UnisimStatistics">
@@ -490,7 +506,7 @@ Help files</xtag-group-name></B></TD></TR>
 </TR>
 <TR>
 <TD><xtag-preunisim-param-name>NGDBUILD_NUM_GND</xtag-preunisim-param-name>=<xtag-preunisim-param-value>1</xtag-preunisim-param-value></TD>
-<TD><xtag-preunisim-param-name>NGDBUILD_NUM_INV</xtag-preunisim-param-name>=<xtag-preunisim-param-value>34</xtag-preunisim-param-value></TD>
+<TD><xtag-preunisim-param-name>NGDBUILD_NUM_INV</xtag-preunisim-param-name>=<xtag-preunisim-param-value>33</xtag-preunisim-param-value></TD>
 <TD><xtag-preunisim-param-name>NGDBUILD_NUM_NAND2</xtag-preunisim-param-name>=<xtag-preunisim-param-value>2</xtag-preunisim-param-value></TD>
 <TD><xtag-preunisim-param-name>NGDBUILD_NUM_NAND3</xtag-preunisim-param-name>=<xtag-preunisim-param-value>2</xtag-preunisim-param-value></TD>
 </TR>
@@ -509,7 +525,7 @@ Help files</xtag-group-name></B></TD></TR>
 <TR>
 <TD><xtag-postunisim-param-name>NGDBUILD_NUM_GND</xtag-postunisim-param-name>=<xtag-postunisim-param-value>1</xtag-postunisim-param-value></TD>
 <TD><xtag-postunisim-param-name>NGDBUILD_NUM_IBUFG</xtag-postunisim-param-name>=<xtag-postunisim-param-value>1</xtag-postunisim-param-value></TD>
-<TD><xtag-postunisim-param-name>NGDBUILD_NUM_INV</xtag-postunisim-param-name>=<xtag-postunisim-param-value>34</xtag-postunisim-param-value></TD>
+<TD><xtag-postunisim-param-name>NGDBUILD_NUM_INV</xtag-postunisim-param-name>=<xtag-postunisim-param-value>33</xtag-postunisim-param-value></TD>
 <TD><xtag-postunisim-param-name>NGDBUILD_NUM_NAND2</xtag-postunisim-param-name>=<xtag-postunisim-param-value>2</xtag-postunisim-param-value></TD>
 </TR>
 <TR>

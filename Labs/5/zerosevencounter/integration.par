@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-LAPBOTTOM::  Mon Aug 05 14:39:47 2024
+LAPBOTTOM::  Tue Aug 06 12:42:39 2024
 
 par -w -intstyle ise -ol high -mt off integration_map.ncd integration.ncd
 integration.pcf 
@@ -186,7 +186,7 @@ Asterisk (*) preceding a constraint indicates it was not met.
   N_7                                       | HOLD        |     0.476ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
   Autotimespec constraint for clock net XLX | SETUP       |         N/A|     0.912ns|     N/A|           0
-  N_5                                       | HOLD        |     0.470ns|            |       0|           0
+  N_35                                      | HOLD        |     0.470ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
   Autotimespec constraint for clock net XLX | SETUP       |         N/A|     0.895ns|     N/A|           0
   I_3/XLXN_14                               | HOLD        |     0.453ns|            |       0|           0

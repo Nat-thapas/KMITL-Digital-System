@@ -12,20 +12,11 @@
         <signal name="XLXN_5" />
         <signal name="XLXN_6" />
         <signal name="XLXN_7" />
-        <signal name="XLXN_11" />
-        <signal name="XLXN_14" />
         <signal name="XLXN_15" />
-        <signal name="XLXN_16" />
         <signal name="XLXN_17" />
         <signal name="XLXN_21" />
-        <signal name="XLXN_22" />
         <signal name="XLXN_23" />
         <signal name="XLXN_24" />
-        <signal name="XLXN_26" />
-        <signal name="XLXN_27" />
-        <signal name="XLXN_28" />
-        <signal name="XLXN_29" />
-        <signal name="XLXN_30" />
         <signal name="XLXN_31" />
         <signal name="XLXN_32" />
         <signal name="XLXN_33" />
@@ -38,6 +29,10 @@
         <signal name="SSD_f" />
         <signal name="SSD_g" />
         <signal name="SSD_COM0" />
+        <signal name="XLXN_35" />
+        <signal name="XLXN_36" />
+        <signal name="XLXN_42" />
+        <signal name="XLXN_43" />
         <port polarity="Input" name="OSC" />
         <port polarity="Output" name="SSD_a" />
         <port polarity="Output" name="SSD_b" />
@@ -128,17 +123,17 @@
             <blockpin signalname="XLXN_23" name="CLR" />
             <blockpin signalname="XLXN_15" name="J" />
             <blockpin signalname="XLXN_15" name="K" />
-            <blockpin signalname="XLXN_5" name="Q" />
+            <blockpin signalname="XLXN_35" name="Q" />
         </block>
         <block symbolname="fjkc" name="XLXI_5">
-            <blockpin signalname="XLXN_5" name="C" />
+            <blockpin signalname="XLXN_36" name="C" />
             <blockpin signalname="XLXN_23" name="CLR" />
             <blockpin signalname="XLXN_17" name="J" />
             <blockpin signalname="XLXN_17" name="K" />
             <blockpin signalname="XLXN_6" name="Q" />
         </block>
         <block symbolname="fjkc" name="XLXI_6">
-            <blockpin signalname="XLXN_6" name="C" />
+            <blockpin signalname="XLXN_43" name="C" />
             <blockpin signalname="XLXN_23" name="CLR" />
             <blockpin signalname="XLXN_21" name="J" />
             <blockpin signalname="XLXN_21" name="K" />
@@ -156,23 +151,11 @@
         <block symbolname="gnd" name="XLXI_16">
             <blockpin signalname="XLXN_23" name="G" />
         </block>
-        <block symbolname="inv" name="XLXI_17">
-            <blockpin signalname="XLXN_24" name="I" />
-            <blockpin signalname="XLXN_32" name="O" />
-        </block>
-        <block symbolname="inv" name="XLXI_18">
-            <blockpin signalname="XLXN_6" name="I" />
-            <blockpin signalname="XLXN_33" name="O" />
-        </block>
-        <block symbolname="inv" name="XLXI_19">
-            <blockpin signalname="XLXN_5" name="I" />
-            <blockpin signalname="XLXN_34" name="O" />
-        </block>
         <block symbolname="ssd1d09" name="XLXI_20">
             <blockpin signalname="SSD_a" name="a" />
-            <blockpin signalname="XLXN_34" name="A0" />
-            <blockpin signalname="XLXN_33" name="A1" />
-            <blockpin signalname="XLXN_32" name="A2" />
+            <blockpin signalname="XLXN_35" name="A0" />
+            <blockpin signalname="XLXN_6" name="A1" />
+            <blockpin signalname="XLXN_24" name="A2" />
             <blockpin signalname="XLXN_31" name="A3" />
             <blockpin signalname="SSD_b" name="b" />
             <blockpin signalname="SSD_c" name="c" />
@@ -186,6 +169,14 @@
         </block>
         <block symbolname="gnd" name="XLXI_23">
             <blockpin signalname="SSD_COM0" name="G" />
+        </block>
+        <block symbolname="inv" name="XLXI_24">
+            <blockpin signalname="XLXN_35" name="I" />
+            <blockpin signalname="XLXN_36" name="O" />
+        </block>
+        <block symbolname="inv" name="XLXI_25">
+            <blockpin signalname="XLXN_6" name="I" />
+            <blockpin signalname="XLXN_43" name="O" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
@@ -205,15 +196,7 @@
             <wire x2="320" y1="160" y2="160" x1="256" />
         </branch>
         <iomarker fontsize="28" x="256" y="160" name="OSC" orien="R180" />
-        <instance x="864" y="960" name="XLXI_5" orien="R0" />
         <instance x="1376" y="960" name="XLXI_6" orien="R0" />
-        <branch name="XLXN_5">
-            <wire x2="768" y1="704" y2="704" x1="720" />
-            <wire x2="768" y1="704" y2="832" x1="768" />
-            <wire x2="864" y1="832" y2="832" x1="768" />
-            <wire x2="768" y1="832" y2="1280" x1="768" />
-            <wire x2="1984" y1="1280" y2="1280" x1="768" />
-        </branch>
         <branch name="XLXN_7">
             <wire x2="1744" y1="352" y2="352" x1="112" />
             <wire x2="112" y1="352" y2="832" x1="112" />
@@ -229,12 +212,6 @@
             <wire x2="288" y1="640" y2="704" x1="288" />
             <wire x2="336" y1="704" y2="704" x1="288" />
         </branch>
-        <branch name="XLXN_17">
-            <wire x2="816" y1="576" y2="640" x1="816" />
-            <wire x2="864" y1="640" y2="640" x1="816" />
-            <wire x2="816" y1="640" y2="704" x1="816" />
-            <wire x2="864" y1="704" y2="704" x1="816" />
-        </branch>
         <instance x="752" y="576" name="XLXI_11" orien="R0" />
         <branch name="XLXN_21">
             <wire x2="1328" y1="576" y2="640" x1="1328" />
@@ -244,41 +221,15 @@
         </branch>
         <instance x="1264" y="576" name="XLXI_15" orien="R0" />
         <instance x="176" y="1200" name="XLXI_16" orien="R0" />
-        <branch name="XLXN_23">
-            <wire x2="240" y1="1008" y2="1072" x1="240" />
-            <wire x2="336" y1="1008" y2="1008" x1="240" />
-            <wire x2="864" y1="1008" y2="1008" x1="336" />
-            <wire x2="1376" y1="1008" y2="1008" x1="864" />
-            <wire x2="336" y1="928" y2="1008" x1="336" />
-            <wire x2="864" y1="928" y2="1008" x1="864" />
-            <wire x2="1376" y1="928" y2="1008" x1="1376" />
-        </branch>
-        <instance x="1984" y="1184" name="XLXI_17" orien="R0" />
         <branch name="XLXN_24">
             <wire x2="1872" y1="704" y2="704" x1="1760" />
             <wire x2="1872" y1="704" y2="1152" x1="1872" />
             <wire x2="1984" y1="1152" y2="1152" x1="1872" />
-        </branch>
-        <branch name="XLXN_6">
-            <wire x2="1280" y1="704" y2="704" x1="1248" />
-            <wire x2="1280" y1="704" y2="832" x1="1280" />
-            <wire x2="1376" y1="832" y2="832" x1="1280" />
-            <wire x2="1280" y1="832" y2="1216" x1="1280" />
-            <wire x2="1984" y1="1216" y2="1216" x1="1280" />
+            <wire x2="2208" y1="1152" y2="1152" x1="1984" />
+            <wire x2="2320" y1="1152" y2="1152" x1="2208" />
         </branch>
         <instance x="2320" y="1504" name="XLXI_20" orien="R0">
         </instance>
-        <instance x="1984" y="1248" name="XLXI_18" orien="R0" />
-        <instance x="1984" y="1312" name="XLXI_19" orien="R0" />
-        <branch name="XLXN_32">
-            <wire x2="2320" y1="1152" y2="1152" x1="2208" />
-        </branch>
-        <branch name="XLXN_33">
-            <wire x2="2320" y1="1216" y2="1216" x1="2208" />
-        </branch>
-        <branch name="XLXN_34">
-            <wire x2="2320" y1="1280" y2="1280" x1="2208" />
-        </branch>
         <branch name="SSD_a">
             <wire x2="2736" y1="1088" y2="1088" x1="2704" />
         </branch>
@@ -319,6 +270,53 @@
             <wire x2="2304" y1="992" y2="992" x1="2176" />
             <wire x2="2304" y1="992" y2="1088" x1="2304" />
             <wire x2="2320" y1="1088" y2="1088" x1="2304" />
+        </branch>
+        <instance x="736" y="720" name="XLXI_24" orien="R90" />
+        <branch name="XLXN_35">
+            <wire x2="720" y1="704" y2="1280" x1="720" />
+            <wire x2="1984" y1="1280" y2="1280" x1="720" />
+            <wire x2="2208" y1="1280" y2="1280" x1="1984" />
+            <wire x2="2320" y1="1280" y2="1280" x1="2208" />
+            <wire x2="768" y1="704" y2="704" x1="720" />
+            <wire x2="768" y1="704" y2="720" x1="768" />
+        </branch>
+        <branch name="XLXN_36">
+            <wire x2="768" y1="944" y2="960" x1="768" />
+            <wire x2="848" y1="960" y2="960" x1="768" />
+            <wire x2="848" y1="832" y2="960" x1="848" />
+            <wire x2="864" y1="832" y2="832" x1="848" />
+        </branch>
+        <branch name="XLXN_6">
+            <wire x2="1264" y1="704" y2="704" x1="1248" />
+            <wire x2="1264" y1="704" y2="1216" x1="1264" />
+            <wire x2="1984" y1="1216" y2="1216" x1="1264" />
+            <wire x2="2208" y1="1216" y2="1216" x1="1984" />
+            <wire x2="2320" y1="1216" y2="1216" x1="2208" />
+            <wire x2="1312" y1="704" y2="704" x1="1264" />
+            <wire x2="1312" y1="704" y2="720" x1="1312" />
+        </branch>
+        <branch name="XLXN_23">
+            <wire x2="240" y1="1008" y2="1072" x1="240" />
+            <wire x2="336" y1="1008" y2="1008" x1="240" />
+            <wire x2="864" y1="1008" y2="1008" x1="336" />
+            <wire x2="1376" y1="1008" y2="1008" x1="864" />
+            <wire x2="336" y1="928" y2="1008" x1="336" />
+            <wire x2="864" y1="928" y2="1008" x1="864" />
+            <wire x2="1376" y1="928" y2="1008" x1="1376" />
+        </branch>
+        <branch name="XLXN_17">
+            <wire x2="816" y1="576" y2="640" x1="816" />
+            <wire x2="816" y1="640" y2="704" x1="816" />
+            <wire x2="864" y1="704" y2="704" x1="816" />
+            <wire x2="864" y1="640" y2="640" x1="816" />
+        </branch>
+        <instance x="864" y="960" name="XLXI_5" orien="R0" />
+        <instance x="1280" y="720" name="XLXI_25" orien="R90" />
+        <branch name="XLXN_43">
+            <wire x2="1312" y1="944" y2="960" x1="1312" />
+            <wire x2="1360" y1="960" y2="960" x1="1312" />
+            <wire x2="1376" y1="832" y2="832" x1="1360" />
+            <wire x2="1360" y1="832" y2="960" x1="1360" />
         </branch>
     </sheet>
 </drawing>

@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : integration.vf
-// /___/   /\     Timestamp : 08/05/2024 14:39:35
+// /___/   /\     Timestamp : 08/06/2024 12:42:22
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Classes-2024/Digital System Fundamentals/Labs/5/zerosevencounter/integration.vf" -w "D:/Classes-2024/Digital System Fundamentals/Labs/5/zerosevencounter/integration.sch"
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Classes-2024/Digital System Fundamentals Shared/Labs/5/zerosevencounter/integration.vf" -w "D:/Classes-2024/Digital System Fundamentals Shared/Labs/5/zerosevencounter/integration.sch"
 //Design Name: integration
 //Device: spartan6
 //Purpose:
@@ -350,7 +350,6 @@ module integration(OSC,
    
    wire XLXN_1;
    wire XLXN_2;
-   wire XLXN_5;
    wire XLXN_6;
    wire XLXN_7;
    wire XLXN_15;
@@ -359,9 +358,9 @@ module integration(OSC,
    wire XLXN_23;
    wire XLXN_24;
    wire XLXN_31;
-   wire XLXN_32;
-   wire XLXN_33;
-   wire XLXN_34;
+   wire XLXN_35;
+   wire XLXN_36;
+   wire XLXN_43;
    
    clkdiv1ki_MUSER_integration  XLXI_1 (.CLK(OSC), 
                                        .CLKO(XLXN_1));
@@ -374,15 +373,15 @@ module integration(OSC,
                                     .CLR(XLXN_23), 
                                     .J(XLXN_15), 
                                     .K(XLXN_15), 
-                                    .Q(XLXN_5));
+                                    .Q(XLXN_35));
    (* HU_SET = "XLXI_5_16" *) 
-   FJKC_HXILINX_integration  XLXI_5 (.C(XLXN_5), 
+   FJKC_HXILINX_integration  XLXI_5 (.C(XLXN_36), 
                                     .CLR(XLXN_23), 
                                     .J(XLXN_17), 
                                     .K(XLXN_17), 
                                     .Q(XLXN_6));
    (* HU_SET = "XLXI_6_17" *) 
-   FJKC_HXILINX_integration  XLXI_6 (.C(XLXN_6), 
+   FJKC_HXILINX_integration  XLXI_6 (.C(XLXN_43), 
                                     .CLR(XLXN_23), 
                                     .J(XLXN_21), 
                                     .K(XLXN_21), 
@@ -391,15 +390,9 @@ module integration(OSC,
    VCC  XLXI_11 (.P(XLXN_17));
    VCC  XLXI_15 (.P(XLXN_21));
    GND  XLXI_16 (.G(XLXN_23));
-   INV  XLXI_17 (.I(XLXN_24), 
-                .O(XLXN_32));
-   INV  XLXI_18 (.I(XLXN_6), 
-                .O(XLXN_33));
-   INV  XLXI_19 (.I(XLXN_5), 
-                .O(XLXN_34));
-   ssd1d09_MUSER_integration  XLXI_20 (.A0(XLXN_34), 
-                                      .A1(XLXN_33), 
-                                      .A2(XLXN_32), 
+   ssd1d09_MUSER_integration  XLXI_20 (.A0(XLXN_35), 
+                                      .A1(XLXN_6), 
+                                      .A2(XLXN_24), 
                                       .A3(XLXN_31), 
                                       .a(SSD_a), 
                                       .b(SSD_b), 
@@ -410,4 +403,8 @@ module integration(OSC,
                                       .g(SSD_g));
    GND  XLXI_21 (.G(XLXN_31));
    GND  XLXI_23 (.G(SSD_COM0));
+   INV  XLXI_24 (.I(XLXN_35), 
+                .O(XLXN_36));
+   INV  XLXI_25 (.I(XLXN_6), 
+                .O(XLXN_43));
 endmodule
