@@ -25,9 +25,9 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      showguides="false"
-     inkscape:zoom="2.3"
-     inkscape:cx="5138.2609"
-     inkscape:cy="554.56522"
+     inkscape:zoom="3.2526912"
+     inkscape:cx="2454.2754"
+     inkscape:cy="373.07569"
      inkscape:window-width="2560"
      inkscape:window-height="1369"
      inkscape:window-x="-8"
@@ -1073,12 +1073,15 @@
          sodipodi:role="line"
          id="tspan86"
          style="stroke-width:0.264583"></tspan></text>
-    <circle
-       style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
-       id="path86"
-       cx="429.41956"
-       cy="64.646721"
-       r="1.5" />
+    <g
+       id="g198">
+      <circle
+         style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
+         id="path86"
+         cx="429.41956"
+         cy="64.646721"
+         r="1.5" />
+    </g>
     <circle
        style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
        id="circle87"
@@ -1107,7 +1110,7 @@
        id="rect89"
        width="297"
        height="210"
-       x="614.32538"
+       x="614"
        y="0" />
     <text
        xml:space="preserve"
@@ -1219,36 +1222,36 @@
        width="41.536835"
        height="1"
        x="643.43744"
-       y="97.913765" />
+       y="97.483536" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
        x="621.16077"
-       y="100.23226"
+       y="99.802032"
        id="text96"><tspan
          sodipodi:role="line"
          id="tspan96"
          style="stroke-width:0.264583"
          x="621.16077"
-         y="100.23226">D1[3:0]</tspan></text>
+         y="99.802032">D1[3:0]</tspan></text>
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
        id="rect96"
        width="1"
        height="20"
-       x="533.28033"
-       y="-404.60233"
+       x="532.97614"
+       y="-404.90656"
        transform="rotate(45)" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
        x="652.5639"
-       y="96.285751"
+       y="95.855522"
        id="text97"><tspan
          sodipodi:role="line"
          style="stroke-width:0.264583"
          x="652.5639"
-         y="96.285751"
+         y="95.855522"
          id="tspan97">4</tspan></text>
     <rect
        style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
@@ -1471,13 +1474,13 @@
        xml:space="preserve"
        style="font-size:5.64444px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
        x="687.38397"
-       y="100.27687"
+       y="99.846588"
        id="text112"><tspan
          sodipodi:role="line"
          id="tspan112"
          style="font-size:5.64444px;stroke-width:0.264583"
          x="687.38397"
-         y="100.27687">D1[3:0]</tspan></text>
+         y="99.846588">D1[3:0]</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:5.64444px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
@@ -2253,23 +2256,23 @@
        xml:space="preserve"
        style="font-size:5.64444px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
        x="1424.269"
-       y="81.556442"
+       y="81.126167"
        id="text175"><tspan
          sodipodi:role="line"
          id="tspan175"
          style="font-size:5.64444px;stroke-width:0.264583"
          x="1424.269"
-         y="81.556442">D1[3:0]</tspan></text>
+         y="81.126167">D1[3:0]</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:5.64444px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1436.8687"
+       x="1439.1127"
        y="97.086449"
        id="text176"><tspan
          sodipodi:role="line"
          id="tspan176"
          style="font-size:5.64444px;stroke-width:0.264583"
-         x="1436.8687"
+         x="1439.1127"
          y="97.086449">SEL</tspan></text>
     <text
        xml:space="preserve"
@@ -2345,17 +2348,17 @@
     <rect
        style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect182"
-       width="83.474266"
+       width="85.717468"
        height="1"
-       x="1358.7327"
+       x="1358.7335"
        y="118.63931" />
     <rect
-       style="fill:#000000;stroke:none;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
+       style="fill:#000000;stroke:none;stroke-width:0.999994;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect183"
-       width="18.395588"
+       width="18.159384"
        height="1"
-       x="101.09335"
-       y="-1442.2069"
+       x="101.32955"
+       y="-1444.4509"
        transform="rotate(90)" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999996;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
@@ -2438,9 +2441,9 @@
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect190"
-       width="32.430008"
+       width="33.040081"
        height="1"
-       x="79.945625"
+       x="79.335556"
        y="-1407.3221"
        transform="rotate(90)" />
     <rect
@@ -2449,7 +2452,7 @@
        width="16.309759"
        height="1"
        x="1406.3221"
-       y="79.193336" />
+       y="78.763062" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999994;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect192"
@@ -2524,5 +2527,15 @@
        height="1"
        x="1302.4479"
        y="139.83359" />
+    <g
+       id="g199"
+       transform="translate(872.94446,75.686867)">
+      <circle
+         style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
+         id="circle198"
+         cx="429.41956"
+         cy="64.646721"
+         r="1.5" />
+    </g>
   </g>
 </svg>
