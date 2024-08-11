@@ -7,29 +7,21 @@
     </attr>
     <netlist>
         <signal name="XLXN_109" />
-        <signal name="XLXN_2" />
         <signal name="DATA(2)" />
         <signal name="XLXN_111" />
         <signal name="XLXN_113" />
         <signal name="XLXN_114" />
-        <signal name="XLXN_7" />
-        <signal name="XLXN_8" />
         <signal name="DATA(0)" />
-        <signal name="XLXN_10" />
         <signal name="XLXN_117" />
         <signal name="XLXN_118" />
         <signal name="XLXN_119" />
-        <signal name="XLXN_14" />
-        <signal name="XLXN_15" />
         <signal name="DATA(1)" />
         <signal name="XLXN_125" />
         <signal name="DATA(3)" />
         <signal name="XLXN_129" />
-        <signal name="XLXN_20" />
         <signal name="XLXN_130" />
         <signal name="XLXN_131" />
         <signal name="XLXN_132" />
-        <signal name="XLXN_24" />
         <signal name="XLXN_134" />
         <signal name="XLXN_135" />
         <signal name="SSD_GA(6:0)" />
@@ -37,21 +29,9 @@
         <signal name="SSD_GA(0)" />
         <signal name="SSD_GA(3)" />
         <signal name="SSD_GA(6)" />
-        <signal name="XLXN_33" />
         <signal name="SSD_GA(1)" />
         <signal name="SSD_GA(2)" />
         <signal name="SSD_GA(4)" />
-        <signal name="XLXN_140" />
-        <signal name="XLXN_167" />
-        <signal name="XLXN_170" />
-        <signal name="XLXN_173" />
-        <signal name="XLXN_174" />
-        <signal name="XLXN_175" />
-        <signal name="XLXN_177" />
-        <signal name="XLXN_178" />
-        <signal name="XLXN_179" />
-        <signal name="XLXN_180" />
-        <signal name="XLXN_181" />
         <signal name="XLXN_136" />
         <signal name="XLXN_137" />
         <signal name="XLXN_142" />
@@ -59,14 +39,11 @@
         <signal name="CLK" />
         <signal name="XLXN_139" />
         <signal name="XLXN_141" />
-        <signal name="XLXN_190" />
         <signal name="XLXN_149" />
         <signal name="XLXN_148" />
-        <signal name="XLXN_193" />
         <signal name="XLXN_147" />
         <signal name="XLXN_146" />
-        <signal name="COM(1)">
-        </signal>
+        <signal name="COM(1)" />
         <signal name="D1(3:0)" />
         <signal name="D0(3:0)" />
         <signal name="D0(0)" />
@@ -78,8 +55,7 @@
         <signal name="D0(3)" />
         <signal name="D1(3)" />
         <signal name="DATA(3:0)" />
-        <signal name="COM(0)">
-        </signal>
+        <signal name="COM(0)" />
         <signal name="COM(1:0)" />
         <port polarity="Output" name="SSD_GA(6:0)" />
         <port polarity="Input" name="CLK" />
@@ -533,7 +509,13 @@
             <wire x2="5248" y1="368" y2="368" x1="3824" />
         </branch>
         <branch name="SSD_GA(6:0)">
-            <wire x2="6000" y1="336" y2="1824" x1="6000" />
+            <wire x2="6000" y1="336" y2="576" x1="6000" />
+            <wire x2="6000" y1="576" y2="832" x1="6000" />
+            <wire x2="6000" y1="832" y2="1152" x1="6000" />
+            <wire x2="6000" y1="1152" y2="1360" x1="6000" />
+            <wire x2="6000" y1="1360" y2="1536" x1="6000" />
+            <wire x2="6000" y1="1536" y2="1696" x1="6000" />
+            <wire x2="6000" y1="1696" y2="1824" x1="6000" />
         </branch>
         <bustap x2="5904" y1="336" y2="336" x1="6000" />
         <bustap x2="5904" y1="576" y2="576" x1="6000" />
@@ -667,9 +649,7 @@
             <wire x2="1088" y1="3056" y2="3232" x1="1088" />
             <wire x2="1088" y1="3232" y2="3344" x1="1088" />
             <wire x2="1264" y1="3344" y2="3344" x1="1088" />
-            <wire x2="1552" y1="3232" y2="3232" x1="1088" />
-            <wire x2="1568" y1="3232" y2="3232" x1="1552" />
-            <wire x2="1600" y1="3232" y2="3232" x1="1568" />
+            <wire x2="1600" y1="3232" y2="3232" x1="1088" />
             <wire x2="1744" y1="3232" y2="3232" x1="1600" />
             <wire x2="1088" y1="3344" y2="3344" x1="1024" />
         </branch>
