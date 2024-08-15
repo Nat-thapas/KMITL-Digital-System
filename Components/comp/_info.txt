@@ -1,0 +1,1 @@
+Output will be true only when all inputs is equal to all other input on a bit by bit basis.
