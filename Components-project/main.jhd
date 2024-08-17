@@ -1,1 +1,3 @@
 MODULE main
+	SUBMODULE clkdiv2
+		INSTANCE XLXI_1

@@ -1,0 +1,2 @@
+ISim log file
+Running: D:\Personal\Projects\Digital Labs\Components-project\main_main_sch_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb D:/Personal/Projects/Digital Labs/Components-project/main_main_sch_tb_isim_beh.wdb 

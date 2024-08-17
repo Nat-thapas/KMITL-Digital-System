@@ -1,0 +1,6 @@
+verilog work "ssd4d09b.vf"
+verilog work "clkdiv7.vf"
+verilog work "clkdiv64.vf"
+verilog work "clkdiv20M.vf"
+verilog work "clkdiv1024.vf"
+verilog work "main.vf"

@@ -24,14 +24,14 @@
         <signal name="XLXN_132" />
         <signal name="XLXN_134" />
         <signal name="XLXN_135" />
-        <signal name="SSD_GA(6:0)" />
-        <signal name="SSD_GA(5)" />
-        <signal name="SSD_GA(0)" />
-        <signal name="SSD_GA(3)" />
-        <signal name="SSD_GA(6)" />
-        <signal name="SSD_GA(1)" />
-        <signal name="SSD_GA(2)" />
-        <signal name="SSD_GA(4)" />
+        <signal name="Segment(6:0)" />
+        <signal name="Segment(5)" />
+        <signal name="Segment(0)" />
+        <signal name="Segment(3)" />
+        <signal name="Segment(6)" />
+        <signal name="Segment(1)" />
+        <signal name="Segment(2)" />
+        <signal name="Segment(4)" />
         <signal name="COM(0)" />
         <signal name="D1(3:0)" />
         <signal name="D0(3:0)" />
@@ -41,42 +41,15 @@
         <signal name="D1(1)" />
         <signal name="DATA(3:0)" />
         <signal name="COM(1)" />
-        <signal name="XLXN_194" />
-        <signal name="XLXN_195" />
-        <signal name="XLXN_196" />
-        <signal name="XLXN_197" />
-        <signal name="XLXN_201" />
-        <signal name="XLXN_202" />
-        <signal name="XLXN_203" />
-        <signal name="XLXN_206" />
-        <signal name="XLXN_207" />
-        <signal name="XLXN_208" />
-        <signal name="XLXN_209" />
-        <signal name="XLXN_210" />
-        <signal name="XLXN_211" />
-        <signal name="XLXN_212" />
-        <signal name="XLXN_213" />
-        <signal name="XLXN_214" />
-        <signal name="XLXN_215" />
-        <signal name="XLXN_216" />
-        <signal name="XLXN_217" />
-        <signal name="XLXN_218" />
-        <signal name="XLXN_222" />
-        <signal name="XLXN_223" />
-        <signal name="XLXN_224" />
-        <signal name="XLXN_225" />
-        <signal name="XLXN_226" />
-        <signal name="XLXN_261" />
         <signal name="COM(1:0)" />
         <signal name="XLXN_141" />
         <signal name="XLXN_139" />
         <signal name="ScanCLK" />
-        <signal name="XLXN_268" />
         <signal name="D0(2)" />
         <signal name="D0(3)" />
         <signal name="D1(2)" />
         <signal name="D1(3)" />
-        <port polarity="Output" name="SSD_GA(6:0)" />
+        <port polarity="Output" name="Segment(6:0)" />
         <port polarity="Input" name="D1(3:0)" />
         <port polarity="Input" name="D0(3:0)" />
         <port polarity="Output" name="COM(1:0)" />
@@ -232,7 +205,7 @@
         </block>
         <block symbolname="inv" name="XLXI_101">
             <blockpin signalname="XLXN_117" name="I" />
-            <blockpin signalname="SSD_GA(4)" name="O" />
+            <blockpin signalname="Segment(4)" name="O" />
         </block>
         <block symbolname="nand2" name="XLXI_102">
             <blockpin signalname="XLXN_117" name="I0" />
@@ -243,17 +216,17 @@
             <blockpin signalname="XLXN_118" name="I0" />
             <blockpin signalname="XLXN_119" name="I1" />
             <blockpin signalname="DATA(2)" name="I2" />
-            <blockpin signalname="SSD_GA(1)" name="O" />
+            <blockpin signalname="Segment(1)" name="O" />
         </block>
         <block symbolname="nand3" name="XLXI_104">
-            <blockpin signalname="SSD_GA(1)" name="I0" />
+            <blockpin signalname="Segment(1)" name="I0" />
             <blockpin signalname="DATA(1)" name="I1" />
-            <blockpin signalname="SSD_GA(4)" name="I2" />
-            <blockpin signalname="SSD_GA(2)" name="O" />
+            <blockpin signalname="Segment(4)" name="I2" />
+            <blockpin signalname="Segment(2)" name="O" />
         </block>
         <block symbolname="nor2" name="XLXI_105">
             <blockpin signalname="XLXN_111" name="I0" />
-            <blockpin signalname="SSD_GA(1)" name="I1" />
+            <blockpin signalname="Segment(1)" name="I1" />
             <blockpin signalname="XLXN_125" name="O" />
         </block>
         <block symbolname="or2" name="XLXI_106">
@@ -274,22 +247,22 @@
         <block symbolname="or2" name="XLXI_109">
             <blockpin signalname="XLXN_135" name="I0" />
             <blockpin signalname="XLXN_134" name="I1" />
-            <blockpin signalname="SSD_GA(6)" name="O" />
+            <blockpin signalname="Segment(6)" name="O" />
         </block>
         <block symbolname="or2" name="XLXI_110">
-            <blockpin signalname="SSD_GA(4)" name="I0" />
+            <blockpin signalname="Segment(4)" name="I0" />
             <blockpin signalname="XLXN_134" name="I1" />
-            <blockpin signalname="SSD_GA(3)" name="O" />
+            <blockpin signalname="Segment(3)" name="O" />
         </block>
         <block symbolname="nand2" name="XLXI_111">
             <blockpin signalname="XLXN_132" name="I0" />
             <blockpin signalname="XLXN_117" name="I1" />
-            <blockpin signalname="SSD_GA(0)" name="O" />
+            <blockpin signalname="Segment(0)" name="O" />
         </block>
         <block symbolname="or2" name="XLXI_112">
             <blockpin signalname="XLXN_131" name="I0" />
             <blockpin signalname="XLXN_130" name="I1" />
-            <blockpin signalname="SSD_GA(5)" name="O" />
+            <blockpin signalname="Segment(5)" name="O" />
         </block>
         <block symbolname="inv" name="XLXI_156">
             <blockpin signalname="COM(0)" name="I" />
@@ -493,7 +466,7 @@
             <wire x2="3824" y1="368" y2="1136" x1="3824" />
             <wire x2="5248" y1="368" y2="368" x1="3824" />
         </branch>
-        <branch name="SSD_GA(6:0)">
+        <branch name="Segment(6:0)">
             <wire x2="6000" y1="336" y2="576" x1="6000" />
             <wire x2="6000" y1="576" y2="832" x1="6000" />
             <wire x2="6000" y1="832" y2="1152" x1="6000" />
@@ -506,7 +479,7 @@
         <bustap x2="5904" y1="576" y2="576" x1="6000" />
         <bustap x2="5904" y1="832" y2="832" x1="6000" />
         <bustap x2="5904" y1="1152" y2="1152" x1="6000" />
-        <branch name="SSD_GA(5)">
+        <branch name="Segment(5)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="5792" y="1152" type="branch" />
             <wire x2="5792" y1="1152" y2="1152" x1="4912" />
             <wire x2="5904" y1="1152" y2="1152" x1="5792" />
@@ -514,22 +487,22 @@
         <bustap x2="5904" y1="1360" y2="1360" x1="6000" />
         <bustap x2="5904" y1="1536" y2="1536" x1="6000" />
         <bustap x2="5904" y1="1696" y2="1696" x1="6000" />
-        <branch name="SSD_GA(0)">
+        <branch name="Segment(0)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="5792" y="832" type="branch" />
             <wire x2="5792" y1="832" y2="832" x1="5504" />
             <wire x2="5904" y1="832" y2="832" x1="5792" />
         </branch>
-        <branch name="SSD_GA(3)">
+        <branch name="Segment(3)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="5792" y="576" type="branch" />
             <wire x2="5792" y1="576" y2="576" x1="5504" />
             <wire x2="5904" y1="576" y2="576" x1="5792" />
         </branch>
-        <branch name="SSD_GA(6)">
+        <branch name="Segment(6)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="5792" y="336" type="branch" />
             <wire x2="5792" y1="336" y2="336" x1="5504" />
             <wire x2="5904" y1="336" y2="336" x1="5792" />
         </branch>
-        <branch name="SSD_GA(1)">
+        <branch name="Segment(1)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="5792" y="1360" type="branch" />
             <wire x2="3360" y1="832" y2="832" x1="3248" />
             <wire x2="3424" y1="832" y2="832" x1="3360" />
@@ -540,14 +513,14 @@
             <wire x2="3520" y1="416" y2="416" x1="3360" />
             <wire x2="3360" y1="416" y2="832" x1="3360" />
         </branch>
-        <branch name="SSD_GA(2)">
+        <branch name="Segment(2)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="5792" y="1536" type="branch" />
             <wire x2="4928" y1="352" y2="352" x1="3776" />
             <wire x2="4928" y1="352" y2="1536" x1="4928" />
             <wire x2="5792" y1="1536" y2="1536" x1="4928" />
             <wire x2="5904" y1="1536" y2="1536" x1="5792" />
         </branch>
-        <branch name="SSD_GA(4)">
+        <branch name="Segment(4)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="5792" y="1696" type="branch" />
             <wire x2="3424" y1="288" y2="288" x1="2656" />
             <wire x2="3424" y1="288" y2="608" x1="3424" />
@@ -558,7 +531,7 @@
             <wire x2="5904" y1="1696" y2="1696" x1="5792" />
             <wire x2="3520" y1="288" y2="288" x1="3424" />
         </branch>
-        <iomarker fontsize="28" x="6000" y="1824" name="SSD_GA(6:0)" orien="R90" />
+        <iomarker fontsize="28" x="6000" y="1824" name="Segment(6:0)" orien="R90" />
         <branch name="D1(3:0)">
             <wire x2="256" y1="1440" y2="1440" x1="160" />
             <wire x2="304" y1="1440" y2="1440" x1="256" />
