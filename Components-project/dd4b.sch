@@ -11,8 +11,7 @@
         <signal name="B(2)" />
         <signal name="B(3)" />
         <signal name="B(0)" />
-        <signal name="O(0)">
-        </signal>
+        <signal name="O(0)" />
         <signal name="B(3:0)" />
         <signal name="O(3:0)" />
         <signal name="O(1)" />
@@ -27,15 +26,15 @@
         <port polarity="Input" name="O(3:0)" />
         <port polarity="Output" name="T(3:0)" />
         <blockdef name="dabble">
-            <timestamp>2024-8-18T17:34:42</timestamp>
+            <timestamp>2024-8-18T18:51:16</timestamp>
             <rect width="256" x="64" y="-256" height="256" />
             <line x2="0" y1="-224" y2="-224" x1="64" />
             <line x2="0" y1="-160" y2="-160" x1="64" />
             <line x2="0" y1="-96" y2="-96" x1="64" />
             <line x2="0" y1="-32" y2="-32" x1="64" />
             <line x2="384" y1="-224" y2="-224" x1="320" />
-            <line x2="384" y1="-160" y2="-160" x1="320" />
             <line x2="384" y1="-96" y2="-96" x1="320" />
+            <line x2="384" y1="-160" y2="-160" x1="320" />
             <line x2="384" y1="-32" y2="-32" x1="320" />
         </blockdef>
         <blockdef name="gnd">
@@ -61,8 +60,8 @@
             <blockpin signalname="B(3)" name="D2" />
             <blockpin signalname="XLXN_1" name="D3" />
             <blockpin signalname="O(1)" name="Q0" />
-            <blockpin signalname="O(2)" name="Q1" />
-            <blockpin signalname="O(3)" name="Q2" />
+            <blockpin signalname="O(3)" name="Q1" />
+            <blockpin signalname="O(2)" name="Q2" />
             <blockpin signalname="T(0)" name="Q3" />
         </block>
         <block symbolname="gnd" name="XLXI_2">
