@@ -1,0 +1,49 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : clkdiv3.vf
+// /___/   /\     Timestamp : 08/18/2024 22:16:07
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Personal/Projects/Digital Labs/Tests-project/CLK-calibration/clkdiv3.vf" -w "D:/Personal/Projects/Digital Labs/Tests-project/CLK-calibration/clkdiv3.sch"
+//Design Name: clkdiv3
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module clkdiv3(CLK, 
+               CLKO);
+
+    input CLK;
+   output CLKO;
+   
+   wire XLXN_1;
+   wire XLXN_4;
+   wire XLXN_5;
+   wire XLXN_6;
+   
+   FD #( .INIT(1'b0) ) XLXI_1 (.C(CLK), 
+              .D(XLXN_4), 
+              .Q(XLXN_6));
+   FD #( .INIT(1'b0) ) XLXI_2 (.C(CLK), 
+              .D(XLXN_6), 
+              .Q(XLXN_5));
+   FD_1 #( .INIT(1'b0) ) XLXI_3 (.C(CLK), 
+                .D(XLXN_5), 
+                .Q(XLXN_1));
+   OR2  XLXI_4 (.I0(XLXN_1), 
+               .I1(XLXN_5), 
+               .O(CLKO));
+   AND2B2  XLXI_5 (.I0(XLXN_6), 
+                  .I1(XLXN_5), 
+                  .O(XLXN_4));
+endmodule

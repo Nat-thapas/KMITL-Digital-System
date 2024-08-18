@@ -10,7 +10,7 @@ Target Device  : xc6slx9
 Target Package : tqg144
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Sun Aug 18 02:47:11 2024
+Mapped Date    : Sun Aug 18 22:16:19 2024
 
 Design Summary
 --------------
@@ -126,11 +126,58 @@ INFO:Pack:1650 - Map created a placed design.
 
 Section 4 - Removed Logic Summary
 ---------------------------------
+  16 block(s) removed
    2 block(s) optimized away
-   2 signal(s) removed
+  17 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+Loadless block "XLXI_30/XLXI_3/XLXI_4" (OR) removed.
+ The signal "XLXI_30/XLXI_3/XLXN_1" is loadless and has been removed.
+  Loadless block "XLXI_30/XLXI_3/XLXI_3" (FF) removed.
+   The signal "XLXI_30/XLXN_1" is loadless and has been removed.
+    Loadless block "XLXI_30/XLXI_1/XLXI_25" (OR) removed.
+     The signal "XLXI_30/XLXI_1/XLXN_38" is loadless and has been removed.
+      Loadless block "XLXI_30/XLXI_1/XLXI_24" (FF) removed.
+       The signal "XLXI_30/XLXI_1/XLXN_33" is loadless and has been removed.
+        Loadless block "XLXI_30/XLXI_1/XLXI_8/Q" (FF) removed.
+         The signal "XLXI_30/XLXI_1/XLXI_8/_n0008_inv" is loadless and has been removed.
+          Loadless block "XLXI_30/XLXI_1/XLXI_8/_n0008_inv1" (ROM) removed.
+           The signal "XLXI_30/XLXI_1/XLXN_30" is loadless and has been removed.
+            Loadless block "XLXI_30/XLXI_1/XLXI_7/Q" (FF) removed.
+             The signal "XLXN_8" is loadless and has been removed.
+             The signal "XLXI_30/XLXI_1/XLXI_7/Q_Q_MUX_34_o" is loadless and has been
+removed.
+              Loadless block "XLXI_30/XLXI_1/XLXI_7/Mmux_Q_Q_MUX_34_o11" (ROM) removed.
+               The signal "XLXI_30/XLXI_1/XLXN_35" is loadless and has been removed.
+                Loadless block "XLXI_30/XLXI_1/XLXI_22" (AND) removed.
+                 The signal "XLXI_30/XLXI_1/XLXN_34" is loadless and has been removed.
+                  Loadless block "XLXI_30/XLXI_1/XLXI_6/Q" (FF) removed.
+                   The signal "XLXI_30/XLXI_1/XLXI_6/Q_Q_MUX_34_o" is loadless and has been
+removed.
+                    Loadless block "XLXI_30/XLXI_1/XLXI_6/Mmux_Q_Q_MUX_34_o11" (ROM) removed.
+                     The signal "XLXI_30/XLXI_1/XLXN_29" is loadless and has been removed.
+                      Loadless block "XLXI_30/XLXI_1/XLXI_21" (BUF) removed.
+         The signal "XLXI_30/XLXI_1/XLXI_8/Q_Q_MUX_34_o" is loadless and has been
+removed.
+          Loadless block "XLXI_30/XLXI_1/XLXI_8/Mmux_Q_Q_MUX_34_o11" (ROM) removed.
+   The signal "XLXI_30/XLXI_3/XLXN_5" is loadless and has been removed.
+    Loadless block "XLXI_30/XLXI_3/XLXI_2" (FF) removed.
+     The signal "XLXI_30/XLXI_3/XLXN_6" is loadless and has been removed.
+      Loadless block "XLXI_30/XLXI_3/XLXI_1" (FF) removed.
+       The signal "XLXI_30/XLXI_3/XLXN_4" is loadless and has been removed.
+        Loadless block "XLXI_30/XLXI_3/XLXI_5" (AND) removed.
 
 The trimmed logic reported below is either:
    1. part of a cycle
@@ -138,7 +185,6 @@ The trimmed logic reported below is either:
    3. a side-effect of other trimmed logic
 
 The signal "XLXN_6" is unused and has been removed.
-The signal "XLXN_8" is unused and has been removed.
 
 Optimized Block(s):
 TYPE 		BLOCK

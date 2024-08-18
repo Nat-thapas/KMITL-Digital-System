@@ -1,3 +1,4 @@
 sch2hdl,-intstyle,ise,-family,spartan6,-verilog,D:/Personal/Projects/Digital Labs/Tests-project/CLK-calibration/main.vf,-w,D:/Personal/Projects/Digital Labs/Tests-project/CLK-calibration/main.sch
-sch2hdl,-intstyle,ise,-family,spartan6,-verilog,D:/Personal/Projects/Digital Labs/Tests-project/CLK-calibration/clkdiv7.vf,-w,D:/Personal/Projects/Digital Labs/Tests-project/CLK-calibration/clkdiv7.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,D:/Personal/Projects/Digital Labs/Tests-project/CLK-calibration/clkdiv3.vf,-w,D:/Personal/Projects/Digital Labs/Tests-project/CLK-calibration/clkdiv3.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,D:/Personal/Projects/Digital Labs/Tests-project/CLK-calibration/compositeTest.vf,-w,D:/Personal/Projects/Digital Labs/Tests-project/CLK-calibration/compositeTest.sch
 sch2hdl,-intstyle,ise,-family,spartan6,-verilog,D:/Personal/Projects/Digital Labs/Tests-project/CLK-calibration/main.vf,-w,D:/Personal/Projects/Digital Labs/Tests-project/CLK-calibration/main.sch

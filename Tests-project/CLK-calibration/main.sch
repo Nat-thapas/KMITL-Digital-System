@@ -59,9 +59,6 @@
         <signal name="SSD_COM0" />
         <signal name="XLXN_16" />
         <signal name="XLXN_23" />
-        <signal name="XLXN_25" />
-        <signal name="XLXN_26" />
-        <signal name="XLXN_27" />
         <signal name="XLXN_28" />
         <signal name="XLXN_29" />
         <port polarity="Output" name="SSD_b" />
@@ -162,6 +159,12 @@
         </blockdef>
         <blockdef name="clkdiv7">
             <timestamp>2024-8-17T19:46:23</timestamp>
+            <rect width="256" x="64" y="-64" height="64" />
+            <line x2="0" y1="-32" y2="-32" x1="64" />
+            <line x2="384" y1="-32" y2="-32" x1="320" />
+        </blockdef>
+        <blockdef name="compositeTest">
+            <timestamp>2024-8-18T15:15:47</timestamp>
             <rect width="256" x="64" y="-64" height="64" />
             <line x2="0" y1="-32" y2="-32" x1="64" />
             <line x2="384" y1="-32" y2="-32" x1="320" />
@@ -289,6 +292,10 @@
             <blockpin signalname="XLXN_28" name="CLK" />
             <blockpin signalname="XLXN_29" name="CLKO" />
         </block>
+        <block symbolname="compositeTest" name="XLXI_30">
+            <blockpin signalname="XLXN_15" name="CLK" />
+            <blockpin name="CLKO" />
+        </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
         <instance x="832" y="1344" name="XLXI_5" orien="R0" />
@@ -323,8 +330,10 @@
         </branch>
         <branch name="XLXN_15">
             <wire x2="1248" y1="128" y2="128" x1="1152" />
-            <wire x2="1248" y1="128" y2="2224" x1="1248" />
+            <wire x2="1248" y1="128" y2="272" x1="1248" />
+            <wire x2="1248" y1="272" y2="2224" x1="1248" />
             <wire x2="2288" y1="2224" y2="2224" x1="1248" />
+            <wire x2="1296" y1="272" y2="272" x1="1248" />
         </branch>
         <branch name="D0(3:0)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="2224" y="1968" type="branch" />
@@ -647,5 +656,7 @@
             <wire x2="944" y1="432" y2="432" x1="912" />
         </branch>
         <instance x="944" y="464" name="XLXI_27" orien="R0" />
+        <instance x="1296" y="304" name="XLXI_30" orien="R0">
+        </instance>
     </sheet>
 </drawing>

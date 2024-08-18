@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Reading design: main.prj
 
@@ -105,11 +105,21 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
+Analyzing Verilog file "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\clkdiv5.vf" into library work
+Parsing module <FJKC_HXILINX_clkdiv5>.
+Parsing module <clkdiv5>.
+Analyzing Verilog file "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\clkdiv3.vf" into library work
+Parsing module <clkdiv3>.
 Analyzing Verilog file "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\ssd4d09b.vf" into library work
 Parsing module <M4_1E_HXILINX_ssd4d09b>.
 Parsing module <D2_4E_HXILINX_ssd4d09b>.
 Parsing module <CB2CE_HXILINX_ssd4d09b>.
 Parsing module <ssd4d09b>.
+Analyzing Verilog file "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\compositeTest.vf" into library work
+Parsing module <FJKC_HXILINX_compositeTest>.
+Parsing module <clkdiv3_MUSER_compositeTest>.
+Parsing module <clkdiv5_MUSER_compositeTest>.
+Parsing module <compositeTest>.
 Analyzing Verilog file "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\clkdiv7.vf" into library work
 Parsing module <FJKC_HXILINX_clkdiv7>.
 Parsing module <clkdiv7>.
@@ -126,6 +136,9 @@ Parsing module <M4_1E_HXILINX_main>.
 Parsing module <FJKC_HXILINX_main>.
 Parsing module <D2_4E_HXILINX_main>.
 Parsing module <CB2CE_HXILINX_main>.
+Parsing module <clkdiv3_MUSER_main>.
+Parsing module <clkdiv5_MUSER_main>.
+Parsing module <compositeTest_MUSER_main>.
 Parsing module <clkdiv7_MUSER_main>.
 Parsing module <clkdiv20M_MUSER_main>.
 Parsing module <clkdiv64_MUSER_main>.
@@ -183,21 +196,34 @@ Elaborating module <FJKC_HXILINX_main>.
 
 Elaborating module <OR2B1>.
 
+Elaborating module <compositeTest_MUSER_main>.
+
+Elaborating module <clkdiv5_MUSER_main>.
+
+Elaborating module <AND2B1>.
+
+Elaborating module <clkdiv3_MUSER_main>.
+
+Elaborating module <FD(INIT=1'b0)>.
+
+Elaborating module <AND2B2>.
+
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <main>.
     Related source file is "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf".
-    Set property "HU_SET = XLXI_4_39" for instance <XLXI_4>.
-    Set property "HU_SET = XLXI_5_40" for instance <XLXI_5>.
-    Set property "HU_SET = XLXI_6_41" for instance <XLXI_6>.
-    Set property "HU_SET = XLXI_7_42" for instance <XLXI_7>.
-INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 708: Output port <TC> of the instance <XLXI_4> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 718: Output port <TC> of the instance <XLXI_5> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 728: Output port <TC> of the instance <XLXI_6> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 738: Output port <CEO> of the instance <XLXI_7> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 738: Output port <TC> of the instance <XLXI_7> is unconnected or connected to loadless signal.
+    Set property "HU_SET = XLXI_4_45" for instance <XLXI_4>.
+    Set property "HU_SET = XLXI_5_46" for instance <XLXI_5>.
+    Set property "HU_SET = XLXI_6_47" for instance <XLXI_6>.
+    Set property "HU_SET = XLXI_7_48" for instance <XLXI_7>.
+INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 803: Output port <TC> of the instance <XLXI_4> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 813: Output port <TC> of the instance <XLXI_5> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 823: Output port <TC> of the instance <XLXI_6> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 833: Output port <CEO> of the instance <XLXI_7> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 833: Output port <TC> of the instance <XLXI_7> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 883: Output port <CLKO> of the instance <XLXI_30> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <main> synthesized.
@@ -218,14 +244,14 @@ Unit <CD4CE_HXILINX_main> synthesized.
 
 Synthesizing Unit <ssd4d09b_MUSER_main>.
     Related source file is "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf".
-    Set property "HU_SET = XLXI_162_37" for instance <XLXI_162>.
-    Set property "HU_SET = XLXI_183_33" for instance <XLXI_183>.
-    Set property "HU_SET = XLXI_184_34" for instance <XLXI_184>.
-    Set property "HU_SET = XLXI_185_35" for instance <XLXI_185>.
-    Set property "HU_SET = XLXI_186_36" for instance <XLXI_186>.
-    Set property "HU_SET = XLXI_210_38" for instance <XLXI_210>.
-INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 599: Output port <CEO> of the instance <XLXI_162> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 599: Output port <TC> of the instance <XLXI_162> is unconnected or connected to loadless signal.
+    Set property "HU_SET = XLXI_162_43" for instance <XLXI_162>.
+    Set property "HU_SET = XLXI_183_39" for instance <XLXI_183>.
+    Set property "HU_SET = XLXI_184_40" for instance <XLXI_184>.
+    Set property "HU_SET = XLXI_185_41" for instance <XLXI_185>.
+    Set property "HU_SET = XLXI_186_42" for instance <XLXI_186>.
+    Set property "HU_SET = XLXI_210_44" for instance <XLXI_210>.
+INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 694: Output port <CEO> of the instance <XLXI_162> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 694: Output port <TC> of the instance <XLXI_162> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <ssd4d09b_MUSER_main> synthesized.
@@ -267,57 +293,57 @@ Unit <clkdiv64_MUSER_main> synthesized.
 
 Synthesizing Unit <clkdiv20M_MUSER_main>.
     Related source file is "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf".
-    Set property "HU_SET = XLXI_1_26" for instance <XLXI_1>.
-    Set property "HU_SET = XLXI_14_27" for instance <XLXI_14>.
-    Set property "HU_SET = XLXI_17_28" for instance <XLXI_17>.
-    Set property "HU_SET = XLXI_22_29" for instance <XLXI_22>.
-    Set property "HU_SET = XLXI_25_30" for instance <XLXI_25>.
-    Set property "HU_SET = XLXI_28_31" for instance <XLXI_28>.
-    Set property "HU_SET = XLXI_31_32" for instance <XLXI_31>.
-INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 276: Output port <Q0> of the instance <XLXI_1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 276: Output port <Q1> of the instance <XLXI_1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 276: Output port <Q2> of the instance <XLXI_1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 276: Output port <Q3> of the instance <XLXI_1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 276: Output port <TC> of the instance <XLXI_1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 293: Output port <Q0> of the instance <XLXI_14> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 293: Output port <Q1> of the instance <XLXI_14> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 293: Output port <Q2> of the instance <XLXI_14> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 293: Output port <Q3> of the instance <XLXI_14> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 293: Output port <TC> of the instance <XLXI_14> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 303: Output port <Q0> of the instance <XLXI_17> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 303: Output port <Q1> of the instance <XLXI_17> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 303: Output port <Q2> of the instance <XLXI_17> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 303: Output port <Q3> of the instance <XLXI_17> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 303: Output port <TC> of the instance <XLXI_17> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 313: Output port <Q0> of the instance <XLXI_22> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 313: Output port <Q1> of the instance <XLXI_22> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 313: Output port <Q2> of the instance <XLXI_22> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 313: Output port <Q3> of the instance <XLXI_22> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 313: Output port <TC> of the instance <XLXI_22> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 323: Output port <Q0> of the instance <XLXI_25> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 323: Output port <Q1> of the instance <XLXI_25> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 323: Output port <Q2> of the instance <XLXI_25> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 323: Output port <Q3> of the instance <XLXI_25> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 323: Output port <TC> of the instance <XLXI_25> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 333: Output port <Q0> of the instance <XLXI_28> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 333: Output port <Q1> of the instance <XLXI_28> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 333: Output port <Q2> of the instance <XLXI_28> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 333: Output port <Q3> of the instance <XLXI_28> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 333: Output port <TC> of the instance <XLXI_28> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 343: Output port <CEO> of the instance <XLXI_31> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 343: Output port <Q0> of the instance <XLXI_31> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 343: Output port <Q1> of the instance <XLXI_31> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 343: Output port <Q2> of the instance <XLXI_31> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 343: Output port <Q3> of the instance <XLXI_31> is unconnected or connected to loadless signal.
+    Set property "HU_SET = XLXI_1_32" for instance <XLXI_1>.
+    Set property "HU_SET = XLXI_14_33" for instance <XLXI_14>.
+    Set property "HU_SET = XLXI_17_34" for instance <XLXI_17>.
+    Set property "HU_SET = XLXI_22_35" for instance <XLXI_22>.
+    Set property "HU_SET = XLXI_25_36" for instance <XLXI_25>.
+    Set property "HU_SET = XLXI_28_37" for instance <XLXI_28>.
+    Set property "HU_SET = XLXI_31_38" for instance <XLXI_31>.
+INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 371: Output port <Q0> of the instance <XLXI_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 371: Output port <Q1> of the instance <XLXI_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 371: Output port <Q2> of the instance <XLXI_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 371: Output port <Q3> of the instance <XLXI_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 371: Output port <TC> of the instance <XLXI_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 388: Output port <Q0> of the instance <XLXI_14> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 388: Output port <Q1> of the instance <XLXI_14> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 388: Output port <Q2> of the instance <XLXI_14> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 388: Output port <Q3> of the instance <XLXI_14> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 388: Output port <TC> of the instance <XLXI_14> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 398: Output port <Q0> of the instance <XLXI_17> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 398: Output port <Q1> of the instance <XLXI_17> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 398: Output port <Q2> of the instance <XLXI_17> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 398: Output port <Q3> of the instance <XLXI_17> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 398: Output port <TC> of the instance <XLXI_17> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 408: Output port <Q0> of the instance <XLXI_22> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 408: Output port <Q1> of the instance <XLXI_22> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 408: Output port <Q2> of the instance <XLXI_22> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 408: Output port <Q3> of the instance <XLXI_22> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 408: Output port <TC> of the instance <XLXI_22> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 418: Output port <Q0> of the instance <XLXI_25> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 418: Output port <Q1> of the instance <XLXI_25> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 418: Output port <Q2> of the instance <XLXI_25> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 418: Output port <Q3> of the instance <XLXI_25> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 418: Output port <TC> of the instance <XLXI_25> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 428: Output port <Q0> of the instance <XLXI_28> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 428: Output port <Q1> of the instance <XLXI_28> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 428: Output port <Q2> of the instance <XLXI_28> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 428: Output port <Q3> of the instance <XLXI_28> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 428: Output port <TC> of the instance <XLXI_28> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 438: Output port <CEO> of the instance <XLXI_31> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 438: Output port <Q0> of the instance <XLXI_31> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 438: Output port <Q1> of the instance <XLXI_31> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 438: Output port <Q2> of the instance <XLXI_31> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf" line 438: Output port <Q3> of the instance <XLXI_31> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <clkdiv20M_MUSER_main> synthesized.
 
 Synthesizing Unit <clkdiv7_MUSER_main>.
     Related source file is "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf".
-    Set property "HU_SET = XLXI_1_25" for instance <XLXI_1>.
-    Set property "HU_SET = XLXI_2_23" for instance <XLXI_2>.
-    Set property "HU_SET = XLXI_3_24" for instance <XLXI_3>.
+    Set property "HU_SET = XLXI_1_31" for instance <XLXI_1>.
+    Set property "HU_SET = XLXI_2_29" for instance <XLXI_2>.
+    Set property "HU_SET = XLXI_3_30" for instance <XLXI_3>.
     Summary:
 	no macro.
 Unit <clkdiv7_MUSER_main> synthesized.
@@ -331,6 +357,27 @@ Synthesizing Unit <FJKC_HXILINX_main>.
 	inferred   2 Multiplexer(s).
 Unit <FJKC_HXILINX_main> synthesized.
 
+Synthesizing Unit <compositeTest_MUSER_main>.
+    Related source file is "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf".
+    Summary:
+	no macro.
+Unit <compositeTest_MUSER_main> synthesized.
+
+Synthesizing Unit <clkdiv5_MUSER_main>.
+    Related source file is "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf".
+    Set property "HU_SET = XLXI_6_28" for instance <XLXI_6>.
+    Set property "HU_SET = XLXI_7_26" for instance <XLXI_7>.
+    Set property "HU_SET = XLXI_8_27" for instance <XLXI_8>.
+    Summary:
+	no macro.
+Unit <clkdiv5_MUSER_main> synthesized.
+
+Synthesizing Unit <clkdiv3_MUSER_main>.
+    Related source file is "D:\Personal\Projects\Digital Labs\Tests-project\CLK-calibration\main.vf".
+    Summary:
+	no macro.
+Unit <clkdiv3_MUSER_main> synthesized.
+
 =========================================================================
 HDL Synthesis Report
 
@@ -338,10 +385,10 @@ Macro Statistics
 # Adders/Subtractors                                   : 12
  2-bit adder                                           : 1
  4-bit adder                                           : 11
-# Registers                                            : 49
- 1-bit register                                        : 49
-# Multiplexers                                         : 95
- 1-bit 2-to-1 multiplexer                              : 91
+# Registers                                            : 52
+ 1-bit register                                        : 52
+# Multiplexers                                         : 101
+ 1-bit 2-to-1 multiplexer                              : 97
  1-bit 4-to-1 multiplexer                              : 4
 
 =========================================================================
@@ -358,10 +405,10 @@ Macro Statistics
 # Adders/Subtractors                                   : 12
  2-bit adder                                           : 1
  4-bit adder                                           : 11
-# Registers                                            : 67
- Flip-Flops                                            : 67
-# Multiplexers                                         : 95
- 1-bit 2-to-1 multiplexer                              : 91
+# Registers                                            : 74
+ Flip-Flops                                            : 74
+# Multiplexers                                         : 101
+ 1-bit 2-to-1 multiplexer                              : 97
  1-bit 4-to-1 multiplexer                              : 4
 
 =========================================================================
@@ -400,8 +447,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 67
- Flip-Flops                                            : 67
+# Registers                                            : 74
+ Flip-Flops                                            : 74
 
 =========================================================================
 
@@ -424,23 +471,26 @@ Top Level Output File Name         : main.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 121
+# BELS                             : 130
 #      AND2                        : 4
+#      AND2B1                      : 1
+#      AND2B2                      : 1
 #      BUF                         : 11
 #      GND                         : 1
-#      INV                         : 38
-#      LUT2                        : 8
-#      LUT3                        : 24
+#      INV                         : 39
+#      LUT2                        : 11
+#      LUT3                        : 25
 #      LUT4                        : 14
 #      LUT5                        : 7
 #      LUT6                        : 4
-#      OR2                         : 8
+#      OR2                         : 10
 #      OR2B1                       : 1
 #      VCC                         : 1
-# FlipFlops/Latches                : 67
-#      FD_1                        : 18
-#      FDC                         : 1
-#      FDCE                        : 48
+# FlipFlops/Latches                : 74
+#      FD                          : 2
+#      FD_1                        : 20
+#      FDC                         : 3
+#      FDCE                        : 49
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 11
@@ -457,16 +507,16 @@ Selected Device : 6slx9tqg144-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              67  out of  11440     0%  
- Number of Slice LUTs:                   95  out of   5720     1%  
-    Number used as Logic:                95  out of   5720     1%  
+ Number of Slice Registers:              74  out of  11440     0%  
+ Number of Slice LUTs:                  100  out of   5720     1%  
+    Number used as Logic:               100  out of   5720     1%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    162
-   Number with an unused Flip Flop:      95  out of    162    58%  
-   Number with an unused LUT:            67  out of    162    41%  
-   Number of fully used LUT-FF pairs:     0  out of    162     0%  
-   Number of unique control sets:        33
+ Number of LUT Flip Flop pairs used:    174
+   Number with an unused Flip Flop:     100  out of    174    57%  
+   Number with an unused LUT:            74  out of    174    42%  
+   Number of fully used LUT-FF pairs:     0  out of    174     0%  
+   Number of unique control sets:        38
 
 IO Utilization: 
  Number of IOs:                          12
@@ -493,31 +543,32 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------------------+--------------------------+-------+
-Clock Signal                                   | Clock buffer(FF name)    | Load  |
------------------------------------------------+--------------------------+-------+
-XLXN_28                                        | NONE(XLXI_29/XLXI_24)    | 4     |
-XLXI_22/XLXN_10025                             | NONE(XLXI_22/XLXI_45)    | 1     |
-XLXI_22/XLXN_10023                             | NONE(XLXI_22/XLXI_42)    | 1     |
-XLXI_22/XLXN_10021                             | NONE(XLXI_22/XLXI_40)    | 1     |
-XLXI_22/XLXN_10019                             | NONE(XLXI_22/XLXI_38)    | 1     |
-XLXI_22/XLXN_10017                             | NONE(XLXI_22/XLXI_36)    | 1     |
-XLXI_22/XLXN_10013                             | NONE(XLXI_22/XLXI_34)    | 1     |
-XLXI_22/XLXN_10000                             | NONE(XLXI_22/XLXI_31)    | 1     |
-XLXI_22/XLXN_17                                | NONE(XLXI_22/XLXI_17)    | 1     |
-XLXI_22/XLXN_9999                              | NONE(XLXI_22/XLXI_15)    | 1     |
-OSC                                            | BUFGP                    | 29    |
-XLXI_28/XLXI_31/TC(XLXI_28/XLXI_31/Mmux_TC11:O)| NONE(*)(XLXI_28/XLXI_9)  | 1     |
-XLXN_29(XLXI_29/XLXI_25:O)                     | NONE(*)(XLXI_7/Q3)       | 16    |
-XLXI_23/XLXN_10017                             | NONE(XLXI_23/XLXI_36)    | 1     |
-XLXI_23/XLXN_10013                             | NONE(XLXI_23/XLXI_34)    | 1     |
-XLXI_23/XLXN_10000                             | NONE(XLXI_23/XLXI_31)    | 1     |
-XLXI_23/XLXN_28                                | NONE(XLXI_23/XLXI_21)    | 1     |
-XLXI_23/XLXN_9999                              | NONE(XLXI_23/XLXI_19)    | 1     |
-XLXN_23                                        | NONE(XLXI_23/XLXI_17)    | 1     |
-XLXN_15                                        | NONE(XLXI_10/XLXI_162/Q0)| 2     |
------------------------------------------------+--------------------------+-------+
-(*) These 2 clock signal(s) are generated by combinatorial logic,
+-----------------------------------------------+-------------------------------+-------+
+Clock Signal                                   | Clock buffer(FF name)         | Load  |
+-----------------------------------------------+-------------------------------+-------+
+XLXI_30/XLXN_1(XLXI_30/XLXI_1/XLXI_25:O)       | NONE(*)(XLXI_30/XLXI_3/XLXI_3)| 3     |
+XLXN_28                                        | NONE(XLXI_29/XLXI_24)         | 4     |
+XLXN_15                                        | NONE(XLXI_30/XLXI_1/XLXI_24)  | 6     |
+XLXI_22/XLXN_10025                             | NONE(XLXI_22/XLXI_45)         | 1     |
+XLXI_22/XLXN_10023                             | NONE(XLXI_22/XLXI_42)         | 1     |
+XLXI_22/XLXN_10021                             | NONE(XLXI_22/XLXI_40)         | 1     |
+XLXI_22/XLXN_10019                             | NONE(XLXI_22/XLXI_38)         | 1     |
+XLXI_22/XLXN_10017                             | NONE(XLXI_22/XLXI_36)         | 1     |
+XLXI_22/XLXN_10013                             | NONE(XLXI_22/XLXI_34)         | 1     |
+XLXI_22/XLXN_10000                             | NONE(XLXI_22/XLXI_31)         | 1     |
+XLXI_22/XLXN_17                                | NONE(XLXI_22/XLXI_17)         | 1     |
+XLXI_22/XLXN_9999                              | NONE(XLXI_22/XLXI_15)         | 1     |
+OSC                                            | BUFGP                         | 29    |
+XLXI_28/XLXI_31/TC(XLXI_28/XLXI_31/Mmux_TC11:O)| NONE(*)(XLXI_28/XLXI_9)       | 1     |
+XLXN_29(XLXI_29/XLXI_25:O)                     | NONE(*)(XLXI_7/Q3)            | 16    |
+XLXI_23/XLXN_10017                             | NONE(XLXI_23/XLXI_36)         | 1     |
+XLXI_23/XLXN_10013                             | NONE(XLXI_23/XLXI_34)         | 1     |
+XLXI_23/XLXN_10000                             | NONE(XLXI_23/XLXI_31)         | 1     |
+XLXI_23/XLXN_28                                | NONE(XLXI_23/XLXI_21)         | 1     |
+XLXI_23/XLXN_9999                              | NONE(XLXI_23/XLXI_19)         | 1     |
+XLXN_23                                        | NONE(XLXI_23/XLXI_17)         | 1     |
+-----------------------------------------------+-------------------------------+-------+
+(*) These 3 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
@@ -538,6 +589,27 @@ Speed Grade: -3
 Timing Details:
 ---------------
 All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_30/XLXN_1'
+  Clock period: 2.398ns (frequency: 416.927MHz)
+  Total number of paths / destination ports: 4 / 3
+-------------------------------------------------------------------------
+Delay:               1.199ns (Levels of Logic = 0)
+  Source:            XLXI_30/XLXI_3/XLXI_2 (FF)
+  Destination:       XLXI_30/XLXI_3/XLXI_3 (FF)
+  Source Clock:      XLXI_30/XLXN_1 rising
+  Destination Clock: XLXI_30/XLXN_1 falling
+
+  Data Path: XLXI_30/XLXI_3/XLXI_2 to XLXI_30/XLXI_3/XLXI_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.447   0.650  XLXI_30/XLXI_3/XLXI_2 (XLXI_30/XLXI_3/XLXN_5)
+     FD_1:D                    0.102          XLXI_30/XLXI_3/XLXI_3
+    ----------------------------------------
+    Total                      1.199ns (0.549ns logic, 0.650ns route)
+                                       (45.8% logic, 54.2% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'XLXN_28'
@@ -563,6 +635,31 @@ Delay:               3.584ns (Levels of Logic = 3)
     ----------------------------------------
     Total                      3.584ns (1.195ns logic, 2.389ns route)
                                        (33.3% logic, 66.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXN_15'
+  Clock period: 2.686ns (frequency: 372.245MHz)
+  Total number of paths / destination ports: 14 / 7
+-------------------------------------------------------------------------
+Delay:               2.686ns (Levels of Logic = 3)
+  Source:            XLXI_30/XLXI_1/XLXI_8/Q (FF)
+  Destination:       XLXI_30/XLXI_1/XLXI_7/Q (FF)
+  Source Clock:      XLXN_15 rising
+  Destination Clock: XLXN_15 rising
+
+  Data Path: XLXI_30/XLXI_1/XLXI_8/Q to XLXI_30/XLXI_1/XLXI_7/Q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             4   0.447   1.048  Q (Q)
+     end scope: 'XLXI_30/XLXI_1/XLXI_8:Q'
+     AND2B1:I0->O          1   0.203   0.684  XLXI_30/XLXI_1/XLXI_22 (XLXI_30/XLXI_1/XLXN_35)
+     begin scope: 'XLXI_30/XLXI_1/XLXI_7:J'
+     LUT2:I0->O            1   0.203   0.000  Mmux_Q_Q_MUX_34_o11 (Q_Q_MUX_34_o)
+     FDC:D                     0.102          Q
+    ----------------------------------------
+    Total                      2.686ns (0.955ns logic, 1.731ns route)
+                                       (35.5% logic, 64.5% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'XLXI_22/XLXN_10025'
@@ -855,10 +952,10 @@ Delay:               5.153ns (Levels of Logic = 6)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'XLXI_23/XLXN_10017'
-  Clock period: 2.346ns (frequency: 426.239MHz)
+  Clock period: 2.469ns (frequency: 405.104MHz)
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Delay:               2.346ns (Levels of Logic = 1)
+Delay:               2.469ns (Levels of Logic = 1)
   Source:            XLXI_23/XLXI_36 (FF)
   Destination:       XLXI_23/XLXI_36 (FF)
   Source Clock:      XLXI_23/XLXN_10017 falling
@@ -868,12 +965,12 @@ Delay:               2.346ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD_1:C->Q             3   0.447   0.650  XLXI_23/XLXI_36 (XLXN_15)
+     FD_1:C->Q             7   0.447   0.773  XLXI_23/XLXI_36 (XLXN_15)
      INV:I->O              1   0.568   0.579  XLXI_23/XLXI_37 (XLXI_23/XLXN_10018)
      FD_1:D                    0.102          XLXI_23/XLXI_36
     ----------------------------------------
-    Total                      2.346ns (1.117ns logic, 1.229ns route)
-                                       (47.6% logic, 52.4% route)
+    Total                      2.469ns (1.117ns logic, 1.352ns route)
+                                       (45.3% logic, 54.7% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'XLXI_23/XLXN_10013'
@@ -984,28 +1081,6 @@ Delay:               2.312ns (Levels of Logic = 1)
     ----------------------------------------
     Total                      2.312ns (1.117ns logic, 1.195ns route)
                                        (48.3% logic, 51.7% route)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'XLXN_15'
-  Clock period: 2.190ns (frequency: 456.663MHz)
-  Total number of paths / destination ports: 3 / 2
--------------------------------------------------------------------------
-Delay:               2.190ns (Levels of Logic = 1)
-  Source:            XLXI_10/XLXI_162/Q0 (FF)
-  Destination:       XLXI_10/XLXI_162/Q0 (FF)
-  Source Clock:      XLXN_15 rising
-  Destination Clock: XLXN_15 rising
-
-  Data Path: XLXI_10/XLXI_162/Q0 to XLXI_10/XLXI_162/Q0
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDCE:C->Q            10   0.447   0.856  Q0 (Q0)
-     INV:I->O              1   0.206   0.579  Madd_Q1_GND_12_o_add_0_OUT_xor<0>11_INV_0 (Q1_GND_12_o_add_0_OUT<0>)
-     FDCE:D                    0.102          Q0
-    ----------------------------------------
-    Total                      2.190ns (0.755ns logic, 1.435ns route)
-                                       (34.5% logic, 65.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXN_29'
@@ -1179,7 +1254,7 @@ Clock to Setup on destination clock XLXI_23/XLXN_10017
                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------+---------+---------+---------+---------+
-XLXI_23/XLXN_10017|         |         |    2.346|         |
+XLXI_23/XLXN_10017|         |         |    2.469|         |
 ------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock XLXI_23/XLXN_28
@@ -1206,12 +1281,20 @@ Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 XLXI_28/XLXI_31/TC|         |         |    2.410|         |
 ------------------+---------+---------+---------+---------+
 
+Clock to Setup on destination clock XLXI_30/XLXN_1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+XLXI_30/XLXN_1 |    2.346|         |    1.199|         |
+---------------+---------+---------+---------+---------+
+
 Clock to Setup on destination clock XLXN_15
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-XLXN_15        |    2.190|         |         |         |
+XLXN_15        |    2.686|         |    1.232|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock XLXN_23
@@ -1242,7 +1325,7 @@ XLXN_29        |         |         |    5.153|         |
 
 
 Total REAL time to Xst completion: 3.00 secs
-Total CPU time to Xst completion: 3.59 secs
+Total CPU time to Xst completion: 3.61 secs
  
 --> 
 
@@ -1250,5 +1333,5 @@ Total memory usage is 4503440 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    2 (   0 filtered)
-Number of infos    :   43 (   0 filtered)
+Number of infos    :   44 (   0 filtered)
 
