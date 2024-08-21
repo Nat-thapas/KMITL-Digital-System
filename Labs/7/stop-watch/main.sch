@@ -34,11 +34,6 @@
         <signal name="D0(3)" />
         <signal name="SSD_COM(3:0)" />
         <signal name="SSD_Segment(7:0)" />
-        <signal name="XLXN_268" />
-        <signal name="XLXN_273" />
-        <signal name="XLXN_274" />
-        <signal name="XLXN_275" />
-        <signal name="XLXN_276" />
         <signal name="D1(0)" />
         <signal name="D1(1)" />
         <signal name="D1(2)" />
@@ -104,18 +99,18 @@
             <line x2="64" y1="-128" y2="-128" x1="0" />
         </blockdef>
         <blockdef name="counter6x4c">
-            <timestamp>2024-8-21T14:1:34</timestamp>
-            <rect width="256" x="64" y="-480" height="444" />
+            <timestamp>2024-8-21T17:25:14</timestamp>
             <line x2="384" y1="-160" y2="-160" x1="320" />
             <line x2="384" y1="-416" y2="-416" x1="320" />
             <line x2="384" y1="-352" y2="-352" x1="320" />
             <line x2="384" y1="-288" y2="-288" x1="320" />
             <line x2="384" y1="-224" y2="-224" x1="320" />
             <line x2="384" y1="-96" y2="-96" x1="320" />
-            <line x2="200" y1="-36" y2="0" x1="200" />
             <line x2="0" y1="-160" y2="-160" x1="64" />
             <line x2="0" y1="-96" y2="-96" x1="64" />
-            <line x2="0" y1="0" y2="0" x1="200" />
+            <line x2="192" y1="0" y2="0" x1="0" />
+            <line x2="192" y1="0" y2="-36" x1="192" />
+            <rect width="256" x="64" y="-480" height="444" />
         </blockdef>
         <blockdef name="and2b1">
             <timestamp>2000-1-1T10:10:10</timestamp>
