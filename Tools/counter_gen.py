@@ -3,10 +3,12 @@ import sympy
 
 def parse_number(number_string: str) -> int:
     number_string = number_string.strip()
-    if number_string.startswith("0x"):
-        return int(number_string, 16)
+    if number_string.startswith("0b"):
+        return int(number_string, 2)
     if number_string.startswith("0o"):
         return int(number_string, 8)
+    if number_string.startswith("0x"):
+        return int(number_string, 16)
     return int(number_string, 10)
 
 
