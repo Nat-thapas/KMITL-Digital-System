@@ -319,7 +319,7 @@ def process_jk_flip_flop(
 
 
 def main() -> None:
-    raw_sequence = input("Enter the sequence (base 8, 10 or 16): ")
+    raw_sequence = input("Enter the sequence (base 2, 8, 10 or 16): ")
     unparsed_sequence = raw_sequence.split()
     sequence = [parse_number(number_string) for number_string in unparsed_sequence]
     primitive = get_primitive()
