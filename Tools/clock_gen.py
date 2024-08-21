@@ -1,13 +1,6 @@
 from functools import cache
 
 
-def multiply_list(arr: list[int]) -> int:
-    product = 1
-    for num in arr:
-        product *= num
-    return product
-
-
 @cache
 def closest_product(arr: tuple[int, ...], target: float) -> tuple[list[int], float]:
     if target < arr[0]:
