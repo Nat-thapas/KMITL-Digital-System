@@ -2,8 +2,9 @@
 Release 14.7 Trace  (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
--n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf -ucf main.ucf
+D:\Programs\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v
+3 -s 3 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf -ucf
+main.ucf
 
 Design file:              main.ncd
 Physical constraint file: main.pcf
@@ -31,53 +32,33 @@ Data Sheet report:
 -----------------
 All values displayed in nanoseconds (ns)
 
-Clock BTN3 to Pad
-------------+-----------------+------------+-----------------+------------+------------------+--------+
-            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
-Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
-------------+-----------------+------------+-----------------+------------+------------------+--------+
-LED0        |        11.065(R)|      SLOW  |         5.627(R)|      FAST  |erinstinfs        |   0.000|
-LED1        |        11.303(R)|      SLOW  |         5.838(R)|      FAST  |erinstinfs        |   0.000|
-LED2        |        11.490(R)|      SLOW  |         5.562(R)|      FAST  |erinstinfs        |   0.000|
-LED3        |        11.244(R)|      SLOW  |         5.822(R)|      FAST  |erinstinfs        |   0.000|
-MN0         |         9.759(R)|      SLOW  |         5.717(R)|      FAST  |erinstinfs        |   0.000|
-MN1         |        10.056(R)|      SLOW  |         5.924(R)|      FAST  |erinstinfs        |   0.000|
-MN2         |         9.940(R)|      SLOW  |         5.833(R)|      FAST  |erinstinfs        |   0.000|
-MN3         |         9.743(R)|      SLOW  |         5.701(R)|      FAST  |erinstinfs        |   0.000|
-SSD_a       |        13.762(R)|      SLOW  |         6.860(R)|      FAST  |erinstinfs        |   0.000|
-SSD_b       |        12.653(R)|      SLOW  |         6.741(R)|      FAST  |erinstinfs        |   0.000|
-SSD_c       |        13.009(R)|      SLOW  |         6.854(R)|      FAST  |erinstinfs        |   0.000|
-SSD_d       |        13.718(R)|      SLOW  |         6.927(R)|      FAST  |erinstinfs        |   0.000|
-SSD_e       |        12.053(R)|      SLOW  |         6.599(R)|      FAST  |erinstinfs        |   0.000|
-SSD_f       |        12.632(R)|      SLOW  |         6.070(R)|      FAST  |erinstinfs        |   0.000|
-SSD_g       |        13.766(R)|      SLOW  |         6.109(R)|      FAST  |erinstinfs        |   0.000|
-------------+-----------------+------------+-----------------+------------+------------------+--------+
-
-Clock to Setup on destination clock BTN3
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-BTN3           |    2.359|         |         |         |
----------------+---------+---------+---------+---------+
-
 Clock to Setup on destination clock OSC
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-OSC            |    0.979|         |         |         |
+OSC            |         |         |         |    3.275|
 ---------------+---------+---------+---------+---------+
 
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+BTN3           |LED<0>         |    8.882|
+BTN3           |LED<1>         |    9.001|
+BTN3           |LED<2>         |    8.729|
+BTN3           |LED<3>         |    8.378|
+---------------+---------------+---------+
 
-Analysis completed Tue Aug 06 14:32:45 2024 
+
+Analysis completed Wed Aug 21 21:52:11 2024 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 4585 MB
+Peak Memory Usage: 4587 MB
 
 
 

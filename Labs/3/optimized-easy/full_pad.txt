@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Tue Jul 16 13:46:39 2024
+Wed Aug 21 22:34:49 2024
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -80,7 +80,7 @@ Pinout by Pin Number:
 |P58       |           |IOBM     |IO_L14P_D11_2             |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |P59       |A_SW3_P59  |IOB      |IO_L13N_D10_2             |INPUT    |LVCMOS25*  |2             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |P60       |           |IOBM     |IO_L13P_M1_2              |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
-|P61       |B__SW2_P61 |IOB      |IO_L12N_D2_MISO3_2        |INPUT    |LVCMOS25*  |2             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
+|P61       |B_SW2_P61  |IOB      |IO_L12N_D2_MISO3_2        |INPUT    |LVCMOS25*  |2             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |P62       |C_SW1_P62  |IOB      |IO_L12P_D1_MISO2_2        |INPUT    |LVCMOS25*  |2             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |P63       |           |         |VCCO_2                    |         |           |2             |          |         |           |         |any******|          |           |                |
 |P64       |           |IOBS     |IO_L3N_MOSI_CSI_B_MISO0_2 |UNUSED   |           |2             |          |         |           |         |         |          |           |                |

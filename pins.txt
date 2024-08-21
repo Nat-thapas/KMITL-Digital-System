@@ -66,3 +66,46 @@ NET "SSD_COM3" LOC = P30;
 NET "SSD_COM2" LOC = P33;
 NET "SSD_COM1" LOC = P43;
 NET "SSD_COM0" LOC = P44;
+
+
+NET "SW[7]" LOC = P55;
+NET "SW[6]" LOC = P56;
+NET "SW[5]" LOC = P57;
+NET "SW[4]" LOC = P58;
+NET "SW[3]" LOC = P59;
+NET "SW[2]" LOC = P61;
+NET "SW[1]" LOC = P62;
+NET "SW[0]" LOC = P66;
+
+NET "LED[7]" LOC = P67;
+NET "LED[6]" LOC = P74;
+NET "LED[5]" LOC = P75;
+NET "LED[4]" LOC = P78;
+NET "LED[3]" LOC = P79;
+NET "LED[2]" LOC = P80;
+NET "LED[1]" LOC = P81;
+NET "LED[0]" LOC = P82;
+
+NET "MN[7]" LOC = P84;
+NET "MN[6]" LOC = P85;
+NET "MN[5]" LOC = P87;
+NET "MN[4]" LOC = P88;
+NET "MN[3]" LOC = P92;
+NET "MN[2]" LOC = P93;
+NET "MN[1]" LOC = P94;
+NET "MN[0]" LOC = P95;
+
+NET "SSD_Segment[0]" LOC = P41;
+NET "SSD_Segment[1]" LOC = P40;
+NET "SSD_Segment[2]" LOC = P35;
+NET "SSD_Segment[3]" LOC = P34;
+NET "SSD_Segment[4]" LOC = P32;
+NET "SSD_Segment[5]" LOC = P29;
+NET "SSD_Segment[6]" LOC = P27;
+
+NET "SSD_Segment[7]" LOC = P26;
+
+NET "SSD_COM[3]" LOC = P30;
+NET "SSD_COM[2]" LOC = P33;
+NET "SSD_COM[1]" LOC = P43;
+NET "SSD_COM[0]" LOC = P44;

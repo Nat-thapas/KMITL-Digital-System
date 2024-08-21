@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2024-07-23T13:07:21</DateModified>
+  <DateModified>2024-08-21T21:53:22</DateModified>
   <ModuleName>HalfAdder</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>D:/Classes-2024/Digital System Fundamentals/Labs/4/HalfAdder/iseconfig/HalfAdder.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>D:/Classes-2024/Digital System Fundamentals/Labs/4/HalfAdder\</ImplementationReportsDirectory>
+  <SavedFilePath>D:/Personal/Projects/Digital Labs/Labs/4/HalfAdder/iseconfig/HalfAdder.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>D:/Personal/Projects/Digital Labs/Labs/4/HalfAdder\</ImplementationReportsDirectory>
   <DateInitialized>2024-07-23T09:03:00</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

@@ -3,9 +3,9 @@
   <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="integration"/>
+      <Option Name="TopModule" Val="main"/>
       <Option Name="TopLib" Val="work"/>
-      <Option Name="TopRTLFile" Val="$PPRDIR/../integration.vf"/>
+      <Option Name="TopRTLFile" Val="$PPRDIR/../main.vf"/>
       <Option Name="TopAutoSet" Val="TRUE"/>
       <Option Name="SrcSet" Val="sources_1"/>
     </Config>

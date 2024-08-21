@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : ssd2d09b.vf
-// /___/   /\     Timestamp : 08/06/2024 10:11:02
+// /___/   /\     Timestamp : 08/21/2024 21:42:24
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Classes-2024/Digital System Fundamentals Shared/Labs/6/random-number/ssd2d09b.vf" -w "D:/Classes-2024/Digital System Fundamentals Shared/Labs/6/random-number/ssd2d09b.sch"
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Personal/Projects/Digital Labs/Labs/6/random-number/ssd2d09b.vf" -w "D:/Personal/Projects/Digital Labs/Labs/6/random-number/ssd2d09b.sch"
 //Design Name: ssd2d09b
 //Device: spartan6
 //Purpose:
@@ -55,19 +55,41 @@ module FJKC_HXILINX_ssd2d09b(Q, C, CLR, J, K);
      end
    
 endmodule
+`timescale  100 ps / 10 ps
+
+module M2_1_HXILINX_ssd2d09b (O, D0, D1, S0);
+    
+
+   output O;
+
+   input  D0;
+   input  D1;
+   input  S0;
+
+   reg O;
+
+   always @ ( D0 or D1 or S0)
+   begin
+      case(S0)
+      1'b0 : O <= D0;
+      1'b1 : O <= D1;
+      endcase
+   end
+    
+endmodule
 `timescale 1ns / 1ps
 
-module ssd2d09b(CLK, 
-                D0, 
+module ssd2d09b(D0, 
                 D1, 
+                ScanCLK, 
                 COM, 
-                SSD_GA);
+                Segment);
 
-    input CLK;
     input [3:0] D0;
     input [3:0] D1;
+    input ScanCLK;
    output [1:0] COM;
-   output [6:0] SSD_GA;
+   output [6:0] Segment;
    
    wire [3:0] DATA;
    wire XLXN_109;
@@ -84,21 +106,13 @@ module ssd2d09b(CLK,
    wire XLXN_132;
    wire XLXN_134;
    wire XLXN_135;
-   wire XLXN_136;
-   wire XLXN_137;
    wire XLXN_139;
    wire XLXN_141;
-   wire XLXN_142;
-   wire XLXN_143;
-   wire XLXN_146;
-   wire XLXN_147;
-   wire XLXN_148;
-   wire XLXN_149;
    wire [1:0] COM_DUMMY;
-   wire [6:0] SSD_GA_DUMMY;
+   wire [6:0] Segment_DUMMY;
    
    assign COM[1:0] = COM_DUMMY[1:0];
-   assign SSD_GA[6:0] = SSD_GA_DUMMY[6:0];
+   assign Segment[6:0] = Segment_DUMMY[6:0];
    AND2  XLXI_92 (.I0(DATA[0]), 
                  .I1(DATA[1]), 
                  .O(XLXN_129));
@@ -125,20 +139,20 @@ module ssd2d09b(CLK,
                  .I1(XLXN_114), 
                  .O(XLXN_117));
    INV  XLXI_101 (.I(XLXN_117), 
-                 .O(SSD_GA_DUMMY[4]));
+                 .O(Segment_DUMMY[4]));
    NAND2  XLXI_102 (.I0(XLXN_117), 
                    .I1(DATA[1]), 
                    .O(XLXN_119));
    NAND3  XLXI_103 (.I0(XLXN_118), 
                    .I1(XLXN_119), 
                    .I2(DATA[2]), 
-                   .O(SSD_GA_DUMMY[1]));
-   NAND3  XLXI_104 (.I0(SSD_GA_DUMMY[1]), 
+                   .O(Segment_DUMMY[1]));
+   NAND3  XLXI_104 (.I0(Segment_DUMMY[1]), 
                    .I1(DATA[1]), 
-                   .I2(SSD_GA_DUMMY[4]), 
-                   .O(SSD_GA_DUMMY[2]));
+                   .I2(Segment_DUMMY[4]), 
+                   .O(Segment_DUMMY[2]));
    NOR2  XLXI_105 (.I0(XLXN_111), 
-                  .I1(SSD_GA_DUMMY[1]), 
+                  .I1(Segment_DUMMY[1]), 
                   .O(XLXN_125));
    OR2  XLXI_106 (.I0(XLXN_125), 
                  .I1(DATA[3]), 
@@ -151,60 +165,44 @@ module ssd2d09b(CLK,
                   .O(XLXN_132));
    OR2  XLXI_109 (.I0(XLXN_135), 
                  .I1(XLXN_134), 
-                 .O(SSD_GA_DUMMY[6]));
-   OR2  XLXI_110 (.I0(SSD_GA_DUMMY[4]), 
+                 .O(Segment_DUMMY[6]));
+   OR2  XLXI_110 (.I0(Segment_DUMMY[4]), 
                  .I1(XLXN_134), 
-                 .O(SSD_GA_DUMMY[3]));
+                 .O(Segment_DUMMY[3]));
    NAND2  XLXI_111 (.I0(XLXN_132), 
                    .I1(XLXN_117), 
-                   .O(SSD_GA_DUMMY[0]));
+                   .O(Segment_DUMMY[0]));
    OR2  XLXI_112 (.I0(XLXN_131), 
                  .I1(XLXN_130), 
-                 .O(SSD_GA_DUMMY[5]));
-   AND2  XLXI_114 (.I0(COM_DUMMY[1]), 
-                  .I1(D0[3]), 
-                  .O(XLXN_136));
-   AND2B1  XLXI_115 (.I0(COM_DUMMY[1]), 
-                    .I1(D1[3]), 
-                    .O(XLXN_137));
-   OR2  XLXI_116 (.I0(XLXN_137), 
-                 .I1(XLXN_136), 
-                 .O(DATA[3]));
-   (* HU_SET = "XLXI_117_46" *) 
-   FJKC_HXILINX_ssd2d09b  XLXI_117 (.C(CLK), 
+                 .O(Segment_DUMMY[5]));
+   (* HU_SET = "XLXI_117_37" *) 
+   FJKC_HXILINX_ssd2d09b  XLXI_117 (.C(ScanCLK), 
                                    .CLR(XLXN_141), 
                                    .J(XLXN_139), 
                                    .K(XLXN_139), 
-                                   .Q(COM_DUMMY[1]));
+                                   .Q(COM_DUMMY[0]));
    VCC  XLXI_118 (.P(XLXN_139));
    GND  XLXI_119 (.G(XLXN_141));
-   AND2  XLXI_120 (.I0(COM_DUMMY[1]), 
-                  .I1(D0[2]), 
-                  .O(XLXN_142));
-   OR2  XLXI_121 (.I0(XLXN_143), 
-                 .I1(XLXN_142), 
-                 .O(DATA[2]));
-   AND2B1  XLXI_122 (.I0(COM_DUMMY[1]), 
-                    .I1(D1[2]), 
-                    .O(XLXN_143));
-   AND2  XLXI_126 (.I0(COM_DUMMY[1]), 
-                  .I1(D0[1]), 
-                  .O(XLXN_146));
-   OR2  XLXI_127 (.I0(XLXN_147), 
-                 .I1(XLXN_146), 
-                 .O(DATA[1]));
-   AND2B1  XLXI_128 (.I0(COM_DUMMY[1]), 
-                    .I1(D1[1]), 
-                    .O(XLXN_147));
-   AND2  XLXI_129 (.I0(COM_DUMMY[1]), 
-                  .I1(D0[0]), 
-                  .O(XLXN_148));
-   OR2  XLXI_130 (.I0(XLXN_149), 
-                 .I1(XLXN_148), 
-                 .O(DATA[0]));
-   AND2B1  XLXI_131 (.I0(COM_DUMMY[1]), 
-                    .I1(D1[0]), 
-                    .O(XLXN_149));
-   INV  XLXI_156 (.I(COM_DUMMY[1]), 
-                 .O(COM_DUMMY[0]));
+   INV  XLXI_156 (.I(COM_DUMMY[0]), 
+                 .O(COM_DUMMY[1]));
+   (* HU_SET = "XLXI_158_33" *) 
+   M2_1_HXILINX_ssd2d09b  XLXI_158 (.D0(D0[0]), 
+                                   .D1(D1[0]), 
+                                   .S0(COM_DUMMY[0]), 
+                                   .O(DATA[0]));
+   (* HU_SET = "XLXI_159_34" *) 
+   M2_1_HXILINX_ssd2d09b  XLXI_159 (.D0(D0[1]), 
+                                   .D1(D1[1]), 
+                                   .S0(COM_DUMMY[0]), 
+                                   .O(DATA[1]));
+   (* HU_SET = "XLXI_160_35" *) 
+   M2_1_HXILINX_ssd2d09b  XLXI_160 (.D0(D0[2]), 
+                                   .D1(D1[2]), 
+                                   .S0(COM_DUMMY[0]), 
+                                   .O(DATA[2]));
+   (* HU_SET = "XLXI_161_36" *) 
+   M2_1_HXILINX_ssd2d09b  XLXI_161 (.D0(D0[3]), 
+                                   .D1(D1[3]), 
+                                   .S0(COM_DUMMY[0]), 
+                                   .O(DATA[3]));
 endmodule

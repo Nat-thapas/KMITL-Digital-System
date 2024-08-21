@@ -1,3 +1,0 @@
-select figure at 1761 1440 8 -wires -sn=1
-update symbols clkdivh10
-select figure at 3320 1401 8 -wires -sn=1

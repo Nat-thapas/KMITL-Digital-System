@@ -1,20 +1,26 @@
 
 # PlanAhead Launch Script for Pre-Synthesis Floorplanning, created by Project Navigator
 
-create_project -name random-number -dir "D:/Classes-2024/Digital System Fundamentals Shared/Labs/6/random-number/planAhead_run_1" -part xc6slx9tqg144-3
+create_project -name random-number -dir "D:/Personal/Projects/Digital Labs/Labs/6/random-number/planAhead_run_1" -part xc6slx9tqg144-3
 set_param project.pinAheadLayout yes
 set srcset [get_property srcset [current_run -impl]]
 set_property target_constrs_file "main.ucf" [current_fileset -constrset]
 set hdlfile [add_files [list {ssd2d09b.vf}]]
 set_property file_type Verilog $hdlfile
 set_property library work $hdlfile
-set hdlfile [add_files [list {counterbcd.vf}]]
+set hdlfile [add_files [list {mux2x1x4.vf}]]
 set_property file_type Verilog $hdlfile
 set_property library work $hdlfile
-set hdlfile [add_files [list {clkdiv256.vf}]]
+set hdlfile [add_files [list {counter10x4c.vf}]]
 set_property file_type Verilog $hdlfile
 set_property library work $hdlfile
-set hdlfile [add_files [list {clkdiv1ki.vf}]]
+set hdlfile [add_files [list {comp2x4.vf}]]
+set_property file_type Verilog $hdlfile
+set_property library work $hdlfile
+set hdlfile [add_files [list {clkdiv20k.vf}]]
+set_property file_type Verilog $hdlfile
+set_property library work $hdlfile
+set hdlfile [add_files [list {clkdiv10.vf}]]
 set_property file_type Verilog $hdlfile
 set_property library work $hdlfile
 set hdlfile [add_files [list {main.vf}]]

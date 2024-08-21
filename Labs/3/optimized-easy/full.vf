@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : full.vf
-// /___/   /\     Timestamp : 07/16/2024 13:44:04
+// /___/   /\     Timestamp : 08/21/2024 22:34:32
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Classes-2024/Digital System Fundamentals/Labs/3/optimized-easy/full.vf" -w "D:/Classes-2024/Digital System Fundamentals/Labs/3/optimized-easy/full.sch"
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Personal/Projects/Digital Labs/Labs/3/optimized-easy/full.vf" -w "D:/Personal/Projects/Digital Labs/Labs/3/optimized-easy/full.sch"
 //Design Name: full
 //Device: spartan6
 //Purpose:
@@ -21,13 +21,13 @@
 `timescale 1ns / 1ps
 
 module full(A_SW3_P59, 
-            B__SW2_P61, 
+            B_SW2_P61, 
             C_SW1_P62, 
             D_SW0_P66, 
             X_L0_P82);
 
     input A_SW3_P59;
-    input B__SW2_P61;
+    input B_SW2_P61;
     input C_SW1_P62;
     input D_SW0_P66;
    output X_L0_P82;
@@ -37,7 +37,7 @@ module full(A_SW3_P59,
    wire XLXN_6;
    
    AND2  XLXI_7 (.I0(D_SW0_P66), 
-                .I1(B__SW2_P61), 
+                .I1(B_SW2_P61), 
                 .O(XLXN_6));
    OR3  XLXI_8 (.I0(XLXN_6), 
                .I1(XLXN_5), 
@@ -47,7 +47,7 @@ module full(A_SW3_P59,
                   .I1(C_SW1_P62), 
                   .I2(A_SW3_P59), 
                   .O(XLXN_4));
-   AND2B1  XLXI_10 (.I0(B__SW2_P61), 
+   AND2B1  XLXI_10 (.I0(B_SW2_P61), 
                    .I1(C_SW1_P62), 
                    .O(XLXN_5));
 endmodule

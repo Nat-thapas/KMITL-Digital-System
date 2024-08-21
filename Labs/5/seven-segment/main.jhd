@@ -1,0 +1,3 @@
+MODULE main
+	SUBMODULE ssd1d0f
+		INSTANCE XLXI_1

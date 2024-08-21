@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Reading design: full.prj
 
@@ -105,7 +105,7 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "D:\Classes-2024\Digital System Fundamentals\Labs\3\optimized-easy\full.vf" into library work
+Analyzing Verilog file "D:\Personal\Projects\Digital Labs\Labs\3\optimized-easy\full.vf" into library work
 Parsing module <full>.
 
 =========================================================================
@@ -127,7 +127,7 @@ Elaborating module <AND2B1>.
 =========================================================================
 
 Synthesizing Unit <full>.
-    Related source file is "D:\Classes-2024\Digital System Fundamentals\Labs\3\optimized-easy\full.vf".
+    Related source file is "D:\Personal\Projects\Digital Labs\Labs\3\optimized-easy\full.vf".
     Summary:
 	no macro.
 Unit <full> synthesized.
@@ -282,11 +282,11 @@ Cross Clock Domains Report:
 
 
 Total REAL time to Xst completion: 3.00 secs
-Total CPU time to Xst completion: 3.11 secs
+Total CPU time to Xst completion: 3.02 secs
  
 --> 
 
-Total memory usage is 4501604 kilobytes
+Total memory usage is 4503440 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

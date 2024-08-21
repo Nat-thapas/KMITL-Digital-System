@@ -1,0 +1,1 @@
+counter{range 0 to _ (decimal)}x{output bit width}{c if cascadable}{b if bus is used}.sch

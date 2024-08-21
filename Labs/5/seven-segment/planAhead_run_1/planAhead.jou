@@ -1,69 +1,11 @@
 #-----------------------------------------------------------
 # PlanAhead v14.7
 # Build 321239 by xbuild on Fri Sep 27 19:31:35 MDT 2013
-# Start of session at: Sat Aug 03 22:54:09 2024
-# Process ID: 11896
-# Log file: D:/Personal/Projects/Digital Labs/seven-segment/planAhead_run_1/planAhead.log
-# Journal file: D:/Personal/Projects/Digital Labs/seven-segment/planAhead_run_1/planAhead.jou
+# Start of session at: Wed Aug 21 22:05:24 2024
+# Process ID: 22780
+# Log file: D:/Personal/Projects/Digital Labs/Labs/5/seven-segment/planAhead_run_1/planAhead.log
+# Journal file: D:/Personal/Projects/Digital Labs/Labs/5/seven-segment/planAhead_run_1/planAhead.jou
 #-----------------------------------------------------------
 start_gui
-source {D:/Personal/Projects/Digital Labs/seven-segment/pa.fromHdl.tcl}
+source {D:/Personal/Projects/Digital Labs/Labs/5/seven-segment/pa.fromHdl.tcl}
 update_compile_order -fileset sim_1
-startgroup
-set_property package_pin P41 [get_ports SSD_A_P41]
-endgroup
-startgroup
-set_property package_pin P40 [get_ports SSD_B_P40]
-endgroup
-startgroup
-set_property package_pin P35 [get_ports SSD_C_P35]
-endgroup
-startgroup
-set_property package_pin P44 [get_ports SSD_COM_0_P44]
-endgroup
-startgroup
-set_property package_pin P43 [get_ports SSD_COM_1_P43]
-endgroup
-startgroup
-set_property package_pin P33 [get_ports SSD_COM_2_P33]
-endgroup
-startgroup
-set_property package_pin P30 [get_ports SSD_COM_3_P30]
-endgroup
-startgroup
-set_property package_pin P34 [get_ports SSD_D_P34]
-endgroup
-startgroup
-set_property package_pin P32 [get_ports SSD_E_P32]
-endgroup
-startgroup
-set_property package_pin P29 [get_ports SSD_F_P29]
-endgroup
-startgroup
-set_property package_pin P27 [get_ports SSD_G_P27]
-endgroup
-startgroup
-set_property package_pin P66 [get_ports SW0_P66]
-endgroup
-startgroup
-set_property package_pin P62 [get_ports SW1_P62]
-endgroup
-startgroup
-set_property package_pin P61 [get_ports SW2_P61]
-endgroup
-startgroup
-set_property package_pin P59 [get_ports SW3_P59]
-endgroup
-startgroup
-set_property package_pin P58 [get_ports SW4_P58]
-endgroup
-startgroup
-set_property package_pin P57 [get_ports SW5_P57]
-endgroup
-startgroup
-set_property package_pin P56 [get_ports SW6_P56]
-endgroup
-startgroup
-set_property package_pin P55 [get_ports SW7_P55]
-endgroup
-save_constraints

@@ -1,10 +1,10 @@
 #-----------------------------------------------------------
 # PlanAhead v14.7
 # Build 321239 by xbuild on Fri Sep 27 19:31:35 MDT 2013
-# Start of session at: Sat Aug 03 22:54:09 2024
-# Process ID: 11896
-# Log file: D:/Personal/Projects/Digital Labs/seven-segment/planAhead_run_1/planAhead.log
-# Journal file: D:/Personal/Projects/Digital Labs/seven-segment/planAhead_run_1/planAhead.jou
+# Start of session at: Wed Aug 21 22:05:24 2024
+# Process ID: 22780
+# Log file: D:/Personal/Projects/Digital Labs/Labs/5/seven-segment/planAhead_run_1/planAhead.log
+# Journal file: D:/Personal/Projects/Digital Labs/Labs/5/seven-segment/planAhead_run_1/planAhead.jou
 #-----------------------------------------------------------
 INFO: [Common 17-78] Attempting to get a license: PlanAhead
 INFO: [Common 17-290] Got license for PlanAhead
@@ -12,24 +12,24 @@ INFO: [Device 21-36] Loading parts and site information from D:/Programs/Xilinx/
 Parsing RTL primitives file [D:/Programs/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
 Finished parsing RTL primitives file [D:/Programs/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
 start_gui
-source {D:/Personal/Projects/Digital Labs/seven-segment/pa.fromHdl.tcl}
-# create_project -name seven-segment -dir "D:/Personal/Projects/Digital Labs/seven-segment/planAhead_run_1" -part xc6slx9tqg144-3
+source {D:/Personal/Projects/Digital Labs/Labs/5/seven-segment/pa.fromHdl.tcl}
+# create_project -name seven-segment -dir "D:/Personal/Projects/Digital Labs/Labs/5/seven-segment/planAhead_run_1" -part xc6slx9tqg144-3
 # set_param project.pinAheadLayout yes
 # set srcset [get_property srcset [current_run -impl]]
-# set_property target_constrs_file "integration.ucf" [current_fileset -constrset]
-Adding file 'D:/Personal/Projects/Digital Labs/seven-segment/integration.ucf' to fileset 'constrs_1'
-# set hdlfile [add_files [list {ssd4.vf}]]
+# set_property target_constrs_file "main.ucf" [current_fileset -constrset]
+Adding file 'D:/Personal/Projects/Digital Labs/Labs/5/seven-segment/main.ucf' to fileset 'constrs_1'
+# set hdlfile [add_files [list {ssd1d0f.vf}]]
 # set_property file_type Verilog $hdlfile
 # set_property library work $hdlfile
-# set hdlfile [add_files [list {integration.vf}]]
+# set hdlfile [add_files [list {main.vf}]]
 # set_property file_type Verilog $hdlfile
 # set_property library work $hdlfile
-# set_property top integration $srcset
-# add_files [list {integration.ucf}] -fileset [get_property constrset [current_run]]
+# set_property top main $srcset
+# add_files [list {main.ucf}] -fileset [get_property constrset [current_run]]
 # open_rtl_design -part xc6slx9tqg144-3
 Using Verific elaboration
 Parsing VHDL file "D:/Programs/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
-Analyzing Verilog file "D:/Personal/Projects/Digital Labs/seven-segment/integration.vf" into library work
+Analyzing Verilog file "D:/Personal/Projects/Digital Labs/Labs/5/seven-segment/main.vf" into library work
 Loading clock regions from D:/Programs/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx9/ClockRegion.xml
 Loading clock buffers from D:/Programs/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx9/ClockBuffers.xml
 Loading package pin functions from D:/Programs/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/PinFunctions.xml...
@@ -37,79 +37,21 @@ Loading package from D:/Programs/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/
 Loading io standards from D:/Programs/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/IOStandards.xml
 Loading device configuration modes from D:/Programs/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/ConfigModes.xml
 Loading list of drcs for the architecture : D:/Programs/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/drc.xml
-Parsing UCF File [D:/Personal/Projects/Digital Labs/seven-segment/integration.ucf]
-Finished Parsing UCF File [D:/Personal/Projects/Digital Labs/seven-segment/integration.ucf]
+Parsing UCF File [D:/Personal/Projects/Digital Labs/Labs/5/seven-segment/main.ucf]
+Finished Parsing UCF File [D:/Personal/Projects/Digital Labs/Labs/5/seven-segment/main.ucf]
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Phase 0 | Netlist Checksum: e4fc26a0
-open_rtl_design: Time (s): elapsed = 00:00:05 . Memory (MB): peak = 586.527 ; gain = 102.699
+Phase 0 | Netlist Checksum: 5db55167
+open_rtl_design: Time (s): elapsed = 00:00:05 . Memory (MB): peak = 601.320 ; gain = 119.008
 update_compile_order -fileset sim_1
-startgroup
-set_property package_pin P41 [get_ports SSD_A_P41]
-endgroup
-startgroup
-set_property package_pin P40 [get_ports SSD_B_P40]
-endgroup
-startgroup
-set_property package_pin P35 [get_ports SSD_C_P35]
-endgroup
-startgroup
-set_property package_pin P44 [get_ports SSD_COM_0_P44]
-endgroup
-startgroup
-set_property package_pin P43 [get_ports SSD_COM_1_P43]
-endgroup
-startgroup
-set_property package_pin P33 [get_ports SSD_COM_2_P33]
-endgroup
-startgroup
-set_property package_pin P30 [get_ports SSD_COM_3_P30]
-endgroup
-startgroup
-set_property package_pin P34 [get_ports SSD_D_P34]
-endgroup
-startgroup
-set_property package_pin P32 [get_ports SSD_E_P32]
-endgroup
-startgroup
-set_property package_pin P29 [get_ports SSD_F_P29]
-endgroup
-startgroup
-set_property package_pin P27 [get_ports SSD_G_P27]
-endgroup
-startgroup
-set_property package_pin P66 [get_ports SW0_P66]
-endgroup
-startgroup
-set_property package_pin P62 [get_ports SW1_P62]
-endgroup
-startgroup
-set_property package_pin P61 [get_ports SW2_P61]
-endgroup
-startgroup
-set_property package_pin P59 [get_ports SW3_P59]
-endgroup
-startgroup
-set_property package_pin P58 [get_ports SW4_P58]
-endgroup
-startgroup
-set_property package_pin P57 [get_ports SW5_P57]
-endgroup
-startgroup
-set_property package_pin P56 [get_ports SW6_P56]
-endgroup
-startgroup
-set_property package_pin P55 [get_ports SW7_P55]
-endgroup
-save_constraints
 exit
 ERROR: [PlanAhead 12-106] *** Exception: ui.h.b: Found deleted key in HTclEventBroker. Verify if the classes listed here call cleanup()
 HTclEvent: DEBUG_PORT_CONFIG_CHANGE   Classes: ui.views.aR 
 HTclEvent: SIGNAL_BUS_MODIFY   Classes: ui.views.aR 
 HTclEvent: DEBUG_CORE_CONFIG_CHANGE   Classes: ui.views.aR 
 HTclEvent: SIGNAL_MODIFY   Classes: ui.views.aR 
- (See D:/Personal/Projects/Digital Labs/seven-segment\planAhead_pid11896.debug)
+ (See D:/Personal/Projects/Digital Labs/Labs/5/seven-segment\planAhead_pid22780.debug)
 ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
-INFO: [Common 17-206] Exiting PlanAhead at Sat Aug 03 22:56:00 2024...
+INFO: [Common 17-206] Exiting PlanAhead at Wed Aug 21 22:05:42 2024...
 INFO: [Common 17-83] Releasing license: PlanAhead

@@ -4,3 +4,9 @@ map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -reg
 par -w -intstyle ise -ol high -mt off full_map.ncd full.ncd full.pcf 
 trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml full.twx full.ncd -o full.twr full.pcf -ucf constraints.ucf 
 bitgen -intstyle ise -f full.ut full.ncd 
+xst -intstyle ise -ifn "D:/Personal/Projects/Digital Labs/Labs/3/optimized-easy/full.xst" -ofn "D:/Personal/Projects/Digital Labs/Labs/3/optimized-easy/full.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc6slx9-tqg144-3 "full.ngc" full.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o full_map.ncd full.ngd full.pcf 
+par -w -intstyle ise -ol high -mt off full_map.ncd full.ncd full.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml full.twx full.ncd -o full.twr full.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f full.ut full.ncd 

@@ -1,0 +1,11 @@
+NET "OSC" LOC = P123;
+
+NET "SSD_a" LOC = P41;
+NET "SSD_b" LOC = P40;
+NET "SSD_c" LOC = P35;
+NET "SSD_d" LOC = P34;
+NET "SSD_e" LOC = P32;
+NET "SSD_f" LOC = P29;
+NET "SSD_g" LOC = P27;
+
+NET "SSD_COM0" LOC = P44;

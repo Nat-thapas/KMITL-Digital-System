@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2024-07-23T08:58:16</DateModified>
+  <DateModified>2024-08-21T22:34:20</DateModified>
   <ModuleName>full</ModuleName>
   <SummaryTimeStamp>2024-07-16T13:29:12</SummaryTimeStamp>
-  <SavedFilePath>D:/Classes-2024/Digital System Fundamentals/Labs/3/optimized-easy/iseconfig/full.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>D:/Classes-2024/Digital System Fundamentals/Labs/3/optimized-easy\</ImplementationReportsDirectory>
+  <SavedFilePath>D:/Personal/Projects/Digital Labs/Labs/3/optimized-easy/iseconfig/full.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>D:/Personal/Projects/Digital Labs/Labs/3/optimized-easy\</ImplementationReportsDirectory>
   <DateInitialized>2024-07-16T12:38:03</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

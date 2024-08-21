@@ -1,0 +1,61 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : comp2x4.vf
+// /___/   /\     Timestamp : 08/21/2024 21:42:23
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Personal/Projects/Digital Labs/Labs/6/random-number/comp2x4.vf" -w "D:/Personal/Projects/Digital Labs/Labs/6/random-number/comp2x4.sch"
+//Design Name: comp2x4
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale  100 ps / 10 ps
+
+module COMP4_HXILINX_comp2x4 (EQ, A0, A1, A2, A3, B0, B1, B2, B3);
+    
+
+   output EQ;
+
+   input A0;
+   input A1;
+   input A2;
+   input A3;
+   input B0;
+   input B1;
+   input B2;
+   input B3;
+
+   assign EQ = ((A0==B0) && (A1==B1) && (A2==B2) && (A3==B3)) ;
+
+endmodule
+`timescale 1ns / 1ps
+
+module comp2x4(D0, 
+               D1, 
+               EQ);
+
+    input [3:0] D0;
+    input [3:0] D1;
+   output EQ;
+   
+   
+   (* HU_SET = "XLXI_7_0" *) 
+   COMP4_HXILINX_comp2x4  XLXI_7 (.A0(D0[0]), 
+                                 .A1(D0[1]), 
+                                 .A2(D0[2]), 
+                                 .A3(D0[3]), 
+                                 .B0(D1[0]), 
+                                 .B1(D1[1]), 
+                                 .B2(D1[2]), 
+                                 .B3(D1[3]), 
+                                 .EQ(EQ));
+endmodule

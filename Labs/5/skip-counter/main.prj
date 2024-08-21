@@ -1,0 +1,3 @@
+verilog work "ssd1d09.vf"
+verilog work "clkdiv20M.vf"
+verilog work "main.vf"

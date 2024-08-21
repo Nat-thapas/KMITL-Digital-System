@@ -2,8 +2,8 @@
 Release 14.7 Trace  (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
--n 3 -fastpaths -xml full.twx full.ncd -o full.twr full.pcf -ucf
+D:\Programs\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v
+3 -s 3 -n 3 -fastpaths -xml full.twx full.ncd -o full.twr full.pcf -ucf
 constraints.ucf
 
 Design file:              full.ncd
@@ -37,20 +37,20 @@ Pad to Pad
 Source Pad     |Destination Pad|  Delay  |
 ---------------+---------------+---------+
 A_SW3_P59      |X_L0_P82       |    7.548|
-B__SW2_P61     |X_L0_P82       |    7.307|
+B_SW2_P61      |X_L0_P82       |    7.307|
 C_SW1_P62      |X_L0_P82       |    7.296|
 D_SW0_P66      |X_L0_P82       |    7.587|
 ---------------+---------------+---------+
 
 
-Analysis completed Tue Jul 16 13:46:42 2024 
+Analysis completed Wed Aug 21 22:34:53 2024 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 4586 MB
+Peak Memory Usage: 4587 MB
 
 
 

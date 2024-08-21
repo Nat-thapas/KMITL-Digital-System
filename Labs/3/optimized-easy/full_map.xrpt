@@ -5,14 +5,14 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Map" timeStamp="Tue Jul 16 13:46:35 2024">
+  <application stringID="Map" timeStamp="Wed Aug 21 22:34:45 2024">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
         <column stringID="value"/>
         <row stringID="row" value="0">
           <item stringID="variable" value="Path"/>
-          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\ISE\\lib\nt64;C:\Xilinx\14.7\ISE_DS\ISE\\bin\nt64;C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64;C:\Xilinx\14.7\ISE_DS\ISE\lib\nt64;C:\Xilinx\14.7\ISE_DS\ISE\..\..\..\DocNav;C:\Xilinx\14.7\ISE_DS\PlanAhead\bin;C:\Xilinx\14.7\ISE_DS\EDK\bin\nt64;C:\Xilinx\14.7\ISE_DS\EDK\lib\nt64;C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\nt\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnuwin\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\arm\nt\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_be\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_le\bin;C:\Xilinx\14.7\ISE_DS\common\bin\nt64;C:\Xilinx\14.7\ISE_DS\common\lib\nt64;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Eclipse Adoptium\jdk-17.0.8.101-hotspot\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Microsoft VS Code\bin;C:\Cadence\Orcad_9.2.3\tools\Capture;C:\Cadence\Orcad_9.2.3\tools\bin;C:\Cadence\Orcad_9.2.3\tools\jre\bin;C:\Cadence\Orcad_9.2.3\tools\fet\bin;C:\Cadence\Orcad_9.2.3\tools\specctra\bin;C:\Program Files\MATLAB\R2023b\bin;C:\Program Files\usbipd-win\;C:\Program Files\Git\cmd;C:\Program Files\PowerShell\7\;C:\Users\natha\.pyenv\pyenv-win\bin;C:\Users\natha\.pyenv\pyenv-win\shims;C:\Users\natha\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\natha\AppData\Local\Programs\Python\Python311\;C:\Users\natha\AppData\Local\Microsoft\WindowsApps;C:\msys64\mingw64\bin;C:\Program Files (x86)\Nmap;C:\Programs;C:\Programs\ffmpeg\bin;C:\Program Files\Azure Data Studio\bin;C:\Users\natha\AppData\Local\nvs\;C:\Programs\wabt\bin;C:\Users\natha\AppData\Local\nvs\default;C:\Programs\Graphviz\bin"/>
+          <item stringID="value" value="D:\Programs\Xilinx\14.7\ISE_DS\ISE\\lib\nt64;D:\Programs\Xilinx\14.7\ISE_DS\ISE\\bin\nt64;D:\Programs\Xilinx\14.7\ISE_DS\ISE\bin\nt64;D:\Programs\Xilinx\14.7\ISE_DS\ISE\lib\nt64;D:\Programs\Xilinx\14.7\ISE_DS\ISE\..\..\..\DocNav;D:\Programs\Xilinx\14.7\ISE_DS\PlanAhead\bin;D:\Programs\Xilinx\14.7\ISE_DS\EDK\bin\nt64;D:\Programs\Xilinx\14.7\ISE_DS\EDK\lib\nt64;D:\Programs\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\nt\bin;D:\Programs\Xilinx\14.7\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;D:\Programs\Xilinx\14.7\ISE_DS\EDK\gnuwin\bin;D:\Programs\Xilinx\14.7\ISE_DS\EDK\gnu\arm\nt\bin;D:\Programs\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_be\bin;D:\Programs\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_le\bin;D:\Programs\Xilinx\14.7\ISE_DS\common\bin\nt64;D:\Programs\Xilinx\14.7\ISE_DS\common\lib\nt64;C:\Program Files\Eclipse Adoptium\jdk-21.0.3.9-hotspot\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.5\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.5\libnvvp;C:\Windows\System32;C:\Windows;C:\Windows\System32\wbem;C:\Windows\System32\windowspowershell\v1.0\;C:\Windows\System32\openssh\;C:\Program Files\dotnet\;C:\Program Files (x86)\certbot\bin;C:\Program Files\filebrowser;C:\Program Files\tesseract-ocr;C:\Program Files\microsoft vs code\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Program Files\GitHub CLI\;C:\Program Files\Go\bin;C:\Program Files\PowerShell\7\;C:\Users\natha\AppData\Local\pnpm;C:\Users\natha\.pyenv\pyenv-win\bin;C:\Users\natha\.pyenv\pyenv-win\shims;C:\Users\natha\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\natha\AppData\Local\Programs\Python\Python311\;C:\Users\natha\AppData\Local\Microsoft\WindowsApps;C:\msys64\mingw64\bin;C:\Programs\cloudflared;C:\Programs\ffmpeg\bin;C:\Programs\standalone;C:\Programs\wkhtmltox\wkhtmltopdf\bin;C:\Program Files (x86)\Nmap;C:\Users\natha\AppData\Local\nvs\;C:\Programs\qpdf-11.9.0-mingw64\bin;C:\Users\natha\AppData\Local\nvs\default;C:\Users\natha\go\bin;C:\Programs\php-5.5.38-Win32-VC11-x64;C:\Users\natha\.dotnet\tools"/>
         </row>
         <row stringID="row" value="1">
           <item stringID="variable" value="PATHEXT"/>
@@ -20,19 +20,19 @@
         </row>
         <row stringID="row" value="2">
           <item stringID="variable" value="XILINX"/>
-          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\ISE\"/>
+          <item stringID="value" value="D:\Programs\Xilinx\14.7\ISE_DS\ISE\"/>
         </row>
         <row stringID="row" value="3">
           <item stringID="variable" value="XILINX_DSP"/>
-          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\ISE"/>
+          <item stringID="value" value="D:\Programs\Xilinx\14.7\ISE_DS\ISE"/>
         </row>
         <row stringID="row" value="4">
           <item stringID="variable" value="XILINX_EDK"/>
-          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\EDK"/>
+          <item stringID="value" value="D:\Programs\Xilinx\14.7\ISE_DS\EDK"/>
         </row>
         <row stringID="row" value="5">
           <item stringID="variable" value="XILINX_PLANAHEAD"/>
-          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\PlanAhead"/>
+          <item stringID="value" value="D:\Programs\Xilinx\14.7\ISE_DS\PlanAhead"/>
         </row>
         <row stringID="row" value="6">
           <item stringID="variable" value="XILINX_VC_CHECK_NOOP"/>
@@ -43,13 +43,17 @@
         <item stringID="User_EnvOsname" value="Microsoft , 64-bit"/>
         <item stringID="User_EnvOsrelease" value="major release  (build 9200)"/>
       </item>
-      <item stringID="User_EnvHost" value="Lapbottom"/>
+      <item stringID="User_EnvHost" value="Deskbottom"/>
       <table stringID="User_EnvCpu">
         <column stringID="arch"/>
         <column stringID="speed"/>
         <row stringID="row" value="0">
-          <item stringID="arch" value="12th Gen Intel(R) Core(TM) i5-12500H"/>
-          <item stringID="speed" value="3110 MHz"/>
+          <item stringID="arch" value="AMD Ryzen 9 3900X 12-Core Processor            "/>
+          <item stringID="speed" value="3800 MHz"/>
+        </row>
+        <row stringID="row" value="1">
+          <item stringID="arch" value="AMD Ryzen 9 3900X 12-Core Processor            "/>
+          <item stringID="speed" value="3800 MHz"/>
         </row>
       </table>
     </section>
@@ -121,9 +125,9 @@
         <item dataType="int" stringID="MAP_NUM_ERRORS" value="0"/>
         <item dataType="int" stringID="MAP_FILTERED_WARNINGS" value="0"/>
         <item dataType="int" stringID="MAP_NUM_WARNINGS" value="0"/>
-        <item UNITS="KB" dataType="int" stringID="MAP_PEAK_MEMORY" value="4617404"/>
-        <item stringID="MAP_TOTAL_REAL_TIME" value="3 secs "/>
-        <item stringID="MAP_TOTAL_CPU_TIME" value="1 secs "/>
+        <item UNITS="KB" dataType="int" stringID="MAP_PEAK_MEMORY" value="4618560"/>
+        <item stringID="MAP_TOTAL_REAL_TIME" value="2 secs "/>
+        <item stringID="MAP_TOTAL_CPU_TIME" value="2 secs "/>
       </section>
       <section stringID="MAP_SLICE_REPORTING">
         <item AVAILABLE="11440" dataType="int" label="Number of Slice Registers" stringID="MAP_SLICE_REGISTERS" value="0">
@@ -229,7 +233,7 @@
             <item label="IO&#xA;Standard" sort="smart" stringID="IO_STANDARD" value="LVCMOS25"/>
           </row>
           <row stringID="row" value="2">
-            <item label="IOB&#xA;Name" sort="smart" stringID="IOB_NAME" value="B__SW2_P61"/>
+            <item label="IOB&#xA;Name" sort="smart" stringID="IOB_NAME" value="B_SW2_P61"/>
             <item stringID="Type" value="IOB"/>
             <item stringID="Direction" value="INPUT"/>
             <item label="IO&#xA;Standard" sort="smart" stringID="IO_STANDARD" value="LVCMOS25"/>
