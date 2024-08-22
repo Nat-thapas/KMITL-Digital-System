@@ -1,0 +1,4 @@
+verilog work "counter6x4c.vf"
+verilog work "clkdiv5.vf"
+verilog work "clkdiv2M.vf"
+verilog work "main.vf"

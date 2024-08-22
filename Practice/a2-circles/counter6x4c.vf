@@ -1,0 +1,128 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : counter6x4c.vf
+// /___/   /\     Timestamp : 08/22/2024 15:37:39
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Classes-2024/Digital System Fundamentals Shared/Practice/a2-circles/counter6x4c.vf" -w "D:/Classes-2024/Digital System Fundamentals Shared/Practice/a2-circles/counter6x4c.sch"
+//Design Name: counter6x4c
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module FJKCE_HXILINX_counter6x4c(Q, C, CE, CLR, J, K);
+   
+   output             Q;
+
+   input 	      C;	
+   input 	      CE;	
+   input 	      CLR;	
+   input              J;
+   input              K;
+   
+   parameter INIT = 1'b0;
+   reg                Q = INIT;
+   
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 1'b0;
+	else if(CE)
+        begin
+          if(!J)
+          begin
+            if(K)
+            Q <= 1'b0;
+          end
+          else
+          begin
+            if(!K)
+            Q <= 1'b1;
+            else 
+            Q <= !Q;
+          end
+        end
+     end
+   
+endmodule
+`timescale 1ns / 1ps
+
+module counter6x4c(CE, 
+                   CLK, 
+                   CLR, 
+                   CEO, 
+                   Q0, 
+                   Q1, 
+                   Q2, 
+                   Q3, 
+                   TC);
+
+    input CE;
+    input CLK;
+    input CLR;
+   output CEO;
+   output Q0;
+   output Q1;
+   output Q2;
+   output Q3;
+   output TC;
+   
+   wire XLXN_1;
+   wire XLXN_6;
+   wire XLXN_10;
+   wire Q0_DUMMY;
+   wire Q1_DUMMY;
+   wire Q2_DUMMY;
+   wire TC_DUMMY;
+   
+   assign Q0 = Q0_DUMMY;
+   assign Q1 = Q1_DUMMY;
+   assign Q2 = Q2_DUMMY;
+   assign TC = TC_DUMMY;
+   VCC  XLXI_4 (.P(XLXN_1));
+   AND2B1  XLXI_5 (.I0(Q2_DUMMY), 
+                  .I1(Q0_DUMMY), 
+                  .O(XLXN_6));
+   AND2  XLXI_6 (.I0(Q1_DUMMY), 
+                .I1(Q0_DUMMY), 
+                .O(XLXN_10));
+   GND  XLXI_7 (.G(Q3));
+   (* HU_SET = "XLXI_9_0" *) 
+   FJKCE_HXILINX_counter6x4c  XLXI_9 (.C(CLK), 
+                                     .CE(CE), 
+                                     .CLR(CLR), 
+                                     .J(XLXN_10), 
+                                     .K(Q0_DUMMY), 
+                                     .Q(Q2_DUMMY));
+   (* HU_SET = "XLXI_10_2" *) 
+   FJKCE_HXILINX_counter6x4c  XLXI_10 (.C(CLK), 
+                                      .CE(CE), 
+                                      .CLR(CLR), 
+                                      .J(XLXN_1), 
+                                      .K(XLXN_1), 
+                                      .Q(Q0_DUMMY));
+   (* HU_SET = "XLXI_11_1" *) 
+   FJKCE_HXILINX_counter6x4c  XLXI_11 (.C(CLK), 
+                                      .CE(CE), 
+                                      .CLR(CLR), 
+                                      .J(XLXN_6), 
+                                      .K(Q0_DUMMY), 
+                                      .Q(Q1_DUMMY));
+   AND3B1  XLXI_13 (.I0(Q1_DUMMY), 
+                   .I1(Q0_DUMMY), 
+                   .I2(Q2_DUMMY), 
+                   .O(TC_DUMMY));
+   AND2  XLXI_14 (.I0(CE), 
+                 .I1(TC_DUMMY), 
+                 .O(CEO));
+endmodule

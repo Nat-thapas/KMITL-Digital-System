@@ -1,0 +1,11 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7
+# Build 321239 by xbuild on Fri Sep 27 19:31:35 MDT 2013
+# Start of session at: Thu Aug 22 15:20:28 2024
+# Process ID: 6432
+# Log file: D:/Classes-2024/Digital System Fundamentals Shared/Practice/a1-power-of-two/planAhead_run_1/planAhead.log
+# Journal file: D:/Classes-2024/Digital System Fundamentals Shared/Practice/a1-power-of-two/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source {D:/Classes-2024/Digital System Fundamentals Shared/Practice/a1-power-of-two/pa.fromHdl.tcl}
+update_compile_order -fileset sim_1

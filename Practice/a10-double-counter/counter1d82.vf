@@ -1,0 +1,160 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : counter1d82.vf
+// /___/   /\     Timestamp : 08/22/2024 16:42:17
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Classes-2024/Digital System Fundamentals Shared/Practice/a10-double-counter/counter1d82.vf" -w "D:/Classes-2024/Digital System Fundamentals Shared/Practice/a10-double-counter/counter1d82.sch"
+//Design Name: counter1d82
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module FJKC_HXILINX_counter1d82(Q, C, CLR, J, K);
+   
+   output             Q;
+
+   input 	      C;	
+   input 	      CLR;	
+   input              J;
+   input              K;
+   
+   parameter INIT = 1'b0;
+   reg                Q = INIT;
+
+
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 1'b0;
+	else
+        begin
+           if(!J)
+           begin
+              if(K)
+              Q <= 1'b0;
+           end
+           else
+           begin
+              if(!K)
+              Q <= 1'b1;
+              else 
+              Q <= !Q;
+           end
+        end
+     end
+   
+endmodule
+`timescale 100 ps / 10 ps
+
+module FJKP_HXILINX_counter1d82(Q, C, J, K, PRE);
+   
+   output             Q;
+
+   input 	      C;	
+   input              J;
+   input              K;
+   input 	      PRE;	
+   
+   parameter INIT = 1'b1;
+   reg                Q = INIT;
+
+   
+  always @(posedge C or posedge PRE)
+     begin
+	if (PRE)
+	  Q <= 1'b1;
+	else
+        begin
+           if(!J)
+           begin
+              if(K)
+              Q <= 1'b0;
+           end
+           else
+           begin
+              if(!K)
+              Q <= 1'b1;
+              else 
+              Q <= !Q;
+           end
+        end
+     end
+   
+endmodule
+`timescale 1ns / 1ps
+
+module counter1d82(CLK, 
+                   A0, 
+                   A1, 
+                   A2, 
+                   A3);
+
+    input CLK;
+   output A0;
+   output A1;
+   output A2;
+   output A3;
+   
+   wire XLXN_1;
+   wire XLXN_4;
+   wire XLXN_5;
+   wire XLXN_7;
+   wire XLXN_8;
+   wire XLXN_30;
+   wire XLXN_31;
+   wire A0_DUMMY;
+   wire A1_DUMMY;
+   wire A2_DUMMY;
+   wire A3_DUMMY;
+   
+   assign A0 = A0_DUMMY;
+   assign A1 = A1_DUMMY;
+   assign A2 = A2_DUMMY;
+   assign A3 = A3_DUMMY;
+   (* HU_SET = "XLXI_2_0" *) 
+   FJKC_HXILINX_counter1d82  XLXI_2 (.C(CLK), 
+                                    .CLR(XLXN_31), 
+                                    .J(XLXN_4), 
+                                    .K(XLXN_5), 
+                                    .Q(A1_DUMMY));
+   (* HU_SET = "XLXI_3_1" *) 
+   FJKC_HXILINX_counter1d82  XLXI_3 (.C(CLK), 
+                                    .CLR(XLXN_31), 
+                                    .J(A0_DUMMY), 
+                                    .K(XLXN_7), 
+                                    .Q(A2_DUMMY));
+   (* HU_SET = "XLXI_4_2" *) 
+   FJKC_HXILINX_counter1d82  XLXI_4 (.C(CLK), 
+                                    .CLR(XLXN_31), 
+                                    .J(XLXN_8), 
+                                    .K(XLXN_30), 
+                                    .Q(A3_DUMMY));
+   INV  XLXI_5 (.I(A3_DUMMY), 
+               .O(XLXN_1));
+   INV  XLXI_7 (.I(A0_DUMMY), 
+               .O(XLXN_4));
+   VCC  XLXI_8 (.P(XLXN_5));
+   VCC  XLXI_9 (.P(XLXN_7));
+   INV  XLXI_10 (.I(A1_DUMMY), 
+                .O(XLXN_8));
+   GND  XLXI_22 (.G(XLXN_31));
+   INV  XLXI_23 (.I(A2_DUMMY), 
+                .O(XLXN_30));
+   (* HU_SET = "XLXI_24_3" *) 
+   FJKP_HXILINX_counter1d82  XLXI_24 (.C(CLK), 
+                                     .J(XLXN_1), 
+                                     .K(A2_DUMMY), 
+                                     .PRE(XLXN_31), 
+                                     .Q(A0_DUMMY));
+endmodule
