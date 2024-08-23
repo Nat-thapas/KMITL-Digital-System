@@ -68,7 +68,7 @@ def refactor(arr: tuple[int, ...], num: int) -> list[int]:
     while num > 1:
         cur = arr[index]
         while num % cur == 0:
-            num /= cur
+            num //= cur
             output.append(cur)
         index -= 1
     output.reverse()
