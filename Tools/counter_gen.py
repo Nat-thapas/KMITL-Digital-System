@@ -1,8 +1,26 @@
+import re
+
+import pyeda.boolalg.bfarray
+import pyeda.boolalg.expr
+import pyeda.boolalg.minimization
+import pyeda.boolalg.table
 import sympy
 
 
+def boolean_input(prompt: str, default: bool | None = None) -> bool:
+    while True:
+        input_string = input(prompt).strip().lower()
+        if not input_string and default is not None:
+            return default
+        if input_string.startswith("y"):
+            return True
+        if input_string.startswith("n"):
+            return False
+        print("Invalid input. Please enter Y or N.")
+
+
 def parse_number(number_string: str) -> int:
-    number_string = number_string.strip()
+    number_string = number_string.strip().lower()
     if number_string.startswith("0b"):
         return int(number_string, 2)
     if number_string.startswith("0o"):
@@ -10,6 +28,25 @@ def parse_number(number_string: str) -> int:
     if number_string.startswith("0x"):
         return int(number_string, 16)
     return int(number_string, 10)
+
+
+def parse_sequence(sequence: str) -> list[int]:
+    if re.match(r"^\d+$", sequence):
+        return list(range(parse_number(sequence)))
+    numbers = re.split(r", *| +", sequence)
+    output: list[int] = []
+    for number in numbers:
+        if match := re.match(r"^(\d+)\-(\d+)$", number):
+            output.extend(
+                list(
+                    range(
+                        parse_number(match.group(1)), parse_number(match.group(2)) + 1
+                    )
+                )
+            )
+        else:
+            output.append(parse_number(number))
+    return output
 
 
 def get_primitive() -> str:
@@ -27,12 +64,74 @@ def get_primitive() -> str:
     return primitive
 
 
-def to_binary_array(value: int, bit_count: int) -> list[int]:
-    return [int(bit) for bit in bin(value)[2:].zfill(bit_count)]
+def expression_to_string(
+    expression: (
+        pyeda.boolalg.expr._Zero
+        | pyeda.boolalg.expr._One
+        | pyeda.boolalg.expr.Complement
+        | pyeda.boolalg.expr.Variable
+        | pyeda.boolalg.expr.AndOp
+        | pyeda.boolalg.expr.OrOp
+    ),
+    names: tuple[str, ...] | str,
+    add_parenthesis_if_multiple: bool = False,
+) -> str:
+    if isinstance(expression, pyeda.boolalg.expr._Zero):
+        return "False"
+    if isinstance(expression, pyeda.boolalg.expr._One):
+        return "True"
+    if isinstance(expression, pyeda.boolalg.expr.Complement):
+        expression_string = str(expression)
+        if match := re.match(r"~x\[(\d+)\]", expression_string):
+            return f"~{names[int(match.group(1))]}"
+    if isinstance(expression, pyeda.boolalg.expr.Variable):
+        return names[expression.indices[0]]
+    if isinstance(expression, pyeda.boolalg.expr.OrOp):
+        expression_string = " | ".join(
+            [expression_to_string(operand, names, True) for operand in expression.xs]
+        )
+        if add_parenthesis_if_multiple:
+            return f"({expression_string})"
+        return expression_string
+    if isinstance(expression, pyeda.boolalg.expr.AndOp):
+        expression_string = " & ".join(
+            [expression_to_string(operand, names, True) for operand in expression.xs]
+        )
+        if add_parenthesis_if_multiple:
+            return f"({expression_string})"
+        return expression_string
+    return str(expression)
+
+
+def symplify_to_sop(
+    min_terms: list[int],
+    dontcares: list[int],
+    names: tuple[str, ...] | str,
+    bit_count: int,
+) -> str:
+    if bit_count <= 6:
+        return str(
+            sympy.SOPform([sympy.symbols(name) for name in names], min_terms, dontcares)
+        )
+    variables = pyeda.boolalg.bfarray.exprvars("x", bit_count)
+    truth_string = ""
+    for num in range(2**bit_count):
+        if num in min_terms:
+            truth_string += "1"
+        elif num in dontcares:
+            truth_string += "-"
+        else:
+            truth_string += "0"
+    truth_table = pyeda.boolalg.table.truthtable(variables, truth_string)
+    simplified_expression = pyeda.boolalg.minimization.espresso_tts(truth_table)[0]
+    simplified_expression_string = expression_to_string(
+        simplified_expression, names[::-1]
+    )
+    return simplified_expression_string
 
 
 def process_d_flip_flop(
-    sequence: list[int], bit_count: int, names_msb_first: str, max_value: int
+    sequence: list[int], bit_count: int, names_msb_first: str
 ) -> None:
     current_state_print_width = max(15, bit_count * 2 + 1)
     next_state_print_width = max(12, bit_count * 2 + 1)
@@ -113,15 +212,19 @@ def process_d_flip_flop(
             state = sequence[row]
             inputs_dict[name][state] = input_val[0]
     simplified_inputs_dict: dict[str, str] = {}
-    print("Simplified SOP form:")
-    if bit_count > 6:
+    if bit_count <= 6:
+        print("Simplifying to SOP form using Quine-McCluskey algorithm.")
+    else:
+        print("Simplifying to SOP form using Espresso heuristic algorithm.")
+    if bit_count > 8:
         print(
-            "Warning: SOP form can take a long time to compute for bit width higher than 6."
+            "Warning: SOP form can take a long time to compute for bit width higher than 8."
         )
+    print("Simplified SOP form:")
     for name in names_msb_first:
         min_terms: list[int] = []
         dontcares: list[int] = []
-        for num in range(max_value + 1):
+        for num in range(2**bit_count):
             if num in inputs_dict[name]:
                 if inputs_dict[name][num] == "1":
                     min_terms.append(num)
@@ -129,10 +232,8 @@ def process_d_flip_flop(
                     dontcares.append(num)
             else:
                 dontcares.append(num)
-        simplified_inputs_dict[name] = str(
-            sympy.SOPform(
-                [sympy.symbols(name) for name in names_msb_first], min_terms, dontcares
-            )
+        simplified_inputs_dict[name] = symplify_to_sop(
+            min_terms, dontcares, names_msb_first, bit_count
         )
     result_print_width = 0
     for name in names_msb_first:
@@ -155,7 +256,7 @@ def process_d_flip_flop(
 
 
 def process_jk_flip_flop(
-    sequence: list[int], bit_count: int, names_msb_first: str, max_value: int
+    sequence: list[int], bit_count: int, names_msb_first: str
 ) -> None:
     current_state_print_width = max(15, bit_count * 2 + 1)
     next_state_print_width = max(12, bit_count * 2 + 1)
@@ -259,16 +360,20 @@ def process_jk_flip_flop(
     simplified_inputs_dict: dict[str, dict[str, str]] = {}
     for name in names_msb_first:
         simplified_inputs_dict[name] = {}
-    print("Simplified SOP form:")
-    if bit_count > 6:
+    if bit_count <= 6:
+        print("Simplifying to SOP form using Quine-McCluskey algorithm.")
+    else:
+        print("Simplifying to SOP form using Espresso heuristic algorithm.")
+    if bit_count > 8:
         print(
-            "Warning: SOP form can take a long time to compute for bit width higher than 6."
+            "Warning: SOP form can take a long time to compute for bit width higher than 8."
         )
+    print("Simplified SOP form:")
     for name in names_msb_first:
         for side in "JK":
             min_terms: list[int] = []
             dontcares: list[int] = []
-            for num in range(max_value + 1):
+            for num in range(2**bit_count):
                 if num in inputs_dict[name][side]:
                     if inputs_dict[name][side][num] == "1":
                         min_terms.append(num)
@@ -276,12 +381,8 @@ def process_jk_flip_flop(
                         dontcares.append(num)
                 else:
                     dontcares.append(num)
-            simplified_inputs_dict[name][side] = str(
-                sympy.SOPform(
-                    [sympy.symbols(name) for name in names_msb_first],
-                    min_terms,
-                    dontcares,
-                )
+            simplified_inputs_dict[name][side] = symplify_to_sop(
+                min_terms, dontcares, names_msb_first, bit_count
             )
     result_print_width = 0
     for name in names_msb_first:
@@ -319,10 +420,12 @@ def process_jk_flip_flop(
 
 
 def main() -> None:
-    raw_sequence = input("Enter the sequence (base 2, 8, 10 or 16): ")
-    unparsed_sequence = raw_sequence.split()
-    sequence = [parse_number(number_string) for number_string in unparsed_sequence]
+    unparsed_sequence = input(
+        "Enter the sequence (base 2, 8, 10 or 16) space or comma separated: "
+    )
+    sequence = parse_sequence(unparsed_sequence)
     primitive = get_primitive()
+    export_to_schematic = boolean_input("Export to schematic? (y/N): ", False)
     if len(sequence) < 2:
         print("Sequence must have at least 2 numbers.")
         return
@@ -333,21 +436,20 @@ def main() -> None:
         print("Duplicate number in sequence is not supported.")
         return
     bit_count = max(sequence).bit_length()
-    max_value = 2**bit_count - 1
     print(f"Bit width: {bit_count}")
-    if bit_count > 8:
-        print("Warning: Bit width higher than 8 is only partially supported.")
+    if bit_count > 12:
+        print("Warning: Bit width higher than 12 is only partially supported.")
     print("Sequence:")
     for i, value in enumerate(sequence):
-        print(f"{i+1:>4}: {bin(value)[2:].zfill(bit_count)} ({value})")
+        print(f"{i+1:>5}: {bin(value)[2:].zfill(bit_count)} ({value})")
     print(f"Building state transition table with {primitive} flip-flop.")
     names_msb_first = [chr(ord("A") + i) for i in range(bit_count)]
     names_msb_first.reverse()
     names_msb_first = "".join(names_msb_first)
     if primitive == "D":
-        process_d_flip_flop(sequence, bit_count, names_msb_first, max_value)
+        process_d_flip_flop(sequence, bit_count, names_msb_first)
     elif primitive == "JK":
-        process_jk_flip_flop(sequence, bit_count, names_msb_first, max_value)
+        process_jk_flip_flop(sequence, bit_count, names_msb_first)
 
 
 if __name__ == "__main__":
