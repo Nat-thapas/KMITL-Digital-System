@@ -527,6 +527,7 @@ for match in re.finditer(
     for match in re.finditer(r'<blockpin name="(.*?)" />', blockpin_info):
         pins.append(match.group(1))
     code = f"""from .component import Component
+from .indent import add_indent
 from .net import Net
 
 
@@ -538,15 +539,16 @@ class {name.capitalize()}(Component):
 {'\n'.join((' '*8 + f"self.{pin}: Net | None = None" for pin in pins))}
 
     def to_blockdef_xml(self, indent: int = 0) -> str:
-        return \"\"\"{info}\"\"\".replace("\\n", "\\n" + " "*indent) + "\\n"
+        return add_indent(\"\"\"{info}\n\"\"\", indent)
 
     def to_blockpin_xml(self, indent: int = 0) -> str:
-        return f\"\"\"<block symbolname="{{self.symbolname}}" name="{{self.name}}">
+        return add_indent(f\"\"\"<block symbolname="{{self.symbolname}}" name="{{self.name}}">
 {'\n'.join((' '*4 + '<blockpin ' + f'''{{f'signalname="{{self.{pin}.name}} "' if self.{pin} else ""}}''' + f'name="{pin}"' + ' />' for pin in pins))}
-</block>\"\"\".replace("\\n", "\\n" + " "*indent) + "\\n"
+</block>\n\"\"\", indent)
 
     def to_instance_xml(self, indent: int = 0) -> str:
-        return f\"\"\"<instance x="{{self.x}} y="{{self.y}}" name="{{self.name}} orien="R{{self.orientation}}" />\"\"\".replace("\\n", "\\n" + " "*indent) + "\\n"
+        return add_indent(f\"\"\"<instance x="{{self.x}}" y="{{self.y}}" name="{{self.name}}" orien="R{{self.orientation}}" />\n\"\"\", indent)
 """
     with open(f"components/{name}.py", "w", encoding="utf-8") as f:
+        print("Generating", name)
         f.write(code)

@@ -1,5 +1,6 @@
 from components.net import Net
 from components.component import Component
+from components.inv import Inv
 
 
 class Schematic:
@@ -28,7 +29,7 @@ class Schematic:
                 blockdef_added.add(type(component))
         for component in self.components:
             xml += component.to_blockpin_xml(8)
-        xml += """    </netlist>"""
+        xml += """    </netlist>\n"""
         xml += """    <sheet sheetnum="1" width="7609" height="5382">\n"""
         xml += """        <attr value="CM" name="LengthUnitName" />\n"""
         xml += """        <attr value="4" name="GridsPerUnit" />\n"""
@@ -45,3 +46,11 @@ class Schematic:
 
     def add_net(self, net: Net) -> None:
         self.nets.append(net)
+
+
+schematic = Schematic("test")
+schematic.add_net(Net("net1"))
+schematic.add_net(Net("net2"))
+schematic.add_component(Inv("inv1", 100, 100, 0))
+schematic.add_component(Inv("inv2", 200, 200, 0))
+print(schematic.generate_xml())

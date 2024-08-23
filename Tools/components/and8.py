@@ -1,4 +1,5 @@
 from .component import Component
+from .indent import add_indent
 from .net import Net
 
 
@@ -18,7 +19,7 @@ class And8(Component):
         self.O: Net | None = None
 
     def to_blockdef_xml(self, indent: int = 0) -> str:
-        return """<blockdef name="and8">
+        return add_indent("""<blockdef name="and8">
     <timestamp>2000-1-1T10:10:10</timestamp>
     <line x2="64" y1="-64" y2="-512" x1="64" />
     <line x2="64" y1="-64" y2="-64" x1="0" />
@@ -33,10 +34,11 @@ class And8(Component):
     <line x2="64" y1="-240" y2="-240" x1="144" />
     <arc ex="144" ey="-336" sx="144" sy="-240" r="48" cx="144" cy="-288" />
     <line x2="192" y1="-288" y2="-288" x1="256" />
-</blockdef>""".replace("\n", "\n" + " "*indent) + "\n"
+</blockdef>
+""", indent)
 
     def to_blockpin_xml(self, indent: int = 0) -> str:
-        return f"""<block symbolname="{self.symbolname}" name="{self.name}">
+        return add_indent(f"""<block symbolname="{self.symbolname}" name="{self.name}">
     <blockpin {f'signalname="{self.I0.name} "' if self.I0 else ""}name="I0" />
     <blockpin {f'signalname="{self.I1.name} "' if self.I1 else ""}name="I1" />
     <blockpin {f'signalname="{self.I2.name} "' if self.I2 else ""}name="I2" />
@@ -46,7 +48,9 @@ class And8(Component):
     <blockpin {f'signalname="{self.I6.name} "' if self.I6 else ""}name="I6" />
     <blockpin {f'signalname="{self.I7.name} "' if self.I7 else ""}name="I7" />
     <blockpin {f'signalname="{self.O.name} "' if self.O else ""}name="O" />
-</block>""".replace("\n", "\n" + " "*indent) + "\n"
+</block>
+""", indent)
 
     def to_instance_xml(self, indent: int = 0) -> str:
-        return f"""<instance x="{self.x} y="{self.y}" name="{self.name} orien="R{self.orientation}" />""".replace("\n", "\n" + " "*indent) + "\n"
+        return add_indent(f"""<instance x="{self.x}" y="{self.y}" name="{self.name}" orien="R{self.orientation}" />
+""", indent)

@@ -1,4 +1,5 @@
 from .component import Component
+from .indent import add_indent
 from .net import Net
 
 
@@ -15,7 +16,7 @@ class Fjkce(Component):
         self.Q: Net | None = None
 
     def to_blockdef_xml(self, indent: int = 0) -> str:
-        return """<blockdef name="fjkce">
+        return add_indent("""<blockdef name="fjkce">
     <timestamp>2000-1-1T10:10:10</timestamp>
     <line x2="64" y1="-192" y2="-192" x1="0" />
     <line x2="64" y1="-32" y2="-32" x1="192" />
@@ -28,17 +29,20 @@ class Fjkce(Component):
     <line x2="64" y1="-32" y2="-32" x1="0" />
     <line x2="64" y1="-128" y2="-128" x1="0" />
     <line x2="64" y1="-256" y2="-256" x1="0" />
-</blockdef>""".replace("\n", "\n" + " "*indent) + "\n"
+</blockdef>
+""", indent)
 
     def to_blockpin_xml(self, indent: int = 0) -> str:
-        return f"""<block symbolname="{self.symbolname}" name="{self.name}">
+        return add_indent(f"""<block symbolname="{self.symbolname}" name="{self.name}">
     <blockpin {f'signalname="{self.C.name} "' if self.C else ""}name="C" />
     <blockpin {f'signalname="{self.CE.name} "' if self.CE else ""}name="CE" />
     <blockpin {f'signalname="{self.CLR.name} "' if self.CLR else ""}name="CLR" />
     <blockpin {f'signalname="{self.J.name} "' if self.J else ""}name="J" />
     <blockpin {f'signalname="{self.K.name} "' if self.K else ""}name="K" />
     <blockpin {f'signalname="{self.Q.name} "' if self.Q else ""}name="Q" />
-</block>""".replace("\n", "\n" + " "*indent) + "\n"
+</block>
+""", indent)
 
     def to_instance_xml(self, indent: int = 0) -> str:
-        return f"""<instance x="{self.x} y="{self.y}" name="{self.name} orien="R{self.orientation}" />""".replace("\n", "\n" + " "*indent) + "\n"
+        return add_indent(f"""<instance x="{self.x}" y="{self.y}" name="{self.name}" orien="R{self.orientation}" />
+""", indent)
