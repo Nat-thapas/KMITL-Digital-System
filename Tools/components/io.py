@@ -9,7 +9,7 @@ class IO:
         if polarity not in ["Input", "Output"]:
             raise ValueError("Invalid polarity")
         if orientation is None:
-            if polarity == "input":
+            if polarity == "Input":
                 orientation = 180
             else:
                 orientation = 0
