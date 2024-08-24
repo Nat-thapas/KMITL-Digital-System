@@ -25,8 +25,8 @@ class Inv(Component):
 
     def to_blockpin_xml(self, indent: int = 0) -> str:
         return add_indent(f"""<block symbolname="{self.symbolname}" name="{self.name}">
-    <blockpin {f'signalname="{self.I.name} "' if self.I else ""}name="I" />
-    <blockpin {f'signalname="{self.O.name} "' if self.O else ""}name="O" />
+    <blockpin {f'signalname="{self.I.name}" ' if self.I else ""}name="I" />
+    <blockpin {f'signalname="{self.O.name}" ' if self.O else ""}name="O" />
 </block>
 """, indent)
 

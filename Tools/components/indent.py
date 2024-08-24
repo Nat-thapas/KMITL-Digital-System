@@ -8,4 +8,4 @@ def strip_end(s: str, end: str) -> str:
 
 
 def add_indent(s: str, n: int) -> str:
-    return strip_end("\n".join((" " * n + line for line in s.split("\n"))), " ")
+    return "\n".join((" " * n + line for line in s.split("\n"))).rstrip(" ")

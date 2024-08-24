@@ -1,6 +1,7 @@
 from components.net import Net
 from components.component import Component
-from components.inv import Inv
+from components.io import IO
+from components.wire import Wire
 
 
 class Schematic:
@@ -9,6 +10,9 @@ class Schematic:
         self.name: str = name
         self.components: list[Component] = []
         self.nets: list[Net] = []
+        self.ios: list[IO] = []
+        self.net_increment = 0
+        self.instance_increment = 0
 
     def generate_xml(self) -> str:
         xml = ""
@@ -21,7 +25,9 @@ class Schematic:
         xml += """    </attr>\n"""
         xml += """    <netlist>\n"""
         for net in self.nets:
-            xml += f"""        <signal name="{net.name}" />\n"""
+            xml += net.to_signal_xml(8)
+        for io in self.ios:
+            xml += io.to_port_xml(8)
         blockdef_added = set()
         for component in self.components:
             if type(component) not in blockdef_added:
@@ -37,9 +43,19 @@ class Schematic:
             xml += net.to_branch_xml(8)
         for component in self.components:
             xml += component.to_instance_xml(8)
+        for io in self.ios:
+            xml += io.to_iomarker_xml(8)
         xml += """    </sheet>\n"""
         xml += """</drawing>\n"""
         return xml
+
+    def get_net_name(self) -> str:
+        self.net_increment += 1
+        return f"XLXN_{self.net_increment}"
+
+    def get_instance_name(self) -> str:
+        self.instance_increment += 1
+        return f"XLXI_{self.instance_increment}"
 
     def add_component(self, component: Component) -> None:
         self.components.append(component)
@@ -47,10 +63,5 @@ class Schematic:
     def add_net(self, net: Net) -> None:
         self.nets.append(net)
 
-
-schematic = Schematic("test")
-schematic.add_net(Net("net1"))
-schematic.add_net(Net("net2"))
-schematic.add_component(Inv("inv1", 100, 100, 0))
-schematic.add_component(Inv("inv2", 200, 200, 0))
-print(schematic.generate_xml())
+    def add_io(self, io: IO) -> None:
+        self.ios.append(io)

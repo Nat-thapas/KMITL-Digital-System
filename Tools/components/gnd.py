@@ -24,7 +24,7 @@ class Gnd(Component):
 
     def to_blockpin_xml(self, indent: int = 0) -> str:
         return add_indent(f"""<block symbolname="{self.symbolname}" name="{self.name}">
-    <blockpin {f'signalname="{self.G.name} "' if self.G else ""}name="G" />
+    <blockpin {f'signalname="{self.G.name}" ' if self.G else ""}name="G" />
 </block>
 """, indent)
 

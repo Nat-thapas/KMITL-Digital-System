@@ -39,15 +39,15 @@ class And8(Component):
 
     def to_blockpin_xml(self, indent: int = 0) -> str:
         return add_indent(f"""<block symbolname="{self.symbolname}" name="{self.name}">
-    <blockpin {f'signalname="{self.I0.name} "' if self.I0 else ""}name="I0" />
-    <blockpin {f'signalname="{self.I1.name} "' if self.I1 else ""}name="I1" />
-    <blockpin {f'signalname="{self.I2.name} "' if self.I2 else ""}name="I2" />
-    <blockpin {f'signalname="{self.I3.name} "' if self.I3 else ""}name="I3" />
-    <blockpin {f'signalname="{self.I4.name} "' if self.I4 else ""}name="I4" />
-    <blockpin {f'signalname="{self.I5.name} "' if self.I5 else ""}name="I5" />
-    <blockpin {f'signalname="{self.I6.name} "' if self.I6 else ""}name="I6" />
-    <blockpin {f'signalname="{self.I7.name} "' if self.I7 else ""}name="I7" />
-    <blockpin {f'signalname="{self.O.name} "' if self.O else ""}name="O" />
+    <blockpin {f'signalname="{self.I0.name}" ' if self.I0 else ""}name="I0" />
+    <blockpin {f'signalname="{self.I1.name}" ' if self.I1 else ""}name="I1" />
+    <blockpin {f'signalname="{self.I2.name}" ' if self.I2 else ""}name="I2" />
+    <blockpin {f'signalname="{self.I3.name}" ' if self.I3 else ""}name="I3" />
+    <blockpin {f'signalname="{self.I4.name}" ' if self.I4 else ""}name="I4" />
+    <blockpin {f'signalname="{self.I5.name}" ' if self.I5 else ""}name="I5" />
+    <blockpin {f'signalname="{self.I6.name}" ' if self.I6 else ""}name="I6" />
+    <blockpin {f'signalname="{self.I7.name}" ' if self.I7 else ""}name="I7" />
+    <blockpin {f'signalname="{self.O.name}" ' if self.O else ""}name="O" />
 </block>
 """, indent)
 

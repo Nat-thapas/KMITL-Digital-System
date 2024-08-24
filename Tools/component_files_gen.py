@@ -320,6 +320,20 @@ blockdefs = """
     <line x2="64" y1="-128" y2="-128" x1="0" />
     <line x2="64" y1="-256" y2="-256" x1="0" />
 </blockdef>
+<blockdef name="fjkpe">
+    <timestamp>2000-1-1T10:10:10</timestamp>
+    <line x2="64" y1="-128" y2="-144" x1="80" />
+    <line x2="80" y1="-112" y2="-128" x1="64" />
+    <rect width="256" x="64" y="-384" height="320" />
+    <line x2="64" y1="-416" y2="-416" x1="192" />
+    <line x2="192" y1="-384" y2="-416" x1="192" />
+    <line x2="64" y1="-256" y2="-256" x1="0" />
+    <line x2="64" y1="-128" y2="-128" x1="0" />
+    <line x2="64" y1="-320" y2="-320" x1="0" />
+    <line x2="64" y1="-416" y2="-416" x1="0" />
+    <line x2="320" y1="-256" y2="-256" x1="384" />
+    <line x2="64" y1="-192" y2="-192" x1="0" />
+</blockdef>
 """
 
 blockpins = """
@@ -507,6 +521,14 @@ blockpins = """
     <blockpin name="K" />
     <blockpin name="Q" />
 </block>
+<block symbolname="fjkpe" name="XLXI_23">
+    <blockpin name="C" />
+    <blockpin name="CE" />
+    <blockpin name="J" />
+    <blockpin name="K" />
+    <blockpin name="PRE" />
+    <blockpin name="Q" />
+</block>
 """
 
 for match in re.finditer(
@@ -543,7 +565,7 @@ class {name.capitalize()}(Component):
 
     def to_blockpin_xml(self, indent: int = 0) -> str:
         return add_indent(f\"\"\"<block symbolname="{{self.symbolname}}" name="{{self.name}}">
-{'\n'.join((' '*4 + '<blockpin ' + f'''{{f'signalname="{{self.{pin}.name}} "' if self.{pin} else ""}}''' + f'name="{pin}"' + ' />' for pin in pins))}
+{'\n'.join((' '*4 + '<blockpin ' + f'''{{f'signalname="{{self.{pin}.name}}" ' if self.{pin} else ""}}''' + f'name="{pin}"' + ' />' for pin in pins))}
 </block>\n\"\"\", indent)
 
     def to_instance_xml(self, indent: int = 0) -> str:

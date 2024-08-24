@@ -21,7 +21,7 @@ class Vcc(Component):
 
     def to_blockpin_xml(self, indent: int = 0) -> str:
         return add_indent(f"""<block symbolname="{self.symbolname}" name="{self.name}">
-    <blockpin {f'signalname="{self.P.name} "' if self.P else ""}name="P" />
+    <blockpin {f'signalname="{self.P.name}" ' if self.P else ""}name="P" />
 </block>
 """, indent)
 

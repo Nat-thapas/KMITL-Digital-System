@@ -6,6 +6,8 @@ import pyeda.boolalg.minimization
 import pyeda.boolalg.table
 import sympy
 
+from schematic_gen import generate_counter_schematic
+
 
 def boolean_input(prompt: str, default: bool | None = None) -> bool:
     while True:
@@ -256,7 +258,7 @@ def process_d_flip_flop(
 
 
 def process_jk_flip_flop(
-    sequence: list[int], bit_count: int, names_msb_first: str
+    sequence: list[int], bit_count: int, names_msb_first: str, export_to_schematic: bool
 ) -> None:
     current_state_print_width = max(15, bit_count * 2 + 1)
     next_state_print_width = max(12, bit_count * 2 + 1)
@@ -417,6 +419,22 @@ def process_jk_flip_flop(
             + "│"
         )
         print("└" + "─" * 3 + "┴" + "─" * 3 + "┴" + "─" * result_print_width + "┘")
+    if export_to_schematic:
+        output_bit_count = None
+        output_bit_count_input = input(
+            f"Enter the bit width for exported schematic (leave blank for default ({bit_count})): "
+        )
+        if output_bit_count_input:
+            output_bit_count = int(output_bit_count_input)
+        else:
+            output_bit_count = bit_count
+        generate_counter_schematic(
+            simplified_inputs_dict,
+            sequence[0],
+            bit_count,
+            output_bit_count,
+            "counter.sch",
+        )
 
 
 def main() -> None:
@@ -449,7 +467,9 @@ def main() -> None:
     if primitive == "D":
         process_d_flip_flop(sequence, bit_count, names_msb_first)
     elif primitive == "JK":
-        process_jk_flip_flop(sequence, bit_count, names_msb_first)
+        process_jk_flip_flop(sequence, bit_count, names_msb_first, export_to_schematic)
+    if export_to_schematic:
+        print("Schematic exported to counter.sch")
 
 
 if __name__ == "__main__":
