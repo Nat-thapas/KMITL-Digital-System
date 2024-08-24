@@ -422,7 +422,7 @@ def process_jk_flip_flop(
     if export_to_schematic:
         output_bit_count = None
         output_bit_count_input = input(
-            f"Enter the bit width for exported schematic (leave blank for default ({bit_count})): "
+            f"Enter the bit width for schematic export (leave blank for default ({bit_count})): "
         )
         if output_bit_count_input:
             output_bit_count = int(output_bit_count_input)
@@ -431,6 +431,7 @@ def process_jk_flip_flop(
         generate_counter_schematic(
             simplified_inputs_dict,
             sequence[0],
+            sequence[-1],
             bit_count,
             output_bit_count,
             "counter.sch",

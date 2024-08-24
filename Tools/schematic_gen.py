@@ -381,12 +381,14 @@ def name_to_index(name: str) -> int:
 def generate_counter_schematic(
     primitive_inputs: dict[str, dict[str, str]],
     initial_state: int,
+    terminal_state: int,
     bit_count: int,
     output_bit_count: int,
     output_file_path: str,
 ) -> None:
     schematic = Schematic("counter")
     initial_states = bin(initial_state)[2:].zfill(bit_count)[::-1]
+    terminal_states = bin(terminal_state)[2:].zfill(bit_count)[::-1]
     inputs: dict[str, dict[str, list[list[str]]]] = {}
     primitive_inputs_list = list(primitive_inputs.items())
     primitive_inputs_list.sort(key=lambda x: x[0])
@@ -644,6 +646,33 @@ def generate_counter_schematic(
         flipflop.C = clk_net
         flipflop.Q = q_nets[i]
         x_offset += 480
+    x_offset += 32
+    and_gate = get_and_n_gate(
+        bit_count, schematic.get_instance_name(), x_offset, base_y, 90
+    )
+    x_offset -= 32
+    schematic.add_component(and_gate)
+    and_gate.O = tc_net
+    for i, state in enumerate(terminal_states):
+        if state == "0":
+            inv = Inv(
+                schematic.get_instance_name(), x_offset + i * 64, base_y - 256, 90
+            )
+            schematic.add_component(inv)
+            inv_net = Net(schematic.get_net_name())
+            schematic.add_net(inv_net)
+            inv.I = q_nets[i]
+            inv.O = inv_net
+            set_I_n_net(and_gate, i, inv_net)
+        else:
+            set_I_n_net(and_gate, i, q_nets[i])
+        x_offset += 64
+    x_offset += 80
+    and_gate = And2(schematic.get_instance_name(), x_offset, base_y + 528, 0)
+    and_gate.I0 = ce_net
+    and_gate.I1 = tc_net
+    and_gate.O = ceo_net
+    schematic.add_component(and_gate)
     xml = schematic.generate_xml()
     with open(output_file_path, "w", encoding="utf-8") as f:
         f.write(xml)
