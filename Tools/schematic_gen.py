@@ -439,7 +439,8 @@ def generate_counter_schematic(
         k_branch_start_loc: tuple[int, int] | None = None
         for side in "KJ":
             data = jk_data[side]
-            data = [["True", "False", "C"], ["B", "A"], ["A", "D", "B"]]
+            # Example data (for testing purposes):
+            # data = [["True", "False", "C"], ["B", "A"], ["A", "D", "B"]]
             net: Net | None = None
             branch_start_loc: tuple[int, int] | None = None
             if len(data) == 1:
