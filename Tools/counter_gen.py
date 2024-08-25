@@ -4,13 +4,17 @@ from concurrent.futures import ProcessPoolExecutor
 from itertools import repeat
 from math import ceil
 
+import colorama
 import pyeda.boolalg.bfarray
 import pyeda.boolalg.expr
 import pyeda.boolalg.minimization
 import pyeda.boolalg.table
 import sympy
+from colorama import Fore, Style
 
 from schematic_gen import generate_counter_schematic
+
+colorama.init(autoreset=True)
 
 
 def boolean_input(prompt: str, default: bool | None = None) -> bool:
@@ -22,7 +26,7 @@ def boolean_input(prompt: str, default: bool | None = None) -> bool:
             return True
         if input_string.startswith("n"):
             return False
-        print("Invalid input. Please enter Y or N.")
+        print(Fore.LIGHTRED_EX + "Invalid input. Please enter Y or N.")
 
 
 def parse_number(number_string: str, to_bcd: bool) -> int:
@@ -96,7 +100,7 @@ def get_primitive() -> str:
         elif input_string.lower() == "jk" or not input_string:
             primitive = "JK"
         else:
-            print("Invalid input. Please enter D or JK.")
+            print(Fore.LIGHTRED_EX + "Invalid input. Please enter D or JK.")
     return primitive
 
 
@@ -201,7 +205,8 @@ def process_d_flip_flop(
     print_stt = True
     if len(sequence) > 64:
         print_stt = boolean_input(
-            f"Print long ({len(sequence)}) state transition table? (y/N): ", False
+            f"Print long ({len(sequence)}) state transition table? (y/N): ",
+            False,
         )
     if print_stt:
         print("State transition table:")
@@ -289,9 +294,16 @@ def process_d_flip_flop(
         print("Simplifying to SOP form using Quine-McCluskey algorithm.")
     else:
         print("Simplifying to SOP form using Espresso heuristic algorithm.")
-    if bit_count > 8:
+    if bit_count > 16:
         print(
-            "Warning: SOP form can take a long time to compute for bit width higher than 8."
+            Fore.LIGHTYELLOW_EX
+            + "Warning: SOP form can take a really really "
+            + "long time to compute for bit width higher than 16."
+        )
+    elif bit_count > 8:
+        print(
+            Fore.LIGHTYELLOW_EX
+            + "Warning: SOP form can take a long time to compute for bit width higher than 8."
         )
     print("Simplified SOP form:")
     simplification_data: list[dict[int, str]] = []
@@ -334,7 +346,8 @@ def process_jk_flip_flop(
     print_stt = True
     if len(sequence) > 64:
         print_stt = boolean_input(
-            f"Print long ({len(sequence)}) state transition table? (y/N): ", False
+            f"Print long ({len(sequence)}) state transition table? (y/N): ",
+            False,
         )
     if print_stt:
         print("State transition table:")
@@ -447,9 +460,16 @@ def process_jk_flip_flop(
         print("Simplifying to SOP form using Quine-McCluskey algorithm.")
     else:
         print("Simplifying to SOP form using Espresso heuristic algorithm.")
-    if bit_count > 8:
+    if bit_count > 16:
         print(
-            "Warning: SOP form can take a long time to compute for bit width higher than 8."
+            Fore.LIGHTYELLOW_EX
+            + "Warning: SOP form can take a really really "
+            + "long time to compute for bit width higher than 16."
+        )
+    elif bit_count > 8:
+        print(
+            Fore.LIGHTYELLOW_EX
+            + "Warning: SOP form can take a long time to compute for bit width higher than 8."
         )
     print("Simplified SOP form:")
     simplification_data: list[dict[int, str]] = []
@@ -498,7 +518,10 @@ def process_jk_flip_flop(
     if bit_count <= 16:
         export_to_schematic = boolean_input("Export to schematic? (y/N): ", False)
     else:
-        print("Schematic export is disabled for bit width higher than 16.")
+        print(
+            Fore.LIGHTYELLOW_EX
+            + "Schematic export is disabled for bit width higher than 16."
+        )
         export_to_schematic = False
     if export_to_schematic:
         output_bit_count = default_output_bit_count
@@ -516,7 +539,7 @@ def process_jk_flip_flop(
             output_bit_count,
             "counter.sch",
         )
-        print("Schematic exported to counter.sch")
+        print(Fore.LIGHTGREEN_EX + "Schematic exported to counter.sch")
 
 
 def main() -> None:
@@ -532,21 +555,22 @@ def main() -> None:
         default_output_bit_count = ceil(default_output_bit_count / 4) * 4
     primitive = get_primitive()
     if len(sequence) < 2:
-        print("Sequence must have at least 2 numbers.")
+        print(Fore.LIGHTRED_EX + "Sequence must have at least 2 numbers.")
         return
     if min(sequence) < 0:
-        print("Negative number in sequence is not supported.")
+        print(Fore.LIGHTRED_EX + "Negative number in sequence is not supported.")
         return
     if len(set(sequence)) != len(sequence):
-        print("Duplicate number in sequence detected.")
+        print(Fore.LIGHTYELLOW_EX + "Duplicate number in sequence detected.")
         do_dedupe_sequence = boolean_input(
             "Deduplicate sequence automatically? (y/N): ", False
         )
         if not do_dedupe_sequence:
+            print(Fore.LIGHTRED_EX + "Sequence must not have duplicate numbers.")
             return
         sequence = dedupe_sequence(sequence, default_output_bit_count)
     bit_count = max(sequence).bit_length()
-    print(f"Bit width: {bit_count}")
+    print(Style.RESET_ALL + f"Bit width: {bit_count}")
     print_sequence = True
     if len(sequence) > 64:
         print_sequence = boolean_input(
@@ -566,6 +590,7 @@ def main() -> None:
         process_jk_flip_flop(
             sequence, bit_count, names_msb_first, default_output_bit_count
         )
+    print(Style.RESET_ALL)
 
 
 if __name__ == "__main__":
