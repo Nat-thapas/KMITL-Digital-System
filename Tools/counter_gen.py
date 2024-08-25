@@ -144,7 +144,7 @@ def expression_to_string(
 
 
 def simplify_to_sop(
-    data: list[dict[int, str]],
+    data: dict[int, str],
     names: str,
     bit_count: int,
 ) -> str:
@@ -183,6 +183,8 @@ def simplify_multiple_to_sop(
     names: str,
     bit_count: int,
 ) -> list[str]:
+    if bit_count <= 12:
+        return [simplify_to_sop(d, names, bit_count) for d in data]
     with ProcessPoolExecutor() as executor:
         results = list(
             executor.map(simplify_to_sop, data, repeat(names), repeat(bit_count))
