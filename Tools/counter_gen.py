@@ -55,7 +55,8 @@ def get_primitive() -> str:
     primitive = ""
     while not primitive:
         input_string = input(
-            "Enter primitive component (D for D Flip-Flop, JK for JK Flip Flop). Leave blank for default (JK): "
+            "Enter primitive component (D for D Flip-Flop, JK for JK Flip Flop). "
+            + "Leave blank for default (JK): "
         )
         if input_string.lower() == "d":
             primitive = "D"
@@ -78,8 +79,12 @@ def expression_to_string(
     names: tuple[str, ...] | str,
     add_parenthesis_if_multiple: bool = False,
 ) -> str:
+    # pylint: disable=protected-access
+    # There is no way to avoid this
     if isinstance(expression, pyeda.boolalg.expr._Zero):
         return "False"
+    # pylint: disable=protected-access
+    # There is no way to avoid this
     if isinstance(expression, pyeda.boolalg.expr._One):
         return "True"
     if isinstance(expression, pyeda.boolalg.expr.Complement):
@@ -138,47 +143,54 @@ def process_d_flip_flop(
     current_state_print_width = max(15, bit_count * 2 + 1)
     next_state_print_width = max(12, bit_count * 2 + 1)
     input_print_width = max(7, bit_count * 2 - 1)
-    print("State transition table:")
-    print(
-        "┌"
-        + "─" * current_state_print_width
-        + "┬"
-        + "─" * next_state_print_width
-        + "┬"
-        + "─" * input_print_width
-        + "┐"
-    )
-    print(
-        f"│{'Current State':^{current_state_print_width}}│{'Next State':^{next_state_print_width}}│"
-        + f"{'Input':^{input_print_width}}│"
-    )
-    print(
-        "├"
-        + f"{'┬'.join(['─' for _ in range(bit_count)]):─^{current_state_print_width}}"
-        + "┼"
-        + f"{'┬'.join(['─' for _ in range(bit_count)]):─^{next_state_print_width}}"
-        + "┼"
-        + f"{'┬'.join(['─' for _ in range(bit_count)]):─^{input_print_width}}"
-        + "┤"
-    )
-    print(
-        "│"
-        + f"{'│'.join([f'{name}' for name in names_msb_first]):^{current_state_print_width}}"
-        + "│"
-        + f"{'│'.join([f'{name}' for name in names_msb_first]):^{next_state_print_width}}"
-        + "│"
-        + f"{'│'.join([f'{name}' for name in names_msb_first]):^{input_print_width}}"
-        + "│"
-    )
-    print(
-        "├"
-        + f"{'┼'.join(['─' for _ in range(bit_count)]):─^{current_state_print_width}}"
-        + "┼"
-        + f"{'┼'.join(['─' for _ in range(bit_count)]):─^{next_state_print_width}}"
-        + "┼"
-        + f"{'┼'.join(['─' for _ in range(bit_count)]):─^{input_print_width}}"
-        + "┤"
-    )
+    print_stt = True
+    if len(sequence) > 64:
+        print_stt = boolean_input(
+            f"Print long ({len(sequence)}) state transition table? (y/N): ", False
+        )
+    if print_stt:
+        print("State transition table:")
+        print(
+            "┌"
+            + "─" * current_state_print_width
+            + "┬"
+            + "─" * next_state_print_width
+            + "┬"
+            + "─" * input_print_width
+            + "┐"
+        )
+        print(
+            f"│{'Current State':^{current_state_print_width}}"
+            + f"│{'Next State':^{next_state_print_width}}│"
+            + f"{'Input':^{input_print_width}}│"
+        )
+        print(
+            "├"
+            + f"{'┬'.join(['─' for _ in range(bit_count)]):─^{current_state_print_width}}"
+            + "┼"
+            + f"{'┬'.join(['─' for _ in range(bit_count)]):─^{next_state_print_width}}"
+            + "┼"
+            + f"{'┬'.join(['─' for _ in range(bit_count)]):─^{input_print_width}}"
+            + "┤"
+        )
+        print(
+            "│"
+            + f"{'│'.join([f'{name}' for name in names_msb_first]):^{current_state_print_width}}"
+            + "│"
+            + f"{'│'.join([f'{name}' for name in names_msb_first]):^{next_state_print_width}}"
+            + "│"
+            + f"{'│'.join([f'{name}' for name in names_msb_first]):^{input_print_width}}"
+            + "│"
+        )
+        print(
+            "├"
+            + f"{'┼'.join(['─' for _ in range(bit_count)]):─^{current_state_print_width}}"
+            + "┼"
+            + f"{'┼'.join(['─' for _ in range(bit_count)]):─^{next_state_print_width}}"
+            + "┼"
+            + f"{'┼'.join(['─' for _ in range(bit_count)]):─^{input_print_width}}"
+            + "┤"
+        )
     inputs_array: list[list[str]] = []
     for i, value in enumerate(sequence):
         binary_string = bin(value)[2:].zfill(bit_count)
@@ -187,24 +199,28 @@ def process_d_flip_flop(
         for j in range(bit_count):
             inputs.append(next_binary_string[j])
         inputs_array.append(inputs)
+        if print_stt:
+            print(
+                "│"
+                # pylint: disable=line-too-long
+                + f"{'│'.join([f'{binary}' for binary in binary_string]):^{current_state_print_width}}"
+                + "│"
+                # pylint: disable=line-too-long
+                + f"{'│'.join([f'{binary}' for binary in next_binary_string]):^{next_state_print_width}}"
+                + "│"
+                + f"{'│'.join([f'{input}' for input in inputs]):^{input_print_width}}"
+                + "│"
+            )
+    if print_stt:
         print(
-            "│"
-            + f"{'│'.join([f'{binary}' for binary in binary_string]):^{current_state_print_width}}"
-            + "│"
-            + f"{'│'.join([f'{binary}' for binary in next_binary_string]):^{next_state_print_width}}"
-            + "│"
-            + f"{'│'.join([f'{input}' for input in inputs]):^{input_print_width}}"
-            + "│"
+            "└"
+            + f"{'┴'.join(['─' for _ in range(bit_count)]):─^{current_state_print_width}}"
+            + "┴"
+            + f"{'┴'.join(['─' for _ in range(bit_count)]):─^{next_state_print_width}}"
+            + "┴"
+            + f"{'┴'.join(['─' for _ in range(bit_count)]):─^{input_print_width}}"
+            + "┘"
         )
-    print(
-        "└"
-        + f"{'┴'.join(['─' for _ in range(bit_count)]):─^{current_state_print_width}}"
-        + "┴"
-        + f"{'┴'.join(['─' for _ in range(bit_count)]):─^{next_state_print_width}}"
-        + "┴"
-        + f"{'┴'.join(['─' for _ in range(bit_count)]):─^{input_print_width}}"
-        + "┘"
-    )
     inputs_dict: dict[str, dict[int, str]] = {}
     for name in names_msb_first:
         inputs_dict[name] = {}
@@ -258,65 +274,74 @@ def process_d_flip_flop(
 
 
 def process_jk_flip_flop(
-    sequence: list[int], bit_count: int, names_msb_first: str, export_to_schematic: bool
+    sequence: list[int], bit_count: int, names_msb_first: str
 ) -> None:
     current_state_print_width = max(15, bit_count * 2 + 1)
     next_state_print_width = max(12, bit_count * 2 + 1)
     input_print_width = max(7, bit_count * 4 - 1)
-    print("State transition table:")
-    print(
-        "┌"
-        + "─" * current_state_print_width
-        + "┬"
-        + "─" * next_state_print_width
-        + "┬"
-        + "─" * input_print_width
-        + "┐"
-    )
-    print(
-        f"│{' '*current_state_print_width}│{' '*next_state_print_width}│{'Input':^{input_print_width}}│"
-    )
-    print(
-        f"│{'Current State':^{current_state_print_width}}│{'Next State':^{next_state_print_width}}├"
-        + f"{'┬'.join(['───' for _ in range(bit_count)]):─^{input_print_width}}"
-        + "┤"
-    )
-    print(
-        "│"
-        + " " * current_state_print_width
-        + "│"
-        + " " * next_state_print_width
-        + "│"
-        + f"{'│'.join([f' {name} ' for name in names_msb_first]):^{input_print_width}}"
-        + "│"
-    )
-    print(
-        "├"
-        + f"{'┬'.join(['─' for _ in range(bit_count)]):─^{current_state_print_width}}"
-        + "┼"
-        + f"{'┬'.join(['─' for _ in range(bit_count)]):─^{next_state_print_width}}"
-        + "┼"
-        + f"{'┼'.join(['─┬─' for _ in range(bit_count)]):─^{input_print_width}}"
-        + "┤"
-    )
-    print(
-        "│"
-        + f"{'│'.join([f'{name}' for name in names_msb_first]):^{current_state_print_width}}"
-        + "│"
-        + f"{'│'.join([f'{name}' for name in names_msb_first]):^{next_state_print_width}}"
-        + "│"
-        + f"{'│'.join(['J│K' for _ in range(bit_count)]):^{input_print_width}}"
-        + "│"
-    )
-    print(
-        "├"
-        + f"{'┼'.join(['─' for _ in range(bit_count)]):─^{current_state_print_width}}"
-        + "┼"
-        + f"{'┼'.join(['─' for _ in range(bit_count)]):─^{next_state_print_width}}"
-        + "┼"
-        + f"{'┼'.join(['─┼─' for _ in range(bit_count)]):─^{input_print_width}}"
-        + "┤"
-    )
+    print_stt = True
+    if len(sequence) > 64:
+        print_stt = boolean_input(
+            f"Print long ({len(sequence)}) state transition table? (y/N): ", False
+        )
+    if print_stt:
+        print("State transition table:")
+        print(
+            "┌"
+            + "─" * current_state_print_width
+            + "┬"
+            + "─" * next_state_print_width
+            + "┬"
+            + "─" * input_print_width
+            + "┐"
+        )
+        print(
+            f"│{' '*current_state_print_width}"
+            + f"│{' '*next_state_print_width}│"
+            + f"{'Input':^{input_print_width}}│"
+        )
+        print(
+            f"│{'Current State':^{current_state_print_width}}"
+            + f"│{'Next State':^{next_state_print_width}}├"
+            + f"{'┬'.join(['───' for _ in range(bit_count)]):─^{input_print_width}}"
+            + "┤"
+        )
+        print(
+            "│"
+            + " " * current_state_print_width
+            + "│"
+            + " " * next_state_print_width
+            + "│"
+            + f"{'│'.join([f' {name} ' for name in names_msb_first]):^{input_print_width}}"
+            + "│"
+        )
+        print(
+            "├"
+            + f"{'┬'.join(['─' for _ in range(bit_count)]):─^{current_state_print_width}}"
+            + "┼"
+            + f"{'┬'.join(['─' for _ in range(bit_count)]):─^{next_state_print_width}}"
+            + "┼"
+            + f"{'┼'.join(['─┬─' for _ in range(bit_count)]):─^{input_print_width}}"
+            + "┤"
+        )
+        print(
+            "│"
+            + f"{'│'.join([f'{name}' for name in names_msb_first]):^{current_state_print_width}}"
+            + "│"
+            + f"{'│'.join([f'{name}' for name in names_msb_first]):^{next_state_print_width}}"
+            + "│"
+            + f"{'│'.join(['J│K' for _ in range(bit_count)]):^{input_print_width}}"
+            + "│"
+        )
+        print(
+            "├"
+            + f"{'┼'.join(['─' for _ in range(bit_count)]):─^{current_state_print_width}}"
+            + "┼"
+            + f"{'┼'.join(['─' for _ in range(bit_count)]):─^{next_state_print_width}}"
+            + "┼"
+            + f"{'┼'.join(['─┼─' for _ in range(bit_count)]):─^{input_print_width}}"
+            + "┤"
+        )
     inputs_array: list[list[tuple[str, str]]] = []
     for i, value in enumerate(sequence):
         binary_string = bin(value)[2:].zfill(bit_count)
@@ -332,24 +357,28 @@ def process_jk_flip_flop(
             elif binary_string[j] == "1" and next_binary_string[j] == "1":
                 inputs.append(("X", "0"))
         inputs_array.append(inputs)
+        if print_stt:
+            print(
+                "│"
+                # pylint: disable=line-too-long
+                + f"{'│'.join([f'{binary}' for binary in binary_string]):^{current_state_print_width}}"
+                + "│"
+                # pylint: disable=line-too-long
+                + f"{'│'.join([f'{binary}' for binary in next_binary_string]):^{next_state_print_width}}"
+                + "│"
+                + f"{'│'.join([f'{input[0]}│{input[1]}' for input in inputs]):^{input_print_width}}"
+                + "│"
+            )
+    if print_stt:
         print(
-            "│"
-            + f"{'│'.join([f'{binary}' for binary in binary_string]):^{current_state_print_width}}"
-            + "│"
-            + f"{'│'.join([f'{binary}' for binary in next_binary_string]):^{next_state_print_width}}"
-            + "│"
-            + f"{'│'.join([f'{input[0]}│{input[1]}' for input in inputs]):^{input_print_width}}"
-            + "│"
+            "└"
+            + f"{'┴'.join(['─' for _ in range(bit_count)]):─^{current_state_print_width}}"
+            + "┴"
+            + f"{'┴'.join(['─' for _ in range(bit_count)]):─^{next_state_print_width}}"
+            + "┴"
+            + f"{'┴'.join(['─┴─' for _ in range(bit_count)]):─^{input_print_width}}"
+            + "┘"
         )
-    print(
-        "└"
-        + f"{'┴'.join(['─' for _ in range(bit_count)]):─^{current_state_print_width}}"
-        + "┴"
-        + f"{'┴'.join(['─' for _ in range(bit_count)]):─^{next_state_print_width}}"
-        + "┴"
-        + f"{'┴'.join(['─┴─' for _ in range(bit_count)]):─^{input_print_width}}"
-        + "┘"
-    )
     inputs_dict: dict[str, dict[str, dict[int, str]]] = {}
     for name in names_msb_first:
         inputs_dict[name] = {"J": {}, "K": {}}
@@ -419,6 +448,11 @@ def process_jk_flip_flop(
             + "│"
         )
         print("└" + "─" * 3 + "┴" + "─" * 3 + "┴" + "─" * result_print_width + "┘")
+    if bit_count <= 16:
+        export_to_schematic = boolean_input("Export to schematic? (y/N): ", False)
+    else:
+        print("Schematic export is disabled for bit width higher than 16.")
+        export_to_schematic = False
     if export_to_schematic:
         output_bit_count = None
         output_bit_count_input = input(
@@ -436,6 +470,7 @@ def process_jk_flip_flop(
             output_bit_count,
             "counter.sch",
         )
+        print("Schematic exported to counter.sch")
 
 
 def main() -> None:
@@ -444,7 +479,6 @@ def main() -> None:
     )
     sequence = parse_sequence(unparsed_sequence)
     primitive = get_primitive()
-    export_to_schematic = boolean_input("Export to schematic? (y/N): ", False)
     if len(sequence) < 2:
         print("Sequence must have at least 2 numbers.")
         return
@@ -456,11 +490,15 @@ def main() -> None:
         return
     bit_count = max(sequence).bit_length()
     print(f"Bit width: {bit_count}")
-    if bit_count > 12:
-        print("Warning: Bit width higher than 12 is only partially supported.")
-    print("Sequence:")
-    for i, value in enumerate(sequence):
-        print(f"{i+1:>5}: {bin(value)[2:].zfill(bit_count)} ({value})")
+    print_sequence = True
+    if len(sequence) > 64:
+        print_sequence = boolean_input(
+            f"Print long ({len(sequence)}) sequence? (y/N): ", False
+        )
+    if print_sequence:
+        print("Sequence:")
+        for i, value in enumerate(sequence):
+            print(f"{i+1:>5}: {bin(value)[2:].zfill(bit_count)} ({value})")
     print(f"Building state transition table with {primitive} flip-flop.")
     names_msb_first = [chr(ord("A") + i) for i in range(bit_count)]
     names_msb_first.reverse()
@@ -468,9 +506,7 @@ def main() -> None:
     if primitive == "D":
         process_d_flip_flop(sequence, bit_count, names_msb_first)
     elif primitive == "JK":
-        process_jk_flip_flop(sequence, bit_count, names_msb_first, export_to_schematic)
-    if export_to_schematic:
-        print("Schematic exported to counter.sch")
+        process_jk_flip_flop(sequence, bit_count, names_msb_first)
 
 
 if __name__ == "__main__":

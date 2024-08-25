@@ -153,6 +153,30 @@ blockdefs = """
     <line x2="64" y1="-768" y2="-768" x1="0" />
     <line x2="64" y1="-768" y2="-64" x1="64" />
 </blockdef>
+<blockdef name="and16">
+    <timestamp>2000-1-1T10:10:10</timestamp>
+    <line x2="64" y1="-1024" y2="-64" x1="64" />
+    <line x2="64" y1="-960" y2="-960" x1="0" />
+    <line x2="64" y1="-768" y2="-768" x1="0" />
+    <line x2="64" y1="-640" y2="-640" x1="0" />
+    <line x2="64" y1="-576" y2="-576" x1="0" />
+    <line x2="64" y1="-64" y2="-64" x1="0" />
+    <line x2="64" y1="-128" y2="-128" x1="0" />
+    <line x2="64" y1="-192" y2="-192" x1="0" />
+    <line x2="64" y1="-256" y2="-256" x1="0" />
+    <line x2="64" y1="-320" y2="-320" x1="0" />
+    <line x2="64" y1="-384" y2="-384" x1="0" />
+    <line x2="64" y1="-448" y2="-448" x1="0" />
+    <line x2="64" y1="-512" y2="-512" x1="0" />
+    <arc ex="144" ey="-592" sx="144" sy="-496" r="48" cx="144" cy="-544" />
+    <line x2="144" y1="-592" y2="-592" x1="64" />
+    <line x2="64" y1="-496" y2="-496" x1="144" />
+    <line x2="192" y1="-544" y2="-544" x1="256" />
+    <line x2="64" y1="-832" y2="-832" x1="0" />
+    <line x2="64" y1="-1024" y2="-1024" x1="0" />
+    <line x2="64" y1="-896" y2="-896" x1="0" />
+    <line x2="64" y1="-704" y2="-704" x1="0" />
+</blockdef>
 <blockdef name="or2">
     <timestamp>2000-1-1T10:10:10</timestamp>
     <line x2="64" y1="-64" y2="-64" x1="0" />
@@ -430,6 +454,25 @@ blockpins = """
     <blockpin name="I9" />
     <blockpin name="O" />
 </block>
+<block symbolname="and16" name="XLXI_24">
+    <blockpin name="I0" />
+    <blockpin name="I1" />
+    <blockpin name="I10" />
+    <blockpin name="I11" />
+    <blockpin name="I12" />
+    <blockpin name="I13" />
+    <blockpin name="I14" />
+    <blockpin name="I15" />
+    <blockpin name="I2" />
+    <blockpin name="I3" />
+    <blockpin name="I4" />
+    <blockpin name="I5" />
+    <blockpin name="I6" />
+    <blockpin name="I7" />
+    <blockpin name="I8" />
+    <blockpin name="I9" />
+    <blockpin name="O" />
+</block>
 <block symbolname="or2" name="XLXI_13">
     <blockpin name="I0" />
     <blockpin name="I1" />
@@ -554,7 +597,6 @@ from .net import Net
 
 
 class {name.capitalize()}(Component):
-
     def __init__(self, name: str, x: int, y: int, orientation: int) -> None:
         super().__init__(name, x, y, orientation)
         self.symbolname = "{name}"

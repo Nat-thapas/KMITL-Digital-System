@@ -1,3 +1,4 @@
+# pylint: disable=too-many-lines
 from components.and2 import And2
 from components.and3 import And3
 from components.and4 import And4
@@ -6,6 +7,8 @@ from components.and6 import And6
 from components.and7 import And7
 from components.and8 import And8
 from components.and9 import And9
+from components.and12 import And12
+from components.and16 import And16
 from components.component import Component
 from components.fjkce import Fjkce
 from components.fjkpe import Fjkpe
@@ -22,8 +25,8 @@ from components.or7 import Or7
 from components.or8 import Or8
 from components.or9 import Or9
 from components.vcc import Vcc
-from schematic import Schematic
 from components.wire import Wire
+from schematic import Schematic
 
 
 def parse_sop_form(sop_form: str) -> list[list[str]]:
@@ -38,7 +41,7 @@ def parse_sop_form(sop_form: str) -> list[list[str]]:
 
 def get_and_n_gate(
     n: int, name: str, x: int, y: int, orientation: int
-) -> And2 | And3 | And4 | And5 | And6 | And7 | And8 | And9:
+) -> And2 | And3 | And4 | And5 | And6 | And7 | And8 | And9 | And12 | And16:
     if n == 2:
         return And2(name, x, y, orientation)
     elif n == 3:
@@ -55,7 +58,11 @@ def get_and_n_gate(
         return And8(name, x, y, orientation)
     elif n == 9:
         return And9(name, x, y, orientation)
-    raise ValueError("Invalid n value")
+    elif n == 12:
+        return And12(name, x, y, orientation)
+    elif n == 16:
+        return And16(name, x, y, orientation)
+    raise ValueError(f"Invalid n value: {n}")
 
 
 def get_or_n_gate(
@@ -77,9 +84,10 @@ def get_or_n_gate(
         return Or8(name, x, y, orientation)
     elif n == 9:
         return Or9(name, x, y, orientation)
-    raise ValueError("Invalid n value")
+    raise ValueError(f"Invalid n value: {n}")
 
 
+# pylint: disable=invalid-name
 def get_I_n_net(component: Component, n: int) -> Net | None:
     if not isinstance(
         component,
@@ -92,6 +100,8 @@ def get_I_n_net(component: Component, n: int) -> Net | None:
             And7,
             And8,
             And9,
+            And12,
+            And16,
             Or2,
             Or3,
             Or4,
@@ -117,6 +127,8 @@ def get_I_n_net(component: Component, n: int) -> Net | None:
             And7,
             And8,
             And9,
+            And12,
+            And16,
             Or3,
             Or4,
             Or5,
@@ -138,6 +150,8 @@ def get_I_n_net(component: Component, n: int) -> Net | None:
             And7,
             And8,
             And9,
+            And12,
+            And16,
             Or4,
             Or5,
             Or6,
@@ -157,6 +171,8 @@ def get_I_n_net(component: Component, n: int) -> Net | None:
             And7,
             And8,
             And9,
+            And12,
+            And16,
             Or5,
             Or6,
             Or7,
@@ -174,6 +190,8 @@ def get_I_n_net(component: Component, n: int) -> Net | None:
             And7,
             And8,
             And9,
+            And12,
+            And16,
             Or6,
             Or7,
             Or8,
@@ -189,6 +207,8 @@ def get_I_n_net(component: Component, n: int) -> Net | None:
             And7,
             And8,
             And9,
+            And12,
+            And16,
             Or7,
             Or8,
             Or9,
@@ -202,6 +222,8 @@ def get_I_n_net(component: Component, n: int) -> Net | None:
         (
             And8,
             And9,
+            And12,
+            And16,
             Or8,
             Or9,
         ),
@@ -213,15 +235,42 @@ def get_I_n_net(component: Component, n: int) -> Net | None:
         component,
         (
             And9,
+            And12,
+            And16,
             Or9,
         ),
     ):
         raise ValueError("Invalid component type")
     if n == 8:
         return component.I8
+    if not isinstance(
+        component,
+        (
+            And12,
+            And16,
+        ),
+    ):
+        raise ValueError("Invalid component type")
+    if n == 9:
+        return component.I9
+    if n == 10:
+        return component.I10
+    if n == 11:
+        return component.I11
+    if not isinstance(component, And16):
+        raise ValueError("Invalid component type")
+    if n == 12:
+        return component.I12
+    if n == 13:
+        return component.I13
+    if n == 14:
+        return component.I14
+    if n == 15:
+        return component.I15
     raise ValueError("Invalid n value")
 
 
+# pylint: disable=invalid-name
 def set_I_n_net(component: Component, n: int, net: Net) -> None:
     if not isinstance(
         component,
@@ -234,6 +283,8 @@ def set_I_n_net(component: Component, n: int, net: Net) -> None:
             And7,
             And8,
             And9,
+            And12,
+            And16,
             Or2,
             Or3,
             Or4,
@@ -261,6 +312,8 @@ def set_I_n_net(component: Component, n: int, net: Net) -> None:
             And7,
             And8,
             And9,
+            And12,
+            And16,
             Or3,
             Or4,
             Or5,
@@ -283,6 +336,8 @@ def set_I_n_net(component: Component, n: int, net: Net) -> None:
             And7,
             And8,
             And9,
+            And12,
+            And16,
             Or4,
             Or5,
             Or6,
@@ -303,6 +358,8 @@ def set_I_n_net(component: Component, n: int, net: Net) -> None:
             And7,
             And8,
             And9,
+            And12,
+            And16,
             Or5,
             Or6,
             Or7,
@@ -321,6 +378,8 @@ def set_I_n_net(component: Component, n: int, net: Net) -> None:
             And7,
             And8,
             And9,
+            And12,
+            And16,
             Or6,
             Or7,
             Or8,
@@ -337,6 +396,8 @@ def set_I_n_net(component: Component, n: int, net: Net) -> None:
             And7,
             And8,
             And9,
+            And12,
+            And16,
             Or7,
             Or8,
             Or9,
@@ -351,6 +412,8 @@ def set_I_n_net(component: Component, n: int, net: Net) -> None:
         (
             And8,
             And9,
+            And12,
+            And16,
             Or8,
             Or9,
         ),
@@ -363,12 +426,45 @@ def set_I_n_net(component: Component, n: int, net: Net) -> None:
         component,
         (
             And9,
+            And12,
+            And16,
             Or9,
         ),
     ):
         raise ValueError("Invalid component type")
     if n == 8:
         component.I8 = net
+        return
+    if not isinstance(
+        component,
+        (
+            And12,
+            And16,
+        ),
+    ):
+        raise ValueError("Invalid component type")
+    if n == 9:
+        component.I9 = net
+        return
+    if n == 10:
+        component.I10 = net
+        return
+    if n == 11:
+        component.I11 = net
+        return
+    if not isinstance(component, And16):
+        raise ValueError("Invalid component type")
+    if n == 12:
+        component.I12 = net
+        return
+    if n == 13:
+        component.I13 = net
+        return
+    if n == 14:
+        component.I14 = net
+        return
+    if n == 15:
+        component.I15 = net
         return
     raise ValueError("Invalid n value")
 
@@ -439,8 +535,6 @@ def generate_counter_schematic(
         k_branch_start_loc: tuple[int, int] | None = None
         for side in "KJ":
             data = jk_data[side]
-            # Example data (for testing purposes):
-            # data = [["True", "False", "C"], ["B", "A"], ["A", "D", "B"]]
             net: Net | None = None
             branch_start_loc: tuple[int, int] | None = None
             if len(data) == 1:
@@ -507,6 +601,9 @@ def generate_counter_schematic(
                 else:
                     # Multiple product terms
                     product_count = len(product_terms)
+                    if product_count > 9:
+                        print("Unable to generate schematic: Too many product terms")
+                        raise ValueError("Too many product terms")
                     and_gate = get_and_n_gate(
                         product_count,
                         schematic.get_instance_name(),
@@ -519,7 +616,7 @@ def generate_counter_schematic(
                     schematic.add_net(and_net)
                     and_gate.O = and_net
                     net = and_net
-                    branch_start_loc = (x_offset + 128, base_y)
+                    branch_start_loc = (x_offset + product_count * 32 + 64, base_y)
                     for j, term in enumerate(product_terms):
                         if term == "False":
                             gnd = Gnd(
@@ -609,6 +706,9 @@ def generate_counter_schematic(
             else:
                 # Multiple sum terms
                 sum_count = len(data)
+                if sum_count > 9:
+                    print("Unable to generate schematic: Too many sum terms")
+                    raise ValueError("Too many sum terms")
                 or_gate = get_or_n_gate(
                     sum_count,
                     schematic.get_instance_name(),
@@ -616,12 +716,13 @@ def generate_counter_schematic(
                     base_y - 256,
                     90,
                 )
+                or_gate_offset = x_offset + 32
                 schematic.add_component(or_gate)
                 or_net = Net(schematic.get_net_name())
                 schematic.add_net(or_net)
                 or_gate.O = or_net
                 net = or_net
-                branch_start_loc = (x_offset + 128, base_y)
+                branch_start_loc = (x_offset + sum_count * 32 + 64, base_y)
                 for j, product_terms in enumerate(data):
                     if len(product_terms) == 1:
                         # Single product term
@@ -630,7 +731,7 @@ def generate_counter_schematic(
                             gnd = Gnd(
                                 schematic.get_instance_name(),
                                 x_offset + 160,
-                                base_y - 416,
+                                base_y - 16 * sum_count - 400,
                                 180,
                             )
                             schematic.add_component(gnd)
@@ -640,9 +741,25 @@ def generate_counter_schematic(
                             gnd_net.add_wire(
                                 Wire(
                                     x_offset + 96,
-                                    base_y - 256,
+                                    base_y - 16 * sum_count - 272,
                                     x_offset + 96,
-                                    base_y - 288,
+                                    base_y - (sum_count - j) * 16 - 256,
+                                )
+                            )
+                            gnd_net.add_wire(
+                                Wire(
+                                    x_offset + 96,
+                                    base_y - (sum_count - j) * 16 - 256,
+                                    or_gate_offset + j * 64 + 64,
+                                    base_y - (sum_count - j) * 16 - 256,
+                                )
+                            )
+                            gnd_net.add_wire(
+                                Wire(
+                                    or_gate_offset + j * 64 + 64,
+                                    base_y - (sum_count - j) * 16 - 256,
+                                    or_gate_offset + j * 64 + 64,
+                                    base_y - 256,
                                 )
                             )
                             set_I_n_net(or_gate, j, gnd_net)
@@ -650,7 +767,7 @@ def generate_counter_schematic(
                             vcc = Vcc(
                                 schematic.get_instance_name(),
                                 x_offset + 32,
-                                base_y - 288,
+                                base_y - 16 * sum_count - 272,
                                 0,
                             )
                             schematic.add_component(vcc)
@@ -660,9 +777,25 @@ def generate_counter_schematic(
                             vcc_net.add_wire(
                                 Wire(
                                     x_offset + 96,
-                                    base_y - 256,
+                                    base_y - 16 * sum_count - 272,
                                     x_offset + 96,
-                                    base_y - 288,
+                                    base_y - (sum_count - j) * 16 - 256,
+                                )
+                            )
+                            vcc_net.add_wire(
+                                Wire(
+                                    x_offset + 96,
+                                    base_y - (sum_count - j) * 16 - 256,
+                                    or_gate_offset + j * 64 + 64,
+                                    base_y - (sum_count - j) * 16 - 256,
+                                )
+                            )
+                            vcc_net.add_wire(
+                                Wire(
+                                    or_gate_offset + j * 64 + 64,
+                                    base_y - (sum_count - j) * 16 - 256,
+                                    or_gate_offset + j * 64 + 64,
+                                    base_y - 256,
                                 )
                             )
                             set_I_n_net(or_gate, j, vcc_net)
@@ -670,7 +803,7 @@ def generate_counter_schematic(
                             inv = Inv(
                                 schematic.get_instance_name(),
                                 x_offset + 64,
-                                base_y - 512,
+                                base_y - 16 * sum_count - 480,
                                 90,
                             )
                             schematic.add_component(inv)
@@ -685,15 +818,31 @@ def generate_counter_schematic(
                                     x_offset + 96,
                                     get_wire_y(bit_count, base_y, q_index),
                                     x_offset + 96,
-                                    base_y - 512,
+                                    base_y - 16 * sum_count - 480,
                                 )
                             )
                             inv_net.add_wire(
                                 Wire(
                                     x_offset + 96,
-                                    base_y - 256,
+                                    base_y - 16 * sum_count - 256,
                                     x_offset + 96,
-                                    base_y - 288,
+                                    base_y - (sum_count - j) * 16 - 256,
+                                )
+                            )
+                            inv_net.add_wire(
+                                Wire(
+                                    x_offset + 96,
+                                    base_y - (sum_count - j) * 16 - 256,
+                                    or_gate_offset + j * 64 + 64,
+                                    base_y - (sum_count - j) * 16 - 256,
+                                )
+                            )
+                            inv_net.add_wire(
+                                Wire(
+                                    or_gate_offset + j * 64 + 64,
+                                    base_y - (sum_count - j) * 16 - 256,
+                                    or_gate_offset + j * 64 + 64,
+                                    base_y - 256,
                                 )
                             )
                             set_I_n_net(or_gate, j, inv_net)
@@ -705,6 +854,22 @@ def generate_counter_schematic(
                                     x_offset + 96,
                                     get_wire_y(bit_count, base_y, q_index),
                                     x_offset + 96,
+                                    base_y - (sum_count - j) * 16 - 256,
+                                )
+                            )
+                            q_net.add_wire(
+                                Wire(
+                                    x_offset + 96,
+                                    base_y - (sum_count - j) * 16 - 256,
+                                    or_gate_offset + j * 64 + 64,
+                                    base_y - (sum_count - j) * 16 - 256,
+                                )
+                            )
+                            q_net.add_wire(
+                                Wire(
+                                    or_gate_offset + j * 64 + 64,
+                                    base_y - (sum_count - j) * 16 - 256,
+                                    or_gate_offset + j * 64 + 64,
                                     base_y - 256,
                                 )
                             )
@@ -712,11 +877,12 @@ def generate_counter_schematic(
                     else:
                         # Multiple product terms
                         product_count = len(product_terms)
+                        x_offset += 32
                         and_gate = get_and_n_gate(
                             product_count,
                             schematic.get_instance_name(),
                             x_offset,
-                            base_y - 544,
+                            base_y - 16 * sum_count - 528,
                             90,
                         )
                         schematic.add_component(and_gate)
@@ -725,18 +891,34 @@ def generate_counter_schematic(
                         and_gate.O = and_net
                         and_net.add_wire(
                             Wire(
-                                x_offset + 96,
+                                x_offset + product_count * 32 + 32,
+                                base_y - 16 * sum_count - 272,
+                                x_offset + product_count * 32 + 32,
+                                base_y - (sum_count - j) * 16 - 256,
+                            )
+                        )
+                        and_net.add_wire(
+                            Wire(
+                                x_offset + product_count * 32 + 32,
+                                base_y - (sum_count - j) * 16 - 256,
+                                or_gate_offset + j * 64 + 64,
+                                base_y - (sum_count - j) * 16 - 256,
+                            )
+                        )
+                        and_net.add_wire(
+                            Wire(
+                                or_gate_offset + j * 64 + 64,
+                                base_y - (sum_count - j) * 16 - 256,
+                                or_gate_offset + j * 64 + 64,
                                 base_y - 256,
-                                x_offset + 96,
-                                base_y - 288,
                             )
                         )
                         for k, term in enumerate(product_terms):
                             if term == "False":
                                 gnd = Gnd(
                                     schematic.get_instance_name(),
-                                    x_offset + 128 + 64 * k,
-                                    base_y - 704,
+                                    x_offset + 128,
+                                    base_y - 16 * sum_count - 688,
                                     180,
                                 )
                                 schematic.add_component(gnd)
@@ -745,18 +927,18 @@ def generate_counter_schematic(
                                 gnd.G = gnd_net
                                 gnd_net.add_wire(
                                     Wire(
-                                        x_offset + 64 + 64 * k,
-                                        base_y - 544,
-                                        x_offset + 64 + 64 * k,
-                                        base_y - 576,
+                                        x_offset + 64,
+                                        base_y - 16 * sum_count - 528,
+                                        x_offset + 64,
+                                        base_y - 16 * sum_count - 560,
                                     )
                                 )
                                 set_I_n_net(and_gate, k, gnd_net)
                             elif term == "True":
                                 vcc = Vcc(
                                     schematic.get_instance_name(),
-                                    x_offset + 64 * k,
-                                    base_y - 576,
+                                    x_offset,
+                                    base_y - 16 * sum_count - 560,
                                     0,
                                 )
                                 schematic.add_component(vcc)
@@ -765,18 +947,18 @@ def generate_counter_schematic(
                                 vcc.P = vcc_net
                                 vcc_net.add_wire(
                                     Wire(
-                                        x_offset + 64 + 64 * k,
-                                        base_y - 544,
-                                        x_offset + 64 + 64 * k,
-                                        base_y - 576,
+                                        x_offset + 64,
+                                        base_y - 16 * sum_count - 528,
+                                        x_offset + 64,
+                                        base_y - 16 * sum_count - 560,
                                     )
                                 )
                                 set_I_n_net(and_gate, k, vcc_net)
                             elif term[0] == "~":
                                 inv = Inv(
                                     schematic.get_instance_name(),
-                                    x_offset + 32 + 64 * k,
-                                    base_y - 800,
+                                    x_offset + 32,
+                                    base_y - 16 * sum_count - 784,
                                     90,
                                 )
                                 schematic.add_component(inv)
@@ -788,18 +970,18 @@ def generate_counter_schematic(
                                 inv.O = inv_net
                                 q_net.add_wire(
                                     Wire(
-                                        x_offset + 64 + 64 * k,
+                                        x_offset + 64,
                                         get_wire_y(bit_count, base_y, q_index),
-                                        x_offset + 64 + 64 * k,
-                                        base_y - 800,
+                                        x_offset + 64,
+                                        base_y - 16 * sum_count - 784,
                                     )
                                 )
                                 inv_net.add_wire(
                                     Wire(
-                                        x_offset + 64 + 64 * k,
-                                        base_y - 544,
-                                        x_offset + 64 + 64 * k,
-                                        base_y - 576,
+                                        x_offset + 64,
+                                        base_y - 16 * sum_count - 528,
+                                        x_offset + 64,
+                                        base_y - 16 * sum_count - 560,
                                     )
                                 )
                                 set_I_n_net(and_gate, k, inv_net)
@@ -808,14 +990,16 @@ def generate_counter_schematic(
                                 q_net = q_nets[q_index]
                                 q_net.add_wire(
                                     Wire(
-                                        x_offset + 64 + 64 * k,
+                                        x_offset + 64,
                                         get_wire_y(bit_count, base_y, q_index),
-                                        x_offset + 64 + 64 * k,
-                                        base_y - 544,
+                                        x_offset + 64,
+                                        base_y - 16 * sum_count - 528,
                                     )
                                 )
                                 set_I_n_net(and_gate, k, q_net)
+                            x_offset += 64
                         set_I_n_net(or_gate, j, and_net)
+                        x_offset -= 32
                     x_offset += 64
                 x_offset += 32
             if side == "J":
@@ -830,7 +1014,7 @@ def generate_counter_schematic(
             or j_branch_start_loc is None
             or k_branch_start_loc is None
         ):
-            raise Exception("Unkown error")
+            raise RuntimeError("Unkown error")
         x_offset += 80
         if initial_states[i] == "0":
             flipflop = Fjkce(f"FlipFlop_{name}", x_offset, base_y + 400, 0)
@@ -899,18 +1083,26 @@ def generate_counter_schematic(
             )
         )
         x_offset += 480
-    clk_net.add_wire(Wire(160, base_y + 496, x_offset - 400, base_y + 496))
-    clr_net.add_wire(Wire(160, base_y + 560, x_offset - 400, base_y + 560))
-    ce_io.x = 160
+    clk_net.add_wire(Wire(240, base_y + 496, x_offset - 400, base_y + 496))
+    clr_net.add_wire(Wire(240, base_y + 560, x_offset - 400, base_y + 560))
+    ce_io.x = 240
     ce_io.y = base_y + 432
-    clk_io.x = 160
+    clk_io.x = 240
     clk_io.y = base_y + 496
-    clr_io.x = 160
+    clr_io.x = 240
     clr_io.y = base_y + 560
     x_offset += 32
     # Terminal count logic
+    gate_size = bit_count
+    if bit_count > 9:
+        gate_size = 12
+    if bit_count > 12:
+        gate_size = 16
+    if bit_count > 16:
+        print("Unable to generate schematic: Bit width too large")
+        raise ValueError("Bit width too large")
     and_gate = get_and_n_gate(
-        bit_count, schematic.get_instance_name(), x_offset, base_y, 90
+        gate_size, schematic.get_instance_name(), x_offset, base_y, 90
     )
     x_offset += 32
     schematic.add_component(and_gate)
@@ -946,15 +1138,25 @@ def generate_counter_schematic(
             )
             set_I_n_net(and_gate, i, q_net)
         x_offset += 64
+    vcc_count = gate_size - bit_count
+    for i in range(vcc_count):
+        vcc = Vcc(schematic.get_instance_name(), x_offset - 32, base_y - 32, 0)
+        schematic.add_component(vcc)
+        vcc_net = Net(schematic.get_net_name())
+        schematic.add_net(vcc_net)
+        vcc.P = vcc_net
+        vcc_net.add_wire(Wire(x_offset + 32, base_y - 32, x_offset + 32, base_y))
+        set_I_n_net(and_gate, bit_count + i, vcc_net)
+        x_offset += 64
     x_offset += 80
     # Clock enable output logic
     x_offset += 96
-    x_offset -= 32 * bit_count
+    x_offset -= 32 * gate_size
     and_gate = And2(schematic.get_instance_name(), x_offset, base_y + 560, 0)
     and_gate.I0 = ce_net
     and_gate.I1 = tc_net
     and_gate.O = ceo_net
-    ce_net.add_wire(Wire(160, base_y + 432, x_offset, base_y + 432))
+    ce_net.add_wire(Wire(240, base_y + 432, x_offset, base_y + 432))
     tc_net.add_wire(Wire(x_offset - 176, base_y + 256, x_offset - 176, base_y + 496))
     tc_net.add_wire(Wire(x_offset - 176, base_y + 496, x_offset, base_y + 496))
     ceo_net.add_wire(Wire(x_offset + 256, base_y + 464, x_offset + 288, base_y + 464))
@@ -965,7 +1167,8 @@ def generate_counter_schematic(
     tc_net.add_wire(Wire(x_offset - 176, base_y + 656, x_offset + 288, base_y + 656))
     tc_io.x = x_offset + 288
     tc_io.y = base_y + 656
-    x_offset += 160
+    x_offset += 32 * gate_size
+    x_offset += 80
     # Count output logic
     for i in range(bit_count):
         net = q_nets[i]

@@ -3,7 +3,6 @@ from .wire import Wire
 
 
 class Net:
-
     def __init__(self, name: str) -> None:
         self.name = name
         self.wires: list[Wire] = []
@@ -12,7 +11,7 @@ class Net:
         if wire.x1 != wire.x2 and wire.y1 != wire.y2:
             raise ValueError("Wire must be horizontal or vertical")
         if wire.x1 == wire.x2 and wire.y1 == wire.y2:
-            raise ValueError("Wire must have length")
+            return
         if wire.x1 > wire.x2:
             wire.x1, wire.x2 = wire.x2, wire.x1
         if wire.y1 > wire.y2:

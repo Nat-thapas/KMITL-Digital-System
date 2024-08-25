@@ -4,7 +4,6 @@ from .net import Net
 
 
 class Or2(Component):
-
     def __init__(self, name: str, x: int, y: int, orientation: int) -> None:
         super().__init__(name, x, y, orientation)
         self.symbolname = "or2"
