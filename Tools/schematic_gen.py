@@ -1,4 +1,6 @@
 # pylint: disable=too-many-lines
+from typing import Callable
+
 from components.and2 import And2
 from components.and3 import And3
 from components.and4 import And4
@@ -475,8 +477,11 @@ def name_to_index(name: str) -> int:
     return ord(name[0]) - ord("A")
 
 
-def get_wire_y(bit_count: int, base_y: int, n: int) -> int:
-    return base_y - 64 * (bit_count - n) - 1024
+def get_wire_y_function(bit_count: int, base_y: int) -> Callable[[int], int]:
+    def get_wire_y(n: int) -> int:
+        return base_y - 64 * (bit_count - n) - 1280
+
+    return get_wire_y
 
 
 def generate_counter_schematic(
@@ -490,6 +495,7 @@ def generate_counter_schematic(
     schematic = Schematic("counter")
     initial_states = bin(initial_state)[2:].zfill(bit_count)[::-1]
     terminal_states = bin(terminal_state)[2:].zfill(bit_count)[::-1]
+    total_bit_count = max(bit_count, output_bit_count)
     inputs: dict[str, dict[str, list[list[str]]]] = {}
     primitive_inputs_list = list(primitive_inputs.items())
     primitive_inputs_list.sort(key=lambda x: x[0])
@@ -510,8 +516,8 @@ def generate_counter_schematic(
     ce_io = IO("CE", 80, 80, "input")
     clk_io = IO("CLK", 80, 160, "input")
     clr_io = IO("CLR", 80, 240, "input")
-    ceo_io = IO("CEO", 240, bit_count * 80 + 80, "output")
-    tc_io = IO("TC", 240, bit_count * 80 + 160, "output")
+    ceo_io = IO("CEO", 240, total_bit_count * 80 + 80, "output")
+    tc_io = IO("TC", 240, total_bit_count * 80 + 160, "output")
     schematic.add_io(ce_io)
     schematic.add_io(clk_io)
     schematic.add_io(clr_io)
@@ -519,15 +525,17 @@ def generate_counter_schematic(
     schematic.add_io(tc_io)
     q_nets: list[Net] = []
     q_ios: list[IO] = []
-    for i in range(bit_count):
+    for i in range(total_bit_count):
         q_net = Net(f"Q{i}")
         q_nets.append(q_net)
         schematic.add_net(q_net)
-        q_io = IO(f"Q{i}", 240, i * 80 + 80, "output")
-        q_ios.append(q_io)
-        schematic.add_io(q_io)
+        if i < output_bit_count:
+            q_io = IO(f"Q{i}", 240, i * 80 + 80, "output")
+            q_ios.append(q_io)
+            schematic.add_io(q_io)
     x_offset = 160
-    base_y = 2400
+    base_y = total_bit_count * 64 + 1600
+    get_wire_y = get_wire_y_function(total_bit_count, base_y)
     for i, (name, jk_data) in enumerate(inputs.items()):
         j_net: Net | None = None
         k_net: Net | None = None
@@ -582,7 +590,7 @@ def generate_counter_schematic(
                         q_net.add_wire(
                             Wire(
                                 x_offset + 80,
-                                get_wire_y(bit_count, base_y, q_index),
+                                get_wire_y(q_index),
                                 x_offset + 80,
                                 base_y - 224,
                             )
@@ -595,7 +603,7 @@ def generate_counter_schematic(
                         net = q_nets[q_index]
                         branch_start_loc = (
                             x_offset + 80,
-                            get_wire_y(bit_count, base_y, q_index),
+                            get_wire_y(q_index),
                         )
                     x_offset += 80
                 else:
@@ -675,7 +683,7 @@ def generate_counter_schematic(
                             q_net.add_wire(
                                 Wire(
                                     x_offset + 96,
-                                    get_wire_y(bit_count, base_y, q_index),
+                                    get_wire_y(q_index),
                                     x_offset + 96,
                                     base_y - 512,
                                 )
@@ -695,7 +703,7 @@ def generate_counter_schematic(
                             q_net.add_wire(
                                 Wire(
                                     x_offset + 96,
-                                    get_wire_y(bit_count, base_y, q_index),
+                                    get_wire_y(q_index),
                                     x_offset + 96,
                                     base_y - 256,
                                 )
@@ -816,7 +824,7 @@ def generate_counter_schematic(
                             q_net.add_wire(
                                 Wire(
                                     x_offset + 96,
-                                    get_wire_y(bit_count, base_y, q_index),
+                                    get_wire_y(q_index),
                                     x_offset + 96,
                                     base_y - 16 * sum_count - 480,
                                 )
@@ -852,7 +860,7 @@ def generate_counter_schematic(
                             q_net.add_wire(
                                 Wire(
                                     x_offset + 96,
-                                    get_wire_y(bit_count, base_y, q_index),
+                                    get_wire_y(q_index),
                                     x_offset + 96,
                                     base_y - (sum_count - j) * 16 - 256,
                                 )
@@ -971,7 +979,7 @@ def generate_counter_schematic(
                                 q_net.add_wire(
                                     Wire(
                                         x_offset + 64,
-                                        get_wire_y(bit_count, base_y, q_index),
+                                        get_wire_y(q_index),
                                         x_offset + 64,
                                         base_y - 16 * sum_count - 784,
                                     )
@@ -991,7 +999,7 @@ def generate_counter_schematic(
                                 q_net.add_wire(
                                     Wire(
                                         x_offset + 64,
-                                        get_wire_y(bit_count, base_y, q_index),
+                                        get_wire_y(q_index),
                                         x_offset + 64,
                                         base_y - 16 * sum_count - 528,
                                     )
@@ -1047,7 +1055,7 @@ def generate_counter_schematic(
                 x_offset + 416,
                 base_y + 144,
                 x_offset + 416,
-                get_wire_y(bit_count, base_y, i),
+                get_wire_y(i),
             )
         )
         j_net.add_wire(
@@ -1118,7 +1126,7 @@ def generate_counter_schematic(
             q_net.add_wire(
                 Wire(
                     x_offset + 32,
-                    get_wire_y(bit_count, base_y, i),
+                    get_wire_y(i),
                     x_offset + 32,
                     base_y - 256,
                 )
@@ -1131,7 +1139,7 @@ def generate_counter_schematic(
             q_net.add_wire(
                 Wire(
                     x_offset + 32,
-                    get_wire_y(bit_count, base_y, i),
+                    get_wire_y(i),
                     x_offset + 32,
                     base_y,
                 )
@@ -1170,13 +1178,24 @@ def generate_counter_schematic(
     x_offset += 32 * gate_size
     x_offset += 80
     # Count output logic
-    for i in range(bit_count):
+    for i in range(total_bit_count):
         net = q_nets[i]
-        io = q_ios[i]
-        y = get_wire_y(bit_count, base_y, i)
-        net.add_wire(Wire(160, y, x_offset, y))
-        io.x = x_offset
-        io.y = y
+        y = get_wire_y(i)
+        if i < bit_count and i < output_bit_count:
+            net.add_wire(Wire(160, y, x_offset, y))
+            io = q_ios[i]
+            io.x = x_offset
+            io.y = y
+        elif i < bit_count:
+            net.add_wire(Wire(160, y, x_offset, y))
+        elif i < output_bit_count:
+            net.add_wire(Wire(x_offset - 32, y, x_offset, y))
+            gnd = Gnd(schematic.get_instance_name(), x_offset - 160, y - 64, 90)
+            schematic.add_component(gnd)
+            gnd.G = net
+            io = q_ios[i]
+            io.x = x_offset
+            io.y = y
     xml = schematic.generate_xml()
     with open(output_file_path, "w", encoding="utf-8") as f:
         f.write(xml)

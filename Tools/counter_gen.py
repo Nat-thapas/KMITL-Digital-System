@@ -1,4 +1,8 @@
 import re
+from collections import Counter
+from concurrent.futures import ProcessPoolExecutor
+from itertools import repeat
+from math import ceil
 
 import pyeda.boolalg.bfarray
 import pyeda.boolalg.expr
@@ -21,20 +25,27 @@ def boolean_input(prompt: str, default: bool | None = None) -> bool:
         print("Invalid input. Please enter Y or N.")
 
 
-def parse_number(number_string: str) -> int:
+def parse_number(number_string: str, to_bcd: bool) -> int:
     number_string = number_string.strip().lower()
+    parsed_number = None
     if number_string.startswith("0b"):
-        return int(number_string, 2)
+        parsed_number = int(number_string, 2)
     if number_string.startswith("0o"):
-        return int(number_string, 8)
+        parsed_number = int(number_string, 8)
     if number_string.startswith("0x"):
-        return int(number_string, 16)
-    return int(number_string, 10)
+        parsed_number = int(number_string, 16)
+    parsed_number = int(number_string, 10)
+    if to_bcd:
+        bcd_number = 0
+        for i, digit in enumerate(str(parsed_number)[::-1]):
+            bcd_number += int(digit) << (i * 4)
+        return bcd_number
+    return parsed_number
 
 
-def parse_sequence(sequence: str) -> list[int]:
+def parse_sequence(sequence: str, to_bcd: bool) -> list[int]:
     if re.match(r"^\d+$", sequence):
-        return list(range(parse_number(sequence)))
+        return list(range(parse_number(sequence, to_bcd)))
     numbers = re.split(r", *| +", sequence)
     output: list[int] = []
     for number in numbers:
@@ -42,13 +53,35 @@ def parse_sequence(sequence: str) -> list[int]:
             output.extend(
                 list(
                     range(
-                        parse_number(match.group(1)), parse_number(match.group(2)) + 1
+                        parse_number(match.group(1), to_bcd),
+                        parse_number(match.group(2), to_bcd) + 1,
                     )
                 )
             )
         else:
-            output.append(parse_number(number))
+            output.append(parse_number(number, to_bcd))
     return output
+
+
+def dedupe_sequence(sequence: list[int], bit_count: int) -> list[int]:
+    counts = Counter(sequence)
+    max_duplication = max(counts.values())
+    dedupe_bit_count = max_duplication.bit_length()
+    new_sequence: list[int] = []
+    new_counts: dict[int, int] = {}
+    for number in sequence:
+        if number not in new_counts:
+            new_counts[number] = 0
+        count = new_counts[number]
+        new_sequence.append(
+            int(
+                bin(count)[2:].zfill(dedupe_bit_count)
+                + bin(number)[2:].zfill(bit_count),
+                2,
+            )
+        )
+        new_counts[number] += 1
+    return new_sequence
 
 
 def get_primitive() -> str:
@@ -111,30 +144,50 @@ def expression_to_string(
 
 
 def symplify_to_sop(
-    min_terms: list[int],
-    dontcares: list[int],
-    names: tuple[str, ...] | str,
+    data: list[dict[int, str]],
+    names: str,
     bit_count: int,
 ) -> str:
     if bit_count <= 6:
+        min_terms: set[int] = set()
+        dontcares: set[int] = set()
+        for num in range(2**bit_count):
+            if num in data:
+                if data[num] == "1":
+                    min_terms.add(num)
+                elif data[num] == "X":
+                    dontcares.add(num)
+            else:
+                dontcares.add(num)
         return str(
             sympy.SOPform([sympy.symbols(name) for name in names], min_terms, dontcares)
         )
     variables = pyeda.boolalg.bfarray.exprvars("x", bit_count)
-    truth_string = ""
+    truth_list = []
     for num in range(2**bit_count):
-        if num in min_terms:
-            truth_string += "1"
-        elif num in dontcares:
-            truth_string += "-"
+        if num in data:
+            truth_list.append(data[num])
         else:
-            truth_string += "0"
+            truth_list.append("X")
+    truth_string = "".join(truth_list)
     truth_table = pyeda.boolalg.table.truthtable(variables, truth_string)
     simplified_expression = pyeda.boolalg.minimization.espresso_tts(truth_table)[0]
     simplified_expression_string = expression_to_string(
         simplified_expression, names[::-1]
     )
     return simplified_expression_string
+
+
+def symplify_multiple_to_sop(
+    data: list[dict[int, str]],
+    names: str,
+    bit_count: int,
+) -> list[str]:
+    with ProcessPoolExecutor() as executor:
+        results = list(
+            executor.map(symplify_to_sop, data, repeat(names), repeat(bit_count))
+        )
+    return results
 
 
 def process_d_flip_flop(
@@ -239,20 +292,14 @@ def process_d_flip_flop(
             "Warning: SOP form can take a long time to compute for bit width higher than 8."
         )
     print("Simplified SOP form:")
+    simplification_data: list[dict[int, str]] = []
     for name in names_msb_first:
-        min_terms: list[int] = []
-        dontcares: list[int] = []
-        for num in range(2**bit_count):
-            if num in inputs_dict[name]:
-                if inputs_dict[name][num] == "1":
-                    min_terms.append(num)
-                elif inputs_dict[name][num] == "X":
-                    dontcares.append(num)
-            else:
-                dontcares.append(num)
-        simplified_inputs_dict[name] = symplify_to_sop(
-            min_terms, dontcares, names_msb_first, bit_count
-        )
+        simplification_data.append(inputs_dict[name])
+    simplified_inputs = symplify_multiple_to_sop(
+        simplification_data, names_msb_first, bit_count
+    )
+    for i, name in enumerate(names_msb_first):
+        simplified_inputs_dict[name] = simplified_inputs[i]
     result_print_width = 0
     for name in names_msb_first:
         new_result_print_width = (
@@ -274,7 +321,10 @@ def process_d_flip_flop(
 
 
 def process_jk_flip_flop(
-    sequence: list[int], bit_count: int, names_msb_first: str
+    sequence: list[int],
+    bit_count: int,
+    names_msb_first: str,
+    default_output_bit_count: int,
 ) -> None:
     current_state_print_width = max(15, bit_count * 2 + 1)
     next_state_print_width = max(12, bit_count * 2 + 1)
@@ -400,21 +450,16 @@ def process_jk_flip_flop(
             "Warning: SOP form can take a long time to compute for bit width higher than 8."
         )
     print("Simplified SOP form:")
+    simplification_data: list[dict[int, str]] = []
     for name in names_msb_first:
         for side in "JK":
-            min_terms: list[int] = []
-            dontcares: list[int] = []
-            for num in range(2**bit_count):
-                if num in inputs_dict[name][side]:
-                    if inputs_dict[name][side][num] == "1":
-                        min_terms.append(num)
-                    elif inputs_dict[name][side][num] == "X":
-                        dontcares.append(num)
-                else:
-                    dontcares.append(num)
-            simplified_inputs_dict[name][side] = symplify_to_sop(
-                min_terms, dontcares, names_msb_first, bit_count
-            )
+            simplification_data.append(inputs_dict[name][side])
+    simplified_inputs = symplify_multiple_to_sop(
+        simplification_data, names_msb_first, bit_count
+    )
+    for i, name in enumerate(names_msb_first):
+        for j, side in enumerate("JK"):
+            simplified_inputs_dict[name][side] = simplified_inputs[i * 2 + j]
     result_print_width = 0
     for name in names_msb_first:
         new_result_print_width = (
@@ -454,14 +499,13 @@ def process_jk_flip_flop(
         print("Schematic export is disabled for bit width higher than 16.")
         export_to_schematic = False
     if export_to_schematic:
-        output_bit_count = None
+        output_bit_count = default_output_bit_count
         output_bit_count_input = input(
-            f"Enter the bit width for schematic export (leave blank for default ({bit_count})): "
+            "Enter the bit width for schematic export "
+            + f"(leave blank for default ({default_output_bit_count})): "
         )
         if output_bit_count_input:
             output_bit_count = int(output_bit_count_input)
-        else:
-            output_bit_count = bit_count
         generate_counter_schematic(
             simplified_inputs_dict,
             sequence[0],
@@ -477,7 +521,13 @@ def main() -> None:
     unparsed_sequence = input(
         "Enter the sequence (base 2, 8, 10 or 16) space or comma separated: "
     )
-    sequence = parse_sequence(unparsed_sequence)
+    output_bcd = boolean_input(
+        "Convert sequence to BCD instead of binary? (y/N): ", False
+    )
+    sequence = parse_sequence(unparsed_sequence, output_bcd)
+    default_output_bit_count = max(sequence).bit_length()
+    if output_bcd:
+        default_output_bit_count = ceil(default_output_bit_count / 4) * 4
     primitive = get_primitive()
     if len(sequence) < 2:
         print("Sequence must have at least 2 numbers.")
@@ -486,8 +536,13 @@ def main() -> None:
         print("Negative number in sequence is not supported.")
         return
     if len(set(sequence)) != len(sequence):
-        print("Duplicate number in sequence is not supported.")
-        return
+        print("Duplicate number in sequence detected.")
+        do_dedupe_sequence = boolean_input(
+            "Deduplicate sequence automatically? (y/N): ", False
+        )
+        if not do_dedupe_sequence:
+            return
+        sequence = dedupe_sequence(sequence, default_output_bit_count)
     bit_count = max(sequence).bit_length()
     print(f"Bit width: {bit_count}")
     print_sequence = True
@@ -506,7 +561,9 @@ def main() -> None:
     if primitive == "D":
         process_d_flip_flop(sequence, bit_count, names_msb_first)
     elif primitive == "JK":
-        process_jk_flip_flop(sequence, bit_count, names_msb_first)
+        process_jk_flip_flop(
+            sequence, bit_count, names_msb_first, default_output_bit_count
+        )
 
 
 if __name__ == "__main__":
