@@ -143,7 +143,7 @@ def expression_to_string(
     return str(expression)
 
 
-def symplify_to_sop(
+def simplify_to_sop(
     data: list[dict[int, str]],
     names: str,
     bit_count: int,
@@ -178,14 +178,14 @@ def symplify_to_sop(
     return simplified_expression_string
 
 
-def symplify_multiple_to_sop(
+def simplify_multiple_to_sop(
     data: list[dict[int, str]],
     names: str,
     bit_count: int,
 ) -> list[str]:
     with ProcessPoolExecutor() as executor:
         results = list(
-            executor.map(symplify_to_sop, data, repeat(names), repeat(bit_count))
+            executor.map(simplify_to_sop, data, repeat(names), repeat(bit_count))
         )
     return results
 
@@ -295,7 +295,7 @@ def process_d_flip_flop(
     simplification_data: list[dict[int, str]] = []
     for name in names_msb_first:
         simplification_data.append(inputs_dict[name])
-    simplified_inputs = symplify_multiple_to_sop(
+    simplified_inputs = simplify_multiple_to_sop(
         simplification_data, names_msb_first, bit_count
     )
     for i, name in enumerate(names_msb_first):
@@ -454,7 +454,7 @@ def process_jk_flip_flop(
     for name in names_msb_first:
         for side in "JK":
             simplification_data.append(inputs_dict[name][side])
-    simplified_inputs = symplify_multiple_to_sop(
+    simplified_inputs = simplify_multiple_to_sop(
         simplification_data, names_msb_first, bit_count
     )
     for i, name in enumerate(names_msb_first):
