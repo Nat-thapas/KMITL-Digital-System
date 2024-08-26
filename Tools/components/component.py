@@ -2,7 +2,6 @@ from abc import ABC, abstractmethod
 
 
 class Component(ABC):
-
     def __init__(self, name: str, x: int, y: int, orientation: int) -> None:
         self.name: str = name
         self.x: int = x

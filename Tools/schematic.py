@@ -1,11 +1,9 @@
-from components.net import Net
 from components.component import Component
 from components.io import IO
-from components.wire import Wire
+from components.net import Net
 
 
 class Schematic:
-
     def __init__(self, name: str) -> None:
         self.name: str = name
         self.components: list[Component] = []

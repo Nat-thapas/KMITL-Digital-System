@@ -570,7 +570,7 @@ def main() -> None:
             return
         sequence = dedupe_sequence(sequence, default_output_bit_count)
     bit_count = max(sequence).bit_length()
-    print(Style.RESET_ALL + f"Bit width: {bit_count}")
+    print(f"Bit width: {bit_count}")
     print_sequence = True
     if len(sequence) > 64:
         print_sequence = boolean_input(

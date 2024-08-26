@@ -1,6 +1,6 @@
 import re
 
-blockdefs = """
+BLOCKDEFS = """
 <blockdef name="vcc">
     <timestamp>2000-1-1T10:10:10</timestamp>
     <line x2="64" y1="-32" y2="-64" x1="64" />
@@ -360,7 +360,7 @@ blockdefs = """
 </blockdef>
 """
 
-blockpins = """
+BLOCKPINS = """
 <block symbolname="vcc" name="XLXI_1">
     <blockpin name="P" />
 </block>
@@ -575,13 +575,13 @@ blockpins = """
 """
 
 for match in re.finditer(
-    r"<blockdef name=\"(.*?)\">.*?</blockdef>", blockdefs, re.DOTALL
+    r"<blockdef name=\"(.*?)\">.*?</blockdef>", BLOCKDEFS, re.DOTALL
 ):
     info = match.group(0)
     name = match.group(1)
     blockpin_match = re.search(
         f'<block symbolname=\\"{name}\\" name=\\"(.*?)\\">.*?</block>',
-        blockpins,
+        BLOCKPINS,
         re.DOTALL,
     )
     if not blockpin_match:
