@@ -88,6 +88,6 @@ class Net:
     def to_branch_xml(self, indent: int = 0) -> str:
         return add_indent(
             f"""<branch name="{self.name}">
-{'\n'.join((wire.to_xml(4) for wire in self.wires))}</branch>\n""",
+{''.join((wire.to_xml(4) for wire in self.wires))}</branch>\n""",
             indent,
         )

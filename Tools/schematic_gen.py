@@ -885,6 +885,11 @@ def generate_counter_schematic(
                     else:
                         # Multiple product terms
                         product_count = len(product_terms)
+                        if product_count > 9:
+                            print(
+                                "Unable to generate schematic: Too many product terms"
+                            )
+                            raise ValueError("Too many product terms")
                         x_offset += 32
                         and_gate = get_and_n_gate(
                             product_count,

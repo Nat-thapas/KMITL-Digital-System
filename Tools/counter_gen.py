@@ -204,6 +204,7 @@ def process_d_flip_flop(
     next_state_print_width = max(12, bit_count * 2 + 1)
     input_print_width = max(7, bit_count * 2 - 1)
     print_stt = True
+    print("Building state transition table with D flip-flop.")
     if len(sequence) > 64:
         print_stt = boolean_input(
             f"Print long ({len(sequence)}) state transition table? (y/N): ",
@@ -345,6 +346,7 @@ def process_jk_flip_flop(
     next_state_print_width = max(12, bit_count * 2 + 1)
     input_print_width = max(7, bit_count * 4 - 1)
     print_stt = True
+    print("Building state transition table with JK flip-flop.")
     if len(sequence) > 64:
         print_stt = boolean_input(
             f"Print long ({len(sequence)}) state transition table? (y/N): ",
@@ -583,7 +585,6 @@ def main() -> None:
         print("Sequence:")
         for i, value in enumerate(sequence):
             print(f"{i+1:>5}: {bin(value)[2:].zfill(bit_count)} ({value})")
-    print(f"Building state transition table with {primitive} flip-flop.")
     names_msb_first = [chr(ord("A") + i) for i in range(bit_count)]
     names_msb_first.reverse()
     names_msb_first = "".join(names_msb_first)
