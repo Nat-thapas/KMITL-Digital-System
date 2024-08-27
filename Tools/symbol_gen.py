@@ -6,7 +6,9 @@ from components.pin import Pin
 from components.rectangle import Rectangle
 
 
-def generate_counter_symbol(bit_count: int, output_file_path) -> None:
+def generate_counter_symbol(
+    bit_count: int, output_file_path: str | None = None
+) -> str | None:
     symbol = Symbol(f"counter{bit_count}")
     ce_pin = Pin("CE", 0, -160, "input")
     clk_pin = Pin("CLK", 0, -96, "input")
@@ -97,5 +99,7 @@ def generate_counter_symbol(bit_count: int, output_file_path) -> None:
     rect = Rectangle(64, -rect_height - 32, 256, rect_height)
     symbol.add_rectangle(rect)
     xml = symbol.generate_xml()
+    if not output_file_path:
+        return xml
     with open(output_file_path, "w", encoding="utf-8") as f:
         f.write(xml)

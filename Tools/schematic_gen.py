@@ -490,8 +490,8 @@ def generate_counter_schematic(
     terminal_state: int,
     bit_count: int,
     output_bit_count: int,
-    output_file_path: str,
-) -> None:
+    output_file_path: str | None = None,
+) -> str | None:
     schematic = Schematic("counter")
     initial_states = bin(initial_state)[2:].zfill(bit_count)[::-1]
     terminal_states = bin(terminal_state)[2:].zfill(bit_count)[::-1]
@@ -1197,5 +1197,7 @@ def generate_counter_schematic(
             io.x = x_offset
             io.y = y
     xml = schematic.generate_xml()
+    if not output_file_path:
+        return xml
     with open(output_file_path, "w", encoding="utf-8") as f:
         f.write(xml)
