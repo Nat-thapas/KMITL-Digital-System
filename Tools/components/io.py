@@ -16,8 +16,8 @@ class IO:
         self.name = name
         self.x = x
         self.y = y
-        self.orientation = orientation
         self.polarity = polarity
+        self.orientation = orientation
 
     def to_port_xml(self, indent: int = 0) -> str:
         return add_indent(

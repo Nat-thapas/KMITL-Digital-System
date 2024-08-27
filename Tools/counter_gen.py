@@ -13,6 +13,7 @@ import sympy
 from colorama import Fore, Style
 
 from schematic_gen import generate_counter_schematic
+from symbol_gen import generate_counter_symbol
 
 colorama.init(autoreset=True)
 
@@ -540,6 +541,8 @@ def process_jk_flip_flop(
             "counter.sch",
         )
         print(Fore.LIGHTGREEN_EX + "Schematic exported to counter.sch")
+        generate_counter_symbol(output_bit_count, "counter.sym")
+        print(Fore.LIGHTGREEN_EX + "Symbol exported to counter.sym")
 
 
 def main() -> None:
