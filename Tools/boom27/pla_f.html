@@ -1,0 +1,202 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1250">
+<TITLE>BOOM - The BOOlean Minimizer</TITLE>
+</HEAD>
+<BODY LINK="#0000ff" VLINK="#800080" BACKGROUND="blumrbll.jpg">
+<h2 align="center"><font face="Arial">PLA Format</font></h2>
+
+<p align="center"><img src="1.gif"></p>
+<BR>
+<font face="Times New Roman" size="2">
+
+<p>BOOM accepts as an input and
+also produces in the output a two-level description of a Boolean
+function. This is described as a character matrix (truth table)
+with keywords embedded in the input to specify the size of the
+matrix and the logical format of the input function.</p>
+
+<h2>Keywords</h2>
+<p>The following keywords are recognized by BOOM. The list
+shows the probable order of the keywords in a PLA description.
+The symbol <em>d</em> denotes a decimal number and <em>s </em>denotes
+a text string. The minimum required set of keywords is .i, .o
+and .e. Both keywords .i and .o must precede the truth table.</p>
+
+<table BORDER BGCOLOR="#5CFCB5" >
+        <tr>
+            <td valign="top" width="20%">.i <em>d</em></td>
+            <td>Specifies the number of input
+            variables (necessary)</td>
+        </tr>
+        <tr>
+            <td valign="top" width="20%">.o <em>d</em></td>
+            <td>Specifies the number of output
+            functions (necessary)</td>
+        </tr>
+        <tr>
+            <td valign="top" width="20%">.ilb <em>s1</em>
+            <em>s2</em> . . . <em>sn</em></td>
+            <td>Gives the names of the binary
+            valued variables. This must come after .i. There must
+            be as many tokens following the keyword as there are
+            input variables</td>
+        </tr>
+        <tr>
+            <td valign="top" width="20%">.ob<em>
+            s1</em> <em>s2</em> . . . <em>sn</em></td>
+            <td>Gives the names of the output
+            functions. This must come after .o. There must be as
+            many tokens following the keyword as there are output
+            variables</td>
+        </tr>
+        <tr>
+            <td valign="top" width="20%">.type
+            <em>s</em></td>
+            <td>Sets the logical
+            interpretation of the character matrix. This keyword
+            (if present) must come before any product terms. <em>s
+            </em>is either fr or fd (which is default)</td>
+        </tr>
+        <tr>
+            <td valign="top" width="20%">.p <em>d</em></td>
+            <td>Specifies the number of
+            product terms</td>
+        </tr>
+        <tr>
+            <td valign="top" width="20%">.e (.end)</td>
+            <td>Marks the end of the PLA
+            description</td>
+        </tr>
+    </table>
+<BR>
+
+<H2>Logical Description of a PLA</H2>
+
+<p>When we speak of the ON-set
+of a Boolean function, we mean those minterms which imply the
+function value is a 1. Likewise, the OFF-set are those terms
+which imply the function is a 0, and the DC-set (don't care set)
+are those terms for which the function is unspecified. A function
+is completely described by providing its ON-set, OFF-set and DC-set.
+Note that all minterms lie in the union of the ON-set, OFF-set
+and DC-set, and that the ON-set, OFF-set and DC-set share no
+minterms.</p>
+
+<p>A Boolean function can be described in one
+of the following ways:</p>
+
+<ol>
+    <li>By providing the ON-set. In this case
+        the OFF-set can be computed as the complement of the ON-set
+        and the DC-set is empty. </li>
+    <li>By providing the ON-set and DC-set.
+        The OFF-set can be computed as the complement of the
+        union of the ON-set and the DC-set. This is indicated
+        with the keyword <strong>.type fd</strong> in the PLA
+        file. This Boolean function specification uses BOOM as
+        the output of the minimization algorithm.</li>
+    <li>By providing the ON-set and OFF-set.
+        In this case the DC-set can be computed as the complement
+        of the union of the ON-set and the OFF-set. It is an
+        error for any minterm to belong to both the ON-set and
+        OFF-set. This error may not be detected during the
+        minimization, but it can be checked by the &quot;consistency
+        check&quot; option. This type is indicated by the
+        keyword <strong>.type fr</strong> in the input file.<br>
+        This is the only possible Boolean function specification
+        allowed as an input of BOOM.</li>
+</ol>
+
+<p>&nbsp;</p>
+
+<H2>Symbols in the PLA Matrix and Their Interpretation</H2>
+
+<p>Each position in the input plane
+corresponds to an input variable where a 0 implies that the
+corresponding input literal appears complemented in the product
+term, a 1 implies that the input literal appears uncomplemented
+in the product term, and - implies the input literal does not
+appear in the product term.</p>
+
+<p>With <strong>.type fd</strong> (the default),
+for each output, a 1 means this product term belongs to the ON-set,
+a 0 means this product term has no meaning for the value of this
+function.</p>
+
+<p>With <strong>.type fr</strong>, for each
+output, a 1 means this product term belongs to the ON-set, a 0
+means this product term belongs to the OFF-set, and a - means
+this product term has no meaning for the value of this function.</p>
+
+<p>Regardless of the type of PLA, a ~ implies
+the product term has no meaning for the value of this function.</p>
+
+<p>&nbsp;</p>
+
+<H2>Example 1</H2>
+
+<p>A two-bit adder which takes in two 2-bit
+operands and produces a 3-bit result can be described completely
+in minterms as:</p>
+
+<p><font face="Times New Roman"><kbd>.i 4<br>
+.o 3<br>
+.p 16<br>
+.type fr<br>
+0000 000<br>
+0001 001<br>
+0010 010<br>
+0011 011<br>
+0100 001<br>
+0101 010<br>
+0110 011<br>
+0111 100<br>
+1000 010<br>
+1001 011<br>
+1010 100<br>
+1011 101<br>
+1100 011<br>
+1101 100<br>
+1110 101<br>
+1111 110<br>
+.e</kbd></font><br>
+</p>
+Notice that there is no difference between the <B>fd</B> and <B>fr</B> types here,
+because there is no DC set. However, the <B>.type fr</B> keyword has
+to be present, to be accepted by BOOM.
+
+<H2>Example 2</H2>
+
+<p>The combinational logic of a synchronnous resetable BCD counter can be described as:</p>
+
+<p><font face="Times New Roman"><kbd>.i 5<br>
+.o 4<br>
+.p 10<br>
+.ilb RESET q0 q1 q2 q3<BR>
+.ob d0 d1 d2 d3<BR>
+.type fr<br>
+00000 0001<br>
+00001 0010<br>
+00010 0011<br>
+00011 0100<br>
+00100 0101<br>
+00101 0110<br>
+00110 0111<br>
+00111 1000<br>
+01000 1001<br>
+01001 0000<br>
+1---- 0000<BR>
+.e</kbd></font><br>
+</p>
+
+<p>Notice that BOOM <strong>does not</strong>
+accept all features of the current Berkeley PLA format. When any
+features of this format not described here are used, they are
+ignored or the error is returned.</p>
+
+
+</BODY>
+</HTML>
+

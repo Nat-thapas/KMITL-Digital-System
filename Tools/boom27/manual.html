@@ -1,0 +1,635 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1250">
+<TITLE>BOOM - The BOOlean Minimizer</TITLE>
+</HEAD>
+<BODY LINK="#0000ff" VLINK="#800080" BACKGROUND="blumrbll.jpg">
+<h2 align="center"><font face="Arial">BOOM 2.7 Manual</font></h2>
+
+<p align="center"><img src="1.gif"></p>
+<BR>
+<font face="Times New Roman" size="2">
+
+<p>BOOM (BOOlean Minimization) is a tool for minimizing
+two-valued Boolean functions. The output is a near-minimal or minimal two-level
+disjunctive form. The input and output of BOOM are compatible with Berkeley
+standard PLA format.</p>
+<p>BOOM 2.7 runs as a Win32 console application.</p>
+<p>Minimum requirements:</p>
+<ul type="disc">
+	<li>Microsoft Windows 95 or higher</li>
+	<li>Intel Pentium processor or compatible</li>
+</ul>
+
+<h3>Command line syntax</h3>
+
+<font face="Courier New">BOOM [options] [source] [destination] [report]</font>
+<BR>
+<BR>
+<table BORDER BGCOLOR="#5CFCB5" >
+<tr>
+	<td width="80">-FRn</td>
+	<td>Define <i>FC-Min:BOOM</i> ratio n (0-100), 0 is default</td>
+	<td><A href="#FRn">help</a></td>
+</tr><tr>
+	<td>-DFn</td>
+	<td>Define the FC-Min Depth Factor, 10 is default</td>
+	<td><A href="#DFn">help</a></td>
+</tr><tr>
+	<td>-DDx</td>
+	<td>Define the FC-Min Depth Factor Direction x:<BR>
+		<dir><table>
+			<tr>
+				<td width="20">0</td>
+				<td>DF = 1:n (from -DFn)</td>
+			</tr>
+			<tr>
+				<td width="20">1</td>
+				<td>DF = n:1 (from -DFn), default</td>
+			</tr>
+		</table></dir>
+	</td>
+	<td><A href="#DDx">help</a></td>
+</tr><tr>
+	<td>-CMn</td>
+	<td>Define CD-Search mutations ratio n (0-100)</td>
+	<td><A href="#CMn">help</a></td>
+</tr><tr>
+	<td>-RMn</td>
+	<td>Define implicant reduction mutations ratio n (0-100)</td>
+	<td><A href="#RMn">help</a></td>
+</tr><tr>
+	<td>-Ex</td>
+	<td>Select implicant expansion type:<BR>
+		<dir><table>
+			<tr>
+				<td width="20">0</td>
+				<td>Sequential search</td>
+			</tr>
+			<tr>
+				<td width="20">1</td>
+				<td>Distributed multiple IE</td>
+			</tr>
+			<tr>
+				<td width="20">2</td>
+				<td>Distributed exhaustive IE</td>
+			</tr>
+			<tr>
+				<td width="20">3</td>
+				<td>Multiple IE (default)</td>
+			</tr>
+			<tr>
+				<td width="20">4</td>
+				<td>Exhaustive IE</td>
+			</tr>
+		</table></dir>
+	</td>
+	<td><A href="#Ex">help</a></td>
+</tr><tr>
+	<td>-CPx</td>
+	<td>Select the covering problem solution algorithm:<BR>
+		<dir><table>
+			<tr>
+				<td width="20">0</td>
+				<td>LCMC</td>
+			</tr>
+			<tr>
+				<td width="20">1</td>
+				<td>Contributive addition (default)</td>
+			</tr>
+			<tr>
+				<td width="20">2</td>
+				<td>Contributive removal</td>
+			</tr>
+			<tr>
+				<td width="20">3</td>
+				<td>Exact cover</td>
+			</tr>
+		</table></dir>
+	</td>
+	<td><A href="#CPx">help</a></td>
+</tr><tr>
+	<td>-Sxn</td>
+	<td>Define stopping criterion x of value n:<BR>
+		<dir><table>
+			<tr>
+				<td width="20">t</td>
+				<td>stop after n seconds</td>
+			</tr>
+			<tr>
+				<td width="20">i</td>
+				<td>stop after n iterations (default is Si1)</td>
+			</tr>
+			<tr>
+				<td width="20">n</td>
+				<td>stopping interval equal to n</td>
+			</tr>
+			<tr>
+				<td width="20">q</td>
+				<td>stop when quality of solution meets n</td>
+			</tr>
+		</table></dir>
+	</td>
+	<td><A href="#Sxn">help</a></td>
+</tr><tr>
+	<td>-Qx</td>
+	<td>Define optimization criterion x:<BR>
+		<dir><table>
+			<tr>
+				<td width="20">t</td>
+				<td>terms</td>
+			</tr>
+			<tr>
+				<td width="20">l</td>
+				<td>literals</td>
+			</tr>
+			<tr>
+				<td width="20">o</td>
+				<td>output cost</td>
+			</tr>
+			<tr>
+				<td width="20">b</td>
+				<td>literals+output cost (default)</td>
+			</tr>
+			<tr>
+				<td width="20">g</td>
+				<td>number of gates</td>
+			</tr>
+			<tr>
+				<td width="20">G</td>
+				<td>number of gate equivalents</td>
+			</tr>
+		</table></dir>
+	</td>
+	<td><A href="#Qx">help</a></td>
+</tr><tr>
+	<td>-single</td>
+	<td>Single-output minimization</td>
+	<td><A href="#single">help</a></td>
+</tr><tr>
+	<td>-endcov</td>
+	<td>Cover at the end only</td>
+	<td><A href="#endcov">help</a></td>
+</tr><tr>
+	<td>-SD</td>
+	<td>Substitute output don't cares</td>
+	<td><A href="#SD">help</a></td>
+</tr><tr>
+	<td>-Ox[n]</td>
+	<td>Define output format:<BR>
+		<dir><table>
+			<tr>
+				<td width="20">P</td>
+				<td>PLA (default)</td>
+			</tr>
+			<tr>
+				<td width="20">V</td>
+				<td>VHDL (ports as individual variables). If n is specified, the function is split into max. n-input gates</td>
+			</tr>
+			<tr>
+				<td width="20">W</td>
+				<td>VHDL (ports as vectors). If n is specified, the function is split into max. n-input gates</td>
+			</tr>
+			<tr>
+				<td width="20">v</td>
+				<td>Verilog</td>
+			</tr>
+			<tr>
+				<td width="20">B</td>
+				<td>BLIF</td>
+			</tr>
+			<tr>
+				<td width="20">E</td>
+				<td>Equations</td>
+			</tr>
+			<tr>
+				<td width="20">H</td>
+				<td>HTML (table)</td>
+			</tr>
+		</table></dir>
+	</td>
+	<td><A href="#of">help</a></td>
+</tr><tr>
+	<td>-nocheck</td>
+	<td>Don't check the input function for consistence</td>
+	<td><A href="#nocheck">help</a></td>
+</tr><tr>
+	<td>-noIR</td>
+	<td>Implicant reduction is not performed.</td>
+	<td><A href="#noir">help</a></td>
+	
+</tr><tr>
+	<td>-namevars</td>
+	<td>Implicitly name the variables</td>
+	<td><A href="#namevars">help</a></td>
+</tr>
+</table>
+
+<H3>Special Functions (cannot be combined with minimization):</H3>
+
+<table BORDER BGCOLOR="#5CFCB5" >
+<tr>
+	<td width="100">-info</td>
+	<td>Prints the information about the PLA function</td>
+	<td><A href="#info">help</a></td>
+</tr><tr>
+<tr>
+	<td width="100">-Tcheck</td>
+	<td>Checks the input function for consistence</td>
+	<td><A href="#Tcheck">help</a></td>
+</tr><tr>
+<tr>
+	<td width="100">-Tsplit</td>
+	<td>Splits intersecting terms</td>
+	<td><A href="#Tsplit">help</a></td>
+</tr><tr>
+<tr>
+	<td width="100">-Tminterm</td>
+	<td>Splits function into minterms</td>
+	<td><A href="#Tminterm">help</a></td>
+</tr>
+</table>
+<BR>
+
+<a name="FRn"></a>
+<H4>FC-Min:BOOM ratio</H4>
+Defines the ratio between BOOM and FC-Min.<BR>
+0 means that only BOOM will be run, 100 that only FC-Min<BR>
+<dir><I>
+	FC-Min is intended for multi-output functions. Don't run
+	FC-Min for functions having 1-3 outputs. It is not efficient here.
+	For functions with more output variables, FC-Min is faster than CD-Search.
+</I></DIR>
+
+<a name="DFn"></a>
+<H4>FC-Min depth factor</H4>
+Defines the depth factor. For low values, the minimization will be faster,
+however solutions having a bigger number of terms will be produced.<BR>
+High values slow down the minimization, however better solutions are often found.<BR>
+It applies to FC-Min only.<BR>
+<dir><I>
+	For more info see <A href="http://cs.felk.cvut.cz/~fiserp/papers/dsd04.pdf">
+	"Fišer, P. - Kubátová, H.: Boolean Minimizer FC-Min: Coverage Finding Process"</A>.
+</I></DIR>
+
+<a name="DDx"></a>
+<H4>FC-Min Depth Factor Direction</H4>
+Switches between 1:x and x:1 for the Depth factor.<BR>
+It applies to FC-Min only.<BR>
+
+<a name="CMn"></a>
+<H4>CD-Search mutations ratio</H4>
+This argument specifies the ratio of forced randomness
+of the CD-search. In some cases, by increasing this value you may reach
+better solution.<BR>
+It applies to BOOM only.<BR>
+
+<a name="RMn"></a>
+<H4>Implicant reduction mutations ratio</H4>
+This argument specifies the ratio of forced randomness
+of the IR phase. In some cases, by increasing this value you may reach
+better solution.<BR>
+It applies to BOOM only.<BR>
+
+<a name="Ex"></a>
+<H4>Implicant expansion</H4>
+You can specify the implicant expansion method. It applies to BOOM only.<br>
+<dir><I>
+	The Sequential Search is the fastest one, however, to reach good results
+	you need to run BOOM for more iterations.<BR>
+	The Multiple Expansion is more efficient, since it produces more
+	PIs in one iteration. It is suggested to use this option.<BR>
+	The Exhaustive Expansion produces all the PIs from one implicant in
+	each iteration. Sometimes can be very slow (the complexity is exponential).<BR>
+	The distributed versions of IE split the expansion among several
+	consecutive iterations. The expansion is then faster, but
+	more iterations have to be done.
+</I></DIR>
+
+<a name="CPx"></a>
+<H4>Covering problem solution</H4>
+This switch selects the covering problem solution
+algorithm.<br>
+<dir><I>
+	The LCMC heuristic is the fastest one, but not too efficient.
+	The Contributive Addition heuristic is the most sophisticated one,
+	thus it is suggested to use it. The Contributive Removal can be sometimes
+	slow and inefficient, but for some special cases it is better
+	than Contributive Addition.<BR>
+	The Exact Cover always finds the best solution (of the CP problem,
+	not the whole minimization!), but can be extremely slow for large problems.
+</I></DIR>
+
+<a name="Sxn"></a>
+<H4>Stopping criterion</H4>
+BOOM performs an iterative
+minimization. The more iterations are processed, the better the result
+that can be archieved. The number of iterations can be specified by the
+user. Moreover, the minimization can be stopped after a given time,
+or when a satisfactory result is reached.<br>
+The stopping criteria can be combined, if in a reasonable way.<BR>
+
+<a name="Qx"></a>
+<H4>Optimization criterion</H4>
+During iterative minimization
+the best result found so far is remembered. The measure of the quality
+can be specified by the user.<br>
+
+<a name="single"></a>
+<H4>Single-output minimization</H4>
+Does not perform a multi-output minimization, thus BOOM tries to find a 
+solution having a least number of terms in each output function separately.<br>
+<dir><I>
+	Terms having only one '1' vaule in the output plane are produced.
+</I></DIR>
+
+<a name="endcov"></a>
+<H4>Cover at the end only</H4>
+When this option is selected, the covering
+problem is solved only once at the end of the minimizaion process. Thus,
+the whole process is sped up.
+This option cannot be combined with optimization criteria based stopping
+condition.<BR>
+
+<a name="SD"></a>
+<H4>Substitute output don't cares</H4>
+Normally, when a term in the resulting PLA is not a necessary implicant
+of some output function (but it is necessary for other function),
+it is assigned as an output don't care.<BR>
+When this option is on, the don't cares are substituted with zero values.<BR>
+
+<a name="of"></a>
+<H4>Output format</H4>
+Defines the format, in which will be the output function saved. Standard PLA, VHDL,
+Verilog and BLIF formats are supported. Additionally, the function can me saved
+as a set of equations or as a HTML truth table.
+
+<a name="nocheck"></a>
+<H4>Don't check the input function for consistence</H4>
+The function is implicitly checked for consistency before the minimization is run.
+This option switches the consistency check off. It slightly reduces the
+total minimization time, but it may cause the program hang, if an 
+inconsistent function is submitted as an input.
+
+<a name="noir"></a>
+<H4>Don't perform the implicant reduction</H4>
+This option prevents CD-search from generating group implicants. This phase is often
+very time-demanding, especially for functions with many outputs.
+However, when FC-Min is employer as well (i.e., by -FR50 option), the
+group implicants are produced by it, so the IR phase needs not
+be necessarily performed.
+
+<a name="namevars"></a>
+<H4>Implicitly name the variables</H4>
+If the names of the variables are not specified in the input file,
+the program automatically names the input variables as x<sub>0</sub> - x<sub>n</sub>,
+the output variables as y<sub>0</sub> - y<sub>m</sub>.
+
+
+<a name="info"></a>
+<H4>Information about the PLA function</H4>
+Prints the info on the number of the variables, terms and the complexity
+of the given function.<br>
+
+<a name="Tcheck"></a>
+<H4>Checks the input function for consistence</H4>
+For the PLA, type fr, there is a possibility of inconsistence.
+Thus, both the 0 and 1 values are defined for some minterm.
+In this case the minimization cannot be performed. However,
+the minimization process will start, but most probabely it will
+fail or it will never stop. Hence checking the funcion for 
+inconsistence is recommended.<br>
+
+<a name="Tsplit"></a>
+<H4>Splits intersecting terms</H4>
+Splits the function (PLA type fr) so that no terms are intersecting.<BR>
+It may be rather time-consuming for functions with a large number of inputs.<br>
+
+<a name="Tminterm"></a>
+<H4>Splits function into minterms</H4>
+Splits the function (PLA type fr) into minterms, by evaluating
+its output for each of 2<sup>n</sup> minterms.<BR>
+It may be rather time-consuming for functions with a large number of inputs.<br>
+
+<BR>
+
+<a name="source"></a>
+<H4>Source function</H4>
+The source for minimization will be a <a href="pla.html">PLA file</a>.
+Type .fr is required (on-set and off-set specified).<BR>
+
+<a name="destination"></a>
+<H4>Destination function</H4>
+The output of BOOM is a <a href="pla.html">PLA file</a> type .fd.
+This corresponds to the physical PLA representation of the function.
+When no destination is specified, the function is printed to the standard output.<br>
+
+<a name="report"></a>
+<H4>Report file</H4>
+The minimization report is written to a file, if specified.
+<BR>
+
+<H2>Example</H2>
+<p>We have a Boolean function of 4 input variables and
+3 output variables described by the following Karnaugh maps:</p>
+
+<table BORDER=0 CELLSPACING=15 >
+<tr>
+<td>
+<table BORDER >
+<tr>
+<td><tt><font face="Courier New CE">1</font></tt></td>
+
+<td><tt><font face="Courier New CE">1</font></tt></td>
+
+<td><tt><font face="Courier New CE">1</font></tt></td>
+
+<td><tt><font face="Courier New CE">X</font></tt></td>
+</tr>
+
+<tr>
+<td><tt><font face="Courier New CE">0</font></tt></td>
+
+<td><tt><font face="Courier New CE">0</font></tt></td>
+
+<td><tt><font face="Courier New CE">1</font></tt></td>
+
+<td><tt><font face="Courier New CE">0</font></tt></td>
+</tr>
+
+<tr>
+<td><tt><font face="Courier New CE">0</font></tt></td>
+
+<td><tt><font face="Courier New CE">0</font></tt></td>
+
+<td><tt><font face="Courier New CE">1</font></tt></td>
+
+<td><tt><font face="Courier New CE">0</font></tt></td>
+</tr>
+
+<tr>
+<td><tt><font face="Courier New CE">0</font></tt></td>
+
+<td><tt><font face="Courier New CE">1</font></tt></td>
+
+<td><tt><font face="Courier New CE">0</font></tt></td>
+
+<td><tt><font face="Courier New CE">X</font></tt></td>
+</tr>
+</table>
+</td>
+
+<td>
+<table BORDER >
+<tr>
+<td><tt><font face="Courier New CE">0</font></tt></td>
+
+<td><tt><font face="Courier New CE">1</font></tt></td>
+
+<td><tt><font face="Courier New CE">0</font></tt></td>
+
+<td><tt><font face="Courier New CE">X</font></tt></td>
+</tr>
+
+<tr>
+<td><tt><font face="Courier New CE">0</font></tt></td>
+
+<td><tt><font face="Courier New CE">1</font></tt></td>
+
+<td><tt><font face="Courier New CE">1</font></tt></td>
+
+<td><tt><font face="Courier New CE">1</font></tt></td>
+</tr>
+
+<tr>
+<td><tt><font face="Courier New CE">1</font></tt></td>
+
+<td><tt><font face="Courier New CE">1</font></tt></td>
+
+<td><tt><font face="Courier New CE">1</font></tt></td>
+
+<td><tt><font face="Courier New CE">0</font></tt></td>
+</tr>
+
+<tr>
+<td><tt><font face="Courier New CE">1</font></tt></td>
+
+<td><tt><font face="Courier New CE">0</font></tt></td>
+
+<td><tt><font face="Courier New CE">1</font></tt></td>
+
+<td><tt><font face="Courier New CE">X</font></tt></td>
+</tr>
+</table>
+</td>
+
+<td>
+<table BORDER >
+<tr>
+<td><tt><font face="Courier New CE">0</font></tt></td>
+
+<td><tt><font face="Courier New CE">0</font></tt></td>
+
+<td><tt><font face="Courier New CE">1</font></tt></td>
+
+<td><tt><font face="Courier New CE">X</font></tt></td>
+</tr>
+
+<tr>
+<td><tt><font face="Courier New CE">0</font></tt></td>
+
+<td><tt><font face="Courier New CE">0</font></tt></td>
+
+<td><tt><font face="Courier New CE">0</font></tt></td>
+
+<td><tt><font face="Courier New CE">1</font></tt></td>
+</tr>
+
+<tr>
+<td><tt><font face="Courier New CE">0</font></tt></td>
+
+<td><tt><font face="Courier New CE">1</font></tt></td>
+
+<td><tt><font face="Courier New CE">1</font></tt></td>
+
+<td><tt><font face="Courier New CE">0</font></tt></td>
+</tr>
+
+<tr>
+<td><tt><font face="Courier New CE">0</font></tt></td>
+
+<td><tt><font face="Courier New CE">1</font></tt></td>
+
+<td><tt><font face="Courier New CE">0</font></tt></td>
+
+<td><tt><font face="Courier New CE">X</font></tt></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+<p>This function can be described by a PLA file as follows:</p>
+<blockquote><font face="Courier New">.i 4</font>
+<br><font face="Courier New">.o 3</font>
+<br><font face="Courier New">.p 14</font>
+<br><font face="Courier New">.type fr</font>
+<br><font face="Courier New">1100 010</font>
+<br><font face="Courier New">1011 010</font>
+<br><font face="Courier New">0100 000</font>
+<br><font face="Courier New">1110 000</font>
+<br><font face="Courier New">1000 010</font>
+<br><font face="Courier New">1111 111</font>
+<br><font face="Courier New">0000 100</font>
+<br><font face="Courier New">0011 101</font>
+<br><font face="Courier New">0110 011</font>
+<br><font face="Courier New">0101 010</font>
+<br><font face="Courier New">0111 110</font>
+<br><font face="Courier New">1101 011</font>
+<br><font face="Courier New">0001 110</font>
+<br><font face="Courier New">1001 101</font>
+<br><font face="Courier New">.e</font></blockquote>
+<p>This will be an input for the BOOM minimizer. This function
+can be minimized by the following command:</p>
+<blockquote><tt>BOOM fnct.pla</tt></blockquote>
+<p>The function will be minimized to the form:</p>
+<blockquote><font face="Courier New">.i 4</font>
+<br><font face="Courier New">.o 3</font>
+<br><font face="Courier New">.p 9</font>
+<br><font face="Courier New">-111 110</font>
+<br><font face="Courier New">00-- 100</font>
+<br><font face="Courier New">1-00 010</font>
+<br><font face="Courier New">0-10 011</font>
+<br><font face="Courier New">001- 001</font>
+<br><font face="Courier New">1-11 010</font>
+<br><font face="Courier New">11-1 011</font>
+<br><font face="Courier New">0-01 010</font>
+<br><font face="Courier New">1001 101</font>
+<br><font face="Courier New">.e</font></blockquote>
+
+<H2>Other Examples</H2>
+<br>
+<table border="1">
+<tr>
+	<td><pre>BOOM src.pla out.pla</pre></td>
+	<td>Minimizes function src.pla and the output is written to the out.pla file.<br>
+	Standard setting is used (1 iteration, CD-Search only, no mutations, Multiple IE, Contributive Addition CP).</td>
+</tr><tr>
+	<td><pre>BOOM -Si10 -FR50 src.pla out.pla</pre></td>
+	<td>Minimizes function src.pla and the output is written to the out.pla file.<BR>
+	10 iterations, 50% CD-Search and 50% FC-Min, depth factor set to 10:1, no mutations, Multiple IE, Contributive Addition CP, optimization criterion are literals+output cost.</td>
+</tr><tr>
+	<td><pre>BOOM -St10 -CM10 -FR10 -DF5 -QG src.pla out.pla</pre></td>
+	<td>Minimizes function src.pla and the output is written to the out.pla file.<BR>
+	Stops after 10 seconds, 10% CD-Search mutations, 90% CD-Search and 10% FC-Min, depth factor set to 5:1, Multiple IE, Contributive Addition CP, optimization criterion are gate equivalents.</td>
+</tr><tr>
+	<td><pre>BOOM -Sq100 -Qt -single src.pla out.pla</pre></td>
+	<td>Minimizes function src.pla and the output is written to the out.pla file.<BR>
+	Single-output minimization is performed, until the solution reaches 100 terms or less.</td>
+</tr>
+</table>
+
+</BODY>
+</HTML>
+
