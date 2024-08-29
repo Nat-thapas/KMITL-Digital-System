@@ -1,3 +1,4 @@
+import os
 import re
 from collections import Counter
 from concurrent.futures import ProcessPoolExecutor
@@ -12,6 +13,7 @@ import pyeda.boolalg.table
 import sympy
 from colorama import Fore, Style
 
+import boom
 from schematic_gen import generate_counter_schematic
 from symbol_gen import generate_counter_symbol
 
@@ -148,25 +150,31 @@ def expression_to_string(
     return str(expression)
 
 
-def simplify_to_sop(
+def quine_mccluskey_simplify(
     data: dict[int, str],
     names: str,
     bit_count: int,
 ) -> str:
-    if bit_count <= 6:
-        min_terms: set[int] = set()
-        dontcares: set[int] = set()
-        for num in range(2**bit_count):
-            if num in data:
-                if data[num] == "1":
-                    min_terms.add(num)
-                elif data[num] == "X":
-                    dontcares.add(num)
-            else:
+    min_terms: set[int] = set()
+    dontcares: set[int] = set()
+    for num in range(2**bit_count):
+        if num in data:
+            if data[num] == "1":
+                min_terms.add(num)
+            elif data[num] == "X":
                 dontcares.add(num)
-        return str(
-            sympy.SOPform([sympy.symbols(name) for name in names], min_terms, dontcares)
-        )
+        else:
+            dontcares.add(num)
+    return str(
+        sympy.SOPform([sympy.symbols(name) for name in names], min_terms, dontcares)
+    )
+
+
+def espresso_simplify(
+    data: dict[int, str],
+    names: str,
+    bit_count: int,
+) -> str:
     variables = pyeda.boolalg.bfarray.exprvars("x", bit_count)
     truth_list = []
     for num in range(2**bit_count):
@@ -188,11 +196,19 @@ def simplify_multiple_to_sop(
     names: str,
     bit_count: int,
 ) -> list[str]:
+    if bit_count <= 6:
+        print("Simplifying to SOP form using Quine-McCluskey algorithm.")
+        return [quine_mccluskey_simplify(d, names, bit_count) for d in data]
     if bit_count <= 12:
-        return [simplify_to_sop(d, names, bit_count) for d in data]
+        print("Simplifying to SOP form using Espresso heuristic algorithm.")
+        return [espresso_simplify(d, names, bit_count) for d in data]
+    print(
+        "Simplifying to SOP form using multithreaded Espresso heuristic algorithm. "
+        + "This may take a while."
+    )
     with ProcessPoolExecutor() as executor:
         results = list(
-            executor.map(simplify_to_sop, data, repeat(names), repeat(bit_count))
+            executor.map(espresso_simplify, data, repeat(names), repeat(bit_count))
         )
     return results
 
@@ -253,15 +269,15 @@ def process_d_flip_flop(
             + f"{'┼'.join(['─' for _ in range(bit_count)]):─^{input_print_width}}"
             + "┤"
         )
-    inputs_array: list[list[str]] = []
-    for i, value in enumerate(sequence):
-        binary_string = bin(value)[2:].zfill(bit_count)
-        next_binary_string = bin(sequence[(i + 1) % len(sequence)])[2:].zfill(bit_count)
-        inputs: list[str] = []
-        for j in range(bit_count):
-            inputs.append(next_binary_string[j])
-        inputs_array.append(inputs)
-        if print_stt:
+    if print_stt:
+        for i, value in enumerate(sequence):
+            binary_string = bin(value)[2:].zfill(bit_count)
+            next_binary_string = bin(sequence[(i + 1) % len(sequence)])[2:].zfill(
+                bit_count
+            )
+            inputs: list[str] = []
+            for j in range(bit_count):
+                inputs.append(next_binary_string[j])
             print(
                 "│"
                 # pylint: disable=line-too-long
@@ -283,37 +299,41 @@ def process_d_flip_flop(
             + f"{'┴'.join(['─' for _ in range(bit_count)]):─^{input_print_width}}"
             + "┘"
         )
-    inputs_dict: dict[str, dict[int, str]] = {}
-    for name in names_msb_first:
-        inputs_dict[name] = {}
-    for row, row_data in enumerate(inputs_array):
-        for column, input_val in enumerate(row_data):
-            name = names_msb_first[column]
-            state = sequence[row]
-            inputs_dict[name][state] = input_val[0]
-    simplified_inputs_dict: dict[str, str] = {}
-    if bit_count <= 6:
-        print("Simplifying to SOP form using Quine-McCluskey algorithm.")
+    if os.name != "nt":
+        use_boom = False
     else:
-        print("Simplifying to SOP form using Espresso heuristic algorithm.")
-    if bit_count > 16:
+        if (len(sequence) <= 64 and bit_count > 16) or bit_count > 18:
+            use_boom = boolean_input("Use Boom heuristic algorithm? (Y/n): ", True)
+        else:
+            use_boom = boolean_input("Use Boom heuristic algorithm? (y/N): ", False)
+    if use_boom:
+        print("Generating simplification data.")
+        truth_table: list[tuple[int, int | str]] = []
+        for i, value in enumerate(sequence):
+            current_value = value
+            next_value = sequence[(i + 1) % len(sequence)]
+            truth_table.append((current_value, next_value))
         print(
-            Fore.LIGHTYELLOW_EX
-            + "Warning: SOP form can take a really really "
-            + "long time to compute for bit width higher than 16."
+            "Simplifying to SOP form using Boom heuristic algorithm. "
+            + "This may take up to approximately 30 seconds."
         )
-    elif bit_count > 8:
-        print(
-            Fore.LIGHTYELLOW_EX
-            + "Warning: SOP form can take a long time to compute for bit width higher than 8."
+        simplified_inputs = boom.simplify_multiple(
+            truth_table, names_msb_first, bit_count, bit_count
         )
-    print("Simplified SOP form:")
-    simplification_data: list[dict[int, str]] = []
-    for name in names_msb_first:
-        simplification_data.append(inputs_dict[name])
-    simplified_inputs = simplify_multiple_to_sop(
-        simplification_data, names_msb_first, bit_count
-    )
+    else:
+        print("Generating simplification data.")
+        simplification_data: list[dict[int, str]] = []
+        for _ in range(bit_count):
+            simplification_data.append({})
+        for i, value in enumerate(sequence):
+            next_value = sequence[(i + 1) % len(sequence)]
+            next_binary_string = bin(next_value)[2:].zfill(bit_count)
+            for j in range(bit_count):
+                simplification_data[j][value] = next_binary_string[j]
+        simplified_inputs = simplify_multiple_to_sop(
+            simplification_data, names_msb_first, bit_count
+        )
+    simplified_inputs_dict: dict[str, str] = {}
     for i, name in enumerate(names_msb_first):
         simplified_inputs_dict[name] = simplified_inputs[i]
     result_print_width = 0
@@ -324,6 +344,7 @@ def process_d_flip_flop(
         )
         if new_result_print_width > result_print_width:
             result_print_width = new_result_print_width
+    print("Simplified SOP form:")
     for name in names_msb_first:
         print("┌" + "─" * 3 + "┬" + "─" * result_print_width + "┐")
         print(
@@ -410,22 +431,22 @@ def process_jk_flip_flop(
             + f"{'┼'.join(['─┼─' for _ in range(bit_count)]):─^{input_print_width}}"
             + "┤"
         )
-    inputs_array: list[list[tuple[str, str]]] = []
-    for i, value in enumerate(sequence):
-        binary_string = bin(value)[2:].zfill(bit_count)
-        next_binary_string = bin(sequence[(i + 1) % len(sequence)])[2:].zfill(bit_count)
-        inputs: list[tuple[str, str]] = []
-        for j in range(bit_count):
-            if binary_string[j] == "0" and next_binary_string[j] == "0":
-                inputs.append(("0", "X"))
-            elif binary_string[j] == "0" and next_binary_string[j] == "1":
-                inputs.append(("1", "X"))
-            elif binary_string[j] == "1" and next_binary_string[j] == "0":
-                inputs.append(("X", "1"))
-            elif binary_string[j] == "1" and next_binary_string[j] == "1":
-                inputs.append(("X", "0"))
-        inputs_array.append(inputs)
-        if print_stt:
+    if print_stt:
+        for i, value in enumerate(sequence):
+            binary_string = bin(value)[2:].zfill(bit_count)
+            next_binary_string = bin(sequence[(i + 1) % len(sequence)])[2:].zfill(
+                bit_count
+            )
+            inputs: list[tuple[str, str]] = []
+            for j in range(bit_count):
+                if binary_string[j] == "0" and next_binary_string[j] == "0":
+                    inputs.append(("0", "X"))
+                elif binary_string[j] == "0" and next_binary_string[j] == "1":
+                    inputs.append(("1", "X"))
+                elif binary_string[j] == "1" and next_binary_string[j] == "0":
+                    inputs.append(("X", "1"))
+                elif binary_string[j] == "1" and next_binary_string[j] == "1":
+                    inputs.append(("X", "0"))
             print(
                 "│"
                 # pylint: disable=line-too-long
@@ -447,44 +468,71 @@ def process_jk_flip_flop(
             + f"{'┴'.join(['─┴─' for _ in range(bit_count)]):─^{input_print_width}}"
             + "┘"
         )
-    inputs_dict: dict[str, dict[str, dict[int, str]]] = {}
-    for name in names_msb_first:
-        inputs_dict[name] = {"J": {}, "K": {}}
-    for row, row_data in enumerate(inputs_array):
-        for column, input_val in enumerate(row_data):
-            name = names_msb_first[column]
-            state = sequence[row]
-            inputs_dict[name]["J"][state] = input_val[0]
-            inputs_dict[name]["K"][state] = input_val[1]
+    if os.name != "nt":
+        use_boom = False
+    else:
+        if (len(sequence) <= 64 and bit_count > 16) or bit_count > 18:
+            use_boom = boolean_input("Use Boom heuristic algorithm? (Y/n): ", True)
+        else:
+            use_boom = boolean_input("Use Boom heuristic algorithm? (y/N): ", False)
+    if use_boom:
+        print("Generating simplification data.")
+        truth_table: list[tuple[int, int | str]] = []
+        for i, value in enumerate(sequence):
+            binary_string = bin(value)[2:].zfill(bit_count)
+            next_binary_string = bin(sequence[(i + 1) % len(sequence)])[2:].zfill(
+                bit_count
+            )
+            truth_row: list[str] = []
+            for j in range(bit_count):
+                if binary_string[j] == "0" and next_binary_string[j] == "0":
+                    truth_row.append("0-")
+                elif binary_string[j] == "0" and next_binary_string[j] == "1":
+                    truth_row.append("1-")
+                elif binary_string[j] == "1" and next_binary_string[j] == "0":
+                    truth_row.append("-1")
+                elif binary_string[j] == "1" and next_binary_string[j] == "1":
+                    truth_row.append("-0")
+            truth_table.append((value, "".join(truth_row)))
+        print(
+            "Simplifying to SOP form using Boom heuristic algorithm. "
+            + "This may take up to approximately 30 seconds."
+        )
+        simplified_inputs = boom.simplify_multiple(
+            truth_table, names_msb_first, bit_count, bit_count * 2
+        )
+    else:
+        print("Generating simplification data.")
+        simplification_data: list[dict[int, str]] = []
+        for _ in range(bit_count * 2):
+            simplification_data.append({})
+        for i, value in enumerate(sequence):
+            binary_string = bin(value)[2:].zfill(bit_count)
+            next_binary_string = bin(sequence[(i + 1) % len(sequence)])[2:].zfill(
+                bit_count
+            )
+            for j in range(bit_count):
+                if binary_string[j] == "0" and next_binary_string[j] == "0":
+                    simplification_data[j * 2][value] = "0"
+                    simplification_data[j * 2 + 1][value] = "X"
+                elif binary_string[j] == "0" and next_binary_string[j] == "1":
+                    simplification_data[j * 2][value] = "1"
+                    simplification_data[j * 2 + 1][value] = "X"
+                elif binary_string[j] == "1" and next_binary_string[j] == "0":
+                    simplification_data[j * 2][value] = "X"
+                    simplification_data[j * 2 + 1][value] = "1"
+                elif binary_string[j] == "1" and next_binary_string[j] == "1":
+                    simplification_data[j * 2][value] = "X"
+                    simplification_data[j * 2 + 1][value] = "0"
+        simplified_inputs = simplify_multiple_to_sop(
+            simplification_data, names_msb_first, bit_count
+        )
     simplified_inputs_dict: dict[str, dict[str, str]] = {}
     for name in names_msb_first:
         simplified_inputs_dict[name] = {}
-    if bit_count <= 6:
-        print("Simplifying to SOP form using Quine-McCluskey algorithm.")
-    else:
-        print("Simplifying to SOP form using Espresso heuristic algorithm.")
-    if bit_count > 16:
-        print(
-            Fore.LIGHTYELLOW_EX
-            + "Warning: SOP form can take a really really "
-            + "long time to compute for bit width higher than 16."
-        )
-    elif bit_count > 8:
-        print(
-            Fore.LIGHTYELLOW_EX
-            + "Warning: SOP form can take a long time to compute for bit width higher than 8."
-        )
-    print("Simplified SOP form:")
-    simplification_data: list[dict[int, str]] = []
-    for name in names_msb_first:
-        for side in "JK":
-            simplification_data.append(inputs_dict[name][side])
-    simplified_inputs = simplify_multiple_to_sop(
-        simplification_data, names_msb_first, bit_count
-    )
     for i, name in enumerate(names_msb_first):
-        for j, side in enumerate("JK"):
-            simplified_inputs_dict[name][side] = simplified_inputs[i * 2 + j]
+        simplified_inputs_dict[name]["J"] = simplified_inputs[i * 2]
+        simplified_inputs_dict[name]["K"] = simplified_inputs[i * 2 + 1]
     result_print_width = 0
     for name in names_msb_first:
         new_result_print_width = (
@@ -496,6 +544,7 @@ def process_jk_flip_flop(
         )
         if new_result_print_width > result_print_width:
             result_print_width = new_result_print_width
+    print("Simplified SOP form:")
     for name in names_msb_first:
         print("┌" + "─" * 3 + "┬" + "─" * 3 + "┬" + "─" * result_print_width + "┐")
         print(
