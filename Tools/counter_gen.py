@@ -299,10 +299,10 @@ def process_d_flip_flop(
             + f"{'┴'.join(['─' for _ in range(bit_count)]):─^{input_print_width}}"
             + "┘"
         )
-    if os.name != "nt":
+    if os.name != "nt" or bit_count <= 16:
         use_boom = False
     else:
-        if (len(sequence) <= 64 and bit_count > 16) or bit_count > 18:
+        if len(sequence) <= 64 or bit_count > 18:
             use_boom = boolean_input("Use Boom heuristic algorithm? (Y/n): ", True)
         else:
             use_boom = boolean_input("Use Boom heuristic algorithm? (y/N): ", False)
@@ -468,10 +468,10 @@ def process_jk_flip_flop(
             + f"{'┴'.join(['─┴─' for _ in range(bit_count)]):─^{input_print_width}}"
             + "┘"
         )
-    if os.name != "nt":
+    if os.name != "nt" or bit_count <= 16:
         use_boom = False
     else:
-        if (len(sequence) <= 64 and bit_count > 16) or bit_count > 18:
+        if len(sequence) <= 64 or bit_count > 18:
             use_boom = boolean_input("Use Boom heuristic algorithm? (Y/n): ", True)
         else:
             use_boom = boolean_input("Use Boom heuristic algorithm? (y/N): ", False)

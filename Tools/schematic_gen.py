@@ -477,11 +477,22 @@ def name_to_index(name: str) -> int:
     return ord(name[0]) - ord("A")
 
 
+def index_to_name(index: int) -> str:
+    return chr(index + ord("A"))
+
+
 def get_wire_y_function(bit_count: int, base_y: int) -> Callable[[int], int]:
     def get_wire_y(n: int) -> int:
         return base_y - 64 * (bit_count - n) - 1280
 
     return get_wire_y
+
+
+def get_wire_x_function(bit_count: int, base_x: int) -> Callable[[int], int]:
+    def get_wire_x(n: int) -> int:
+        return base_x - 64 * (bit_count - n) - 1280
+
+    return get_wire_x
 
 
 def generate_counter_schematic(
@@ -1206,3 +1217,39 @@ def generate_counter_schematic(
         return xml
     with open(output_file_path, "w", encoding="utf-8") as f:
         f.write(xml)
+
+
+def generate_logic_schematic(
+    expressions: list[str],
+    bit_count: int,
+    output_bit_count: int,
+    output_file_path: str | None = None,
+) -> str | None:
+    schematic = Schematic("logic")
+    parsed_expressions = [parse_sop_form(expression) for expression in expressions]
+    input_nets: list[Net] = []
+    output_nets: list[Net] = []
+    input_ios: list[IO] = []
+    output_ios: list[IO] = []
+    for i in range(bit_count):
+        net = Net(index_to_name(i))
+        input_nets.append(net)
+        schematic.add_net(net)
+        io = IO(index_to_name(i), 160, i * 160 + 160, "input")
+        input_ios.append(io)
+        schematic.add_io(io)
+    for i in range(output_bit_count):
+        net = Net(f"O{i}")
+        output_nets.append(net)
+        schematic.add_net(net)
+        io = IO(f"O{i}", 320, i * 160 + 160, "output")
+        output_ios.append(io)
+        schematic.add_io(io)
+    get_wire_x = get_wire_x_function(bit_count * 2, 320)
+    for expression in parsed_expressions:
+        if len(expression) == 1:
+            # Single sum term
+            product_terms = expression[0]
+            if len(product_terms) == 0:
+                # Single product term
+                pass
