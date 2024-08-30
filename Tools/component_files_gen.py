@@ -16,6 +16,14 @@ BLOCKDEFS = """
     <line x2="64" y1="-64" y2="-80" x1="64" />
     <line x2="64" y1="-128" y2="-96" x1="64" />
 </blockdef>
+<blockdef name="buf">
+    <timestamp>2000-1-1T10:10:10</timestamp>
+    <line x2="64" y1="-32" y2="-32" x1="0" />
+    <line x2="128" y1="-32" y2="-32" x1="224" />
+    <line x2="128" y1="0" y2="-32" x1="64" />
+    <line x2="64" y1="-32" y2="-64" x1="128" />
+    <line x2="64" y1="-64" y2="0" x1="64" />
+</blockdef>
 <blockdef name="inv">
     <timestamp>2000-1-1T10:10:10</timestamp>
     <line x2="64" y1="-32" y2="-32" x1="0" />
@@ -361,11 +369,15 @@ BLOCKDEFS = """
 """
 
 BLOCKPINS = """
-<block symbolname="vcc" name="XLXI_1">
+<block symbolname="vcc" name="XLXI_0">
     <blockpin name="P" />
 </block>
-<block symbolname="gnd" name="XLXI_2">
+<block symbolname="gnd" name="XLXI_1">
     <blockpin name="G" />
+</block>
+<block symbolname="buf" name="XLXI_2">
+    <blockpin name="I" />
+    <blockpin name="O" />
 </block>
 <block symbolname="inv" name="XLXI_3">
     <blockpin name="I" />

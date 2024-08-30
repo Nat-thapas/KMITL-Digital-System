@@ -27,6 +27,7 @@ from components.or7 import Or7
 from components.or8 import Or8
 from components.or9 import Or9
 from components.vcc import Vcc
+from components.buf import Buf
 from components.wire import Wire
 from schematic import Schematic
 
@@ -490,7 +491,7 @@ def get_wire_y_function(bit_count: int, base_y: int) -> Callable[[int], int]:
 
 def get_wire_x_function(bit_count: int, base_x: int) -> Callable[[int], int]:
     def get_wire_x(n: int) -> int:
-        return base_x - 64 * (bit_count - n) - 1280
+        return base_x - 64 * (bit_count - n) - 320
 
     return get_wire_x
 
@@ -545,7 +546,7 @@ def generate_counter_schematic(
             q_ios.append(q_io)
             schematic.add_io(q_io)
     x_offset = 160
-    base_y = total_bit_count * 64 + 1600
+    base_y = total_bit_count * 64 + 1360
     get_wire_y = get_wire_y_function(total_bit_count, base_y)
     for i, (name, jk_data) in enumerate(inputs.items()):
         j_net: Net | None = None
@@ -1212,6 +1213,8 @@ def generate_counter_schematic(
             io = q_ios[i]
             io.x = x_offset
             io.y = y
+    schematic.width = x_offset + 320
+    schematic.height = base_y + 736
     xml = schematic.generate_xml()
     if not output_file_path:
         return xml
@@ -1225,19 +1228,34 @@ def generate_logic_schematic(
     output_bit_count: int,
     output_file_path: str | None = None,
 ) -> str | None:
-    schematic = Schematic("logic")
+    schematic = Schematic("logic", 3200, 7609)
     parsed_expressions = [parse_sop_form(expression) for expression in expressions]
     input_nets: list[Net] = []
+    inverted_input_nets: list[Net] = []
     output_nets: list[Net] = []
     input_ios: list[IO] = []
     output_ios: list[IO] = []
+    base_x = bit_count * 128 + 960
+    y_offset = 240 + bit_count * 160
+    get_wire_x = get_wire_x_function(bit_count * 2, base_x)
     for i in range(bit_count):
         net = Net(index_to_name(i))
         input_nets.append(net)
         schematic.add_net(net)
+        inv_net = Net(f"I{index_to_name(i)}")
+        inverted_input_nets.append(inv_net)
+        schematic.add_net(inv_net)
         io = IO(index_to_name(i), 160, i * 160 + 160, "input")
         input_ios.append(io)
         schematic.add_io(io)
+        net.add_wire(Wire(160, i * 160 + 160, get_wire_x(i * 2), i * 160 + 160))
+        net.add_wire(Wire(240, i * 160 + 160, 240, i * 160 + 240))
+        net.add_wire(Wire(240, i * 160 + 240, 320, i * 160 + 240))
+        inv = Inv(schematic.get_instance_name(), 320, i * 160 + 272, 0)
+        inv.I = net
+        inv.O = inv_net
+        inv_net.add_wire(Wire(544, i * 160 + 240, get_wire_x(i * 2 + 1), i * 160 + 240))
+        schematic.add_component(inv)
     for i in range(output_bit_count):
         net = Net(f"O{i}")
         output_nets.append(net)
@@ -1245,11 +1263,755 @@ def generate_logic_schematic(
         io = IO(f"O{i}", 320, i * 160 + 160, "output")
         output_ios.append(io)
         schematic.add_io(io)
-    get_wire_x = get_wire_x_function(bit_count * 2, 320)
-    for expression in parsed_expressions:
-        if len(expression) == 1:
+    for i, expression in enumerate(parsed_expressions):
+        sum_count = len(expression)
+        if sum_count == 1:
             # Single sum term
             product_terms = expression[0]
-            if len(product_terms) == 0:
+            product_count = len(product_terms)
+            if product_count == 1:
                 # Single product term
-                pass
+                term = product_terms[0]
+                if term == "False":
+                    gnd = Gnd(
+                        schematic.get_instance_name(), base_x + 1440, y_offset - 64, 90
+                    )
+                    schematic.add_component(gnd)
+                    output_net = output_nets[i]
+                    gnd.G = output_net
+                    output_net.add_wire(
+                        Wire(base_x + 1568, y_offset, base_x + 1600, y_offset)
+                    )
+                    io = output_ios[i]
+                    io.x = base_x + 1600
+                    io.y = y_offset
+                elif term == "True":
+                    vcc = Vcc(
+                        schematic.get_instance_name(), base_x + 1568, y_offset + 64, 270
+                    )
+                    schematic.add_component(vcc)
+                    output_net = output_nets[i]
+                    vcc.P = output_net
+                    output_net.add_wire(
+                        Wire(base_x + 1568, y_offset, base_x + 1600, y_offset)
+                    )
+                    io = output_ios[i]
+                    io.x = base_x + 1600
+                    io.y = y_offset
+                elif term[0] == "~":
+                    buf = Buf(
+                        schematic.get_instance_name(), base_x + 1200, y_offset + 32, 0
+                    )
+                    schematic.add_component(buf)
+                    input_net = inverted_input_nets[name_to_index(term[1])]
+                    output_net = output_nets[i]
+                    buf.I = input_net
+                    buf.O = output_net
+                    input_net.add_wire(
+                        Wire(
+                            get_wire_x(name_to_index(term[1]) * 2 + 1),
+                            y_offset,
+                            base_x + 1200,
+                            y_offset,
+                        )
+                    )
+                    output_net.add_wire(
+                        Wire(base_x + 1424, y_offset, base_x + 1600, y_offset)
+                    )
+                    io = output_ios[i]
+                    io.x = base_x + 1600
+                    io.y = y_offset
+                else:
+                    buf = Buf(
+                        schematic.get_instance_name(), base_x + 1200, y_offset + 32, 0
+                    )
+                    schematic.add_component(buf)
+                    input_net = input_nets[name_to_index(term)]
+                    output_net = output_nets[i]
+                    buf.I = input_net
+                    buf.O = output_net
+                    input_net.add_wire(
+                        Wire(
+                            get_wire_x(name_to_index(term) * 2),
+                            y_offset,
+                            base_x + 1200,
+                            y_offset,
+                        )
+                    )
+                    output_net.add_wire(
+                        Wire(base_x + 1424, y_offset, base_x + 1600, y_offset)
+                    )
+                    io = output_ios[i]
+                    io.x = base_x + 1600
+                    io.y = y_offset
+                y_offset += 80
+            elif product_count <= 9:
+                # Multiple product terms but at most 9
+                and_gate = get_and_n_gate(
+                    product_count,
+                    schematic.get_instance_name(),
+                    base_x + 1200,
+                    y_offset + 64 * product_count,
+                    0,
+                )
+                schematic.add_component(and_gate)
+                output_net = output_nets[i]
+                and_gate.O = output_net
+                output_y_offset = y_offset + 32 * product_count - 32
+                output_net.add_wire(
+                    Wire(base_x + 1456, output_y_offset, base_x + 1600, output_y_offset)
+                )
+                io = output_ios[i]
+                io.x = base_x + 1600
+                io.y = output_y_offset
+                for j, term in enumerate(product_terms):
+                    if term == "False":
+                        gnd = Gnd(
+                            schematic.get_instance_name(),
+                            base_x + 1040,
+                            y_offset - 64,
+                            90,
+                        )
+                        schematic.add_component(gnd)
+                        gnd_net = Net(schematic.get_net_name())
+                        schematic.add_net(gnd_net)
+                        gnd.G = gnd_net
+                        gnd_net.add_wire(
+                            Wire(
+                                base_x + 1168,
+                                y_offset,
+                                base_x + 1200,
+                                y_offset,
+                            )
+                        )
+                        set_I_n_net(and_gate, product_count - j - 1, gnd_net)
+                    elif term == "True":
+                        vcc = Vcc(
+                            schematic.get_instance_name(),
+                            base_x + 1168,
+                            y_offset + 64,
+                            270,
+                        )
+                        schematic.add_component(vcc)
+                        vcc_net = Net(schematic.get_net_name())
+                        schematic.add_net(vcc_net)
+                        vcc.P = vcc_net
+                        vcc_net.add_wire(
+                            Wire(
+                                base_x + 1168,
+                                y_offset,
+                                base_x + 1200,
+                                y_offset,
+                            )
+                        )
+                        set_I_n_net(and_gate, product_count - j - 1, vcc_net)
+                    elif term[0] == "~":
+                        input_net = inverted_input_nets[name_to_index(term[1])]
+                        input_net.add_wire(
+                            Wire(
+                                get_wire_x(name_to_index(term[1]) * 2 + 1),
+                                y_offset,
+                                base_x + 1200,
+                                y_offset,
+                            )
+                        )
+                        set_I_n_net(and_gate, product_count - j - 1, input_net)
+                    else:
+                        input_net = input_nets[name_to_index(term)]
+                        input_net.add_wire(
+                            Wire(
+                                get_wire_x(name_to_index(term) * 2),
+                                y_offset,
+                                base_x + 1200,
+                                y_offset,
+                            )
+                        )
+                        set_I_n_net(and_gate, product_count - j - 1, input_net)
+                    y_offset += 64
+            else:
+                # Multiple product terms exceeding 9
+                gate_count = product_count // 9 + (product_count % 9 != 0)
+                remaining_count = product_count
+                master_and_gate_y_offset = y_offset
+                master_and_gate = get_and_n_gate(
+                    gate_count,
+                    schematic.get_instance_name(),
+                    base_x + 1200,
+                    y_offset + 64 * gate_count,
+                    0,
+                )
+                schematic.add_component(master_and_gate)
+                output_net = output_nets[i]
+                master_and_gate.O = output_net
+                output_y_offset = y_offset + 32 * gate_count - 32
+                output_net.add_wire(
+                    Wire(base_x + 1456, output_y_offset, base_x + 1600, output_y_offset)
+                )
+                io = output_ios[i]
+                io.x = base_x + 1600
+                io.y = output_y_offset
+                term_index = 0
+                gate_index = 0
+                while remaining_count > 0:
+                    gate_size = min(remaining_count, 9)
+                    if remaining_count - gate_size == 1:
+                        gate_size -= 1
+                    remaining_count -= gate_size
+                    and_gate = get_and_n_gate(
+                        gate_size,
+                        schematic.get_instance_name(),
+                        base_x - gate_count * 16 + 928,
+                        y_offset + gate_size * 64,
+                        0,
+                    )
+                    and_net = Net(schematic.get_net_name())
+                    schematic.add_net(and_net)
+                    and_gate.O = and_net
+                    set_I_n_net(master_and_gate, gate_count - gate_index - 1, and_net)
+                    and_net.add_wire(
+                        Wire(
+                            base_x - (gate_count - gate_index) * 16 + 1200,
+                            master_and_gate_y_offset + gate_index * 64,
+                            base_x + 1200,
+                            master_and_gate_y_offset + gate_index * 64,
+                        )
+                    )
+                    and_net.add_wire(
+                        Wire(
+                            base_x - (gate_count - gate_index) * 16 + 1200,
+                            master_and_gate_y_offset + gate_index * 64,
+                            base_x - (gate_count - gate_index) * 16 + 1200,
+                            y_offset + gate_size * 32 - 32,
+                        )
+                    )
+                    and_net.add_wire(
+                        Wire(
+                            base_x - (gate_count - gate_index) * 16 + 1200,
+                            y_offset + gate_size * 32 - 32,
+                            base_x - 16 * gate_count + 1184,
+                            y_offset + gate_size * 32 - 32,
+                        )
+                    )
+                    schematic.add_component(and_gate)
+                    for j in range(gate_size):
+                        term = product_terms[term_index]
+                        if term == "False":
+                            gnd = Gnd(
+                                schematic.get_instance_name(),
+                                base_x - 16 * gate_count + 768,
+                                y_offset - 64,
+                                90,
+                            )
+                            schematic.add_component(gnd)
+                            gnd_net = Net(schematic.get_net_name())
+                            schematic.add_net(gnd_net)
+                            gnd.G = gnd_net
+                            gnd_net.add_wire(
+                                Wire(
+                                    base_x - 16 * gate_count + 896,
+                                    y_offset,
+                                    base_x - 16 * gate_count + 928,
+                                    y_offset,
+                                )
+                            )
+                            set_I_n_net(and_gate, gate_size - j - 1, gnd_net)
+                        elif term == "True":
+                            vcc = Vcc(
+                                schematic.get_instance_name(),
+                                base_x - 16 * gate_count + 896,
+                                y_offset + 64,
+                                270,
+                            )
+                            schematic.add_component(vcc)
+                            vcc_net = Net(schematic.get_net_name())
+                            schematic.add_net(vcc_net)
+                            vcc.P = vcc_net
+                            vcc_net.add_wire(
+                                Wire(
+                                    base_x - 16 * gate_count + 896,
+                                    y_offset,
+                                    base_x - 16 * gate_count + 928,
+                                    y_offset,
+                                )
+                            )
+                            set_I_n_net(and_gate, gate_size - j - 1, vcc_net)
+                        elif term[0] == "~":
+                            input_net = inverted_input_nets[name_to_index(term[1])]
+                            input_net.add_wire(
+                                Wire(
+                                    get_wire_x(name_to_index(term[1]) * 2 + 1),
+                                    y_offset,
+                                    base_x - 16 * gate_count + 928,
+                                    y_offset,
+                                )
+                            )
+                            set_I_n_net(and_gate, gate_size - j - 1, input_net)
+                        else:
+                            input_net = input_nets[name_to_index(term)]
+                            input_net.add_wire(
+                                Wire(
+                                    get_wire_x(name_to_index(term) * 2),
+                                    y_offset,
+                                    base_x - 16 * gate_count + 928,
+                                    y_offset,
+                                )
+                            )
+                            set_I_n_net(and_gate, gate_size - j - 1, input_net)
+                        y_offset += 64
+                        term_index += 1
+                    gate_index += 1
+        elif sum_count <= 9:
+            # Multiple sum terms but at most 9
+            master_or_gate_y_offset = y_offset
+            or_gate = get_or_n_gate(
+                sum_count,
+                schematic.get_instance_name(),
+                base_x + 1200,
+                y_offset + 64 * sum_count,
+                0,
+            )
+            schematic.add_component(or_gate)
+            output_net = output_nets[i]
+            or_gate.O = output_net
+            output_y_offset = y_offset + 32 * sum_count - 32
+            output_net.add_wire(
+                Wire(base_x + 1456, output_y_offset, base_x + 1600, output_y_offset)
+            )
+            io = output_ios[i]
+            io.x = base_x + 1600
+            io.y = output_y_offset
+            for j, product_terms in enumerate(expression):
+                product_count = len(product_terms)
+                if product_count == 1:
+                    # Single product term
+                    term = product_terms[0]
+                    if term == "False":
+                        gnd = Gnd(
+                            schematic.get_instance_name(),
+                            base_x - (sum_count - j) * 16 + 1056,
+                            y_offset - 64,
+                            90,
+                        )
+                        schematic.add_component(gnd)
+                        gnd_net = Net(schematic.get_net_name())
+                        schematic.add_net(gnd_net)
+                        gnd.G = gnd_net
+                        gnd_net.add_wire(
+                            Wire(
+                                base_x - (sum_count - j) * 16 + 1184,
+                                y_offset,
+                                base_x - (sum_count - j) * 16 + 1200,
+                                y_offset,
+                            )
+                        )
+                        gnd_net.add_wire(
+                            Wire(
+                                base_x - (sum_count - j) * 16 + 1200,
+                                y_offset,
+                                base_x - (sum_count - j) * 16 + 1200,
+                                master_or_gate_y_offset + j * 64,
+                            )
+                        )
+                        gnd_net.add_wire(
+                            Wire(
+                                base_x - (sum_count - j) * 16 + 1200,
+                                master_or_gate_y_offset + j * 64,
+                                base_x + 1200,
+                                master_or_gate_y_offset + j * 64,
+                            )
+                        )
+                        set_I_n_net(or_gate, sum_count - j - 1, gnd_net)
+                    elif term == "True":
+                        vcc = Vcc(
+                            schematic.get_instance_name(),
+                            base_x - (sum_count - j) * 16 + 1184,
+                            y_offset + 64,
+                            270,
+                        )
+                        schematic.add_component(vcc)
+                        vcc_net = Net(schematic.get_net_name())
+                        schematic.add_net(vcc_net)
+                        vcc.P = vcc_net
+                        vcc_net.add_wire(
+                            Wire(
+                                base_x - (sum_count - j) * 16 + 1184,
+                                y_offset,
+                                base_x - (sum_count - j) * 16 + 1200,
+                                y_offset,
+                            )
+                        )
+                        vcc_net.add_wire(
+                            Wire(
+                                base_x - (sum_count - j) * 16 + 1200,
+                                y_offset,
+                                base_x - (sum_count - j) * 16 + 1200,
+                                master_or_gate_y_offset + j * 64,
+                            )
+                        )
+                        vcc_net.add_wire(
+                            Wire(
+                                base_x - (sum_count - j) * 16 + 1200,
+                                master_or_gate_y_offset + j * 64,
+                                base_x + 1200,
+                                master_or_gate_y_offset + j * 64,
+                            )
+                        )
+                        set_I_n_net(or_gate, sum_count - j - 1, vcc_net)
+                    elif term[0] == "~":
+                        net_index = name_to_index(term[1])
+                        input_net = inverted_input_nets[net_index]
+                        input_net.add_wire(
+                            Wire(
+                                get_wire_x(net_index * 2 + 1),
+                                y_offset,
+                                base_x - (sum_count - j) * 16 + 1200,
+                                y_offset,
+                            )
+                        )
+                        input_net.add_wire(
+                            Wire(
+                                base_x - (sum_count - j) * 16 + 1200,
+                                y_offset,
+                                base_x - (sum_count - j) * 16 + 1200,
+                                master_or_gate_y_offset + j * 64,
+                            )
+                        )
+                        input_net.add_wire(
+                            Wire(
+                                base_x - (sum_count - j) * 16 + 1200,
+                                master_or_gate_y_offset + j * 64,
+                                base_x + 1200,
+                                master_or_gate_y_offset + j * 64,
+                            )
+                        )
+                        set_I_n_net(or_gate, sum_count - j - 1, input_net)
+                    else:
+                        net_index = name_to_index(term)
+                        input_net = input_nets[net_index]
+                        input_net.add_wire(
+                            Wire(
+                                get_wire_x(net_index * 2),
+                                y_offset,
+                                base_x - (sum_count - j) * 16 + 1200,
+                                y_offset,
+                            )
+                        )
+                        input_net.add_wire(
+                            Wire(
+                                base_x - (sum_count - j) * 16 + 1200,
+                                y_offset,
+                                base_x - (sum_count - j) * 16 + 1200,
+                                master_or_gate_y_offset + j * 64,
+                            )
+                        )
+                        input_net.add_wire(
+                            Wire(
+                                base_x - (sum_count - j) * 16 + 1200,
+                                master_or_gate_y_offset + j * 64,
+                                base_x + 1200,
+                                master_or_gate_y_offset + j * 64,
+                            )
+                        )
+                        set_I_n_net(or_gate, sum_count - j - 1, input_net)
+                    y_offset += 64
+                elif product_count <= 9:
+                    # Multiple product terms but at most 9
+                    and_gate = get_and_n_gate(
+                        product_count,
+                        schematic.get_instance_name(),
+                        base_x - (sum_count - j) * 16 + 928,
+                        y_offset + 64 * product_count,
+                        0,
+                    )
+                    schematic.add_component(and_gate)
+                    output_net = Net(schematic.get_net_name())
+                    schematic.add_net(output_net)
+                    and_gate.O = output_net
+                    output_y_offset = y_offset + 32 * product_count - 32
+                    output_net.add_wire(
+                        Wire(
+                            base_x - (sum_count - j) * 16 + 1200,
+                            master_or_gate_y_offset + j * 64,
+                            base_x + 1200,
+                            master_or_gate_y_offset + j * 64,
+                        )
+                    )
+                    output_net.add_wire(
+                        Wire(
+                            base_x - (sum_count - j) * 16 + 1200,
+                            master_or_gate_y_offset + j * 64,
+                            base_x - (sum_count - j) * 16 + 1200,
+                            output_y_offset,
+                        )
+                    )
+                    output_net.add_wire(
+                        Wire(
+                            base_x - (sum_count - j) * 16 + 1200,
+                            output_y_offset,
+                            base_x - (sum_count - j) * 16 + 1184,
+                            output_y_offset,
+                        )
+                    )
+                    set_I_n_net(or_gate, sum_count - j - 1, output_net)
+                    for k, term in enumerate(product_terms):
+                        if term == "False":
+                            gnd = Gnd(
+                                schematic.get_instance_name(),
+                                base_x - (sum_count - j) * 16 + 768,
+                                y_offset - 64,
+                                90,
+                            )
+                            schematic.add_component(gnd)
+                            gnd_net = Net(schematic.get_net_name())
+                            schematic.add_net(gnd_net)
+                            gnd.G = gnd_net
+                            gnd_net.add_wire(
+                                Wire(
+                                    base_x - (sum_count - j) * 16 + 896,
+                                    y_offset,
+                                    base_x - (sum_count - j) * 16 + 928,
+                                    y_offset,
+                                )
+                            )
+                            set_I_n_net(and_gate, product_count - k - 1, gnd_net)
+                        elif term == "True":
+                            vcc = Vcc(
+                                schematic.get_instance_name(),
+                                base_x - (sum_count - j) * 16 + 896,
+                                y_offset + 64,
+                                270,
+                            )
+                            schematic.add_component(vcc)
+                            vcc_net = Net(schematic.get_net_name())
+                            schematic.add_net(vcc_net)
+                            vcc.P = vcc_net
+                            vcc_net.add_wire(
+                                Wire(
+                                    base_x - (sum_count - j) * 16 + 896,
+                                    y_offset,
+                                    base_x - (sum_count - j) * 16 + 928,
+                                    y_offset,
+                                )
+                            )
+                            set_I_n_net(and_gate, product_count - k - 1, vcc_net)
+                        elif term[0] == "~":
+                            input_net = inverted_input_nets[name_to_index(term[1])]
+                            input_net.add_wire(
+                                Wire(
+                                    get_wire_x(name_to_index(term[1]) * 2 + 1),
+                                    y_offset,
+                                    base_x - (sum_count - j) * 16 + 928,
+                                    y_offset,
+                                )
+                            )
+                            set_I_n_net(and_gate, product_count - k - 1, input_net)
+                        else:
+                            input_net = input_nets[name_to_index(term)]
+                            input_net.add_wire(
+                                Wire(
+                                    get_wire_x(name_to_index(term) * 2),
+                                    y_offset,
+                                    base_x - (sum_count - j) * 16 + 928,
+                                    y_offset,
+                                )
+                            )
+                            set_I_n_net(and_gate, product_count - k - 1, input_net)
+                        y_offset += 64
+                else:
+                    # Multiple product terms exceeding 9
+                    gate_count = product_count // 9 + (product_count % 9 != 0)
+                    remaining_count = product_count
+                    master_and_gate_y_offset = y_offset
+                    master_and_gate = get_and_n_gate(
+                        gate_count,
+                        schematic.get_instance_name(),
+                        base_x - (sum_count - j) * 16 + 928,
+                        y_offset + 64 * gate_count,
+                        0,
+                    )
+                    schematic.add_component(master_and_gate)
+                    output_net = Net(schematic.get_net_name())
+                    schematic.add_net(output_net)
+                    master_and_gate.O = output_net
+                    set_I_n_net(or_gate, sum_count - j - 1, output_net)
+                    output_y_offset = y_offset + 32 * gate_count - 32
+                    output_net.add_wire(
+                        Wire(
+                            base_x - (sum_count - j) * 16 + 1200,
+                            master_or_gate_y_offset + j * 64,
+                            base_x + 1200,
+                            master_or_gate_y_offset + j * 64,
+                        )
+                    )
+                    output_net.add_wire(
+                        Wire(
+                            base_x - (sum_count - j) * 16 + 1200,
+                            master_or_gate_y_offset + j * 64,
+                            base_x - (sum_count - j) * 16 + 1200,
+                            output_y_offset,
+                        )
+                    )
+                    output_net.add_wire(
+                        Wire(
+                            base_x - (sum_count - j) * 16 + 1200,
+                            output_y_offset,
+                            base_x - (sum_count - j) * 16 + 1184,
+                            output_y_offset,
+                        )
+                    )
+                    term_index = 0
+                    gate_index = 0
+                    while remaining_count > 0:
+                        gate_size = min(remaining_count, 9)
+                        if remaining_count - gate_size == 1:
+                            gate_size -= 1
+                        remaining_count -= gate_size
+                        and_gate = get_and_n_gate(
+                            gate_size,
+                            schematic.get_instance_name(),
+                            base_x - (sum_count - j) * 16 - gate_count * 16 + 656,
+                            y_offset + gate_size * 64,
+                            0,
+                        )
+                        and_net = Net(schematic.get_net_name())
+                        schematic.add_net(and_net)
+                        and_gate.O = and_net
+                        set_I_n_net(
+                            master_and_gate, gate_count - gate_index - 1, and_net
+                        )
+                        and_net.add_wire(
+                            Wire(
+                                base_x - (sum_count - j) * 16 + 928,
+                                master_and_gate_y_offset + gate_index * 64,
+                                base_x
+                                - (sum_count - j) * 16
+                                - (gate_count - gate_index) * 16
+                                + 928,
+                                master_and_gate_y_offset + gate_index * 64,
+                            )
+                        )
+                        and_net.add_wire(
+                            Wire(
+                                base_x
+                                - (sum_count - j) * 16
+                                - (gate_count - gate_index) * 16
+                                + 928,
+                                master_and_gate_y_offset + gate_index * 64,
+                                base_x
+                                - (sum_count - j) * 16
+                                - (gate_count - gate_index) * 16
+                                + 928,
+                                y_offset + gate_size * 32 - 32,
+                            )
+                        )
+                        and_net.add_wire(
+                            Wire(
+                                base_x
+                                - (sum_count - j) * 16
+                                - (gate_count - gate_index) * 16
+                                + 928,
+                                y_offset + gate_size * 32 - 32,
+                                base_x - (sum_count - j) * 16 - gate_count * 16 + 912,
+                                y_offset + gate_size * 32 - 32,
+                            )
+                        )
+                        schematic.add_component(and_gate)
+                        for k in range(gate_size):
+                            term = product_terms[term_index]
+                            if term == "False":
+                                gnd = Gnd(
+                                    schematic.get_instance_name(),
+                                    base_x
+                                    - (sum_count - j) * 16
+                                    - gate_count * 16
+                                    + 496,
+                                    y_offset - 64,
+                                    90,
+                                )
+                                schematic.add_component(gnd)
+                                gnd_net = Net(schematic.get_net_name())
+                                schematic.add_net(gnd_net)
+                                gnd.G = gnd_net
+                                gnd_net.add_wire(
+                                    Wire(
+                                        base_x
+                                        - (sum_count - j) * 16
+                                        - gate_count * 16
+                                        + 624,
+                                        y_offset,
+                                        base_x - (sum_count - j) * 16 + 624,
+                                        y_offset,
+                                    )
+                                )
+                                set_I_n_net(and_gate, gate_size - k - 1, gnd_net)
+                            elif term == "True":
+                                vcc = Vcc(
+                                    schematic.get_instance_name(),
+                                    base_x
+                                    - (sum_count - j) * 16
+                                    - gate_count * 16
+                                    + 624,
+                                    y_offset + 64,
+                                    270,
+                                )
+                                schematic.add_component(vcc)
+                                vcc_net = Net(schematic.get_net_name())
+                                schematic.add_net(vcc_net)
+                                vcc.P = vcc_net
+                                vcc_net.add_wire(
+                                    Wire(
+                                        base_x
+                                        - (sum_count - j) * 16
+                                        - gate_count * 16
+                                        + 624,
+                                        y_offset,
+                                        base_x - (sum_count - j) * 16 + 624,
+                                        y_offset,
+                                    )
+                                )
+                                set_I_n_net(and_gate, gate_size - k - 1, vcc_net)
+                            elif term[0] == "~":
+                                net_index = name_to_index(term[1])
+                                input_net = inverted_input_nets[net_index]
+                                input_net.add_wire(
+                                    Wire(
+                                        get_wire_x(net_index * 2 + 1),
+                                        y_offset,
+                                        base_x - (sum_count - j) * 16 + 624,
+                                        y_offset,
+                                    )
+                                )
+                                set_I_n_net(and_gate, gate_size - k - 1, input_net)
+                            else:
+                                net_index = name_to_index(term)
+                                input_net = input_nets[net_index]
+                                input_net.add_wire(
+                                    Wire(
+                                        get_wire_x(net_index * 2),
+                                        y_offset,
+                                        base_x - (sum_count - j) * 16 + 624,
+                                        y_offset,
+                                    )
+                                )
+                                set_I_n_net(and_gate, gate_size - k - 1, input_net)
+                            y_offset += 64
+                            term_index += 1
+                        gate_index += 1
+        else:
+            # Multiple sum terms exceeding 9
+            print("Multiple sum terms exceeding 9 is not supported yet")
+            raise NotImplementedError("Too many sum terms")
+    for i in range(bit_count):
+        for j in range(2):
+            wire_x = get_wire_x(i * 2 + j)
+            if j == 0:
+                net = input_nets[i]
+            else:
+                net = inverted_input_nets[i]
+            net.add_wire(Wire(wire_x, 80, wire_x, y_offset))
+    schematic.height = y_offset + 80
+    xml = schematic.generate_xml()
+    if not output_file_path:
+        return xml
+    with open(output_file_path, "w", encoding="utf-8") as f:
+        f.write(xml)

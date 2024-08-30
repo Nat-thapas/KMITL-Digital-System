@@ -4,8 +4,10 @@ from components.net import Net
 
 
 class Schematic:
-    def __init__(self, name: str) -> None:
+    def __init__(self, name: str, width: int = 7609, height: int = 5382) -> None:
         self.name: str = name
+        self.width: int = width
+        self.height: int = height
         self.components: list[Component] = []
         self.nets: list[Net] = []
         self.ios: list[IO] = []
@@ -34,7 +36,7 @@ class Schematic:
         for component in self.components:
             xml += component.to_blockpin_xml(8)
         xml += """    </netlist>\n"""
-        xml += """    <sheet sheetnum="1" width="7609" height="5382">\n"""
+        xml += f"""    <sheet sheetnum="1" width="{self.width}" height="{self.height}">\n"""
         xml += """        <attr value="CM" name="LengthUnitName" />\n"""
         xml += """        <attr value="4" name="GridsPerUnit" />\n"""
         for net in self.nets:

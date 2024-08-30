@@ -308,7 +308,7 @@ def process_d_flip_flop(
             use_boom = boolean_input("Use Boom heuristic algorithm? (y/N): ", False)
     if use_boom:
         print("Generating simplification data.")
-        truth_table: list[tuple[int, int | str]] = []
+        truth_table: list[tuple[int | str, int | str]] = []
         for i, value in enumerate(sequence):
             current_value = value
             next_value = sequence[(i + 1) % len(sequence)]
@@ -477,7 +477,7 @@ def process_jk_flip_flop(
             use_boom = boolean_input("Use Boom heuristic algorithm? (y/N): ", False)
     if use_boom:
         print("Generating simplification data.")
-        truth_table: list[tuple[int, int | str]] = []
+        truth_table: list[tuple[int | str, int | str]] = []
         for i, value in enumerate(sequence):
             binary_string = bin(value)[2:].zfill(bit_count)
             next_binary_string = bin(sequence[(i + 1) % len(sequence)])[2:].zfill(

@@ -28,7 +28,13 @@ def format_output(output: str, add_parenthesis_if_multiple: bool = False) -> str
     return output
 
 
-def simplify(data: dict[int, str], names: str, bit_count: int) -> str:
+def simplify(
+    data: dict[int, str],
+    names: str,
+    bit_count: int,
+    iterations: int = 50,
+    timeout: int = 5,
+) -> str:
     if os.name != "nt":
         raise NotImplementedError(
             "Boom heuristic algorithm is only supported on Windows"
@@ -60,8 +66,8 @@ def simplify(data: dict[int, str], names: str, bit_count: int) -> str:
     print("Starting Boom heuristic logic minimizer.")
     args = (
         os.path.join(current_dir, "boom27", "boom.exe"),
-        "-Si50",
-        "-St5",
+        f"-Si{iterations}",
+        f"-St{timeout}",
         "-OE",
         "-single",
         input_file.name,
@@ -80,7 +86,12 @@ def simplify(data: dict[int, str], names: str, bit_count: int) -> str:
 
 
 def simplify_multiple(
-    data: list[tuple[int, int | str]], names: str, bit_count: int, output_count: int
+    data: list[tuple[int | str, int | str]],
+    names: str,
+    bit_count: int,
+    output_count: int,
+    iterations: int = 50,
+    timeout: int = 30,
 ) -> list[str]:
     if os.name != "nt":
         raise NotImplementedError(
@@ -95,10 +106,17 @@ def simplify_multiple(
     input_pla += f".ob {' '.join([f"f{i}" for i in range(output_count)])}\n"
     input_pla += ".type fr\n"
     for term in data:
-        if isinstance(term[1], int):
-            input_pla += f"{term[0]:0{bit_count}b} {term[1]:0{output_count}b}\n"
+        line = ""
+        if isinstance(term[0], int):
+            line += f"{term[0]:0{bit_count}b}"
         else:
-            input_pla += f"{term[0]:0{bit_count}b} {term[1]}\n"
+            line += f"{term[0]}"
+        line += " "
+        if isinstance(term[1], int):
+            line += f"{term[1]:0{output_count}b}\n"
+        else:
+            line += f"{term[1]}\n"
+        input_pla += line
     input_pla += ".e\n"
     print("Saving input pla data to file.")
     input_file = tempfile.NamedTemporaryFile(mode="w", encoding="utf-8", delete=False)
@@ -110,8 +128,8 @@ def simplify_multiple(
     print("Starting Boom heuristic logic minimizer.")
     args = (
         os.path.join(current_dir, "boom27", "boom.exe"),
-        "-Si50",
-        "-St30",
+        f"-Si{iterations}",
+        f"-St{timeout}",
         "-OE",
         "-single",
         input_file.name,
