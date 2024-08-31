@@ -338,6 +338,33 @@ BLOCKDEFS = """
     <line x2="48" y1="-128" y2="-128" x1="0" />
     <line x2="48" y1="-64" y2="-64" x1="0" />
 </blockdef>
+<blockdef name="or16">
+    <timestamp>2000-1-1T10:10:10</timestamp>
+    <line x2="48" y1="-448" y2="-448" x1="0" />
+    <line x2="48" y1="-592" y2="-1024" x1="48" />
+    <arc ex="112" ey="-592" sx="192" sy="-544" r="88" cx="116" cy="-504" />
+    <line x2="48" y1="-496" y2="-496" x1="112" />
+    <arc ex="192" ey="-544" sx="112" sy="-496" r="88" cx="116" cy="-584" />
+    <line x2="48" y1="-592" y2="-592" x1="112" />
+    <arc ex="48" ey="-592" sx="48" sy="-496" r="56" cx="16" cy="-544" />
+    <line x2="48" y1="-64" y2="-496" x1="48" />
+    <line x2="192" y1="-544" y2="-544" x1="256" />
+    <line x2="48" y1="-640" y2="-640" x1="0" />
+    <line x2="64" y1="-576" y2="-576" x1="0" />
+    <line x2="64" y1="-512" y2="-512" x1="0" />
+    <line x2="48" y1="-384" y2="-384" x1="0" />
+    <line x2="48" y1="-320" y2="-320" x1="0" />
+    <line x2="48" y1="-256" y2="-256" x1="0" />
+    <line x2="48" y1="-192" y2="-192" x1="0" />
+    <line x2="48" y1="-1024" y2="-1024" x1="0" />
+    <line x2="48" y1="-960" y2="-960" x1="0" />
+    <line x2="48" y1="-896" y2="-896" x1="0" />
+    <line x2="48" y1="-832" y2="-832" x1="0" />
+    <line x2="48" y1="-768" y2="-768" x1="0" />
+    <line x2="48" y1="-704" y2="-704" x1="0" />
+    <line x2="48" y1="-128" y2="-128" x1="0" />
+    <line x2="48" y1="-64" y2="-64" x1="0" />
+</blockdef>
 <blockdef name="fjkce">
     <timestamp>2000-1-1T10:10:10</timestamp>
     <line x2="64" y1="-192" y2="-192" x1="0" />
@@ -568,7 +595,26 @@ BLOCKPINS = """
     <blockpin name="I9" />
     <blockpin name="O" />
 </block>
-<block symbolname="fjkce" name="XLXI_22">
+<block symbolname="or16" name="XLXI_22">
+    <blockpin name="I0" />
+    <blockpin name="I1" />
+    <blockpin name="I10" />
+    <blockpin name="I11" />
+    <blockpin name="I12" />
+    <blockpin name="I13" />
+    <blockpin name="I14" />
+    <blockpin name="I15" />
+    <blockpin name="I2" />
+    <blockpin name="I3" />
+    <blockpin name="I4" />
+    <blockpin name="I5" />
+    <blockpin name="I6" />
+    <blockpin name="I7" />
+    <blockpin name="I8" />
+    <blockpin name="I9" />
+    <blockpin name="O" />
+</block>
+<block symbolname="fjkce" name="XLXI_23">
     <blockpin name="C" />
     <blockpin name="CE" />
     <blockpin name="CLR" />
@@ -576,7 +622,7 @@ BLOCKPINS = """
     <blockpin name="K" />
     <blockpin name="Q" />
 </block>
-<block symbolname="fjkpe" name="XLXI_23">
+<block symbolname="fjkpe" name="XLXI_24">
     <blockpin name="C" />
     <blockpin name="CE" />
     <blockpin name="J" />

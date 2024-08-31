@@ -27,6 +27,8 @@ from components.or6 import Or6
 from components.or7 import Or7
 from components.or8 import Or8
 from components.or9 import Or9
+from components.or12 import Or12
+from components.or16 import Or16
 from components.vcc import Vcc
 from components.wire import Wire
 from schematic import Schematic
@@ -70,7 +72,7 @@ def get_and_n_gate(
 
 def get_or_n_gate(
     n: int, name: str, x: int, y: int, orientation: int
-) -> Or2 | Or3 | Or4 | Or5 | Or6 | Or7 | Or8 | Or9:
+) -> Or2 | Or3 | Or4 | Or5 | Or6 | Or7 | Or8 | Or9 | Or12 | Or16:
     if n == 2:
         return Or2(name, x, y, orientation)
     elif n == 3:
@@ -87,6 +89,10 @@ def get_or_n_gate(
         return Or8(name, x, y, orientation)
     elif n == 9:
         return Or9(name, x, y, orientation)
+    elif n == 12:
+        return Or12(name, x, y, orientation)
+    elif n == 16:
+        return Or16(name, x, y, orientation)
     raise ValueError(f"Invalid n value: {n}")
 
 
@@ -113,6 +119,8 @@ def get_I_n_net(component: Component, n: int) -> Net | None:
             Or7,
             Or8,
             Or9,
+            Or12,
+            Or16,
         ),
     ):
         raise ValueError("Invalid component type")
@@ -139,6 +147,8 @@ def get_I_n_net(component: Component, n: int) -> Net | None:
             Or7,
             Or8,
             Or9,
+            Or12,
+            Or16,
         ),
     ):
         raise ValueError("Invalid component type")
@@ -161,6 +171,8 @@ def get_I_n_net(component: Component, n: int) -> Net | None:
             Or7,
             Or8,
             Or9,
+            Or12,
+            Or16,
         ),
     ):
         raise ValueError("Invalid component type")
@@ -181,6 +193,8 @@ def get_I_n_net(component: Component, n: int) -> Net | None:
             Or7,
             Or8,
             Or9,
+            Or12,
+            Or16,
         ),
     ):
         raise ValueError("Invalid component type")
@@ -199,6 +213,8 @@ def get_I_n_net(component: Component, n: int) -> Net | None:
             Or7,
             Or8,
             Or9,
+            Or12,
+            Or16,
         ),
     ):
         raise ValueError("Invalid component type")
@@ -215,6 +231,8 @@ def get_I_n_net(component: Component, n: int) -> Net | None:
             Or7,
             Or8,
             Or9,
+            Or12,
+            Or16,
         ),
     ):
         raise ValueError("Invalid component type")
@@ -229,6 +247,8 @@ def get_I_n_net(component: Component, n: int) -> Net | None:
             And16,
             Or8,
             Or9,
+            Or12,
+            Or16,
         ),
     ):
         raise ValueError("Invalid component type")
@@ -241,6 +261,8 @@ def get_I_n_net(component: Component, n: int) -> Net | None:
             And12,
             And16,
             Or9,
+            Or12,
+            Or16,
         ),
     ):
         raise ValueError("Invalid component type")
@@ -251,6 +273,8 @@ def get_I_n_net(component: Component, n: int) -> Net | None:
         (
             And12,
             And16,
+            Or12,
+            Or16,
         ),
     ):
         raise ValueError("Invalid component type")
@@ -260,7 +284,7 @@ def get_I_n_net(component: Component, n: int) -> Net | None:
         return component.I10
     if n == 11:
         return component.I11
-    if not isinstance(component, And16):
+    if not isinstance(component, (And16, Or16)):
         raise ValueError("Invalid component type")
     if n == 12:
         return component.I12
@@ -296,6 +320,8 @@ def set_I_n_net(component: Component, n: int, net: Net) -> None:
             Or7,
             Or8,
             Or9,
+            Or12,
+            Or16,
         ),
     ):
         raise ValueError("Invalid component type")
@@ -324,6 +350,8 @@ def set_I_n_net(component: Component, n: int, net: Net) -> None:
             Or7,
             Or8,
             Or9,
+            Or12,
+            Or16,
         ),
     ):
         raise ValueError("Invalid component type")
@@ -347,6 +375,8 @@ def set_I_n_net(component: Component, n: int, net: Net) -> None:
             Or7,
             Or8,
             Or9,
+            Or12,
+            Or16,
         ),
     ):
         raise ValueError("Invalid component type")
@@ -368,6 +398,8 @@ def set_I_n_net(component: Component, n: int, net: Net) -> None:
             Or7,
             Or8,
             Or9,
+            Or12,
+            Or16,
         ),
     ):
         raise ValueError("Invalid component type")
@@ -387,6 +419,8 @@ def set_I_n_net(component: Component, n: int, net: Net) -> None:
             Or7,
             Or8,
             Or9,
+            Or12,
+            Or16,
         ),
     ):
         raise ValueError("Invalid component type")
@@ -404,6 +438,8 @@ def set_I_n_net(component: Component, n: int, net: Net) -> None:
             Or7,
             Or8,
             Or9,
+            Or12,
+            Or16,
         ),
     ):
         raise ValueError("Invalid component type")
@@ -419,6 +455,8 @@ def set_I_n_net(component: Component, n: int, net: Net) -> None:
             And16,
             Or8,
             Or9,
+            Or12,
+            Or16,
         ),
     ):
         raise ValueError("Invalid component type")
@@ -432,6 +470,8 @@ def set_I_n_net(component: Component, n: int, net: Net) -> None:
             And12,
             And16,
             Or9,
+            Or12,
+            Or16,
         ),
     ):
         raise ValueError("Invalid component type")
@@ -443,6 +483,8 @@ def set_I_n_net(component: Component, n: int, net: Net) -> None:
         (
             And12,
             And16,
+            Or12,
+            Or16,
         ),
     ):
         raise ValueError("Invalid component type")
@@ -455,7 +497,7 @@ def set_I_n_net(component: Component, n: int, net: Net) -> None:
     if n == 11:
         component.I11 = net
         return
-    if not isinstance(component, And16):
+    if not isinstance(component, (And16, Or16)):
         raise ValueError("Invalid component type")
     if n == 12:
         component.I12 = net
@@ -494,6 +536,26 @@ def get_wire_x_function(bit_count: int, base_x: int) -> Callable[[int], int]:
         return base_x - 64 * (bit_count - n) - 320
 
     return get_wire_x
+
+
+def get_gate_count(count: int) -> int:
+    gate_count = 0
+    while count > 0:
+        if count in (12, 16) or count <= 9:
+            gate_size = count
+        elif count in (10, 11):
+            gate_size = count - 2
+        elif count == 13:
+            gate_size = 9
+        elif count in (14, 15):
+            gate_size = 12
+        elif count == 17:
+            gate_size = 12
+        else:
+            gate_size = 16
+        count -= gate_size
+        gate_count += 1
+    return gate_count
 
 
 def generate_counter_schematic(
@@ -1430,7 +1492,7 @@ def generate_logic_schematic(
                     y_offset += 64
             else:
                 # Multiple product terms exceeding 9
-                gate_count = product_count // 9 + (product_count % 9 != 0)
+                gate_count = get_gate_count(product_count)
                 remaining_count = product_count
                 master_and_gate_y_offset = y_offset
                 master_and_gate = get_and_n_gate(
@@ -1453,9 +1515,18 @@ def generate_logic_schematic(
                 term_index = 0
                 gate_index = 0
                 while remaining_count > 0:
-                    gate_size = min(remaining_count, 9)
-                    if remaining_count - gate_size == 1:
-                        gate_size -= 1
+                    if remaining_count in (12, 16) or remaining_count <= 9:
+                        gate_size = remaining_count
+                    elif remaining_count in (10, 11):
+                        gate_size = remaining_count - 2
+                    elif remaining_count == 13:
+                        gate_size = 9
+                    elif remaining_count in (14, 15):
+                        gate_size = 12
+                    elif remaining_count == 17:
+                        gate_size = 12
+                    else:
+                        gate_size = 16
                     remaining_count -= gate_size
                     and_gate = get_and_n_gate(
                         gate_size,
@@ -1819,7 +1890,7 @@ def generate_logic_schematic(
                         y_offset += 64
                 else:
                     # Multiple product terms exceeding 9
-                    gate_count = product_count // 9 + (product_count % 9 != 0)
+                    gate_count = get_gate_count(product_count)
                     remaining_count = product_count
                     master_and_gate_y_offset = y_offset
                     master_and_gate = get_and_n_gate(
@@ -1862,9 +1933,18 @@ def generate_logic_schematic(
                     term_index = 0
                     gate_index = 0
                     while remaining_count > 0:
-                        gate_size = min(remaining_count, 9)
-                        if remaining_count - gate_size == 1:
-                            gate_size -= 1
+                        if remaining_count in (12, 16) or remaining_count <= 9:
+                            gate_size = remaining_count
+                        elif remaining_count in (10, 11):
+                            gate_size = remaining_count - 2
+                        elif remaining_count == 13:
+                            gate_size = 9
+                        elif remaining_count in (14, 15):
+                            gate_size = 12
+                        elif remaining_count == 17:
+                            gate_size = 12
+                        else:
+                            gate_size = 16
                         remaining_count -= gate_size
                         and_gate = get_and_n_gate(
                             gate_size,
@@ -1999,7 +2079,7 @@ def generate_logic_schematic(
                         gate_index += 1
         else:
             # Multiple sum terms exceeding 9
-            or_gate_count = sum_count // 9 + (sum_count % 9 != 0)
+            or_gate_count = get_gate_count(sum_count)
             remaining_sum_count = sum_count
             master_or_gate_y_offset = y_offset
             master_or_gate = get_or_n_gate(
@@ -2022,9 +2102,18 @@ def generate_logic_schematic(
             sum_term_index = 0
             or_gate_index = 0
             while remaining_sum_count > 0:
-                slave_or_gate_size = min(remaining_sum_count, 9)
-                if remaining_sum_count - slave_or_gate_size == 1:
-                    slave_or_gate_size -= 1
+                if remaining_sum_count in (12, 16) or remaining_sum_count <= 9:
+                    slave_or_gate_size = remaining_sum_count
+                elif remaining_sum_count in (10, 11):
+                    slave_or_gate_size = remaining_sum_count - 2
+                elif remaining_sum_count == 13:
+                    slave_or_gate_size = 9
+                elif remaining_sum_count in (14, 15):
+                    slave_or_gate_size = 12
+                elif remaining_sum_count == 17:
+                    slave_or_gate_size = 12
+                else:
+                    slave_or_gate_size = 16
                 remaining_sum_count -= slave_or_gate_size
                 slave_or_gate_y_offset = y_offset
                 slave_or_gate = get_or_n_gate(
@@ -2381,7 +2470,7 @@ def generate_logic_schematic(
                             y_offset += 64
                     else:
                         # Multiple product terms exceeding 9
-                        and_gate_count = product_count // 9 + (product_count % 9 != 0)
+                        and_gate_count = get_gate_count(product_count)
                         remaining_product_count = product_count
                         master_and_gate_y_offset = y_offset
                         master_and_gate = get_and_n_gate(
@@ -2438,9 +2527,21 @@ def generate_logic_schematic(
                         product_term_index = 0
                         and_gate_index = 0
                         while remaining_product_count > 0:
-                            and_gate_size = min(remaining_product_count, 9)
-                            if remaining_product_count - and_gate_size == 1:
-                                and_gate_size -= 1
+                            if (
+                                remaining_product_count in (12, 16)
+                                or remaining_product_count <= 9
+                            ):
+                                and_gate_size = remaining_product_count
+                            elif remaining_product_count in (10, 11):
+                                and_gate_size = remaining_product_count - 2
+                            elif remaining_product_count == 13:
+                                and_gate_size = 9
+                            elif remaining_product_count in (14, 15):
+                                and_gate_size = 12
+                            elif remaining_product_count == 17:
+                                and_gate_size = 12
+                            else:
+                                and_gate_size = 16
                             remaining_product_count -= and_gate_size
                             and_gate = get_and_n_gate(
                                 and_gate_size,
