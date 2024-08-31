@@ -57,9 +57,10 @@ def parse_number(number_string: str, to_bcd: bool) -> int:
 
 def parse_equation(equation: str) -> str:
     equation = equation.strip().upper()
-    equation = equation.replace(" ", "")
+    equation = equation.replace(" ", "").replace("(", "").replace(")", "")
+    equation = equation.replace("FALSE", "False").replace("TRUE", "True")
     equation = equation.replace("0", "False").replace("1", "True")
-    equation = equation.replace("AND", "&").replace("*", "&")
+    equation = equation.replace("AND", "&").replace("*", "&").replace(".", "&")
     equation = equation.replace("OR", "|").replace("+", "|")
     equation = equation.replace("NOT", "~").replace("!", "~")
     if "'" in equation:
@@ -178,6 +179,27 @@ def simplify_multiple_to_sop(
     return results
 
 
+def parse_sop_form(sop_form: str) -> list[list[str]]:
+    sop_form = sop_form.replace(" ", "")
+    if "|" in sop_form:
+        product_terms = sop_form.split("|")
+        product_terms = [term.strip("()").split("&") for term in product_terms]
+        return product_terms
+    terms = sop_form.split("&")
+    return [terms]
+
+
+def prettify_expression(expression: str) -> str:
+    parsed_expression = parse_sop_form(expression)
+    pretty_expression_terms = []
+    for term in parsed_expression:
+        if len(term) == 1:
+            pretty_expression_terms.append(term[0])
+        else:
+            pretty_expression_terms.append(f"({' & '.join(term)})")
+    return " | ".join(pretty_expression_terms)
+
+
 def main():
     print("Input modes:")
     print("  1. Truth Table: All entries, input automatically generated")
@@ -193,6 +215,9 @@ def main():
         enter_output_lsb_first = boolean_input(
             "Enter output LSB first (y/N)? ", default=False
         )
+    else:
+        parse_input_as_decimal = False
+        enter_output_lsb_first = False
     names = [chr(ord("A") + i) for i in range(input_count)]
     names = "".join(names)
     if not enter_output_lsb_first:
@@ -225,23 +250,35 @@ def main():
         if specified_input_count == 0:
             print("No entries found. Exiting.")
             return
-        if os.name != "nt" or input_count <= 16:
+        if os.name != "nt" or input_count <= 12:
             use_boom = False
         else:
-            if specified_input_count <= 64 or input_count > 18:
+            if specified_input_count <= 64 or input_count > 16:
                 use_boom = boolean_input("Use Boom heuristic algorithm? (Y/n): ", True)
             else:
                 use_boom = boolean_input("Use Boom heuristic algorithm? (y/N): ", False)
         if use_boom:
+            iterations_input = input("Enter the number of iterations (default: 50): ")
+            timeout_input = input("Enter the timeout in seconds (default: 30): ")
+            if iterations_input:
+                iterations = int(iterations_input)
+            else:
+                iterations = 50
+            if timeout_input:
+                timeout = int(timeout_input)
+            else:
+                timeout = 30
             print(
                 "Simplifying to SOP form using Boom heuristic algorithm. "
-                + "This may take up to approximately 30 seconds."
+                + f"This may take up to approximately {timeout} seconds."
             )
             minimized_expressions = boom.simplify_multiple(
                 truth_table,  # type: ignore
                 names,
                 input_count,
                 output_count,
+                iterations,
+                timeout,
             )
         else:
             print("Generating simplification data.")
@@ -306,23 +343,35 @@ def main():
         if len(truth_table) == 0:
             print("No entries found. Exiting.")
             return
-        if os.name != "nt" or input_count <= 16:
+        if os.name != "nt" or input_count <= 12:
             use_boom = False
         else:
-            if len(truth_table) <= 64 or input_count > 18:
+            if len(truth_table) <= 64 or input_count > 16:
                 use_boom = boolean_input("Use Boom heuristic algorithm? (Y/n): ", True)
             else:
                 use_boom = boolean_input("Use Boom heuristic algorithm? (y/N): ", False)
         if use_boom:
+            iterations_input = input("Enter the number of iterations (default: 50): ")
+            timeout_input = input("Enter the timeout in seconds (default: 30): ")
+            if iterations_input:
+                iterations = int(iterations_input)
+            else:
+                iterations = 50
+            if timeout_input:
+                timeout = int(timeout_input)
+            else:
+                timeout = 30
             print(
                 "Simplifying to SOP form using Boom heuristic algorithm. "
-                + "This may take up to approximately 30 seconds."
+                + f"This may take up to approximately {timeout} seconds."
             )
             minimized_expressions = boom.simplify_multiple(
                 truth_table,  # type: ignore
                 names,
                 input_count,
                 output_count,
+                iterations,
+                timeout,
             )
         else:
             print("Generating simplification data.")
@@ -350,7 +399,7 @@ def main():
         print("Allowed operators:")
         print("  False: 0")
         print("  True: 1")
-        print("  AND: & *")
+        print("  AND: & * .")
         print("  OR: | +")
         print("  NOT: ~ ! '")
         expressions = []
@@ -358,6 +407,9 @@ def main():
             expression = input(f"  O{i} = ")
             expression = parse_equation(expression)
             expressions.append(expression)
+        print("Parsed expressions:")
+        for i, expression in enumerate(expressions):
+            print(f"  O{i} = {prettify_expression(expression)}")
         print("Generating logic schematic.")
         generate_logic_schematic(expressions, input_count, output_count, "logic.sch")
         print(Fore.LIGHTGREEN_EX + "Schematic exported to logic.sch")

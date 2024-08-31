@@ -1228,7 +1228,7 @@ def generate_logic_schematic(
     output_bit_count: int,
     output_file_path: str | None = None,
 ) -> str | None:
-    schematic = Schematic("logic", 3280, 7609)
+    schematic = Schematic("logic", 2720 + bit_count * 128, 7609)
     parsed_expressions = [parse_sop_form(expression) for expression in expressions]
     input_nets: list[Net] = []
     inverted_input_nets: list[Net] = []
