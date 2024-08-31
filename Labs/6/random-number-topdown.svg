@@ -11,7 +11,6 @@
    sodipodi:docname="random-number-topdown.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <sodipodi:namedview
@@ -25,13 +24,13 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      showguides="false"
-     inkscape:zoom="0.81999999"
-     inkscape:cx="6219.5123"
-     inkscape:cy="406.09757"
-     inkscape:window-width="1920"
-     inkscape:window-height="1094"
-     inkscape:window-x="-11"
-     inkscape:window-y="-11"
+     inkscape:zoom="0.82"
+     inkscape:cx="5531.7073"
+     inkscape:cy="212.80488"
+     inkscape:window-width="2560"
+     inkscape:window-height="1369"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1">
     <inkscape:page
@@ -39,7 +38,7 @@
        y="0"
        width="297"
        height="210"
-       id="page2"
+       id="page1"
        margin="0"
        bleed="0" />
     <inkscape:page
@@ -47,7 +46,7 @@
        y="0"
        width="297"
        height="210"
-       id="page3"
+       id="page2"
        margin="0"
        bleed="0" />
     <inkscape:page
@@ -55,7 +54,7 @@
        y="0"
        width="297"
        height="210"
-       id="page4"
+       id="page3"
        margin="0"
        bleed="0" />
     <inkscape:page
@@ -63,7 +62,7 @@
        y="0"
        width="297"
        height="210"
-       id="page121"
+       id="page4"
        margin="0"
        bleed="0" />
     <inkscape:page
@@ -71,7 +70,7 @@
        y="0"
        width="297"
        height="210"
-       id="page122"
+       id="page121"
        margin="0"
        bleed="0" />
     <inkscape:page
@@ -79,12 +78,9 @@
        y="0"
        width="297"
        height="210"
-       id="page27"
+       id="page122"
        margin="0"
-       bleed="0"
-       inkscape:export-filename="Page 6.png"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300" />
+       bleed="0" />
   </sodipodi:namedview>
   <defs
      id="defs1">
@@ -141,83 +137,83 @@
        id="rect4"
        width="297"
        height="210"
-       x="0"
+       x="307"
        y="0" />
     <text
        xml:space="preserve"
        style="font-size:12.7px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="120.90169"
+       x="427.90167"
        y="26.10705"
        id="text4"><tspan
          sodipodi:role="line"
          id="tspan4"
          style="font-size:12.7px;stroke-width:0.264583"
-         x="120.90169"
+         x="427.90167"
          y="26.10705">Top Layer</tspan></text>
     <rect
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect5"
        width="133.63707"
        height="66.947777"
-       x="57.287086"
+       x="364.28708"
        y="71.526115" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="57.933296"
+       x="364.93329"
        y="68.886421"
        id="text5"><tspan
          sodipodi:role="line"
          id="tspan5"
          style="stroke-width:0.264583"
-         x="57.933296"
+         x="364.93329"
          y="68.886421">RandomNumberGenerator</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="60.130424"
+       x="367.1304"
        y="93.969765"
        id="text6"><tspan
          sodipodi:role="line"
          id="tspan6"
          style="stroke-width:0.264583"
-         x="60.130424"
+         x="367.1304"
          y="93.969765">CLK(20MHz)</tspan></text>
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect6"
        width="22.534119"
        height="1"
-       x="34.252968"
+       x="341.25296"
        y="91.651276" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="60.130424"
+       x="367.1304"
        y="119.66723"
        id="text7"><tspan
          sodipodi:role="line"
          id="tspan7"
          style="stroke-width:0.264583"
-         x="60.130424"
+         x="367.1304"
          y="119.66723">ActivateButton</tspan></text>
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect7"
        width="22.534119"
        height="1"
-       x="34.252968"
+       x="341.25296"
        y="117.34874" />
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.999999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect8"
        width="33.419106"
        height="29.602245"
-       x="216.7823"
+       x="523.78229"
        y="68.732109" />
     <g
        id="g10"
-       transform="translate(27.691293,-12.713407)">
+       transform="translate(334.69128,-12.713407)">
       <rect
          style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
          id="rect9"
@@ -235,7 +231,7 @@
     </g>
     <g
        id="g12"
-       transform="translate(43.265509,-12.713407)">
+       transform="translate(350.2655,-12.713407)">
       <rect
          style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
          id="rect11"
@@ -256,14 +252,14 @@
        id="rect17"
        width="25.46142"
        height="1"
-       x="191.14569"
+       x="498.14569"
        y="83.033234" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999998;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect18"
        width="42.312"
        height="1"
-       x="191.03534"
+       x="498.03534"
        y="105.14986" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
@@ -271,64 +267,64 @@
        width="7.7734013"
        height="1"
        x="98.376465"
-       y="-233.99185"
+       y="-540.99182"
        transform="rotate(90)" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="151.0573"
+       x="458.05728"
        y="85.452499"
        id="text19"><tspan
          sodipodi:role="line"
          id="tspan19"
          style="stroke-width:0.264583"
-         x="151.0573"
+         x="458.05728"
          y="85.452499">Segment[a:g]</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="150.13332"
+       x="457.1333"
        y="107.74586"
        id="text20"><tspan
          sodipodi:role="line"
          id="tspan20"
          style="stroke-width:0.264583"
-         x="150.13332"
+         x="457.1333"
          y="107.74586">Common[1:0]</tspan></text>
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.999995;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect20"
        width="45.464729"
        height="12.57917"
-       x="216.7823"
+       x="523.78229"
        y="119.51492" />
     <circle
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="path20"
-       cx="223.38753"
+       cx="530.38751"
        cy="125.62481"
        r="3.5041986" />
     <circle
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="circle20"
-       cx="233.96002"
+       cx="540.96002"
        cy="125.62481"
        r="3.5041986" />
     <circle
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="circle21"
-       cx="244.5325"
+       cx="551.53247"
        cy="125.62481"
        r="3.5041986" />
     <circle
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="circle22"
-       cx="255.105"
+       cx="562.10498"
        cy="125.62481"
        r="3.5041986" />
     <g
        id="g26"
-       transform="translate(17.538342,1.2706884)">
+       transform="translate(324.53833,1.2706884)">
       <rect
          style="fill:none;stroke:#000000;stroke-width:0.999995;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
          id="rect22"
@@ -366,110 +362,110 @@
        id="rect26"
        width="25.46142"
        height="1"
-       x="191.14569"
+       x="498.14569"
        y="125.3045" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="164.95412"
+       x="471.9541"
        y="127.72377"
        id="text26"><tspan
          sodipodi:role="line"
          id="tspan26"
          style="stroke-width:0.264583"
-         x="164.95412"
+         x="471.9541"
          y="127.72377">LED[3:0]</tspan></text>
     <rect
        style="fill:#ffffff;stroke:none;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
        id="rect27"
        width="297"
        height="210"
-       x="307"
-       y="0" />
+       x="614.02643"
+       y="-0.097372055" />
     <text
        xml:space="preserve"
        style="font-size:12.7px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="427.78076"
+       x="734.78076"
        y="26.10705"
        id="text27"><tspan
          sodipodi:role="line"
          id="tspan27"
          style="font-size:12.7px;stroke-width:0.264583"
-         x="427.78076"
+         x="734.78076"
          y="26.10705">2nd Layer</tspan></text>
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.999995;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:2.00001, 4;stroke-dashoffset:0;paint-order:stroke fill markers"
        id="rect28"
        width="172.93628"
        height="135.05669"
-       x="361.41522"
+       x="668.41522"
        y="45.497231" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="362.06146"
+       x="669.06146"
        y="42.857536"
        id="text28"><tspan
          sodipodi:role="line"
          id="tspan28"
          style="stroke-width:0.264583"
-         x="362.06146"
+         x="669.06146"
          y="42.857536">RandomNumberGenerator</tspan></text>
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
        id="rect29"
        width="1"
        height="20"
-       x="202.75348"
-       y="-95.119644"
+       x="419.83527"
+       y="-312.20142"
        transform="rotate(45)" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
        id="rect30"
        width="1"
        height="20"
-       x="218.39229"
-       y="-79.480835"
+       x="435.47406"
+       y="-296.56262"
        transform="rotate(45)" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
        id="rect31"
        width="1"
        height="20"
-       x="232.64377"
-       y="-65.229347"
+       x="449.72556"
+       y="-282.31113"
        transform="rotate(45)" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="200.00885"
+       x="507.00885"
        y="81.405228"
        id="text31"><tspan
          sodipodi:role="line"
          id="tspan31"
          style="stroke-width:0.264583"
-         x="200.00885"
+         x="507.00885"
          y="81.405228">7</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="200.00885"
+       x="507.00885"
        y="103.41879"
        id="text32"><tspan
          sodipodi:role="line"
          id="tspan32"
          style="stroke-width:0.264583"
-         x="200.00885"
+         x="507.00885"
          y="103.41879">2</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="200.36826"
+       x="507.36826"
        y="123.63531"
        id="text33"><tspan
          sodipodi:role="line"
          style="stroke-width:0.264583"
-         x="200.36826"
+         x="507.36826"
          y="123.63531"
          id="tspan34">4</tspan></text>
     <rect
@@ -477,147 +473,147 @@
        id="rect35"
        width="59.214085"
        height="55.008682"
-       x="469.9592"
+       x="776.95917"
        y="58.426121" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="471.8017"
+       x="778.8017"
        y="56.265953"
        id="text35"><tspan
          sodipodi:role="line"
          id="tspan35"
          style="stroke-width:0.264583"
-         x="471.8017"
+         x="778.8017"
          y="56.265953">SSD_2Digit</tspan></text>
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999998;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect36"
        width="32.110413"
        height="1"
-       x="529.59448"
+       x="836.59448"
        y="69.309799" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
        id="rect37"
        width="1"
        height="20"
-       x="436.24463"
-       y="-348.01865"
+       x="653.32642"
+       y="-565.1004"
        transform="rotate(45)" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="543.9386"
+       x="850.9386"
        y="67.681793"
        id="text37"><tspan
          sodipodi:role="line"
          id="tspan37"
          style="stroke-width:0.264583"
-         x="543.9386"
+         x="850.9386"
          y="67.681793">7</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="563.65424"
+       x="870.65424"
        y="71.729065"
        id="text38"><tspan
          sodipodi:role="line"
          id="tspan38"
          style="stroke-width:0.264583"
-         x="563.65424"
+         x="870.65424"
          y="71.729065">Segment[a:g]</tspan></text>
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999998;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect38"
        width="32.110413"
        height="1"
-       x="529.59448"
+       x="836.59448"
        y="87.391891" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
        id="rect39"
        width="1"
        height="20"
-       x="449.03061"
-       y="-335.23267"
+       x="666.11237"
+       y="-552.31445"
        transform="rotate(45)" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="543.9386"
+       x="850.9386"
        y="85.763885"
        id="text39"><tspan
          sodipodi:role="line"
          style="stroke-width:0.264583"
-         x="543.9386"
+         x="850.9386"
          y="85.763885"
          id="tspan41">2</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="563.65424"
+       x="870.65424"
        y="89.811157"
        id="text40"><tspan
          sodipodi:role="line"
          id="tspan40"
          style="stroke-width:0.264583"
-         x="563.65424"
+         x="870.65424"
          y="89.811157">Common[1:0]</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:5.64444px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="472.39462"
+       x="779.39459"
        y="71.920967"
        id="text42"><tspan
          sodipodi:role="line"
          id="tspan42"
          style="font-size:5.64444px;stroke-width:0.264583"
-         x="472.39462"
+         x="779.39459"
          y="71.920967">D0[3:0]</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:5.64444px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="472.39462"
+       x="779.39459"
        y="90.007988"
        id="text43"><tspan
          sodipodi:role="line"
          id="tspan43"
          style="font-size:5.64444px;stroke-width:0.264583"
-         x="472.39462"
+         x="779.39459"
          y="90.007988">D1[3:0]</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:5.64444px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="478.34924"
+       x="785.34924"
        y="105.77983"
        id="text44"><tspan
          sodipodi:role="line"
          id="tspan44"
          style="font-size:5.64444px;stroke-width:0.264583"
-         x="478.34924"
+         x="785.34924"
          y="105.77983">ScanCLK</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:5.64444px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="494.30466"
+       x="801.30463"
        y="71.729065"
        id="text45"><tspan
          sodipodi:role="line"
          id="tspan45"
          style="font-size:5.64444px;stroke-width:0.264583"
-         x="494.30466"
+         x="801.30463"
          y="71.729065">Segment[a:g]</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:5.64444px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="493.38068"
+       x="800.38068"
        y="89.987885"
        id="text46"><tspan
          sodipodi:role="line"
          id="tspan46"
          style="font-size:5.64444px;stroke-width:0.264583"
-         x="493.38068"
+         x="800.38068"
          y="89.987885">Common[1:0]</tspan></text>
     <path
        sodipodi:type="star"
@@ -636,76 +632,71 @@
        d="m 421.32741,86.616592 -6.49171,3.747993 V 82.8686 Z"
        inkscape:transform-center-x="-1.081947"
        inkscape:transform-center-y="-1.0912327e-06"
-       transform="translate(55.123493,17.156823)" />
+       transform="translate(362.12348,17.156823)" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999998;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect46"
        width="19.090357"
        height="1"
-       x="357.25452"
+       x="664.25452"
        y="64.146729" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="318.80029"
+       x="625.80029"
        y="66.465218"
        id="text47"><tspan
          sodipodi:role="line"
          id="tspan47"
          style="stroke-width:0.264583"
-         x="318.80029"
+         x="625.80029"
          y="66.465218">CLK(20MHz)</tspan></text>
-    <use
-       xlink:href="#And_Gate"
-       style="fill:none;stroke:#000000;stroke-width:3.77953;stroke-dasharray:none"
-       id="use1"
-       transform="matrix(0.26458333,0,0,0.26458333,369.79179,105.70727)" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="313.37115"
-       y="123.87704"
+       x="620.37115"
+       y="168.60297"
        id="text48"><tspan
          sodipodi:role="line"
          id="tspan48"
          style="stroke-width:0.264583"
-         x="313.37115"
-         y="123.87704">ActivateButton</tspan></text>
+         x="620.37115"
+         y="168.60297">ActivateButton</tspan></text>
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect48"
        width="10.92712"
        height="1"
-       x="458.97668"
+       x="765.97668"
        y="103.27341" />
     <rect
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
        id="rect50"
        width="39.751465"
        height="12.441205"
-       x="376.47672"
+       x="683.47668"
        y="58.426121" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="376.46954"
+       x="683.46954"
        y="55.636993"
        id="text50"><tspan
          sodipodi:role="line"
          id="tspan50"
          style="stroke-width:0.264583"
-         x="376.46954"
+         x="683.46954"
          y="55.636993">CLKDiv131k</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:5.64444px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="384.63248"
+       x="691.63245"
        y="66.653145"
        id="text51"><tspan
          sodipodi:role="line"
          id="tspan51"
          style="font-size:5.64444px;stroke-width:0.264583"
-         x="384.63248"
+         x="691.63245"
          y="66.653145">CLK</tspan></text>
     <path
        sodipodi:type="star"
@@ -724,47 +715,47 @@
        d="m 421.32741,86.616592 -6.49171,3.747993 V 82.8686 Z"
        inkscape:transform-center-x="-1.081947"
        inkscape:transform-center-y="-1.0912327e-06"
-       transform="translate(-38.359014,-21.969869)" />
+       transform="translate(268.64098,-21.969869)" />
     <text
        xml:space="preserve"
        style="font-size:5.64444px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="400.00781"
+       x="707.00781"
        y="66.653145"
        id="text52"><tspan
          sodipodi:role="line"
          id="tspan52"
          style="font-size:5.64444px;stroke-width:0.264583"
-         x="400.00781"
+         x="707.00781"
          y="66.653145">CLKO</tspan></text>
     <rect
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
        id="rect52"
        width="39.751465"
        height="12.441205"
-       x="376.47672"
-       y="88.922646" />
+       x="683.47668"
+       y="97.118118" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="376.46954"
-       y="86.133514"
+       x="683.46954"
+       y="94.328987"
        id="text53"><tspan
          sodipodi:role="line"
          id="tspan53"
          style="stroke-width:0.264583"
-         x="376.46954"
-         y="86.133514">CLKDiv2</tspan></text>
+         x="683.46954"
+         y="94.328987">CLKDiv2</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:5.64444px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="384.63248"
-       y="97.149666"
+       x="691.63245"
+       y="105.34514"
        id="text54"><tspan
          sodipodi:role="line"
          id="tspan54"
          style="font-size:5.64444px;stroke-width:0.264583"
-         x="384.63248"
-         y="97.149666">CLK</tspan></text>
+         x="691.63245"
+         y="105.34514">CLK</tspan></text>
     <path
        sodipodi:type="star"
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
@@ -782,46 +773,46 @@
        d="m 421.32741,86.616592 -6.49171,3.747993 V 82.8686 Z"
        inkscape:transform-center-x="-1.081947"
        inkscape:transform-center-y="-1.0912327e-06"
-       transform="translate(-38.359014,8.5266538)" />
+       transform="translate(268.64098,16.722121)" />
     <text
        xml:space="preserve"
        style="font-size:5.64444px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="400.00781"
-       y="97.149666"
+       x="707.00781"
+       y="105.34514"
        id="text55"><tspan
          sodipodi:role="line"
          id="tspan55"
          style="font-size:5.64444px;stroke-width:0.264583"
-         x="400.00781"
-         y="97.149666">CLKO</tspan></text>
+         x="707.00781"
+         y="105.34514">CLKO</tspan></text>
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect55"
        width="8.9901876"
        height="1"
-       x="367.35471"
-       y="94.64325" />
+       x="674.35468"
+       y="102.83872" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999996;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect56"
-       width="18.107376"
+       width="25.807673"
        height="1"
        x="77.353577"
-       y="-368.35471"
+       y="-675.35468"
        transform="rotate(90)" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect57"
        width="61.342548"
        height="1"
-       x="368.11713"
+       x="675.11713"
        y="77.353577" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999998;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect58"
        width="43.889297"
        height="1"
-       x="416.0874"
+       x="723.0874"
        y="64.146721" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999993;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
@@ -829,7 +820,7 @@
        width="13.659966"
        height="1"
        x="64.693611"
-       y="-429.91956"
+       y="-736.91956"
        transform="rotate(90)" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999988;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
@@ -837,103 +828,88 @@
        width="39.079384"
        height="1"
        x="64.693604"
-       y="-459.97668"
+       y="-766.97668"
        transform="rotate(90)" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999998;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect61"
-       width="19.090357"
+       width="16.045227"
        height="1"
-       x="357.25452"
-       y="121.11982" />
-    <rect
-       style="fill:#000000;stroke:none;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
-       id="rect62"
-       width="8.9901876"
-       height="1"
-       x="367.35471"
-       y="115.99081" />
-    <rect
-       style="fill:#000000;stroke:none;stroke-width:0.999993;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
-       id="rect63"
-       width="9.8410616"
-       height="1"
-       x="106.83355"
-       y="-368.35471"
-       transform="rotate(90)" />
+       x="664.25452"
+       y="165.84575" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect64"
-       width="61.342548"
+       width="62.069801"
        height="1"
-       x="368.11713"
-       y="106.83355" />
+       x="674.35468"
+       y="115.79459" />
     <rect
-       style="fill:#000000;stroke:none;stroke-width:0.999988;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
+       style="fill:#000000;stroke:none;stroke-width:0.999978;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect65"
-       width="12.865787"
+       width="13.360857"
        height="1"
-       x="94.967766"
-       y="-429.91956"
+       x="103.43374"
+       y="-736.91956"
        transform="rotate(90)" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999998;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect66"
        width="13.564667"
        height="1"
-       x="416.35492"
-       y="94.64325" />
+       x="723.35492"
+       y="102.83872" />
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.999999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
        id="rect67"
        width="46.273392"
        height="33.193878"
-       x="373.33191"
-       y="141.38974" />
+       x="680.33191"
+       y="140.70528" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="374.22324"
-       y="138.63246"
+       x="681.22321"
+       y="137.948"
        id="text67"><tspan
          sodipodi:role="line"
          id="tspan67"
          style="stroke-width:0.264583"
-         x="374.22324"
-         y="138.63246">Counter_00-99</tspan></text>
+         x="681.22321"
+         y="137.948">Counter_00-99</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:5.64444px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="399.70493"
-       y="150.20959"
+       x="706.7049"
+       y="150.12181"
        id="text68"><tspan
          sodipodi:role="line"
          id="tspan68"
          style="font-size:5.64444px;stroke-width:0.264583"
-         x="399.70493"
-         y="150.20959">D0[3:0]</tspan></text>
+         x="706.7049"
+         y="150.12181">D0[3:0]</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:5.64444px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="399.70493"
-       y="168.29662"
+       x="706.7049"
+       y="168.20883"
        id="text69"><tspan
          sodipodi:role="line"
          id="tspan69"
          style="font-size:5.64444px;stroke-width:0.264583"
-         x="399.70493"
-         y="168.29662">D1[3:0]</tspan></text>
+         x="706.7049"
+         y="168.20883">D1[3:0]</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:5.64444px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="381.4877"
-       y="159.99309"
+       x="688.48767"
+       y="150.26512"
        id="text70"><tspan
          sodipodi:role="line"
          id="tspan70"
          style="font-size:5.64444px;stroke-width:0.264583"
-         x="381.4877"
-         y="159.99309">CLK</tspan></text>
+         x="688.48767"
+         y="150.26512">CLK</tspan></text>
     <path
        sodipodi:type="star"
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
@@ -951,129 +927,107 @@
        d="m 421.32741,86.616592 -6.49171,3.747993 V 82.8686 Z"
        inkscape:transform-center-x="-1.081947"
        inkscape:transform-center-y="-1.0912327e-06"
-       transform="translate(-41.503769,71.370076)" />
+       transform="translate(265.49622,61.642099)" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999996;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect70"
        width="6.0268064"
        height="1"
-       x="367.35471"
-       y="157.48666" />
-    <rect
-       style="fill:#000000;stroke:none;stroke-width:0.999993;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
-       id="rect71"
-       width="29.155525"
-       height="1"
-       x="129.0706"
-       y="-368.35471"
-       transform="rotate(90)" />
-    <rect
-       style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
-       id="rect72"
-       width="32.624989"
-       height="1"
-       x="368.11713"
-       y="129.0706" />
+       x="674.35468"
+       y="147.7587" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
-       id="rect73"
-       width="11.722168"
+       id="rect71"
+       width="32.382931"
        height="1"
-       x="389.61194"
-       y="118.43644" />
-    <rect
-       style="fill:#000000;stroke:none;stroke-width:0.999986;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
-       id="rect74"
-       width="11.023289"
-       height="1"
-       x="119.04732"
-       y="-401.33411"
+       x="115.87527"
+       y="-675.35468"
        transform="rotate(90)" />
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.999996;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
        id="rect75"
        width="59.214001"
        height="32.439316"
-       x="469.9592"
-       y="142.15327" />
+       x="776.95917"
+       y="141.24065" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999998;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect76"
        width="32.110413"
        height="1"
-       x="529.59448"
-       y="157.87294" />
+       x="836.59448"
+       y="156.96031" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="563.65424"
-       y="160.46893"
+       x="870.65424"
+       y="159.5563"
        id="text76"><tspan
          sodipodi:role="line"
          id="tspan76"
          style="stroke-width:0.264583"
-         x="563.65424"
-         y="160.46893">LED[3:0]</tspan></text>
+         x="870.65424"
+         y="159.5563">LED[3:0]</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="471.8017"
-       y="139.47469"
+       x="778.8017"
+       y="138.56206"
        id="text77"><tspan
          sodipodi:role="line"
          id="tspan77"
          style="stroke-width:0.264583"
-         x="471.8017"
-         y="139.47469">LED_Driver</tspan></text>
+         x="778.8017"
+         y="138.56206">LED_Driver</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:5.64444px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="472.39462"
-       y="150.20959"
+       x="779.39459"
+       y="150.27991"
        id="text78"><tspan
          sodipodi:role="line"
          id="tspan78"
          style="font-size:5.64444px;stroke-width:0.264583"
-         x="472.39462"
-         y="150.20959">D0[3:0]</tspan></text>
+         x="779.39459"
+         y="150.27991">D0[3:0]</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:5.64444px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="472.39462"
-       y="168.29662"
+       x="779.39459"
+       y="168.36693"
        id="text79"><tspan
          sodipodi:role="line"
          id="tspan79"
          style="font-size:5.64444px;stroke-width:0.264583"
-         x="472.39462"
-         y="168.29662">D1[3:0]</tspan></text>
+         x="779.39459"
+         y="168.36693">D1[3:0]</tspan></text>
     <rect
        style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect79"
        width="50.254093"
        height="0.97543329"
-       x="419.69608"
+       x="726.69604"
        y="147.85876" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999991;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect80"
        width="50.280411"
        height="0.97543329"
-       x="419.66974"
+       x="726.66974"
        y="165.94579" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999998;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect81"
        width="24.840832"
        height="0.97543329"
-       x="445.10928"
+       x="752.10925"
        y="69.570145" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect82"
        width="18.191841"
        height="0.80129558"
-       x="451.7583"
+       x="758.7583"
        y="87.744232" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999987;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
@@ -1081,7 +1035,7 @@
        width="78.074821"
        height="1"
        x="69.897812"
-       y="-446.10928"
+       y="-753.10925"
        transform="rotate(90)" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999987;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
@@ -1089,26 +1043,26 @@
        width="78.551331"
        height="1"
        x="87.868057"
-       y="-452.7583"
+       y="-759.7583"
        transform="rotate(90)" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
        id="rect85"
        width="1"
        height="20"
-       x="498.86823"
-       y="-285.39505"
+       x="715.30469"
+       y="-503.12216"
        transform="rotate(45)" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="543.9386"
-       y="156.24493"
+       x="850.9386"
+       y="155.33231"
        id="text85"><tspan
          sodipodi:role="line"
          style="stroke-width:0.264583"
-         x="543.9386"
-         y="156.24493"
+         x="850.9386"
+         y="155.33231"
          id="tspan85">4</tspan></text>
     <text
        xml:space="preserve"
@@ -1118,9 +1072,12 @@
        id="text86"><tspan
          sodipodi:role="line"
          id="tspan86"
-         style="stroke-width:0.264583" /></text>
+         style="stroke-width:0.264583"
+         x="545.84625"
+         y="154.00502" /></text>
     <g
-       id="g198">
+       id="g198"
+       transform="translate(306.99999)">
       <circle
          style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
          id="path86"
@@ -1131,82 +1088,83 @@
     <circle
        style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
        id="circle87"
-       cx="445.60928"
+       cx="752.60925"
        cy="148.34648"
        r="1.5" />
     <circle
        style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
        id="circle88"
-       cx="452.2583"
+       cx="759.2583"
        cy="166.4335"
        r="1.5" />
     <text
        xml:space="preserve"
        style="font-size:5.64444px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="506.14264"
-       y="160.23605"
+       x="813.14264"
+       y="159.32343"
        id="text89"><tspan
          sodipodi:role="line"
          id="tspan89"
          style="font-size:5.64444px;stroke-width:0.264583"
-         x="506.14264"
-         y="160.23605">LED[3:0]</tspan></text>
+         x="813.14264"
+         y="159.32343">LED[3:0]</tspan></text>
     <rect
        style="fill:#ffffff;stroke:none;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
        id="rect89"
        width="297"
        height="210"
-       x="614"
+       x="921"
        y="0" />
     <text
        xml:space="preserve"
        style="font-size:12.7px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="699.586"
+       x="1006.586"
        y="26.10705"
        id="text90"><tspan
          sodipodi:role="line"
          id="tspan90"
          style="font-size:12.7px;stroke-width:0.264583"
-         x="699.586"
+         x="1006.586"
          y="26.10705">3rd Layer (SSD_2Digit)</tspan></text>
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:2.00001, 4;stroke-dashoffset:0;paint-order:stroke fill markers"
        id="rect90"
        width="172.93628"
        height="109.6777"
-       x="670.18671"
+       x="977.18671"
        y="54.282265" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="670.83295"
+       x="977.83295"
        y="51.64257"
        id="text91"><tspan
          sodipodi:role="line"
          id="tspan91"
          style="stroke-width:0.264583"
-         x="670.83295"
+         x="977.83295"
          y="51.64257">SSD_2Digit</tspan></text>
     <rect
        style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect91"
        width="41.772358"
        height="1"
-       x="643.43744"
+       x="950.43744"
        y="81.594879" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="621.16077"
+       x="928.16077"
        y="83.913368"
        id="text92"><tspan
          sodipodi:role="line"
          id="tspan92"
          style="stroke-width:0.264583"
-         x="621.16077"
+         x="928.16077"
          y="83.913368">D0[3:0]</tspan></text>
     <g
-       id="g1">
+       id="g1"
+       transform="translate(306.99999)">
       <rect
          style="fill:#000000;stroke:none;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
          id="rect92"
@@ -1232,18 +1190,18 @@
        id="rect93"
        width="1"
        height="20"
-       x="423.37091"
-       y="-198.49838"
+       x="640.4527"
+       y="-415.58017"
        transform="rotate(45)" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="429.1087"
+       x="736.1087"
        y="164.30547"
        id="text94"><tspan
          sodipodi:role="line"
          style="stroke-width:0.264583"
-         x="429.1087"
+         x="736.1087"
          y="164.30547"
          id="tspan94">4</tspan></text>
     <rect
@@ -1251,18 +1209,18 @@
        id="rect94"
        width="1"
        height="20"
-       x="521.74115"
-       y="-416.14151"
+       x="738.82294"
+       y="-633.22327"
        transform="rotate(45)" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="652.5639"
+       x="959.5639"
        y="79.966858"
        id="text95"><tspan
          sodipodi:role="line"
          style="stroke-width:0.264583"
-         x="652.5639"
+         x="959.5639"
          y="79.966858"
          id="tspan95">4</tspan></text>
     <rect
@@ -1270,36 +1228,36 @@
        id="rect95"
        width="41.536835"
        height="1"
-       x="643.43744"
+       x="950.43744"
        y="97.483536" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="621.16077"
+       x="928.16077"
        y="99.802032"
        id="text96"><tspan
          sodipodi:role="line"
          id="tspan96"
          style="stroke-width:0.264583"
-         x="621.16077"
+         x="928.16077"
          y="99.802032">D1[3:0]</tspan></text>
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
        id="rect96"
        width="1"
        height="20"
-       x="532.97614"
-       y="-404.90656"
+       x="750.05792"
+       y="-621.98834"
        transform="rotate(45)" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="652.5639"
+       x="959.5639"
        y="95.855522"
        id="text97"><tspan
          sodipodi:role="line"
          style="stroke-width:0.264583"
-         x="652.5639"
+         x="959.5639"
          y="95.855522"
          id="tspan97">4</tspan></text>
     <rect
@@ -1307,161 +1265,161 @@
        id="rect97"
        width="34.443432"
        height="1"
-       x="643.43744"
+       x="950.43744"
        y="149.57396" />
     <text
        xml:space="preserve"
-       style="font-size:5.64444px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="617.70294"
+       style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
+       x="921.86035"
        y="152.08038"
        id="text98"><tspan
          sodipodi:role="line"
          id="tspan98"
-         style="font-size:5.64444px;stroke-width:0.264583"
-         x="617.70294"
+         style="font-size:6.35px;stroke-width:0.264583"
+         x="921.86035"
          y="152.08038">ScanCLK</tspan></text>
     <rect
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
        id="rect98"
        width="66.075798"
        height="14.867056"
-       x="770.69525"
+       x="1077.6952"
        y="69.097939" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="772.22418"
+       x="1079.2241"
        y="65.808105"
        id="text99"><tspan
          sodipodi:role="line"
          id="tspan99"
          style="stroke-width:0.264583"
-         x="772.22418"
+         x="1079.2241"
          y="65.808105">BCDToSevenSegment</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:5.64444px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="801.70691"
+       x="1108.7069"
        y="78.237473"
        id="text100"><tspan
          sodipodi:role="line"
          id="tspan100"
          style="font-size:5.64444px;stroke-width:0.264583"
-         x="801.70691"
+         x="1108.7069"
          y="78.237473">Segment[a:g]</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:5.64444px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="773.18933"
+       x="1080.1893"
        y="78.394569"
        id="text102"><tspan
          sodipodi:role="line"
          id="tspan102"
          style="font-size:5.64444px;stroke-width:0.264583"
-         x="773.18933"
+         x="1080.1893"
          y="78.394569">D[3:0]</tspan></text>
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999998;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect102"
        width="32.424892"
        height="1"
-       x="837.04077"
+       x="1144.0408"
        y="76.061722" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
        id="rect103"
        width="1"
        height="20"
-       x="658.63861"
-       y="-560.86401"
+       x="875.7204"
+       y="-777.9458"
        transform="rotate(45)" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="851.69934"
+       x="1158.6993"
        y="74.433716"
        id="text103"><tspan
          sodipodi:role="line"
          id="tspan103"
          style="stroke-width:0.264583"
-         x="851.69934"
+         x="1158.6993"
          y="74.433716">7</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="871.41498"
+       x="1178.4149"
        y="78.480988"
        id="text104"><tspan
          sodipodi:role="line"
          id="tspan104"
          style="stroke-width:0.264583"
-         x="871.41498"
+         x="1178.4149"
          y="78.480988">Segment[a:g]</tspan></text>
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999998;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect104"
        width="32.110413"
        height="1"
-       x="837.35522"
+       x="1144.3552"
        y="149.36679" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
        id="rect105"
        width="1"
        height="20"
-       x="710.47308"
-       y="-509.02951"
+       x="927.55487"
+       y="-726.11127"
        transform="rotate(45)" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="851.69934"
+       x="1158.6993"
        y="147.73878"
        id="text105"><tspan
          sodipodi:role="line"
          style="stroke-width:0.264583"
-         x="851.69934"
+         x="1158.6993"
          y="147.73878"
          id="tspan105">2</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="871.41498"
+       x="1178.4149"
        y="151.78606"
        id="text106"><tspan
          sodipodi:role="line"
          id="tspan106"
          style="stroke-width:0.264583"
-         x="871.41498"
+         x="1178.4149"
          y="151.78606">Common[1:0]</tspan></text>
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.999999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
        id="rect106"
        width="46.363239"
        height="15.634119"
-       x="677.76862"
+       x="984.76862"
        y="142.2569" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="678.48029"
+       x="985.48029"
        y="139.6432"
        id="text107"><tspan
          sodipodi:role="line"
          id="tspan107"
          style="stroke-width:0.264583"
-         x="678.48029"
+         x="985.48029"
          y="139.6432">Counter_0-1</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:5.64444px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="685.92438"
+       x="992.92438"
        y="152.08037"
        id="text108"><tspan
          sodipodi:role="line"
          id="tspan108"
          style="font-size:5.64444px;stroke-width:0.264583"
-         x="685.92438"
+         x="992.92438"
          y="152.08037">CLK</tspan></text>
     <path
        sodipodi:type="star"
@@ -1480,77 +1438,77 @@
        d="m 421.32741,86.616592 -6.49171,3.747993 V 82.8686 Z"
        inkscape:transform-center-x="-1.081947"
        inkscape:transform-center-y="-1.0912327e-06"
-       transform="translate(262.9329,63.457354)" />
+       transform="translate(569.93289,63.457354)" />
     <text
        xml:space="preserve"
        style="font-size:5.64444px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="713.57306"
+       x="1020.5731"
        y="151.76895"
        id="text109"><tspan
          sodipodi:role="line"
          id="tspan109"
          style="font-size:5.64444px;stroke-width:0.264583"
-         x="713.57306"
+         x="1020.5731"
          y="151.76895">Q0</tspan></text>
     <path
        id="rect109"
        style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
-       d="m 733.20088,79.691644 v 35.622886 l -47.89838,9.53016 V 71.122297 Z"
+       d="m 1040.2009,79.691644 v 35.622886 l -47.89841,9.53016 V 71.122297 Z"
        sodipodi:nodetypes="ccccc" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="686.70038"
+       x="993.70038"
        y="69.168915"
        id="text110"><tspan
          sodipodi:role="line"
          id="tspan110"
          style="stroke-width:0.264583"
-         x="686.70038"
+         x="993.70038"
          y="69.168915">Mux2x1x4</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:5.64444px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="687.38397"
+       x="994.38397"
        y="83.957985"
        id="text111"><tspan
          sodipodi:role="line"
          id="tspan111"
          style="font-size:5.64444px;stroke-width:0.264583"
-         x="687.38397"
+         x="994.38397"
          y="83.957985">D0[3:0]</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:5.64444px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="687.38397"
+       x="994.38397"
        y="99.846588"
        id="text112"><tspan
          sodipodi:role="line"
          id="tspan112"
          style="font-size:5.64444px;stroke-width:0.264583"
-         x="687.38397"
+         x="994.38397"
          y="99.846588">D1[3:0]</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:5.64444px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="704.81512"
+       x="1011.8151"
        y="115.80687"
        id="text113"><tspan
          sodipodi:role="line"
          id="tspan113"
          style="font-size:5.64444px;stroke-width:0.264583"
-         x="704.81512"
+         x="1011.8151"
          y="115.80687">SEL</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:5.64444px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="715.58984"
+       x="1022.5898"
        y="99.846588"
        id="text114"><tspan
          sodipodi:role="line"
          id="tspan114"
          style="font-size:5.64444px;stroke-width:0.264583"
-         x="715.58984"
+         x="1022.5898"
          y="99.846588">Q[3:0]</tspan></text>
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999993;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
@@ -1558,21 +1516,21 @@
        width="24.067228"
        height="1"
        x="125.97371"
-       y="-732.59753"
+       y="-1039.5975"
        transform="rotate(90)" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect115"
        width="56.869762"
        height="1"
-       x="724.50311"
+       x="1031.5031"
        y="149.57396" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999998;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect116"
        width="30.581289"
        height="1"
-       x="733.37433"
+       x="1040.3743"
        y="97.483482" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.99999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
@@ -1580,76 +1538,58 @@
        width="21.500525"
        height="1"
        x="76.677795"
-       y="-763.95563"
+       y="-1070.9556"
        transform="rotate(90)" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999998;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect118"
        width="7.7465968"
        height="1"
-       x="762.95563"
+       x="1069.9556"
        y="76.031464" />
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.999998;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
        id="rect119"
        width="55.638546"
        height="13.494166"
-       x="781.48114"
+       x="1088.4811"
        y="143.06631" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="783.14648"
+       x="1090.1465"
        y="140.64845"
        id="text119"><tspan
          sodipodi:role="line"
          id="tspan119"
          style="stroke-width:0.264583"
-         x="783.14648"
+         x="1090.1465"
          y="140.64845">Decoder1x2</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:5.64444px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="784.43536"
+       x="1091.4353"
        y="151.81982"
        id="text120"><tspan
          sodipodi:role="line"
          id="tspan120"
          style="font-size:5.64444px;stroke-width:0.264583"
-         x="784.43536"
+         x="1091.4353"
          y="151.81982">A0</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:5.64444px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="820.25653"
+       x="1127.2565"
        y="151.6765"
        id="text121"><tspan
          sodipodi:role="line"
          id="tspan121"
          style="font-size:5.64444px;stroke-width:0.264583"
-         x="820.25653"
+         x="1127.2565"
          y="151.6765">D[1:0]</tspan></text>
     <rect
        style="fill:#ffffff;stroke:none;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
        id="rect123"
-       width="297"
-       height="210"
-       x="921"
-       y="0" />
-    <text
-       xml:space="preserve"
-       style="font-size:12.7px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="996.37268"
-       y="26.10705"
-       id="text123"><tspan
-         sodipodi:role="line"
-         id="tspan123"
-         style="font-size:12.7px;stroke-width:0.264583"
-         x="996.37268"
-         y="26.10705">3rd Layer (Counter_00-99)</tspan></text>
-    <rect
-       style="fill:#ffffff;stroke:none;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
-       id="rect124"
        width="297"
        height="210"
        x="1228"
@@ -1657,82 +1597,100 @@
     <text
        xml:space="preserve"
        style="font-size:12.7px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1314.141"
+       x="1303.3727"
+       y="26.10705"
+       id="text123"><tspan
+         sodipodi:role="line"
+         id="tspan123"
+         style="font-size:12.7px;stroke-width:0.264583"
+         x="1303.3727"
+         y="26.10705">3rd Layer (Counter_00-99)</tspan></text>
+    <rect
+       style="fill:#ffffff;stroke:none;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+       id="rect124"
+       width="297"
+       height="210"
+       x="1535"
+       y="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:12.7px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
+       x="1621.141"
        y="26.10705"
        id="text124"><tspan
          sodipodi:role="line"
          id="tspan124"
          style="font-size:12.7px;stroke-width:0.264583"
-         x="1314.141"
+         x="1621.141"
          y="26.10705">3rd Layer (LED_Driver)</tspan></text>
     <rect
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:2.00002, 4;stroke-dashoffset:0;paint-order:stroke fill markers"
        id="rect125"
        width="193.17061"
-       height="90.480774"
-       x="960.71362"
-       y="63.361721" />
+       height="116.45512"
+       x="1267.7136"
+       y="63.361725" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="961.30927"
+       x="1268.3092"
        y="60.233967"
        id="text125"><tspan
          sodipodi:role="line"
          id="tspan125"
          style="stroke-width:0.264583"
-         x="961.30927"
+         x="1268.3092"
          y="60.233967">Counter_00-99</tspan></text>
     <rect
-       style="fill:#000000;stroke:none;stroke-width:0.999995;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
+       style="fill:#000000;stroke:none;stroke-width:0.999999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect126"
-       width="20.524048"
+       width="118.24099"
        height="1"
-       x="951.18323"
-       y="121.37148" />
+       x="1258.1831"
+       y="166.65237" />
     <text
        xml:space="preserve"
-       style="font-size:5.64444px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="939.25305"
-       y="123.87791"
+       style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
+       x="1244.9714"
+       y="169.1588"
        id="text126"><tspan
          sodipodi:role="line"
          id="tspan126"
-         style="font-size:5.64444px;stroke-width:0.264583"
-         x="939.25305"
-         y="123.87791">CLK</tspan></text>
+         style="font-size:6.35px;stroke-width:0.264583"
+         x="1244.9714"
+         y="169.1588">CLK</tspan></text>
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.99999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect127"
        width="7.0214887"
        height="1"
        x="119.95222"
-       y="-709.45587"
+       y="-1016.4559"
        transform="rotate(90)" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999998;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect128"
        width="23.19021"
        height="1"
-       x="708.95789"
+       x="1015.9579"
        y="125.97371" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
        id="rect129"
        width="1"
        height="20"
-       x="598.75073"
-       y="-470.68118"
+       x="815.83252"
+       y="-687.76294"
        transform="rotate(45)" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="745.58325"
+       x="1052.5833"
        y="95.855484"
        id="text129"><tspan
          sodipodi:role="line"
          style="stroke-width:0.264583"
-         x="745.58325"
+         x="1052.5833"
          y="95.855484"
          id="tspan129">4</tspan></text>
     <rect
@@ -1740,52 +1698,41 @@
        id="rect130"
        width="58.840496"
        height="46.819744"
-       x="971.9162"
+       x="1283.9578"
        y="98.461624" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="973.22156"
+       x="1285.2631"
        y="96.286232"
        id="text130"><tspan
          sodipodi:role="line"
          id="tspan130"
          style="stroke-width:0.264583"
-         x="973.22156"
+         x="1285.2631"
          y="96.286232">Counter_0-9</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="980.96985"
-       y="124.12873"
+       x="1293.0114"
+       y="136.17535"
        id="text131"><tspan
          sodipodi:role="line"
          id="tspan131"
          style="stroke-width:0.264583"
-         x="980.96985"
-         y="124.12873">CLK</tspan></text>
+         x="1293.0114"
+         y="136.17535">CLK</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="999.39441"
-       y="112.08208"
+       x="1311.4359"
+       y="111.92085"
        id="text132"><tspan
          sodipodi:role="line"
          id="tspan132"
          style="stroke-width:0.264583"
-         x="999.39441"
-         y="112.08208">Count[3:0]</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1012.3487"
-       y="136.17535"
-       id="text133"><tspan
-         sodipodi:role="line"
-         id="tspan133"
-         style="stroke-width:0.264583"
-         x="1012.3487"
-         y="136.17535">CLKO</tspan></text>
+         x="1311.4359"
+         y="111.92085">Count[3:0]</tspan></text>
     <path
        sodipodi:type="star"
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
@@ -1803,192 +1750,141 @@
        d="m 421.32741,86.616592 -6.49171,3.747993 V 82.8686 Z"
        inkscape:transform-center-x="-1.081947"
        inkscape:transform-center-y="-1.0912327e-06"
-       transform="translate(557.08054,35.254901)" />
+       transform="translate(869.12214,47.301535)" />
     <rect
-       style="fill:#000000;stroke:none;stroke-width:0.999998;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
+       style="fill:#000000;stroke:none;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect137"
-       width="27.311184"
+       width="24.63587"
        height="1"
-       x="1030.9929"
-       y="133.91043" />
+       x="1342.5505"
+       y="133.41812" />
     <rect
-       style="fill:#000000;stroke:none;stroke-width:0.999998;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
+       style="fill:#000000;stroke:none;stroke-width:0.999999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect138"
-       width="14.484645"
+       width="21.614548"
        height="1"
-       x="1057.3041"
-       y="121.3715" />
+       x="1366.5562"
+       y="109.48608" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect139"
-       width="13.046692"
+       width="24.440714"
        height="1"
-       x="121.4163"
-       y="-1058.3041"
+       x="109.97741"
+       y="-1367.5562"
        transform="rotate(90)" />
     <rect
-       style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
+       style="fill:#000000;stroke:none;stroke-width:0.999999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect141"
-       width="25.125496"
+       width="15.687182"
        height="1"
-       x="1030.9929"
+       x="1342.5054"
        y="109.32485" />
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
        id="rect144"
        width="58.840496"
        height="46.819744"
-       x="1071.9977"
+       x="1388.0099"
        y="98.461624" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1073.3031"
+       x="1389.3153"
        y="96.286232"
        id="text144"><tspan
          sodipodi:role="line"
          id="tspan144"
          style="stroke-width:0.264583"
-         x="1073.3031"
+         x="1389.3153"
          y="96.286232">Counter_0-9</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1081.0514"
-       y="124.12873"
-       id="text145"><tspan
-         sodipodi:role="line"
-         id="tspan145"
-         style="stroke-width:0.264583"
-         x="1081.0514"
-         y="124.12873">CLK</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1099.476"
-       y="112.08208"
-       id="text146"><tspan
-         sodipodi:role="line"
-         id="tspan146"
-         style="stroke-width:0.264583"
-         x="1099.476"
-         y="112.08208">Count[3:0]</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1112.4302"
-       y="136.17535"
-       id="text147"><tspan
-         sodipodi:role="line"
-         id="tspan147"
-         style="stroke-width:0.264583"
-         x="1112.4302"
-         y="136.17535">CLKO</tspan></text>
-    <path
-       sodipodi:type="star"
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
-       id="path147"
-       inkscape:flatsided="true"
-       sodipodi:sides="3"
-       sodipodi:cx="416.9996"
-       sodipodi:cy="86.616592"
-       sodipodi:r1="4.3278089"
-       sodipodi:r2="2.1639044"
-       sodipodi:arg1="0"
-       sodipodi:arg2="1.0471976"
-       inkscape:rounded="0"
-       inkscape:randomized="0"
-       d="m 421.32741,86.616592 -6.49171,3.747993 V 82.8686 Z"
-       inkscape:transform-center-x="-1.081947"
-       inkscape:transform-center-y="-1.0912327e-06"
-       transform="translate(657.16206,35.254901)" />
     <rect
-       style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
+       style="fill:#000000;stroke:none;stroke-width:0.999992;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect147"
-       width="14.427126"
+       width="9.3198853"
        height="1"
-       x="1131.0745"
+       x="1447.0867"
        y="133.91043" />
     <rect
-       style="fill:#000000;stroke:none;stroke-width:0.999995;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
+       style="fill:#000000;stroke:none;stroke-width:0.999999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect150"
-       width="49.940861"
+       width="41.099781"
        height="1"
-       x="1131.0745"
+       x="1446.9155"
        y="109.32485" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
        id="rect151"
        width="1"
        height="20"
-       x="903.1264"
-       y="-758.31055"
+       x="1120.2081"
+       y="-975.39233"
        transform="rotate(45)" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1164.194"
+       x="1471.194"
        y="107.69684"
        id="text151"><tspan
          sodipodi:role="line"
          style="stroke-width:0.264583"
-         x="1164.194"
+         x="1471.194"
          y="107.69684"
          id="tspan151">4</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:5.64444px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1182.2789"
-       y="77.860916"
+       style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
+       x="1489.2789"
+       y="78.470665"
        id="text152"><tspan
          sodipodi:role="line"
          id="tspan152"
-         style="font-size:5.64444px;stroke-width:0.264583"
-         x="1182.2789"
-         y="77.860916">D0[3:0]</tspan></text>
+         style="font-size:6.35px;stroke-width:0.264583"
+         x="1489.2789"
+         y="78.470665">D0[3:0]</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:5.64444px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1182.2789"
-       y="111.68796"
+       style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
+       x="1489.2789"
+       y="111.92085"
        id="text153"><tspan
          sodipodi:role="line"
          id="tspan153"
-         style="font-size:5.64444px;stroke-width:0.264583"
-         x="1182.2789"
-         y="111.68796">D1[3:0]</tspan></text>
+         style="font-size:6.35px;stroke-width:0.264583"
+         x="1489.2789"
+         y="111.92085">D1[3:0]</tspan></text>
     <rect
        style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect153"
        width="33.944633"
        height="1"
        x="75.874672"
-       y="-1056.1184"
+       y="-1358.1925"
        transform="rotate(90)" />
     <rect
-       style="fill:#000000;stroke:none;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
+       style="fill:#000000;stroke:none;stroke-width:0.999993;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect154"
-       width="125.32204"
+       width="130.16731"
        height="1"
-       x="1055.6932"
+       x="1357.8479"
        y="75.874672" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
        id="rect155"
        width="1"
        height="20"
-       x="879.47351"
-       y="-781.96344"
+       x="1096.5553"
+       y="-999.04523"
        transform="rotate(45)" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1164.194"
+       x="1471.194"
        y="74.246605"
        id="text155"><tspan
          sodipodi:role="line"
          style="stroke-width:0.264583"
-         x="1164.194"
+         x="1471.194"
          y="74.246605"
          id="tspan155">4</tspan></text>
     <rect
@@ -1996,128 +1892,128 @@
        id="rect156"
        width="193.17061"
        height="156.70102"
-       x="1279.9147"
+       x="1586.9147"
        y="41.561825" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1280.8357"
+       x="1587.8357"
        y="38.596756"
        id="text156"><tspan
          sodipodi:role="line"
          id="tspan156"
          style="stroke-width:0.264583"
-         x="1280.8357"
+         x="1587.8357"
          y="38.596756">LED_Driver</tspan></text>
     <rect
        style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect157"
        width="67.603889"
        height="1"
-       x="1254.8105"
-       y="110.22758" />
+       x="1561.8105"
+       y="102.887" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1232.5341"
-       y="112.54607"
+       x="1539.5341"
+       y="105.20549"
        id="text157"><tspan
          sodipodi:role="line"
          id="tspan157"
          style="stroke-width:0.264583"
-         x="1232.5341"
-         y="112.54607">D0[3:0]</tspan></text>
+         x="1539.5341"
+         y="105.20549">D0[3:0]</tspan></text>
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
        id="rect158"
        width="1"
        height="20"
-       x="974.29358"
-       y="-828.20129"
+       x="1186.1848"
+       y="-1050.4736"
        transform="rotate(45)" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1263.9371"
-       y="108.59956"
+       x="1570.9371"
+       y="101.25899"
        id="text158"><tspan
          sodipodi:role="line"
          style="stroke-width:0.264583"
-         x="1263.9371"
-         y="108.59956"
+         x="1570.9371"
+         y="101.25899"
          id="tspan158">4</tspan></text>
     <rect
        style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect159"
        width="67.693741"
        height="1"
-       x="1254.8107"
-       y="126.54646" />
+       x="1561.8107"
+       y="119.20589" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1232.5341"
-       y="128.86497"
+       x="1539.5341"
+       y="121.5244"
        id="text159"><tspan
          sodipodi:role="line"
          id="tspan159"
          style="stroke-width:0.264583"
-         x="1232.5341"
-         y="128.86497">D1[3:0]</tspan></text>
+         x="1539.5341"
+         y="121.5244">D1[3:0]</tspan></text>
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
        id="rect160"
        width="1"
        height="20"
-       x="985.83276"
-       y="-816.66211"
+       x="1197.724"
+       y="-1038.9344"
        transform="rotate(45)" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1263.9371"
-       y="124.91846"
+       x="1570.9371"
+       y="117.57788"
        id="text160"><tspan
          sodipodi:role="line"
          style="stroke-width:0.264583"
-         x="1263.9371"
-         y="124.91846"
+         x="1570.9371"
+         y="117.57788"
          id="tspan160">4</tspan></text>
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999998;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect161"
        width="32.110413"
        height="1"
-       x="1465.3632"
+       x="1772.3632"
        y="78.763046" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1499.423"
+       x="1806.423"
        y="81.359047"
        id="text161"><tspan
          sodipodi:role="line"
          id="tspan161"
          style="stroke-width:0.264583"
-         x="1499.423"
+         x="1806.423"
          y="81.359047">LED[3:0]</tspan></text>
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
        id="rect162"
        width="1"
        height="20"
-       x="1104.6174"
-       y="-1003.0226"
+       x="1321.6992"
+       y="-1220.1044"
        transform="rotate(45)" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1479.7073"
+       x="1786.7073"
        y="77.135048"
        id="text162"><tspan
          sodipodi:role="line"
          style="stroke-width:0.264583"
-         x="1479.7073"
+         x="1786.7073"
          y="77.135048"
          id="tspan162">4</tspan></text>
     <rect
@@ -2125,389 +2021,389 @@
        id="rect163"
        width="35.924004"
        height="32.300652"
-       x="1322.7146"
-       y="102.98898" />
+       x="1629.7146"
+       y="95.648407" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1322.8649"
-       y="100.68839"
+       x="1629.8649"
+       y="93.347816"
        id="text163"><tspan
          sodipodi:role="line"
          id="tspan163"
          style="stroke-width:0.264583"
-         x="1322.8649"
-         y="100.68839">Compare2x4</tspan></text>
+         x="1629.8649"
+         y="93.347816">Compare2x4</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:5.64444px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1325.6305"
-       y="112.59069"
+       x="1632.6305"
+       y="105.25011"
        id="text164"><tspan
          sodipodi:role="line"
          id="tspan164"
          style="font-size:5.64444px;stroke-width:0.264583"
-         x="1325.6305"
-         y="112.59069">D0[3:0]</tspan></text>
+         x="1632.6305"
+         y="105.25011">D0[3:0]</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:5.64444px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1325.6305"
-       y="128.90956"
+       x="1632.6305"
+       y="121.56898"
        id="text165"><tspan
          sodipodi:role="line"
          id="tspan165"
          style="font-size:5.64444px;stroke-width:0.264583"
-         x="1325.6305"
-         y="128.90956">D1[3:0]</tspan></text>
+         x="1632.6305"
+         y="121.56898">D1[3:0]</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:5.64444px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1349.1113"
-       y="120.83428"
+       x="1656.1113"
+       y="113.49371"
        id="text166"><tspan
          sodipodi:role="line"
          id="tspan166"
          style="font-size:5.64444px;stroke-width:0.264583"
-         x="1349.1113"
-         y="120.83428">EQ</tspan></text>
+         x="1656.1113"
+         y="113.49371">EQ</tspan></text>
     <rect
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
        id="rect166"
        width="35.761318"
        height="32.300652"
-       x="1322.7146"
+       x="1629.7146"
        y="157.05598" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1322.8649"
+       x="1629.8649"
        y="154.7554"
        id="text167"><tspan
          sodipodi:role="line"
          id="tspan167"
          style="stroke-width:0.264583"
-         x="1322.8649"
+         x="1629.8649"
          y="154.7554">Compare2x4</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:5.64444px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1325.6305"
+       x="1632.6305"
        y="166.65771"
        id="text168"><tspan
          sodipodi:role="line"
          id="tspan168"
          style="font-size:5.64444px;stroke-width:0.264583"
-         x="1325.6305"
+         x="1632.6305"
          y="166.65771">D0[3:0]</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:5.64444px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1325.6305"
+       x="1632.6305"
        y="182.97661"
        id="text169"><tspan
          sodipodi:role="line"
          id="tspan169"
          style="font-size:5.64444px;stroke-width:0.264583"
-         x="1325.6305"
+         x="1632.6305"
          y="182.97661">D1[3:0]</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:5.64444px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1348.7859"
+       x="1655.7859"
        y="174.90131"
        id="text170"><tspan
          sodipodi:role="line"
          id="tspan170"
          style="font-size:5.64444px;stroke-width:0.264583"
-         x="1348.7859"
+         x="1655.7859"
          y="174.90131">EQ</tspan></text>
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999996;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect170"
        width="20.580261"
        height="1"
-       x="1302.0906"
+       x="1609.0906"
        y="180.61356" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
        id="rect171"
        width="1"
        height="20"
-       x="1055.4625"
-       y="-809.82935"
+       x="1272.5443"
+       y="-1026.9111"
        transform="rotate(45)" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1308.3412"
+       x="1615.3412"
        y="178.98555"
        id="text171"><tspan
          sodipodi:role="line"
          style="stroke-width:0.264583"
-         x="1308.3412"
+         x="1615.3412"
          y="178.98555"
          id="tspan171">4</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1282.5751"
+       x="1589.5751"
        y="183.46381"
        id="text172"><tspan
          sodipodi:role="line"
          id="tspan172"
          style="stroke-width:0.264583"
-         x="1282.5751"
+         x="1589.5751"
          y="183.46381">&quot;0000&quot;</tspan></text>
     <rect
        style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect172"
        width="21.129122"
        height="1"
-       x="1301.864"
+       x="1608.864"
        y="164.2946" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect173"
-       width="38.028419"
+       width="45.288326"
        height="1"
-       x="126.97098"
-       y="-1302.864"
+       x="119.71106"
+       y="-1609.864"
        transform="rotate(90)" />
     <path
        id="path173"
        style="fill:none;stroke:#000000;stroke-width:0.999998;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
-       d="m 1465.2542,60.971216 v 35.622883 l -42.6066,9.530161 V 52.401869 Z"
+       d="m 1772.2542,60.971216 v 35.622883 l -42.6066,9.530161 V 52.401869 Z"
        sodipodi:nodetypes="ccccc" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1418.7539"
+       x="1725.7539"
        y="50.448486"
        id="text173"><tspan
          sodipodi:role="line"
          id="tspan173"
          style="stroke-width:0.264583"
-         x="1418.7539"
+         x="1725.7539"
          y="50.448486">Mux2x1x4</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:5.64444px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1424.269"
+       x="1731.269"
        y="65.237564"
        id="text174"><tspan
          sodipodi:role="line"
          id="tspan174"
          style="font-size:5.64444px;stroke-width:0.264583"
-         x="1424.269"
+         x="1731.269"
          y="65.237564">D0[3:0]</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:5.64444px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1424.269"
+       x="1731.269"
        y="81.126167"
        id="text175"><tspan
          sodipodi:role="line"
          id="tspan175"
          style="font-size:5.64444px;stroke-width:0.264583"
-         x="1424.269"
+         x="1731.269"
          y="81.126167">D1[3:0]</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:5.64444px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1439.1127"
+       x="1746.1127"
        y="97.086449"
        id="text176"><tspan
          sodipodi:role="line"
          id="tspan176"
          style="font-size:5.64444px;stroke-width:0.264583"
-         x="1439.1127"
+         x="1746.1127"
          y="97.086449">SEL</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:5.64444px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1447.6434"
+       x="1754.6434"
        y="81.126167"
        id="text177"><tspan
          sodipodi:role="line"
          id="tspan177"
          style="font-size:5.64444px;stroke-width:0.264583"
-         x="1447.6434"
+         x="1754.6434"
          y="81.126167">Q[3:0]</tspan></text>
     <path
        id="path177"
        style="fill:none;stroke:#000000;stroke-width:0.999998;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
-       d="m 1443.1098,138.39049 v 35.62289 l -42.6066,9.53016 v -53.72239 z"
+       d="m 1750.1098,138.39049 v 35.62289 l -42.6066,9.53016 v -53.72239 z"
        sodipodi:nodetypes="ccccc" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1401.4409"
+       x="1708.4409"
        y="127.86777"
        id="text178"><tspan
          sodipodi:role="line"
          id="tspan178"
          style="stroke-width:0.264583"
-         x="1401.4409"
+         x="1708.4409"
          y="127.86777">Mux2x1x4</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:5.64444px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1402.6997"
+       x="1709.6997"
        y="142.1967"
        id="text179"><tspan
          sodipodi:role="line"
          id="tspan179"
          style="font-size:5.64444px;stroke-width:0.264583"
-         x="1402.6997"
+         x="1709.6997"
          y="142.1967">D0[3:0]</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:5.64444px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1402.6997"
+       x="1709.6997"
        y="158.51558"
        id="text180"><tspan
          sodipodi:role="line"
          id="tspan180"
          style="font-size:5.64444px;stroke-width:0.264583"
-         x="1402.6997"
+         x="1709.6997"
          y="158.51558">D1[3:0]</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:5.64444px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1416.9683"
+       x="1723.9683"
        y="174.50572"
        id="text181"><tspan
          sodipodi:role="line"
          id="tspan181"
          style="font-size:5.64444px;stroke-width:0.264583"
-         x="1416.9683"
+         x="1723.9683"
          y="174.50572">SEL</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:5.64444px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1425.4989"
+       x="1732.4989"
        y="158.54544"
        id="text182"><tspan
          sodipodi:role="line"
          id="tspan182"
          style="font-size:5.64444px;stroke-width:0.264583"
-         x="1425.4989"
+         x="1732.4989"
          y="158.54544">Q[3:0]</tspan></text>
     <rect
        style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect182"
        width="85.717468"
        height="1"
-       x="1358.7335"
-       y="118.63931" />
+       x="1665.7335"
+       y="111.29873" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999994;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect183"
-       width="18.159384"
+       width="11.302803"
        height="1"
-       x="101.32955"
-       y="-1444.4509"
+       x="100.99593"
+       y="-1751.4509"
        transform="rotate(90)" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999996;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect184"
        width="20.580261"
        height="1"
-       x="1402.0908"
+       x="1709.0908"
        y="62.874569" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
        id="rect185"
        width="1"
        height="20"
-       x="1042.9192"
-       y="-963.79419"
+       x="1260.001"
+       y="-1180.876"
        transform="rotate(45)" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1408.3414"
+       x="1715.3414"
        y="61.246563"
        id="text185"><tspan
          sodipodi:role="line"
          style="stroke-width:0.264583"
-         x="1408.3414"
+         x="1715.3414"
          y="61.246563"
          id="tspan185">4</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1382.5753"
+       x="1689.5753"
        y="65.724823"
        id="text186"><tspan
          sodipodi:role="line"
          id="tspan186"
          style="stroke-width:0.264583"
-         x="1382.5753"
+         x="1689.5753"
          y="65.724823">&quot;0000&quot;</tspan></text>
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect186"
        width="24.721565"
        height="1"
-       x="1443.2401"
+       x="1750.2401"
        y="156.18245" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
        id="rect187"
        width="1"
        height="20"
-       x="1137.9949"
-       y="-926.91248"
+       x="1355.0767"
+       y="-1143.9943"
        transform="rotate(45)" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1449.4907"
+       x="1756.4907"
        y="154.55444"
        id="text187"><tspan
          sodipodi:role="line"
          style="stroke-width:0.264583"
-         x="1449.4907"
+         x="1756.4907"
          y="154.55444"
          id="tspan187">4</tspan></text>
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999992;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect188"
-       width="60.968594"
+       width="61.775249"
        height="1"
-       x="1406.9202"
-       y="111.37563" />
+       x="1713.626"
+       y="117.58689" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect189"
-       width="45.806828"
+       width="39.353577"
        height="1"
-       x="111.37563"
-       y="-1468.4012"
+       x="117.82889"
+       y="-1775.4012"
        transform="rotate(90)" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect190"
-       width="33.040081"
+       width="39.573997"
        height="1"
-       x="79.335556"
-       y="-1407.3221"
+       x="79.012894"
+       y="-1714.3221"
        transform="rotate(90)" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999996;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect191"
        width="16.309759"
        height="1"
-       x="1406.3221"
+       x="1713.3221"
        y="78.763062" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999994;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect192"
        width="52.211555"
        height="1"
-       x="1369.3347"
+       x="1676.3347"
        y="189.75877" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999995;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
@@ -2515,7 +2411,7 @@
        width="12.01017"
        height="1"
        x="178.7486"
-       y="-1422.3065"
+       y="-1729.3065"
        transform="rotate(90)" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999995;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
@@ -2523,62 +2419,62 @@
        width="17.734129"
        height="1"
        x="173.02464"
-       y="-1369.9139"
+       y="-1676.9139"
        transform="rotate(90)" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect195"
        width="11.408561"
        height="1"
-       x="1358.5054"
+       x="1665.5054"
        y="172.70631" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999996;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect196"
        width="19.544935"
        height="1"
-       x="1381.0109"
+       x="1688.0109"
        y="156.68663" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
        id="rect197"
        width="1"
        height="20"
-       x="1094.3486"
-       y="-882.55334"
+       x="1311.4304"
+       y="-1099.6351"
        transform="rotate(45)" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1387.2615"
+       x="1694.2615"
        y="155.05862"
        id="text197"><tspan
          sodipodi:role="line"
          style="stroke-width:0.264583"
-         x="1387.2615"
+         x="1694.2615"
          y="155.05862"
          id="tspan197">4</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1361.7255"
+       x="1668.7255"
        y="159.53688"
        id="text198"><tspan
          sodipodi:role="line"
          id="tspan198"
          style="stroke-width:0.264583"
-         x="1361.7255"
+         x="1668.7255"
          y="159.53688">&quot;1111&quot;</tspan></text>
     <rect
        style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect198"
        width="98.11599"
        height="1"
-       x="1302.4479"
+       x="1609.4479"
        y="139.83359" />
     <g
        id="g199"
-       transform="translate(872.94446,75.686867)">
+       transform="translate(1179.9445,75.686867)">
       <circle
          style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
          id="circle198"
@@ -2588,7 +2484,7 @@
     </g>
     <g
        id="g2"
-       transform="translate(12.598804,-27.493659)">
+       transform="translate(319.5988,-27.493659)">
       <rect
          style="fill:#000000;stroke:none;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
          id="rect1"
@@ -2611,7 +2507,7 @@
     </g>
     <g
        id="g3"
-       transform="translate(19.247821,-27.493659)">
+       transform="translate(326.24781,-27.493659)">
       <rect
          style="fill:#000000;stroke:none;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
          id="rect2"
@@ -2675,18 +2571,18 @@
        id="rect14"
        width="1"
        height="20"
-       x="1029.9169"
-       y="-821.40393"
+       x="1246.9987"
+       y="-1038.4857"
        transform="rotate(45)" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1298.4624"
+       x="1605.4624"
        y="152.73773"
        id="text14"><tspan
          sodipodi:role="line"
          style="stroke-width:0.264583"
-         x="1298.4624"
+         x="1605.4624"
          y="152.73773"
          id="tspan14">4</tspan></text>
     <rect
@@ -2694,23 +2590,23 @@
        id="rect15"
        width="1"
        height="20"
-       x="1066.4885"
-       y="-878.52686"
+       x="1283.5703"
+       y="-1095.6086"
        transform="rotate(45)" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1364.7145"
+       x="1671.7145"
        y="138.20584"
        id="text15"><tspan
          sodipodi:role="line"
          style="stroke-width:0.264583"
-         x="1364.7145"
+         x="1671.7145"
          y="138.20584"
          id="tspan15">4</tspan></text>
     <g
        id="g15"
-       transform="translate(872.94446,62.399742)">
+       transform="translate(1179.9445,55.059168)">
       <circle
          style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
          id="circle15"
@@ -2723,570 +2619,232 @@
        id="rect16"
        width="1"
        height="20"
-       x="1015.9808"
-       y="-835.34003"
+       x="1231.8647"
+       y="-1053.6195"
        transform="rotate(45)" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1298.4625"
-       y="133.02921"
+       x="1605.4625"
+       y="131.33522"
        id="text16"><tspan
          sodipodi:role="line"
          style="stroke-width:0.264583"
-         x="1298.4625"
-         y="133.02921"
+         x="1605.4625"
+         y="131.33522"
          id="tspan16">4</tspan></text>
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
        id="rect21"
        width="1"
        height="20"
-       x="1018.7806"
-       y="-849.6098"
+       x="1229.8162"
+       y="-1071.0265"
        transform="rotate(45)" />
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1310.5325"
-       y="124.91875"
+       x="1616.3224"
+       y="117.57817"
        id="text21"><tspan
          sodipodi:role="line"
          style="stroke-width:0.264583"
-         x="1310.5325"
-         y="124.91875"
+         x="1616.3224"
+         y="117.57817"
          id="tspan21">4</tspan></text>
-    <g
-       id="g27"
-       transform="translate(302.67798,85.427238)">
-      <circle
-         style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
-         id="circle27"
-         cx="429.41956"
-         cy="64.646721"
-         r="1.5" />
-    </g>
-    <rect
-       style="fill:#ffffff;stroke:none;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
-       id="rect32"
-       width="297"
-       height="210"
-       x="1535"
-       y="0" />
-    <use
-       xlink:href="#Not_Gate_Small"
-       style="fill:none;stroke:#000000;stroke-width:3.77953;stroke-dasharray:none"
-       id="use1-1"
-       transform="matrix(0.26458333,0,0,0.26458333,1712.973,36.698052)" />
+    <circle
+       style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
+       id="circle27"
+       cx="1039.0975"
+       cy="150.07396"
+       r="1.5" />
+    <circle
+       style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
+       id="circle44"
+       cx="1275.6318"
+       cy="167.15237"
+       r="1.5" />
     <text
        xml:space="preserve"
-       style="font-size:12.7px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1615.7552"
-       y="26.10705"
+       style="font-size:5.64444px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
+       x="682.78375"
+       y="168.35216"
+       id="text8"><tspan
+         sodipodi:role="line"
+         id="tspan8"
+         style="font-size:5.64444px;stroke-width:0.264583"
+         x="682.78375"
+         y="168.35216">CE</tspan></text>
+    <rect
+       style="fill:#000000;stroke:none;stroke-width:0.999995;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
+       id="rect23"
+       width="25.363987"
+       height="1"
+       x="1258.1832"
+       y="109.48608" />
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
+       x="1248.9805"
+       y="112.2433"
+       id="text23"><tspan
+         sodipodi:role="line"
+         id="tspan23"
+         style="font-size:6.35px;stroke-width:0.264583"
+         x="1248.9805"
+         y="112.2433">CE</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
+       x="1286.4579"
+       y="112.24331"
+       id="text24"><tspan
+         sodipodi:role="line"
+         id="tspan24"
+         style="stroke-width:0.264583"
+         x="1286.4579"
+         y="112.24331">CE</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
+       x="1328.0829"
+       y="136.17535"
+       id="text25"><tspan
+         sodipodi:role="line"
+         id="tspan25"
+         style="stroke-width:0.264583"
+         x="1328.0829"
+         y="136.17535">CEO</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
+       x="1397.0635"
+       y="136.17537"
+       id="text29"><tspan
+         sodipodi:role="line"
+         id="tspan29"
+         style="stroke-width:0.264583"
+         x="1397.0635"
+         y="136.17537">CLK</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
+       x="1415.488"
+       y="111.92085"
+       id="text30"><tspan
+         sodipodi:role="line"
+         id="tspan30"
+         style="stroke-width:0.264583"
+         x="1415.488"
+         y="111.92085">Count[3:0]</tspan></text>
+    <path
+       sodipodi:type="star"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
+       id="path30"
+       inkscape:flatsided="true"
+       sodipodi:sides="3"
+       sodipodi:cx="416.9996"
+       sodipodi:cy="86.616592"
+       sodipodi:r1="4.3278089"
+       sodipodi:r2="2.1639044"
+       sodipodi:arg1="0"
+       sodipodi:arg2="1.0471976"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 421.32741,86.616592 -6.49171,3.747993 V 82.8686 Z"
+       inkscape:transform-center-x="-1.081947"
+       inkscape:transform-center-y="-1.0912327e-06"
+       transform="translate(973.17417,47.301535)" />
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
+       x="1390.51"
+       y="112.24331"
        id="text34"><tspan
          sodipodi:role="line"
          id="tspan33"
-         style="font-size:12.7px;stroke-width:0.264583"
-         x="1615.7552"
-         y="26.10705">4th Layer (Compare2x4)</tspan></text>
-    <rect
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:2.00002, 4;stroke-dashoffset:0;paint-order:stroke fill markers"
-       id="rect34"
-       width="180.2641"
-       height="163.77388"
-       x="1601.277"
-       y="34.48896" />
+         style="stroke-width:0.264583"
+         x="1390.51"
+         y="112.24331">CE</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
+       x="1432.135"
+       y="136.17535"
+       id="text36"><tspan
+         sodipodi:role="line"
+         id="tspan36"
+         style="stroke-width:0.264583"
+         x="1432.135"
+         y="136.17535">CEO</tspan></text>
     <rect
        style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect40"
-       width="61.473301"
+       width="34.051987"
        height="1"
-       x="1576.1729"
-       y="111.82468" />
-    <text
-       xml:space="preserve"
-       style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1553.8964"
-       y="114.14317"
-       id="text49"><tspan
-         sodipodi:role="line"
-         id="tspan49"
-         style="stroke-width:0.264583"
-         x="1553.8964"
-         y="114.14317">D0[3:0]</tspan></text>
+       x="133.60039"
+       y="-1376.9199"
+       transform="rotate(90)" />
     <rect
-       style="fill:#000000;stroke:none;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
-       id="rect49"
-       width="1"
-       height="20"
-       x="1202.6604"
-       y="-1054.3096"
-       transform="rotate(45)" />
-    <text
-       xml:space="preserve"
-       style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1585.2994"
-       y="110.19666"
-       id="text56"><tspan
-         sodipodi:role="line"
-         style="stroke-width:0.264583"
-         x="1585.2994"
-         y="110.19666"
-         id="tspan56">4</tspan></text>
-    <rect
-       style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
-       id="rect68"
-       width="60.620876"
-       height="1"
-       x="1576.173"
-       y="190.59499" />
-    <text
-       xml:space="preserve"
-       style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1553.8964"
-       y="192.9135"
-       id="text71"><tspan
-         sodipodi:role="line"
-         id="tspan71"
-         style="stroke-width:0.264583"
-         x="1553.8964"
-         y="192.9135">D1[3:0]</tspan></text>
-    <rect
-       style="fill:#000000;stroke:none;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
-       id="rect77"
-       width="1"
-       height="20"
-       x="1258.3595"
-       y="-998.61047"
-       transform="rotate(45)" />
-    <text
-       xml:space="preserve"
-       style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1585.2994"
-       y="188.96698"
-       id="text80"><tspan
-         sodipodi:role="line"
-         style="stroke-width:0.264583"
-         x="1585.2994"
-         y="188.96698"
-         id="tspan80">4</tspan></text>
-    <rect
-       style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
-       id="rect86"
-       width="67.693741"
-       height="1"
-       x="-298.88464"
-       y="-1600.8082"
-       transform="rotate(105)" />
-    <path
-       id="rect87"
-       style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
-       d="m 1626.1348,145.08072 -12.2365,45.66697 0.9659,0.25892 12.3057,-45.92589 z" />
-    <path
-       id="rect88"
-       style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
-       d="m 1629.5769,164.94977 -6.9128,25.79792 0.9658,0.25889 6.9821,-26.05681 z" />
-    <path
-       id="rect99"
-       style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
-       d="m 1633.018,184.81885 -1.5885,5.92884 0.9663,0.2589 1.6578,-6.18774 z" />
-    <rect
-       style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
-       id="rect107"
-       width="67.693741"
-       height="1"
-       x="-374.7915"
-       y="-1580.469"
-       transform="rotate(105)" />
-    <path
-       id="path107"
-       style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
-       d="m 1626.1348,66.496165 -12.2365,45.666965 0.9659,0.25892 12.3057,-45.92589 z" />
-    <path
-       id="path109"
-       style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
-       d="m 1629.5769,86.365216 -6.9128,25.797914 0.9658,0.25889 6.9821,-26.056808 z" />
-    <path
-       id="path110"
-       style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
-       d="m 1633.018,106.2343 -1.5885,5.92884 0.9663,0.25889 1.6578,-6.18773 z" />
-    <rect
-       style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
-       id="rect23"
-       width="67.603889"
-       height="1"
-       x="1622.6274"
-       y="46.775871" />
-    <use
-       xlink:href="#Xor_Gate"
-       style="fill:none;stroke:#000000;stroke-width:3.77953;stroke-dasharray:none"
-       id="use1-2"
-       transform="matrix(0.26458333,0,0,0.26458333,1684.3197,36.698052)" />
-    <use
-       xlink:href="#Xor_Gate"
-       style="fill:none;stroke:#000000;stroke-width:3.77953;stroke-dasharray:none"
-       id="use23"
-       transform="matrix(0.26458333,0,0,0.26458333,1684.3197,56.57442)" />
-    <use
-       xlink:href="#Xor_Gate"
-       style="fill:none;stroke:#000000;stroke-width:3.77953;stroke-dasharray:none"
-       id="use24"
-       transform="matrix(0.26458333,0,0,0.26458333,1684.3197,96.327155)" />
-    <use
-       xlink:href="#Xor_Gate"
-       style="fill:none;stroke:#000000;stroke-width:3.77953;stroke-dasharray:none"
-       id="use25"
-       transform="matrix(0.26458333,0,0,0.26458333,1684.3197,76.450787)" />
-    <rect
-       style="fill:#000000;stroke:none;stroke-width:0.999998;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
-       id="rect25"
-       width="64.054604"
-       height="1"
-       x="1626.1283"
-       y="66.496162" />
-    <rect
-       style="fill:#000000;stroke:none;stroke-width:0.999998;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
-       id="rect33"
-       width="60.989307"
-       height="1"
-       x="1629.5734"
-       y="86.365211" />
-    <rect
-       style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
+       style="fill:#000000;stroke:none;stroke-width:0.999994;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect41"
-       width="57.218781"
+       width="12.028192"
        height="1"
-       x="1633.0232"
-       y="106.2343" />
+       x="1375.9199"
+       y="133.41812" />
     <rect
-       style="fill:#000000;stroke:none;stroke-width:0.999999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
-       id="rect42"
-       width="38.513882"
-       height="1"
-       x="1622.6274"
-       y="125.36045" />
-    <rect
-       style="fill:#000000;stroke:none;stroke-width:0.999995;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
+       style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect43"
-       width="40.056572"
+       width="34.051987"
        height="1"
-       x="1626.1283"
-       y="145.08075" />
+       x="133.60039"
+       y="-1276.1318"
+       transform="rotate(90)" />
     <rect
-       style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
+       style="fill:#000000;stroke:none;stroke-width:0.999994;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        id="rect44"
-       width="41.589218"
+       width="8.8054752"
        height="1"
-       x="1629.5734"
-       y="164.9498" />
+       x="1275.1318"
+       y="133.41812" />
     <rect
-       style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
-       id="rect45"
-       width="43.142624"
-       height="1"
-       x="1633.0232"
-       y="184.81888" />
-    <rect
-       style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
-       id="rect47"
-       width="30"
-       height="1"
-       x="1660.3018"
-       y="52.438698" />
-    <rect
-       style="fill:#000000;stroke:none;stroke-width:0.999999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
-       id="rect51"
-       width="25"
-       height="1"
-       x="1665.5995"
-       y="72.158997" />
-    <rect
-       style="fill:#000000;stroke:none;stroke-width:0.999999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
-       id="rect53"
-       width="20"
-       height="1"
-       x="1670.4135"
-       y="92.028046" />
-    <rect
-       style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
-       id="rect54"
-       width="15"
-       height="1"
-       x="1675.4033"
-       y="111.89713" />
-    <rect
-       style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
-       id="rect69"
-       width="73.108177"
-       height="1"
-       x="53.252274"
-       y="-1661.3018"
-       transform="rotate(90)" />
-    <rect
-       style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
-       id="rect78"
-       width="73.108177"
-       height="1"
-       x="72.972572"
-       y="-1666.5995"
-       transform="rotate(90)" />
-    <rect
-       style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
-       id="rect100"
-       width="73.108177"
-       height="1"
-       x="92.841621"
-       y="-1671.4135"
-       transform="rotate(90)" />
-    <rect
-       style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
-       id="rect101"
-       width="73.108177"
-       height="1"
-       x="112.7107"
-       y="-1676.4033"
-       transform="rotate(90)" />
-    <use
-       xlink:href="#Not_Gate_Small"
-       style="fill:none;stroke:#000000;stroke-width:3.77953;stroke-dasharray:none"
-       id="use101"
-       transform="matrix(0.26458333,0,0,0.26458333,1712.973,56.57442)" />
-    <use
-       xlink:href="#Not_Gate_Small"
-       style="fill:none;stroke:#000000;stroke-width:3.77953;stroke-dasharray:none"
-       id="use102"
-       transform="matrix(0.26458333,0,0,0.26458333,1712.973,76.450787)" />
-    <use
-       xlink:href="#Not_Gate_Small"
-       style="fill:none;stroke:#000000;stroke-width:3.77953;stroke-dasharray:none"
-       id="use103"
-       transform="matrix(0.26458333,0,0,0.26458333,1712.973,96.327155)" />
-    <rect
-       style="fill:#000000;stroke:none;stroke-width:0.999994;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
-       id="rect108"
-       width="19.112679"
-       height="0.95563388"
-       x="1703.8896"
-       y="89.202141" />
-    <rect
-       style="fill:#000000;stroke:none;stroke-width:0.999994;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
-       id="rect110"
-       width="19.112679"
-       height="0.95563388"
-       x="1703.8896"
-       y="69.325768" />
-    <rect
-       style="fill:#000000;stroke:none;stroke-width:0.999994;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
-       id="rect111"
-       width="19.112679"
-       height="0.95563388"
-       x="1703.8896"
-       y="49.449402" />
-    <rect
-       style="fill:#000000;stroke:none;stroke-width:0.999994;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
-       id="rect112"
-       width="19.112679"
-       height="0.95563388"
-       x="1703.8896"
-       y="109.07851" />
-    <use
-       xlink:href="#And_Gate"
-       style="fill:none;stroke:#000000;stroke-width:3.77953;stroke-dasharray:none"
-       id="use1-9"
-       transform="matrix(0.26458333,0,0,0.26458333,1754.9569,66.551806)" />
-    <rect
-       style="fill:#000000;stroke:none;stroke-width:0.999992;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
-       id="rect113"
-       width="15.200395"
-       height="0.95563388"
-       x="1746.244"
-       y="77.908943" />
-    <rect
-       style="fill:#000000;stroke:none;stroke-width:0.999992;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
-       id="rect120"
-       width="15.200395"
-       height="0.95563388"
-       x="1746.244"
-       y="80.530579" />
-    <rect
-       style="fill:#000000;stroke:none;stroke-width:0.999992;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
-       id="rect121"
-       width="8.7874756"
-       height="0.95563388"
-       x="1752.657"
-       y="83.152214" />
-    <rect
-       style="fill:#000000;stroke:none;stroke-width:0.999992;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
-       id="rect122"
-       width="8.7874756"
-       height="0.95563388"
-       x="1752.657"
-       y="75.287308" />
-    <rect
-       style="fill:#000000;stroke:none;stroke-width:0.999992;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
-       id="rect131"
-       width="15.88886"
-       height="0.95563388"
-       x="1730.9249"
-       y="69.325768" />
-    <rect
-       style="fill:#000000;stroke:none;stroke-width:0.999992;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
-       id="rect132"
-       width="15.86034"
-       height="0.95563388"
-       x="1730.9248"
-       y="89.202133" />
-    <rect
-       style="fill:#000000;stroke:none;stroke-width:0.99999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
-       id="rect133"
-       width="22.419851"
-       height="0.95563388"
-       x="1730.9248"
-       y="49.449402" />
-    <rect
-       style="fill:#000000;stroke:none;stroke-width:0.999992;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
-       id="rect134"
-       width="22.476891"
-       height="0.95563388"
-       x="1730.9249"
-       y="109.07851" />
-    <rect
-       style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
-       id="rect135"
-       width="9.167201"
-       height="1"
-       x="80.990562"
-       y="-1747.244"
-       transform="rotate(90)" />
-    <rect
-       style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
-       id="rect136"
-       width="9.167201"
-       height="1"
-       x="69.325768"
-       y="-1747.244"
-       transform="rotate(90)" />
-    <rect
-       style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
-       id="rect140"
-       width="26.735283"
-       height="1"
-       x="49.449402"
-       y="-1753.657"
-       transform="rotate(90)" />
-    <rect
-       style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
-       id="rect142"
-       width="26.735283"
-       height="1"
-       x="83.298859"
-       y="-1753.657"
-       transform="rotate(90)" />
-    <rect
-       style="fill:#000000;stroke:none;stroke-width:0.99999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
-       id="rect143"
-       width="22.419851"
-       height="0.95563388"
-       x="1774.7262"
-       y="79.303154" />
+       style="fill:#ffffff;stroke:none;stroke-width:0.999999;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+       id="rect408"
+       width="297"
+       height="210"
+       x="0"
+       y="0" />
     <text
        xml:space="preserve"
-       style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1800.4199"
-       y="81.876968"
-       id="text143"><tspan
+       style="font-size:16.9333px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;fill:#ff0000;stroke-width:0.264583"
+       x="110.30499"
+       y="61.746674"
+       id="text408"><tspan
          sodipodi:role="line"
-         id="tspan143"
-         style="stroke-width:0.264583"
-         x="1800.4199"
-         y="81.876968">EQ</tspan></text>
+         id="tspan408"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16.9333px;font-family:Roboto;-inkscape-font-specification:'Roboto Bold';fill:#ff0000;stroke-width:0.264583"
+         x="110.30499"
+         y="61.746674">WARNING</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1626.6785"
-       y="45.011627"
-       id="text148"><tspan
-         sodipodi:role="line"
-         id="tspan148"
-         style="stroke-width:0.264583"
-         x="1626.6785"
-         y="45.011627">D0[3]</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1630.1008"
-       y="64.404968"
-       id="text149"><tspan
-         sodipodi:role="line"
-         id="tspan149"
-         style="stroke-width:0.264583"
-         x="1630.1008"
-         y="64.404968">D0[2]</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1633.7513"
-       y="84.254623"
-       id="text150"><tspan
-         sodipodi:role="line"
-         id="tspan150"
-         style="stroke-width:0.264583"
-         x="1633.7513"
-         y="84.254623">D0[1]</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1635.8048"
-       y="104.33244"
-       id="text154"><tspan
-         sodipodi:role="line"
-         id="tspan154"
-         style="stroke-width:0.264583"
-         x="1635.8048"
-         y="104.33244">D0[0]</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1624.8533"
-       y="123.49761"
-       id="text183"><tspan
-         sodipodi:role="line"
-         id="tspan183"
-         style="stroke-width:0.264583"
-         x="1624.8533"
-         y="123.49761">D1[3]</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1627.8193"
-       y="143.11911"
-       id="text184"><tspan
-         sodipodi:role="line"
-         id="tspan184"
-         style="stroke-width:0.264583"
-         x="1627.8193"
-         y="143.11911">D1[2]</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1631.9261"
-       y="162.7406"
-       id="text188"><tspan
-         sodipodi:role="line"
-         id="tspan188"
-         style="stroke-width:0.264583"
-         x="1631.9261"
-         y="162.7406">D1[1]</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:6.35px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-width:0.264583"
-       x="1635.8048"
-       y="183.04657"
-       id="text189"><tspan
-         sodipodi:role="line"
-         id="tspan189"
-         style="stroke-width:0.264583"
-         x="1635.8048"
-         y="183.04657">D1[0]</tspan></text>
+       style="font-size:7.05556px;line-height:2;font-family:Roboto;-inkscape-font-specification:Roboto;white-space:pre;inline-size:252.57;display:inline;stroke-width:0.264583"
+       x="23.124283"
+       y="99.88533"
+       id="text409"
+       transform="translate(1.0565185e-8,1.0778979)"><tspan
+         x="23.124283"
+         y="99.88533"
+         id="tspan17">The content of this document is intended to be an example only.
+</tspan><tspan
+         x="23.124283"
+         y="113.99645"
+         id="tspan18">The design in this document is a simplified version made to be easier to draw a </tspan><tspan
+         x="23.124283"
+         y="128.10757"
+         id="tspan22">top-down design for and does NOT match with the actual implemetation.
+</tspan><tspan
+         x="23.124283"
+         y="142.2187"
+         id="tspan39">This document is NOT verified to be correct by neither any T.A. nor the professor.</tspan></text>
   </g>
 </svg>
