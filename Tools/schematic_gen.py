@@ -729,6 +729,7 @@ def generate_counter_schematic(
                 if sum_count > 9:
                     print("Unable to generate schematic: Too many sum terms")
                     raise ValueError("Too many sum terms")
+                or_gate_offset = x_offset + 32
                 or_gate = get_or_n_gate(
                     sum_count,
                     schematic.get_instance_name(),
@@ -736,7 +737,6 @@ def generate_counter_schematic(
                     base_y - 256,
                     90,
                 )
-                or_gate_offset = x_offset + 32
                 schematic.add_component(or_gate)
                 or_net = Net(schematic.get_net_name())
                 schematic.add_net(or_net)
@@ -1178,6 +1178,7 @@ def generate_counter_schematic(
     x_offset += 96
     x_offset -= gate_size * 32
     and_gate = And2(schematic.get_instance_name(), x_offset, base_y + 560, 0)
+    schematic.add_component(and_gate)
     and_gate.I0 = ce_net
     and_gate.I1 = tc_net
     and_gate.O = ceo_net
@@ -1187,7 +1188,6 @@ def generate_counter_schematic(
     ceo_net.add_wire(Wire(x_offset + 256, base_y + 464, x_offset + 288, base_y + 464))
     ceo_io.x = x_offset + 288
     ceo_io.y = base_y + 464
-    schematic.add_component(and_gate)
     tc_net.add_wire(Wire(x_offset - 176, base_y + 496, x_offset - 176, base_y + 656))
     tc_net.add_wire(Wire(x_offset - 176, base_y + 656, x_offset + 288, base_y + 656))
     tc_io.x = x_offset + 288
@@ -1873,6 +1873,7 @@ def generate_logic_schematic(
                             y_offset + gate_size * 64,
                             0,
                         )
+                        schematic.add_component(and_gate)
                         and_net = Net(schematic.get_net_name())
                         schematic.add_net(and_net)
                         and_gate.O = and_net
@@ -1915,7 +1916,6 @@ def generate_logic_schematic(
                                 y_offset + gate_size * 32 - 32,
                             )
                         )
-                        schematic.add_component(and_gate)
                         for k in range(gate_size):
                             term = product_terms[term_index]
                             if term == "False":
@@ -2034,6 +2034,7 @@ def generate_logic_schematic(
                     y_offset + slave_or_gate_size * 64,
                     0,
                 )
+                schematic.add_component(slave_or_gate)
                 or_net = Net(schematic.get_net_name())
                 schematic.add_net(or_net)
                 slave_or_gate.O = or_net
@@ -2062,7 +2063,6 @@ def generate_logic_schematic(
                         y_offset + slave_or_gate_size * 32 - 32,
                     )
                 )
-                schematic.add_component(slave_or_gate)
                 for j in range(slave_or_gate_size):
                     product_terms = expression[sum_term_index]
                     product_count = len(product_terms)
