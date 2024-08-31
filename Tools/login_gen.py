@@ -198,12 +198,12 @@ def main():
     if not enter_output_lsb_first:
         names = names[::-1]
     if input_mode == "1":
-        print(f"{names} -> {'.' * output_count}")
+        print(f"       {names} -> {'.' * output_count}")
         truth_table: list[tuple[str, str]] = []
         i = 0
         specified_input_count = 0
         while i < 2**input_count:
-            truth_row = input(f"{i:0{input_count}b} -> ")
+            truth_row = input(f"{i:>5d}. {i:0{input_count}b} -> ")
             if parse_input_as_decimal:
                 truth_row = parse_number(truth_row, False)
                 truth_row = f"{truth_row:0{output_count}b}"
@@ -211,17 +211,20 @@ def main():
             truth_row = truth_row.replace(" ", "")
             truth_row = truth_row.replace("x", "-").replace("X", "-")
             if not truth_row or truth_row == "-":
-                truth_row = "-" * output_count
-            else:
-                truth_row = truth_row.zfill(output_count)
-                specified_input_count += 1
+                i += 1
+                continue
+            truth_row = truth_row.zfill(output_count)
             if not re.match(r"^[01-]*$", truth_row) or len(truth_row) != output_count:
                 print(f"Invalid output: {truth_row}. Please try again.")
                 continue
             if not enter_output_lsb_first:
                 truth_row = truth_row[::-1]
             truth_table.append((f"{i:0{input_count}b}", truth_row))
+            specified_input_count += 1
             i += 1
+        if specified_input_count == 0:
+            print("No entries found. Exiting.")
+            return
         if os.name != "nt" or input_count <= 16:
             use_boom = False
         else:
