@@ -1,4 +1,3 @@
-import os
 import re
 from concurrent.futures import ProcessPoolExecutor
 from itertools import repeat
@@ -9,10 +8,10 @@ import pyeda.boolalg.expr
 import pyeda.boolalg.minimization
 import pyeda.boolalg.table
 import sympy
+import sympy.logic.boolalg
+import sympy.parsing
+import sympy.parsing.sympy_parser
 from colorama import Fore, Style
-
-import boom
-from schematic_gen import generate_logic_schematic
 
 colorama.init(autoreset=True)
 
@@ -208,106 +207,79 @@ def main():
     print("  2. Truth Table: Partial entries, input manually entered")
     print("  3. Equation: Sum of Products only")
     input_mode = choice_input("Select input mode: ", ["1", "2", "3"])
-    input_count = int(input("Enter the number of inputs: "))
-    output_count = int(input("Enter the number of outputs: "))
+    lut_size = int(input("LUT size: "))
+    if lut_size not in range(1, 7):
+        print("LUT size must be between 1 and 6. Exiting.")
+        return
+    lut_count = int(input("LUT count: "))
     if input_mode in "12":
-        parse_input_as_decimal = boolean_input(
-            "Parse input as decimal (y/N)? ", default=False
-        )
-        enter_output_lsb_first = boolean_input(
-            "Enter output LSB first (y/N)? ", default=False
-        )
+        parse_input_as_decimal = boolean_input("Parse input as decimal (y/N)? ", False)
+        names = [chr(ord("0") + i) for i in range(lut_size)]
+        names = "".join(names)
+        names = names[::-1]
+        output_names = [chr(ord("A") + i) for i in range(lut_count)]
+        output_names = "".join(output_names)
     else:
         parse_input_as_decimal = False
-        enter_output_lsb_first = False
-    names = [chr(ord("A") + i) for i in range(input_count)]
-    names = "".join(names)
-    if not enter_output_lsb_first:
+        names = [chr(ord("A") + i) for i in range(lut_size)]
+        names = "".join(names)
         names = names[::-1]
+        output_names = [chr(ord("0") + i) for i in range(lut_count)]
+        output_names = "".join(output_names)
+    replace_dontcares_with = boolean_input(
+        "Replace don't care values with True (y/N)? ", False
+    )
     if input_mode == "1":
-        print(f"       {names} -> {'.' * output_count}")
-        truth_table: list[tuple[str, str]] = []
+        print(f"       {names} -> {output_names}")
+        truth_table: list[tuple[int, str]] = []
         i = 0
-        specified_input_count = 0
-        while i < 2**input_count:
-            truth_row = input(f"{i:>5d}. {i:0{input_count}b} -> ")
+        while i < 2**lut_size:
+            truth_row = input(f"{i:>5d}. {i:0{lut_size}b} -> ")
             if parse_input_as_decimal:
                 truth_row = parse_number(truth_row, False)
-                truth_row = f"{truth_row:0{output_count}b}"
+                truth_row = f"{truth_row:0{lut_count}b}"
             truth_row = truth_row.strip()
             truth_row = truth_row.replace(" ", "")
             truth_row = truth_row.replace("x", "-").replace("X", "-")
             if not truth_row or truth_row == "-":
-                i += 1
-                continue
-            truth_row = truth_row.zfill(output_count)
-            if not re.match(r"^[01-]*$", truth_row) or len(truth_row) != output_count:
+                truth_row = "-" * lut_count
+            else:
+                truth_row = truth_row.zfill(lut_count)
+            if not re.match(r"^[01-]*$", truth_row) or len(truth_row) != lut_count:
                 print(f"Invalid output: {truth_row}. Please try again.")
                 continue
-            if not enter_output_lsb_first:
-                truth_row = truth_row[::-1]
-            truth_table.append((f"{i:0{input_count}b}", truth_row))
-            specified_input_count += 1
+            truth_table.append((i, truth_row))
             i += 1
-        if specified_input_count == 0:
-            print("No entries found. Exiting.")
-            return
-        if os.name != "nt" or input_count <= 12:
-            use_boom = False
-        else:
-            if specified_input_count <= 64 or input_count > 16:
-                use_boom = boolean_input("Use Boom heuristic algorithm? (Y/n): ", True)
-            else:
-                use_boom = boolean_input("Use Boom heuristic algorithm? (y/N): ", False)
-        if use_boom:
-            iterations_input = input("Enter the number of iterations (default: 50): ")
-            timeout_input = input("Enter the timeout in seconds (default: 30): ")
-            if iterations_input:
-                iterations = int(iterations_input)
-            else:
-                iterations = 50
-            if timeout_input:
-                timeout = int(timeout_input)
-            else:
-                timeout = 30
-            print(
-                "Simplifying to SOP form using Boom heuristic algorithm. "
-                + f"This may take up to approximately {timeout} seconds."
-            )
-            minimized_expressions = boom.simplify_multiple(
-                truth_table,  # type: ignore
-                names,
-                input_count,
-                output_count,
-                iterations,
-                timeout,
-            )
-        else:
-            print("Generating simplification data.")
-            simplification_data: list[dict[int, str]] = []
-            for _ in range(output_count):
-                simplification_data.append({})
-            for inp, outs in truth_table:
-                inp = int(inp, 2)
-                for i, out in enumerate(outs):
-                    simplification_data[i][inp] = out
-            minimized_expressions = simplify_multiple_to_sop(
-                simplification_data, names, input_count
-            )
-        print("Minimized expressions:")
-        for i, expression in enumerate(minimized_expressions):
-            print(f"  O{i} = {expression}")
-        print("Generating logic schematic.")
-        generate_logic_schematic(
-            minimized_expressions, input_count, output_count, "logic.sch"
-        )
-        print(Fore.LIGHTGREEN_EX + "Schematic exported to logic.sch")
+        simplification_data: list[dict[int, str]] = []
+        for _ in range(lut_count):
+            simplification_data.append({})
+        for inp, outs in truth_table:
+            for i, out in enumerate(outs):
+                simplification_data[i][inp] = out
+        out_binary_list: list[str] = []
+        for data in simplification_data:
+            out_list: list[str] = []
+            for num in range(2**lut_size):
+                if num not in data:
+                    out_list.append(str(int(replace_dontcares_with)))
+                else:
+                    if data[num] == "1":
+                        out_list.append("1")
+                    elif data[num] == "0":
+                        out_list.append("0")
+                    else:
+                        out_list.append(str(int(replace_dontcares_with)))
+            out_list.reverse()
+            out_binary_list.append("".join(out_list))
+        print("LUT INIT values:")
+        for i, data in enumerate(out_binary_list):
+            print(f"  F{output_names[i]} = {int(data, 2):0X}")
     elif input_mode == "2":
-        truth_table: list[tuple[str, str]] = []
+        truth_table: list[tuple[int, str]] = []
         print("Enter a blank line to stop input")
-        print(f"{names} {'.' * output_count}")
+        print(f"I.{names} {output_names}")
         while True:
-            truth_row = input("")
+            truth_row = input("  ")
             if not truth_row:
                 break
             if " " not in truth_row:
@@ -316,9 +288,9 @@ def main():
             inp, out = truth_row.split(" ")
             if parse_input_as_decimal:
                 inp = parse_number(inp, False)
-                inp = f"{inp:0{input_count}b}"
+                inp = f"{inp:0{lut_size}b}"
                 out = parse_number(out, False)
-                out = f"{out:0{output_count}b}"
+                out = f"{out:0{lut_count}b}"
             inp = inp.strip()
             out = out.strip()
             inp = inp.replace(" ", "")
@@ -326,78 +298,47 @@ def main():
             out = out.replace(" ", "")
             out = out.replace("x", "-").replace("X", "-")
             if not inp or inp == "-":
-                inp = "-" * input_count
+                inp = "-" * lut_size
             else:
-                inp = inp.zfill(input_count)
+                inp = inp.zfill(lut_size)
             if not out or out == "-":
-                out = "-" * output_count
+                out = "-" * lut_count
             else:
-                out = out.zfill(output_count)
-            if not re.match(r"^[01-]*$", inp) or len(inp) != input_count:
+                out = out.zfill(lut_count)
+            if not re.match(r"^[01-]*$", inp) or len(inp) != lut_size:
                 print(f"Invalid input: {inp}. Please try again.")
                 continue
-            if not re.match(r"^[01-]*$", out) or len(out) != output_count:
+            if not re.match(r"^[01-]*$", out) or len(out) != lut_count:
                 print(f"Invalid output: {out}. Please try again.")
                 continue
-            if not enter_output_lsb_first:
-                out = out[::-1]
-            truth_table.append((inp, out))
-        if len(truth_table) == 0:
-            print("No entries found. Exiting.")
-            return
-        if os.name != "nt" or input_count <= 12:
-            use_boom = False
-        else:
-            if len(truth_table) <= 64 or input_count > 16:
-                use_boom = boolean_input("Use Boom heuristic algorithm? (Y/n): ", True)
-            else:
-                use_boom = boolean_input("Use Boom heuristic algorithm? (y/N): ", False)
-        if use_boom:
-            iterations_input = input("Enter the number of iterations (default: 50): ")
-            timeout_input = input("Enter the timeout in seconds (default: 30): ")
-            if iterations_input:
-                iterations = int(iterations_input)
-            else:
-                iterations = 50
-            if timeout_input:
-                timeout = int(timeout_input)
-            else:
-                timeout = 30
-            print(
-                "Simplifying to SOP form using Boom heuristic algorithm. "
-                + f"This may take up to approximately {timeout} seconds."
-            )
-            minimized_expressions = boom.simplify_multiple(
-                truth_table,  # type: ignore
-                names,
-                input_count,
-                output_count,
-                iterations,
-                timeout,
-            )
-        else:
-            print("Generating simplification data.")
-            simplification_data: list[dict[int, str]] = []
-            for _ in range(output_count):
-                simplification_data.append({})
-            for inp, outs in truth_table:
-                inp = int(inp, 2)
-                for i, out in enumerate(outs):
-                    simplification_data[i][inp] = out
-            minimized_expressions = simplify_multiple_to_sop(
-                simplification_data, names, input_count
-            )
-        print("Minimized expressions:")
-        for i, expression in enumerate(minimized_expressions):
-            print(f"  O{i} = {expression}")
-        print("Generating logic schematic.")
-        generate_logic_schematic(
-            minimized_expressions, input_count, output_count, "logic.sch"
-        )
-        print(Fore.LIGHTGREEN_EX + "Schematic exported to logic.sch")
+            truth_table.append((int(inp, 2), out))
+        simplification_data: list[dict[int, str]] = []
+        for _ in range(lut_count):
+            simplification_data.append({})
+        for inp, outs in truth_table:
+            for i, out in enumerate(outs):
+                simplification_data[i][inp] = out
+        out_binary_list: list[str] = []
+        for data in simplification_data:
+            out_list: list[str] = []
+            for num in range(2**lut_size):
+                if num not in data:
+                    out_list.append(str(int(replace_dontcares_with)))
+                else:
+                    if data[num] == "1":
+                        out_list.append("1")
+                    elif data[num] == "0":
+                        out_list.append("0")
+                    else:
+                        out_list.append(str(int(replace_dontcares_with)))
+            out_list.reverse()
+            out_binary_list.append("".join(out_list))
+        print("LUT INIT values:")
+        for i, data in enumerate(out_binary_list):
+            print(f"  F{output_names[i]} = {int(data, 2):0X}")
     elif input_mode == "3":
-        print("Enter the equations in the format: Ox = <equation>")
-        print(f"Variable names: {', '.join(names)} (MSB to LSB)")
+        print("Enter the equations in the format: Fx = <equation>")
+        print(f"Variable names: {', '.join(names)} (MSB -> LSB)")
         print("Allowed operators:")
         print("  False: 0")
         print("  True: 1")
@@ -405,16 +346,41 @@ def main():
         print("  OR: | +")
         print("  NOT: ~ ! '")
         expressions = []
-        for i in range(output_count):
-            expression = input(f"  O{i} = ")
+        for i in range(lut_count):
+            expression = input(f"  F{output_names[i]} = ")
             expression = parse_equation(expression)
             expressions.append(expression)
         print("Parsed expressions:")
-        for i, expression in enumerate(expressions):
-            print(f"  O{i} = {prettify_expression(expression)}")
-        print("Generating logic schematic.")
-        generate_logic_schematic(expressions, input_count, output_count, "logic.sch")
-        print(Fore.LIGHTGREEN_EX + "Schematic exported to logic.sch")
+        out_binary_list: list[str] = []
+        for expression in expressions:
+            expr = sympy.parsing.sympy_parser.parse_expr(
+                prettify_expression(expression),
+                {name: sympy.symbols(name) for name in names},
+            )
+            print(f"  F{output_names[i]} = {expr}")
+            truthtable = sympy.logic.boolalg.truth_table(
+                expr, [sympy.symbols(name) for name in names]
+            )
+            out_list: list[str] = []
+            for row in truthtable:
+                val = row[-1]  # type: ignore
+                if isinstance(val, sympy.logic.boolalg.BooleanTrue):
+                    out_list.append("1")
+                elif isinstance(val, sympy.logic.boolalg.BooleanFalse):
+                    out_list.append("0")
+                else:
+                    val_str = str(val)
+                    if val_str.lower() in ("false", "0"):
+                        out_list.append("0")
+                    elif val_str.lower() in ("true", "1"):
+                        out_list.append("1")
+                    else:
+                        out_list.append(str(int(replace_dontcares_with)))
+            out_list.reverse()
+            out_binary_list.append("".join(out_list))
+        print("LUT INIT values:")
+        for i, data in enumerate(out_binary_list):
+            print(f"  F{output_names[i]} = {int(data, 2):0{2**lut_size//4}X}")
     print(Style.RESET_ALL)
 
 
