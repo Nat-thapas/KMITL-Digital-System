@@ -1,7 +1,0 @@
-verilog work "dabble.vf"
-verilog work "ssd4d0fbp.vf"
-verilog work "dd16b.vf"
-verilog work "clkdiv5.vf"
-verilog work "clkdiv20k.vf"
-verilog work "clkdiv200k.vf"
-verilog work "main.vf"

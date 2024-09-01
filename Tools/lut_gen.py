@@ -54,22 +54,24 @@ def parse_number(number_string: str, to_bcd: bool) -> int:
     return parsed_number
 
 
-def parse_equation(equation: str) -> str:
-    equation = equation.strip().upper()
-    equation = equation.replace(" ", "").replace("(", "").replace(")", "")
-    equation = equation.replace("FALSE", "False").replace("TRUE", "True")
-    equation = equation.replace("0", "False").replace("1", "True")
-    equation = equation.replace("AND", "&").replace("*", "&").replace(".", "&")
-    equation = equation.replace("OR", "|").replace("+", "|")
-    equation = equation.replace("NOT", "~").replace("!", "~")
-    if "'" in equation:
-        old_equation = equation
-        equation = ""
-        old_equation = old_equation.split("'")
-        for eq in old_equation:
+def parse_expression(expression: str, remove_parenthesis: bool = False) -> str:
+    expression = expression.strip().upper()
+    expression = expression.replace(" ", "")
+    if remove_parenthesis:
+        expression = expression.replace("(", "").replace(")", "")
+    expression = expression.replace("FALSE", "False").replace("TRUE", "True")
+    expression = expression.replace("0", "False").replace("1", "True")
+    expression = expression.replace("AND", "&").replace("*", "&").replace(".", "&")
+    expression = expression.replace("OR", "|").replace("+", "|")
+    expression = expression.replace("NOT", "~").replace("!", "~")
+    if "'" in expression:
+        old_expression = expression
+        expression = ""
+        old_expression = old_expression.split("'")
+        for eq in old_expression:
             if eq:
-                equation += eq[:-1] + "~" + eq[-1]
-    return equation
+                expression += eq[:-1] + "~" + eq[-1]
+    return expression
 
 
 def expression_to_string(
@@ -205,7 +207,9 @@ def main():
     print("Input modes:")
     print("  1. Truth Table: All entries, input automatically generated")
     print("  2. Truth Table: Partial entries, input manually entered")
-    print("  3. Equation: Sum of Products only")
+    print(
+        "  3. Equation: Any boolean equations (doesn't need to be minimized or in SOP form)"
+    )
     input_mode = choice_input("Select input mode: ", ["1", "2", "3"])
     lut_size = int(input("LUT size: "))
     if lut_size not in range(1, 7):
@@ -219,6 +223,9 @@ def main():
         names = names[::-1]
         output_names = [chr(ord("A") + i) for i in range(lut_count)]
         output_names = "".join(output_names)
+        reverse_lut_names = boolean_input("Reverse LUT names (y/N)? ", False)
+        if reverse_lut_names:
+            output_names = output_names[::-1]
     else:
         parse_input_as_decimal = False
         names = [chr(ord("A") + i) for i in range(lut_size)]
@@ -227,7 +234,7 @@ def main():
         output_names = [chr(ord("0") + i) for i in range(lut_count)]
         output_names = "".join(output_names)
     replace_dontcares_with = boolean_input(
-        "Replace don't care values with True (y/N)? ", False
+        "Replace don't care values with True instead of False (y/N)? ", False
     )
     if input_mode == "1":
         print(f"       {names} -> {output_names}")
@@ -235,19 +242,22 @@ def main():
         i = 0
         while i < 2**lut_size:
             truth_row = input(f"{i:>5d}. {i:0{lut_size}b} -> ")
-            if parse_input_as_decimal:
-                truth_row = parse_number(truth_row, False)
-                truth_row = f"{truth_row:0{lut_count}b}"
             truth_row = truth_row.strip()
             truth_row = truth_row.replace(" ", "")
             truth_row = truth_row.replace("x", "-").replace("X", "-")
             if not truth_row or truth_row == "-":
                 truth_row = "-" * lut_count
             else:
-                truth_row = truth_row.zfill(lut_count)
+                if parse_input_as_decimal:
+                    truth_row = parse_number(truth_row, False)
+                    truth_row = f"{truth_row:0{lut_count}b}"
+                else:
+                    truth_row = truth_row.zfill(lut_count)
             if not re.match(r"^[01-]*$", truth_row) or len(truth_row) != lut_count:
                 print(f"Invalid output: {truth_row}. Please try again.")
                 continue
+            if reverse_lut_names:
+                truth_row = truth_row[::-1]
             truth_table.append((i, truth_row))
             i += 1
         simplification_data: list[dict[int, str]] = []
@@ -273,7 +283,7 @@ def main():
             out_binary_list.append("".join(out_list))
         print("LUT INIT values:")
         for i, data in enumerate(out_binary_list):
-            print(f"  F{output_names[i]} = {int(data, 2):0X}")
+            print(f"  F{output_names[i]} = {int(data, 2):0{2**lut_size//4}X}")
     elif input_mode == "2":
         truth_table: list[tuple[int, str]] = []
         print("Enter a blank line to stop input")
@@ -286,11 +296,6 @@ def main():
                 print("Invalid input. Please try again.")
                 continue
             inp, out = truth_row.split(" ")
-            if parse_input_as_decimal:
-                inp = parse_number(inp, False)
-                inp = f"{inp:0{lut_size}b}"
-                out = parse_number(out, False)
-                out = f"{out:0{lut_count}b}"
             inp = inp.strip()
             out = out.strip()
             inp = inp.replace(" ", "")
@@ -300,17 +305,27 @@ def main():
             if not inp or inp == "-":
                 inp = "-" * lut_size
             else:
-                inp = inp.zfill(lut_size)
+                if parse_input_as_decimal:
+                    inp = parse_number(inp, False)
+                    inp = f"{inp:0{lut_size}b}"
+                else:
+                    inp = inp.zfill(lut_size)
             if not out or out == "-":
                 out = "-" * lut_count
             else:
-                out = out.zfill(lut_count)
+                if parse_input_as_decimal:
+                    out = parse_number(out, False)
+                    out = f"{out:0{lut_count}b}"
+                else:
+                    out = out.zfill(lut_count)
             if not re.match(r"^[01-]*$", inp) or len(inp) != lut_size:
                 print(f"Invalid input: {inp}. Please try again.")
                 continue
             if not re.match(r"^[01-]*$", out) or len(out) != lut_count:
                 print(f"Invalid output: {out}. Please try again.")
                 continue
+            if reverse_lut_names:
+                out = out[::-1]
             truth_table.append((int(inp, 2), out))
         simplification_data: list[dict[int, str]] = []
         for _ in range(lut_count):
@@ -335,7 +350,7 @@ def main():
             out_binary_list.append("".join(out_list))
         print("LUT INIT values:")
         for i, data in enumerate(out_binary_list):
-            print(f"  F{output_names[i]} = {int(data, 2):0X}")
+            print(f"  F{output_names[i]} = {int(data, 2):0{2**lut_size//4}X}")
     elif input_mode == "3":
         print("Enter the equations in the format: Fx = <equation>")
         print(f"Variable names: {', '.join(names)} (MSB -> LSB)")
@@ -345,21 +360,21 @@ def main():
         print("  AND: & * .")
         print("  OR: | +")
         print("  NOT: ~ ! '")
-        expressions = []
+        expressions: list[str] = []
         for i in range(lut_count):
             expression = input(f"  F{output_names[i]} = ")
-            expression = parse_equation(expression)
+            expression = parse_expression(expression)
             expressions.append(expression)
         print("Parsed expressions:")
         out_binary_list: list[str] = []
         for expression in expressions:
-            expr = sympy.parsing.sympy_parser.parse_expr(
-                prettify_expression(expression),
+            parsed_expression = sympy.parsing.sympy_parser.parse_expr(
+                expression,
                 {name: sympy.symbols(name) for name in names},
             )
-            print(f"  F{output_names[i]} = {expr}")
+            print(f"  F{output_names[i]} = {parsed_expression}")
             truthtable = sympy.logic.boolalg.truth_table(
-                expr, [sympy.symbols(name) for name in names]
+                parsed_expression, [sympy.symbols(name) for name in names]
             )
             out_list: list[str] = []
             for row in truthtable:

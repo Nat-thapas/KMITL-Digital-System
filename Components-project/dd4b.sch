@@ -23,7 +23,7 @@
         <signal name="T(2)" />
         <signal name="T(3)" />
         <port polarity="Input" name="B(3:0)" />
-        <port polarity="Input" name="O(3:0)" />
+        <port polarity="Output" name="O(3:0)" />
         <port polarity="Output" name="T(3:0)" />
         <blockdef name="dabble">
             <timestamp>2024-8-18T18:51:16</timestamp>

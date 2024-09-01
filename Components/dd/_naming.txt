@@ -1,1 +1,1 @@
-dd{input bit width}{b if bus is used}.sch
+dd{input bit width}{t if LUT is used in place of combinational logic}{b if bus is used}.sch

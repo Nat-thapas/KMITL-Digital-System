@@ -1,0 +1,1 @@
+buf{bit width}{b if bus is used}{e if enable input is available}.sch

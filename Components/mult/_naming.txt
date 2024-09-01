@@ -1,0 +1,1 @@
+mult{input A bit width}x{input B bit width}x{output bit width}.sch

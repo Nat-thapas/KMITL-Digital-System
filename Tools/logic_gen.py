@@ -9,6 +9,9 @@ import pyeda.boolalg.expr
 import pyeda.boolalg.minimization
 import pyeda.boolalg.table
 import sympy
+import sympy.logic
+import sympy.logic.boolalg
+import sympy.parsing.sympy_parser
 from colorama import Fore, Style
 
 import boom
@@ -55,22 +58,24 @@ def parse_number(number_string: str, to_bcd: bool) -> int:
     return parsed_number
 
 
-def parse_equation(equation: str) -> str:
-    equation = equation.strip().upper()
-    equation = equation.replace(" ", "").replace("(", "").replace(")", "")
-    equation = equation.replace("FALSE", "False").replace("TRUE", "True")
-    equation = equation.replace("0", "False").replace("1", "True")
-    equation = equation.replace("AND", "&").replace("*", "&").replace(".", "&")
-    equation = equation.replace("OR", "|").replace("+", "|")
-    equation = equation.replace("NOT", "~").replace("!", "~")
-    if "'" in equation:
-        old_equation = equation
-        equation = ""
-        old_equation = old_equation.split("'")
-        for eq in old_equation:
+def parse_expression(expression: str, remove_parenthesis: bool = False) -> str:
+    expression = expression.strip().upper()
+    expression = expression.replace(" ", "")
+    if remove_parenthesis:
+        expression = expression.replace("(", "").replace(")", "")
+    expression = expression.replace("FALSE", "False").replace("TRUE", "True")
+    expression = expression.replace("0", "False").replace("1", "True")
+    expression = expression.replace("AND", "&").replace("*", "&").replace(".", "&")
+    expression = expression.replace("OR", "|").replace("+", "|")
+    expression = expression.replace("NOT", "~").replace("!", "~")
+    if "'" in expression:
+        old_expression = expression
+        expression = ""
+        old_expression = old_expression.split("'")
+        for eq in old_expression:
             if eq:
-                equation += eq[:-1] + "~" + eq[-1]
-    return equation
+                expression += eq[:-1] + "~" + eq[-1]
+    return expression
 
 
 def expression_to_string(
@@ -206,8 +211,9 @@ def main():
     print("Input modes:")
     print("  1. Truth Table: All entries, input automatically generated")
     print("  2. Truth Table: Partial entries, input manually entered")
-    print("  3. Equation: Sum of Products only")
-    input_mode = choice_input("Select input mode: ", ["1", "2", "3"])
+    print("  3. Equation: Sum of Products only (no further simplification)")
+    print("  4: Equation: Any boolean equation (will be simplified to SOP form)")
+    input_mode = choice_input("Select input mode: ", ["1", "2", "3", "4"])
     input_count = int(input("Enter the number of inputs: "))
     output_count = int(input("Enter the number of outputs: "))
     if input_mode in "12":
@@ -404,16 +410,69 @@ def main():
         print("  AND: & * .")
         print("  OR: | +")
         print("  NOT: ~ ! '")
-        expressions = []
+        expressions: list[str] = []
         for i in range(output_count):
             expression = input(f"  O{i} = ")
-            expression = parse_equation(expression)
+            expression = parse_expression(expression, True)
             expressions.append(expression)
         print("Parsed expressions:")
         for i, expression in enumerate(expressions):
             print(f"  O{i} = {prettify_expression(expression)}")
         print("Generating logic schematic.")
         generate_logic_schematic(expressions, input_count, output_count, "logic.sch")
+        print(Fore.LIGHTGREEN_EX + "Schematic exported to logic.sch")
+    elif input_mode == "4":
+        print("Enter the equations in the format: Ox = <equation>")
+        print(f"Variable names: {', '.join(names)} (MSB to LSB)")
+        print("Allowed operators:")
+        print("  False: 0")
+        print("  True: 1")
+        print("  AND: & * .")
+        print("  OR: | +")
+        print("  NOT: ~ ! '")
+        expressions = []
+        for i in range(output_count):
+            expression = input(f"  O{i} = ")
+            expression = parse_expression(expression)
+            expressions.append(expression)
+        print("Parsed expressions:")
+        simplification_data: list[dict[int, str]] = []
+        for _ in range(output_count):
+            simplification_data.append({})
+        for i, expression in enumerate(expressions):
+            parsed_expression = sympy.parsing.sympy_parser.parse_expr(
+                expression,
+                {name: sympy.symbols(name) for name in names},
+            )
+            print(f"  O{i} = {parsed_expression}")
+            truthtable = sympy.logic.boolalg.truth_table(
+                parsed_expression, [sympy.symbols(name) for name in names]
+            )
+            for num, row in enumerate(truthtable):
+                val = row[-1]  # type: ignore
+                if isinstance(val, sympy.logic.boolalg.BooleanTrue):
+                    out_val = "1"
+                elif isinstance(val, sympy.logic.boolalg.BooleanFalse):
+                    out_val = "0"
+                else:
+                    val_str = str(val)
+                    if val_str.lower() in ("false", "0"):
+                        out_val = "0"
+                    elif val_str.lower() in ("true", "1"):
+                        out_val = "1"
+                    else:
+                        out_val = "X"
+                simplification_data[i][num] = out_val
+        minimized_expressions = simplify_multiple_to_sop(
+            simplification_data, names, input_count
+        )
+        print("Minimized expressions in SOP form:")
+        for i, expression in enumerate(minimized_expressions):
+            print(f"  O{i} = {expression}")
+        print("Generating logic schematic.")
+        generate_logic_schematic(
+            minimized_expressions, input_count, output_count, "logic.sch"
+        )
         print(Fore.LIGHTGREEN_EX + "Schematic exported to logic.sch")
     print(Style.RESET_ALL)
 

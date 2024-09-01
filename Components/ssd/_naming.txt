@@ -1,1 +1,1 @@
-ssd{digit_count}d({first_supported_char}{last_supported_char} or {r} for raw input){b if bus is used}{p if point/dot segment is supported}.sch
+ssd{digit_count}d({first_supported_char}{last_supported_char} or {r} for raw input){t if LUT is used instead of combinatorial circuit}{p if point/dot segment is supported}{b if bus is used}.sch

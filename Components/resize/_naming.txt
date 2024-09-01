@@ -1,0 +1,1 @@
+rezise{input bit width}x{output bit width}x{unknown filled with (for upsizing only)}{l/h for which side (low/high significance) the operation take place on}.sch
