@@ -8,6 +8,8 @@ DIVIDERS: tuple[int, ...] = (
     7,
     8,
     10,
+    11,
+    13,
     16,
     20,
     32,
@@ -36,30 +38,17 @@ DIVIDERS: tuple[int, ...] = (
 
 
 @cache
-def closest_product(arr: tuple[int, ...], target: float) -> tuple[list[int], int]:
-    if target < arr[0]:
-        distance_to_one = abs(1 - target)
-        distance_to_first = abs(arr[0] - target)
-        if distance_to_one < distance_to_first:
-            return [], 1
-        else:
-            return [arr[0]], arr[0]
-    closest = -1
-    numbers: list[int] = []
-    for num in arr:
-        if target < num:
-            break
-        result_list, result_product = closest_product(arr, target / num)
-        current_distance = abs(target - result_product * num)
-        new_distance = abs(target - closest)
-        if current_distance < new_distance:
-            closest = result_product * num
-            numbers = result_list + [num]
-        if current_distance == new_distance:
-            if len(result_list) + 1 <= len(numbers):
-                closest = result_product * num
-                numbers = result_list + [num]
-    return numbers, closest
+def closest_product(
+    nums: tuple[int, ...], target: float, current_product: int = 1
+) -> int:
+    if current_product >= target:
+        return current_product
+    closest = current_product
+    for num in reversed(nums):
+        product = closest_product(nums, target, current_product * num)
+        if abs(product - target) < abs(closest - target):
+            closest = product
+    return closest
 
 
 def refactor(arr: tuple[int, ...], num: int) -> list[int]:
@@ -78,7 +67,7 @@ def refactor(arr: tuple[int, ...], num: int) -> list[int]:
 def main():
     target_frequency = eval(input("Enter target frequency: "))
     target_division = 20_000_000 / target_frequency
-    _, result_product = closest_product(DIVIDERS, target_division)
+    result_product = closest_product(DIVIDERS, target_division)
     refactored_numbers = refactor(DIVIDERS, result_product)
     result_frequency = 20_000_000 / result_product
     print(

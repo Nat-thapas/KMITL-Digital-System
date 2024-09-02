@@ -37,11 +37,12 @@ def parse_number(number_string: str, to_bcd: bool) -> int:
     parsed_number = None
     if number_string.startswith("0b"):
         parsed_number = int(number_string, 2)
-    if number_string.startswith("0o"):
+    elif number_string.startswith("0o"):
         parsed_number = int(number_string, 8)
-    if number_string.startswith("0x"):
+    elif number_string.startswith("0x"):
         parsed_number = int(number_string, 16)
-    parsed_number = int(number_string, 10)
+    else:
+        parsed_number = int(number_string, 10)
     if to_bcd:
         bcd_number = 0
         for i, digit in enumerate(str(parsed_number)[::-1]):

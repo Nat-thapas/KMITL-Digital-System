@@ -15,18 +15,11 @@
         <signal name="Q(3:0)" />
         <signal name="Q(1)" />
         <signal name="Q(0)" />
-        <signal name="XLXN_201" />
-        <signal name="XLXN_202" />
-        <signal name="XLXN_203" />
         <signal name="D1(2)" />
         <signal name="D1(3)" />
         <signal name="D0(2)" />
         <signal name="D0(3)" />
-        <signal name="XLXN_204" />
         <signal name="S" />
-        <signal name="XLXN_207" />
-        <signal name="XLXN_208" />
-        <signal name="XLXN_209" />
         <signal name="Q(2)" />
         <signal name="Q(3)" />
         <port polarity="Input" name="D0(3:0)" />
@@ -178,7 +171,7 @@
             <wire x2="1216" y1="336" y2="336" x1="576" />
         </branch>
         <branch name="S">
-            <wire x2="1152" y1="1152" y2="1152" x1="256" />
+            <wire x2="1152" y1="1152" y2="1152" x1="208" />
             <wire x2="1216" y1="1152" y2="1152" x1="1152" />
             <wire x2="1216" y1="464" y2="464" x1="1152" />
             <wire x2="1152" y1="464" y2="688" x1="1152" />
@@ -187,6 +180,6 @@
             <wire x2="1216" y1="928" y2="928" x1="1152" />
             <wire x2="1152" y1="928" y2="1152" x1="1152" />
         </branch>
-        <iomarker fontsize="28" x="256" y="1152" name="S" orien="R180" />
+        <iomarker fontsize="28" x="208" y="1152" name="S" orien="R180" />
     </sheet>
 </drawing>

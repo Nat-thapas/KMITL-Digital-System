@@ -1,0 +1,1 @@
+splice{input bit width}x{lower significance output bit width}x{higher significance output bit width}.sch

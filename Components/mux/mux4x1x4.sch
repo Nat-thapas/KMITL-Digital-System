@@ -6,9 +6,6 @@
         <trait edittrait="all:0" />
     </attr>
     <netlist>
-        <signal name="XLXN_1" />
-        <signal name="XLXN_3" />
-        <signal name="XLXN_4" />
         <signal name="XLXN_2" />
         <signal name="D0(3:0)" />
         <signal name="D1(3:0)" />
@@ -43,7 +40,7 @@
         <port polarity="Input" name="D3(3:0)" />
         <port polarity="Input" name="S0" />
         <port polarity="Input" name="S1" />
-        <port polarity="Input" name="O(3:0)" />
+        <port polarity="Output" name="O(3:0)" />
         <blockdef name="m4_1e">
             <timestamp>2000-1-1T10:10:10</timestamp>
             <line x2="96" y1="-416" y2="-416" x1="0" />
