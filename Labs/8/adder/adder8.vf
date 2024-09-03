@@ -1,0 +1,117 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : adder8.vf
+// /___/   /\     Timestamp : 09/03/2024 10:36:52
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Classes-2024/Digital System Fundamentals Shared/Labs/8/adder/adder8.vf" -w "D:/Classes-2024/Digital System Fundamentals Shared/Labs/8/adder/adder8.sch"
+//Design Name: adder8
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module fulladder_MUSER_adder8(A, 
+                              B, 
+                              Cin, 
+                              Cout, 
+                              S);
+
+    input A;
+    input B;
+    input Cin;
+   output Cout;
+   output S;
+   
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_10;
+   
+   XOR2  XLXI_2 (.I0(B), 
+                .I1(A), 
+                .O(XLXN_10));
+   XOR2  XLXI_3 (.I0(Cin), 
+                .I1(XLXN_10), 
+                .O(S));
+   AND2  XLXI_4 (.I0(B), 
+                .I1(A), 
+                .O(XLXN_2));
+   AND2  XLXI_5 (.I0(Cin), 
+                .I1(XLXN_10), 
+                .O(XLXN_3));
+   OR2  XLXI_6 (.I0(XLXN_2), 
+               .I1(XLXN_3), 
+               .O(Cout));
+endmodule
+`timescale 1ns / 1ps
+
+module adder8(A, 
+              B, 
+              Cin, 
+              Cout, 
+              S);
+
+    input [7:0] A;
+    input [7:0] B;
+    input Cin;
+   output Cout;
+   output [7:0] S;
+   
+   wire XLXN_51;
+   wire XLXN_53;
+   wire XLXN_55;
+   wire XLXN_57;
+   wire XLXN_59;
+   wire XLXN_61;
+   wire XLXN_63;
+   
+   fulladder_MUSER_adder8  XLXI_46 (.A(A[0]), 
+                                   .B(B[0]), 
+                                   .Cin(Cin), 
+                                   .Cout(XLXN_51), 
+                                   .S(S[0]));
+   fulladder_MUSER_adder8  XLXI_47 (.A(A[1]), 
+                                   .B(B[1]), 
+                                   .Cin(XLXN_51), 
+                                   .Cout(XLXN_53), 
+                                   .S(S[1]));
+   fulladder_MUSER_adder8  XLXI_54 (.A(A[2]), 
+                                   .B(B[2]), 
+                                   .Cin(XLXN_53), 
+                                   .Cout(XLXN_55), 
+                                   .S(S[2]));
+   fulladder_MUSER_adder8  XLXI_55 (.A(A[3]), 
+                                   .B(B[3]), 
+                                   .Cin(XLXN_55), 
+                                   .Cout(XLXN_57), 
+                                   .S(S[3]));
+   fulladder_MUSER_adder8  XLXI_56 (.A(A[4]), 
+                                   .B(B[4]), 
+                                   .Cin(XLXN_57), 
+                                   .Cout(XLXN_59), 
+                                   .S(S[4]));
+   fulladder_MUSER_adder8  XLXI_57 (.A(A[5]), 
+                                   .B(B[5]), 
+                                   .Cin(XLXN_59), 
+                                   .Cout(XLXN_61), 
+                                   .S(S[5]));
+   fulladder_MUSER_adder8  XLXI_58 (.A(A[6]), 
+                                   .B(B[6]), 
+                                   .Cin(XLXN_61), 
+                                   .Cout(XLXN_63), 
+                                   .S(S[6]));
+   fulladder_MUSER_adder8  XLXI_59 (.A(A[7]), 
+                                   .B(B[7]), 
+                                   .Cin(XLXN_63), 
+                                   .Cout(Cout), 
+                                   .S(S[7]));
+endmodule

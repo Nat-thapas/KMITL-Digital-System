@@ -1,0 +1,62 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : dabblet.vf
+// /___/   /\     Timestamp : 09/03/2024 10:02:15
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Classes-2024/Digital System Fundamentals Shared/Components-project/dabblet.vf" -w "D:/Classes-2024/Digital System Fundamentals Shared/Components-project/dabblet.sch"
+//Design Name: dabblet
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module dabblet(D0, 
+               D1, 
+               D2, 
+               D3, 
+               Q0, 
+               Q1, 
+               Q2, 
+               Q3);
+
+    input D0;
+    input D1;
+    input D2;
+    input D3;
+   output Q0;
+   output Q1;
+   output Q2;
+   output Q3;
+   
+   
+   LUT4 #( .INIT(16'h014A) ) XLXI_1 (.I0(D0), 
+                .I1(D1), 
+                .I2(D2), 
+                .I3(D3), 
+                .O(Q0));
+   LUT4 #( .INIT(16'h018C) ) XLXI_2 (.I0(D0), 
+                .I1(D1), 
+                .I2(D2), 
+                .I3(D3), 
+                .O(Q1));
+   LUT4 #( .INIT(16'h0210) ) XLXI_3 (.I0(D0), 
+                .I1(D1), 
+                .I2(D2), 
+                .I3(D3), 
+                .O(Q2));
+   LUT4 #( .INIT(16'h03E0) ) XLXI_4 (.I0(D0), 
+                .I1(D1), 
+                .I2(D2), 
+                .I3(D3), 
+                .O(Q3));
+endmodule

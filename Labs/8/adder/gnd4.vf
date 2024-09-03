@@ -1,0 +1,32 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : gnd4.vf
+// /___/   /\     Timestamp : 09/03/2024 10:36:52
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Classes-2024/Digital System Fundamentals Shared/Labs/8/adder/gnd4.vf" -w "D:/Classes-2024/Digital System Fundamentals Shared/Labs/8/adder/gnd4.sch"
+//Design Name: gnd4
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module gnd4(GND);
+
+   output [3:0] GND;
+   
+   
+   GND  XLXI_1 (.G(GND[0]));
+   GND  XLXI_2 (.G(GND[1]));
+   GND  XLXI_3 (.G(GND[2]));
+   GND  XLXI_4 (.G(GND[3]));
+endmodule

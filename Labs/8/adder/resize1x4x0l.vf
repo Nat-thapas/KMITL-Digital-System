@@ -1,0 +1,35 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : resize1x4x0l.vf
+// /___/   /\     Timestamp : 09/03/2024 10:36:52
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Classes-2024/Digital System Fundamentals Shared/Labs/8/adder/resize1x4x0l.vf" -w "D:/Classes-2024/Digital System Fundamentals Shared/Labs/8/adder/resize1x4x0l.sch"
+//Design Name: resize1x4x0l
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module resize1x4x0l(L, 
+                    O);
+
+    input L;
+   output [3:0] O;
+   
+   
+   BUF  XLXI_1 (.I(L), 
+               .O(O[0]));
+   GND  XLXI_35 (.G(O[3]));
+   GND  XLXI_36 (.G(O[2]));
+   GND  XLXI_37 (.G(O[1]));
+endmodule

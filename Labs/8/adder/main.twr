@@ -1,0 +1,187 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf -ucf main.ucf
+
+Design file:              main.ncd
+Physical constraint file: main.pcf
+Device,package,speed:     xc6slx9,tqg144,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock OSC
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+OSC            |         |         |         |    3.653|
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+DIP<0>         |BUZZER         |   13.795|
+DIP<0>         |SSD_Segment<0> |   16.428|
+DIP<0>         |SSD_Segment<1> |   16.479|
+DIP<0>         |SSD_Segment<2> |   16.465|
+DIP<0>         |SSD_Segment<3> |   16.430|
+DIP<0>         |SSD_Segment<4> |   16.470|
+DIP<0>         |SSD_Segment<5> |   15.938|
+DIP<0>         |SSD_Segment<6> |   15.427|
+DIP<1>         |BUZZER         |   13.873|
+DIP<1>         |SSD_Segment<0> |   16.506|
+DIP<1>         |SSD_Segment<1> |   16.557|
+DIP<1>         |SSD_Segment<2> |   16.543|
+DIP<1>         |SSD_Segment<3> |   16.508|
+DIP<1>         |SSD_Segment<4> |   16.548|
+DIP<1>         |SSD_Segment<5> |   16.016|
+DIP<1>         |SSD_Segment<6> |   15.505|
+DIP<2>         |BUZZER         |   13.092|
+DIP<2>         |SSD_Segment<0> |   15.725|
+DIP<2>         |SSD_Segment<1> |   15.776|
+DIP<2>         |SSD_Segment<2> |   15.762|
+DIP<2>         |SSD_Segment<3> |   15.727|
+DIP<2>         |SSD_Segment<4> |   15.767|
+DIP<2>         |SSD_Segment<5> |   15.235|
+DIP<2>         |SSD_Segment<6> |   14.724|
+DIP<3>         |BUZZER         |   12.529|
+DIP<3>         |SSD_Segment<0> |   15.162|
+DIP<3>         |SSD_Segment<1> |   15.213|
+DIP<3>         |SSD_Segment<2> |   15.199|
+DIP<3>         |SSD_Segment<3> |   15.164|
+DIP<3>         |SSD_Segment<4> |   15.204|
+DIP<3>         |SSD_Segment<5> |   14.672|
+DIP<3>         |SSD_Segment<6> |   14.161|
+DIP<4>         |BUZZER         |   12.650|
+DIP<4>         |SSD_Segment<0> |   15.283|
+DIP<4>         |SSD_Segment<1> |   15.334|
+DIP<4>         |SSD_Segment<2> |   15.320|
+DIP<4>         |SSD_Segment<3> |   15.285|
+DIP<4>         |SSD_Segment<4> |   15.325|
+DIP<4>         |SSD_Segment<5> |   14.793|
+DIP<4>         |SSD_Segment<6> |   14.282|
+DIP<5>         |BUZZER         |   11.703|
+DIP<5>         |SSD_Segment<0> |   14.336|
+DIP<5>         |SSD_Segment<1> |   14.387|
+DIP<5>         |SSD_Segment<2> |   14.373|
+DIP<5>         |SSD_Segment<3> |   14.338|
+DIP<5>         |SSD_Segment<4> |   14.378|
+DIP<5>         |SSD_Segment<5> |   13.846|
+DIP<5>         |SSD_Segment<6> |   13.335|
+DIP<6>         |BUZZER         |   11.114|
+DIP<6>         |SSD_Segment<0> |   13.747|
+DIP<6>         |SSD_Segment<1> |   13.798|
+DIP<6>         |SSD_Segment<2> |   13.784|
+DIP<6>         |SSD_Segment<3> |   13.749|
+DIP<6>         |SSD_Segment<4> |   13.789|
+DIP<6>         |SSD_Segment<5> |   13.257|
+DIP<6>         |SSD_Segment<6> |   12.746|
+DIP<7>         |BUZZER         |   10.015|
+DIP<7>         |SSD_Segment<0> |   12.648|
+DIP<7>         |SSD_Segment<1> |   12.699|
+DIP<7>         |SSD_Segment<2> |   12.685|
+DIP<7>         |SSD_Segment<3> |   12.650|
+DIP<7>         |SSD_Segment<4> |   12.690|
+DIP<7>         |SSD_Segment<5> |   12.158|
+DIP<7>         |SSD_Segment<6> |   11.647|
+SW<0>          |BUZZER         |   13.225|
+SW<0>          |SSD_Segment<0> |   15.858|
+SW<0>          |SSD_Segment<1> |   15.909|
+SW<0>          |SSD_Segment<2> |   15.895|
+SW<0>          |SSD_Segment<3> |   15.860|
+SW<0>          |SSD_Segment<4> |   15.900|
+SW<0>          |SSD_Segment<5> |   15.368|
+SW<0>          |SSD_Segment<6> |   14.857|
+SW<1>          |BUZZER         |   13.359|
+SW<1>          |SSD_Segment<0> |   15.992|
+SW<1>          |SSD_Segment<1> |   16.043|
+SW<1>          |SSD_Segment<2> |   16.029|
+SW<1>          |SSD_Segment<3> |   15.994|
+SW<1>          |SSD_Segment<4> |   16.034|
+SW<1>          |SSD_Segment<5> |   15.502|
+SW<1>          |SSD_Segment<6> |   14.991|
+SW<2>          |BUZZER         |   12.891|
+SW<2>          |SSD_Segment<0> |   15.524|
+SW<2>          |SSD_Segment<1> |   15.575|
+SW<2>          |SSD_Segment<2> |   15.561|
+SW<2>          |SSD_Segment<3> |   15.526|
+SW<2>          |SSD_Segment<4> |   15.566|
+SW<2>          |SSD_Segment<5> |   15.034|
+SW<2>          |SSD_Segment<6> |   14.523|
+SW<3>          |BUZZER         |   12.086|
+SW<3>          |SSD_Segment<0> |   14.719|
+SW<3>          |SSD_Segment<1> |   14.770|
+SW<3>          |SSD_Segment<2> |   14.756|
+SW<3>          |SSD_Segment<3> |   14.721|
+SW<3>          |SSD_Segment<4> |   14.761|
+SW<3>          |SSD_Segment<5> |   14.229|
+SW<3>          |SSD_Segment<6> |   13.718|
+SW<4>          |BUZZER         |   12.097|
+SW<4>          |SSD_Segment<0> |   14.730|
+SW<4>          |SSD_Segment<1> |   14.781|
+SW<4>          |SSD_Segment<2> |   14.767|
+SW<4>          |SSD_Segment<3> |   14.732|
+SW<4>          |SSD_Segment<4> |   14.772|
+SW<4>          |SSD_Segment<5> |   14.240|
+SW<4>          |SSD_Segment<6> |   13.729|
+SW<5>          |BUZZER         |   11.165|
+SW<5>          |SSD_Segment<0> |   13.798|
+SW<5>          |SSD_Segment<1> |   13.849|
+SW<5>          |SSD_Segment<2> |   13.835|
+SW<5>          |SSD_Segment<3> |   13.800|
+SW<5>          |SSD_Segment<4> |   13.840|
+SW<5>          |SSD_Segment<5> |   13.308|
+SW<5>          |SSD_Segment<6> |   12.797|
+SW<6>          |BUZZER         |   10.408|
+SW<6>          |SSD_Segment<0> |   13.041|
+SW<6>          |SSD_Segment<1> |   13.092|
+SW<6>          |SSD_Segment<2> |   13.078|
+SW<6>          |SSD_Segment<3> |   13.043|
+SW<6>          |SSD_Segment<4> |   13.083|
+SW<6>          |SSD_Segment<5> |   12.551|
+SW<6>          |SSD_Segment<6> |   12.040|
+SW<7>          |BUZZER         |    9.090|
+SW<7>          |SSD_Segment<0> |   11.723|
+SW<7>          |SSD_Segment<1> |   11.774|
+SW<7>          |SSD_Segment<2> |   11.760|
+SW<7>          |SSD_Segment<3> |   11.725|
+SW<7>          |SSD_Segment<4> |   11.765|
+SW<7>          |SSD_Segment<5> |   11.233|
+SW<7>          |SSD_Segment<6> |   10.722|
+---------------+---------------+---------+
+
+
+Analysis completed Tue Sep 03 10:41:49 2024 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4586 MB
+
+
+
