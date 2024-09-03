@@ -10,7 +10,7 @@ Target Device  : xc6slx9
 Target Package : tqg144
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Tue Sep 03 10:41:40 2024
+Mapped Date    : Tue Sep 03 13:44:13 2024
 
 Design Summary
 --------------
@@ -22,21 +22,21 @@ Slice Logic Utilization:
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                         57 out of   5,720    1%
-    Number used as logic:                       57 out of   5,720    1%
-      Number using O6 output only:              49
+  Number of Slice LUTs:                         53 out of   5,720    1%
+    Number used as logic:                       53 out of   5,720    1%
+      Number using O6 output only:              43
       Number using O5 output only:               0
-      Number using O5 and O6:                    8
+      Number using O5 and O6:                   10
       Number used as ROM:                        0
     Number used as Memory:                       0 out of   1,440    0%
 
 Slice Logic Distribution:
-  Number of occupied Slices:                    28 out of   1,430    1%
+  Number of occupied Slices:                    25 out of   1,430    1%
   Number of MUXCYs used:                         0 out of   2,860    0%
-  Number of LUT Flip Flop pairs used:           57
-    Number with an unused Flip Flop:            42 out of      57   73%
-    Number with an unused LUT:                   0 out of      57    0%
-    Number of fully used LUT-FF pairs:          15 out of      57   26%
+  Number of LUT Flip Flop pairs used:           53
+    Number with an unused Flip Flop:            38 out of      53   71%
+    Number with an unused LUT:                   0 out of      53    0%
+    Number of fully used LUT-FF pairs:          15 out of      53   28%
     Number of unique control sets:               6
     Number of slice register sites lost
       to control set restrictions:              29 out of  11,440    1%
@@ -48,8 +48,8 @@ Slice Logic Distribution:
   over-mapped for a non-slice resource or if Placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        30 out of     102   29%
-    Number of LOCed IOBs:                       30 out of      30  100%
+  Number of bonded IOBs:                        29 out of     102   28%
+    Number of LOCed IOBs:                       29 out of      29  100%
 
 Specific Feature Utilization:
   Number of RAMB16BWERs:                         0 out of      32    0%
@@ -76,9 +76,9 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                2.56
+Average Fanout of Non-Clock Nets:                2.29
 
-Peak Memory Usage:  4511 MB
+Peak Memory Usage:  4510 MB
 Total REAL time to MAP completion:  2 secs 
 Total CPU time to MAP completion:   2 secs 
 
@@ -123,23 +123,31 @@ INFO:Pack:1650 - Map created a placed design.
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-  10 block(s) optimized away
+   2 block(s) removed
+   3 block(s) optimized away
+   1 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
 
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+Loadless block "XLXI_23/XLXI_214" (BUF) removed.
+ The signal "XLXI_23/XLXN_239" is loadless and has been removed.
+  Loadless block "XLXI_23/XLXI_210/Mmux_D311" (ROM) removed.
+
 Optimized Block(s):
 TYPE 		BLOCK
-VCC 		XLXI_10
 AND2 		XLXI_3/XLXI_46/XLXI_5
-GND 		XLXI_6/XLXI_215/XST_GND
-AND4B4 		XLXI_6/XLXI_249
-AND2 		XLXI_6/XLXI_259
-LUT5 		XLXI_6/XLXI_281/Mmux_O11
-   optimized to 0
-AND2 		XLXI_6/XLXI_307
-AND3B1 		XLXI_6/XLXI_309
-AND3B1 		XLXI_6/XLXI_310
+VCC 		XLXI_32
 GND 		XLXI_7/XLXI_1
 
 To enable printing of redundant blocks removed and signals merged, set the
@@ -173,7 +181,6 @@ Section 6 - IOB Properties
 | SSD_Segment<4>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | SSD_Segment<5>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | SSD_Segment<6>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| SSD_Segment<7>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | SW<0>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | SW<1>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | SW<2>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |

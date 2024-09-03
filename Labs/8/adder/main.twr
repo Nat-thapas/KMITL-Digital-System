@@ -36,152 +36,152 @@ Clock to Setup on destination clock OSC
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-OSC            |         |         |         |    3.653|
+OSC            |         |         |         |    3.534|
 ---------------+---------+---------+---------+---------+
 
 Pad to Pad
 ---------------+---------------+---------+
 Source Pad     |Destination Pad|  Delay  |
 ---------------+---------------+---------+
-DIP<0>         |BUZZER         |   13.795|
-DIP<0>         |SSD_Segment<0> |   16.428|
-DIP<0>         |SSD_Segment<1> |   16.479|
-DIP<0>         |SSD_Segment<2> |   16.465|
-DIP<0>         |SSD_Segment<3> |   16.430|
-DIP<0>         |SSD_Segment<4> |   16.470|
-DIP<0>         |SSD_Segment<5> |   15.938|
-DIP<0>         |SSD_Segment<6> |   15.427|
-DIP<1>         |BUZZER         |   13.873|
-DIP<1>         |SSD_Segment<0> |   16.506|
-DIP<1>         |SSD_Segment<1> |   16.557|
-DIP<1>         |SSD_Segment<2> |   16.543|
-DIP<1>         |SSD_Segment<3> |   16.508|
-DIP<1>         |SSD_Segment<4> |   16.548|
-DIP<1>         |SSD_Segment<5> |   16.016|
-DIP<1>         |SSD_Segment<6> |   15.505|
-DIP<2>         |BUZZER         |   13.092|
-DIP<2>         |SSD_Segment<0> |   15.725|
-DIP<2>         |SSD_Segment<1> |   15.776|
-DIP<2>         |SSD_Segment<2> |   15.762|
-DIP<2>         |SSD_Segment<3> |   15.727|
-DIP<2>         |SSD_Segment<4> |   15.767|
-DIP<2>         |SSD_Segment<5> |   15.235|
-DIP<2>         |SSD_Segment<6> |   14.724|
-DIP<3>         |BUZZER         |   12.529|
-DIP<3>         |SSD_Segment<0> |   15.162|
-DIP<3>         |SSD_Segment<1> |   15.213|
-DIP<3>         |SSD_Segment<2> |   15.199|
-DIP<3>         |SSD_Segment<3> |   15.164|
-DIP<3>         |SSD_Segment<4> |   15.204|
-DIP<3>         |SSD_Segment<5> |   14.672|
-DIP<3>         |SSD_Segment<6> |   14.161|
-DIP<4>         |BUZZER         |   12.650|
-DIP<4>         |SSD_Segment<0> |   15.283|
-DIP<4>         |SSD_Segment<1> |   15.334|
-DIP<4>         |SSD_Segment<2> |   15.320|
-DIP<4>         |SSD_Segment<3> |   15.285|
-DIP<4>         |SSD_Segment<4> |   15.325|
-DIP<4>         |SSD_Segment<5> |   14.793|
-DIP<4>         |SSD_Segment<6> |   14.282|
-DIP<5>         |BUZZER         |   11.703|
-DIP<5>         |SSD_Segment<0> |   14.336|
-DIP<5>         |SSD_Segment<1> |   14.387|
-DIP<5>         |SSD_Segment<2> |   14.373|
-DIP<5>         |SSD_Segment<3> |   14.338|
-DIP<5>         |SSD_Segment<4> |   14.378|
-DIP<5>         |SSD_Segment<5> |   13.846|
-DIP<5>         |SSD_Segment<6> |   13.335|
-DIP<6>         |BUZZER         |   11.114|
-DIP<6>         |SSD_Segment<0> |   13.747|
-DIP<6>         |SSD_Segment<1> |   13.798|
-DIP<6>         |SSD_Segment<2> |   13.784|
-DIP<6>         |SSD_Segment<3> |   13.749|
-DIP<6>         |SSD_Segment<4> |   13.789|
-DIP<6>         |SSD_Segment<5> |   13.257|
-DIP<6>         |SSD_Segment<6> |   12.746|
-DIP<7>         |BUZZER         |   10.015|
-DIP<7>         |SSD_Segment<0> |   12.648|
-DIP<7>         |SSD_Segment<1> |   12.699|
-DIP<7>         |SSD_Segment<2> |   12.685|
-DIP<7>         |SSD_Segment<3> |   12.650|
-DIP<7>         |SSD_Segment<4> |   12.690|
-DIP<7>         |SSD_Segment<5> |   12.158|
-DIP<7>         |SSD_Segment<6> |   11.647|
-SW<0>          |BUZZER         |   13.225|
-SW<0>          |SSD_Segment<0> |   15.858|
-SW<0>          |SSD_Segment<1> |   15.909|
-SW<0>          |SSD_Segment<2> |   15.895|
-SW<0>          |SSD_Segment<3> |   15.860|
-SW<0>          |SSD_Segment<4> |   15.900|
-SW<0>          |SSD_Segment<5> |   15.368|
-SW<0>          |SSD_Segment<6> |   14.857|
-SW<1>          |BUZZER         |   13.359|
-SW<1>          |SSD_Segment<0> |   15.992|
-SW<1>          |SSD_Segment<1> |   16.043|
-SW<1>          |SSD_Segment<2> |   16.029|
-SW<1>          |SSD_Segment<3> |   15.994|
-SW<1>          |SSD_Segment<4> |   16.034|
-SW<1>          |SSD_Segment<5> |   15.502|
-SW<1>          |SSD_Segment<6> |   14.991|
-SW<2>          |BUZZER         |   12.891|
-SW<2>          |SSD_Segment<0> |   15.524|
-SW<2>          |SSD_Segment<1> |   15.575|
-SW<2>          |SSD_Segment<2> |   15.561|
-SW<2>          |SSD_Segment<3> |   15.526|
-SW<2>          |SSD_Segment<4> |   15.566|
-SW<2>          |SSD_Segment<5> |   15.034|
-SW<2>          |SSD_Segment<6> |   14.523|
-SW<3>          |BUZZER         |   12.086|
-SW<3>          |SSD_Segment<0> |   14.719|
-SW<3>          |SSD_Segment<1> |   14.770|
-SW<3>          |SSD_Segment<2> |   14.756|
-SW<3>          |SSD_Segment<3> |   14.721|
-SW<3>          |SSD_Segment<4> |   14.761|
-SW<3>          |SSD_Segment<5> |   14.229|
-SW<3>          |SSD_Segment<6> |   13.718|
-SW<4>          |BUZZER         |   12.097|
-SW<4>          |SSD_Segment<0> |   14.730|
-SW<4>          |SSD_Segment<1> |   14.781|
-SW<4>          |SSD_Segment<2> |   14.767|
-SW<4>          |SSD_Segment<3> |   14.732|
-SW<4>          |SSD_Segment<4> |   14.772|
-SW<4>          |SSD_Segment<5> |   14.240|
-SW<4>          |SSD_Segment<6> |   13.729|
-SW<5>          |BUZZER         |   11.165|
-SW<5>          |SSD_Segment<0> |   13.798|
-SW<5>          |SSD_Segment<1> |   13.849|
-SW<5>          |SSD_Segment<2> |   13.835|
-SW<5>          |SSD_Segment<3> |   13.800|
-SW<5>          |SSD_Segment<4> |   13.840|
-SW<5>          |SSD_Segment<5> |   13.308|
-SW<5>          |SSD_Segment<6> |   12.797|
-SW<6>          |BUZZER         |   10.408|
-SW<6>          |SSD_Segment<0> |   13.041|
-SW<6>          |SSD_Segment<1> |   13.092|
-SW<6>          |SSD_Segment<2> |   13.078|
-SW<6>          |SSD_Segment<3> |   13.043|
-SW<6>          |SSD_Segment<4> |   13.083|
-SW<6>          |SSD_Segment<5> |   12.551|
-SW<6>          |SSD_Segment<6> |   12.040|
-SW<7>          |BUZZER         |    9.090|
-SW<7>          |SSD_Segment<0> |   11.723|
-SW<7>          |SSD_Segment<1> |   11.774|
-SW<7>          |SSD_Segment<2> |   11.760|
-SW<7>          |SSD_Segment<3> |   11.725|
-SW<7>          |SSD_Segment<4> |   11.765|
-SW<7>          |SSD_Segment<5> |   11.233|
-SW<7>          |SSD_Segment<6> |   10.722|
+DIP<0>         |BUZZER         |   13.718|
+DIP<0>         |SSD_Segment<0> |   16.095|
+DIP<0>         |SSD_Segment<1> |   16.151|
+DIP<0>         |SSD_Segment<2> |   15.496|
+DIP<0>         |SSD_Segment<3> |   15.886|
+DIP<0>         |SSD_Segment<4> |   15.712|
+DIP<0>         |SSD_Segment<5> |   15.387|
+DIP<0>         |SSD_Segment<6> |   15.406|
+DIP<1>         |BUZZER         |   13.112|
+DIP<1>         |SSD_Segment<0> |   15.489|
+DIP<1>         |SSD_Segment<1> |   15.545|
+DIP<1>         |SSD_Segment<2> |   14.890|
+DIP<1>         |SSD_Segment<3> |   15.280|
+DIP<1>         |SSD_Segment<4> |   15.106|
+DIP<1>         |SSD_Segment<5> |   14.781|
+DIP<1>         |SSD_Segment<6> |   14.800|
+DIP<2>         |BUZZER         |   13.066|
+DIP<2>         |SSD_Segment<0> |   15.443|
+DIP<2>         |SSD_Segment<1> |   15.499|
+DIP<2>         |SSD_Segment<2> |   14.844|
+DIP<2>         |SSD_Segment<3> |   15.234|
+DIP<2>         |SSD_Segment<4> |   15.060|
+DIP<2>         |SSD_Segment<5> |   14.735|
+DIP<2>         |SSD_Segment<6> |   14.754|
+DIP<3>         |BUZZER         |   11.881|
+DIP<3>         |SSD_Segment<0> |   14.258|
+DIP<3>         |SSD_Segment<1> |   14.314|
+DIP<3>         |SSD_Segment<2> |   13.659|
+DIP<3>         |SSD_Segment<3> |   14.049|
+DIP<3>         |SSD_Segment<4> |   13.875|
+DIP<3>         |SSD_Segment<5> |   13.550|
+DIP<3>         |SSD_Segment<6> |   13.569|
+DIP<4>         |BUZZER         |   11.960|
+DIP<4>         |SSD_Segment<0> |   14.337|
+DIP<4>         |SSD_Segment<1> |   14.393|
+DIP<4>         |SSD_Segment<2> |   13.738|
+DIP<4>         |SSD_Segment<3> |   14.128|
+DIP<4>         |SSD_Segment<4> |   13.954|
+DIP<4>         |SSD_Segment<5> |   13.629|
+DIP<4>         |SSD_Segment<6> |   13.648|
+DIP<5>         |BUZZER         |   11.573|
+DIP<5>         |SSD_Segment<0> |   13.950|
+DIP<5>         |SSD_Segment<1> |   14.006|
+DIP<5>         |SSD_Segment<2> |   13.351|
+DIP<5>         |SSD_Segment<3> |   13.741|
+DIP<5>         |SSD_Segment<4> |   13.567|
+DIP<5>         |SSD_Segment<5> |   13.242|
+DIP<5>         |SSD_Segment<6> |   13.261|
+DIP<6>         |BUZZER         |   11.162|
+DIP<6>         |SSD_Segment<0> |   13.378|
+DIP<6>         |SSD_Segment<1> |   13.434|
+DIP<6>         |SSD_Segment<2> |   12.940|
+DIP<6>         |SSD_Segment<3> |   13.330|
+DIP<6>         |SSD_Segment<4> |   13.156|
+DIP<6>         |SSD_Segment<5> |   12.831|
+DIP<6>         |SSD_Segment<6> |   12.850|
+DIP<7>         |BUZZER         |   10.652|
+DIP<7>         |SSD_Segment<0> |   12.781|
+DIP<7>         |SSD_Segment<1> |   12.837|
+DIP<7>         |SSD_Segment<2> |   12.430|
+DIP<7>         |SSD_Segment<3> |   12.820|
+DIP<7>         |SSD_Segment<4> |   12.427|
+DIP<7>         |SSD_Segment<5> |   12.102|
+DIP<7>         |SSD_Segment<6> |   12.340|
+SW<0>          |BUZZER         |   12.868|
+SW<0>          |SSD_Segment<0> |   15.245|
+SW<0>          |SSD_Segment<1> |   15.301|
+SW<0>          |SSD_Segment<2> |   14.646|
+SW<0>          |SSD_Segment<3> |   15.036|
+SW<0>          |SSD_Segment<4> |   14.862|
+SW<0>          |SSD_Segment<5> |   14.537|
+SW<0>          |SSD_Segment<6> |   14.556|
+SW<1>          |BUZZER         |   12.863|
+SW<1>          |SSD_Segment<0> |   15.240|
+SW<1>          |SSD_Segment<1> |   15.296|
+SW<1>          |SSD_Segment<2> |   14.641|
+SW<1>          |SSD_Segment<3> |   15.031|
+SW<1>          |SSD_Segment<4> |   14.857|
+SW<1>          |SSD_Segment<5> |   14.532|
+SW<1>          |SSD_Segment<6> |   14.551|
+SW<2>          |BUZZER         |   12.831|
+SW<2>          |SSD_Segment<0> |   15.208|
+SW<2>          |SSD_Segment<1> |   15.264|
+SW<2>          |SSD_Segment<2> |   14.609|
+SW<2>          |SSD_Segment<3> |   14.999|
+SW<2>          |SSD_Segment<4> |   14.825|
+SW<2>          |SSD_Segment<5> |   14.500|
+SW<2>          |SSD_Segment<6> |   14.519|
+SW<3>          |BUZZER         |   11.558|
+SW<3>          |SSD_Segment<0> |   13.935|
+SW<3>          |SSD_Segment<1> |   13.991|
+SW<3>          |SSD_Segment<2> |   13.336|
+SW<3>          |SSD_Segment<3> |   13.726|
+SW<3>          |SSD_Segment<4> |   13.552|
+SW<3>          |SSD_Segment<5> |   13.227|
+SW<3>          |SSD_Segment<6> |   13.246|
+SW<4>          |BUZZER         |   11.621|
+SW<4>          |SSD_Segment<0> |   13.998|
+SW<4>          |SSD_Segment<1> |   14.054|
+SW<4>          |SSD_Segment<2> |   13.399|
+SW<4>          |SSD_Segment<3> |   13.789|
+SW<4>          |SSD_Segment<4> |   13.615|
+SW<4>          |SSD_Segment<5> |   13.290|
+SW<4>          |SSD_Segment<6> |   13.309|
+SW<5>          |BUZZER         |   10.806|
+SW<5>          |SSD_Segment<0> |   13.183|
+SW<5>          |SSD_Segment<1> |   13.239|
+SW<5>          |SSD_Segment<2> |   12.584|
+SW<5>          |SSD_Segment<3> |   12.974|
+SW<5>          |SSD_Segment<4> |   12.800|
+SW<5>          |SSD_Segment<5> |   12.475|
+SW<5>          |SSD_Segment<6> |   12.494|
+SW<6>          |BUZZER         |   10.462|
+SW<6>          |SSD_Segment<0> |   12.678|
+SW<6>          |SSD_Segment<1> |   12.734|
+SW<6>          |SSD_Segment<2> |   12.240|
+SW<6>          |SSD_Segment<3> |   12.630|
+SW<6>          |SSD_Segment<4> |   12.456|
+SW<6>          |SSD_Segment<5> |   12.131|
+SW<6>          |SSD_Segment<6> |   12.150|
+SW<7>          |BUZZER         |    9.915|
+SW<7>          |SSD_Segment<0> |   12.044|
+SW<7>          |SSD_Segment<1> |   12.100|
+SW<7>          |SSD_Segment<2> |   11.693|
+SW<7>          |SSD_Segment<3> |   12.083|
+SW<7>          |SSD_Segment<4> |   11.690|
+SW<7>          |SSD_Segment<5> |   11.365|
+SW<7>          |SSD_Segment<6> |   11.603|
 ---------------+---------------+---------+
 
 
-Analysis completed Tue Sep 03 10:41:49 2024 
+Analysis completed Tue Sep 03 13:44:23 2024 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 4586 MB
+Peak Memory Usage: 4585 MB
 
 
 

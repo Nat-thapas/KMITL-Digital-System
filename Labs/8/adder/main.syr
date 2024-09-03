@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.18 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.18 secs
  
 --> Reading design: main.prj
 
@@ -107,12 +107,11 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 Analyzing Verilog file "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\fulladder.vf" into library work
 Parsing module <fulladder>.
-Analyzing Verilog file "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\ssd4d0ftlnpb.vf" into library work
-Parsing module <M2_1E_HXILINX_ssd4d0ftlnpb>.
-Parsing module <M4_1E_HXILINX_ssd4d0ftlnpb>.
-Parsing module <D2_4E_HXILINX_ssd4d0ftlnpb>.
-Parsing module <CB2CE_HXILINX_ssd4d0ftlnpb>.
-Parsing module <ssd4d0ftlnpb>.
+Analyzing Verilog file "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\ssd4d0ftb.vf" into library work
+Parsing module <M4_1E_HXILINX_ssd4d0ftb>.
+Parsing module <D2_4E_HXILINX_ssd4d0ftb>.
+Parsing module <CB2CE_HXILINX_ssd4d0ftb>.
+Parsing module <ssd4d0ftb>.
 Analyzing Verilog file "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\split8x4x4.vf" into library work
 Parsing module <split8x4x4>.
 Analyzing Verilog file "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\resize1x4x0l.vf" into library work
@@ -128,17 +127,16 @@ Analyzing Verilog file "D:\Classes-2024\Digital System Fundamentals Shared\Labs\
 Parsing module <fulladder_MUSER_adder8>.
 Parsing module <adder8>.
 Analyzing Verilog file "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf" into library work
-Parsing module <M2_1E_HXILINX_main>.
 Parsing module <COMP8_HXILINX_main>.
 Parsing module <CD4CE_HXILINX_main>.
 Parsing module <M4_1E_HXILINX_main>.
 Parsing module <D2_4E_HXILINX_main>.
 Parsing module <CB2CE_HXILINX_main>.
+Parsing module <ssd4d0ftb_MUSER_main>.
 Parsing module <gnd8_MUSER_main>.
 Parsing module <clkdiv20k_MUSER_main>.
 Parsing module <resize1x4x0l_MUSER_main>.
 Parsing module <gnd4_MUSER_main>.
-Parsing module <ssd4d0ftlnpb_MUSER_main>.
 Parsing module <split8x4x4_MUSER_main>.
 Parsing module <fulladder_MUSER_main>.
 Parsing module <adder8_MUSER_main>.
@@ -168,7 +166,24 @@ Elaborating module <BUF>.
 
 Elaborating module <resize1x4x0l_MUSER_main>.
 
-Elaborating module <ssd4d0ftlnpb_MUSER_main>.
+Elaborating module <gnd4_MUSER_main>.
+
+Elaborating module <clkdiv20k_MUSER_main>.
+
+Elaborating module <CD4CE_HXILINX_main>.
+WARNING:HDLCompiler:413 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf" Line 73: Result of 5-bit expression is truncated to fit in 4-bit target.
+
+Elaborating module <VCC>.
+
+Elaborating module <FD_1(INIT=1'b0)>.
+
+Elaborating module <INV>.
+
+Elaborating module <COMP8_HXILINX_main>.
+
+Elaborating module <gnd8_MUSER_main>.
+
+Elaborating module <ssd4d0ftb_MUSER_main>.
 
 Elaborating module <LUT4(INIT=16'b1110111101111100)>.
 
@@ -185,36 +200,13 @@ Elaborating module <LUT4(INIT=16'b010011110011111)>.
 Elaborating module <LUT4(INIT=16'b1101011111101101)>.
 
 Elaborating module <CB2CE_HXILINX_main>.
-WARNING:HDLCompiler:413 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf" Line 200: Result of 3-bit expression is truncated to fit in 2-bit target.
-
-Elaborating module <VCC>.
+WARNING:HDLCompiler:413 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf" Line 172: Result of 3-bit expression is truncated to fit in 2-bit target.
 
 Elaborating module <M4_1E_HXILINX_main>.
 
 Elaborating module <D2_4E_HXILINX_main>.
 
-Elaborating module <INV>.
-
-Elaborating module <AND4B4>.
-
-Elaborating module <M2_1E_HXILINX_main>.
-
-Elaborating module <NAND2B1>.
-
-Elaborating module <AND3B1>.
-
-Elaborating module <gnd4_MUSER_main>.
-
-Elaborating module <clkdiv20k_MUSER_main>.
-
-Elaborating module <CD4CE_HXILINX_main>.
-WARNING:HDLCompiler:413 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf" Line 101: Result of 5-bit expression is truncated to fit in 4-bit target.
-
-Elaborating module <FD_1(INIT=1'b0)>.
-
-Elaborating module <COMP8_HXILINX_main>.
-
-Elaborating module <gnd8_MUSER_main>.
+Elaborating module <AND2B1>.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -222,7 +214,7 @@ Elaborating module <gnd8_MUSER_main>.
 
 Synthesizing Unit <main>.
     Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf".
-    Set property "HU_SET = XLXI_21_41" for instance <XLXI_21>.
+    Set property "HU_SET = XLXI_21_10" for instance <XLXI_21>.
     Summary:
 	no macro.
 Unit <main> synthesized.
@@ -251,59 +243,6 @@ Synthesizing Unit <resize1x4x0l_MUSER_main>.
 	no macro.
 Unit <resize1x4x0l_MUSER_main> synthesized.
 
-Synthesizing Unit <ssd4d0ftlnpb_MUSER_main>.
-    Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf".
-    Set property "HU_SET = XLXI_162_40" for instance <XLXI_162>.
-    Set property "HU_SET = XLXI_183_25" for instance <XLXI_183>.
-    Set property "HU_SET = XLXI_184_26" for instance <XLXI_184>.
-    Set property "HU_SET = XLXI_185_27" for instance <XLXI_185>.
-    Set property "HU_SET = XLXI_186_28" for instance <XLXI_186>.
-    Set property "HU_SET = XLXI_210_39" for instance <XLXI_210>.
-    Set property "HU_SET = XLXI_215_29" for instance <XLXI_215>.
-    Set property "HU_SET = XLXI_260_30" for instance <XLXI_260>.
-    Set property "HU_SET = XLXI_261_31" for instance <XLXI_261>.
-    Set property "HU_SET = XLXI_262_32" for instance <XLXI_262>.
-    Set property "HU_SET = XLXI_263_33" for instance <XLXI_263>.
-    Set property "HU_SET = XLXI_264_34" for instance <XLXI_264>.
-    Set property "HU_SET = XLXI_265_35" for instance <XLXI_265>.
-    Set property "HU_SET = XLXI_266_36" for instance <XLXI_266>.
-    Set property "HU_SET = XLXI_277_37" for instance <XLXI_277>.
-    Set property "HU_SET = XLXI_281_38" for instance <XLXI_281>.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf" line 421: Output port <CEO> of the instance <XLXI_162> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf" line 421: Output port <TC> of the instance <XLXI_162> is unconnected or connected to loadless signal.
-    Summary:
-	no macro.
-Unit <ssd4d0ftlnpb_MUSER_main> synthesized.
-
-Synthesizing Unit <CB2CE_HXILINX_main>.
-    Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf".
-    Found 1-bit register for signal <Q1>.
-    Found 1-bit register for signal <Q0>.
-    Found 2-bit adder for signal <Q1_GND_19_o_add_0_OUT> created at line 200.
-    Summary:
-	inferred   1 Adder/Subtractor(s).
-	inferred   2 D-type flip-flop(s).
-Unit <CB2CE_HXILINX_main> synthesized.
-
-Synthesizing Unit <M4_1E_HXILINX_main>.
-    Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf".
-    Found 1-bit 4-to-1 multiplexer for signal <S1_D3_Mux_0_o> created at line 132.
-    Summary:
-	inferred   2 Multiplexer(s).
-Unit <M4_1E_HXILINX_main> synthesized.
-
-Synthesizing Unit <D2_4E_HXILINX_main>.
-    Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf".
-    Summary:
-	inferred   4 Multiplexer(s).
-Unit <D2_4E_HXILINX_main> synthesized.
-
-Synthesizing Unit <M2_1E_HXILINX_main>.
-    Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf".
-    Summary:
-	inferred   2 Multiplexer(s).
-Unit <M2_1E_HXILINX_main> synthesized.
-
 Synthesizing Unit <gnd4_MUSER_main>.
     Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf".
     Summary:
@@ -312,30 +251,30 @@ Unit <gnd4_MUSER_main> synthesized.
 
 Synthesizing Unit <clkdiv20k_MUSER_main>.
     Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf".
-    Set property "HU_SET = XLXI_1_21" for instance <XLXI_1>.
-    Set property "HU_SET = XLXI_14_22" for instance <XLXI_14>.
-    Set property "HU_SET = XLXI_17_23" for instance <XLXI_17>.
-    Set property "HU_SET = XLXI_22_24" for instance <XLXI_22>.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf" line 243: Output port <Q0> of the instance <XLXI_1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf" line 243: Output port <Q1> of the instance <XLXI_1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf" line 243: Output port <Q2> of the instance <XLXI_1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf" line 243: Output port <Q3> of the instance <XLXI_1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf" line 243: Output port <TC> of the instance <XLXI_1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf" line 260: Output port <Q0> of the instance <XLXI_14> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf" line 260: Output port <Q1> of the instance <XLXI_14> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf" line 260: Output port <Q2> of the instance <XLXI_14> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf" line 260: Output port <Q3> of the instance <XLXI_14> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf" line 260: Output port <TC> of the instance <XLXI_14> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf" line 270: Output port <Q0> of the instance <XLXI_17> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf" line 270: Output port <Q1> of the instance <XLXI_17> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf" line 270: Output port <Q2> of the instance <XLXI_17> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf" line 270: Output port <Q3> of the instance <XLXI_17> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf" line 270: Output port <TC> of the instance <XLXI_17> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf" line 280: Output port <CEO> of the instance <XLXI_22> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf" line 280: Output port <Q0> of the instance <XLXI_22> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf" line 280: Output port <Q1> of the instance <XLXI_22> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf" line 280: Output port <Q2> of the instance <XLXI_22> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf" line 280: Output port <Q3> of the instance <XLXI_22> is unconnected or connected to loadless signal.
+    Set property "HU_SET = XLXI_1_6" for instance <XLXI_1>.
+    Set property "HU_SET = XLXI_14_7" for instance <XLXI_14>.
+    Set property "HU_SET = XLXI_17_8" for instance <XLXI_17>.
+    Set property "HU_SET = XLXI_22_9" for instance <XLXI_22>.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf" line 345: Output port <Q0> of the instance <XLXI_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf" line 345: Output port <Q1> of the instance <XLXI_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf" line 345: Output port <Q2> of the instance <XLXI_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf" line 345: Output port <Q3> of the instance <XLXI_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf" line 345: Output port <TC> of the instance <XLXI_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf" line 362: Output port <Q0> of the instance <XLXI_14> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf" line 362: Output port <Q1> of the instance <XLXI_14> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf" line 362: Output port <Q2> of the instance <XLXI_14> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf" line 362: Output port <Q3> of the instance <XLXI_14> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf" line 362: Output port <TC> of the instance <XLXI_14> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf" line 372: Output port <Q0> of the instance <XLXI_17> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf" line 372: Output port <Q1> of the instance <XLXI_17> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf" line 372: Output port <Q2> of the instance <XLXI_17> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf" line 372: Output port <Q3> of the instance <XLXI_17> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf" line 372: Output port <TC> of the instance <XLXI_17> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf" line 382: Output port <CEO> of the instance <XLXI_22> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf" line 382: Output port <Q0> of the instance <XLXI_22> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf" line 382: Output port <Q1> of the instance <XLXI_22> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf" line 382: Output port <Q2> of the instance <XLXI_22> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf" line 382: Output port <Q3> of the instance <XLXI_22> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <clkdiv20k_MUSER_main> synthesized.
@@ -347,7 +286,7 @@ Synthesizing Unit <CD4CE_HXILINX_main>.
     Found 1-bit register for signal <Q2>.
     Found 1-bit register for signal <Q3>.
     Found 1-bit register for signal <Q0>.
-    Found 4-bit adder for signal <Q3_GND_30_o_add_4_OUT> created at line 101.
+    Found 4-bit adder for signal <Q3_GND_13_o_add_4_OUT> created at line 73.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred   4 D-type flip-flop(s).
@@ -356,7 +295,7 @@ Unit <CD4CE_HXILINX_main> synthesized.
 
 Synthesizing Unit <COMP8_HXILINX_main>.
     Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf".
-    Found 8-bit comparator equal for signal <EQ> created at line 59
+    Found 8-bit comparator equal for signal <EQ> created at line 31
     Summary:
 	inferred   1 Comparator(s).
 Unit <COMP8_HXILINX_main> synthesized.
@@ -366,6 +305,43 @@ Synthesizing Unit <gnd8_MUSER_main>.
     Summary:
 	no macro.
 Unit <gnd8_MUSER_main> synthesized.
+
+Synthesizing Unit <ssd4d0ftb_MUSER_main>.
+    Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf".
+    Set property "HU_SET = XLXI_162_5" for instance <XLXI_162>.
+    Set property "HU_SET = XLXI_183_0" for instance <XLXI_183>.
+    Set property "HU_SET = XLXI_184_1" for instance <XLXI_184>.
+    Set property "HU_SET = XLXI_185_2" for instance <XLXI_185>.
+    Set property "HU_SET = XLXI_186_3" for instance <XLXI_186>.
+    Set property "HU_SET = XLXI_210_4" for instance <XLXI_210>.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf" line 246: Output port <CEO> of the instance <XLXI_162> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf" line 246: Output port <TC> of the instance <XLXI_162> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <ssd4d0ftb_MUSER_main> synthesized.
+
+Synthesizing Unit <CB2CE_HXILINX_main>.
+    Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf".
+    Found 1-bit register for signal <Q1>.
+    Found 1-bit register for signal <Q0>.
+    Found 2-bit adder for signal <Q1_GND_27_o_add_0_OUT> created at line 172.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 D-type flip-flop(s).
+Unit <CB2CE_HXILINX_main> synthesized.
+
+Synthesizing Unit <M4_1E_HXILINX_main>.
+    Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf".
+    Found 1-bit 4-to-1 multiplexer for signal <S1_D3_Mux_0_o> created at line 104.
+    Summary:
+	inferred   2 Multiplexer(s).
+Unit <M4_1E_HXILINX_main> synthesized.
+
+Synthesizing Unit <D2_4E_HXILINX_main>.
+    Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\8\adder\main.vf".
+    Summary:
+	inferred   4 Multiplexer(s).
+Unit <D2_4E_HXILINX_main> synthesized.
 
 =========================================================================
 HDL Synthesis Report
@@ -378,9 +354,9 @@ Macro Statistics
  1-bit register                                        : 18
 # Comparators                                          : 1
  8-bit comparator equal                                : 1
-# Multiplexers                                         : 60
- 1-bit 2-to-1 multiplexer                              : 53
- 1-bit 4-to-1 multiplexer                              : 7
+# Multiplexers                                         : 40
+ 1-bit 2-to-1 multiplexer                              : 36
+ 1-bit 4-to-1 multiplexer                              : 4
 
 =========================================================================
 
@@ -400,9 +376,9 @@ Macro Statistics
  Flip-Flops                                            : 19
 # Comparators                                          : 1
  8-bit comparator equal                                : 1
-# Multiplexers                                         : 60
- 1-bit 2-to-1 multiplexer                              : 53
- 1-bit 4-to-1 multiplexer                              : 7
+# Multiplexers                                         : 40
+ 1-bit 2-to-1 multiplexer                              : 36
+ 1-bit 4-to-1 multiplexer                              : 4
 
 =========================================================================
 
@@ -416,7 +392,7 @@ Optimizing unit <adder8_MUSER_main> ...
 
 Optimizing unit <split8x4x4_MUSER_main> ...
 
-Optimizing unit <ssd4d0ftlnpb_MUSER_main> ...
+Optimizing unit <ssd4d0ftb_MUSER_main> ...
 
 Optimizing unit <CD4CE_HXILINX_main> ...
 
@@ -427,8 +403,6 @@ Optimizing unit <CB2CE_HXILINX_main> ...
 Optimizing unit <M4_1E_HXILINX_main> ...
 
 Optimizing unit <D2_4E_HXILINX_main> ...
-
-Optimizing unit <M2_1E_HXILINX_main> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -464,17 +438,16 @@ Top Level Output File Name         : main.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 115
-#      AND2                        : 20
-#      AND3B1                      : 2
-#      AND4B4                      : 3
-#      BUF                         : 9
-#      GND                         : 2
+# BELS                             : 100
+#      AND2                        : 16
+#      AND2B1                      : 1
+#      BUF                         : 12
+#      GND                         : 1
 #      INV                         : 11
 #      LUT2                        : 5
-#      LUT3                        : 16
+#      LUT3                        : 9
 #      LUT4                        : 16
-#      LUT5                        : 5
+#      LUT5                        : 3
 #      LUT6                        : 1
 #      OR2                         : 8
 #      VCC                         : 1
@@ -484,11 +457,9 @@ Primitive and Black Box Usage:
 #      FDCE                        : 18
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 29
+# IO Buffers                       : 28
 #      IBUF                        : 16
-#      OBUF                        : 13
-# Logical                          : 1
-#      NAND2B1                     : 1
+#      OBUF                        : 12
 
 Device utilization summary:
 ---------------------------
@@ -498,19 +469,19 @@ Selected Device : 6slx9tqg144-3
 
 Slice Logic Utilization: 
  Number of Slice Registers:              19  out of  11440     0%  
- Number of Slice LUTs:                   54  out of   5720     0%  
-    Number used as Logic:                54  out of   5720     0%  
+ Number of Slice LUTs:                   45  out of   5720     0%  
+    Number used as Logic:                45  out of   5720     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     73
-   Number with an unused Flip Flop:      54  out of     73    73%  
-   Number with an unused LUT:            19  out of     73    26%  
-   Number of fully used LUT-FF pairs:     0  out of     73     0%  
+ Number of LUT Flip Flop pairs used:     64
+   Number with an unused Flip Flop:      45  out of     64    70%  
+   Number with an unused LUT:            19  out of     64    29%  
+   Number of fully used LUT-FF pairs:     0  out of     64     0%  
    Number of unique control sets:         6
 
 IO Utilization: 
- Number of IOs:                          30
- Number of bonded IOBs:                  30  out of    102    29%  
+ Number of IOs:                          29
+ Number of bonded IOBs:                  29  out of    102    28%  
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
@@ -533,13 +504,13 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------------------+-------------------------+-------+
-Clock Signal                                   | Clock buffer(FF name)   | Load  |
------------------------------------------------+-------------------------+-------+
-XLXI_19/XLXI_22/TC(XLXI_19/XLXI_22/Mmux_TC11:O)| NONE(*)(XLXI_19/XLXI_10)| 1     |
-OSC                                            | BUFGP                   | 16    |
-XLXN_27                                        | NONE(XLXI_6/XLXI_162/Q0)| 2     |
------------------------------------------------+-------------------------+-------+
+-----------------------------------------------+--------------------------+-------+
+Clock Signal                                   | Clock buffer(FF name)    | Load  |
+-----------------------------------------------+--------------------------+-------+
+XLXI_19/XLXI_22/TC(XLXI_19/XLXI_22/Mmux_TC11:O)| NONE(*)(XLXI_19/XLXI_10) | 1     |
+OSC                                            | BUFGP                    | 16    |
+XLXN_27                                        | NONE(XLXI_23/XLXI_162/Q0)| 2     |
+-----------------------------------------------+--------------------------+-------+
 (*) This 1 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
@@ -555,8 +526,8 @@ Speed Grade: -3
 
    Minimum period: 4.393ns (Maximum Frequency: 227.645MHz)
    Minimum input arrival time before clock: No path found
-   Maximum output required time after clock: 7.629ns
-   Maximum combinational path delay: 33.615ns
+   Maximum output required time after clock: 7.055ns
+   Maximum combinational path delay: 27.515ns
 
 Timing Details:
 ---------------
@@ -616,58 +587,56 @@ Delay:               4.393ns (Levels of Logic = 6)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'XLXN_27'
-  Clock period: 2.242ns (frequency: 446.100MHz)
+  Clock period: 2.190ns (frequency: 456.663MHz)
   Total number of paths / destination ports: 3 / 2
 -------------------------------------------------------------------------
-Delay:               2.242ns (Levels of Logic = 1)
-  Source:            XLXI_6/XLXI_162/Q0 (FF)
-  Destination:       XLXI_6/XLXI_162/Q0 (FF)
+Delay:               2.190ns (Levels of Logic = 1)
+  Source:            XLXI_23/XLXI_162/Q0 (FF)
+  Destination:       XLXI_23/XLXI_162/Q0 (FF)
   Source Clock:      XLXN_27 rising
   Destination Clock: XLXN_27 rising
 
-  Data Path: XLXI_6/XLXI_162/Q0 to XLXI_6/XLXI_162/Q0
+  Data Path: XLXI_23/XLXI_162/Q0 to XLXI_23/XLXI_162/Q0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q            12   0.447   0.908  Q0 (Q0)
-     INV:I->O              1   0.206   0.579  Madd_Q1_GND_19_o_add_0_OUT_xor<0>11_INV_0 (Q1_GND_19_o_add_0_OUT<0>)
+     FDCE:C->Q            10   0.447   0.856  Q0 (Q0)
+     INV:I->O              1   0.206   0.579  Madd_Q1_GND_27_o_add_0_OUT_xor<0>11_INV_0 (Q1_GND_27_o_add_0_OUT<0>)
      FDCE:D                    0.102          Q0
     ----------------------------------------
-    Total                      2.242ns (0.755ns logic, 1.487ns route)
-                                       (33.7% logic, 66.3% route)
+    Total                      2.190ns (0.755ns logic, 1.435ns route)
+                                       (34.5% logic, 65.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXN_27'
-  Total number of paths / destination ports: 106 / 11
+  Total number of paths / destination ports: 62 / 10
 -------------------------------------------------------------------------
-Offset:              7.629ns (Levels of Logic = 7)
-  Source:            XLXI_6/XLXI_162/Q0 (FF)
-  Destination:       SSD_Segment<6> (PAD)
+Offset:              7.055ns (Levels of Logic = 6)
+  Source:            XLXI_23/XLXI_162/Q0 (FF)
+  Destination:       SSD_COM<2> (PAD)
   Source Clock:      XLXN_27 rising
 
-  Data Path: XLXI_6/XLXI_162/Q0 to SSD_Segment<6>
+  Data Path: XLXI_23/XLXI_162/Q0 to SSD_COM<2>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q            12   0.447   1.253  Q0 (Q0)
-     end scope: 'XLXI_6/XLXI_162:Q0'
-     begin scope: 'XLXI_6/XLXI_281:S0'
-     LUT5:I0->O            8   0.203   1.167  Mmux_O11 (O)
-     end scope: 'XLXI_6/XLXI_281:O'
-     NAND2B1:I0->O         7   0.203   1.002  XLXI_6/XLXI_306 (XLXI_6/XLXN_487)
-     begin scope: 'XLXI_6/XLXI_266:E'
-     LUT3:I0->O            1   0.205   0.579  Mmux_O11 (O)
-     end scope: 'XLXI_6/XLXI_266:O'
-     OBUF:I->O                 2.571          SSD_Segment_6_OBUF (SSD_Segment<6>)
+     FDCE:C->Q            10   0.447   0.961  Q0 (Q0)
+     end scope: 'XLXI_23/XLXI_162:Q0'
+     begin scope: 'XLXI_23/XLXI_210:A0'
+     LUT2:I0->O            1   0.203   0.579  Mmux_D211 (D2)
+     end scope: 'XLXI_23/XLXI_210:D2'
+     INV:I->O              1   0.568   0.579  XLXI_23/XLXI_213 (COM<2>)
+     BUF:I->O              1   0.568   0.579  XLXI_26 (SSD_COM_2_OBUF)
+     OBUF:I->O                 2.571          SSD_COM_2_OBUF (SSD_COM<2>)
     ----------------------------------------
-    Total                      7.629ns (3.629ns logic, 4.000ns route)
-                                       (47.6% logic, 52.4% route)
+    Total                      7.055ns (4.357ns logic, 2.697ns route)
+                                       (61.8% logic, 38.2% route)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 6848 / 8
+  Total number of paths / destination ports: 1280 / 8
 -------------------------------------------------------------------------
-Delay:               33.615ns (Levels of Logic = 29)
+Delay:               27.515ns (Levels of Logic = 23)
   Source:            DIP<0> (PAD)
   Destination:       SSD_Segment<6> (PAD)
 
@@ -692,23 +661,16 @@ Delay:               33.615ns (Levels of Logic = 29)
      AND2:I0->O            1   0.203   0.924  XLXI_3/XLXI_58/XLXI_5 (XLXI_3/XLXI_58/XLXN_3)
      OR2:I1->O             2   0.223   0.981  XLXI_3/XLXI_58/XLXI_6 (XLXI_3/XLXN_63)
      AND2:I0->O            1   0.203   0.924  XLXI_3/XLXI_59/XLXI_5 (XLXI_3/XLXI_59/XLXN_3)
-     OR2:I1->O             1   0.223   0.579  XLXI_3/XLXI_59/XLXI_6 (XLXN_3)
-     BUF:I->O              2   0.568   0.981  XLXI_5/XLXI_1 (XLXN_10<0>)
-     AND4B4:I0->O          1   0.203   0.924  XLXI_6/XLXI_250 (XLXI_6/XLXN_551)
-     AND2:I1->O            4   0.223   1.048  XLXI_6/XLXI_258 (XLXI_6/XLXN_471)
-     AND2:I0->O            3   0.203   0.995  XLXI_6/XLXI_257 (XLXI_6/XLXN_548)
-     AND2:I1->O            1   0.223   0.684  XLXI_6/XLXI_307 (XLXI_6/XLXN_544)
-     begin scope: 'XLXI_6/XLXI_281:D1'
-     LUT5:I3->O            8   0.203   1.167  Mmux_O11 (O)
-     end scope: 'XLXI_6/XLXI_281:O'
-     NAND2B1:I0->O         7   0.203   1.002  XLXI_6/XLXI_306 (XLXI_6/XLXN_487)
-     begin scope: 'XLXI_6/XLXI_266:E'
-     LUT3:I0->O            1   0.205   0.579  Mmux_O11 (O)
-     end scope: 'XLXI_6/XLXI_266:O'
+     OR2:I1->O             2   0.223   0.616  XLXI_3/XLXI_59/XLXI_6 (XLXN_3)
+     BUF:I->O              1   0.568   0.580  XLXI_5/XLXI_1 (XLXN_10<0>)
+     begin scope: 'XLXI_23/XLXI_183:D2'
+     LUT5:I4->O            7   0.205   1.021  Mmux_O11 (O)
+     end scope: 'XLXI_23/XLXI_183:O'
+     LUT4:I0->O            1   0.320   0.579  XLXI_23/XLXI_1 (SSD_Segment_6_OBUF)
      OBUF:I->O                 2.571          SSD_Segment_6_OBUF (SSD_Segment<6>)
     ----------------------------------------
-    Total                     33.615ns (9.455ns logic, 24.160ns route)
-                                       (28.1% logic, 71.9% route)
+    Total                     27.515ns (8.517ns logic, 18.998ns route)
+                                       (31.0% logic, 69.0% route)
 
 =========================================================================
 
@@ -736,14 +698,14 @@ Clock to Setup on destination clock XLXN_27
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-XLXN_27        |    2.242|         |         |         |
+XLXN_27        |    2.190|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 3.00 secs
-Total CPU time to Xst completion: 2.77 secs
+Total CPU time to Xst completion: 2.86 secs
  
 --> 
 

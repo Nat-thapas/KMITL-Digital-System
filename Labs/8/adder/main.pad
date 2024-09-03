@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Tue Sep 03 10:41:46 2024
+Tue Sep 03 13:44:20 2024
 
 
 # NOTE: This file is designed to be imported into a spreadsheet program
@@ -44,7 +44,7 @@ P22||IOBM|IO_L42P_GCLK25_TRDY2_3|UNUSED||3|||||||||
 P23||IOBS|IO_L41N_GCLK26_3|UNUSED||3|||||||||
 P24||IOBM|IO_L41P_GCLK27_3|UNUSED||3|||||||||
 P25|||GND||||||||||||
-P26|SSD_Segment<7>|IOB|IO_L37N_3|OUTPUT|LVCMOS25*|3|12|SLOW||||LOCATED|NO|NONE|
+P26||IOBS|IO_L37N_3|UNUSED||3|||||||||
 P27|SSD_Segment<6>|IOB|IO_L37P_3|OUTPUT|LVCMOS25*|3|12|SLOW||||LOCATED|NO|NONE|
 P28|||VCCINT||||||||1.2||||
 P29|SSD_Segment<5>|IOB|IO_L36N_3|OUTPUT|LVCMOS25*|3|12|SLOW||||LOCATED|NO|NONE|

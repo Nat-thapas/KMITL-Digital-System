@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-LAPBOTTOM::  Tue Sep 03 10:41:44 2024
+LAPBOTTOM::  Tue Sep 03 13:44:18 2024
 
 par -w -intstyle ise -ol high -mt off main_map.ncd main.ncd main.pcf 
 
@@ -31,21 +31,21 @@ Slice Logic Utilization:
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                         57 out of   5,720    1%
-    Number used as logic:                       57 out of   5,720    1%
-      Number using O6 output only:              49
+  Number of Slice LUTs:                         53 out of   5,720    1%
+    Number used as logic:                       53 out of   5,720    1%
+      Number using O6 output only:              43
       Number using O5 output only:               0
-      Number using O5 and O6:                    8
+      Number using O5 and O6:                   10
       Number used as ROM:                        0
     Number used as Memory:                       0 out of   1,440    0%
 
 Slice Logic Distribution:
-  Number of occupied Slices:                    28 out of   1,430    1%
+  Number of occupied Slices:                    25 out of   1,430    1%
   Number of MUXCYs used:                         0 out of   2,860    0%
-  Number of LUT Flip Flop pairs used:           57
-    Number with an unused Flip Flop:            42 out of      57   73%
-    Number with an unused LUT:                   0 out of      57    0%
-    Number of fully used LUT-FF pairs:          15 out of      57   26%
+  Number of LUT Flip Flop pairs used:           53
+    Number with an unused Flip Flop:            38 out of      53   71%
+    Number with an unused LUT:                   0 out of      53    0%
+    Number of fully used LUT-FF pairs:          15 out of      53   28%
     Number of slice register sites lost
       to control set restrictions:               0 out of  11,440    0%
 
@@ -56,8 +56,8 @@ Slice Logic Distribution:
   over-mapped for a non-slice resource or if Placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        30 out of     102   29%
-    Number of LOCed IOBs:                       30 out of      30  100%
+  Number of bonded IOBs:                        29 out of     102   28%
+    Number of LOCed IOBs:                       29 out of      29  100%
 
 Specific Feature Utilization:
   Number of RAMB16BWERs:                         0 out of      32    0%
@@ -94,28 +94,28 @@ Finished initial Timing Analysis.  REAL time: 1 secs
 Starting Router
 
 
-Phase  1  : 212 unrouted;      REAL time: 1 secs 
+Phase  1  : 188 unrouted;      REAL time: 1 secs 
 
-Phase  2  : 199 unrouted;      REAL time: 1 secs 
+Phase  2  : 173 unrouted;      REAL time: 1 secs 
 
-Phase  3  : 41 unrouted;      REAL time: 1 secs 
+Phase  3  : 37 unrouted;      REAL time: 1 secs 
 
-Phase  4  : 41 unrouted; (Par is working to improve performance)     REAL time: 1 secs 
+Phase  4  : 37 unrouted; (Par is working to improve performance)     REAL time: 2 secs 
 
 Updating file: main.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 secs 
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 2 secs 
 
-Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 secs 
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 2 secs 
 
-Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 secs 
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 2 secs 
 
-Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 secs 
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 2 secs 
 
-Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 secs 
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 2 secs 
 
-Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 secs 
-Total REAL time to Router completion: 1 secs 
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 2 secs 
+Total REAL time to Router completion: 2 secs 
 Total CPU time to Router completion: 1 secs 
 
 Partition Implementation Status
@@ -136,14 +136,14 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net OSC | SETUP       |         N/A|     3.653ns|     N/A|           0
-  _BUFGP                                    | HOLD        |     0.410ns|            |       0|           0
+  Autotimespec constraint for clock net OSC | SETUP       |         N/A|     3.534ns|     N/A|           0
+  _BUFGP                                    | HOLD        |     0.409ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net XLX | SETUP       |         N/A|     0.873ns|     N/A|           0
-  I_19/XLXN_41                              | HOLD        |     0.436ns|            |       0|           0
+  Autotimespec constraint for clock net XLX | SETUP       |         N/A|     0.895ns|     N/A|           0
+  I_19/XLXN_41                              | HOLD        |     0.453ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net XLX | SETUP       |         N/A|     1.220ns|     N/A|           0
-  N_27                                      | HOLD        |     0.461ns|            |       0|           0
+  Autotimespec constraint for clock net XLX | SETUP       |         N/A|     1.224ns|     N/A|           0
+  N_27                                      | HOLD        |     0.465ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 

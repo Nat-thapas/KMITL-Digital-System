@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Tue Sep 03 10:41:43 2024
+// Written by: Map P.20131013 on Tue Sep 03 13:44:16 2024
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -16,7 +16,6 @@ COMP "SSD_Segment<5>" LOCATE = SITE "P29" LEVEL 1;
 COMP "SW<6>" LOCATE = SITE "P56" LEVEL 1;
 COMP "SSD_Segment<6>" LOCATE = SITE "P27" LEVEL 1;
 COMP "SW<7>" LOCATE = SITE "P55" LEVEL 1;
-COMP "SSD_Segment<7>" LOCATE = SITE "P26" LEVEL 1;
 COMP "BUZZER" LOCATE = SITE "P83" LEVEL 1;
 COMP "SSD_COM<0>" LOCATE = SITE "P44" LEVEL 1;
 COMP "SSD_COM<1>" LOCATE = SITE "P43" LEVEL 1;

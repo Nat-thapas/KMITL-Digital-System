@@ -1,5 +1,5 @@
 verilog work "fulladder.vf"
-verilog work "ssd4d0ftlnpb.vf"
+verilog work "ssd4d0ftb.vf"
 verilog work "split8x4x4.vf"
 verilog work "resize1x4x0l.vf"
 verilog work "gnd8.vf"
