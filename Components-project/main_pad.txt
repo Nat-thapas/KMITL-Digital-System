@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Tue Sep 03 10:10:08 2024
+Tue Sep 03 11:55:39 2024
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -66,8 +66,8 @@ Pinout by Pin Number:
 |P44       |SSD_COM<0>    |IOB      |IO_L62P_D5_2              |OUTPUT   |LVCMOS25*  |2             |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
 |P45       |              |IOBS     |IO_L49N_D4_2              |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |P46       |              |IOBM     |IO_L49P_D3_2              |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
-|P47       |BTN3          |IOB      |IO_L48N_RDWR_B_VREF_2     |INPUT    |LVCMOS25*  |2             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
-|P48       |BTN4          |IOB      |IO_L48P_D7_2              |INPUT    |LVCMOS25*  |2             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
+|P47       |              |IOBS     |IO_L48N_RDWR_B_VREF_2     |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
+|P48       |              |IOBM     |IO_L48P_D7_2              |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |P49       |              |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
 |P50       |              |IOBS     |IO_L31N_GCLK30_D15_2      |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |P51       |              |IOBM     |IO_L31P_GCLK31_D14_2      |UNUSED   |           |2             |          |         |           |         |         |          |           |                |

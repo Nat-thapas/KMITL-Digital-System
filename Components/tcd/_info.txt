@@ -1,0 +1,2 @@
+Two's Complement Decoder
+Convert from two's complement number to positive number with negative flag.

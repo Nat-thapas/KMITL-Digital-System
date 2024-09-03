@@ -1,3 +1,4 @@
+Clock divider
 All clock dividers have exactly 50% duty cycle output.
 All clock dividers are phase aligned, including on first cycle.
 First low signal last 50% of expected period, no short start behavior.

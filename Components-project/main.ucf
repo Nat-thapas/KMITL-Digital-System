@@ -1,8 +1,5 @@
 NET "OSC" LOC = P123;
 
-NET "BTN3" LOC = P47;
-NET "BTN4" LOC = P48;
-
 NET "SW[7]" LOC = P55;
 NET "SW[6]" LOC = P56;
 NET "SW[5]" LOC = P57;

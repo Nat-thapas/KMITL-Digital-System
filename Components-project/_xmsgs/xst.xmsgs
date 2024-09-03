@@ -5,76 +5,82 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"D:\Classes-2024\Digital System Fundamentals Shared\Components-project\main.vf" Line 88: Result of <arg fmt="%d" index="1">5</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">4</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"D:\Classes-2024\Digital System Fundamentals Shared\Components-project\main.vf" Line 105: Result of <arg fmt="%d" index="1">5</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">4</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"D:\Classes-2024\Digital System Fundamentals Shared\Components-project\main.vf" Line 187: Result of <arg fmt="%d" index="1">3</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">2</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"D:\Classes-2024\Digital System Fundamentals Shared\Components-project\main.vf" Line 204: Result of <arg fmt="%d" index="1">3</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">2</arg>-bit target.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">D:\Classes-2024\Digital System Fundamentals Shared\Components-project\main.vf</arg>&quot; line <arg fmt="%s" index="2">226</arg>: Output port &lt;<arg fmt="%s" index="3">Q0</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_1</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Classes-2024\Digital System Fundamentals Shared\Components-project\main.vf</arg>&quot; line <arg fmt="%s" index="2">578</arg>: Output port &lt;<arg fmt="%s" index="3">Q0</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_1</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">D:\Classes-2024\Digital System Fundamentals Shared\Components-project\main.vf</arg>&quot; line <arg fmt="%s" index="2">226</arg>: Output port &lt;<arg fmt="%s" index="3">Q1</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_1</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Classes-2024\Digital System Fundamentals Shared\Components-project\main.vf</arg>&quot; line <arg fmt="%s" index="2">578</arg>: Output port &lt;<arg fmt="%s" index="3">Q1</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_1</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">D:\Classes-2024\Digital System Fundamentals Shared\Components-project\main.vf</arg>&quot; line <arg fmt="%s" index="2">226</arg>: Output port &lt;<arg fmt="%s" index="3">Q2</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_1</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Classes-2024\Digital System Fundamentals Shared\Components-project\main.vf</arg>&quot; line <arg fmt="%s" index="2">578</arg>: Output port &lt;<arg fmt="%s" index="3">Q2</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_1</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">D:\Classes-2024\Digital System Fundamentals Shared\Components-project\main.vf</arg>&quot; line <arg fmt="%s" index="2">226</arg>: Output port &lt;<arg fmt="%s" index="3">Q3</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_1</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Classes-2024\Digital System Fundamentals Shared\Components-project\main.vf</arg>&quot; line <arg fmt="%s" index="2">578</arg>: Output port &lt;<arg fmt="%s" index="3">Q3</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_1</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">D:\Classes-2024\Digital System Fundamentals Shared\Components-project\main.vf</arg>&quot; line <arg fmt="%s" index="2">226</arg>: Output port &lt;<arg fmt="%s" index="3">TC</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_1</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Classes-2024\Digital System Fundamentals Shared\Components-project\main.vf</arg>&quot; line <arg fmt="%s" index="2">578</arg>: Output port &lt;<arg fmt="%s" index="3">TC</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_1</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">D:\Classes-2024\Digital System Fundamentals Shared\Components-project\main.vf</arg>&quot; line <arg fmt="%s" index="2">243</arg>: Output port &lt;<arg fmt="%s" index="3">Q0</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_14</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Classes-2024\Digital System Fundamentals Shared\Components-project\main.vf</arg>&quot; line <arg fmt="%s" index="2">595</arg>: Output port &lt;<arg fmt="%s" index="3">Q0</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_14</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">D:\Classes-2024\Digital System Fundamentals Shared\Components-project\main.vf</arg>&quot; line <arg fmt="%s" index="2">243</arg>: Output port &lt;<arg fmt="%s" index="3">Q1</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_14</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Classes-2024\Digital System Fundamentals Shared\Components-project\main.vf</arg>&quot; line <arg fmt="%s" index="2">595</arg>: Output port &lt;<arg fmt="%s" index="3">Q1</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_14</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">D:\Classes-2024\Digital System Fundamentals Shared\Components-project\main.vf</arg>&quot; line <arg fmt="%s" index="2">243</arg>: Output port &lt;<arg fmt="%s" index="3">Q2</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_14</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Classes-2024\Digital System Fundamentals Shared\Components-project\main.vf</arg>&quot; line <arg fmt="%s" index="2">595</arg>: Output port &lt;<arg fmt="%s" index="3">Q2</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_14</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">D:\Classes-2024\Digital System Fundamentals Shared\Components-project\main.vf</arg>&quot; line <arg fmt="%s" index="2">243</arg>: Output port &lt;<arg fmt="%s" index="3">Q3</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_14</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Classes-2024\Digital System Fundamentals Shared\Components-project\main.vf</arg>&quot; line <arg fmt="%s" index="2">595</arg>: Output port &lt;<arg fmt="%s" index="3">Q3</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_14</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">D:\Classes-2024\Digital System Fundamentals Shared\Components-project\main.vf</arg>&quot; line <arg fmt="%s" index="2">243</arg>: Output port &lt;<arg fmt="%s" index="3">TC</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_14</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Classes-2024\Digital System Fundamentals Shared\Components-project\main.vf</arg>&quot; line <arg fmt="%s" index="2">595</arg>: Output port &lt;<arg fmt="%s" index="3">TC</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_14</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">D:\Classes-2024\Digital System Fundamentals Shared\Components-project\main.vf</arg>&quot; line <arg fmt="%s" index="2">253</arg>: Output port &lt;<arg fmt="%s" index="3">Q0</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_17</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Classes-2024\Digital System Fundamentals Shared\Components-project\main.vf</arg>&quot; line <arg fmt="%s" index="2">605</arg>: Output port &lt;<arg fmt="%s" index="3">Q0</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_17</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">D:\Classes-2024\Digital System Fundamentals Shared\Components-project\main.vf</arg>&quot; line <arg fmt="%s" index="2">253</arg>: Output port &lt;<arg fmt="%s" index="3">Q1</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_17</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Classes-2024\Digital System Fundamentals Shared\Components-project\main.vf</arg>&quot; line <arg fmt="%s" index="2">605</arg>: Output port &lt;<arg fmt="%s" index="3">Q1</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_17</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">D:\Classes-2024\Digital System Fundamentals Shared\Components-project\main.vf</arg>&quot; line <arg fmt="%s" index="2">253</arg>: Output port &lt;<arg fmt="%s" index="3">Q2</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_17</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Classes-2024\Digital System Fundamentals Shared\Components-project\main.vf</arg>&quot; line <arg fmt="%s" index="2">605</arg>: Output port &lt;<arg fmt="%s" index="3">Q2</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_17</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">D:\Classes-2024\Digital System Fundamentals Shared\Components-project\main.vf</arg>&quot; line <arg fmt="%s" index="2">253</arg>: Output port &lt;<arg fmt="%s" index="3">Q3</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_17</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Classes-2024\Digital System Fundamentals Shared\Components-project\main.vf</arg>&quot; line <arg fmt="%s" index="2">605</arg>: Output port &lt;<arg fmt="%s" index="3">Q3</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_17</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">D:\Classes-2024\Digital System Fundamentals Shared\Components-project\main.vf</arg>&quot; line <arg fmt="%s" index="2">253</arg>: Output port &lt;<arg fmt="%s" index="3">TC</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_17</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Classes-2024\Digital System Fundamentals Shared\Components-project\main.vf</arg>&quot; line <arg fmt="%s" index="2">605</arg>: Output port &lt;<arg fmt="%s" index="3">TC</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_17</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">D:\Classes-2024\Digital System Fundamentals Shared\Components-project\main.vf</arg>&quot; line <arg fmt="%s" index="2">263</arg>: Output port &lt;<arg fmt="%s" index="3">CEO</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_22</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Classes-2024\Digital System Fundamentals Shared\Components-project\main.vf</arg>&quot; line <arg fmt="%s" index="2">615</arg>: Output port &lt;<arg fmt="%s" index="3">CEO</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_22</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">D:\Classes-2024\Digital System Fundamentals Shared\Components-project\main.vf</arg>&quot; line <arg fmt="%s" index="2">263</arg>: Output port &lt;<arg fmt="%s" index="3">Q0</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_22</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Classes-2024\Digital System Fundamentals Shared\Components-project\main.vf</arg>&quot; line <arg fmt="%s" index="2">615</arg>: Output port &lt;<arg fmt="%s" index="3">Q0</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_22</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">D:\Classes-2024\Digital System Fundamentals Shared\Components-project\main.vf</arg>&quot; line <arg fmt="%s" index="2">263</arg>: Output port &lt;<arg fmt="%s" index="3">Q1</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_22</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Classes-2024\Digital System Fundamentals Shared\Components-project\main.vf</arg>&quot; line <arg fmt="%s" index="2">615</arg>: Output port &lt;<arg fmt="%s" index="3">Q1</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_22</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">D:\Classes-2024\Digital System Fundamentals Shared\Components-project\main.vf</arg>&quot; line <arg fmt="%s" index="2">263</arg>: Output port &lt;<arg fmt="%s" index="3">Q2</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_22</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Classes-2024\Digital System Fundamentals Shared\Components-project\main.vf</arg>&quot; line <arg fmt="%s" index="2">615</arg>: Output port &lt;<arg fmt="%s" index="3">Q2</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_22</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">D:\Classes-2024\Digital System Fundamentals Shared\Components-project\main.vf</arg>&quot; line <arg fmt="%s" index="2">263</arg>: Output port &lt;<arg fmt="%s" index="3">Q3</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_22</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Classes-2024\Digital System Fundamentals Shared\Components-project\main.vf</arg>&quot; line <arg fmt="%s" index="2">615</arg>: Output port &lt;<arg fmt="%s" index="3">Q3</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_22</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">D:\Classes-2024\Digital System Fundamentals Shared\Components-project\main.vf</arg>&quot; line <arg fmt="%s" index="2">516</arg>: Output port &lt;<arg fmt="%s" index="3">CEO</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_162</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Classes-2024\Digital System Fundamentals Shared\Components-project\main.vf</arg>&quot; line <arg fmt="%s" index="2">366</arg>: Output port &lt;<arg fmt="%s" index="3">CEO</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_162</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">D:\Classes-2024\Digital System Fundamentals Shared\Components-project\main.vf</arg>&quot; line <arg fmt="%s" index="2">516</arg>: Output port &lt;<arg fmt="%s" index="3">TC</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_162</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Classes-2024\Digital System Fundamentals Shared\Components-project\main.vf</arg>&quot; line <arg fmt="%s" index="2">366</arg>: Output port &lt;<arg fmt="%s" index="3">TC</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_162</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Classes-2024\Digital System Fundamentals Shared\Components-project\main.vf</arg>&quot; line <arg fmt="%s" index="2">246</arg>: Output port &lt;<arg fmt="%s" index="3">CO</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_15</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Classes-2024\Digital System Fundamentals Shared\Components-project\main.vf</arg>&quot; line <arg fmt="%s" index="2">246</arg>: Output port &lt;<arg fmt="%s" index="3">OFL</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_15</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
