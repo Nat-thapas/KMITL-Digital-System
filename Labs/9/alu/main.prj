@@ -1,0 +1,7 @@
+verilog work "xor2x8b.vf"
+verilog work "ssd2d0ftb.vf"
+verilog work "split8x4x4.vf"
+verilog work "mux4x1x8e.vf"
+verilog work "lshift8x1b.vf"
+verilog work "clkdiv20k.vf"
+verilog work "main.vf"

@@ -1,0 +1,151 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : ssd2d0ftb.vf
+// /___/   /\     Timestamp : 09/17/2024 15:49:05
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Classes-2024/Digital System Fundamentals Shared/Labs/9/alu/ssd2d0ftb.vf" -w "D:/Classes-2024/Digital System Fundamentals Shared/Labs/9/alu/ssd2d0ftb.sch"
+//Design Name: ssd2d0ftb
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module FTC_HXILINX_ssd2d0ftb(Q, C, CLR, T);
+   
+   output             Q;
+
+   input 	      C;	
+   input 	      CLR;	
+   input              T;
+   
+   parameter INIT = 1'b0;
+   reg                Q = INIT;
+  
+   
+ 
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 1'b0;
+	else if(T)
+          Q <= !Q;
+     end
+   
+endmodule
+`timescale  100 ps / 10 ps
+
+module M2_1_HXILINX_ssd2d0ftb (O, D0, D1, S0);
+    
+
+   output O;
+
+   input  D0;
+   input  D1;
+   input  S0;
+
+   reg O;
+
+   always @ ( D0 or D1 or S0)
+   begin
+      case(S0)
+      1'b0 : O <= D0;
+      1'b1 : O <= D1;
+      endcase
+   end
+    
+endmodule
+`timescale 1ns / 1ps
+
+module ssd2d0ftb(D0, 
+                 D1, 
+                 ScanCLK, 
+                 COM, 
+                 Segment);
+
+    input [3:0] D0;
+    input [3:0] D1;
+    input ScanCLK;
+   output [1:0] COM;
+   output [6:0] Segment;
+   
+   wire [3:0] D;
+   wire XLXN_139;
+   wire XLXN_141;
+   wire [1:0] COM_DUMMY;
+   
+   assign COM[1:0] = COM_DUMMY[1:0];
+   LUT4 #( .INIT(16'hEF7C) ) XLXI_1 (.I0(D[0]), 
+                .I1(D[1]), 
+                .I2(D[2]), 
+                .I3(D[3]), 
+                .O(Segment[6]));
+   LUT4 #( .INIT(16'hDF71) ) XLXI_2 (.I0(D[0]), 
+                .I1(D[1]), 
+                .I2(D[2]), 
+                .I3(D[3]), 
+                .O(Segment[5]));
+   LUT4 #( .INIT(16'hFD45) ) XLXI_3 (.I0(D[0]), 
+                .I1(D[1]), 
+                .I2(D[2]), 
+                .I3(D[3]), 
+                .O(Segment[4]));
+   LUT4 #( .INIT(16'h7B6D) ) XLXI_4 (.I0(D[0]), 
+                .I1(D[1]), 
+                .I2(D[2]), 
+                .I3(D[3]), 
+                .O(Segment[3]));
+   LUT4 #( .INIT(16'h2FFB) ) XLXI_5 (.I0(D[0]), 
+                .I1(D[1]), 
+                .I2(D[2]), 
+                .I3(D[3]), 
+                .O(Segment[2]));
+   LUT4 #( .INIT(16'h279F) ) XLXI_6 (.I0(D[0]), 
+                .I1(D[1]), 
+                .I2(D[2]), 
+                .I3(D[3]), 
+                .O(Segment[1]));
+   LUT4 #( .INIT(16'hD7ED) ) XLXI_7 (.I0(D[0]), 
+                .I1(D[1]), 
+                .I2(D[2]), 
+                .I3(D[3]), 
+                .O(Segment[0]));
+   VCC  XLXI_118 (.P(XLXN_139));
+   GND  XLXI_119 (.G(XLXN_141));
+   INV  XLXI_156 (.I(COM_DUMMY[0]), 
+                 .O(COM_DUMMY[1]));
+   (* HU_SET = "XLXI_158_27" *) 
+   M2_1_HXILINX_ssd2d0ftb  XLXI_158 (.D0(D0[0]), 
+                                    .D1(D1[0]), 
+                                    .S0(COM_DUMMY[0]), 
+                                    .O(D[0]));
+   (* HU_SET = "XLXI_159_28" *) 
+   M2_1_HXILINX_ssd2d0ftb  XLXI_159 (.D0(D0[1]), 
+                                    .D1(D1[1]), 
+                                    .S0(COM_DUMMY[0]), 
+                                    .O(D[1]));
+   (* HU_SET = "XLXI_160_29" *) 
+   M2_1_HXILINX_ssd2d0ftb  XLXI_160 (.D0(D0[2]), 
+                                    .D1(D1[2]), 
+                                    .S0(COM_DUMMY[0]), 
+                                    .O(D[2]));
+   (* HU_SET = "XLXI_161_30" *) 
+   M2_1_HXILINX_ssd2d0ftb  XLXI_161 (.D0(D0[3]), 
+                                    .D1(D1[3]), 
+                                    .S0(COM_DUMMY[0]), 
+                                    .O(D[3]));
+   (* HU_SET = "XLXI_162_31" *) 
+   FTC_HXILINX_ssd2d0ftb  XLXI_162 (.C(ScanCLK), 
+                                   .CLR(XLXN_141), 
+                                   .T(XLXN_139), 
+                                   .Q(COM_DUMMY[0]));
+endmodule
