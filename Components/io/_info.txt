@@ -1,0 +1,2 @@
+IO related stuff
+- edetect: Edge detection without directly using the external source as clock input

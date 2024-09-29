@@ -1,0 +1,56 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : xor2x8b.vf
+// /___/   /\     Timestamp : 09/29/2024 22:46:22
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Personal/Projects/Digital Labs/Labs/10/super-simple-cpu/xor2x8b.vf" -w "D:/Personal/Projects/Digital Labs/Labs/10/super-simple-cpu/xor2x8b.sch"
+//Design Name: xor2x8b
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module xor2x8b(A, 
+               B, 
+               R);
+
+    input [7:0] A;
+    input [7:0] B;
+   output [7:0] R;
+   
+   
+   XOR2  XLXI_1 (.I0(B[0]), 
+                .I1(A[0]), 
+                .O(R[0]));
+   XOR2  XLXI_2 (.I0(B[1]), 
+                .I1(A[1]), 
+                .O(R[1]));
+   XOR2  XLXI_3 (.I0(B[2]), 
+                .I1(A[2]), 
+                .O(R[2]));
+   XOR2  XLXI_4 (.I0(B[3]), 
+                .I1(A[3]), 
+                .O(R[3]));
+   XOR2  XLXI_5 (.I0(B[4]), 
+                .I1(A[4]), 
+                .O(R[4]));
+   XOR2  XLXI_6 (.I0(B[5]), 
+                .I1(A[5]), 
+                .O(R[5]));
+   XOR2  XLXI_7 (.I0(B[6]), 
+                .I1(A[6]), 
+                .O(R[6]));
+   XOR2  XLXI_8 (.I0(B[7]), 
+                .I1(A[7]), 
+                .O(R[7]));
+endmodule

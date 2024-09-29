@@ -1,0 +1,627 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : alu.vf
+// /___/   /\     Timestamp : 09/29/2024 22:57:50
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Personal/Projects/Digital Labs/Labs/10/super-simple-cpu/alu.vf" -w "D:/Personal/Projects/Digital Labs/Labs/10/super-simple-cpu/alu.sch"
+//Design Name: alu
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module FD8CE_HXILINX_alu(Q, C, CE, CLR, D);
+
+   
+   output [7:0]       Q;
+
+   input 	      C;	
+   input 	      CE;	
+   input 	      CLR;	
+   input  [7:0]       D;
+   
+   reg    [7:0]       Q;
+   
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 8'b0000_0000;
+	else if (CE)
+          Q <= D;
+     end
+   
+   
+endmodule
+`timescale  100 ps / 10 ps
+
+module M8_1E_HXILINX_alu (O, D0, D1, D2, D3, D4, D5, D6, D7, E, S0, S1, S2);
+    
+
+   output O;
+
+   input  D0;
+   input  D1;
+   input  D2;
+   input  D3;
+   input  D4;
+   input  D5;
+   input  D6;
+   input  D7;
+   input  E;
+   input  S0;
+   input  S1;
+   input  S2;
+
+   reg O;
+
+   always @ ( D0 or D1 or D2 or D3 or D4 or D5 or D6 or D7 or E or S0 or S1 or S2)
+   begin
+      if(!E)
+      O <= 1'b0;
+      else 
+      begin
+        case({S2,S1,S0})
+        3'b000 : O <= D0;
+        3'b001 : O <= D1;
+        3'b010 : O <= D2;
+        3'b011 : O <= D3;
+        3'b100 : O <= D4;
+        3'b101 : O <= D5;
+        3'b110 : O <= D6;
+        3'b111 : O <= D7;
+        endcase
+      end
+   end
+    
+endmodule
+`timescale  100 ps / 10 ps
+
+module NOR8_HXILINX_alu (O, I0, I1, I2, I3, I4, I5, I6, I7);
+    
+
+   output O;
+
+   input I0;
+   input I1;
+   input I2;
+   input I3;
+   input I4;
+   input I5;
+   input I6;
+   input I7;
+
+assign O = !(I0 || I1 || I2 || I3 || I4 || I5 || I6 || I7);
+
+endmodule
+`timescale  100 ps / 10 ps
+
+module ADSU8_HXILINX_alu (CO, OFL, S, A, ADD, B, CI);
+
+   
+   output             CO;
+   output             OFL;
+   output [7:0]       S;
+
+   input  [7:0]       A;
+   input  	      ADD;
+   input  [7:0]       B;
+   input              CI;
+
+   reg    [8:0]       adsu_tmp;  
+
+   always @ (A, ADD, B, CI) 
+   begin
+      if(ADD)
+         adsu_tmp = A + B + CI;
+      else
+         adsu_tmp = A - (!CI) - B;
+   end
+
+   assign S   =  adsu_tmp[7:0];
+   assign CO  =  ADD ? adsu_tmp[8] : ~adsu_tmp[8];
+   assign OFL =  ADD ? ( (A[7] & B[7] & (~S[7])) | ((~A[7]) & (~B[7]) & S[7]) ) : ( (A[7] & (~B[7]) & (~S[7])) | ((~A[7]) & B[7] & S[7]) );
+
+endmodule
+`timescale  100 ps / 10 ps
+
+module D3_8E_HXILINX_alu (D0, D1, D2, D3, D4, D5, D6, D7, A0, A1, A2, E);
+    
+
+   output D0;
+   output D1;
+   output D2;
+   output D3;
+   output D4;
+   output D5;
+   output D6;
+   output D7;
+
+   input  A0;
+   input  A1;
+   input  A2;
+   input  E;
+  
+   reg D0;
+   reg D1;
+   reg D2;
+   reg D3;
+   reg D4;
+   reg D5;
+   reg D6;
+   reg D7;
+
+      always @ (A0 or A1 or A2 or E)
+      begin
+         if(!E)
+           {D7, D6, D5, D4, D3, D2, D1, D0} <= 8'b0000_0000;
+        else
+        begin
+           case({A2,A1,A0})
+             3'b000 :  {D7, D6, D5, D4, D3, D2, D1, D0} <=  8'b0000_0001;
+             3'b001 :  {D7, D6, D5, D4, D3, D2, D1, D0} <=  8'b0000_0010;
+             3'b010 :  {D7, D6, D5, D4, D3, D2, D1, D0} <=  8'b0000_0100;
+             3'b011 :  {D7, D6, D5, D4, D3, D2, D1, D0} <=  8'b0000_1000;
+             3'b100 :  {D7, D6, D5, D4, D3, D2, D1, D0} <=  8'b0001_0000;
+             3'b101 :  {D7, D6, D5, D4, D3, D2, D1, D0} <=  8'b0010_0000;
+             3'b110 :  {D7, D6, D5, D4, D3, D2, D1, D0} <=  8'b0100_0000;
+             3'b111 :  {D7, D6, D5, D4, D3, D2, D1, D0} <=  8'b1000_0000;
+          endcase
+        end
+     end 
+
+endmodule
+`timescale 1ns / 1ps
+
+module buf8b_MUSER_alu(I, 
+                       O);
+
+    input [7:0] I;
+   output [7:0] O;
+   
+   
+   BUF  XLXI_18 (.I(I[0]), 
+                .O(O[0]));
+   BUF  XLXI_19 (.I(I[1]), 
+                .O(O[1]));
+   BUF  XLXI_20 (.I(I[2]), 
+                .O(O[2]));
+   BUF  XLXI_21 (.I(I[3]), 
+                .O(O[3]));
+   BUF  XLXI_22 (.I(I[4]), 
+                .O(O[4]));
+   BUF  XLXI_23 (.I(I[5]), 
+                .O(O[5]));
+   BUF  XLXI_24 (.I(I[6]), 
+                .O(O[6]));
+   BUF  XLXI_25 (.I(I[7]), 
+                .O(O[7]));
+endmodule
+`timescale 1ns / 1ps
+
+module mux8x1x8e_MUSER_alu(D0, 
+                           D1, 
+                           D2, 
+                           D3, 
+                           D4, 
+                           D5, 
+                           D6, 
+                           D7, 
+                           E, 
+                           S0, 
+                           S1, 
+                           S2, 
+                           O);
+
+    input [7:0] D0;
+    input [7:0] D1;
+    input [7:0] D2;
+    input [7:0] D3;
+    input [7:0] D4;
+    input [7:0] D5;
+    input [7:0] D6;
+    input [7:0] D7;
+    input E;
+    input S0;
+    input S1;
+    input S2;
+   output [7:0] O;
+   
+   
+   (* HU_SET = "XLXI_1_0" *) 
+   M8_1E_HXILINX_alu  XLXI_1 (.D0(D0[0]), 
+                             .D1(D1[0]), 
+                             .D2(D2[0]), 
+                             .D3(D3[0]), 
+                             .D4(D4[0]), 
+                             .D5(D5[0]), 
+                             .D6(D6[0]), 
+                             .D7(D7[0]), 
+                             .E(E), 
+                             .S0(S0), 
+                             .S1(S1), 
+                             .S2(S2), 
+                             .O(O[0]));
+   (* HU_SET = "XLXI_2_1" *) 
+   M8_1E_HXILINX_alu  XLXI_2 (.D0(D0[1]), 
+                             .D1(D1[1]), 
+                             .D2(D2[1]), 
+                             .D3(D3[1]), 
+                             .D4(D4[1]), 
+                             .D5(D5[1]), 
+                             .D6(D6[1]), 
+                             .D7(D7[1]), 
+                             .E(E), 
+                             .S0(S0), 
+                             .S1(S1), 
+                             .S2(S2), 
+                             .O(O[1]));
+   (* HU_SET = "XLXI_3_2" *) 
+   M8_1E_HXILINX_alu  XLXI_3 (.D0(D0[2]), 
+                             .D1(D1[2]), 
+                             .D2(D2[2]), 
+                             .D3(D3[2]), 
+                             .D4(D4[2]), 
+                             .D5(D5[2]), 
+                             .D6(D6[2]), 
+                             .D7(D7[2]), 
+                             .E(E), 
+                             .S0(S0), 
+                             .S1(S1), 
+                             .S2(S2), 
+                             .O(O[2]));
+   (* HU_SET = "XLXI_4_3" *) 
+   M8_1E_HXILINX_alu  XLXI_4 (.D0(D0[3]), 
+                             .D1(D1[3]), 
+                             .D2(D2[3]), 
+                             .D3(D3[3]), 
+                             .D4(D4[3]), 
+                             .D5(D5[3]), 
+                             .D6(D6[3]), 
+                             .D7(D7[3]), 
+                             .E(E), 
+                             .S0(S0), 
+                             .S1(S1), 
+                             .S2(S2), 
+                             .O(O[3]));
+   (* HU_SET = "XLXI_5_4" *) 
+   M8_1E_HXILINX_alu  XLXI_5 (.D0(D0[4]), 
+                             .D1(D1[4]), 
+                             .D2(D2[4]), 
+                             .D3(D3[4]), 
+                             .D4(D4[4]), 
+                             .D5(D5[4]), 
+                             .D6(D6[4]), 
+                             .D7(D7[4]), 
+                             .E(E), 
+                             .S0(S0), 
+                             .S1(S1), 
+                             .S2(S2), 
+                             .O(O[4]));
+   (* HU_SET = "XLXI_6_5" *) 
+   M8_1E_HXILINX_alu  XLXI_6 (.D0(D0[5]), 
+                             .D1(D1[5]), 
+                             .D2(D2[5]), 
+                             .D3(D3[5]), 
+                             .D4(D4[5]), 
+                             .D5(D5[5]), 
+                             .D6(D6[5]), 
+                             .D7(D7[5]), 
+                             .E(E), 
+                             .S0(S0), 
+                             .S1(S1), 
+                             .S2(S2), 
+                             .O(O[5]));
+   (* HU_SET = "XLXI_7_6" *) 
+   M8_1E_HXILINX_alu  XLXI_7 (.D0(D0[6]), 
+                             .D1(D1[6]), 
+                             .D2(D2[6]), 
+                             .D3(D3[6]), 
+                             .D4(D4[6]), 
+                             .D5(D5[6]), 
+                             .D6(D6[6]), 
+                             .D7(D7[6]), 
+                             .E(E), 
+                             .S0(S0), 
+                             .S1(S1), 
+                             .S2(S2), 
+                             .O(O[6]));
+   (* HU_SET = "XLXI_8_7" *) 
+   M8_1E_HXILINX_alu  XLXI_8 (.D0(D0[7]), 
+                             .D1(D1[7]), 
+                             .D2(D2[7]), 
+                             .D3(D3[7]), 
+                             .D4(D4[7]), 
+                             .D5(D5[7]), 
+                             .D6(D6[7]), 
+                             .D7(D7[7]), 
+                             .E(E), 
+                             .S0(S0), 
+                             .S1(S1), 
+                             .S2(S2), 
+                             .O(O[7]));
+endmodule
+`timescale 1ns / 1ps
+
+module or2x8b_MUSER_alu(A, 
+                        B, 
+                        R);
+
+    input [7:0] A;
+    input [7:0] B;
+   output [7:0] R;
+   
+   
+   OR2  XLXI_17 (.I0(B[0]), 
+                .I1(A[0]), 
+                .O(R[0]));
+   OR2  XLXI_18 (.I0(B[1]), 
+                .I1(A[1]), 
+                .O(R[1]));
+   OR2  XLXI_19 (.I0(B[2]), 
+                .I1(A[2]), 
+                .O(R[2]));
+   OR2  XLXI_20 (.I0(B[3]), 
+                .I1(A[3]), 
+                .O(R[3]));
+   OR2  XLXI_21 (.I0(B[4]), 
+                .I1(A[4]), 
+                .O(R[4]));
+   OR2  XLXI_22 (.I0(B[5]), 
+                .I1(A[5]), 
+                .O(R[5]));
+   OR2  XLXI_24 (.I0(B[6]), 
+                .I1(A[6]), 
+                .O(R[6]));
+   OR2  XLXI_25 (.I0(B[7]), 
+                .I1(A[7]), 
+                .O(R[7]));
+endmodule
+`timescale 1ns / 1ps
+
+module and2x8b_MUSER_alu(A, 
+                         B, 
+                         R);
+
+    input [7:0] A;
+    input [7:0] B;
+   output [7:0] R;
+   
+   
+   AND2  XLXI_9 (.I0(B[0]), 
+                .I1(A[0]), 
+                .O(R[0]));
+   AND2  XLXI_10 (.I0(B[1]), 
+                 .I1(A[1]), 
+                 .O(R[1]));
+   AND2  XLXI_11 (.I0(B[2]), 
+                 .I1(A[2]), 
+                 .O(R[2]));
+   AND2  XLXI_12 (.I0(B[3]), 
+                 .I1(A[3]), 
+                 .O(R[3]));
+   AND2  XLXI_13 (.I0(B[4]), 
+                 .I1(A[4]), 
+                 .O(R[4]));
+   AND2  XLXI_14 (.I0(B[5]), 
+                 .I1(A[5]), 
+                 .O(R[5]));
+   AND2  XLXI_15 (.I0(B[6]), 
+                 .I1(A[6]), 
+                 .O(R[6]));
+   AND2  XLXI_16 (.I0(B[7]), 
+                 .I1(A[7]), 
+                 .O(R[7]));
+endmodule
+`timescale 1ns / 1ps
+
+module lshift8x1b_MUSER_alu(I, 
+                            O, 
+                            OFL);
+
+    input [7:0] I;
+   output [7:0] O;
+   output OFL;
+   
+   
+   GND  XLXI_1 (.G(O[0]));
+   BUF  XLXI_2 (.I(I[0]), 
+               .O(O[1]));
+   BUF  XLXI_3 (.I(I[1]), 
+               .O(O[2]));
+   BUF  XLXI_4 (.I(I[2]), 
+               .O(O[3]));
+   BUF  XLXI_5 (.I(I[3]), 
+               .O(O[4]));
+   BUF  XLXI_6 (.I(I[4]), 
+               .O(O[5]));
+   BUF  XLXI_7 (.I(I[5]), 
+               .O(O[6]));
+   BUF  XLXI_8 (.I(I[6]), 
+               .O(O[7]));
+   BUF  XLXI_9 (.I(I[7]), 
+               .O(OFL));
+endmodule
+`timescale 1ns / 1ps
+
+module xor2x8b_MUSER_alu(A, 
+                         B, 
+                         R);
+
+    input [7:0] A;
+    input [7:0] B;
+   output [7:0] R;
+   
+   
+   XOR2  XLXI_1 (.I0(B[0]), 
+                .I1(A[0]), 
+                .O(R[0]));
+   XOR2  XLXI_2 (.I0(B[1]), 
+                .I1(A[1]), 
+                .O(R[1]));
+   XOR2  XLXI_3 (.I0(B[2]), 
+                .I1(A[2]), 
+                .O(R[2]));
+   XOR2  XLXI_4 (.I0(B[3]), 
+                .I1(A[3]), 
+                .O(R[3]));
+   XOR2  XLXI_5 (.I0(B[4]), 
+                .I1(A[4]), 
+                .O(R[4]));
+   XOR2  XLXI_6 (.I0(B[5]), 
+                .I1(A[5]), 
+                .O(R[5]));
+   XOR2  XLXI_7 (.I0(B[6]), 
+                .I1(A[6]), 
+                .O(R[6]));
+   XOR2  XLXI_8 (.I0(B[7]), 
+                .I1(A[7]), 
+                .O(R[7]));
+endmodule
+`timescale 1ns / 1ps
+
+module alu(B, 
+           CE, 
+           CLK, 
+           OP, 
+           ACC, 
+           F);
+
+    input [7:0] B;
+    input CE;
+    input CLK;
+    input [2:0] OP;
+   output [7:0] ACC;
+   output [2:0] F;
+   
+   wire [7:0] XLXN_4;
+   wire [7:0] XLXN_7;
+   wire [7:0] XLXN_8;
+   wire [7:0] XLXN_9;
+   wire [7:0] XLXN_10;
+   wire [7:0] XLXN_11;
+   wire XLXN_12;
+   wire [7:0] XLXN_23;
+   wire XLXN_67;
+   wire [7:0] XLXN_107;
+   wire XLXN_135;
+   wire XLXN_136;
+   wire XLXN_137;
+   wire XLXN_145;
+   wire XLXN_160;
+   wire XLXN_162;
+   wire XLXN_163;
+   wire XLXN_164;
+   wire XLXN_170;
+   wire XLXN_179;
+   wire XLXN_180;
+   wire XLXN_181;
+   wire XLXN_182;
+   wire [7:0] ACC_DUMMY;
+   
+   assign ACC[7:0] = ACC_DUMMY[7:0];
+   (* HU_SET = "XLXI_2_9" *) 
+   ADSU8_HXILINX_alu  XLXI_2 (.A(ACC_DUMMY[7:0]), 
+                             .ADD(OP[0]), 
+                             .B(B[7:0]), 
+                             .CI(OP[1]), 
+                             .CO(XLXN_135), 
+                             .OFL(XLXN_136), 
+                             .S(XLXN_107[7:0]));
+   xor2x8b_MUSER_alu  XLXI_7 (.A(ACC_DUMMY[7:0]), 
+                             .B(B[7:0]), 
+                             .R(XLXN_7[7:0]));
+   lshift8x1b_MUSER_alu  XLXI_8 (.I(ACC_DUMMY[7:0]), 
+                                .O(XLXN_8[7:0]), 
+                                .OFL(XLXN_137));
+   and2x8b_MUSER_alu  XLXI_10 (.A(ACC_DUMMY[7:0]), 
+                              .B(B[7:0]), 
+                              .R(XLXN_9[7:0]));
+   or2x8b_MUSER_alu  XLXI_11 (.A(ACC_DUMMY[7:0]), 
+                             .B(B[7:0]), 
+                             .R(XLXN_10[7:0]));
+   buf8b_MUSER_alu  XLXI_12 (.I(B[7:0]), 
+                            .O(XLXN_11[7:0]));
+   (* HU_SET = "XLXI_21_8" *) 
+   FD8CE_HXILINX_alu  XLXI_21 (.C(CLK), 
+                              .CE(CE), 
+                              .CLR(XLXN_67), 
+                              .D(XLXN_23[7:0]), 
+                              .Q(ACC_DUMMY[7:0]));
+   mux8x1x8e_MUSER_alu  XLXI_22 (.D0(XLXN_4[7:0]), 
+                                .D1(XLXN_107[7:0]), 
+                                .D2(XLXN_107[7:0]), 
+                                .D3(XLXN_7[7:0]), 
+                                .D4(XLXN_8[7:0]), 
+                                .D5(XLXN_9[7:0]), 
+                                .D6(XLXN_10[7:0]), 
+                                .D7(XLXN_11[7:0]), 
+                                .E(XLXN_12), 
+                                .S0(OP[0]), 
+                                .S1(OP[1]), 
+                                .S2(OP[2]), 
+                                .O(XLXN_23[7:0]));
+   VCC  XLXI_23 (.P(XLXN_12));
+   buf8b_MUSER_alu  XLXI_27 (.I(ACC_DUMMY[7:0]), 
+                            .O(XLXN_4[7:0]));
+   GND  XLXI_56 (.G(XLXN_67));
+   (* HU_SET = "XLXI_57_10" *) 
+   NOR8_HXILINX_alu  XLXI_57 (.I0(ACC_DUMMY[7]), 
+                             .I1(ACC_DUMMY[6]), 
+                             .I2(ACC_DUMMY[5]), 
+                             .I3(ACC_DUMMY[4]), 
+                             .I4(ACC_DUMMY[3]), 
+                             .I5(ACC_DUMMY[2]), 
+                             .I6(ACC_DUMMY[1]), 
+                             .I7(ACC_DUMMY[0]), 
+                             .O(F[0]));
+   (* HU_SET = "XLXI_71_11" *) 
+   D3_8E_HXILINX_alu  XLXI_71 (.A0(OP[0]), 
+                              .A1(OP[1]), 
+                              .A2(OP[2]), 
+                              .E(XLXN_145), 
+                              .D0(), 
+                              .D1(XLXN_181), 
+                              .D2(XLXN_182), 
+                              .D3(), 
+                              .D4(XLXN_160), 
+                              .D5(), 
+                              .D6(), 
+                              .D7());
+   VCC  XLXI_73 (.P(XLXN_145));
+   OR2  XLXI_74 (.I0(XLXN_182), 
+                .I1(XLXN_181), 
+                .O(XLXN_170));
+   AND2  XLXI_83 (.I0(XLXN_136), 
+                 .I1(XLXN_170), 
+                 .O(XLXN_163));
+   AND2  XLXI_84 (.I0(XLXN_137), 
+                 .I1(XLXN_160), 
+                 .O(XLXN_162));
+   OR2  XLXI_85 (.I0(XLXN_162), 
+                .I1(XLXN_163), 
+                .O(XLXN_164));
+   FDE #( .INIT(1'b0) ) XLXI_89 (.C(CLK), 
+                .CE(CE), 
+                .D(XLXN_180), 
+                .Q(F[1]));
+   FDE #( .INIT(1'b0) ) XLXI_90 (.C(CLK), 
+                .CE(CE), 
+                .D(XLXN_164), 
+                .Q(F[2]));
+   AND2  XLXI_92 (.I0(XLXN_170), 
+                 .I1(XLXN_179), 
+                 .O(XLXN_180));
+   XOR2  XLXI_93 (.I0(XLXN_182), 
+                 .I1(XLXN_135), 
+                 .O(XLXN_179));
+endmodule

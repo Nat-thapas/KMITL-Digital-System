@@ -1,0 +1,46 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : buf8b.vf
+// /___/   /\     Timestamp : 09/29/2024 22:46:24
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Personal/Projects/Digital Labs/Labs/10/super-simple-cpu/buf8b.vf" -w "D:/Personal/Projects/Digital Labs/Labs/10/super-simple-cpu/buf8b.sch"
+//Design Name: buf8b
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module buf8b(I, 
+             O);
+
+    input [7:0] I;
+   output [7:0] O;
+   
+   
+   BUF  XLXI_18 (.I(I[0]), 
+                .O(O[0]));
+   BUF  XLXI_19 (.I(I[1]), 
+                .O(O[1]));
+   BUF  XLXI_20 (.I(I[2]), 
+                .O(O[2]));
+   BUF  XLXI_21 (.I(I[3]), 
+                .O(O[3]));
+   BUF  XLXI_22 (.I(I[4]), 
+                .O(O[4]));
+   BUF  XLXI_23 (.I(I[5]), 
+                .O(O[5]));
+   BUF  XLXI_24 (.I(I[6]), 
+                .O(O[6]));
+   BUF  XLXI_25 (.I(I[7]), 
+                .O(O[7]));
+endmodule

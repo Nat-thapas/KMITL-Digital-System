@@ -1,0 +1,3 @@
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,D:/Personal/Projects/Digital Labs/Labs/10/super-simple-cpu/alu.vf,-w,D:/Personal/Projects/Digital Labs/Labs/10/super-simple-cpu/alu.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,D:/Personal/Projects/Digital Labs/Labs/10/super-simple-cpu/main.vf,-w,D:/Personal/Projects/Digital Labs/Labs/10/super-simple-cpu/main.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,D:/Personal/Projects/Digital Labs/Labs/10/super-simple-cpu/main.vf,-w,D:/Personal/Projects/Digital Labs/Labs/10/super-simple-cpu/main.sch
