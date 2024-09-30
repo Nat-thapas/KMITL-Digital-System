@@ -256,8 +256,6 @@ def main():
             if not re.match(r"^[01-]*$", truth_row) or len(truth_row) != lut_count:
                 print(f"Invalid output: {truth_row}. Please try again.")
                 continue
-            if reverse_lut_names:
-                truth_row = truth_row[::-1]
             truth_table.append((i, truth_row))
             i += 1
         simplification_data: list[dict[int, str]] = []
@@ -324,8 +322,6 @@ def main():
             if not re.match(r"^[01-]*$", out) or len(out) != lut_count:
                 print(f"Invalid output: {out}. Please try again.")
                 continue
-            if reverse_lut_names:
-                out = out[::-1]
             truth_table.append((int(inp, 2), out))
         simplification_data: list[dict[int, str]] = []
         for _ in range(lut_count):
@@ -396,7 +392,7 @@ def main():
         print("LUT INIT values:")
         for i, data in enumerate(out_binary_list):
             print(f"  F{output_names[i]} = {int(data, 2):0{2**lut_size//4}X}")
-    print(Style.RESET_ALL)
+    print(Style.RESET_ALL, end="")
 
 
 if __name__ == "__main__":

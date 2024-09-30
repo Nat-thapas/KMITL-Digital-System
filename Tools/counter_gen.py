@@ -644,7 +644,7 @@ def main() -> None:
         process_jk_flip_flop(
             sequence, bit_count, names_msb_first, default_output_bit_count
         )
-    print(Style.RESET_ALL)
+    print(Style.RESET_ALL, end="")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,248 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : ssd4d0ftb.vf
+// /___/   /\     Timestamp : 10/01/2024 00:02:40
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Personal/Projects/Digital Labs/Labs/10/simple-cpu/ssd4d0ftb.vf" -w "D:/Personal/Projects/Digital Labs/Labs/10/simple-cpu/ssd4d0ftb.sch"
+//Design Name: ssd4d0ftb
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale  100 ps / 10 ps
+
+module M4_1E_HXILINX_ssd4d0ftb (O, D0, D1, D2, D3, E, S0, S1);
+    
+
+   output O;
+
+   input  D0;
+   input  D1;
+   input  D2;
+   input  D3;
+   input  E;
+   input  S0;
+   input  S1;
+
+   reg O;
+
+   always @ ( D0 or D1 or D2 or D3 or E or S0 or S1)
+   begin
+      if(!E)
+      O <= 1'b0;
+      else 
+      begin
+        case({S1,S0})
+        2'b00 : O <= D0;
+        2'b01 : O <= D1;
+        2'b10 : O <= D2;
+        2'b11 : O <= D3;
+        endcase
+      end
+   end
+    
+endmodule
+`timescale  100 ps / 10 ps
+
+module D2_4E_HXILINX_ssd4d0ftb (D0, D1, D2, D3, A0, A1, E);
+    
+
+   output D0;
+   output D1;
+   output D2;
+   output D3;
+
+   input  A0;
+   input  A1;
+   input  E;
+  
+   reg D0;
+   reg D1;
+   reg D2;
+   reg D3;
+
+      always @ (A0 or A1 or E)
+      begin
+         if(!E)
+           {D3, D2, D1, D0} <= 4'b0000;
+        else
+        begin
+           case({A1,A0})
+             2'b00 : {D3,D2,D1,D0} <= 4'b0001;
+             2'b01 : {D3,D2,D1,D0} <= 4'b0010;
+             2'b10 : {D3,D2,D1,D0} <= 4'b0100;
+             2'b11 : {D3,D2,D1,D0} <= 4'b1000;
+          endcase
+        end
+     end 
+
+endmodule
+`timescale 100 ps / 10 ps
+
+module CB2CE_HXILINX_ssd4d0ftb(CEO, Q0, Q1, TC, C, CE, CLR);
+   
+   localparam TERMINAL_COUNT = 2'b11;
+   
+   output             CEO;
+   output             Q0;
+   output             Q1;
+   output             TC;
+
+   input 	      C;	
+   input 	      CE;	
+   input 	      CLR;	
+   
+   reg                Q0;
+   reg                Q1;
+   
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  {Q1, Q0} <= 2'b00;
+	else if (CE)
+	  {Q1,Q0} <= {Q1,Q0} + 1;
+     end
+   
+   assign CEO = TC & CE;
+   assign TC = ({Q1,Q0} == TERMINAL_COUNT);
+   
+endmodule
+`timescale 1ns / 1ps
+
+module ssd4d0ftb(CE, 
+                 CLK, 
+                 D0, 
+                 D1, 
+                 D2, 
+                 D3, 
+                 COM, 
+                 Segment);
+
+    input CE;
+    input CLK;
+    input [3:0] D0;
+    input [3:0] D1;
+    input [3:0] D2;
+    input [3:0] D3;
+   output [3:0] COM;
+   output [6:0] Segment;
+   
+   wire [3:0] D;
+   wire XLXN_141;
+   wire XLXN_151;
+   wire XLXN_185;
+   wire XLXN_236;
+   wire XLXN_237;
+   wire XLXN_238;
+   wire XLXN_239;
+   wire XLXN_240;
+   wire XLXN_241;
+   
+   LUT4 #( .INIT(16'hEF7C) ) XLXI_1 (.I0(D[0]), 
+                .I1(D[1]), 
+                .I2(D[2]), 
+                .I3(D[3]), 
+                .O(Segment[6]));
+   LUT4 #( .INIT(16'hDF71) ) XLXI_2 (.I0(D[0]), 
+                .I1(D[1]), 
+                .I2(D[2]), 
+                .I3(D[3]), 
+                .O(Segment[5]));
+   LUT4 #( .INIT(16'hFD45) ) XLXI_3 (.I0(D[0]), 
+                .I1(D[1]), 
+                .I2(D[2]), 
+                .I3(D[3]), 
+                .O(Segment[4]));
+   LUT4 #( .INIT(16'h7B6D) ) XLXI_4 (.I0(D[0]), 
+                .I1(D[1]), 
+                .I2(D[2]), 
+                .I3(D[3]), 
+                .O(Segment[3]));
+   LUT4 #( .INIT(16'h2FFB) ) XLXI_5 (.I0(D[0]), 
+                .I1(D[1]), 
+                .I2(D[2]), 
+                .I3(D[3]), 
+                .O(Segment[2]));
+   LUT4 #( .INIT(16'h279F) ) XLXI_6 (.I0(D[0]), 
+                .I1(D[1]), 
+                .I2(D[2]), 
+                .I3(D[3]), 
+                .O(Segment[1]));
+   LUT4 #( .INIT(16'hD7ED) ) XLXI_7 (.I0(D[0]), 
+                .I1(D[1]), 
+                .I2(D[2]), 
+                .I3(D[3]), 
+                .O(Segment[0]));
+   GND  XLXI_119 (.G(XLXN_141));
+   (* HU_SET = "XLXI_162_154" *) 
+   CB2CE_HXILINX_ssd4d0ftb  XLXI_162 (.C(CLK), 
+                                     .CE(CE), 
+                                     .CLR(XLXN_141), 
+                                     .CEO(), 
+                                     .Q0(XLXN_241), 
+                                     .Q1(XLXN_240), 
+                                     .TC());
+   VCC  XLXI_165 (.P(XLXN_151));
+   (* HU_SET = "XLXI_183_149" *) 
+   M4_1E_HXILINX_ssd4d0ftb  XLXI_183 (.D0(D0[0]), 
+                                     .D1(D1[0]), 
+                                     .D2(D2[0]), 
+                                     .D3(D3[0]), 
+                                     .E(XLXN_185), 
+                                     .S0(XLXN_241), 
+                                     .S1(XLXN_240), 
+                                     .O(D[0]));
+   (* HU_SET = "XLXI_184_150" *) 
+   M4_1E_HXILINX_ssd4d0ftb  XLXI_184 (.D0(D0[1]), 
+                                     .D1(D1[1]), 
+                                     .D2(D2[1]), 
+                                     .D3(D3[1]), 
+                                     .E(XLXN_185), 
+                                     .S0(XLXN_241), 
+                                     .S1(XLXN_240), 
+                                     .O(D[1]));
+   (* HU_SET = "XLXI_185_151" *) 
+   M4_1E_HXILINX_ssd4d0ftb  XLXI_185 (.D0(D0[2]), 
+                                     .D1(D1[2]), 
+                                     .D2(D2[2]), 
+                                     .D3(D3[2]), 
+                                     .E(XLXN_185), 
+                                     .S0(XLXN_241), 
+                                     .S1(XLXN_240), 
+                                     .O(D[2]));
+   (* HU_SET = "XLXI_186_152" *) 
+   M4_1E_HXILINX_ssd4d0ftb  XLXI_186 (.D0(D0[3]), 
+                                     .D1(D1[3]), 
+                                     .D2(D2[3]), 
+                                     .D3(D3[3]), 
+                                     .E(XLXN_185), 
+                                     .S0(XLXN_241), 
+                                     .S1(XLXN_240), 
+                                     .O(D[3]));
+   VCC  XLXI_204 (.P(XLXN_185));
+   (* HU_SET = "XLXI_210_153" *) 
+   D2_4E_HXILINX_ssd4d0ftb  XLXI_210 (.A0(XLXN_241), 
+                                     .A1(XLXN_240), 
+                                     .E(XLXN_151), 
+                                     .D0(XLXN_236), 
+                                     .D1(XLXN_237), 
+                                     .D2(XLXN_238), 
+                                     .D3(XLXN_239));
+   INV  XLXI_211 (.I(XLXN_236), 
+                 .O(COM[0]));
+   INV  XLXI_212 (.I(XLXN_237), 
+                 .O(COM[1]));
+   INV  XLXI_213 (.I(XLXN_238), 
+                 .O(COM[2]));
+   INV  XLXI_214 (.I(XLXN_239), 
+                 .O(COM[3]));
+endmodule

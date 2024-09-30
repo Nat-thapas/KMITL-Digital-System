@@ -474,7 +474,7 @@ def main():
             minimized_expressions, input_count, output_count, "logic.sch"
         )
         print(Fore.LIGHTGREEN_EX + "Schematic exported to logic.sch")
-    print(Style.RESET_ALL)
+    print(Style.RESET_ALL, end="")
 
 
 if __name__ == "__main__":

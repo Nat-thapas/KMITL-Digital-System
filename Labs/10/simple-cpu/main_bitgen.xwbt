@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.ncd
+OUTFILE=D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.bit
+FAMILY=Spartan6
+PART=xc6slx9-3tqg144
+WORKINGDIR=D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu
+LICENSE=WebPack
+USER_INFO=__0_0_0

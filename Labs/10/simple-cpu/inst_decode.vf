@@ -1,0 +1,172 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : inst_decode.vf
+// /___/   /\     Timestamp : 10/01/2024 00:02:39
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Personal/Projects/Digital Labs/Labs/10/simple-cpu/inst_decode.vf" -w "D:/Personal/Projects/Digital Labs/Labs/10/simple-cpu/inst_decode.sch"
+//Design Name: inst_decode
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale  100 ps / 10 ps
+
+module AND16_HXILINX_inst_decode (O, I0, I1, I2, I3, I4, I5, I6, I7, I8, I9, I10, I11, I12, I13, I14, I15);
+    
+
+   output O;
+
+   input I0;
+   input I1;
+   input I2;
+   input I3;
+   input I4;
+   input I5;
+   input I6;
+   input I7;
+   input I8;
+   input I9;
+   input I10;
+   input I11;
+   input I12;
+   input I13;
+   input I14;
+   input I15;
+
+assign O = I0 && I1 && I2 && I3 && I4 && I5 && I6 && I7 && I8 && I9 && I10 && I11 && I12 && I13 && I14 && I15 ;
+
+endmodule
+`timescale  100 ps / 10 ps
+
+module OR16_HXILINX_inst_decode (O, I0, I1, I2, I3, I4, I5, I6, I7, I8, I9, I10, I11, I12, I13, I14, I15);
+    
+
+   output O;
+
+   input I0;
+   input I1;
+   input I2;
+   input I3;
+   input I4;
+   input I5;
+   input I6;
+   input I7;
+   input I8;
+   input I9;
+   input I10;
+   input I11;
+   input I12;
+   input I13;
+   input I14;
+   input I15; 
+
+assign O = (I0 || I1 || I2 || I3 || I4 || I5 || I6 || I7 || I8 || I9 || I10 || I11 || I12 || I13 || I14 || I15 );
+
+endmodule
+`timescale 1ns / 1ps
+
+module inst_decode(INST, 
+                   DR, 
+                   HLT, 
+                   IMM, 
+                   OP, 
+                   OP1, 
+                   OP2, 
+                   OUTE);
+
+    input [15:0] INST;
+   output DR;
+   output HLT;
+   output [7:0] IMM;
+   output [2:0] OP;
+   output [1:0] OP1;
+   output [1:0] OP2;
+   output OUTE;
+   
+   
+   LUT3 #( .INIT(8'hD2) ) XLXI_2 (.I0(INST[12]), 
+                .I1(INST[13]), 
+                .I2(INST[14]), 
+                .O(OP1[0]));
+   LUT3 #( .INIT(8'hE8) ) XLXI_3 (.I0(INST[12]), 
+                .I1(INST[13]), 
+                .I2(INST[14]), 
+                .O(OP1[1]));
+   LUT3 #( .INIT(8'hE1) ) XLXI_6 (.I0(INST[12]), 
+                .I1(INST[13]), 
+                .I2(INST[14]), 
+                .O(OP2[0]));
+   LUT3 #( .INIT(8'hD4) ) XLXI_7 (.I0(INST[12]), 
+                .I1(INST[13]), 
+                .I2(INST[14]), 
+                .O(OP2[1]));
+   BUF  XLXI_8 (.I(INST[11]), 
+               .O(DR));
+   BUF  XLXI_9 (.I(INST[8]), 
+               .O(OP[0]));
+   BUF  XLXI_10 (.I(INST[9]), 
+                .O(OP[1]));
+   BUF  XLXI_11 (.I(INST[10]), 
+                .O(OP[2]));
+   BUF  XLXI_12 (.I(INST[0]), 
+                .O(IMM[0]));
+   BUF  XLXI_13 (.I(INST[1]), 
+                .O(IMM[1]));
+   BUF  XLXI_14 (.I(INST[2]), 
+                .O(IMM[2]));
+   BUF  XLXI_15 (.I(INST[3]), 
+                .O(IMM[3]));
+   BUF  XLXI_16 (.I(INST[4]), 
+                .O(IMM[4]));
+   BUF  XLXI_17 (.I(INST[5]), 
+                .O(IMM[5]));
+   BUF  XLXI_18 (.I(INST[6]), 
+                .O(IMM[6]));
+   BUF  XLXI_19 (.I(INST[7]), 
+                .O(IMM[7]));
+   (* HU_SET = "XLXI_21_144" *) 
+   AND16_HXILINX_inst_decode  XLXI_21 (.I0(INST[15]), 
+                                      .I1(INST[14]), 
+                                      .I2(INST[13]), 
+                                      .I3(INST[12]), 
+                                      .I4(INST[11]), 
+                                      .I5(INST[10]), 
+                                      .I6(INST[9]), 
+                                      .I7(INST[8]), 
+                                      .I8(INST[7]), 
+                                      .I9(INST[6]), 
+                                      .I10(INST[5]), 
+                                      .I11(INST[4]), 
+                                      .I12(INST[3]), 
+                                      .I13(INST[2]), 
+                                      .I14(INST[1]), 
+                                      .I15(INST[0]), 
+                                      .O(HLT));
+   (* HU_SET = "XLXI_24_145" *) 
+   OR16_HXILINX_inst_decode  XLXI_24 (.I0(INST[15]), 
+                                     .I1(INST[14]), 
+                                     .I2(INST[13]), 
+                                     .I3(INST[12]), 
+                                     .I4(INST[11]), 
+                                     .I5(INST[10]), 
+                                     .I6(INST[9]), 
+                                     .I7(INST[8]), 
+                                     .I8(INST[7]), 
+                                     .I9(INST[6]), 
+                                     .I10(INST[5]), 
+                                     .I11(INST[4]), 
+                                     .I12(INST[3]), 
+                                     .I13(INST[2]), 
+                                     .I14(INST[1]), 
+                                     .I15(INST[0]), 
+                                     .O(OUTE));
+endmodule

@@ -1,0 +1,44 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : vcc16.vf
+// /___/   /\     Timestamp : 10/01/2024 00:02:39
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Personal/Projects/Digital Labs/Labs/10/simple-cpu/vcc16.vf" -w "D:/Personal/Projects/Digital Labs/Labs/10/simple-cpu/vcc16.sch"
+//Design Name: vcc16
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module vcc16(VCC);
+
+   output [15:0] VCC;
+   
+   
+   VCC  XLXI_19 (.P(VCC[0]));
+   VCC  XLXI_20 (.P(VCC[1]));
+   VCC  XLXI_22 (.P(VCC[2]));
+   VCC  XLXI_23 (.P(VCC[3]));
+   VCC  XLXI_24 (.P(VCC[4]));
+   VCC  XLXI_25 (.P(VCC[5]));
+   VCC  XLXI_26 (.P(VCC[6]));
+   VCC  XLXI_27 (.P(VCC[7]));
+   VCC  XLXI_28 (.P(VCC[8]));
+   VCC  XLXI_29 (.P(VCC[9]));
+   VCC  XLXI_30 (.P(VCC[10]));
+   VCC  XLXI_31 (.P(VCC[11]));
+   VCC  XLXI_33 (.P(VCC[12]));
+   VCC  XLXI_34 (.P(VCC[13]));
+   VCC  XLXI_35 (.P(VCC[14]));
+   VCC  XLXI_36 (.P(VCC[15]));
+endmodule

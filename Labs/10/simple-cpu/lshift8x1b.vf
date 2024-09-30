@@ -1,0 +1,49 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : lshift8x1b.vf
+// /___/   /\     Timestamp : 10/01/2024 00:02:39
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Personal/Projects/Digital Labs/Labs/10/simple-cpu/lshift8x1b.vf" -w "D:/Personal/Projects/Digital Labs/Labs/10/simple-cpu/lshift8x1b.sch"
+//Design Name: lshift8x1b
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module lshift8x1b(I, 
+                  O, 
+                  OFL);
+
+    input [7:0] I;
+   output [7:0] O;
+   output OFL;
+   
+   
+   GND  XLXI_1 (.G(O[0]));
+   BUF  XLXI_2 (.I(I[0]), 
+               .O(O[1]));
+   BUF  XLXI_3 (.I(I[1]), 
+               .O(O[2]));
+   BUF  XLXI_4 (.I(I[2]), 
+               .O(O[3]));
+   BUF  XLXI_5 (.I(I[3]), 
+               .O(O[4]));
+   BUF  XLXI_6 (.I(I[4]), 
+               .O(O[5]));
+   BUF  XLXI_7 (.I(I[5]), 
+               .O(O[6]));
+   BUF  XLXI_8 (.I(I[6]), 
+               .O(O[7]));
+   BUF  XLXI_9 (.I(I[7]), 
+               .O(OFL));
+endmodule

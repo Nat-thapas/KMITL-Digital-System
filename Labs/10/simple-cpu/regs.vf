@@ -1,0 +1,86 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : regs.vf
+// /___/   /\     Timestamp : 10/01/2024 00:02:39
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Personal/Projects/Digital Labs/Labs/10/simple-cpu/regs.vf" -w "D:/Personal/Projects/Digital Labs/Labs/10/simple-cpu/regs.sch"
+//Design Name: regs
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module FD8CE_HXILINX_regs(Q, C, CE, CLR, D);
+
+   
+   output [7:0]       Q;
+
+   input 	      C;	
+   input 	      CE;	
+   input 	      CLR;	
+   input  [7:0]       D;
+   
+   reg    [7:0]       Q;
+   
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 8'b0000_0000;
+	else if (CE)
+          Q <= D;
+     end
+   
+   
+endmodule
+`timescale 1ns / 1ps
+
+module regs(CE, 
+            CLK, 
+            D, 
+            W, 
+            R0, 
+            R1);
+
+    input CE;
+    input CLK;
+    input [7:0] D;
+    input W;
+   output [7:0] R0;
+   output [7:0] R1;
+   
+   wire XLXN_4;
+   wire XLXN_5;
+   wire XLXN_6;
+   wire XLXN_7;
+   
+   (* HU_SET = "XLXI_1_146" *) 
+   FD8CE_HXILINX_regs  XLXI_1 (.C(CLK), 
+                              .CE(XLXN_4), 
+                              .CLR(XLXN_6), 
+                              .D(D[7:0]), 
+                              .Q(R0[7:0]));
+   (* HU_SET = "XLXI_2_147" *) 
+   FD8CE_HXILINX_regs  XLXI_2 (.C(CLK), 
+                              .CE(XLXN_5), 
+                              .CLR(XLXN_7), 
+                              .D(D[7:0]), 
+                              .Q(R1[7:0]));
+   GND  XLXI_5 (.G(XLXN_7));
+   GND  XLXI_6 (.G(XLXN_6));
+   AND2B1  XLXI_7 (.I0(W), 
+                  .I1(CE), 
+                  .O(XLXN_4));
+   AND2  XLXI_8 (.I0(W), 
+                .I1(CE), 
+                .O(XLXN_5));
+endmodule

@@ -3,6 +3,10 @@ import re
 import sys
 from typing import Generator
 
+import colorama
+from colorama import Fore, Style
+
+colorama.init(autoreset=True)
 
 PINS_FILE_PATH = "../pins.txt"
 
@@ -50,7 +54,10 @@ def main():
         if "(" not in net:
             loc = pins.get(net, "")
             if not loc:
-                continue
+                print(
+                    Fore.LIGHTRED_EX
+                    + f"Warning: NET {net} does not have corresponding LOC entry in pins file."
+                )
             output.append(f'NET "{net}" LOC = {loc};')
         else:
             match = re.search(r"(.*?)\((.*?):(.*?)\)", net)
@@ -62,7 +69,10 @@ def main():
             for i in multi_range(start, end):
                 loc = pins.get(f"{net}[{i}]", "")
                 if not loc:
-                    continue
+                    print(
+                        Fore.LIGHTRED_EX
+                        + f"Warning: NET {net}[{i}] does not have corresponding LOC entry in pins file."
+                    )
                 output.append(f'NET "{net}[{i}]" LOC = {loc};')
     output_str: str = "\n".join(output)
     print("Output:")
@@ -76,7 +86,9 @@ def main():
     print(f"Saving to {ucf_save_path}")
     with open(ucf_save_path, "w", encoding="utf-8") as f:
         f.write(output_str)
-    print("File saved successfully.")
+    print(Fore.LIGHTGREEN_EX + "File saved successfully.")
+    print(Style.RESET_ALL, end="")
+    input("Press Enter to exit.")
 
 
 if __name__ == "__main__":

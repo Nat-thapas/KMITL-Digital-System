@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2024-09-29T23:10:34</DateModified>
+  <DateModified>2024-10-01T00:02:21</DateModified>
   <ModuleName>main</ModuleName>
-  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
+  <SummaryTimeStamp>2024-09-30T23:58:33</SummaryTimeStamp>
   <SavedFilePath>D:/Personal/Projects/Digital Labs/Labs/10/simple-cpu/iseconfig/main.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>D:/Personal/Projects/Digital Labs/Labs/10/simple-cpu</ImplementationReportsDirectory>
-  <DateInitialized>2024-09-29T23:10:34</DateInitialized>
+  <ImplementationReportsDirectory>D:/Personal/Projects/Digital Labs/Labs/10/simple-cpu\</ImplementationReportsDirectory>
+  <DateInitialized>2024-09-30T21:08:17</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>

@@ -1,0 +1,32 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : vcc4.vf
+// /___/   /\     Timestamp : 10/01/2024 00:02:40
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Personal/Projects/Digital Labs/Labs/10/simple-cpu/vcc4.vf" -w "D:/Personal/Projects/Digital Labs/Labs/10/simple-cpu/vcc4.sch"
+//Design Name: vcc4
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module vcc4(VCC);
+
+   output [3:0] VCC;
+   
+   
+   VCC  XLXI_19 (.P(VCC[0]));
+   VCC  XLXI_20 (.P(VCC[1]));
+   VCC  XLXI_22 (.P(VCC[2]));
+   VCC  XLXI_23 (.P(VCC[3]));
+endmodule

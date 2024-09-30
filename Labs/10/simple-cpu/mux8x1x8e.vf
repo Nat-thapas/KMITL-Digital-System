@@ -1,0 +1,206 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : mux8x1x8e.vf
+// /___/   /\     Timestamp : 10/01/2024 00:02:40
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Personal/Projects/Digital Labs/Labs/10/simple-cpu/mux8x1x8e.vf" -w "D:/Personal/Projects/Digital Labs/Labs/10/simple-cpu/mux8x1x8e.sch"
+//Design Name: mux8x1x8e
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale  100 ps / 10 ps
+
+module M8_1E_HXILINX_mux8x1x8e (O, D0, D1, D2, D3, D4, D5, D6, D7, E, S0, S1, S2);
+    
+
+   output O;
+
+   input  D0;
+   input  D1;
+   input  D2;
+   input  D3;
+   input  D4;
+   input  D5;
+   input  D6;
+   input  D7;
+   input  E;
+   input  S0;
+   input  S1;
+   input  S2;
+
+   reg O;
+
+   always @ ( D0 or D1 or D2 or D3 or D4 or D5 or D6 or D7 or E or S0 or S1 or S2)
+   begin
+      if(!E)
+      O <= 1'b0;
+      else 
+      begin
+        case({S2,S1,S0})
+        3'b000 : O <= D0;
+        3'b001 : O <= D1;
+        3'b010 : O <= D2;
+        3'b011 : O <= D3;
+        3'b100 : O <= D4;
+        3'b101 : O <= D5;
+        3'b110 : O <= D6;
+        3'b111 : O <= D7;
+        endcase
+      end
+   end
+    
+endmodule
+`timescale 1ns / 1ps
+
+module mux8x1x8e(D0, 
+                 D1, 
+                 D2, 
+                 D3, 
+                 D4, 
+                 D5, 
+                 D6, 
+                 D7, 
+                 E, 
+                 S0, 
+                 S1, 
+                 S2, 
+                 O);
+
+    input [7:0] D0;
+    input [7:0] D1;
+    input [7:0] D2;
+    input [7:0] D3;
+    input [7:0] D4;
+    input [7:0] D5;
+    input [7:0] D6;
+    input [7:0] D7;
+    input E;
+    input S0;
+    input S1;
+    input S2;
+   output [7:0] O;
+   
+   
+   (* HU_SET = "XLXI_1_160" *) 
+   M8_1E_HXILINX_mux8x1x8e  XLXI_1 (.D0(D0[0]), 
+                                   .D1(D1[0]), 
+                                   .D2(D2[0]), 
+                                   .D3(D3[0]), 
+                                   .D4(D4[0]), 
+                                   .D5(D5[0]), 
+                                   .D6(D6[0]), 
+                                   .D7(D7[0]), 
+                                   .E(E), 
+                                   .S0(S0), 
+                                   .S1(S1), 
+                                   .S2(S2), 
+                                   .O(O[0]));
+   (* HU_SET = "XLXI_2_161" *) 
+   M8_1E_HXILINX_mux8x1x8e  XLXI_2 (.D0(D0[1]), 
+                                   .D1(D1[1]), 
+                                   .D2(D2[1]), 
+                                   .D3(D3[1]), 
+                                   .D4(D4[1]), 
+                                   .D5(D5[1]), 
+                                   .D6(D6[1]), 
+                                   .D7(D7[1]), 
+                                   .E(E), 
+                                   .S0(S0), 
+                                   .S1(S1), 
+                                   .S2(S2), 
+                                   .O(O[1]));
+   (* HU_SET = "XLXI_3_162" *) 
+   M8_1E_HXILINX_mux8x1x8e  XLXI_3 (.D0(D0[2]), 
+                                   .D1(D1[2]), 
+                                   .D2(D2[2]), 
+                                   .D3(D3[2]), 
+                                   .D4(D4[2]), 
+                                   .D5(D5[2]), 
+                                   .D6(D6[2]), 
+                                   .D7(D7[2]), 
+                                   .E(E), 
+                                   .S0(S0), 
+                                   .S1(S1), 
+                                   .S2(S2), 
+                                   .O(O[2]));
+   (* HU_SET = "XLXI_4_163" *) 
+   M8_1E_HXILINX_mux8x1x8e  XLXI_4 (.D0(D0[3]), 
+                                   .D1(D1[3]), 
+                                   .D2(D2[3]), 
+                                   .D3(D3[3]), 
+                                   .D4(D4[3]), 
+                                   .D5(D5[3]), 
+                                   .D6(D6[3]), 
+                                   .D7(D7[3]), 
+                                   .E(E), 
+                                   .S0(S0), 
+                                   .S1(S1), 
+                                   .S2(S2), 
+                                   .O(O[3]));
+   (* HU_SET = "XLXI_5_164" *) 
+   M8_1E_HXILINX_mux8x1x8e  XLXI_5 (.D0(D0[4]), 
+                                   .D1(D1[4]), 
+                                   .D2(D2[4]), 
+                                   .D3(D3[4]), 
+                                   .D4(D4[4]), 
+                                   .D5(D5[4]), 
+                                   .D6(D6[4]), 
+                                   .D7(D7[4]), 
+                                   .E(E), 
+                                   .S0(S0), 
+                                   .S1(S1), 
+                                   .S2(S2), 
+                                   .O(O[4]));
+   (* HU_SET = "XLXI_6_165" *) 
+   M8_1E_HXILINX_mux8x1x8e  XLXI_6 (.D0(D0[5]), 
+                                   .D1(D1[5]), 
+                                   .D2(D2[5]), 
+                                   .D3(D3[5]), 
+                                   .D4(D4[5]), 
+                                   .D5(D5[5]), 
+                                   .D6(D6[5]), 
+                                   .D7(D7[5]), 
+                                   .E(E), 
+                                   .S0(S0), 
+                                   .S1(S1), 
+                                   .S2(S2), 
+                                   .O(O[5]));
+   (* HU_SET = "XLXI_7_166" *) 
+   M8_1E_HXILINX_mux8x1x8e  XLXI_7 (.D0(D0[6]), 
+                                   .D1(D1[6]), 
+                                   .D2(D2[6]), 
+                                   .D3(D3[6]), 
+                                   .D4(D4[6]), 
+                                   .D5(D5[6]), 
+                                   .D6(D6[6]), 
+                                   .D7(D7[6]), 
+                                   .E(E), 
+                                   .S0(S0), 
+                                   .S1(S1), 
+                                   .S2(S2), 
+                                   .O(O[6]));
+   (* HU_SET = "XLXI_8_167" *) 
+   M8_1E_HXILINX_mux8x1x8e  XLXI_8 (.D0(D0[7]), 
+                                   .D1(D1[7]), 
+                                   .D2(D2[7]), 
+                                   .D3(D3[7]), 
+                                   .D4(D4[7]), 
+                                   .D5(D5[7]), 
+                                   .D6(D6[7]), 
+                                   .D7(D7[7]), 
+                                   .E(E), 
+                                   .S0(S0), 
+                                   .S1(S1), 
+                                   .S2(S2), 
+                                   .O(O[7]));
+endmodule

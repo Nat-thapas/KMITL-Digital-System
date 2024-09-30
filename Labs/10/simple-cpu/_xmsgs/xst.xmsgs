@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf" Line 134: Result of <arg fmt="%d" index="1">5</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">4</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf" Line 136: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">4</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf" Line 300: Result of <arg fmt="%d" index="1">5</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">4</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf" Line 530: Result of <arg fmt="%d" index="1">3</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">2</arg>-bit target.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">2234</arg>: Output port &lt;<arg fmt="%s" index="3">CEO</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_163</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">2274</arg>: Output port &lt;<arg fmt="%s" index="3">CEO</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_214</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">2274</arg>: Output port &lt;<arg fmt="%s" index="3">TC</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_214</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">1664</arg>: Output port &lt;<arg fmt="%s" index="3">CEO</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_4</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">1664</arg>: Output port &lt;<arg fmt="%s" index="3">TC</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_4</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">1561</arg>: Output port &lt;<arg fmt="%s" index="3">Q0</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_1</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">1561</arg>: Output port &lt;<arg fmt="%s" index="3">Q1</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_1</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">1561</arg>: Output port &lt;<arg fmt="%s" index="3">Q2</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_1</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">1561</arg>: Output port &lt;<arg fmt="%s" index="3">Q3</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_1</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">1561</arg>: Output port &lt;<arg fmt="%s" index="3">TC</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_1</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">1573</arg>: Output port &lt;<arg fmt="%s" index="3">Q0</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_14</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">1573</arg>: Output port &lt;<arg fmt="%s" index="3">Q1</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_14</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">1573</arg>: Output port &lt;<arg fmt="%s" index="3">Q2</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_14</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">1573</arg>: Output port &lt;<arg fmt="%s" index="3">Q3</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_14</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">1573</arg>: Output port &lt;<arg fmt="%s" index="3">TC</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_14</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">1583</arg>: Output port &lt;<arg fmt="%s" index="3">Q0</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_17</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">1583</arg>: Output port &lt;<arg fmt="%s" index="3">Q1</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_17</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">1583</arg>: Output port &lt;<arg fmt="%s" index="3">Q2</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_17</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">1583</arg>: Output port &lt;<arg fmt="%s" index="3">Q3</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_17</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">1583</arg>: Output port &lt;<arg fmt="%s" index="3">TC</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_17</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">1593</arg>: Output port &lt;<arg fmt="%s" index="3">Q0</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_22</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">1593</arg>: Output port &lt;<arg fmt="%s" index="3">Q1</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_22</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">1593</arg>: Output port &lt;<arg fmt="%s" index="3">Q2</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_22</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">1593</arg>: Output port &lt;<arg fmt="%s" index="3">Q3</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_22</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">1593</arg>: Output port &lt;<arg fmt="%s" index="3">TC</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_22</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">1603</arg>: Output port &lt;<arg fmt="%s" index="3">Q0</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_25</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">1603</arg>: Output port &lt;<arg fmt="%s" index="3">Q1</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_25</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">1603</arg>: Output port &lt;<arg fmt="%s" index="3">Q2</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_25</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">1603</arg>: Output port &lt;<arg fmt="%s" index="3">Q3</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_25</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">1603</arg>: Output port &lt;<arg fmt="%s" index="3">TC</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_25</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">1613</arg>: Output port &lt;<arg fmt="%s" index="3">Q0</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_28</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">1613</arg>: Output port &lt;<arg fmt="%s" index="3">Q1</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_28</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">1613</arg>: Output port &lt;<arg fmt="%s" index="3">Q2</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_28</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">1613</arg>: Output port &lt;<arg fmt="%s" index="3">Q3</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_28</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">1613</arg>: Output port &lt;<arg fmt="%s" index="3">TC</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_28</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">1623</arg>: Output port &lt;<arg fmt="%s" index="3">Q0</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_31</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">1623</arg>: Output port &lt;<arg fmt="%s" index="3">Q1</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_31</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">1623</arg>: Output port &lt;<arg fmt="%s" index="3">Q2</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_31</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">1623</arg>: Output port &lt;<arg fmt="%s" index="3">Q3</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_31</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">1623</arg>: Output port &lt;<arg fmt="%s" index="3">TC</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_31</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">1363</arg>: Output port &lt;<arg fmt="%s" index="3">D0</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_71</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">1363</arg>: Output port &lt;<arg fmt="%s" index="3">D3</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_71</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">1363</arg>: Output port &lt;<arg fmt="%s" index="3">D5</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_71</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">1363</arg>: Output port &lt;<arg fmt="%s" index="3">D6</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_71</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">1363</arg>: Output port &lt;<arg fmt="%s" index="3">D7</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_71</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">805</arg>: Output port &lt;<arg fmt="%s" index="3">CEO</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_162</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">805</arg>: Output port &lt;<arg fmt="%s" index="3">TC</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_162</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">886</arg>: Output port &lt;<arg fmt="%s" index="3">Q0</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_1</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">886</arg>: Output port &lt;<arg fmt="%s" index="3">Q1</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_1</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">886</arg>: Output port &lt;<arg fmt="%s" index="3">Q2</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_1</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">886</arg>: Output port &lt;<arg fmt="%s" index="3">Q3</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_1</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">886</arg>: Output port &lt;<arg fmt="%s" index="3">TC</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_1</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">898</arg>: Output port &lt;<arg fmt="%s" index="3">Q0</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_14</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">898</arg>: Output port &lt;<arg fmt="%s" index="3">Q1</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_14</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">898</arg>: Output port &lt;<arg fmt="%s" index="3">Q2</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_14</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">898</arg>: Output port &lt;<arg fmt="%s" index="3">Q3</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_14</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">898</arg>: Output port &lt;<arg fmt="%s" index="3">TC</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_14</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">908</arg>: Output port &lt;<arg fmt="%s" index="3">Q0</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_17</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">908</arg>: Output port &lt;<arg fmt="%s" index="3">Q1</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_17</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">908</arg>: Output port &lt;<arg fmt="%s" index="3">Q2</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_17</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">908</arg>: Output port &lt;<arg fmt="%s" index="3">Q3</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_17</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">908</arg>: Output port &lt;<arg fmt="%s" index="3">TC</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_17</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">918</arg>: Output port &lt;<arg fmt="%s" index="3">Q0</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_22</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">918</arg>: Output port &lt;<arg fmt="%s" index="3">Q1</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_22</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">918</arg>: Output port &lt;<arg fmt="%s" index="3">Q2</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_22</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">918</arg>: Output port &lt;<arg fmt="%s" index="3">Q3</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_22</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Personal\Projects\Digital Labs\Labs\10\simple-cpu\main.vf</arg>&quot; line <arg fmt="%s" index="2">918</arg>: Output port &lt;<arg fmt="%s" index="3">TC</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_22</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="1767" delta="new" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+</msg>
+
+</messages>
