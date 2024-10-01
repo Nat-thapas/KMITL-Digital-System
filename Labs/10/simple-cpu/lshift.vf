@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : lshift.vf
-// /___/   /\     Timestamp : 10/01/2024 12:22:27
+// /___/   /\     Timestamp : 10/01/2024 14:35:50
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -133,42 +133,42 @@ module lshift(I,
    wire XLXN_845;
    wire XLXN_846;
    
-   (* HU_SET = "XLXI_436_245" *) 
+   (* HU_SET = "XLXI_436_0" *) 
    M2_1_HXILINX_lshift  XLXI_436 (.D0(I[7]), 
                                  .D1(I[6]), 
                                  .S0(S[0]), 
                                  .O(XLXN_600));
-   (* HU_SET = "XLXI_437_246" *) 
+   (* HU_SET = "XLXI_437_1" *) 
    M2_1_HXILINX_lshift  XLXI_437 (.D0(I[6]), 
                                  .D1(I[5]), 
                                  .S0(S[0]), 
                                  .O(XLXN_599));
-   (* HU_SET = "XLXI_438_247" *) 
+   (* HU_SET = "XLXI_438_2" *) 
    M2_1_HXILINX_lshift  XLXI_438 (.D0(I[5]), 
                                  .D1(I[4]), 
                                  .S0(S[0]), 
                                  .O(XLXN_587));
-   (* HU_SET = "XLXI_439_248" *) 
+   (* HU_SET = "XLXI_439_3" *) 
    M2_1_HXILINX_lshift  XLXI_439 (.D0(I[4]), 
                                  .D1(I[3]), 
                                  .S0(S[0]), 
                                  .O(XLXN_588));
-   (* HU_SET = "XLXI_440_249" *) 
+   (* HU_SET = "XLXI_440_4" *) 
    M2_1_HXILINX_lshift  XLXI_440 (.D0(I[3]), 
                                  .D1(I[2]), 
                                  .S0(S[0]), 
                                  .O(XLXN_589));
-   (* HU_SET = "XLXI_441_250" *) 
+   (* HU_SET = "XLXI_441_5" *) 
    M2_1_HXILINX_lshift  XLXI_441 (.D0(I[2]), 
                                  .D1(I[1]), 
                                  .S0(S[0]), 
                                  .O(XLXN_590));
-   (* HU_SET = "XLXI_442_251" *) 
+   (* HU_SET = "XLXI_442_6" *) 
    M2_1_HXILINX_lshift  XLXI_442 (.D0(I[1]), 
                                  .D1(I[0]), 
                                  .S0(S[0]), 
                                  .O(XLXN_593));
-   (* HU_SET = "XLXI_443_252" *) 
+   (* HU_SET = "XLXI_443_7" *) 
    M2_1_HXILINX_lshift  XLXI_443 (.D0(I[0]), 
                                  .D1(XLXN_578), 
                                  .S0(S[0]), 
@@ -177,42 +177,42 @@ module lshift(I,
                   .I1(I[7]), 
                   .O(XLXN_771));
    GND  XLXI_453 (.G(XLXN_578));
-   (* HU_SET = "XLXI_454_253" *) 
+   (* HU_SET = "XLXI_454_8" *) 
    M2_1_HXILINX_lshift  XLXI_454 (.D0(XLXN_600), 
                                  .D1(XLXN_587), 
                                  .S0(S[1]), 
                                  .O(XLXN_699));
-   (* HU_SET = "XLXI_455_254" *) 
+   (* HU_SET = "XLXI_455_9" *) 
    M2_1_HXILINX_lshift  XLXI_455 (.D0(XLXN_599), 
                                  .D1(XLXN_588), 
                                  .S0(S[1]), 
                                  .O(XLXN_698));
-   (* HU_SET = "XLXI_456_255" *) 
+   (* HU_SET = "XLXI_456_10" *) 
    M2_1_HXILINX_lshift  XLXI_456 (.D0(XLXN_587), 
                                  .D1(XLXN_589), 
                                  .S0(S[1]), 
                                  .O(XLXN_697));
-   (* HU_SET = "XLXI_457_256" *) 
+   (* HU_SET = "XLXI_457_11" *) 
    M2_1_HXILINX_lshift  XLXI_457 (.D0(XLXN_588), 
                                  .D1(XLXN_590), 
                                  .S0(S[1]), 
                                  .O(XLXN_696));
-   (* HU_SET = "XLXI_458_257" *) 
+   (* HU_SET = "XLXI_458_12" *) 
    M2_1_HXILINX_lshift  XLXI_458 (.D0(XLXN_589), 
                                  .D1(XLXN_593), 
                                  .S0(S[1]), 
                                  .O(XLXN_634));
-   (* HU_SET = "XLXI_459_258" *) 
+   (* HU_SET = "XLXI_459_13" *) 
    M2_1_HXILINX_lshift  XLXI_459 (.D0(XLXN_590), 
                                  .D1(XLXN_594), 
                                  .S0(S[1]), 
                                  .O(XLXN_635));
-   (* HU_SET = "XLXI_460_259" *) 
+   (* HU_SET = "XLXI_460_14" *) 
    M2_1_HXILINX_lshift  XLXI_460 (.D0(XLXN_593), 
                                  .D1(XLXN_608), 
                                  .S0(S[1]), 
                                  .O(XLXN_636));
-   (* HU_SET = "XLXI_461_260" *) 
+   (* HU_SET = "XLXI_461_15" *) 
    M2_1_HXILINX_lshift  XLXI_461 (.D0(XLXN_594), 
                                  .D1(XLXN_609), 
                                  .S0(S[1]), 
@@ -225,49 +225,49 @@ module lshift(I,
                   .O(XLXN_840));
    GND  XLXI_464 (.G(XLXN_608));
    GND  XLXI_465 (.G(XLXN_609));
-   (* HU_SET = "XLXI_466_261" *) 
+   (* HU_SET = "XLXI_466_16" *) 
    M2_1E_HXILINX_lshift  XLXI_466 (.D0(XLXN_699), 
                                   .D1(XLXN_634), 
                                   .E(XLXN_770), 
                                   .S0(S[2]), 
                                   .O(O[7]));
-   (* HU_SET = "XLXI_467_262" *) 
+   (* HU_SET = "XLXI_467_17" *) 
    M2_1E_HXILINX_lshift  XLXI_467 (.D0(XLXN_698), 
                                   .D1(XLXN_635), 
                                   .E(XLXN_770), 
                                   .S0(S[2]), 
                                   .O(O[6]));
-   (* HU_SET = "XLXI_468_263" *) 
+   (* HU_SET = "XLXI_468_18" *) 
    M2_1E_HXILINX_lshift  XLXI_468 (.D0(XLXN_696), 
                                   .D1(XLXN_637), 
                                   .E(XLXN_770), 
                                   .S0(S[2]), 
                                   .O(O[4]));
-   (* HU_SET = "XLXI_469_264" *) 
+   (* HU_SET = "XLXI_469_19" *) 
    M2_1E_HXILINX_lshift  XLXI_469 (.D0(XLXN_697), 
                                   .D1(XLXN_636), 
                                   .E(XLXN_770), 
                                   .S0(S[2]), 
                                   .O(O[5]));
-   (* HU_SET = "XLXI_470_265" *) 
+   (* HU_SET = "XLXI_470_20" *) 
    M2_1E_HXILINX_lshift  XLXI_470 (.D0(XLXN_635), 
                                   .D1(XLXN_641), 
                                   .E(XLXN_770), 
                                   .S0(S[2]), 
                                   .O(O[2]));
-   (* HU_SET = "XLXI_471_266" *) 
+   (* HU_SET = "XLXI_471_21" *) 
    M2_1E_HXILINX_lshift  XLXI_471 (.D0(XLXN_634), 
                                   .D1(XLXN_642), 
                                   .E(XLXN_770), 
                                   .S0(S[2]), 
                                   .O(O[3]));
-   (* HU_SET = "XLXI_472_267" *) 
+   (* HU_SET = "XLXI_472_22" *) 
    M2_1E_HXILINX_lshift  XLXI_472 (.D0(XLXN_636), 
                                   .D1(XLXN_639), 
                                   .E(XLXN_770), 
                                   .S0(S[2]), 
                                   .O(O[1]));
-   (* HU_SET = "XLXI_473_268" *) 
+   (* HU_SET = "XLXI_473_23" *) 
    M2_1E_HXILINX_lshift  XLXI_473 (.D0(XLXN_637), 
                                   .D1(XLXN_638), 
                                   .E(XLXN_770), 
@@ -295,7 +295,7 @@ module lshift(I,
                   .I3(S[4]), 
                   .I4(S[3]), 
                   .O(XLXN_770));
-   (* HU_SET = "XLXI_558_269" *) 
+   (* HU_SET = "XLXI_558_24" *) 
    OR8_HXILINX_lshift  XLXI_558 (.I0(I[7]), 
                                 .I1(I[6]), 
                                 .I2(I[5]), 
@@ -308,7 +308,7 @@ module lshift(I,
    AND2B1  XLXI_559 (.I0(XLXN_770), 
                     .I1(XLXN_769), 
                     .O(XLXN_846));
-   (* HU_SET = "XLXI_645_270" *) 
+   (* HU_SET = "XLXI_645_25" *) 
    OR8_HXILINX_lshift  XLXI_645 (.I0(XLXN_846), 
                                 .I1(XLXN_845), 
                                 .I2(XLXN_844), 

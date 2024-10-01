@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : clkdiv20k.vf
-// /___/   /\     Timestamp : 10/01/2024 12:22:27
+// /___/   /\     Timestamp : 10/01/2024 14:35:50
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -107,7 +107,7 @@ module clkdiv20k(CLK,
    wire XLXN_49;
    wire XLXN_50;
    
-   (* HU_SET = "XLXI_1_230" *) 
+   (* HU_SET = "XLXI_1_32" *) 
    CD4CE_HXILINX_clkdiv20k  XLXI_1 (.C(CLK_I), 
                                    .CE(XLXN_3), 
                                    .CLR(XLXN_15), 
@@ -119,7 +119,7 @@ module clkdiv20k(CLK,
                                    .TC());
    VCC  XLXI_2 (.P(XLXN_3));
    GND  XLXI_3 (.G(XLXN_15));
-   (* HU_SET = "XLXI_14_231" *) 
+   (* HU_SET = "XLXI_14_33" *) 
    CD4CE_HXILINX_clkdiv20k  XLXI_14 (.C(CLK_I), 
                                     .CE(XLXN_14), 
                                     .CLR(XLXN_15), 
@@ -129,7 +129,7 @@ module clkdiv20k(CLK,
                                     .Q2(), 
                                     .Q3(), 
                                     .TC());
-   (* HU_SET = "XLXI_17_232" *) 
+   (* HU_SET = "XLXI_17_34" *) 
    CD4CE_HXILINX_clkdiv20k  XLXI_17 (.C(CLK_I), 
                                     .CE(XLXN_27), 
                                     .CLR(XLXN_15), 
@@ -139,7 +139,7 @@ module clkdiv20k(CLK,
                                     .Q2(), 
                                     .Q3(), 
                                     .TC());
-   (* HU_SET = "XLXI_22_233" *) 
+   (* HU_SET = "XLXI_22_35" *) 
    CD4CE_HXILINX_clkdiv20k  XLXI_22 (.C(CLK_I), 
                                     .CE(XLXN_37), 
                                     .CLR(XLXN_15), 
@@ -151,7 +151,7 @@ module clkdiv20k(CLK,
                                     .TC());
    INV  XLXI_34 (.I(CLK), 
                 .O(CLK_I));
-   (* HU_SET = "XLXI_36_234" *) 
+   (* HU_SET = "XLXI_36_36" *) 
    FTCE_HXILINX_clkdiv20k  XLXI_36 (.C(CLK_I), 
                                    .CE(XLXN_45), 
                                    .CLR(XLXN_15), 

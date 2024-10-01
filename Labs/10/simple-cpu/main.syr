@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.15 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.19 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.15 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.19 secs
  
 --> Reading design: main.prj
 
@@ -242,9 +242,6 @@ Parsing module <mux4x1x16e_MUSER_main>.
 Parsing module <gnd16_MUSER_main>.
 Parsing module <inst_stack_MUSER_main>.
 Parsing module <main>.
-Analyzing Verilog file "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\clkdiv20M.vf" into library work
-Parsing module <CD4CE_HXILINX_clkdiv20M>.
-Parsing module <clkdiv20M>.
 
 =========================================================================
 *                            HDL Elaboration                            *
@@ -410,10 +407,10 @@ Elaborating module <clkdiv10M_MUSER_main>.
 
 Synthesizing Unit <main>.
     Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf".
-    Set property "HU_SET = XLXI_90_242" for instance <XLXI_90>.
-    Set property "HU_SET = XLXI_163_241" for instance <XLXI_163>.
-    Set property "HU_SET = XLXI_358_243" for instance <XLXI_358>.
-    Set property "HU_SET = XLXI_360_244" for instance <XLXI_360>.
+    Set property "HU_SET = XLXI_90_157" for instance <XLXI_90>.
+    Set property "HU_SET = XLXI_163_156" for instance <XLXI_163>.
+    Set property "HU_SET = XLXI_358_158" for instance <XLXI_358>.
+    Set property "HU_SET = XLXI_360_159" for instance <XLXI_360>.
 INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2704: Output port <CEO> of the instance <XLXI_163> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
@@ -421,14 +418,14 @@ Unit <main> synthesized.
 
 Synthesizing Unit <inst_stack_MUSER_main>.
     Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf".
-    Set property "HU_SET = XLXI_51_233" for instance <XLXI_51>.
-    Set property "HU_SET = XLXI_52_234" for instance <XLXI_52>.
-    Set property "HU_SET = XLXI_53_235" for instance <XLXI_53>.
-    Set property "HU_SET = XLXI_54_236" for instance <XLXI_54>.
-    Set property "HU_SET = XLXI_56_237" for instance <XLXI_56>.
-    Set property "HU_SET = XLXI_57_238" for instance <XLXI_57>.
-    Set property "HU_SET = XLXI_58_239" for instance <XLXI_58>.
-    Set property "HU_SET = XLXI_59_240" for instance <XLXI_59>.
+    Set property "HU_SET = XLXI_51_148" for instance <XLXI_51>.
+    Set property "HU_SET = XLXI_52_149" for instance <XLXI_52>.
+    Set property "HU_SET = XLXI_53_150" for instance <XLXI_53>.
+    Set property "HU_SET = XLXI_54_151" for instance <XLXI_54>.
+    Set property "HU_SET = XLXI_56_152" for instance <XLXI_56>.
+    Set property "HU_SET = XLXI_57_153" for instance <XLXI_57>.
+    Set property "HU_SET = XLXI_58_154" for instance <XLXI_58>.
+    Set property "HU_SET = XLXI_59_155" for instance <XLXI_59>.
     Summary:
 	no macro.
 Unit <inst_stack_MUSER_main> synthesized.
@@ -441,22 +438,22 @@ Unit <gnd16_MUSER_main> synthesized.
 
 Synthesizing Unit <mux4x1x16e_MUSER_main>.
     Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf".
-    Set property "HU_SET = XLXI_1_217" for instance <XLXI_1>.
-    Set property "HU_SET = XLXI_2_218" for instance <XLXI_2>.
-    Set property "HU_SET = XLXI_3_219" for instance <XLXI_3>.
-    Set property "HU_SET = XLXI_4_220" for instance <XLXI_4>.
-    Set property "HU_SET = XLXI_5_221" for instance <XLXI_5>.
-    Set property "HU_SET = XLXI_6_222" for instance <XLXI_6>.
-    Set property "HU_SET = XLXI_7_223" for instance <XLXI_7>.
-    Set property "HU_SET = XLXI_8_224" for instance <XLXI_8>.
-    Set property "HU_SET = XLXI_9_225" for instance <XLXI_9>.
-    Set property "HU_SET = XLXI_10_226" for instance <XLXI_10>.
-    Set property "HU_SET = XLXI_11_227" for instance <XLXI_11>.
-    Set property "HU_SET = XLXI_12_228" for instance <XLXI_12>.
-    Set property "HU_SET = XLXI_13_229" for instance <XLXI_13>.
-    Set property "HU_SET = XLXI_14_230" for instance <XLXI_14>.
-    Set property "HU_SET = XLXI_15_231" for instance <XLXI_15>.
-    Set property "HU_SET = XLXI_16_232" for instance <XLXI_16>.
+    Set property "HU_SET = XLXI_1_132" for instance <XLXI_1>.
+    Set property "HU_SET = XLXI_2_133" for instance <XLXI_2>.
+    Set property "HU_SET = XLXI_3_134" for instance <XLXI_3>.
+    Set property "HU_SET = XLXI_4_135" for instance <XLXI_4>.
+    Set property "HU_SET = XLXI_5_136" for instance <XLXI_5>.
+    Set property "HU_SET = XLXI_6_137" for instance <XLXI_6>.
+    Set property "HU_SET = XLXI_7_138" for instance <XLXI_7>.
+    Set property "HU_SET = XLXI_8_139" for instance <XLXI_8>.
+    Set property "HU_SET = XLXI_9_140" for instance <XLXI_9>.
+    Set property "HU_SET = XLXI_10_141" for instance <XLXI_10>.
+    Set property "HU_SET = XLXI_11_142" for instance <XLXI_11>.
+    Set property "HU_SET = XLXI_12_143" for instance <XLXI_12>.
+    Set property "HU_SET = XLXI_13_144" for instance <XLXI_13>.
+    Set property "HU_SET = XLXI_14_145" for instance <XLXI_14>.
+    Set property "HU_SET = XLXI_15_146" for instance <XLXI_15>.
+    Set property "HU_SET = XLXI_16_147" for instance <XLXI_16>.
     Summary:
 	no macro.
 Unit <mux4x1x16e_MUSER_main> synthesized.
@@ -498,7 +495,7 @@ Unit <edetect_MUSER_main> synthesized.
 
 Synthesizing Unit <pc_MUSER_main>.
     Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf".
-    Set property "HU_SET = XLXI_4_216" for instance <XLXI_4>.
+    Set property "HU_SET = XLXI_4_131" for instance <XLXI_4>.
 INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2129: Output port <CEO> of the instance <XLXI_4> is unconnected or connected to loadless signal.
 INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2129: Output port <TC> of the instance <XLXI_4> is unconnected or connected to loadless signal.
     Summary:
@@ -523,22 +520,22 @@ Unit <CB4CLED_HXILINX_main> synthesized.
 
 Synthesizing Unit <mux4x1x8e_MUSER_main>.
     Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf".
-    Set property "HU_SET = XLXI_1_163" for instance <XLXI_1>.
-    Set property "HU_SET = XLXI_2_164" for instance <XLXI_2>.
-    Set property "HU_SET = XLXI_3_165" for instance <XLXI_3>.
-    Set property "HU_SET = XLXI_4_166" for instance <XLXI_4>.
-    Set property "HU_SET = XLXI_5_167" for instance <XLXI_5>.
-    Set property "HU_SET = XLXI_6_168" for instance <XLXI_6>.
-    Set property "HU_SET = XLXI_7_169" for instance <XLXI_7>.
-    Set property "HU_SET = XLXI_8_170" for instance <XLXI_8>.
+    Set property "HU_SET = XLXI_1_78" for instance <XLXI_1>.
+    Set property "HU_SET = XLXI_2_79" for instance <XLXI_2>.
+    Set property "HU_SET = XLXI_3_80" for instance <XLXI_3>.
+    Set property "HU_SET = XLXI_4_81" for instance <XLXI_4>.
+    Set property "HU_SET = XLXI_5_82" for instance <XLXI_5>.
+    Set property "HU_SET = XLXI_6_83" for instance <XLXI_6>.
+    Set property "HU_SET = XLXI_7_84" for instance <XLXI_7>.
+    Set property "HU_SET = XLXI_8_85" for instance <XLXI_8>.
     Summary:
 	no macro.
 Unit <mux4x1x8e_MUSER_main> synthesized.
 
 Synthesizing Unit <regs_MUSER_main>.
     Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf".
-    Set property "HU_SET = XLXI_1_214" for instance <XLXI_1>.
-    Set property "HU_SET = XLXI_2_215" for instance <XLXI_2>.
+    Set property "HU_SET = XLXI_1_129" for instance <XLXI_1>.
+    Set property "HU_SET = XLXI_2_130" for instance <XLXI_2>.
     Summary:
 	no macro.
 Unit <regs_MUSER_main> synthesized.
@@ -552,10 +549,10 @@ Unit <FD8CE_HXILINX_main> synthesized.
 
 Synthesizing Unit <alu_MUSER_main>.
     Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf".
-    Set property "HU_SET = XLXI_2_211" for instance <XLXI_2>.
-    Set property "HU_SET = XLXI_21_210" for instance <XLXI_21>.
-    Set property "HU_SET = XLXI_57_212" for instance <XLXI_57>.
-    Set property "HU_SET = XLXI_71_213" for instance <XLXI_71>.
+    Set property "HU_SET = XLXI_2_126" for instance <XLXI_2>.
+    Set property "HU_SET = XLXI_21_125" for instance <XLXI_21>.
+    Set property "HU_SET = XLXI_57_127" for instance <XLXI_57>.
+    Set property "HU_SET = XLXI_71_128" for instance <XLXI_71>.
 INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2024: Output port <D0> of the instance <XLXI_71> is unconnected or connected to loadless signal.
 INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2024: Output port <D3> of the instance <XLXI_71> is unconnected or connected to loadless signal.
 INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2024: Output port <D5> of the instance <XLXI_71> is unconnected or connected to loadless signal.
@@ -602,14 +599,14 @@ Unit <buf8b_MUSER_main> synthesized.
 
 Synthesizing Unit <mux8x1x8e_MUSER_main>.
     Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf".
-    Set property "HU_SET = XLXI_1_202" for instance <XLXI_1>.
-    Set property "HU_SET = XLXI_2_203" for instance <XLXI_2>.
-    Set property "HU_SET = XLXI_3_204" for instance <XLXI_3>.
-    Set property "HU_SET = XLXI_4_205" for instance <XLXI_4>.
-    Set property "HU_SET = XLXI_5_206" for instance <XLXI_5>.
-    Set property "HU_SET = XLXI_6_207" for instance <XLXI_6>.
-    Set property "HU_SET = XLXI_7_208" for instance <XLXI_7>.
-    Set property "HU_SET = XLXI_8_209" for instance <XLXI_8>.
+    Set property "HU_SET = XLXI_1_117" for instance <XLXI_1>.
+    Set property "HU_SET = XLXI_2_118" for instance <XLXI_2>.
+    Set property "HU_SET = XLXI_3_119" for instance <XLXI_3>.
+    Set property "HU_SET = XLXI_4_120" for instance <XLXI_4>.
+    Set property "HU_SET = XLXI_5_121" for instance <XLXI_5>.
+    Set property "HU_SET = XLXI_6_122" for instance <XLXI_6>.
+    Set property "HU_SET = XLXI_7_123" for instance <XLXI_7>.
+    Set property "HU_SET = XLXI_8_124" for instance <XLXI_8>.
     Summary:
 	no macro.
 Unit <mux8x1x8e_MUSER_main> synthesized.
@@ -635,32 +632,32 @@ Unit <D3_8E_HXILINX_main> synthesized.
 
 Synthesizing Unit <lshift_MUSER_main>.
     Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf".
-    Set property "HU_SET = XLXI_436_176" for instance <XLXI_436>.
-    Set property "HU_SET = XLXI_437_177" for instance <XLXI_437>.
-    Set property "HU_SET = XLXI_438_178" for instance <XLXI_438>.
-    Set property "HU_SET = XLXI_439_179" for instance <XLXI_439>.
-    Set property "HU_SET = XLXI_440_180" for instance <XLXI_440>.
-    Set property "HU_SET = XLXI_441_181" for instance <XLXI_441>.
-    Set property "HU_SET = XLXI_442_182" for instance <XLXI_442>.
-    Set property "HU_SET = XLXI_443_183" for instance <XLXI_443>.
-    Set property "HU_SET = XLXI_454_184" for instance <XLXI_454>.
-    Set property "HU_SET = XLXI_455_185" for instance <XLXI_455>.
-    Set property "HU_SET = XLXI_456_186" for instance <XLXI_456>.
-    Set property "HU_SET = XLXI_457_187" for instance <XLXI_457>.
-    Set property "HU_SET = XLXI_458_188" for instance <XLXI_458>.
-    Set property "HU_SET = XLXI_459_189" for instance <XLXI_459>.
-    Set property "HU_SET = XLXI_460_190" for instance <XLXI_460>.
-    Set property "HU_SET = XLXI_461_191" for instance <XLXI_461>.
-    Set property "HU_SET = XLXI_466_192" for instance <XLXI_466>.
-    Set property "HU_SET = XLXI_467_193" for instance <XLXI_467>.
-    Set property "HU_SET = XLXI_468_194" for instance <XLXI_468>.
-    Set property "HU_SET = XLXI_469_195" for instance <XLXI_469>.
-    Set property "HU_SET = XLXI_470_196" for instance <XLXI_470>.
-    Set property "HU_SET = XLXI_471_197" for instance <XLXI_471>.
-    Set property "HU_SET = XLXI_472_198" for instance <XLXI_472>.
-    Set property "HU_SET = XLXI_473_199" for instance <XLXI_473>.
-    Set property "HU_SET = XLXI_558_200" for instance <XLXI_558>.
-    Set property "HU_SET = XLXI_645_201" for instance <XLXI_645>.
+    Set property "HU_SET = XLXI_436_91" for instance <XLXI_436>.
+    Set property "HU_SET = XLXI_437_92" for instance <XLXI_437>.
+    Set property "HU_SET = XLXI_438_93" for instance <XLXI_438>.
+    Set property "HU_SET = XLXI_439_94" for instance <XLXI_439>.
+    Set property "HU_SET = XLXI_440_95" for instance <XLXI_440>.
+    Set property "HU_SET = XLXI_441_96" for instance <XLXI_441>.
+    Set property "HU_SET = XLXI_442_97" for instance <XLXI_442>.
+    Set property "HU_SET = XLXI_443_98" for instance <XLXI_443>.
+    Set property "HU_SET = XLXI_454_99" for instance <XLXI_454>.
+    Set property "HU_SET = XLXI_455_100" for instance <XLXI_455>.
+    Set property "HU_SET = XLXI_456_101" for instance <XLXI_456>.
+    Set property "HU_SET = XLXI_457_102" for instance <XLXI_457>.
+    Set property "HU_SET = XLXI_458_103" for instance <XLXI_458>.
+    Set property "HU_SET = XLXI_459_104" for instance <XLXI_459>.
+    Set property "HU_SET = XLXI_460_105" for instance <XLXI_460>.
+    Set property "HU_SET = XLXI_461_106" for instance <XLXI_461>.
+    Set property "HU_SET = XLXI_466_107" for instance <XLXI_466>.
+    Set property "HU_SET = XLXI_467_108" for instance <XLXI_467>.
+    Set property "HU_SET = XLXI_468_109" for instance <XLXI_468>.
+    Set property "HU_SET = XLXI_469_110" for instance <XLXI_469>.
+    Set property "HU_SET = XLXI_470_111" for instance <XLXI_470>.
+    Set property "HU_SET = XLXI_471_112" for instance <XLXI_471>.
+    Set property "HU_SET = XLXI_472_113" for instance <XLXI_472>.
+    Set property "HU_SET = XLXI_473_114" for instance <XLXI_473>.
+    Set property "HU_SET = XLXI_558_115" for instance <XLXI_558>.
+    Set property "HU_SET = XLXI_645_116" for instance <XLXI_645>.
     Summary:
 	no macro.
 Unit <lshift_MUSER_main> synthesized.
@@ -691,12 +688,12 @@ Unit <gnd8_MUSER_main> synthesized.
 
 Synthesizing Unit <ssd4d0ftb_MUSER_main>.
     Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf".
-    Set property "HU_SET = XLXI_162_142" for instance <XLXI_162>.
-    Set property "HU_SET = XLXI_183_137" for instance <XLXI_183>.
-    Set property "HU_SET = XLXI_184_138" for instance <XLXI_184>.
-    Set property "HU_SET = XLXI_185_139" for instance <XLXI_185>.
-    Set property "HU_SET = XLXI_186_140" for instance <XLXI_186>.
-    Set property "HU_SET = XLXI_210_141" for instance <XLXI_210>.
+    Set property "HU_SET = XLXI_162_57" for instance <XLXI_162>.
+    Set property "HU_SET = XLXI_183_52" for instance <XLXI_183>.
+    Set property "HU_SET = XLXI_184_53" for instance <XLXI_184>.
+    Set property "HU_SET = XLXI_185_54" for instance <XLXI_185>.
+    Set property "HU_SET = XLXI_186_55" for instance <XLXI_186>.
+    Set property "HU_SET = XLXI_210_56" for instance <XLXI_210>.
 INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 804: Output port <CEO> of the instance <XLXI_162> is unconnected or connected to loadless signal.
 INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 804: Output port <TC> of the instance <XLXI_162> is unconnected or connected to loadless signal.
     Summary:
@@ -721,11 +718,11 @@ Unit <D2_4E_HXILINX_main> synthesized.
 
 Synthesizing Unit <clkdiv20k_MUSER_main>.
     Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf".
-    Set property "HU_SET = XLXI_1_171" for instance <XLXI_1>.
-    Set property "HU_SET = XLXI_14_172" for instance <XLXI_14>.
-    Set property "HU_SET = XLXI_17_173" for instance <XLXI_17>.
-    Set property "HU_SET = XLXI_22_174" for instance <XLXI_22>.
-    Set property "HU_SET = XLXI_36_175" for instance <XLXI_36>.
+    Set property "HU_SET = XLXI_1_86" for instance <XLXI_1>.
+    Set property "HU_SET = XLXI_14_87" for instance <XLXI_14>.
+    Set property "HU_SET = XLXI_17_88" for instance <XLXI_17>.
+    Set property "HU_SET = XLXI_22_89" for instance <XLXI_22>.
+    Set property "HU_SET = XLXI_36_90" for instance <XLXI_36>.
 INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 1348: Output port <Q0> of the instance <XLXI_1> is unconnected or connected to loadless signal.
 INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 1348: Output port <Q1> of the instance <XLXI_1> is unconnected or connected to loadless signal.
 INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 1348: Output port <Q2> of the instance <XLXI_1> is unconnected or connected to loadless signal.
@@ -774,10 +771,10 @@ Unit <FTCE_HXILINX_main> synthesized.
 
 Synthesizing Unit <mux2x1x4_MUSER_main>.
     Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf".
-    Set property "HU_SET = XLXI_144_133" for instance <XLXI_144>.
-    Set property "HU_SET = XLXI_145_134" for instance <XLXI_145>.
-    Set property "HU_SET = XLXI_146_135" for instance <XLXI_146>.
-    Set property "HU_SET = XLXI_147_136" for instance <XLXI_147>.
+    Set property "HU_SET = XLXI_144_48" for instance <XLXI_144>.
+    Set property "HU_SET = XLXI_145_49" for instance <XLXI_145>.
+    Set property "HU_SET = XLXI_146_50" for instance <XLXI_146>.
+    Set property "HU_SET = XLXI_147_51" for instance <XLXI_147>.
     Summary:
 	no macro.
 Unit <mux2x1x4_MUSER_main> synthesized.
@@ -796,10 +793,10 @@ Unit <splice4x4x8_MUSER_main> synthesized.
 
 Synthesizing Unit <inst_decode_MUSER_main>.
     Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf".
-    Set property "HU_SET = XLXI_21_159" for instance <XLXI_21>.
-    Set property "HU_SET = XLXI_24_160" for instance <XLXI_24>.
-    Set property "HU_SET = XLXI_29_161" for instance <XLXI_29>.
-    Set property "HU_SET = XLXI_30_162" for instance <XLXI_30>.
+    Set property "HU_SET = XLXI_21_74" for instance <XLXI_21>.
+    Set property "HU_SET = XLXI_24_75" for instance <XLXI_24>.
+    Set property "HU_SET = XLXI_29_76" for instance <XLXI_29>.
+    Set property "HU_SET = XLXI_30_77" for instance <XLXI_30>.
     Summary:
 	no macro.
 Unit <inst_decode_MUSER_main> synthesized.
@@ -824,22 +821,22 @@ Unit <splice8x8x16_MUSER_main> synthesized.
 
 Synthesizing Unit <mux2x1x16e_MUSER_main>.
     Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf".
-    Set property "HU_SET = XLXI_1_143" for instance <XLXI_1>.
-    Set property "HU_SET = XLXI_2_144" for instance <XLXI_2>.
-    Set property "HU_SET = XLXI_3_145" for instance <XLXI_3>.
-    Set property "HU_SET = XLXI_4_146" for instance <XLXI_4>.
-    Set property "HU_SET = XLXI_5_147" for instance <XLXI_5>.
-    Set property "HU_SET = XLXI_6_148" for instance <XLXI_6>.
-    Set property "HU_SET = XLXI_7_149" for instance <XLXI_7>.
-    Set property "HU_SET = XLXI_8_150" for instance <XLXI_8>.
-    Set property "HU_SET = XLXI_9_151" for instance <XLXI_9>.
-    Set property "HU_SET = XLXI_10_152" for instance <XLXI_10>.
-    Set property "HU_SET = XLXI_11_153" for instance <XLXI_11>.
-    Set property "HU_SET = XLXI_12_154" for instance <XLXI_12>.
-    Set property "HU_SET = XLXI_13_155" for instance <XLXI_13>.
-    Set property "HU_SET = XLXI_14_156" for instance <XLXI_14>.
-    Set property "HU_SET = XLXI_15_157" for instance <XLXI_15>.
-    Set property "HU_SET = XLXI_16_158" for instance <XLXI_16>.
+    Set property "HU_SET = XLXI_1_58" for instance <XLXI_1>.
+    Set property "HU_SET = XLXI_2_59" for instance <XLXI_2>.
+    Set property "HU_SET = XLXI_3_60" for instance <XLXI_3>.
+    Set property "HU_SET = XLXI_4_61" for instance <XLXI_4>.
+    Set property "HU_SET = XLXI_5_62" for instance <XLXI_5>.
+    Set property "HU_SET = XLXI_6_63" for instance <XLXI_6>.
+    Set property "HU_SET = XLXI_7_64" for instance <XLXI_7>.
+    Set property "HU_SET = XLXI_8_65" for instance <XLXI_8>.
+    Set property "HU_SET = XLXI_9_66" for instance <XLXI_9>.
+    Set property "HU_SET = XLXI_10_67" for instance <XLXI_10>.
+    Set property "HU_SET = XLXI_11_68" for instance <XLXI_11>.
+    Set property "HU_SET = XLXI_12_69" for instance <XLXI_12>.
+    Set property "HU_SET = XLXI_13_70" for instance <XLXI_13>.
+    Set property "HU_SET = XLXI_14_71" for instance <XLXI_14>.
+    Set property "HU_SET = XLXI_15_72" for instance <XLXI_15>.
+    Set property "HU_SET = XLXI_16_73" for instance <XLXI_16>.
     Summary:
 	no macro.
 Unit <mux2x1x16e_MUSER_main> synthesized.
@@ -866,13 +863,13 @@ Unit <OBUFT8_HXILINX_main> synthesized.
 
 Synthesizing Unit <clkdiv10M_MUSER_main>.
     Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf".
-    Set property "HU_SET = XLXI_1_126" for instance <XLXI_1>.
-    Set property "HU_SET = XLXI_14_127" for instance <XLXI_14>.
-    Set property "HU_SET = XLXI_17_128" for instance <XLXI_17>.
-    Set property "HU_SET = XLXI_22_129" for instance <XLXI_22>.
-    Set property "HU_SET = XLXI_25_130" for instance <XLXI_25>.
-    Set property "HU_SET = XLXI_28_131" for instance <XLXI_28>.
-    Set property "HU_SET = XLXI_31_132" for instance <XLXI_31>.
+    Set property "HU_SET = XLXI_1_41" for instance <XLXI_1>.
+    Set property "HU_SET = XLXI_14_42" for instance <XLXI_14>.
+    Set property "HU_SET = XLXI_17_43" for instance <XLXI_17>.
+    Set property "HU_SET = XLXI_22_44" for instance <XLXI_22>.
+    Set property "HU_SET = XLXI_25_45" for instance <XLXI_25>.
+    Set property "HU_SET = XLXI_28_46" for instance <XLXI_28>.
+    Set property "HU_SET = XLXI_31_47" for instance <XLXI_31>.
 INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 616: Output port <Q0> of the instance <XLXI_1> is unconnected or connected to loadless signal.
 INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 616: Output port <Q1> of the instance <XLXI_1> is unconnected or connected to loadless signal.
 INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 616: Output port <Q2> of the instance <XLXI_1> is unconnected or connected to loadless signal.
@@ -1350,7 +1347,7 @@ OSC            |   14.353|   12.959|    7.184|         |
 
 
 Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 3.62 secs
+Total CPU time to Xst completion: 3.61 secs
  
 --> 
 

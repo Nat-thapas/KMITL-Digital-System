@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : mux8x1x8e.vf
-// /___/   /\     Timestamp : 10/01/2024 12:22:27
+// /___/   /\     Timestamp : 10/01/2024 14:35:53
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -91,7 +91,7 @@ module mux8x1x8e(D0,
    output [7:0] O;
    
    
-   (* HU_SET = "XLXI_1_222" *) 
+   (* HU_SET = "XLXI_1_276" *) 
    M8_1E_HXILINX_mux8x1x8e  XLXI_1 (.D0(D0[0]), 
                                    .D1(D1[0]), 
                                    .D2(D2[0]), 
@@ -105,7 +105,7 @@ module mux8x1x8e(D0,
                                    .S1(S1), 
                                    .S2(S2), 
                                    .O(O[0]));
-   (* HU_SET = "XLXI_2_223" *) 
+   (* HU_SET = "XLXI_2_277" *) 
    M8_1E_HXILINX_mux8x1x8e  XLXI_2 (.D0(D0[1]), 
                                    .D1(D1[1]), 
                                    .D2(D2[1]), 
@@ -119,7 +119,7 @@ module mux8x1x8e(D0,
                                    .S1(S1), 
                                    .S2(S2), 
                                    .O(O[1]));
-   (* HU_SET = "XLXI_3_224" *) 
+   (* HU_SET = "XLXI_3_278" *) 
    M8_1E_HXILINX_mux8x1x8e  XLXI_3 (.D0(D0[2]), 
                                    .D1(D1[2]), 
                                    .D2(D2[2]), 
@@ -133,7 +133,7 @@ module mux8x1x8e(D0,
                                    .S1(S1), 
                                    .S2(S2), 
                                    .O(O[2]));
-   (* HU_SET = "XLXI_4_225" *) 
+   (* HU_SET = "XLXI_4_279" *) 
    M8_1E_HXILINX_mux8x1x8e  XLXI_4 (.D0(D0[3]), 
                                    .D1(D1[3]), 
                                    .D2(D2[3]), 
@@ -147,7 +147,7 @@ module mux8x1x8e(D0,
                                    .S1(S1), 
                                    .S2(S2), 
                                    .O(O[3]));
-   (* HU_SET = "XLXI_5_226" *) 
+   (* HU_SET = "XLXI_5_280" *) 
    M8_1E_HXILINX_mux8x1x8e  XLXI_5 (.D0(D0[4]), 
                                    .D1(D1[4]), 
                                    .D2(D2[4]), 
@@ -161,7 +161,7 @@ module mux8x1x8e(D0,
                                    .S1(S1), 
                                    .S2(S2), 
                                    .O(O[4]));
-   (* HU_SET = "XLXI_6_227" *) 
+   (* HU_SET = "XLXI_6_281" *) 
    M8_1E_HXILINX_mux8x1x8e  XLXI_6 (.D0(D0[5]), 
                                    .D1(D1[5]), 
                                    .D2(D2[5]), 
@@ -175,7 +175,7 @@ module mux8x1x8e(D0,
                                    .S1(S1), 
                                    .S2(S2), 
                                    .O(O[5]));
-   (* HU_SET = "XLXI_7_228" *) 
+   (* HU_SET = "XLXI_7_282" *) 
    M8_1E_HXILINX_mux8x1x8e  XLXI_7 (.D0(D0[6]), 
                                    .D1(D1[6]), 
                                    .D2(D2[6]), 
@@ -189,7 +189,7 @@ module mux8x1x8e(D0,
                                    .S1(S1), 
                                    .S2(S2), 
                                    .O(O[6]));
-   (* HU_SET = "XLXI_8_229" *) 
+   (* HU_SET = "XLXI_8_283" *) 
    M8_1E_HXILINX_mux8x1x8e  XLXI_8 (.D0(D0[7]), 
                                    .D1(D1[7]), 
                                    .D2(D2[7]), 
