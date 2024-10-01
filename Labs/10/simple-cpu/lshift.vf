@@ -1,0 +1,321 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : lshift.vf
+// /___/   /\     Timestamp : 10/01/2024 12:22:27
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Classes-2024/Digital System Fundamentals Shared/Labs/10/simple-cpu/lshift.vf" -w "D:/Classes-2024/Digital System Fundamentals Shared/Labs/10/simple-cpu/lshift.sch"
+//Design Name: lshift
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale  100 ps / 10 ps
+
+module M2_1E_HXILINX_lshift (O, D0, D1, E, S0);
+    
+
+   output O;
+
+   input  D0;
+   input  D1;
+   input  E;
+   input  S0;
+
+   reg O;
+
+   always @ ( D0 or D1 or E or S0)
+   begin
+      if(!E)
+      O <= 1'b0;
+      else 
+      begin
+        case(S0)
+        1'b0 : O <= D0;
+        1'b1 : O <= D1;
+        endcase
+      end
+   end
+    
+endmodule
+`timescale  100 ps / 10 ps
+
+module OR8_HXILINX_lshift (O, I0, I1, I2, I3, I4, I5, I6, I7);
+    
+
+   output O;
+
+   input I0;
+   input I1;
+   input I2;
+   input I3;
+   input I4;
+   input I5;
+   input I6;
+   input I7;
+
+assign O = (I0 || I1 || I2 || I3 || I4 || I5 || I6 || I7);
+
+endmodule
+`timescale  100 ps / 10 ps
+
+module M2_1_HXILINX_lshift (O, D0, D1, S0);
+    
+
+   output O;
+
+   input  D0;
+   input  D1;
+   input  S0;
+
+   reg O;
+
+   always @ ( D0 or D1 or S0)
+   begin
+      case(S0)
+      1'b0 : O <= D0;
+      1'b1 : O <= D1;
+      endcase
+   end
+    
+endmodule
+`timescale 1ns / 1ps
+
+module lshift(I, 
+              S, 
+              O, 
+              OFL);
+
+    input [7:0] I;
+    input [7:0] S;
+   output [7:0] O;
+   output OFL;
+   
+   wire XLXN_578;
+   wire XLXN_587;
+   wire XLXN_588;
+   wire XLXN_589;
+   wire XLXN_590;
+   wire XLXN_593;
+   wire XLXN_594;
+   wire XLXN_599;
+   wire XLXN_600;
+   wire XLXN_608;
+   wire XLXN_609;
+   wire XLXN_634;
+   wire XLXN_635;
+   wire XLXN_636;
+   wire XLXN_637;
+   wire XLXN_638;
+   wire XLXN_639;
+   wire XLXN_641;
+   wire XLXN_642;
+   wire XLXN_696;
+   wire XLXN_697;
+   wire XLXN_698;
+   wire XLXN_699;
+   wire XLXN_769;
+   wire XLXN_770;
+   wire XLXN_771;
+   wire XLXN_840;
+   wire XLXN_841;
+   wire XLXN_842;
+   wire XLXN_843;
+   wire XLXN_844;
+   wire XLXN_845;
+   wire XLXN_846;
+   
+   (* HU_SET = "XLXI_436_245" *) 
+   M2_1_HXILINX_lshift  XLXI_436 (.D0(I[7]), 
+                                 .D1(I[6]), 
+                                 .S0(S[0]), 
+                                 .O(XLXN_600));
+   (* HU_SET = "XLXI_437_246" *) 
+   M2_1_HXILINX_lshift  XLXI_437 (.D0(I[6]), 
+                                 .D1(I[5]), 
+                                 .S0(S[0]), 
+                                 .O(XLXN_599));
+   (* HU_SET = "XLXI_438_247" *) 
+   M2_1_HXILINX_lshift  XLXI_438 (.D0(I[5]), 
+                                 .D1(I[4]), 
+                                 .S0(S[0]), 
+                                 .O(XLXN_587));
+   (* HU_SET = "XLXI_439_248" *) 
+   M2_1_HXILINX_lshift  XLXI_439 (.D0(I[4]), 
+                                 .D1(I[3]), 
+                                 .S0(S[0]), 
+                                 .O(XLXN_588));
+   (* HU_SET = "XLXI_440_249" *) 
+   M2_1_HXILINX_lshift  XLXI_440 (.D0(I[3]), 
+                                 .D1(I[2]), 
+                                 .S0(S[0]), 
+                                 .O(XLXN_589));
+   (* HU_SET = "XLXI_441_250" *) 
+   M2_1_HXILINX_lshift  XLXI_441 (.D0(I[2]), 
+                                 .D1(I[1]), 
+                                 .S0(S[0]), 
+                                 .O(XLXN_590));
+   (* HU_SET = "XLXI_442_251" *) 
+   M2_1_HXILINX_lshift  XLXI_442 (.D0(I[1]), 
+                                 .D1(I[0]), 
+                                 .S0(S[0]), 
+                                 .O(XLXN_593));
+   (* HU_SET = "XLXI_443_252" *) 
+   M2_1_HXILINX_lshift  XLXI_443 (.D0(I[0]), 
+                                 .D1(XLXN_578), 
+                                 .S0(S[0]), 
+                                 .O(XLXN_594));
+   AND2  XLXI_452 (.I0(S[0]), 
+                  .I1(I[7]), 
+                  .O(XLXN_771));
+   GND  XLXI_453 (.G(XLXN_578));
+   (* HU_SET = "XLXI_454_253" *) 
+   M2_1_HXILINX_lshift  XLXI_454 (.D0(XLXN_600), 
+                                 .D1(XLXN_587), 
+                                 .S0(S[1]), 
+                                 .O(XLXN_699));
+   (* HU_SET = "XLXI_455_254" *) 
+   M2_1_HXILINX_lshift  XLXI_455 (.D0(XLXN_599), 
+                                 .D1(XLXN_588), 
+                                 .S0(S[1]), 
+                                 .O(XLXN_698));
+   (* HU_SET = "XLXI_456_255" *) 
+   M2_1_HXILINX_lshift  XLXI_456 (.D0(XLXN_587), 
+                                 .D1(XLXN_589), 
+                                 .S0(S[1]), 
+                                 .O(XLXN_697));
+   (* HU_SET = "XLXI_457_256" *) 
+   M2_1_HXILINX_lshift  XLXI_457 (.D0(XLXN_588), 
+                                 .D1(XLXN_590), 
+                                 .S0(S[1]), 
+                                 .O(XLXN_696));
+   (* HU_SET = "XLXI_458_257" *) 
+   M2_1_HXILINX_lshift  XLXI_458 (.D0(XLXN_589), 
+                                 .D1(XLXN_593), 
+                                 .S0(S[1]), 
+                                 .O(XLXN_634));
+   (* HU_SET = "XLXI_459_258" *) 
+   M2_1_HXILINX_lshift  XLXI_459 (.D0(XLXN_590), 
+                                 .D1(XLXN_594), 
+                                 .S0(S[1]), 
+                                 .O(XLXN_635));
+   (* HU_SET = "XLXI_460_259" *) 
+   M2_1_HXILINX_lshift  XLXI_460 (.D0(XLXN_593), 
+                                 .D1(XLXN_608), 
+                                 .S0(S[1]), 
+                                 .O(XLXN_636));
+   (* HU_SET = "XLXI_461_260" *) 
+   M2_1_HXILINX_lshift  XLXI_461 (.D0(XLXN_594), 
+                                 .D1(XLXN_609), 
+                                 .S0(S[1]), 
+                                 .O(XLXN_637));
+   AND2  XLXI_462 (.I0(S[1]), 
+                  .I1(XLXN_599), 
+                  .O(XLXN_841));
+   AND2  XLXI_463 (.I0(S[1]), 
+                  .I1(XLXN_600), 
+                  .O(XLXN_840));
+   GND  XLXI_464 (.G(XLXN_608));
+   GND  XLXI_465 (.G(XLXN_609));
+   (* HU_SET = "XLXI_466_261" *) 
+   M2_1E_HXILINX_lshift  XLXI_466 (.D0(XLXN_699), 
+                                  .D1(XLXN_634), 
+                                  .E(XLXN_770), 
+                                  .S0(S[2]), 
+                                  .O(O[7]));
+   (* HU_SET = "XLXI_467_262" *) 
+   M2_1E_HXILINX_lshift  XLXI_467 (.D0(XLXN_698), 
+                                  .D1(XLXN_635), 
+                                  .E(XLXN_770), 
+                                  .S0(S[2]), 
+                                  .O(O[6]));
+   (* HU_SET = "XLXI_468_263" *) 
+   M2_1E_HXILINX_lshift  XLXI_468 (.D0(XLXN_696), 
+                                  .D1(XLXN_637), 
+                                  .E(XLXN_770), 
+                                  .S0(S[2]), 
+                                  .O(O[4]));
+   (* HU_SET = "XLXI_469_264" *) 
+   M2_1E_HXILINX_lshift  XLXI_469 (.D0(XLXN_697), 
+                                  .D1(XLXN_636), 
+                                  .E(XLXN_770), 
+                                  .S0(S[2]), 
+                                  .O(O[5]));
+   (* HU_SET = "XLXI_470_265" *) 
+   M2_1E_HXILINX_lshift  XLXI_470 (.D0(XLXN_635), 
+                                  .D1(XLXN_641), 
+                                  .E(XLXN_770), 
+                                  .S0(S[2]), 
+                                  .O(O[2]));
+   (* HU_SET = "XLXI_471_266" *) 
+   M2_1E_HXILINX_lshift  XLXI_471 (.D0(XLXN_634), 
+                                  .D1(XLXN_642), 
+                                  .E(XLXN_770), 
+                                  .S0(S[2]), 
+                                  .O(O[3]));
+   (* HU_SET = "XLXI_472_267" *) 
+   M2_1E_HXILINX_lshift  XLXI_472 (.D0(XLXN_636), 
+                                  .D1(XLXN_639), 
+                                  .E(XLXN_770), 
+                                  .S0(S[2]), 
+                                  .O(O[1]));
+   (* HU_SET = "XLXI_473_268" *) 
+   M2_1E_HXILINX_lshift  XLXI_473 (.D0(XLXN_637), 
+                                  .D1(XLXN_638), 
+                                  .E(XLXN_770), 
+                                  .S0(S[2]), 
+                                  .O(O[0]));
+   GND  XLXI_474 (.G(XLXN_638));
+   GND  XLXI_475 (.G(XLXN_639));
+   GND  XLXI_477 (.G(XLXN_641));
+   GND  XLXI_478 (.G(XLXN_642));
+   AND2  XLXI_479 (.I0(S[2]), 
+                  .I1(XLXN_696), 
+                  .O(XLXN_845));
+   AND2  XLXI_480 (.I0(S[2]), 
+                  .I1(XLXN_697), 
+                  .O(XLXN_844));
+   AND2  XLXI_517 (.I0(S[2]), 
+                  .I1(XLXN_698), 
+                  .O(XLXN_843));
+   AND2  XLXI_518 (.I0(S[2]), 
+                  .I1(XLXN_699), 
+                  .O(XLXN_842));
+   NOR5  XLXI_557 (.I0(S[7]), 
+                  .I1(S[6]), 
+                  .I2(S[5]), 
+                  .I3(S[4]), 
+                  .I4(S[3]), 
+                  .O(XLXN_770));
+   (* HU_SET = "XLXI_558_269" *) 
+   OR8_HXILINX_lshift  XLXI_558 (.I0(I[7]), 
+                                .I1(I[6]), 
+                                .I2(I[5]), 
+                                .I3(I[4]), 
+                                .I4(I[3]), 
+                                .I5(I[2]), 
+                                .I6(I[1]), 
+                                .I7(I[0]), 
+                                .O(XLXN_769));
+   AND2B1  XLXI_559 (.I0(XLXN_770), 
+                    .I1(XLXN_769), 
+                    .O(XLXN_846));
+   (* HU_SET = "XLXI_645_270" *) 
+   OR8_HXILINX_lshift  XLXI_645 (.I0(XLXN_846), 
+                                .I1(XLXN_845), 
+                                .I2(XLXN_844), 
+                                .I3(XLXN_843), 
+                                .I4(XLXN_842), 
+                                .I5(XLXN_841), 
+                                .I6(XLXN_840), 
+                                .I7(XLXN_771), 
+                                .O(OFL));
+endmodule

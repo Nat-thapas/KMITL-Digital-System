@@ -1,7 +1,7 @@
 verilog work "xor2x8b.vf"
 verilog work "or2x8b.vf"
 verilog work "mux8x1x8e.vf"
-verilog work "lshift8x1b.vf"
+verilog work "lshift.vf"
 verilog work "buf8b.vf"
 verilog work "and2x8b.vf"
 verilog work "ssd4d0ftb.vf"

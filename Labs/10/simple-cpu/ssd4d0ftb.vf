@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : ssd4d0ftb.vf
-// /___/   /\     Timestamp : 10/01/2024 08:57:49
+// /___/   /\     Timestamp : 10/01/2024 12:22:27
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -183,7 +183,7 @@ module ssd4d0ftb(CE,
                 .I3(D[3]), 
                 .O(Segment[0]));
    GND  XLXI_119 (.G(XLXN_141));
-   (* HU_SET = "XLXI_162_18" *) 
+   (* HU_SET = "XLXI_162_244" *) 
    CB2CE_HXILINX_ssd4d0ftb  XLXI_162 (.C(CLK), 
                                      .CE(CE), 
                                      .CLR(XLXN_141), 
@@ -192,7 +192,7 @@ module ssd4d0ftb(CE,
                                      .Q1(XLXN_240), 
                                      .TC());
    VCC  XLXI_165 (.P(XLXN_151));
-   (* HU_SET = "XLXI_183_13" *) 
+   (* HU_SET = "XLXI_183_239" *) 
    M4_1E_HXILINX_ssd4d0ftb  XLXI_183 (.D0(D0[0]), 
                                      .D1(D1[0]), 
                                      .D2(D2[0]), 
@@ -201,7 +201,7 @@ module ssd4d0ftb(CE,
                                      .S0(XLXN_241), 
                                      .S1(XLXN_240), 
                                      .O(D[0]));
-   (* HU_SET = "XLXI_184_14" *) 
+   (* HU_SET = "XLXI_184_240" *) 
    M4_1E_HXILINX_ssd4d0ftb  XLXI_184 (.D0(D0[1]), 
                                      .D1(D1[1]), 
                                      .D2(D2[1]), 
@@ -210,7 +210,7 @@ module ssd4d0ftb(CE,
                                      .S0(XLXN_241), 
                                      .S1(XLXN_240), 
                                      .O(D[1]));
-   (* HU_SET = "XLXI_185_15" *) 
+   (* HU_SET = "XLXI_185_241" *) 
    M4_1E_HXILINX_ssd4d0ftb  XLXI_185 (.D0(D0[2]), 
                                      .D1(D1[2]), 
                                      .D2(D2[2]), 
@@ -219,7 +219,7 @@ module ssd4d0ftb(CE,
                                      .S0(XLXN_241), 
                                      .S1(XLXN_240), 
                                      .O(D[2]));
-   (* HU_SET = "XLXI_186_16" *) 
+   (* HU_SET = "XLXI_186_242" *) 
    M4_1E_HXILINX_ssd4d0ftb  XLXI_186 (.D0(D0[3]), 
                                      .D1(D1[3]), 
                                      .D2(D2[3]), 
@@ -229,7 +229,7 @@ module ssd4d0ftb(CE,
                                      .S1(XLXN_240), 
                                      .O(D[3]));
    VCC  XLXI_204 (.P(XLXN_185));
-   (* HU_SET = "XLXI_210_17" *) 
+   (* HU_SET = "XLXI_210_243" *) 
    D2_4E_HXILINX_ssd4d0ftb  XLXI_210 (.A0(XLXN_241), 
                                      .A1(XLXN_240), 
                                      .E(XLXN_151), 

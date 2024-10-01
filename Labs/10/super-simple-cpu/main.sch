@@ -8,7 +8,6 @@
     <netlist>
         <signal name="OSC" />
         <signal name="XLXN_2" />
-        <signal name="XLXN_3" />
         <signal name="BTN3" />
         <signal name="SW(7:0)" />
         <signal name="DIP(2:0)" />
@@ -17,23 +16,10 @@
         <signal name="XLXN_12" />
         <signal name="XLXN_15(3:0)" />
         <signal name="XLXN_16(3:0)" />
-        <signal name="XLXN_17(7:0)" />
-        <signal name="XLXN_18(3:0)" />
-        <signal name="XLXN_19(3:0)" />
-        <signal name="XLXN_20(7:0)" />
-        <signal name="XLXN_21(3:0)" />
-        <signal name="XLXN_22(3:0)" />
-        <signal name="XLXN_23(7:0)" />
-        <signal name="XLXN_24(3:0)" />
-        <signal name="XLXN_25(3:0)" />
-        <signal name="XLXN_26(7:0)" />
-        <signal name="XLXN_27(3:0)" />
-        <signal name="XLXN_28(3:0)" />
         <signal name="XLXN_32(3:0)" />
         <signal name="XLXN_33(3:0)" />
         <signal name="SSD_COM(3:0)" />
         <signal name="SSD_Segment(6:0)" />
-        <signal name="XLXN_36" />
         <port polarity="Input" name="OSC" />
         <port polarity="Input" name="BTN3" />
         <port polarity="Input" name="SW(7:0)" />
@@ -42,10 +28,8 @@
         <port polarity="Output" name="SSD_COM(3:0)" />
         <port polarity="Output" name="SSD_Segment(6:0)" />
         <blockdef name="alu">
-            <timestamp>2024-9-29T15:33:1</timestamp>
+            <timestamp>2024-10-1T2:33:11</timestamp>
             <rect width="256" x="64" y="-256" height="256" />
-            <line x2="384" y1="-224" y2="-224" x1="320" />
-            <rect width="64" x="320" y="-236" height="24" />
             <line x2="0" y1="-224" y2="-224" x1="64" />
             <rect width="64" x="0" y="-236" height="24" />
             <line x2="0" y1="-32" y2="-32" x1="64" />
@@ -54,6 +38,8 @@
             <rect width="64" x="320" y="-172" height="24" />
             <line x2="0" y1="-160" y2="-160" x1="64" />
             <rect width="64" x="0" y="-172" height="24" />
+            <line x2="384" y1="-224" y2="-224" x1="320" />
+            <rect width="64" x="320" y="-236" height="24" />
         </blockdef>
         <blockdef name="edetect">
             <timestamp>2024-9-29T15:37:0</timestamp>
@@ -96,12 +82,12 @@
             <rect width="64" x="320" y="-108" height="24" />
         </blockdef>
         <block symbolname="alu" name="XLXI_1">
-            <blockpin signalname="XLXN_9(7:0)" name="ACC(7:0)" />
             <blockpin signalname="SW(7:0)" name="B(7:0)" />
             <blockpin signalname="XLXN_2" name="CE" />
             <blockpin signalname="OSC" name="CLK" />
             <blockpin signalname="LED(2:0)" name="F(2:0)" />
             <blockpin signalname="DIP(2:0)" name="OP(2:0)" />
+            <blockpin signalname="XLXN_9(7:0)" name="PRACC(7:0)" />
         </block>
         <block symbolname="edetect" name="XLXI_2">
             <blockpin signalname="XLXN_2" name="CEO" />

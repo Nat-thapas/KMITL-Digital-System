@@ -36,23 +36,23 @@ Setup/Hold to clock OSC
             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------+------------+------------------+--------+
-BTN3        |    2.393(R)|      SLOW  |   -1.262(R)|      FAST  |OSC_BUFGP         |   0.000|
-BTN4        |    2.247(R)|      SLOW  |   -1.134(R)|      FAST  |OSC_BUFGP         |   0.000|
-DIP2        |    2.326(R)|      SLOW  |   -1.154(R)|      FAST  |OSC_BUFGP         |   0.000|
-DIP3        |    2.572(R)|      SLOW  |   -1.307(R)|      FAST  |OSC_BUFGP         |   0.000|
-DIP4        |    2.343(R)|      SLOW  |   -1.157(R)|      FAST  |OSC_BUFGP         |   0.000|
-DIP5        |    1.986(R)|      SLOW  |   -0.874(R)|      FAST  |OSC_BUFGP         |   0.000|
-DIP6        |    2.064(R)|      SLOW  |   -0.929(R)|      FAST  |OSC_BUFGP         |   0.000|
-DIP7        |    1.960(R)|      SLOW  |   -0.858(R)|      FAST  |OSC_BUFGP         |   0.000|
-DIP8        |    1.914(R)|      SLOW  |   -0.845(R)|      FAST  |OSC_BUFGP         |   0.000|
-SW0         |    1.194(R)|      SLOW  |   -0.309(R)|      SLOW  |OSC_BUFGP         |   0.000|
-SW1         |    1.583(R)|      SLOW  |   -0.678(R)|      SLOW  |OSC_BUFGP         |   0.000|
-SW2         |    1.327(R)|      SLOW  |   -0.432(R)|      SLOW  |OSC_BUFGP         |   0.000|
-SW3         |    1.294(R)|      SLOW  |   -0.399(R)|      SLOW  |OSC_BUFGP         |   0.000|
-SW4         |    0.912(R)|      SLOW  |   -0.025(R)|      SLOW  |OSC_BUFGP         |   0.000|
-SW5         |    0.887(R)|      SLOW  |    0.000(R)|      SLOW  |OSC_BUFGP         |   0.000|
-SW6         |    0.906(R)|      SLOW  |   -0.018(R)|      SLOW  |OSC_BUFGP         |   0.000|
-SW7         |    0.659(R)|      SLOW  |    0.215(R)|      SLOW  |OSC_BUFGP         |   0.000|
+BTN3        |    2.160(R)|      SLOW  |   -1.109(R)|      FAST  |OSC_BUFGP         |   0.000|
+BTN4        |    2.082(R)|      SLOW  |   -1.024(R)|      FAST  |OSC_BUFGP         |   0.000|
+DIP2        |    2.498(R)|      SLOW  |   -1.264(R)|      FAST  |OSC_BUFGP         |   0.000|
+DIP3        |    2.609(R)|      SLOW  |   -1.316(R)|      FAST  |OSC_BUFGP         |   0.000|
+DIP4        |    2.668(R)|      SLOW  |   -1.358(R)|      FAST  |OSC_BUFGP         |   0.000|
+DIP5        |    2.364(R)|      SLOW  |   -1.156(R)|      FAST  |OSC_BUFGP         |   0.000|
+DIP6        |    2.129(R)|      SLOW  |   -1.038(R)|      FAST  |OSC_BUFGP         |   0.000|
+DIP7        |    2.348(R)|      SLOW  |   -1.164(R)|      FAST  |OSC_BUFGP         |   0.000|
+DIP8        |    2.261(R)|      SLOW  |   -1.116(R)|      FAST  |OSC_BUFGP         |   0.000|
+SW0         |    0.988(R)|      SLOW  |   -0.101(R)|      SLOW  |OSC_BUFGP         |   0.000|
+SW1         |    1.087(R)|      SLOW  |   -0.196(R)|      SLOW  |OSC_BUFGP         |   0.000|
+SW2         |    1.100(R)|      SLOW  |   -0.207(R)|      SLOW  |OSC_BUFGP         |   0.000|
+SW3         |    1.370(R)|      SLOW  |   -0.462(R)|      SLOW  |OSC_BUFGP         |   0.000|
+SW4         |    0.872(R)|      SLOW  |    0.004(R)|      SLOW  |OSC_BUFGP         |   0.000|
+SW5         |    0.975(R)|      SLOW  |   -0.093(R)|      SLOW  |OSC_BUFGP         |   0.000|
+SW6         |    1.183(R)|      SLOW  |   -0.288(R)|      SLOW  |OSC_BUFGP         |   0.000|
+SW7         |    1.103(R)|      SLOW  |   -0.214(R)|      SLOW  |OSC_BUFGP         |   0.000|
 ------------+------------+------------+------------+------------+------------------+--------+
 
 Clock OSC to Pad
@@ -60,33 +60,33 @@ Clock OSC to Pad
               |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
 Destination   |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
 --------------+-----------------+------------+-----------------+------------+------------------+--------+
-LED0          |        13.299(R)|      SLOW  |         4.500(R)|      FAST  |OSC_BUFGP         |   0.000|
-LED1          |        13.511(R)|      SLOW  |         3.854(R)|      FAST  |OSC_BUFGP         |   0.000|
-LED2          |        13.036(R)|      SLOW  |         3.904(R)|      FAST  |OSC_BUFGP         |   0.000|
-LED3          |         7.312(R)|      SLOW  |         3.738(R)|      FAST  |OSC_BUFGP         |   0.000|
-LED4          |         7.973(R)|      SLOW  |         3.939(R)|      FAST  |OSC_BUFGP         |   0.000|
-LED5          |         8.029(R)|      SLOW  |         3.990(R)|      FAST  |OSC_BUFGP         |   0.000|
-LED6          |         7.952(R)|      SLOW  |         3.982(R)|      FAST  |OSC_BUFGP         |   0.000|
-LED7          |         8.351(R)|      SLOW  |         4.289(R)|      FAST  |OSC_BUFGP         |   0.000|
-MN<0>         |         8.123(R)|      SLOW  |         4.280(R)|      FAST  |OSC_BUFGP         |   0.000|
-MN<1>         |         7.852(R)|      SLOW  |         4.107(R)|      FAST  |OSC_BUFGP         |   0.000|
-MN<2>         |         7.888(R)|      SLOW  |         4.111(R)|      FAST  |OSC_BUFGP         |   0.000|
-MN<3>         |         7.750(R)|      SLOW  |         4.030(R)|      FAST  |OSC_BUFGP         |   0.000|
-MN<4>         |         7.927(R)|      SLOW  |         4.140(R)|      FAST  |OSC_BUFGP         |   0.000|
-MN<5>         |         8.040(R)|      SLOW  |         4.218(R)|      FAST  |OSC_BUFGP         |   0.000|
-MN<6>         |         7.980(R)|      SLOW  |         4.182(R)|      FAST  |OSC_BUFGP         |   0.000|
-MN<7>         |         7.626(R)|      SLOW  |         3.942(R)|      FAST  |OSC_BUFGP         |   0.000|
-SSD_COM<0>    |        13.663(R)|      SLOW  |         5.301(R)|      FAST  |OSC_BUFGP         |   0.000|
-SSD_COM<1>    |        14.642(R)|      SLOW  |         4.393(R)|      FAST  |OSC_BUFGP         |   0.000|
-SSD_COM<2>    |        14.691(R)|      SLOW  |         4.135(R)|      FAST  |OSC_BUFGP         |   0.000|
-SSD_COM<3>    |        13.480(R)|      SLOW  |         4.121(R)|      FAST  |OSC_BUFGP         |   0.000|
-SSD_Segment<0>|        12.201(R)|      SLOW  |         5.196(R)|      FAST  |OSC_BUFGP         |   0.000|
-SSD_Segment<1>|        12.315(R)|      SLOW  |         5.267(R)|      FAST  |OSC_BUFGP         |   0.000|
-SSD_Segment<2>|        12.697(R)|      SLOW  |         5.144(R)|      FAST  |OSC_BUFGP         |   0.000|
-SSD_Segment<3>|        12.641(R)|      SLOW  |         5.126(R)|      FAST  |OSC_BUFGP         |   0.000|
-SSD_Segment<4>|        12.418(R)|      SLOW  |         4.962(R)|      FAST  |OSC_BUFGP         |   0.000|
-SSD_Segment<5>|        12.299(R)|      SLOW  |         4.910(R)|      FAST  |OSC_BUFGP         |   0.000|
-SSD_Segment<6>|        11.989(R)|      SLOW  |         4.462(R)|      FAST  |OSC_BUFGP         |   0.000|
+LED0          |        13.926(R)|      SLOW  |         4.620(R)|      FAST  |OSC_BUFGP         |   0.000|
+LED1          |        13.609(R)|      SLOW  |         4.486(R)|      FAST  |OSC_BUFGP         |   0.000|
+LED2          |        13.838(R)|      SLOW  |         4.272(R)|      FAST  |OSC_BUFGP         |   0.000|
+LED3          |         7.649(R)|      SLOW  |         3.943(R)|      FAST  |OSC_BUFGP         |   0.000|
+LED4          |         8.083(R)|      SLOW  |         4.181(R)|      FAST  |OSC_BUFGP         |   0.000|
+LED5          |         8.381(R)|      SLOW  |         4.284(R)|      FAST  |OSC_BUFGP         |   0.000|
+LED6          |         8.604(R)|      SLOW  |         4.430(R)|      FAST  |OSC_BUFGP         |   0.000|
+LED7          |         9.439(R)|      SLOW  |         5.050(R)|      FAST  |OSC_BUFGP         |   0.000|
+MN<0>         |         8.509(R)|      SLOW  |         4.496(R)|      FAST  |OSC_BUFGP         |   0.000|
+MN<1>         |         8.546(R)|      SLOW  |         4.549(R)|      FAST  |OSC_BUFGP         |   0.000|
+MN<2>         |         8.581(R)|      SLOW  |         4.562(R)|      FAST  |OSC_BUFGP         |   0.000|
+MN<3>         |         8.069(R)|      SLOW  |         4.233(R)|      FAST  |OSC_BUFGP         |   0.000|
+MN<4>         |         7.556(R)|      SLOW  |         3.921(R)|      FAST  |OSC_BUFGP         |   0.000|
+MN<5>         |         7.496(R)|      SLOW  |         3.866(R)|      FAST  |OSC_BUFGP         |   0.000|
+MN<6>         |         7.561(R)|      SLOW  |         3.893(R)|      FAST  |OSC_BUFGP         |   0.000|
+MN<7>         |         7.455(R)|      SLOW  |         3.827(R)|      FAST  |OSC_BUFGP         |   0.000|
+SSD_COM<0>    |        15.091(R)|      SLOW  |         4.567(R)|      FAST  |OSC_BUFGP         |   0.000|
+SSD_COM<1>    |        14.921(R)|      SLOW  |         4.243(R)|      FAST  |OSC_BUFGP         |   0.000|
+SSD_COM<2>    |        15.328(R)|      SLOW  |         4.144(R)|      FAST  |OSC_BUFGP         |   0.000|
+SSD_COM<3>    |        14.916(R)|      SLOW  |         4.589(R)|      FAST  |OSC_BUFGP         |   0.000|
+SSD_Segment<0>|        13.740(R)|      SLOW  |         5.314(R)|      FAST  |OSC_BUFGP         |   0.000|
+SSD_Segment<1>|        13.820(R)|      SLOW  |         5.389(R)|      FAST  |OSC_BUFGP         |   0.000|
+SSD_Segment<2>|        13.814(R)|      SLOW  |         5.128(R)|      FAST  |OSC_BUFGP         |   0.000|
+SSD_Segment<3>|        14.228(R)|      SLOW  |         5.399(R)|      FAST  |OSC_BUFGP         |   0.000|
+SSD_Segment<4>|        13.858(R)|      SLOW  |         5.207(R)|      FAST  |OSC_BUFGP         |   0.000|
+SSD_Segment<5>|        13.673(R)|      SLOW  |         5.088(R)|      FAST  |OSC_BUFGP         |   0.000|
+SSD_Segment<6>|        13.562(R)|      SLOW  |         5.178(R)|      FAST  |OSC_BUFGP         |   0.000|
 --------------+-----------------+------------+-----------------+------------+------------------+--------+
 
 Clock to Setup on destination clock OSC
@@ -94,11 +94,157 @@ Clock to Setup on destination clock OSC
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-OSC            |    9.205|    8.792|         |    6.781|
+OSC            |    9.267|    8.747|         |    6.341|
 ---------------+---------+---------+---------+---------+
 
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+BTN3           |SSD_COM<0>     |   10.668|
+BTN3           |SSD_COM<1>     |   10.498|
+BTN3           |SSD_COM<2>     |   10.905|
+BTN3           |SSD_COM<3>     |   10.493|
+BTN3           |SSD_Segment<0> |   13.130|
+BTN3           |SSD_Segment<1> |   13.210|
+BTN3           |SSD_Segment<2> |   13.204|
+BTN3           |SSD_Segment<3> |   13.618|
+BTN3           |SSD_Segment<4> |   13.248|
+BTN3           |SSD_Segment<5> |   13.063|
+BTN3           |SSD_Segment<6> |   12.952|
+BTN5           |LED3           |    8.827|
+BTN5           |LED4           |    8.709|
+BTN5           |LED5           |    7.363|
+BTN5           |LED6           |    7.589|
+BTN5           |LED7           |    7.706|
+BTN5           |MN<0>          |    9.415|
+BTN5           |MN<1>          |    9.415|
+BTN5           |MN<2>          |    9.248|
+BTN5           |MN<3>          |    9.248|
+BTN5           |MN<4>          |    8.871|
+BTN5           |MN<5>          |    8.871|
+BTN5           |MN<6>          |    8.724|
+BTN5           |MN<7>          |    8.696|
+BTN5           |SSD_COM<0>     |   11.111|
+BTN5           |SSD_COM<1>     |   10.941|
+BTN5           |SSD_COM<2>     |   11.348|
+BTN5           |SSD_COM<3>     |   10.936|
+BTN5           |SSD_Segment<0> |   13.573|
+BTN5           |SSD_Segment<1> |   13.653|
+BTN5           |SSD_Segment<2> |   13.647|
+BTN5           |SSD_Segment<3> |   14.061|
+BTN5           |SSD_Segment<4> |   13.691|
+BTN5           |SSD_Segment<5> |   13.506|
+BTN5           |SSD_Segment<6> |   13.395|
+DIP2           |SSD_Segment<0> |   13.312|
+DIP2           |SSD_Segment<1> |   13.392|
+DIP2           |SSD_Segment<2> |   12.752|
+DIP2           |SSD_Segment<3> |   13.166|
+DIP2           |SSD_Segment<4> |   13.072|
+DIP2           |SSD_Segment<5> |   12.887|
+DIP2           |SSD_Segment<6> |   12.296|
+DIP3           |SSD_Segment<0> |   12.638|
+DIP3           |SSD_Segment<1> |   12.718|
+DIP3           |SSD_Segment<2> |   12.835|
+DIP3           |SSD_Segment<3> |   13.249|
+DIP3           |SSD_Segment<4> |   12.945|
+DIP3           |SSD_Segment<5> |   12.760|
+DIP3           |SSD_Segment<6> |   12.051|
+DIP4           |SSD_Segment<0> |   13.058|
+DIP4           |SSD_Segment<1> |   13.138|
+DIP4           |SSD_Segment<2> |   13.218|
+DIP4           |SSD_Segment<3> |   13.632|
+DIP4           |SSD_Segment<4> |   13.262|
+DIP4           |SSD_Segment<5> |   13.077|
+DIP4           |SSD_Segment<6> |   11.934|
+DIP5           |SSD_Segment<0> |   11.765|
+DIP5           |SSD_Segment<1> |   11.845|
+DIP5           |SSD_Segment<2> |   11.513|
+DIP5           |SSD_Segment<3> |   11.927|
+DIP5           |SSD_Segment<4> |   11.670|
+DIP5           |SSD_Segment<5> |   11.485|
+DIP5           |SSD_Segment<6> |   11.600|
+DIP6           |SSD_Segment<0> |   12.462|
+DIP6           |SSD_Segment<1> |   12.542|
+DIP6           |SSD_Segment<2> |   11.902|
+DIP6           |SSD_Segment<3> |   12.316|
+DIP6           |SSD_Segment<4> |   12.222|
+DIP6           |SSD_Segment<5> |   12.037|
+DIP6           |SSD_Segment<6> |   11.446|
+DIP7           |SSD_Segment<0> |   12.307|
+DIP7           |SSD_Segment<1> |   12.387|
+DIP7           |SSD_Segment<2> |   12.504|
+DIP7           |SSD_Segment<3> |   12.918|
+DIP7           |SSD_Segment<4> |   12.614|
+DIP7           |SSD_Segment<5> |   12.429|
+DIP7           |SSD_Segment<6> |   11.720|
+DIP8           |SSD_Segment<0> |   12.877|
+DIP8           |SSD_Segment<1> |   12.957|
+DIP8           |SSD_Segment<2> |   13.037|
+DIP8           |SSD_Segment<3> |   13.451|
+DIP8           |SSD_Segment<4> |   13.081|
+DIP8           |SSD_Segment<5> |   12.896|
+DIP8           |SSD_Segment<6> |   11.753|
+SW0            |SSD_Segment<0> |   10.891|
+SW0            |SSD_Segment<1> |   10.971|
+SW0            |SSD_Segment<2> |   11.051|
+SW0            |SSD_Segment<3> |   11.465|
+SW0            |SSD_Segment<4> |   11.095|
+SW0            |SSD_Segment<5> |   10.910|
+SW0            |SSD_Segment<6> |    9.767|
+SW1            |SSD_Segment<0> |   10.635|
+SW1            |SSD_Segment<1> |   10.715|
+SW1            |SSD_Segment<2> |   10.832|
+SW1            |SSD_Segment<3> |   11.246|
+SW1            |SSD_Segment<4> |   10.942|
+SW1            |SSD_Segment<5> |   10.757|
+SW1            |SSD_Segment<6> |   10.048|
+SW2            |SSD_Segment<0> |   11.089|
+SW2            |SSD_Segment<1> |   11.169|
+SW2            |SSD_Segment<2> |   10.529|
+SW2            |SSD_Segment<3> |   10.943|
+SW2            |SSD_Segment<4> |   10.849|
+SW2            |SSD_Segment<5> |   10.664|
+SW2            |SSD_Segment<6> |   10.073|
+SW3            |SSD_Segment<0> |   10.015|
+SW3            |SSD_Segment<1> |   10.095|
+SW3            |SSD_Segment<2> |    9.763|
+SW3            |SSD_Segment<3> |   10.177|
+SW3            |SSD_Segment<4> |    9.920|
+SW3            |SSD_Segment<5> |    9.735|
+SW3            |SSD_Segment<6> |    9.850|
+SW4            |SSD_Segment<0> |   10.799|
+SW4            |SSD_Segment<1> |   10.879|
+SW4            |SSD_Segment<2> |   10.959|
+SW4            |SSD_Segment<3> |   11.373|
+SW4            |SSD_Segment<4> |   11.003|
+SW4            |SSD_Segment<5> |   10.818|
+SW4            |SSD_Segment<6> |    9.675|
+SW5            |SSD_Segment<0> |   10.023|
+SW5            |SSD_Segment<1> |   10.103|
+SW5            |SSD_Segment<2> |   10.220|
+SW5            |SSD_Segment<3> |   10.634|
+SW5            |SSD_Segment<4> |   10.330|
+SW5            |SSD_Segment<5> |   10.145|
+SW5            |SSD_Segment<6> |    9.436|
+SW6            |SSD_Segment<0> |   10.629|
+SW6            |SSD_Segment<1> |   10.709|
+SW6            |SSD_Segment<2> |   10.069|
+SW6            |SSD_Segment<3> |   10.483|
+SW6            |SSD_Segment<4> |   10.389|
+SW6            |SSD_Segment<5> |   10.204|
+SW6            |SSD_Segment<6> |    9.613|
+SW7            |SSD_Segment<0> |    9.624|
+SW7            |SSD_Segment<1> |    9.704|
+SW7            |SSD_Segment<2> |    9.372|
+SW7            |SSD_Segment<3> |    9.786|
+SW7            |SSD_Segment<4> |    9.529|
+SW7            |SSD_Segment<5> |    9.344|
+SW7            |SSD_Segment<6> |    9.459|
+---------------+---------------+---------+
 
-Analysis completed Tue Oct 01 09:07:00 2024 
+
+Analysis completed Tue Oct 01 12:22:54 2024 
 --------------------------------------------------------------------------------
 
 Trace Settings:

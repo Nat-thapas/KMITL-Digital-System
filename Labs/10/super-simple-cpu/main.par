@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-LAPBOTTOM::  Tue Oct 01 09:08:42 2024
+LAPBOTTOM::  Tue Oct 01 11:42:01 2024
 
 par -w -intstyle ise -ol high -mt off main_map.ncd main.ncd main.pcf 
 
@@ -26,14 +26,14 @@ Device speed data version:  "PRODUCTION 1.23 2013-10-13".
 Device Utilization Summary:
 
 Slice Logic Utilization:
-  Number of Slice Registers:                    31 out of  11,440    1%
-    Number used as Flip Flops:                  31
+  Number of Slice Registers:                    29 out of  11,440    1%
+    Number used as Flip Flops:                  29
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                         63 out of   5,720    1%
-    Number used as logic:                       62 out of   5,720    1%
-      Number using O6 output only:              49
+  Number of Slice LUTs:                         97 out of   5,720    1%
+    Number used as logic:                       96 out of   5,720    1%
+      Number using O6 output only:              83
       Number using O5 output only:               0
       Number using O5 and O6:                   13
       Number used as ROM:                        0
@@ -44,12 +44,12 @@ Slice Logic Utilization:
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                    28 out of   1,430    1%
+  Number of occupied Slices:                    42 out of   1,430    2%
   Number of MUXCYs used:                        24 out of   2,860    1%
-  Number of LUT Flip Flop pairs used:           65
-    Number with an unused Flip Flop:            38 out of      65   58%
-    Number with an unused LUT:                   2 out of      65    3%
-    Number of fully used LUT-FF pairs:          25 out of      65   38%
+  Number of LUT Flip Flop pairs used:           99
+    Number with an unused Flip Flop:            74 out of      99   74%
+    Number with an unused LUT:                   2 out of      99    2%
+    Number of fully used LUT-FF pairs:          23 out of      99   23%
     Number of slice register sites lost
       to control set restrictions:               0 out of  11,440    0%
 
@@ -98,13 +98,13 @@ Finished initial Timing Analysis.  REAL time: 1 secs
 Starting Router
 
 
-Phase  1  : 319 unrouted;      REAL time: 1 secs 
+Phase  1  : 430 unrouted;      REAL time: 1 secs 
 
-Phase  2  : 289 unrouted;      REAL time: 1 secs 
+Phase  2  : 400 unrouted;      REAL time: 1 secs 
 
-Phase  3  : 77 unrouted;      REAL time: 2 secs 
+Phase  3  : 115 unrouted;      REAL time: 2 secs 
 
-Phase  4  : 77 unrouted; (Par is working to improve performance)     REAL time: 2 secs 
+Phase  4  : 115 unrouted; (Par is working to improve performance)     REAL time: 2 secs 
 
 Updating file: main.ncd with current fully routed design.
 
@@ -140,14 +140,14 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net OSC | SETUP       |         N/A|     4.027ns|     N/A|           0
-  _BUFGP                                    | HOLD        |     0.427ns|            |       0|           0
+  Autotimespec constraint for clock net OSC | SETUP       |         N/A|     4.728ns|     N/A|           0
+  _BUFGP                                    | HOLD        |     0.419ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net XLX | SETUP       |         N/A|     1.220ns|     N/A|           0
-  N_12                                      | HOLD        |     0.463ns|            |       0|           0
+  Autotimespec constraint for clock net XLX | SETUP       |         N/A|     1.207ns|     N/A|           0
+  N_12                                      | HOLD        |     0.447ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net XLX | SETUP       |         N/A|     0.875ns|     N/A|           0
-  I_4/XLXN_41                               | HOLD        |     0.438ns|            |       0|           0
+  Autotimespec constraint for clock net XLX | SETUP       |         N/A|     0.911ns|     N/A|           0
+  I_4/XLXN_41                               | HOLD        |     0.415ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 

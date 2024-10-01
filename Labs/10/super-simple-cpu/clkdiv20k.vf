@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : clkdiv20k.vf
-// /___/   /\     Timestamp : 10/01/2024 09:08:24
+// /___/   /\     Timestamp : 10/01/2024 11:41:42
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -84,7 +84,7 @@ module clkdiv20k(CLK,
    wire CLKO_DUMMY;
    
    assign CLKO = CLKO_DUMMY;
-   (* HU_SET = "XLXI_1_48" *) 
+   (* HU_SET = "XLXI_1_126" *) 
    CD4CE_HXILINX_clkdiv20k  XLXI_1 (.C(CLK_I), 
                                    .CE(XLXN_3), 
                                    .CLR(XLXN_15), 
@@ -101,7 +101,7 @@ module clkdiv20k(CLK,
                  .Q(CLKO_DUMMY));
    INV  XLXI_11 (.I(CLKO_DUMMY), 
                 .O(XLXN_11));
-   (* HU_SET = "XLXI_14_49" *) 
+   (* HU_SET = "XLXI_14_127" *) 
    CD4CE_HXILINX_clkdiv20k  XLXI_14 (.C(CLK_I), 
                                     .CE(XLXN_14), 
                                     .CLR(XLXN_15), 
@@ -111,7 +111,7 @@ module clkdiv20k(CLK,
                                     .Q2(), 
                                     .Q3(), 
                                     .TC());
-   (* HU_SET = "XLXI_17_50" *) 
+   (* HU_SET = "XLXI_17_128" *) 
    CD4CE_HXILINX_clkdiv20k  XLXI_17 (.C(CLK_I), 
                                     .CE(XLXN_27), 
                                     .CLR(XLXN_15), 
@@ -121,7 +121,7 @@ module clkdiv20k(CLK,
                                     .Q2(), 
                                     .Q3(), 
                                     .TC());
-   (* HU_SET = "XLXI_22_51" *) 
+   (* HU_SET = "XLXI_22_129" *) 
    CD4CE_HXILINX_clkdiv20k  XLXI_22 (.C(CLK_I), 
                                     .CE(XLXN_37), 
                                     .CLR(XLXN_15), 

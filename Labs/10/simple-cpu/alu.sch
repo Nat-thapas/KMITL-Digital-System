@@ -45,7 +45,6 @@
         <signal name="F(2)" />
         <signal name="XLXN_170" />
         <signal name="XLXN_179" />
-        <signal name="XLXN_180" />
         <signal name="XLXN_181" />
         <signal name="XLXN_182" />
         <signal name="A(7:0)" />
@@ -95,15 +94,6 @@
             <rect width="64" x="0" y="-44" height="24" />
             <line x2="384" y1="-96" y2="-96" x1="320" />
             <rect width="64" x="320" y="-108" height="24" />
-        </blockdef>
-        <blockdef name="lshift8x1b">
-            <timestamp>2024-9-29T14:47:32</timestamp>
-            <rect width="256" x="64" y="-128" height="128" />
-            <line x2="0" y1="-96" y2="-96" x1="64" />
-            <rect width="64" x="0" y="-108" height="24" />
-            <line x2="384" y1="-96" y2="-96" x1="320" />
-            <rect width="64" x="320" y="-108" height="24" />
-            <line x2="384" y1="-32" y2="-32" x1="320" />
         </blockdef>
         <blockdef name="and2x8b">
             <timestamp>2024-9-29T14:50:44</timestamp>
@@ -270,15 +260,21 @@
             <arc ex="128" ey="-144" sx="208" sy="-96" r="88" cx="132" cy="-56" />
             <arc ex="208" ey="-96" sx="128" sy="-48" r="88" cx="132" cy="-136" />
         </blockdef>
+        <blockdef name="lshift">
+            <timestamp>2024-10-1T4:31:8</timestamp>
+            <rect width="256" x="64" y="-128" height="128" />
+            <line x2="0" y1="-96" y2="-96" x1="64" />
+            <rect width="64" x="0" y="-108" height="24" />
+            <line x2="384" y1="-96" y2="-96" x1="320" />
+            <rect width="64" x="320" y="-108" height="24" />
+            <line x2="384" y1="-32" y2="-32" x1="320" />
+            <line x2="0" y1="-32" y2="-32" x1="64" />
+            <rect width="64" x="0" y="-44" height="24" />
+        </blockdef>
         <block symbolname="xor2x8b" name="XLXI_7">
             <blockpin signalname="A(7:0)" name="A(7:0)" />
             <blockpin signalname="B(7:0)" name="B(7:0)" />
             <blockpin signalname="XLXN_7(7:0)" name="R(7:0)" />
-        </block>
-        <block symbolname="lshift8x1b" name="XLXI_8">
-            <blockpin signalname="A(7:0)" name="I(7:0)" />
-            <blockpin signalname="XLXN_8(7:0)" name="O(7:0)" />
-            <blockpin signalname="XLXN_137" name="OFL" />
         </block>
         <block symbolname="and2x8b" name="XLXI_10">
             <blockpin signalname="A(7:0)" name="A(7:0)" />
@@ -405,6 +401,12 @@
             <blockpin signalname="XLXN_135" name="I1" />
             <blockpin signalname="XLXN_179" name="O" />
         </block>
+        <block symbolname="lshift" name="XLXI_94">
+            <blockpin signalname="A(7:0)" name="I(7:0)" />
+            <blockpin signalname="XLXN_8(7:0)" name="O(7:0)" />
+            <blockpin signalname="XLXN_137" name="OFL" />
+            <blockpin signalname="B(7:0)" name="S(7:0)" />
+        </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="5440">
         <instance x="2576" y="480" name="XLXI_21" orien="R0" />
@@ -485,8 +487,6 @@
             <wire x2="1776" y1="384" y2="384" x1="1328" />
             <wire x2="1328" y1="384" y2="1072" x1="1328" />
         </branch>
-        <instance x="640" y="1488" name="XLXI_8" orien="R0">
-        </instance>
         <branch name="XLXN_8(7:0)">
             <wire x2="1392" y1="1392" y2="1392" x1="1024" />
             <wire x2="1776" y1="448" y2="448" x1="1392" />
@@ -518,12 +518,14 @@
             <wire x2="400" y1="272" y2="576" x1="400" />
             <wire x2="400" y1="576" y2="1136" x1="400" />
             <wire x2="640" y1="1136" y2="1136" x1="400" />
-            <wire x2="400" y1="1136" y2="1776" x1="400" />
+            <wire x2="400" y1="1136" y2="1456" x1="400" />
+            <wire x2="400" y1="1456" y2="1776" x1="400" />
             <wire x2="640" y1="1776" y2="1776" x1="400" />
             <wire x2="400" y1="1776" y2="2096" x1="400" />
             <wire x2="640" y1="2096" y2="2096" x1="400" />
             <wire x2="400" y1="2096" y2="2352" x1="400" />
             <wire x2="640" y1="2352" y2="2352" x1="400" />
+            <wire x2="640" y1="1456" y2="1456" x1="400" />
             <wire x2="640" y1="576" y2="576" x1="400" />
         </branch>
         <branch name="OP(0)">
@@ -744,5 +746,7 @@
             <wire x2="2320" y1="3552" y2="3552" x1="2160" />
             <wire x2="2160" y1="3552" y2="3776" x1="2160" />
         </branch>
+        <instance x="640" y="1488" name="XLXI_94" orien="R0">
+        </instance>
     </sheet>
 </drawing>

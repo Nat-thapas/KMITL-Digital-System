@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : clkdiv20M.vf
-// /___/   /\     Timestamp : 10/01/2024 08:57:52
+// /___/   /\     Timestamp : 10/01/2024 12:22:23
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -110,7 +110,7 @@ module clkdiv20M(CLK,
    wire XLXN_67;
    wire XLXN_68;
    
-   (* HU_SET = "XLXI_1_148" *) 
+   (* HU_SET = "XLXI_1_0" *) 
    CD4CE_HXILINX_clkdiv20M  XLXI_1 (.C(CLK_I), 
                                    .CE(XLXN_3), 
                                    .CLR(XLXN_15), 
@@ -122,7 +122,7 @@ module clkdiv20M(CLK,
                                    .TC());
    VCC  XLXI_2 (.P(XLXN_3));
    GND  XLXI_3 (.G(XLXN_15));
-   (* HU_SET = "XLXI_14_149" *) 
+   (* HU_SET = "XLXI_14_1" *) 
    CD4CE_HXILINX_clkdiv20M  XLXI_14 (.C(CLK_I), 
                                     .CE(XLXN_14), 
                                     .CLR(XLXN_15), 
@@ -132,7 +132,7 @@ module clkdiv20M(CLK,
                                     .Q2(), 
                                     .Q3(), 
                                     .TC());
-   (* HU_SET = "XLXI_17_150" *) 
+   (* HU_SET = "XLXI_17_2" *) 
    CD4CE_HXILINX_clkdiv20M  XLXI_17 (.C(CLK_I), 
                                     .CE(XLXN_27), 
                                     .CLR(XLXN_15), 
@@ -142,7 +142,7 @@ module clkdiv20M(CLK,
                                     .Q2(), 
                                     .Q3(), 
                                     .TC());
-   (* HU_SET = "XLXI_22_151" *) 
+   (* HU_SET = "XLXI_22_3" *) 
    CD4CE_HXILINX_clkdiv20M  XLXI_22 (.C(CLK_I), 
                                     .CE(XLXN_37), 
                                     .CLR(XLXN_15), 
@@ -152,7 +152,7 @@ module clkdiv20M(CLK,
                                     .Q2(), 
                                     .Q3(), 
                                     .TC());
-   (* HU_SET = "XLXI_25_152" *) 
+   (* HU_SET = "XLXI_25_4" *) 
    CD4CE_HXILINX_clkdiv20M  XLXI_25 (.C(CLK_I), 
                                     .CE(XLXN_44), 
                                     .CLR(XLXN_15), 
@@ -162,7 +162,7 @@ module clkdiv20M(CLK,
                                     .Q2(), 
                                     .Q3(), 
                                     .TC());
-   (* HU_SET = "XLXI_28_153" *) 
+   (* HU_SET = "XLXI_28_5" *) 
    CD4CE_HXILINX_clkdiv20M  XLXI_28 (.C(CLK_I), 
                                     .CE(XLXN_51), 
                                     .CLR(XLXN_15), 
@@ -172,7 +172,7 @@ module clkdiv20M(CLK,
                                     .Q2(), 
                                     .Q3(), 
                                     .TC());
-   (* HU_SET = "XLXI_31_154" *) 
+   (* HU_SET = "XLXI_31_6" *) 
    CD4CE_HXILINX_clkdiv20M  XLXI_31 (.C(CLK_I), 
                                     .CE(XLXN_56), 
                                     .CLR(XLXN_15), 
@@ -184,7 +184,7 @@ module clkdiv20M(CLK,
                                     .TC());
    INV  XLXI_34 (.I(CLK), 
                 .O(CLK_I));
-   (* HU_SET = "XLXI_36_155" *) 
+   (* HU_SET = "XLXI_36_7" *) 
    FTCE_HXILINX_clkdiv20M  XLXI_36 (.C(CLK_I), 
                                    .CE(XLXN_65), 
                                    .CLR(XLXN_15), 

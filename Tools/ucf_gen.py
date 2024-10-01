@@ -74,9 +74,9 @@ def main():
                         + f"Warning: NET {net}[{i}] does not have corresponding LOC entry in pins file."
                     )
                 output.append(f'NET "{net}[{i}]" LOC = {loc};')
-    output_str: str = "\n".join(output)
+    output_str: str = "\n".join(output) + "\n"
     print("Output:")
-    print(output_str)
+    print(output_str[:-1])
     schematic_file_folder = os.path.dirname(schematic_path)
     schematic_file_name = os.path.basename(schematic_path)
     schematic_file_name_no_ext = os.path.splitext(schematic_file_name)[0]

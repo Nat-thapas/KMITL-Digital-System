@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : regs.vf
-// /___/   /\     Timestamp : 10/01/2024 08:57:52
+// /___/   /\     Timestamp : 10/01/2024 12:22:24
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -63,13 +63,13 @@ module regs(CE,
    wire XLXN_6;
    wire XLXN_7;
    
-   (* HU_SET = "XLXI_1_146" *) 
+   (* HU_SET = "XLXI_1_67" *) 
    FD8CE_HXILINX_regs  XLXI_1 (.C(CLK), 
                               .CE(XLXN_4), 
                               .CLR(XLXN_6), 
                               .D(D[7:0]), 
                               .Q(R0[7:0]));
-   (* HU_SET = "XLXI_2_147" *) 
+   (* HU_SET = "XLXI_2_68" *) 
    FD8CE_HXILINX_regs  XLXI_2 (.C(CLK), 
                               .CE(XLXN_5), 
                               .CLR(XLXN_7), 

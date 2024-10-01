@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : inst_decode.vf
-// /___/   /\     Timestamp : 10/01/2024 08:57:52
+// /___/   /\     Timestamp : 10/01/2024 12:22:24
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -164,7 +164,7 @@ module inst_decode(INST,
                 .O(IMM[6]));
    BUF  XLXI_19 (.I(INST[7]), 
                 .O(IMM[7]));
-   (* HU_SET = "XLXI_21_141" *) 
+   (* HU_SET = "XLXI_21_63" *) 
    AND16_HXILINX_inst_decode  XLXI_21 (.I0(INST[15]), 
                                       .I1(INST[14]), 
                                       .I2(INST[13]), 
@@ -182,7 +182,7 @@ module inst_decode(INST,
                                       .I14(INST[1]), 
                                       .I15(INST[0]), 
                                       .O(HLT));
-   (* HU_SET = "XLXI_24_142" *) 
+   (* HU_SET = "XLXI_24_64" *) 
    OR16_HXILINX_inst_decode  XLXI_24 (.I0(INST[15]), 
                                      .I1(INST[14]), 
                                      .I2(INST[13]), 
@@ -218,12 +218,12 @@ module inst_decode(INST,
                  .I1(INST[9]), 
                  .I2(INST[8]), 
                  .O(XLXN_21));
-   (* HU_SET = "XLXI_29_143" *) 
+   (* HU_SET = "XLXI_29_65" *) 
    M2_1_HXILINX_inst_decode  XLXI_29 (.D0(XLXN_24), 
                                      .D1(XLXN_23), 
                                      .S0(XLXN_21), 
                                      .O(RDS[0]));
-   (* HU_SET = "XLXI_30_144" *) 
+   (* HU_SET = "XLXI_30_66" *) 
    M2_1_HXILINX_inst_decode  XLXI_30 (.D0(XLXN_25), 
                                      .D1(XLXN_22), 
                                      .S0(XLXN_21), 
