@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : inst_decode.vf
-// /___/   /\     Timestamp : 10/01/2024 00:02:39
+// /___/   /\     Timestamp : 10/01/2024 08:57:52
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Personal/Projects/Digital Labs/Labs/10/simple-cpu/inst_decode.vf" -w "D:/Personal/Projects/Digital Labs/Labs/10/simple-cpu/inst_decode.sch"
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Classes-2024/Digital System Fundamentals Shared/Labs/10/simple-cpu/inst_decode.vf" -w "D:/Classes-2024/Digital System Fundamentals Shared/Labs/10/simple-cpu/inst_decode.sch"
 //Design Name: inst_decode
 //Device: spartan6
 //Purpose:
@@ -72,26 +72,57 @@ module OR16_HXILINX_inst_decode (O, I0, I1, I2, I3, I4, I5, I6, I7, I8, I9, I10,
 assign O = (I0 || I1 || I2 || I3 || I4 || I5 || I6 || I7 || I8 || I9 || I10 || I11 || I12 || I13 || I14 || I15 );
 
 endmodule
+`timescale  100 ps / 10 ps
+
+module M2_1_HXILINX_inst_decode (O, D0, D1, S0);
+    
+
+   output O;
+
+   input  D0;
+   input  D1;
+   input  S0;
+
+   reg O;
+
+   always @ ( D0 or D1 or S0)
+   begin
+      case(S0)
+      1'b0 : O <= D0;
+      1'b1 : O <= D1;
+      endcase
+   end
+    
+endmodule
 `timescale 1ns / 1ps
 
 module inst_decode(INST, 
                    DR, 
                    HLT, 
                    IMM, 
+                   NOP, 
                    OP, 
                    OP1, 
                    OP2, 
-                   OUTE);
+                   OUTE, 
+                   RDS);
 
     input [15:0] INST;
    output DR;
    output HLT;
    output [7:0] IMM;
+   output NOP;
    output [2:0] OP;
    output [1:0] OP1;
    output [1:0] OP2;
    output OUTE;
+   output [1:0] RDS;
    
+   wire XLXN_21;
+   wire XLXN_22;
+   wire XLXN_23;
+   wire XLXN_24;
+   wire XLXN_25;
    
    LUT3 #( .INIT(8'hD2) ) XLXI_2 (.I0(INST[12]), 
                 .I1(INST[13]), 
@@ -133,7 +164,7 @@ module inst_decode(INST,
                 .O(IMM[6]));
    BUF  XLXI_19 (.I(INST[7]), 
                 .O(IMM[7]));
-   (* HU_SET = "XLXI_21_144" *) 
+   (* HU_SET = "XLXI_21_141" *) 
    AND16_HXILINX_inst_decode  XLXI_21 (.I0(INST[15]), 
                                       .I1(INST[14]), 
                                       .I2(INST[13]), 
@@ -151,7 +182,7 @@ module inst_decode(INST,
                                       .I14(INST[1]), 
                                       .I15(INST[0]), 
                                       .O(HLT));
-   (* HU_SET = "XLXI_24_145" *) 
+   (* HU_SET = "XLXI_24_142" *) 
    OR16_HXILINX_inst_decode  XLXI_24 (.I0(INST[15]), 
                                      .I1(INST[14]), 
                                      .I2(INST[13]), 
@@ -169,4 +200,34 @@ module inst_decode(INST,
                                      .I14(INST[1]), 
                                      .I15(INST[0]), 
                                      .O(OUTE));
+   NOR3  XLXI_25 (.I0(INST[10]), 
+                 .I1(INST[9]), 
+                 .I2(INST[8]), 
+                 .O(NOP));
+   LUT4 #( .INIT(16'h0005) ) XLXI_26 (.I0(INST[11]), 
+                 .I1(INST[12]), 
+                 .I2(INST[13]), 
+                 .I3(INST[14]), 
+                 .O(XLXN_23));
+   LUT4 #( .INIT(16'hFFF0) ) XLXI_27 (.I0(INST[11]), 
+                 .I1(INST[12]), 
+                 .I2(INST[13]), 
+                 .I3(INST[14]), 
+                 .O(XLXN_22));
+   AND3  XLXI_28 (.I0(INST[10]), 
+                 .I1(INST[9]), 
+                 .I2(INST[8]), 
+                 .O(XLXN_21));
+   (* HU_SET = "XLXI_29_143" *) 
+   M2_1_HXILINX_inst_decode  XLXI_29 (.D0(XLXN_24), 
+                                     .D1(XLXN_23), 
+                                     .S0(XLXN_21), 
+                                     .O(RDS[0]));
+   (* HU_SET = "XLXI_30_144" *) 
+   M2_1_HXILINX_inst_decode  XLXI_30 (.D0(XLXN_25), 
+                                     .D1(XLXN_22), 
+                                     .S0(XLXN_21), 
+                                     .O(RDS[1]));
+   VCC  XLXI_33 (.P(XLXN_25));
+   VCC  XLXI_34 (.P(XLXN_24));
 endmodule

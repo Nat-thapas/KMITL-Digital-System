@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : alu.vf
-// /___/   /\     Timestamp : 10/01/2024 00:02:37
+// /___/   /\     Timestamp : 10/01/2024 09:06:35
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Personal/Projects/Digital Labs/Labs/10/simple-cpu/alu.vf" -w "D:/Personal/Projects/Digital Labs/Labs/10/simple-cpu/alu.sch"
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Classes-2024/Digital System Fundamentals Shared/Labs/10/simple-cpu/alu.vf" -w "D:/Classes-2024/Digital System Fundamentals Shared/Labs/10/simple-cpu/alu.sch"
 //Design Name: alu
 //Device: spartan6
 //Purpose:
@@ -237,7 +237,7 @@ module mux8x1x8e_MUSER_alu(D0,
    output [7:0] O;
    
    
-   (* HU_SET = "XLXI_1_76" *) 
+   (* HU_SET = "XLXI_1_0" *) 
    M8_1E_HXILINX_alu  XLXI_1 (.D0(D0[0]), 
                              .D1(D1[0]), 
                              .D2(D2[0]), 
@@ -251,7 +251,7 @@ module mux8x1x8e_MUSER_alu(D0,
                              .S1(S1), 
                              .S2(S2), 
                              .O(O[0]));
-   (* HU_SET = "XLXI_2_77" *) 
+   (* HU_SET = "XLXI_2_1" *) 
    M8_1E_HXILINX_alu  XLXI_2 (.D0(D0[1]), 
                              .D1(D1[1]), 
                              .D2(D2[1]), 
@@ -265,7 +265,7 @@ module mux8x1x8e_MUSER_alu(D0,
                              .S1(S1), 
                              .S2(S2), 
                              .O(O[1]));
-   (* HU_SET = "XLXI_3_78" *) 
+   (* HU_SET = "XLXI_3_2" *) 
    M8_1E_HXILINX_alu  XLXI_3 (.D0(D0[2]), 
                              .D1(D1[2]), 
                              .D2(D2[2]), 
@@ -279,7 +279,7 @@ module mux8x1x8e_MUSER_alu(D0,
                              .S1(S1), 
                              .S2(S2), 
                              .O(O[2]));
-   (* HU_SET = "XLXI_4_79" *) 
+   (* HU_SET = "XLXI_4_3" *) 
    M8_1E_HXILINX_alu  XLXI_4 (.D0(D0[3]), 
                              .D1(D1[3]), 
                              .D2(D2[3]), 
@@ -293,7 +293,7 @@ module mux8x1x8e_MUSER_alu(D0,
                              .S1(S1), 
                              .S2(S2), 
                              .O(O[3]));
-   (* HU_SET = "XLXI_5_80" *) 
+   (* HU_SET = "XLXI_5_4" *) 
    M8_1E_HXILINX_alu  XLXI_5 (.D0(D0[4]), 
                              .D1(D1[4]), 
                              .D2(D2[4]), 
@@ -307,7 +307,7 @@ module mux8x1x8e_MUSER_alu(D0,
                              .S1(S1), 
                              .S2(S2), 
                              .O(O[4]));
-   (* HU_SET = "XLXI_6_81" *) 
+   (* HU_SET = "XLXI_6_5" *) 
    M8_1E_HXILINX_alu  XLXI_6 (.D0(D0[5]), 
                              .D1(D1[5]), 
                              .D2(D2[5]), 
@@ -321,7 +321,7 @@ module mux8x1x8e_MUSER_alu(D0,
                              .S1(S1), 
                              .S2(S2), 
                              .O(O[5]));
-   (* HU_SET = "XLXI_7_82" *) 
+   (* HU_SET = "XLXI_7_6" *) 
    M8_1E_HXILINX_alu  XLXI_7 (.D0(D0[6]), 
                              .D1(D1[6]), 
                              .D2(D2[6]), 
@@ -335,7 +335,7 @@ module mux8x1x8e_MUSER_alu(D0,
                              .S1(S1), 
                              .S2(S2), 
                              .O(O[6]));
-   (* HU_SET = "XLXI_8_83" *) 
+   (* HU_SET = "XLXI_8_7" *) 
    M8_1E_HXILINX_alu  XLXI_8 (.D0(D0[7]), 
                              .D1(D1[7]), 
                              .D2(D2[7]), 
@@ -521,17 +521,16 @@ module alu(A,
    wire XLXN_145;
    wire XLXN_160;
    wire XLXN_162;
-   wire XLXN_163;
    wire XLXN_164;
    wire XLXN_170;
    wire XLXN_179;
-   wire XLXN_180;
    wire XLXN_181;
    wire XLXN_182;
+   wire XLXN_183;
    wire [7:0] ACC_DUMMY;
    
    assign ACC[7:0] = ACC_DUMMY[7:0];
-   (* HU_SET = "XLXI_2_85" *) 
+   (* HU_SET = "XLXI_2_9" *) 
    ADSU8_HXILINX_alu  XLXI_2 (.A(A[7:0]), 
                              .ADD(OP[0]), 
                              .B(B[7:0]), 
@@ -553,7 +552,7 @@ module alu(A,
                              .R(XLXN_10[7:0]));
    buf8b_MUSER_alu  XLXI_12 (.I(B[7:0]), 
                             .O(XLXN_11[7:0]));
-   (* HU_SET = "XLXI_21_84" *) 
+   (* HU_SET = "XLXI_21_8" *) 
    FD8CE_HXILINX_alu  XLXI_21 (.C(CLK), 
                               .CE(CE), 
                               .CLR(XLXN_67), 
@@ -576,7 +575,7 @@ module alu(A,
    buf8b_MUSER_alu  XLXI_27 (.I(A[7:0]), 
                             .O(XLXN_4[7:0]));
    GND  XLXI_56 (.G(XLXN_67));
-   (* HU_SET = "XLXI_57_86" *) 
+   (* HU_SET = "XLXI_57_10" *) 
    NOR8_HXILINX_alu  XLXI_57 (.I0(ACC_DUMMY[7]), 
                              .I1(ACC_DUMMY[6]), 
                              .I2(ACC_DUMMY[5]), 
@@ -586,7 +585,7 @@ module alu(A,
                              .I6(ACC_DUMMY[1]), 
                              .I7(ACC_DUMMY[0]), 
                              .O(F[0]));
-   (* HU_SET = "XLXI_71_87" *) 
+   (* HU_SET = "XLXI_71_11" *) 
    D3_8E_HXILINX_alu  XLXI_71 (.A0(OP[0]), 
                               .A1(OP[1]), 
                               .A2(OP[2]), 
@@ -605,16 +604,16 @@ module alu(A,
                 .O(XLXN_170));
    AND2  XLXI_83 (.I0(XLXN_136), 
                  .I1(XLXN_170), 
-                 .O(XLXN_163));
+                 .O());
    AND2  XLXI_84 (.I0(XLXN_137), 
                  .I1(XLXN_160), 
                  .O(XLXN_162));
    OR2  XLXI_85 (.I0(XLXN_162), 
-                .I1(XLXN_163), 
+                .I1(XLXN_183), 
                 .O(XLXN_164));
    FDE #( .INIT(1'b0) ) XLXI_89 (.C(CLK), 
                 .CE(CE), 
-                .D(XLXN_180), 
+                .D(XLXN_183), 
                 .Q(F[1]));
    FDE #( .INIT(1'b0) ) XLXI_90 (.C(CLK), 
                 .CE(CE), 
@@ -622,7 +621,7 @@ module alu(A,
                 .Q(F[2]));
    AND2  XLXI_92 (.I0(XLXN_170), 
                  .I1(XLXN_179), 
-                 .O(XLXN_180));
+                 .O(XLXN_183));
    XOR2  XLXI_93 (.I0(XLXN_182), 
                  .I1(XLXN_135), 
                  .O(XLXN_179));

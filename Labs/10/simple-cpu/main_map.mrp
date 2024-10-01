@@ -10,7 +10,7 @@ Target Device  : xc6slx9
 Target Package : tqg144
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Tue Oct 01 00:02:53 2024
+Mapped Date    : Tue Oct 01 09:06:48 2024
 
 Design Summary
 --------------
@@ -22,26 +22,26 @@ Slice Logic Utilization:
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                        219 out of   5,720    3%
-    Number used as logic:                      206 out of   5,720    3%
-      Number using O6 output only:             178
+  Number of Slice LUTs:                        230 out of   5,720    4%
+    Number used as logic:                      218 out of   5,720    3%
+      Number using O6 output only:             190
       Number using O5 output only:               0
       Number using O5 and O6:                   28
       Number used as ROM:                        0
     Number used as Memory:                       0 out of   1,440    0%
-    Number used exclusively as route-thrus:     13
-      Number with same-slice register load:     13
+    Number used exclusively as route-thrus:     12
+      Number with same-slice register load:     12
       Number with same-slice carry load:         0
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   102 out of   1,430    7%
+  Number of occupied Slices:                   104 out of   1,430    7%
   Number of MUXCYs used:                        24 out of   2,860    1%
   Number of LUT Flip Flop pairs used:          291
-    Number with an unused Flip Flop:           102 out of     291   35%
-    Number with an unused LUT:                  72 out of     291   24%
-    Number of fully used LUT-FF pairs:         117 out of     291   40%
-    Number of unique control sets:              21
+    Number with an unused Flip Flop:            96 out of     291   32%
+    Number with an unused LUT:                  61 out of     291   20%
+    Number of fully used LUT-FF pairs:         134 out of     291   46%
+    Number of unique control sets:              22
     Number of slice register sites lost
       to control set restrictions:              85 out of  11,440    1%
 
@@ -80,11 +80,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                3.10
+Average Fanout of Non-Clock Nets:                3.16
 
-Peak Memory Usage:  4528 MB
-Total REAL time to MAP completion:  5 secs 
-Total CPU time to MAP completion:   4 secs 
+Peak Memory Usage:  4526 MB
+Total REAL time to MAP completion:  4 secs 
+Total CPU time to MAP completion:   3 secs 
 
 Table of Contents
 -----------------

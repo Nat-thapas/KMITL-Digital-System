@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : edetect.vf
-// /___/   /\     Timestamp : 09/29/2024 22:46:24
+// /___/   /\     Timestamp : 10/01/2024 09:08:24
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Personal/Projects/Digital Labs/Labs/10/super-simple-cpu/edetect.vf" -w "D:/Personal/Projects/Digital Labs/Labs/10/super-simple-cpu/edetect.sch"
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Classes-2024/Digital System Fundamentals Shared/Labs/10/super-simple-cpu/edetect.vf" -w "D:/Classes-2024/Digital System Fundamentals Shared/Labs/10/super-simple-cpu/edetect.sch"
 //Design Name: edetect
 //Device: spartan6
 //Purpose:

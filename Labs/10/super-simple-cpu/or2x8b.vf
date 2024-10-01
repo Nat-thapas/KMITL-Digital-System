@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : or2x8b.vf
-// /___/   /\     Timestamp : 09/29/2024 22:46:24
+// /___/   /\     Timestamp : 10/01/2024 09:08:23
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Personal/Projects/Digital Labs/Labs/10/super-simple-cpu/or2x8b.vf" -w "D:/Personal/Projects/Digital Labs/Labs/10/super-simple-cpu/or2x8b.sch"
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Classes-2024/Digital System Fundamentals Shared/Labs/10/super-simple-cpu/or2x8b.vf" -w "D:/Classes-2024/Digital System Fundamentals Shared/Labs/10/super-simple-cpu/or2x8b.sch"
 //Design Name: or2x8b
 //Device: spartan6
 //Purpose:

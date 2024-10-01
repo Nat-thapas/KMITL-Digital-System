@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : split8x4x4.vf
-// /___/   /\     Timestamp : 10/01/2024 00:02:39
+// /___/   /\     Timestamp : 10/01/2024 08:57:49
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Personal/Projects/Digital Labs/Labs/10/simple-cpu/split8x4x4.vf" -w "D:/Personal/Projects/Digital Labs/Labs/10/simple-cpu/split8x4x4.sch"
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Classes-2024/Digital System Fundamentals Shared/Labs/10/simple-cpu/split8x4x4.vf" -w "D:/Classes-2024/Digital System Fundamentals Shared/Labs/10/simple-cpu/split8x4x4.sch"
 //Design Name: split8x4x4
 //Device: spartan6
 //Purpose:

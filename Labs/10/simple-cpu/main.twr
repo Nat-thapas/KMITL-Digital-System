@@ -2,9 +2,8 @@
 Release 14.7 Trace  (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-D:\Programs\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v
-3 -s 3 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf -ucf
-main.ucf
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf -ucf main.ucf
 
 Design file:              main.ncd
 Physical constraint file: main.pcf
@@ -37,23 +36,23 @@ Setup/Hold to clock OSC
             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------+------------+------------------+--------+
-BTN3        |    2.508(R)|      SLOW  |   -1.350(R)|      FAST  |OSC_BUFGP         |   0.000|
-BTN4        |    2.204(R)|      SLOW  |   -1.131(R)|      FAST  |OSC_BUFGP         |   0.000|
-DIP2        |    2.592(R)|      SLOW  |   -1.328(R)|      FAST  |OSC_BUFGP         |   0.000|
-DIP3        |    2.810(R)|      SLOW  |   -1.425(R)|      FAST  |OSC_BUFGP         |   0.000|
-DIP4        |    2.602(R)|      SLOW  |   -1.290(R)|      FAST  |OSC_BUFGP         |   0.000|
-DIP5        |    1.492(R)|      SLOW  |   -0.591(R)|      SLOW  |OSC_BUFGP         |   0.000|
-DIP6        |    1.430(R)|      SLOW  |   -0.531(R)|      SLOW  |OSC_BUFGP         |   0.000|
-DIP7        |    1.606(R)|      SLOW  |   -0.696(R)|      FAST  |OSC_BUFGP         |   0.000|
-DIP8        |    1.413(R)|      SLOW  |   -0.515(R)|      SLOW  |OSC_BUFGP         |   0.000|
-SW0         |    1.035(R)|      SLOW  |   -0.159(R)|      SLOW  |OSC_BUFGP         |   0.000|
-SW1         |    1.041(R)|      SLOW  |   -0.164(R)|      SLOW  |OSC_BUFGP         |   0.000|
-SW2         |    1.074(R)|      SLOW  |   -0.196(R)|      SLOW  |OSC_BUFGP         |   0.000|
-SW3         |    0.847(R)|      SLOW  |    0.024(R)|      SLOW  |OSC_BUFGP         |   0.000|
-SW4         |    1.154(R)|      SLOW  |   -0.266(R)|      SLOW  |OSC_BUFGP         |   0.000|
-SW5         |    1.240(R)|      SLOW  |   -0.349(R)|      SLOW  |OSC_BUFGP         |   0.000|
-SW6         |    1.135(R)|      SLOW  |   -0.249(R)|      SLOW  |OSC_BUFGP         |   0.000|
-SW7         |    1.185(R)|      SLOW  |   -0.303(R)|      SLOW  |OSC_BUFGP         |   0.000|
+BTN3        |    2.393(R)|      SLOW  |   -1.262(R)|      FAST  |OSC_BUFGP         |   0.000|
+BTN4        |    2.247(R)|      SLOW  |   -1.134(R)|      FAST  |OSC_BUFGP         |   0.000|
+DIP2        |    2.326(R)|      SLOW  |   -1.154(R)|      FAST  |OSC_BUFGP         |   0.000|
+DIP3        |    2.572(R)|      SLOW  |   -1.307(R)|      FAST  |OSC_BUFGP         |   0.000|
+DIP4        |    2.343(R)|      SLOW  |   -1.157(R)|      FAST  |OSC_BUFGP         |   0.000|
+DIP5        |    1.986(R)|      SLOW  |   -0.874(R)|      FAST  |OSC_BUFGP         |   0.000|
+DIP6        |    2.064(R)|      SLOW  |   -0.929(R)|      FAST  |OSC_BUFGP         |   0.000|
+DIP7        |    1.960(R)|      SLOW  |   -0.858(R)|      FAST  |OSC_BUFGP         |   0.000|
+DIP8        |    1.914(R)|      SLOW  |   -0.845(R)|      FAST  |OSC_BUFGP         |   0.000|
+SW0         |    1.194(R)|      SLOW  |   -0.309(R)|      SLOW  |OSC_BUFGP         |   0.000|
+SW1         |    1.583(R)|      SLOW  |   -0.678(R)|      SLOW  |OSC_BUFGP         |   0.000|
+SW2         |    1.327(R)|      SLOW  |   -0.432(R)|      SLOW  |OSC_BUFGP         |   0.000|
+SW3         |    1.294(R)|      SLOW  |   -0.399(R)|      SLOW  |OSC_BUFGP         |   0.000|
+SW4         |    0.912(R)|      SLOW  |   -0.025(R)|      SLOW  |OSC_BUFGP         |   0.000|
+SW5         |    0.887(R)|      SLOW  |    0.000(R)|      SLOW  |OSC_BUFGP         |   0.000|
+SW6         |    0.906(R)|      SLOW  |   -0.018(R)|      SLOW  |OSC_BUFGP         |   0.000|
+SW7         |    0.659(R)|      SLOW  |    0.215(R)|      SLOW  |OSC_BUFGP         |   0.000|
 ------------+------------+------------+------------+------------+------------------+--------+
 
 Clock OSC to Pad
@@ -61,33 +60,33 @@ Clock OSC to Pad
               |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
 Destination   |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
 --------------+-----------------+------------+-----------------+------------+------------------+--------+
-LED0          |        14.063(R)|      SLOW  |         4.797(R)|      FAST  |OSC_BUFGP         |   0.000|
-LED1          |        13.981(R)|      SLOW  |         4.356(R)|      FAST  |OSC_BUFGP         |   0.000|
-LED2          |        14.214(R)|      SLOW  |         4.532(R)|      FAST  |OSC_BUFGP         |   0.000|
-LED3          |         7.321(R)|      SLOW  |         3.774(R)|      FAST  |OSC_BUFGP         |   0.000|
-LED4          |         8.327(R)|      SLOW  |         4.297(R)|      FAST  |OSC_BUFGP         |   0.000|
-LED5          |         8.383(R)|      SLOW  |         4.348(R)|      FAST  |OSC_BUFGP         |   0.000|
-LED6          |         8.390(R)|      SLOW  |         4.189(R)|      FAST  |OSC_BUFGP         |   0.000|
-LED7          |         8.820(R)|      SLOW  |         4.512(R)|      FAST  |OSC_BUFGP         |   0.000|
-MN<0>         |         8.322(R)|      SLOW  |         4.508(R)|      FAST  |OSC_BUFGP         |   0.000|
-MN<1>         |         8.367(R)|      SLOW  |         4.501(R)|      FAST  |OSC_BUFGP         |   0.000|
-MN<2>         |         8.107(R)|      SLOW  |         4.313(R)|      FAST  |OSC_BUFGP         |   0.000|
-MN<3>         |         8.425(R)|      SLOW  |         4.556(R)|      FAST  |OSC_BUFGP         |   0.000|
-MN<4>         |         7.962(R)|      SLOW  |         4.164(R)|      FAST  |OSC_BUFGP         |   0.000|
-MN<5>         |         7.524(R)|      SLOW  |         3.864(R)|      FAST  |OSC_BUFGP         |   0.000|
-MN<6>         |         7.593(R)|      SLOW  |         3.900(R)|      FAST  |OSC_BUFGP         |   0.000|
-MN<7>         |         7.491(R)|      SLOW  |         3.843(R)|      FAST  |OSC_BUFGP         |   0.000|
-SSD_COM<0>    |        14.442(R)|      SLOW  |         5.262(R)|      FAST  |OSC_BUFGP         |   0.000|
-SSD_COM<1>    |        14.924(R)|      SLOW  |         4.468(R)|      FAST  |OSC_BUFGP         |   0.000|
-SSD_COM<2>    |        14.787(R)|      SLOW  |         4.420(R)|      FAST  |OSC_BUFGP         |   0.000|
-SSD_COM<3>    |        13.782(R)|      SLOW  |         3.958(R)|      FAST  |OSC_BUFGP         |   0.000|
-SSD_Segment<0>|        10.824(R)|      SLOW  |         4.884(R)|      FAST  |OSC_BUFGP         |   0.000|
-SSD_Segment<1>|        10.898(R)|      SLOW  |         4.935(R)|      FAST  |OSC_BUFGP         |   0.000|
-SSD_Segment<2>|        10.901(R)|      SLOW  |         5.087(R)|      FAST  |OSC_BUFGP         |   0.000|
-SSD_Segment<3>|        10.975(R)|      SLOW  |         5.138(R)|      FAST  |OSC_BUFGP         |   0.000|
-SSD_Segment<4>|        11.139(R)|      SLOW  |         4.901(R)|      FAST  |OSC_BUFGP         |   0.000|
-SSD_Segment<5>|        10.659(R)|      SLOW  |         4.622(R)|      FAST  |OSC_BUFGP         |   0.000|
-SSD_Segment<6>|        10.176(R)|      SLOW  |         4.771(R)|      FAST  |OSC_BUFGP         |   0.000|
+LED0          |        13.299(R)|      SLOW  |         4.500(R)|      FAST  |OSC_BUFGP         |   0.000|
+LED1          |        13.511(R)|      SLOW  |         3.854(R)|      FAST  |OSC_BUFGP         |   0.000|
+LED2          |        13.036(R)|      SLOW  |         3.904(R)|      FAST  |OSC_BUFGP         |   0.000|
+LED3          |         7.312(R)|      SLOW  |         3.738(R)|      FAST  |OSC_BUFGP         |   0.000|
+LED4          |         7.973(R)|      SLOW  |         3.939(R)|      FAST  |OSC_BUFGP         |   0.000|
+LED5          |         8.029(R)|      SLOW  |         3.990(R)|      FAST  |OSC_BUFGP         |   0.000|
+LED6          |         7.952(R)|      SLOW  |         3.982(R)|      FAST  |OSC_BUFGP         |   0.000|
+LED7          |         8.351(R)|      SLOW  |         4.289(R)|      FAST  |OSC_BUFGP         |   0.000|
+MN<0>         |         8.123(R)|      SLOW  |         4.280(R)|      FAST  |OSC_BUFGP         |   0.000|
+MN<1>         |         7.852(R)|      SLOW  |         4.107(R)|      FAST  |OSC_BUFGP         |   0.000|
+MN<2>         |         7.888(R)|      SLOW  |         4.111(R)|      FAST  |OSC_BUFGP         |   0.000|
+MN<3>         |         7.750(R)|      SLOW  |         4.030(R)|      FAST  |OSC_BUFGP         |   0.000|
+MN<4>         |         7.927(R)|      SLOW  |         4.140(R)|      FAST  |OSC_BUFGP         |   0.000|
+MN<5>         |         8.040(R)|      SLOW  |         4.218(R)|      FAST  |OSC_BUFGP         |   0.000|
+MN<6>         |         7.980(R)|      SLOW  |         4.182(R)|      FAST  |OSC_BUFGP         |   0.000|
+MN<7>         |         7.626(R)|      SLOW  |         3.942(R)|      FAST  |OSC_BUFGP         |   0.000|
+SSD_COM<0>    |        13.663(R)|      SLOW  |         5.301(R)|      FAST  |OSC_BUFGP         |   0.000|
+SSD_COM<1>    |        14.642(R)|      SLOW  |         4.393(R)|      FAST  |OSC_BUFGP         |   0.000|
+SSD_COM<2>    |        14.691(R)|      SLOW  |         4.135(R)|      FAST  |OSC_BUFGP         |   0.000|
+SSD_COM<3>    |        13.480(R)|      SLOW  |         4.121(R)|      FAST  |OSC_BUFGP         |   0.000|
+SSD_Segment<0>|        12.201(R)|      SLOW  |         5.196(R)|      FAST  |OSC_BUFGP         |   0.000|
+SSD_Segment<1>|        12.315(R)|      SLOW  |         5.267(R)|      FAST  |OSC_BUFGP         |   0.000|
+SSD_Segment<2>|        12.697(R)|      SLOW  |         5.144(R)|      FAST  |OSC_BUFGP         |   0.000|
+SSD_Segment<3>|        12.641(R)|      SLOW  |         5.126(R)|      FAST  |OSC_BUFGP         |   0.000|
+SSD_Segment<4>|        12.418(R)|      SLOW  |         4.962(R)|      FAST  |OSC_BUFGP         |   0.000|
+SSD_Segment<5>|        12.299(R)|      SLOW  |         4.910(R)|      FAST  |OSC_BUFGP         |   0.000|
+SSD_Segment<6>|        11.989(R)|      SLOW  |         4.462(R)|      FAST  |OSC_BUFGP         |   0.000|
 --------------+-----------------+------------+-----------------+------------+------------------+--------+
 
 Clock to Setup on destination clock OSC
@@ -95,18 +94,18 @@ Clock to Setup on destination clock OSC
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-OSC            |    9.912|    9.278|         |    7.281|
+OSC            |    9.205|    8.792|         |    6.781|
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Tue Oct 01 00:03:07 2024 
+Analysis completed Tue Oct 01 09:07:00 2024 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 4587 MB
+Peak Memory Usage: 4585 MB
 
 
 

@@ -5,14 +5,14 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="par" timeStamp="Tue Oct 01 00:03:01 2024">
+  <application stringID="par" timeStamp="Tue Oct 01 09:06:55 2024">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
         <column stringID="value"/>
         <row stringID="row" value="0">
           <item stringID="variable" value="Path"/>
-          <item stringID="value" value="D:\Programs\Xilinx\14.7\ISE_DS\ISE\\lib\nt64;D:\Programs\Xilinx\14.7\ISE_DS\ISE\\bin\nt64;D:\Programs\Xilinx\14.7\ISE_DS\ISE\bin\nt64;D:\Programs\Xilinx\14.7\ISE_DS\ISE\lib\nt64;D:\Programs\Xilinx\14.7\ISE_DS\ISE\..\..\..\DocNav;D:\Programs\Xilinx\14.7\ISE_DS\PlanAhead\bin;D:\Programs\Xilinx\14.7\ISE_DS\EDK\bin\nt64;D:\Programs\Xilinx\14.7\ISE_DS\EDK\lib\nt64;D:\Programs\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\nt\bin;D:\Programs\Xilinx\14.7\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;D:\Programs\Xilinx\14.7\ISE_DS\EDK\gnuwin\bin;D:\Programs\Xilinx\14.7\ISE_DS\EDK\gnu\arm\nt\bin;D:\Programs\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_be\bin;D:\Programs\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_le\bin;D:\Programs\Xilinx\14.7\ISE_DS\common\bin\nt64;D:\Programs\Xilinx\14.7\ISE_DS\common\lib\nt64;C:\Program Files\Eclipse Adoptium\jdk-17.0.12.7-hotspot\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.5\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.5\libnvvp;C:\Windows\System32;C:\Windows;C:\Windows\System32\wbem;C:\Windows\System32\windowspowershell\v1.0\;C:\Windows\System32\openssh\;C:\Program Files\dotnet\;C:\Program Files (x86)\certbot\bin;C:\Program Files\filebrowser;C:\Program Files\tesseract-ocr;C:\Program Files\microsoft vs code\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Program Files\GitHub CLI\;C:\Program Files\Go\bin;C:\Program Files\PowerShell\7\;C:\Users\natha\AppData\Local\pnpm;C:\Users\natha\.pyenv\pyenv-win\bin;C:\Users\natha\.pyenv\pyenv-win\shims;C:\Users\natha\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\natha\AppData\Local\Programs\Python\Python311\;C:\Users\natha\AppData\Local\Microsoft\WindowsApps;C:\msys64\mingw64\bin;C:\Programs\cloudflared;C:\Programs\ffmpeg\bin;C:\Programs\standalone;C:\Programs\wkhtmltox\wkhtmltopdf\bin;C:\Program Files (x86)\Nmap;C:\Users\natha\AppData\Local\nvs\;C:\Programs\qpdf-11.9.0-mingw64\bin;C:\Users\natha\AppData\Local\nvs\default;C:\Users\natha\go\bin;C:\Programs\php-5.5.38-Win32-VC11-x64;C:\Users\natha\.dotnet\tools;C:\Users\natha\AppData\Local\Programs\Ollama"/>
+          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\ISE\\lib\nt64;C:\Xilinx\14.7\ISE_DS\ISE\\bin\nt64;C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64;C:\Xilinx\14.7\ISE_DS\ISE\lib\nt64;C:\Xilinx\14.7\ISE_DS\ISE\..\..\..\DocNav;C:\Xilinx\14.7\ISE_DS\PlanAhead\bin;C:\Xilinx\14.7\ISE_DS\EDK\bin\nt64;C:\Xilinx\14.7\ISE_DS\EDK\lib\nt64;C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\nt\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnuwin\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\arm\nt\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_be\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_le\bin;C:\Xilinx\14.7\ISE_DS\common\bin\nt64;C:\Xilinx\14.7\ISE_DS\common\lib\nt64;C:\Program Files\Eclipse Adoptium\jdk-17.0.12.7-hotspot\bin;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Microsoft VS Code\bin;C:\Cadence\Orcad_9.2.3\tools\Capture;C:\Cadence\Orcad_9.2.3\tools\bin;C:\Cadence\Orcad_9.2.3\tools\jre\bin;C:\Cadence\Orcad_9.2.3\tools\fet\bin;C:\Cadence\Orcad_9.2.3\tools\specctra\bin;C:\Program Files\MATLAB\R2023b\bin;C:\Program Files\usbipd-win\;C:\Program Files\Git\cmd;C:\Program Files\PowerShell\7\;C:\Program Files\dotnet\;C:\Users\natha\.pyenv\pyenv-win\bin;C:\Users\natha\.pyenv\pyenv-win\shims;C:\Users\natha\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\natha\AppData\Local\Programs\Python\Python311\;C:\Users\natha\AppData\Local\Microsoft\WindowsApps;C:\msys64\mingw64\bin;C:\Program Files (x86)\Nmap;C:\Programs;C:\Programs\ffmpeg\bin;C:\Program Files\Azure Data Studio\bin;C:\Users\natha\AppData\Local\nvs\;C:\Programs\wabt\bin;C:\Users\natha\AppData\Local\nvs\default;C:\Programs\Graphviz\bin"/>
         </row>
         <row stringID="row" value="1">
           <item stringID="variable" value="PATHEXT"/>
@@ -20,19 +20,19 @@
         </row>
         <row stringID="row" value="2">
           <item stringID="variable" value="XILINX"/>
-          <item stringID="value" value="D:\Programs\Xilinx\14.7\ISE_DS\ISE\"/>
+          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\ISE\"/>
         </row>
         <row stringID="row" value="3">
           <item stringID="variable" value="XILINX_DSP"/>
-          <item stringID="value" value="D:\Programs\Xilinx\14.7\ISE_DS\ISE"/>
+          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\ISE"/>
         </row>
         <row stringID="row" value="4">
           <item stringID="variable" value="XILINX_EDK"/>
-          <item stringID="value" value="D:\Programs\Xilinx\14.7\ISE_DS\EDK"/>
+          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\EDK"/>
         </row>
         <row stringID="row" value="5">
           <item stringID="variable" value="XILINX_PLANAHEAD"/>
-          <item stringID="value" value="D:\Programs\Xilinx\14.7\ISE_DS\PlanAhead"/>
+          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\PlanAhead"/>
         </row>
         <row stringID="row" value="6">
           <item stringID="variable" value="XILINX_VC_CHECK_NOOP"/>
@@ -43,17 +43,13 @@
         <item stringID="User_EnvOsname" value="Microsoft , 64-bit"/>
         <item stringID="User_EnvOsrelease" value="major release  (build 9200)"/>
       </item>
-      <item stringID="User_EnvHost" value="Deskbottom"/>
+      <item stringID="User_EnvHost" value="Lapbottom"/>
       <table stringID="User_EnvCpu">
         <column stringID="arch"/>
         <column stringID="speed"/>
         <row stringID="row" value="0">
-          <item stringID="arch" value="AMD Ryzen 9 3900X 12-Core Processor            "/>
-          <item stringID="speed" value="3800 MHz"/>
-        </row>
-        <row stringID="row" value="1">
-          <item stringID="arch" value="AMD Ryzen 9 3900X 12-Core Processor            "/>
-          <item stringID="speed" value="3800 MHz"/>
+          <item stringID="arch" value="12th Gen Intel(R) Core(TM) i5-12500H"/>
+          <item stringID="speed" value="3110 MHz"/>
         </row>
       </table>
     </section>
@@ -67,12 +63,12 @@
     </task>
     <task stringID="PAR_PAR">
       <section stringID="PAR_DESIGN_SUMMARY">
-        <item stringID="PAR_REAL_TIME_COMPLETION_ROUTER" value="3 secs "/>
-        <item stringID="PAR_CPU_TIME_COMPLETION_ROUTER" value="3 secs "/>
+        <item stringID="PAR_REAL_TIME_COMPLETION_ROUTER" value="2 secs "/>
+        <item stringID="PAR_CPU_TIME_COMPLETION_ROUTER" value="2 secs "/>
         <item dataType="int" stringID="PAR_UNROUTES" value="0"/>
         <item dataType="float" stringID="PAR_TIMING_SCORE" value="0.000000"/>
-        <item stringID="PAR_REAL_TIME_COMPLETION_PAR" value="3 secs "/>
-        <item stringID="PAR_CPU_TIME_COMPLETION_PAR" value="3 secs "/>
+        <item stringID="PAR_REAL_TIME_COMPLETION_PAR" value="2 secs "/>
+        <item stringID="PAR_CPU_TIME_COMPLETION_PAR" value="2 secs "/>
       </section>
     </task>
     <task stringID="PAR_par">
@@ -1319,14 +1315,14 @@
     </task>
   </application>
 
-  <application stringID="Par" timeStamp="Tue Oct 01 00:03:02 2024">
+  <application stringID="Par" timeStamp="Tue Oct 01 09:06:56 2024">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
         <column stringID="value"/>
         <row stringID="row" value="0">
           <item stringID="variable" value="Path"/>
-          <item stringID="value" value="D:\Programs\Xilinx\14.7\ISE_DS\ISE\\lib\nt64;D:\Programs\Xilinx\14.7\ISE_DS\ISE\\bin\nt64;D:\Programs\Xilinx\14.7\ISE_DS\ISE\bin\nt64;D:\Programs\Xilinx\14.7\ISE_DS\ISE\lib\nt64;D:\Programs\Xilinx\14.7\ISE_DS\ISE\..\..\..\DocNav;D:\Programs\Xilinx\14.7\ISE_DS\PlanAhead\bin;D:\Programs\Xilinx\14.7\ISE_DS\EDK\bin\nt64;D:\Programs\Xilinx\14.7\ISE_DS\EDK\lib\nt64;D:\Programs\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\nt\bin;D:\Programs\Xilinx\14.7\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;D:\Programs\Xilinx\14.7\ISE_DS\EDK\gnuwin\bin;D:\Programs\Xilinx\14.7\ISE_DS\EDK\gnu\arm\nt\bin;D:\Programs\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_be\bin;D:\Programs\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_le\bin;D:\Programs\Xilinx\14.7\ISE_DS\common\bin\nt64;D:\Programs\Xilinx\14.7\ISE_DS\common\lib\nt64;C:\Program Files\Eclipse Adoptium\jdk-17.0.12.7-hotspot\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.5\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.5\libnvvp;C:\Windows\System32;C:\Windows;C:\Windows\System32\wbem;C:\Windows\System32\windowspowershell\v1.0\;C:\Windows\System32\openssh\;C:\Program Files\dotnet\;C:\Program Files (x86)\certbot\bin;C:\Program Files\filebrowser;C:\Program Files\tesseract-ocr;C:\Program Files\microsoft vs code\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Program Files\GitHub CLI\;C:\Program Files\Go\bin;C:\Program Files\PowerShell\7\;C:\Users\natha\AppData\Local\pnpm;C:\Users\natha\.pyenv\pyenv-win\bin;C:\Users\natha\.pyenv\pyenv-win\shims;C:\Users\natha\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\natha\AppData\Local\Programs\Python\Python311\;C:\Users\natha\AppData\Local\Microsoft\WindowsApps;C:\msys64\mingw64\bin;C:\Programs\cloudflared;C:\Programs\ffmpeg\bin;C:\Programs\standalone;C:\Programs\wkhtmltox\wkhtmltopdf\bin;C:\Program Files (x86)\Nmap;C:\Users\natha\AppData\Local\nvs\;C:\Programs\qpdf-11.9.0-mingw64\bin;C:\Users\natha\AppData\Local\nvs\default;C:\Users\natha\go\bin;C:\Programs\php-5.5.38-Win32-VC11-x64;C:\Users\natha\.dotnet\tools;C:\Users\natha\AppData\Local\Programs\Ollama"/>
+          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\ISE\\lib\nt64;C:\Xilinx\14.7\ISE_DS\ISE\\bin\nt64;C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64;C:\Xilinx\14.7\ISE_DS\ISE\lib\nt64;C:\Xilinx\14.7\ISE_DS\ISE\..\..\..\DocNav;C:\Xilinx\14.7\ISE_DS\PlanAhead\bin;C:\Xilinx\14.7\ISE_DS\EDK\bin\nt64;C:\Xilinx\14.7\ISE_DS\EDK\lib\nt64;C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\nt\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnuwin\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\arm\nt\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_be\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_le\bin;C:\Xilinx\14.7\ISE_DS\common\bin\nt64;C:\Xilinx\14.7\ISE_DS\common\lib\nt64;C:\Program Files\Eclipse Adoptium\jdk-17.0.12.7-hotspot\bin;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Microsoft VS Code\bin;C:\Cadence\Orcad_9.2.3\tools\Capture;C:\Cadence\Orcad_9.2.3\tools\bin;C:\Cadence\Orcad_9.2.3\tools\jre\bin;C:\Cadence\Orcad_9.2.3\tools\fet\bin;C:\Cadence\Orcad_9.2.3\tools\specctra\bin;C:\Program Files\MATLAB\R2023b\bin;C:\Program Files\usbipd-win\;C:\Program Files\Git\cmd;C:\Program Files\PowerShell\7\;C:\Program Files\dotnet\;C:\Users\natha\.pyenv\pyenv-win\bin;C:\Users\natha\.pyenv\pyenv-win\shims;C:\Users\natha\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\natha\AppData\Local\Programs\Python\Python311\;C:\Users\natha\AppData\Local\Microsoft\WindowsApps;C:\msys64\mingw64\bin;C:\Program Files (x86)\Nmap;C:\Programs;C:\Programs\ffmpeg\bin;C:\Program Files\Azure Data Studio\bin;C:\Users\natha\AppData\Local\nvs\;C:\Programs\wabt\bin;C:\Users\natha\AppData\Local\nvs\default;C:\Programs\Graphviz\bin"/>
         </row>
         <row stringID="row" value="1">
           <item stringID="variable" value="PATHEXT"/>
@@ -1334,19 +1330,19 @@
         </row>
         <row stringID="row" value="2">
           <item stringID="variable" value="XILINX"/>
-          <item stringID="value" value="D:\Programs\Xilinx\14.7\ISE_DS\ISE\"/>
+          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\ISE\"/>
         </row>
         <row stringID="row" value="3">
           <item stringID="variable" value="XILINX_DSP"/>
-          <item stringID="value" value="D:\Programs\Xilinx\14.7\ISE_DS\ISE"/>
+          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\ISE"/>
         </row>
         <row stringID="row" value="4">
           <item stringID="variable" value="XILINX_EDK"/>
-          <item stringID="value" value="D:\Programs\Xilinx\14.7\ISE_DS\EDK"/>
+          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\EDK"/>
         </row>
         <row stringID="row" value="5">
           <item stringID="variable" value="XILINX_PLANAHEAD"/>
-          <item stringID="value" value="D:\Programs\Xilinx\14.7\ISE_DS\PlanAhead"/>
+          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\PlanAhead"/>
         </row>
         <row stringID="row" value="6">
           <item stringID="variable" value="XILINX_VC_CHECK_NOOP"/>
@@ -1357,17 +1353,13 @@
         <item stringID="User_EnvOsname" value="Microsoft , 64-bit"/>
         <item stringID="User_EnvOsrelease" value="major release  (build 9200)"/>
       </item>
-      <item stringID="User_EnvHost" value="Deskbottom"/>
+      <item stringID="User_EnvHost" value="Lapbottom"/>
       <table stringID="User_EnvCpu">
         <column stringID="arch"/>
         <column stringID="speed"/>
         <row stringID="row" value="0">
-          <item stringID="arch" value="AMD Ryzen 9 3900X 12-Core Processor            "/>
-          <item stringID="speed" value="3800 MHz"/>
-        </row>
-        <row stringID="row" value="1">
-          <item stringID="arch" value="AMD Ryzen 9 3900X 12-Core Processor            "/>
-          <item stringID="speed" value="3800 MHz"/>
+          <item stringID="arch" value="12th Gen Intel(R) Core(TM) i5-12500H"/>
+          <item stringID="speed" value="3110 MHz"/>
         </row>
       </table>
     </section>
@@ -1379,9 +1371,9 @@
           <item dataType="int" stringID="PAR_NUM_SLICE_LATCHTHRU" value="0"/>
           <item dataType="int" stringID="PAR_NUM_SLICE_LATCHLOGIC" value="0"/>
         </item>
-        <item AVAILABLE="5720" dataType="int" label="Number of Slice LUTS" stringID="PAR_SLICE_LUTS" value="219">
+        <item AVAILABLE="5720" dataType="int" label="Number of Slice LUTS" stringID="PAR_SLICE_LUTS" value="230">
           <item dataType="int" stringID="PAR_NUM_LOGIC_O5ONLY" value="0"/>
-          <item dataType="int" stringID="PAR_NUM_LOGIC_O6ONLY" value="178"/>
+          <item dataType="int" stringID="PAR_NUM_LOGIC_O6ONLY" value="190"/>
           <item dataType="int" stringID="PAR_NUM_LOGIC_O5ANDO6" value="28"/>
           <item dataType="int" stringID="PAR_NUM_ROM_O5ONLY" value="0"/>
           <item dataType="int" stringID="PAR_NUM_ROM_O6ONLY" value="0"/>
@@ -1396,21 +1388,21 @@
           <item dataType="int" stringID="PAR_NUM_SRL_O6ONLY" value="0"/>
           <item dataType="int" stringID="PAR_NUM_SRL_O5ANDO6" value="0"/>
           <item dataType="int" stringID="PAR_NUM_LUT_RT_EXO6" value="0"/>
-          <item dataType="int" stringID="PAR_NUM_LUT_RT_EXO5" value="13"/>
+          <item dataType="int" stringID="PAR_NUM_LUT_RT_EXO5" value="12"/>
           <item dataType="int" stringID="PAR_NUM_LUT_RT_O5ANDO6" value="0"/>
-          <item dataType="int" stringID="PAR_NUM_LUT_RT_DRIVES_FLOP" value="13"/>
+          <item dataType="int" stringID="PAR_NUM_LUT_RT_DRIVES_FLOP" value="12"/>
           <item dataType="int" stringID="PAR_NUM_LUT_RT_DRIVES_CARRY4" value="0"/>
           <item dataType="int" stringID="PAR_NUM_LUT_RT_DRIVES_OTHERS" value="0"/>
         </item>
-        <item AVAILABLE="1430" dataType="int" stringID="PAR_OCCUPIED_SLICES" value="102">
+        <item AVAILABLE="1430" dataType="int" stringID="PAR_OCCUPIED_SLICES" value="104">
           <item AVAILABLE="355" dataType="int" stringID="PAR_NUM_SLICEL" value="13"/>
           <item AVAILABLE="360" dataType="int" stringID="PAR_NUM_SLICEM" value="0"/>
-          <item AVAILABLE="715" dataType="int" stringID="PAR_NUM_SLICEX" value="89"/>
+          <item AVAILABLE="715" dataType="int" stringID="PAR_NUM_SLICEX" value="91"/>
         </item>
         <item dataType="int" stringID="PAR_OCCUPIED_LUT_AND_FF" value="291">
-          <item dataType="int" stringID="PAR_OCCUPIED_LUT_ONLY" value="102"/>
-          <item dataType="int" stringID="PAR_OCCUPIED_FF_ONLY" value="72"/>
-          <item dataType="int" stringID="PAR_OCCUPIED_FF_AND_LUT" value="117"/>
+          <item dataType="int" stringID="PAR_OCCUPIED_LUT_ONLY" value="96"/>
+          <item dataType="int" stringID="PAR_OCCUPIED_FF_ONLY" value="61"/>
+          <item dataType="int" stringID="PAR_OCCUPIED_FF_AND_LUT" value="134"/>
         </item>
       </section>
       <section stringID="PAR_IOB_REPORTING">
