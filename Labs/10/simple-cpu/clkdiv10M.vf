@@ -6,13 +6,13 @@
 // /___/  \  /    Vendor: Xilinx 
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
-//  /   /         Filename : clkdiv20M.vf
-// /___/   /\     Timestamp : 10/01/2024 13:40:55
+//  /   /         Filename : clkdiv10M.vf
+// /___/   /\     Timestamp : 10/01/2024 14:31:15
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Classes-2024/Digital System Fundamentals Shared/Labs/10/simple-cpu/clkdiv20M.vf" -w "D:/Classes-2024/Digital System Fundamentals Shared/Labs/10/simple-cpu/clkdiv20M.sch"
-//Design Name: clkdiv20M
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Classes-2024/Digital System Fundamentals Shared/Labs/10/simple-cpu/clkdiv10M.vf" -w "D:/Classes-2024/Digital System Fundamentals Shared/Labs/10/simple-cpu/clkdiv10M.sch"
+//Design Name: clkdiv10M
 //Device: spartan6
 //Purpose:
 //    This verilog netlist is translated from an ECS schematic.It can be 
@@ -20,7 +20,7 @@
 //
 `timescale 100 ps / 10 ps
 
-module CD4CE_HXILINX_clkdiv20M(CEO, Q0, Q1, Q2, Q3, TC, C, CE, CLR);
+module CD4CE_HXILINX_clkdiv10M(CEO, Q0, Q1, Q2, Q3, TC, C, CE, CLR);
    
    parameter TERMINAL_COUNT = 4'b1001;
    
@@ -67,7 +67,7 @@ module CD4CE_HXILINX_clkdiv20M(CEO, Q0, Q1, Q2, Q3, TC, C, CE, CLR);
 endmodule
 `timescale 1ns / 1ps
 
-module clkdiv20M(CLK, 
+module clkdiv10M(CLK, 
                  CEO);
 
     input CLK;
@@ -83,8 +83,8 @@ module clkdiv20M(CLK,
    wire XLXN_51;
    wire XLXN_56;
    
-   (* HU_SET = "XLXI_1_119" *) 
-   CD4CE_HXILINX_clkdiv20M  XLXI_1 (.C(CLK_I), 
+   (* HU_SET = "XLXI_1_0" *) 
+   CD4CE_HXILINX_clkdiv10M  XLXI_1 (.C(CLK_I), 
                                    .CE(XLXN_3), 
                                    .CLR(XLXN_15), 
                                    .CEO(XLXN_14), 
@@ -95,8 +95,8 @@ module clkdiv20M(CLK,
                                    .TC());
    VCC  XLXI_2 (.P(XLXN_3));
    GND  XLXI_3 (.G(XLXN_15));
-   (* HU_SET = "XLXI_14_120" *) 
-   CD4CE_HXILINX_clkdiv20M  XLXI_14 (.C(CLK_I), 
+   (* HU_SET = "XLXI_14_1" *) 
+   CD4CE_HXILINX_clkdiv10M  XLXI_14 (.C(CLK_I), 
                                     .CE(XLXN_14), 
                                     .CLR(XLXN_15), 
                                     .CEO(XLXN_27), 
@@ -105,8 +105,8 @@ module clkdiv20M(CLK,
                                     .Q2(), 
                                     .Q3(), 
                                     .TC());
-   (* HU_SET = "XLXI_17_121" *) 
-   CD4CE_HXILINX_clkdiv20M  XLXI_17 (.C(CLK_I), 
+   (* HU_SET = "XLXI_17_2" *) 
+   CD4CE_HXILINX_clkdiv10M  XLXI_17 (.C(CLK_I), 
                                     .CE(XLXN_27), 
                                     .CLR(XLXN_15), 
                                     .CEO(XLXN_37), 
@@ -115,8 +115,8 @@ module clkdiv20M(CLK,
                                     .Q2(), 
                                     .Q3(), 
                                     .TC());
-   (* HU_SET = "XLXI_22_122" *) 
-   CD4CE_HXILINX_clkdiv20M  XLXI_22 (.C(CLK_I), 
+   (* HU_SET = "XLXI_22_3" *) 
+   CD4CE_HXILINX_clkdiv10M  XLXI_22 (.C(CLK_I), 
                                     .CE(XLXN_37), 
                                     .CLR(XLXN_15), 
                                     .CEO(XLXN_44), 
@@ -125,8 +125,8 @@ module clkdiv20M(CLK,
                                     .Q2(), 
                                     .Q3(), 
                                     .TC());
-   (* HU_SET = "XLXI_25_123" *) 
-   CD4CE_HXILINX_clkdiv20M  XLXI_25 (.C(CLK_I), 
+   (* HU_SET = "XLXI_25_4" *) 
+   CD4CE_HXILINX_clkdiv10M  XLXI_25 (.C(CLK_I), 
                                     .CE(XLXN_44), 
                                     .CLR(XLXN_15), 
                                     .CEO(XLXN_51), 
@@ -135,8 +135,8 @@ module clkdiv20M(CLK,
                                     .Q2(), 
                                     .Q3(), 
                                     .TC());
-   (* HU_SET = "XLXI_28_124" *) 
-   CD4CE_HXILINX_clkdiv20M  XLXI_28 (.C(CLK_I), 
+   (* HU_SET = "XLXI_28_5" *) 
+   CD4CE_HXILINX_clkdiv10M  XLXI_28 (.C(CLK_I), 
                                     .CE(XLXN_51), 
                                     .CLR(XLXN_15), 
                                     .CEO(XLXN_56), 
@@ -145,8 +145,8 @@ module clkdiv20M(CLK,
                                     .Q2(), 
                                     .Q3(), 
                                     .TC());
-   (* HU_SET = "XLXI_31_125" *) 
-   CD4CE_HXILINX_clkdiv20M  XLXI_31 (.C(CLK_I), 
+   (* HU_SET = "XLXI_31_6" *) 
+   CD4CE_HXILINX_clkdiv10M  XLXI_31 (.C(CLK_I), 
                                     .CE(XLXN_56), 
                                     .CLR(XLXN_15), 
                                     .CEO(CEO), 

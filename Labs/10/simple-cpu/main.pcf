@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Tue Oct 01 12:22:46 2024
+// Written by: Map P.20131013 on Tue Oct 01 14:31:36 2024
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -35,8 +35,6 @@ COMP "LED4" LOCATE = SITE "P78" LEVEL 1;
 COMP "BTN4" LOCATE = SITE "P48" LEVEL 1;
 COMP "LED5" LOCATE = SITE "P75" LEVEL 1;
 COMP "BTN5" LOCATE = SITE "P51" LEVEL 1;
-COMP "LED6" LOCATE = SITE "P74" LEVEL 1;
-COMP "LED7" LOCATE = SITE "P67" LEVEL 1;
 COMP "MN<0>" LOCATE = SITE "P95" LEVEL 1;
 COMP "MN<1>" LOCATE = SITE "P94" LEVEL 1;
 COMP "MN<2>" LOCATE = SITE "P93" LEVEL 1;

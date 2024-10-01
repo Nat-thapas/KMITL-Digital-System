@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.15 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.15 secs
  
 --> Reading design: main.prj
 
@@ -172,14 +172,13 @@ Analyzing Verilog file "D:\Classes-2024\Digital System Fundamentals Shared\Labs\
 Parsing module <gnd8>.
 Analyzing Verilog file "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\edetect.vf" into library work
 Parsing module <edetect>.
-Analyzing Verilog file "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\clkdiv20M.vf" into library work
-Parsing module <CD4CE_HXILINX_clkdiv20M>.
-Parsing module <FTCE_HXILINX_clkdiv20M>.
-Parsing module <clkdiv20M>.
 Analyzing Verilog file "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\clkdiv20k.vf" into library work
 Parsing module <CD4CE_HXILINX_clkdiv20k>.
 Parsing module <FTCE_HXILINX_clkdiv20k>.
 Parsing module <clkdiv20k>.
+Analyzing Verilog file "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\clkdiv10M.vf" into library work
+Parsing module <CD4CE_HXILINX_clkdiv10M>.
+Parsing module <clkdiv10M>.
 Analyzing Verilog file "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\alu.vf" into library work
 Parsing module <FD8CE_HXILINX_alu>.
 Parsing module <M2_1E_HXILINX_alu>.
@@ -216,6 +215,7 @@ Parsing module <D2_4E_HXILINX_main>.
 Parsing module <M2_1_HXILINX_main>.
 Parsing module <CB2CE_HXILINX_main>.
 Parsing module <OBUFT8_HXILINX_main>.
+Parsing module <clkdiv10M_MUSER_main>.
 Parsing module <vcc4_MUSER_main>.
 Parsing module <mux2x1x4_MUSER_main>.
 Parsing module <ssd4d0ftb_MUSER_main>.
@@ -235,7 +235,6 @@ Parsing module <and2x8b_MUSER_main>.
 Parsing module <xor2x8b_MUSER_main>.
 Parsing module <alu_MUSER_main>.
 Parsing module <regs_MUSER_main>.
-Parsing module <clkdiv20M_MUSER_main>.
 Parsing module <pc_MUSER_main>.
 Parsing module <edetect_MUSER_main>.
 Parsing module <vcc16_MUSER_main>.
@@ -243,6 +242,9 @@ Parsing module <mux4x1x16e_MUSER_main>.
 Parsing module <gnd16_MUSER_main>.
 Parsing module <inst_stack_MUSER_main>.
 Parsing module <main>.
+Analyzing Verilog file "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\clkdiv20M.vf" into library work
+Parsing module <CD4CE_HXILINX_clkdiv20M>.
+Parsing module <clkdiv20M>.
 
 =========================================================================
 *                            HDL Elaboration                            *
@@ -285,20 +287,6 @@ WARNING:HDLCompiler:413 - "D:\Classes-2024\Digital System Fundamentals Shared\La
 Elaborating module <FDP>.
 
 Elaborating module <AND2>.
-
-Elaborating module <clkdiv20M_MUSER_main>.
-
-Elaborating module <CD4CE_HXILINX_main>.
-WARNING:HDLCompiler:413 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" Line 347: Result of 5-bit expression is truncated to fit in 4-bit target.
-
-Elaborating module <INV>.
-
-Elaborating module <FTCE_HXILINX_main>.
-
-Elaborating module <CB2CE_HXILINX_main>.
-WARNING:HDLCompiler:413 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" Line 577: Result of 3-bit expression is truncated to fit in 2-bit target.
-
-Elaborating module <D2_4E_HXILINX_main>.
 
 Elaborating module <mux4x1x8e_MUSER_main>.
 
@@ -360,7 +348,19 @@ Elaborating module <LUT4(INIT=16'b010011110011111)>.
 
 Elaborating module <LUT4(INIT=16'b1101011111101101)>.
 
+Elaborating module <CB2CE_HXILINX_main>.
+WARNING:HDLCompiler:413 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" Line 577: Result of 3-bit expression is truncated to fit in 2-bit target.
+
+Elaborating module <D2_4E_HXILINX_main>.
+
+Elaborating module <INV>.
+
 Elaborating module <clkdiv20k_MUSER_main>.
+
+Elaborating module <CD4CE_HXILINX_main>.
+WARNING:HDLCompiler:413 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" Line 347: Result of 5-bit expression is truncated to fit in 4-bit target.
+
+Elaborating module <FTCE_HXILINX_main>.
 
 Elaborating module <mux2x1x4_MUSER_main>.
 
@@ -402,34 +402,33 @@ Elaborating module <AND3B1>.
 
 Elaborating module <OBUFT8_HXILINX_main>.
 
+Elaborating module <clkdiv10M_MUSER_main>.
+
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <main>.
     Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf".
-    Set property "HU_SET = XLXI_90_186" for instance <XLXI_90>.
-    Set property "HU_SET = XLXI_163_185" for instance <XLXI_163>.
-    Set property "HU_SET = XLXI_214_187" for instance <XLXI_214>.
-    Set property "HU_SET = XLXI_220_188" for instance <XLXI_220>.
-    Set property "HU_SET = XLXI_358_189" for instance <XLXI_358>.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2725: Output port <CEO> of the instance <XLXI_163> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2765: Output port <CEO> of the instance <XLXI_214> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2765: Output port <TC> of the instance <XLXI_214> is unconnected or connected to loadless signal.
+    Set property "HU_SET = XLXI_90_242" for instance <XLXI_90>.
+    Set property "HU_SET = XLXI_163_241" for instance <XLXI_163>.
+    Set property "HU_SET = XLXI_358_243" for instance <XLXI_358>.
+    Set property "HU_SET = XLXI_360_244" for instance <XLXI_360>.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2704: Output port <CEO> of the instance <XLXI_163> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <main> synthesized.
 
 Synthesizing Unit <inst_stack_MUSER_main>.
     Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf".
-    Set property "HU_SET = XLXI_51_177" for instance <XLXI_51>.
-    Set property "HU_SET = XLXI_52_178" for instance <XLXI_52>.
-    Set property "HU_SET = XLXI_53_179" for instance <XLXI_53>.
-    Set property "HU_SET = XLXI_54_180" for instance <XLXI_54>.
-    Set property "HU_SET = XLXI_56_181" for instance <XLXI_56>.
-    Set property "HU_SET = XLXI_57_182" for instance <XLXI_57>.
-    Set property "HU_SET = XLXI_58_183" for instance <XLXI_58>.
-    Set property "HU_SET = XLXI_59_184" for instance <XLXI_59>.
+    Set property "HU_SET = XLXI_51_233" for instance <XLXI_51>.
+    Set property "HU_SET = XLXI_52_234" for instance <XLXI_52>.
+    Set property "HU_SET = XLXI_53_235" for instance <XLXI_53>.
+    Set property "HU_SET = XLXI_54_236" for instance <XLXI_54>.
+    Set property "HU_SET = XLXI_56_237" for instance <XLXI_56>.
+    Set property "HU_SET = XLXI_57_238" for instance <XLXI_57>.
+    Set property "HU_SET = XLXI_58_239" for instance <XLXI_58>.
+    Set property "HU_SET = XLXI_59_240" for instance <XLXI_59>.
     Summary:
 	no macro.
 Unit <inst_stack_MUSER_main> synthesized.
@@ -442,22 +441,22 @@ Unit <gnd16_MUSER_main> synthesized.
 
 Synthesizing Unit <mux4x1x16e_MUSER_main>.
     Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf".
-    Set property "HU_SET = XLXI_1_161" for instance <XLXI_1>.
-    Set property "HU_SET = XLXI_2_162" for instance <XLXI_2>.
-    Set property "HU_SET = XLXI_3_163" for instance <XLXI_3>.
-    Set property "HU_SET = XLXI_4_164" for instance <XLXI_4>.
-    Set property "HU_SET = XLXI_5_165" for instance <XLXI_5>.
-    Set property "HU_SET = XLXI_6_166" for instance <XLXI_6>.
-    Set property "HU_SET = XLXI_7_167" for instance <XLXI_7>.
-    Set property "HU_SET = XLXI_8_168" for instance <XLXI_8>.
-    Set property "HU_SET = XLXI_9_169" for instance <XLXI_9>.
-    Set property "HU_SET = XLXI_10_170" for instance <XLXI_10>.
-    Set property "HU_SET = XLXI_11_171" for instance <XLXI_11>.
-    Set property "HU_SET = XLXI_12_172" for instance <XLXI_12>.
-    Set property "HU_SET = XLXI_13_173" for instance <XLXI_13>.
-    Set property "HU_SET = XLXI_14_174" for instance <XLXI_14>.
-    Set property "HU_SET = XLXI_15_175" for instance <XLXI_15>.
-    Set property "HU_SET = XLXI_16_176" for instance <XLXI_16>.
+    Set property "HU_SET = XLXI_1_217" for instance <XLXI_1>.
+    Set property "HU_SET = XLXI_2_218" for instance <XLXI_2>.
+    Set property "HU_SET = XLXI_3_219" for instance <XLXI_3>.
+    Set property "HU_SET = XLXI_4_220" for instance <XLXI_4>.
+    Set property "HU_SET = XLXI_5_221" for instance <XLXI_5>.
+    Set property "HU_SET = XLXI_6_222" for instance <XLXI_6>.
+    Set property "HU_SET = XLXI_7_223" for instance <XLXI_7>.
+    Set property "HU_SET = XLXI_8_224" for instance <XLXI_8>.
+    Set property "HU_SET = XLXI_9_225" for instance <XLXI_9>.
+    Set property "HU_SET = XLXI_10_226" for instance <XLXI_10>.
+    Set property "HU_SET = XLXI_11_227" for instance <XLXI_11>.
+    Set property "HU_SET = XLXI_12_228" for instance <XLXI_12>.
+    Set property "HU_SET = XLXI_13_229" for instance <XLXI_13>.
+    Set property "HU_SET = XLXI_14_230" for instance <XLXI_14>.
+    Set property "HU_SET = XLXI_15_231" for instance <XLXI_15>.
+    Set property "HU_SET = XLXI_16_232" for instance <XLXI_16>.
     Summary:
 	no macro.
 Unit <mux4x1x16e_MUSER_main> synthesized.
@@ -499,9 +498,9 @@ Unit <edetect_MUSER_main> synthesized.
 
 Synthesizing Unit <pc_MUSER_main>.
     Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf".
-    Set property "HU_SET = XLXI_4_160" for instance <XLXI_4>.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2142: Output port <CEO> of the instance <XLXI_4> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2142: Output port <TC> of the instance <XLXI_4> is unconnected or connected to loadless signal.
+    Set property "HU_SET = XLXI_4_216" for instance <XLXI_4>.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2129: Output port <CEO> of the instance <XLXI_4> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2129: Output port <TC> of the instance <XLXI_4> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <pc_MUSER_main> synthesized.
@@ -522,111 +521,24 @@ Synthesizing Unit <CB4CLED_HXILINX_main>.
 	inferred   9 Multiplexer(s).
 Unit <CB4CLED_HXILINX_main> synthesized.
 
-Synthesizing Unit <clkdiv20M_MUSER_main>.
-    Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf".
-    Set property "HU_SET = XLXI_1_152" for instance <XLXI_1>.
-    Set property "HU_SET = XLXI_14_153" for instance <XLXI_14>.
-    Set property "HU_SET = XLXI_17_154" for instance <XLXI_17>.
-    Set property "HU_SET = XLXI_22_155" for instance <XLXI_22>.
-    Set property "HU_SET = XLXI_25_156" for instance <XLXI_25>.
-    Set property "HU_SET = XLXI_28_157" for instance <XLXI_28>.
-    Set property "HU_SET = XLXI_31_158" for instance <XLXI_31>.
-    Set property "HU_SET = XLXI_36_159" for instance <XLXI_36>.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2039: Output port <Q0> of the instance <XLXI_1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2039: Output port <Q1> of the instance <XLXI_1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2039: Output port <Q2> of the instance <XLXI_1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2039: Output port <Q3> of the instance <XLXI_1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2039: Output port <TC> of the instance <XLXI_1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2051: Output port <Q0> of the instance <XLXI_14> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2051: Output port <Q1> of the instance <XLXI_14> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2051: Output port <Q2> of the instance <XLXI_14> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2051: Output port <Q3> of the instance <XLXI_14> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2051: Output port <TC> of the instance <XLXI_14> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2061: Output port <Q0> of the instance <XLXI_17> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2061: Output port <Q1> of the instance <XLXI_17> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2061: Output port <Q2> of the instance <XLXI_17> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2061: Output port <Q3> of the instance <XLXI_17> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2061: Output port <TC> of the instance <XLXI_17> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2071: Output port <Q0> of the instance <XLXI_22> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2071: Output port <Q1> of the instance <XLXI_22> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2071: Output port <Q2> of the instance <XLXI_22> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2071: Output port <Q3> of the instance <XLXI_22> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2071: Output port <TC> of the instance <XLXI_22> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2081: Output port <Q0> of the instance <XLXI_25> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2081: Output port <Q1> of the instance <XLXI_25> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2081: Output port <Q2> of the instance <XLXI_25> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2081: Output port <Q3> of the instance <XLXI_25> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2081: Output port <TC> of the instance <XLXI_25> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2091: Output port <Q0> of the instance <XLXI_28> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2091: Output port <Q1> of the instance <XLXI_28> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2091: Output port <Q2> of the instance <XLXI_28> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2091: Output port <Q3> of the instance <XLXI_28> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2091: Output port <TC> of the instance <XLXI_28> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2101: Output port <Q0> of the instance <XLXI_31> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2101: Output port <Q1> of the instance <XLXI_31> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2101: Output port <Q2> of the instance <XLXI_31> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2101: Output port <Q3> of the instance <XLXI_31> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2101: Output port <TC> of the instance <XLXI_31> is unconnected or connected to loadless signal.
-    Summary:
-	no macro.
-Unit <clkdiv20M_MUSER_main> synthesized.
-
-Synthesizing Unit <CD4CE_HXILINX_main>.
-    Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf".
-        TERMINAL_COUNT = 4'b1001
-    Found 1-bit register for signal <Q1>.
-    Found 1-bit register for signal <Q2>.
-    Found 1-bit register for signal <Q3>.
-    Found 1-bit register for signal <Q0>.
-    Found 4-bit adder for signal <Q3_GND_20_o_add_4_OUT> created at line 347.
-    Summary:
-	inferred   1 Adder/Subtractor(s).
-	inferred   4 D-type flip-flop(s).
-	inferred   7 Multiplexer(s).
-Unit <CD4CE_HXILINX_main> synthesized.
-
-Synthesizing Unit <FTCE_HXILINX_main>.
-    Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf".
-        INIT = 1'b0
-    Found 1-bit register for signal <Q>.
-    Summary:
-	inferred   1 D-type flip-flop(s).
-Unit <FTCE_HXILINX_main> synthesized.
-
-Synthesizing Unit <CB2CE_HXILINX_main>.
-    Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf".
-    Found 1-bit register for signal <Q1>.
-    Found 1-bit register for signal <Q0>.
-    Found 2-bit adder for signal <Q1_GND_23_o_add_0_OUT> created at line 577.
-    Summary:
-	inferred   1 Adder/Subtractor(s).
-	inferred   2 D-type flip-flop(s).
-Unit <CB2CE_HXILINX_main> synthesized.
-
-Synthesizing Unit <D2_4E_HXILINX_main>.
-    Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf".
-    Summary:
-	inferred   4 Multiplexer(s).
-Unit <D2_4E_HXILINX_main> synthesized.
-
 Synthesizing Unit <mux4x1x8e_MUSER_main>.
     Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf".
-    Set property "HU_SET = XLXI_1_99" for instance <XLXI_1>.
-    Set property "HU_SET = XLXI_2_100" for instance <XLXI_2>.
-    Set property "HU_SET = XLXI_3_101" for instance <XLXI_3>.
-    Set property "HU_SET = XLXI_4_102" for instance <XLXI_4>.
-    Set property "HU_SET = XLXI_5_103" for instance <XLXI_5>.
-    Set property "HU_SET = XLXI_6_104" for instance <XLXI_6>.
-    Set property "HU_SET = XLXI_7_105" for instance <XLXI_7>.
-    Set property "HU_SET = XLXI_8_106" for instance <XLXI_8>.
+    Set property "HU_SET = XLXI_1_163" for instance <XLXI_1>.
+    Set property "HU_SET = XLXI_2_164" for instance <XLXI_2>.
+    Set property "HU_SET = XLXI_3_165" for instance <XLXI_3>.
+    Set property "HU_SET = XLXI_4_166" for instance <XLXI_4>.
+    Set property "HU_SET = XLXI_5_167" for instance <XLXI_5>.
+    Set property "HU_SET = XLXI_6_168" for instance <XLXI_6>.
+    Set property "HU_SET = XLXI_7_169" for instance <XLXI_7>.
+    Set property "HU_SET = XLXI_8_170" for instance <XLXI_8>.
     Summary:
 	no macro.
 Unit <mux4x1x8e_MUSER_main> synthesized.
 
 Synthesizing Unit <regs_MUSER_main>.
     Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf".
-    Set property "HU_SET = XLXI_1_150" for instance <XLXI_1>.
-    Set property "HU_SET = XLXI_2_151" for instance <XLXI_2>.
+    Set property "HU_SET = XLXI_1_214" for instance <XLXI_1>.
+    Set property "HU_SET = XLXI_2_215" for instance <XLXI_2>.
     Summary:
 	no macro.
 Unit <regs_MUSER_main> synthesized.
@@ -640,25 +552,25 @@ Unit <FD8CE_HXILINX_main> synthesized.
 
 Synthesizing Unit <alu_MUSER_main>.
     Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf".
-    Set property "HU_SET = XLXI_2_147" for instance <XLXI_2>.
-    Set property "HU_SET = XLXI_21_146" for instance <XLXI_21>.
-    Set property "HU_SET = XLXI_57_148" for instance <XLXI_57>.
-    Set property "HU_SET = XLXI_71_149" for instance <XLXI_71>.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 1931: Output port <D0> of the instance <XLXI_71> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 1931: Output port <D3> of the instance <XLXI_71> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 1931: Output port <D5> of the instance <XLXI_71> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 1931: Output port <D6> of the instance <XLXI_71> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 1931: Output port <D7> of the instance <XLXI_71> is unconnected or connected to loadless signal.
+    Set property "HU_SET = XLXI_2_211" for instance <XLXI_2>.
+    Set property "HU_SET = XLXI_21_210" for instance <XLXI_21>.
+    Set property "HU_SET = XLXI_57_212" for instance <XLXI_57>.
+    Set property "HU_SET = XLXI_71_213" for instance <XLXI_71>.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2024: Output port <D0> of the instance <XLXI_71> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2024: Output port <D3> of the instance <XLXI_71> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2024: Output port <D5> of the instance <XLXI_71> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2024: Output port <D6> of the instance <XLXI_71> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 2024: Output port <D7> of the instance <XLXI_71> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <alu_MUSER_main> synthesized.
 
 Synthesizing Unit <ADSU8_HXILINX_main>.
     Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf".
-    Found 9-bit subtractor for signal <GND_29_o_GND_29_o_sub_3_OUT> created at line 300.
-    Found 9-bit subtractor for signal <GND_29_o_GND_29_o_sub_4_OUT> created at line 300.
+    Found 9-bit subtractor for signal <GND_23_o_GND_23_o_sub_3_OUT> created at line 300.
+    Found 9-bit subtractor for signal <GND_23_o_GND_23_o_sub_4_OUT> created at line 300.
     Found 9-bit adder for signal <n0039> created at line 298.
-    Found 9-bit adder for signal <BUS_0001_GND_29_o_add_1_OUT> created at line 298.
+    Found 9-bit adder for signal <BUS_0001_GND_23_o_add_1_OUT> created at line 298.
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred   4 Multiplexer(s).
@@ -690,14 +602,14 @@ Unit <buf8b_MUSER_main> synthesized.
 
 Synthesizing Unit <mux8x1x8e_MUSER_main>.
     Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf".
-    Set property "HU_SET = XLXI_1_138" for instance <XLXI_1>.
-    Set property "HU_SET = XLXI_2_139" for instance <XLXI_2>.
-    Set property "HU_SET = XLXI_3_140" for instance <XLXI_3>.
-    Set property "HU_SET = XLXI_4_141" for instance <XLXI_4>.
-    Set property "HU_SET = XLXI_5_142" for instance <XLXI_5>.
-    Set property "HU_SET = XLXI_6_143" for instance <XLXI_6>.
-    Set property "HU_SET = XLXI_7_144" for instance <XLXI_7>.
-    Set property "HU_SET = XLXI_8_145" for instance <XLXI_8>.
+    Set property "HU_SET = XLXI_1_202" for instance <XLXI_1>.
+    Set property "HU_SET = XLXI_2_203" for instance <XLXI_2>.
+    Set property "HU_SET = XLXI_3_204" for instance <XLXI_3>.
+    Set property "HU_SET = XLXI_4_205" for instance <XLXI_4>.
+    Set property "HU_SET = XLXI_5_206" for instance <XLXI_5>.
+    Set property "HU_SET = XLXI_6_207" for instance <XLXI_6>.
+    Set property "HU_SET = XLXI_7_208" for instance <XLXI_7>.
+    Set property "HU_SET = XLXI_8_209" for instance <XLXI_8>.
     Summary:
 	no macro.
 Unit <mux8x1x8e_MUSER_main> synthesized.
@@ -723,32 +635,32 @@ Unit <D3_8E_HXILINX_main> synthesized.
 
 Synthesizing Unit <lshift_MUSER_main>.
     Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf".
-    Set property "HU_SET = XLXI_436_112" for instance <XLXI_436>.
-    Set property "HU_SET = XLXI_437_113" for instance <XLXI_437>.
-    Set property "HU_SET = XLXI_438_114" for instance <XLXI_438>.
-    Set property "HU_SET = XLXI_439_115" for instance <XLXI_439>.
-    Set property "HU_SET = XLXI_440_116" for instance <XLXI_440>.
-    Set property "HU_SET = XLXI_441_117" for instance <XLXI_441>.
-    Set property "HU_SET = XLXI_442_118" for instance <XLXI_442>.
-    Set property "HU_SET = XLXI_443_119" for instance <XLXI_443>.
-    Set property "HU_SET = XLXI_454_120" for instance <XLXI_454>.
-    Set property "HU_SET = XLXI_455_121" for instance <XLXI_455>.
-    Set property "HU_SET = XLXI_456_122" for instance <XLXI_456>.
-    Set property "HU_SET = XLXI_457_123" for instance <XLXI_457>.
-    Set property "HU_SET = XLXI_458_124" for instance <XLXI_458>.
-    Set property "HU_SET = XLXI_459_125" for instance <XLXI_459>.
-    Set property "HU_SET = XLXI_460_126" for instance <XLXI_460>.
-    Set property "HU_SET = XLXI_461_127" for instance <XLXI_461>.
-    Set property "HU_SET = XLXI_466_128" for instance <XLXI_466>.
-    Set property "HU_SET = XLXI_467_129" for instance <XLXI_467>.
-    Set property "HU_SET = XLXI_468_130" for instance <XLXI_468>.
-    Set property "HU_SET = XLXI_469_131" for instance <XLXI_469>.
-    Set property "HU_SET = XLXI_470_132" for instance <XLXI_470>.
-    Set property "HU_SET = XLXI_471_133" for instance <XLXI_471>.
-    Set property "HU_SET = XLXI_472_134" for instance <XLXI_472>.
-    Set property "HU_SET = XLXI_473_135" for instance <XLXI_473>.
-    Set property "HU_SET = XLXI_558_136" for instance <XLXI_558>.
-    Set property "HU_SET = XLXI_645_137" for instance <XLXI_645>.
+    Set property "HU_SET = XLXI_436_176" for instance <XLXI_436>.
+    Set property "HU_SET = XLXI_437_177" for instance <XLXI_437>.
+    Set property "HU_SET = XLXI_438_178" for instance <XLXI_438>.
+    Set property "HU_SET = XLXI_439_179" for instance <XLXI_439>.
+    Set property "HU_SET = XLXI_440_180" for instance <XLXI_440>.
+    Set property "HU_SET = XLXI_441_181" for instance <XLXI_441>.
+    Set property "HU_SET = XLXI_442_182" for instance <XLXI_442>.
+    Set property "HU_SET = XLXI_443_183" for instance <XLXI_443>.
+    Set property "HU_SET = XLXI_454_184" for instance <XLXI_454>.
+    Set property "HU_SET = XLXI_455_185" for instance <XLXI_455>.
+    Set property "HU_SET = XLXI_456_186" for instance <XLXI_456>.
+    Set property "HU_SET = XLXI_457_187" for instance <XLXI_457>.
+    Set property "HU_SET = XLXI_458_188" for instance <XLXI_458>.
+    Set property "HU_SET = XLXI_459_189" for instance <XLXI_459>.
+    Set property "HU_SET = XLXI_460_190" for instance <XLXI_460>.
+    Set property "HU_SET = XLXI_461_191" for instance <XLXI_461>.
+    Set property "HU_SET = XLXI_466_192" for instance <XLXI_466>.
+    Set property "HU_SET = XLXI_467_193" for instance <XLXI_467>.
+    Set property "HU_SET = XLXI_468_194" for instance <XLXI_468>.
+    Set property "HU_SET = XLXI_469_195" for instance <XLXI_469>.
+    Set property "HU_SET = XLXI_470_196" for instance <XLXI_470>.
+    Set property "HU_SET = XLXI_471_197" for instance <XLXI_471>.
+    Set property "HU_SET = XLXI_472_198" for instance <XLXI_472>.
+    Set property "HU_SET = XLXI_473_199" for instance <XLXI_473>.
+    Set property "HU_SET = XLXI_558_200" for instance <XLXI_558>.
+    Set property "HU_SET = XLXI_645_201" for instance <XLXI_645>.
     Summary:
 	no macro.
 Unit <lshift_MUSER_main> synthesized.
@@ -779,55 +691,93 @@ Unit <gnd8_MUSER_main> synthesized.
 
 Synthesizing Unit <ssd4d0ftb_MUSER_main>.
     Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf".
-    Set property "HU_SET = XLXI_162_78" for instance <XLXI_162>.
-    Set property "HU_SET = XLXI_183_73" for instance <XLXI_183>.
-    Set property "HU_SET = XLXI_184_74" for instance <XLXI_184>.
-    Set property "HU_SET = XLXI_185_75" for instance <XLXI_185>.
-    Set property "HU_SET = XLXI_186_76" for instance <XLXI_186>.
-    Set property "HU_SET = XLXI_210_77" for instance <XLXI_210>.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 711: Output port <CEO> of the instance <XLXI_162> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 711: Output port <TC> of the instance <XLXI_162> is unconnected or connected to loadless signal.
+    Set property "HU_SET = XLXI_162_142" for instance <XLXI_162>.
+    Set property "HU_SET = XLXI_183_137" for instance <XLXI_183>.
+    Set property "HU_SET = XLXI_184_138" for instance <XLXI_184>.
+    Set property "HU_SET = XLXI_185_139" for instance <XLXI_185>.
+    Set property "HU_SET = XLXI_186_140" for instance <XLXI_186>.
+    Set property "HU_SET = XLXI_210_141" for instance <XLXI_210>.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 804: Output port <CEO> of the instance <XLXI_162> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 804: Output port <TC> of the instance <XLXI_162> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <ssd4d0ftb_MUSER_main> synthesized.
 
+Synthesizing Unit <CB2CE_HXILINX_main>.
+    Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf".
+    Found 1-bit register for signal <Q1>.
+    Found 1-bit register for signal <Q0>.
+    Found 2-bit adder for signal <Q1_GND_49_o_add_0_OUT> created at line 577.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 D-type flip-flop(s).
+Unit <CB2CE_HXILINX_main> synthesized.
+
+Synthesizing Unit <D2_4E_HXILINX_main>.
+    Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf".
+    Summary:
+	inferred   4 Multiplexer(s).
+Unit <D2_4E_HXILINX_main> synthesized.
+
 Synthesizing Unit <clkdiv20k_MUSER_main>.
     Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf".
-    Set property "HU_SET = XLXI_1_107" for instance <XLXI_1>.
-    Set property "HU_SET = XLXI_14_108" for instance <XLXI_14>.
-    Set property "HU_SET = XLXI_17_109" for instance <XLXI_17>.
-    Set property "HU_SET = XLXI_22_110" for instance <XLXI_22>.
-    Set property "HU_SET = XLXI_36_111" for instance <XLXI_36>.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 1255: Output port <Q0> of the instance <XLXI_1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 1255: Output port <Q1> of the instance <XLXI_1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 1255: Output port <Q2> of the instance <XLXI_1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 1255: Output port <Q3> of the instance <XLXI_1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 1255: Output port <TC> of the instance <XLXI_1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 1267: Output port <Q0> of the instance <XLXI_14> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 1267: Output port <Q1> of the instance <XLXI_14> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 1267: Output port <Q2> of the instance <XLXI_14> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 1267: Output port <Q3> of the instance <XLXI_14> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 1267: Output port <TC> of the instance <XLXI_14> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 1277: Output port <Q0> of the instance <XLXI_17> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 1277: Output port <Q1> of the instance <XLXI_17> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 1277: Output port <Q2> of the instance <XLXI_17> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 1277: Output port <Q3> of the instance <XLXI_17> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 1277: Output port <TC> of the instance <XLXI_17> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 1287: Output port <Q0> of the instance <XLXI_22> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 1287: Output port <Q1> of the instance <XLXI_22> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 1287: Output port <Q2> of the instance <XLXI_22> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 1287: Output port <Q3> of the instance <XLXI_22> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 1287: Output port <TC> of the instance <XLXI_22> is unconnected or connected to loadless signal.
+    Set property "HU_SET = XLXI_1_171" for instance <XLXI_1>.
+    Set property "HU_SET = XLXI_14_172" for instance <XLXI_14>.
+    Set property "HU_SET = XLXI_17_173" for instance <XLXI_17>.
+    Set property "HU_SET = XLXI_22_174" for instance <XLXI_22>.
+    Set property "HU_SET = XLXI_36_175" for instance <XLXI_36>.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 1348: Output port <Q0> of the instance <XLXI_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 1348: Output port <Q1> of the instance <XLXI_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 1348: Output port <Q2> of the instance <XLXI_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 1348: Output port <Q3> of the instance <XLXI_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 1348: Output port <TC> of the instance <XLXI_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 1360: Output port <Q0> of the instance <XLXI_14> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 1360: Output port <Q1> of the instance <XLXI_14> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 1360: Output port <Q2> of the instance <XLXI_14> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 1360: Output port <Q3> of the instance <XLXI_14> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 1360: Output port <TC> of the instance <XLXI_14> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 1370: Output port <Q0> of the instance <XLXI_17> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 1370: Output port <Q1> of the instance <XLXI_17> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 1370: Output port <Q2> of the instance <XLXI_17> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 1370: Output port <Q3> of the instance <XLXI_17> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 1370: Output port <TC> of the instance <XLXI_17> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 1380: Output port <Q0> of the instance <XLXI_22> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 1380: Output port <Q1> of the instance <XLXI_22> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 1380: Output port <Q2> of the instance <XLXI_22> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 1380: Output port <Q3> of the instance <XLXI_22> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 1380: Output port <TC> of the instance <XLXI_22> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <clkdiv20k_MUSER_main> synthesized.
 
+Synthesizing Unit <CD4CE_HXILINX_main>.
+    Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf".
+        TERMINAL_COUNT = 4'b1001
+    Found 1-bit register for signal <Q1>.
+    Found 1-bit register for signal <Q2>.
+    Found 1-bit register for signal <Q3>.
+    Found 1-bit register for signal <Q0>.
+    Found 4-bit adder for signal <Q3_GND_53_o_add_4_OUT> created at line 347.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   4 D-type flip-flop(s).
+	inferred   7 Multiplexer(s).
+Unit <CD4CE_HXILINX_main> synthesized.
+
+Synthesizing Unit <FTCE_HXILINX_main>.
+    Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf".
+        INIT = 1'b0
+    Found 1-bit register for signal <Q>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <FTCE_HXILINX_main> synthesized.
+
 Synthesizing Unit <mux2x1x4_MUSER_main>.
     Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf".
-    Set property "HU_SET = XLXI_144_69" for instance <XLXI_144>.
-    Set property "HU_SET = XLXI_145_70" for instance <XLXI_145>.
-    Set property "HU_SET = XLXI_146_71" for instance <XLXI_146>.
-    Set property "HU_SET = XLXI_147_72" for instance <XLXI_147>.
+    Set property "HU_SET = XLXI_144_133" for instance <XLXI_144>.
+    Set property "HU_SET = XLXI_145_134" for instance <XLXI_145>.
+    Set property "HU_SET = XLXI_146_135" for instance <XLXI_146>.
+    Set property "HU_SET = XLXI_147_136" for instance <XLXI_147>.
     Summary:
 	no macro.
 Unit <mux2x1x4_MUSER_main> synthesized.
@@ -846,10 +796,10 @@ Unit <splice4x4x8_MUSER_main> synthesized.
 
 Synthesizing Unit <inst_decode_MUSER_main>.
     Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf".
-    Set property "HU_SET = XLXI_21_95" for instance <XLXI_21>.
-    Set property "HU_SET = XLXI_24_96" for instance <XLXI_24>.
-    Set property "HU_SET = XLXI_29_97" for instance <XLXI_29>.
-    Set property "HU_SET = XLXI_30_98" for instance <XLXI_30>.
+    Set property "HU_SET = XLXI_21_159" for instance <XLXI_21>.
+    Set property "HU_SET = XLXI_24_160" for instance <XLXI_24>.
+    Set property "HU_SET = XLXI_29_161" for instance <XLXI_29>.
+    Set property "HU_SET = XLXI_30_162" for instance <XLXI_30>.
     Summary:
 	no macro.
 Unit <inst_decode_MUSER_main> synthesized.
@@ -874,22 +824,22 @@ Unit <splice8x8x16_MUSER_main> synthesized.
 
 Synthesizing Unit <mux2x1x16e_MUSER_main>.
     Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf".
-    Set property "HU_SET = XLXI_1_79" for instance <XLXI_1>.
-    Set property "HU_SET = XLXI_2_80" for instance <XLXI_2>.
-    Set property "HU_SET = XLXI_3_81" for instance <XLXI_3>.
-    Set property "HU_SET = XLXI_4_82" for instance <XLXI_4>.
-    Set property "HU_SET = XLXI_5_83" for instance <XLXI_5>.
-    Set property "HU_SET = XLXI_6_84" for instance <XLXI_6>.
-    Set property "HU_SET = XLXI_7_85" for instance <XLXI_7>.
-    Set property "HU_SET = XLXI_8_86" for instance <XLXI_8>.
-    Set property "HU_SET = XLXI_9_87" for instance <XLXI_9>.
-    Set property "HU_SET = XLXI_10_88" for instance <XLXI_10>.
-    Set property "HU_SET = XLXI_11_89" for instance <XLXI_11>.
-    Set property "HU_SET = XLXI_12_90" for instance <XLXI_12>.
-    Set property "HU_SET = XLXI_13_91" for instance <XLXI_13>.
-    Set property "HU_SET = XLXI_14_92" for instance <XLXI_14>.
-    Set property "HU_SET = XLXI_15_93" for instance <XLXI_15>.
-    Set property "HU_SET = XLXI_16_94" for instance <XLXI_16>.
+    Set property "HU_SET = XLXI_1_143" for instance <XLXI_1>.
+    Set property "HU_SET = XLXI_2_144" for instance <XLXI_2>.
+    Set property "HU_SET = XLXI_3_145" for instance <XLXI_3>.
+    Set property "HU_SET = XLXI_4_146" for instance <XLXI_4>.
+    Set property "HU_SET = XLXI_5_147" for instance <XLXI_5>.
+    Set property "HU_SET = XLXI_6_148" for instance <XLXI_6>.
+    Set property "HU_SET = XLXI_7_149" for instance <XLXI_7>.
+    Set property "HU_SET = XLXI_8_150" for instance <XLXI_8>.
+    Set property "HU_SET = XLXI_9_151" for instance <XLXI_9>.
+    Set property "HU_SET = XLXI_10_152" for instance <XLXI_10>.
+    Set property "HU_SET = XLXI_11_153" for instance <XLXI_11>.
+    Set property "HU_SET = XLXI_12_154" for instance <XLXI_12>.
+    Set property "HU_SET = XLXI_13_155" for instance <XLXI_13>.
+    Set property "HU_SET = XLXI_14_156" for instance <XLXI_14>.
+    Set property "HU_SET = XLXI_15_157" for instance <XLXI_15>.
+    Set property "HU_SET = XLXI_16_158" for instance <XLXI_16>.
     Summary:
 	no macro.
 Unit <mux2x1x16e_MUSER_main> synthesized.
@@ -914,21 +864,69 @@ Synthesizing Unit <OBUFT8_HXILINX_main>.
 	inferred   8 Tristate(s).
 Unit <OBUFT8_HXILINX_main> synthesized.
 
+Synthesizing Unit <clkdiv10M_MUSER_main>.
+    Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf".
+    Set property "HU_SET = XLXI_1_126" for instance <XLXI_1>.
+    Set property "HU_SET = XLXI_14_127" for instance <XLXI_14>.
+    Set property "HU_SET = XLXI_17_128" for instance <XLXI_17>.
+    Set property "HU_SET = XLXI_22_129" for instance <XLXI_22>.
+    Set property "HU_SET = XLXI_25_130" for instance <XLXI_25>.
+    Set property "HU_SET = XLXI_28_131" for instance <XLXI_28>.
+    Set property "HU_SET = XLXI_31_132" for instance <XLXI_31>.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 616: Output port <Q0> of the instance <XLXI_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 616: Output port <Q1> of the instance <XLXI_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 616: Output port <Q2> of the instance <XLXI_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 616: Output port <Q3> of the instance <XLXI_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 616: Output port <TC> of the instance <XLXI_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 628: Output port <Q0> of the instance <XLXI_14> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 628: Output port <Q1> of the instance <XLXI_14> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 628: Output port <Q2> of the instance <XLXI_14> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 628: Output port <Q3> of the instance <XLXI_14> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 628: Output port <TC> of the instance <XLXI_14> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 638: Output port <Q0> of the instance <XLXI_17> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 638: Output port <Q1> of the instance <XLXI_17> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 638: Output port <Q2> of the instance <XLXI_17> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 638: Output port <Q3> of the instance <XLXI_17> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 638: Output port <TC> of the instance <XLXI_17> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 648: Output port <Q0> of the instance <XLXI_22> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 648: Output port <Q1> of the instance <XLXI_22> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 648: Output port <Q2> of the instance <XLXI_22> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 648: Output port <Q3> of the instance <XLXI_22> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 648: Output port <TC> of the instance <XLXI_22> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 658: Output port <Q0> of the instance <XLXI_25> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 658: Output port <Q1> of the instance <XLXI_25> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 658: Output port <Q2> of the instance <XLXI_25> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 658: Output port <Q3> of the instance <XLXI_25> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 658: Output port <TC> of the instance <XLXI_25> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 668: Output port <Q0> of the instance <XLXI_28> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 668: Output port <Q1> of the instance <XLXI_28> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 668: Output port <Q2> of the instance <XLXI_28> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 668: Output port <Q3> of the instance <XLXI_28> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 668: Output port <TC> of the instance <XLXI_28> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 678: Output port <Q0> of the instance <XLXI_31> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 678: Output port <Q1> of the instance <XLXI_31> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 678: Output port <Q2> of the instance <XLXI_31> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 678: Output port <Q3> of the instance <XLXI_31> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Labs\10\simple-cpu\main.vf" line 678: Output port <TC> of the instance <XLXI_31> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <clkdiv10M_MUSER_main> synthesized.
+
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 19
- 2-bit adder                                           : 2
+# Adders/Subtractors                                   : 18
+ 2-bit adder                                           : 1
  4-bit adder                                           : 13
  4-bit subtractor                                      : 2
  9-bit addsub                                          : 2
-# Registers                                            : 70
- 1-bit register                                        : 59
+# Registers                                            : 68
+ 1-bit register                                        : 57
  16-bit register                                       : 8
  8-bit register                                        : 3
-# Multiplexers                                         : 387
- 1-bit 2-to-1 multiplexer                              : 285
+# Multiplexers                                         : 383
+ 1-bit 2-to-1 multiplexer                              : 281
  1-bit 4-to-1 multiplexer                              : 92
  1-bit 8-to-1 multiplexer                              : 8
  9-bit 2-to-1 multiplexer                              : 2
@@ -947,15 +945,15 @@ INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmet
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 19
- 2-bit adder                                           : 2
+# Adders/Subtractors                                   : 18
+ 2-bit adder                                           : 1
  4-bit adder                                           : 13
  4-bit subtractor                                      : 2
  9-bit addsub                                          : 2
-# Registers                                            : 219
- Flip-Flops                                            : 219
-# Multiplexers                                         : 365
- 1-bit 2-to-1 multiplexer                              : 263
+# Registers                                            : 217
+ Flip-Flops                                            : 217
+# Multiplexers                                         : 361
+ 1-bit 2-to-1 multiplexer                              : 259
  1-bit 4-to-1 multiplexer                              : 92
  1-bit 8-to-1 multiplexer                              : 8
  9-bit 2-to-1 multiplexer                              : 2
@@ -1008,12 +1006,6 @@ Optimizing unit <FJKC_HXILINX_main> ...
 
 Optimizing unit <CB4CLED_HXILINX_main> ...
 
-Optimizing unit <CD4CE_HXILINX_main> ...
-
-Optimizing unit <FTCE_HXILINX_main> ...
-
-Optimizing unit <CB2CE_HXILINX_main> ...
-
 Optimizing unit <XLXI_94/XLXI_436> ...
 
 Optimizing unit <XLXI_94/XLXI_437> ...
@@ -1060,7 +1052,13 @@ Optimizing unit <D3_8E_HXILINX_main> ...
 
 Optimizing unit <NOR8_HXILINX_main> ...
 
+Optimizing unit <CB2CE_HXILINX_main> ...
+
 Optimizing unit <D2_4E_HXILINX_main> ...
+
+Optimizing unit <CD4CE_HXILINX_main> ...
+
+Optimizing unit <FTCE_HXILINX_main> ...
 
 Optimizing unit <XLXI_30> ...
 
@@ -1082,8 +1080,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 219
- Flip-Flops                                            : 219
+# Registers                                            : 217
+ Flip-Flops                                            : 217
 
 =========================================================================
 
@@ -1106,15 +1104,15 @@ Top Level Output File Name         : main.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 482
-#      AND2                        : 33
+# BELS                             : 474
+#      AND2                        : 30
 #      AND2B1                      : 8
 #      AND3                        : 1
 #      AND3B1                      : 1
 #      BUF                         : 83
 #      GND                         : 1
 #      INV                         : 25
-#      LUT2                        : 25
+#      LUT2                        : 20
 #      LUT3                        : 97
 #      LUT4                        : 33
 #      LUT5                        : 59
@@ -1125,16 +1123,16 @@ Primitive and Black Box Usage:
 #      VCC                         : 1
 #      XOR2                        : 9
 #      XORCY                       : 18
-# FlipFlops/Latches                : 219
+# FlipFlops/Latches                : 217
 #      FD                          : 6
 #      FDC                         : 1
-#      FDCE                        : 210
+#      FDCE                        : 208
 #      FDE                         : 2
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 45
+# IO Buffers                       : 43
 #      IBUF                        : 18
-#      OBUF                        : 19
+#      OBUF                        : 17
 #      OBUFT                       : 8
 # Logical                          : 3
 #      NOR2                        : 1
@@ -1148,20 +1146,20 @@ Selected Device : 6slx9tqg144-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             219  out of  11440     1%  
- Number of Slice LUTs:                  293  out of   5720     5%  
-    Number used as Logic:               293  out of   5720     5%  
+ Number of Slice Registers:             217  out of  11440     1%  
+ Number of Slice LUTs:                  288  out of   5720     5%  
+    Number used as Logic:               288  out of   5720     5%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    512
-   Number with an unused Flip Flop:     293  out of    512    57%  
-   Number with an unused LUT:           219  out of    512    42%  
-   Number of fully used LUT-FF pairs:     0  out of    512     0%  
-   Number of unique control sets:        32
+ Number of LUT Flip Flop pairs used:    505
+   Number with an unused Flip Flop:     288  out of    505    57%  
+   Number with an unused LUT:           217  out of    505    42%  
+   Number of fully used LUT-FF pairs:     0  out of    505     0%  
+   Number of unique control sets:        31
 
 IO Utilization: 
- Number of IOs:                          46
- Number of bonded IOBs:                  46  out of    102    45%  
+ Number of IOs:                          44
+ Number of bonded IOBs:                  44  out of    102    43%  
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
@@ -1187,7 +1185,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-OSC                                | BUFGP                  | 219   |
+OSC                                | BUFGP                  | 217   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -1198,10 +1196,10 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 28.352ns (Maximum Frequency: 35.271MHz)
+   Minimum period: 25.919ns (Maximum Frequency: 38.582MHz)
    Minimum input arrival time before clock: 3.087ns
    Maximum output required time after clock: 11.502ns
-   Maximum combinational path delay: 10.691ns
+   Maximum combinational path delay: 10.632ns
 
 Timing Details:
 ---------------
@@ -1209,50 +1207,49 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'OSC'
-  Clock period: 28.352ns (frequency: 35.271MHz)
-  Total number of paths / destination ports: 237837 / 405
+  Clock period: 25.919ns (frequency: 38.582MHz)
+  Total number of paths / destination ports: 237715 / 401
 -------------------------------------------------------------------------
-Delay:               14.176ns (Levels of Logic = 19)
-  Source:            XLXI_210/XLXI_1/Q3 (FF)
+Delay:               12.959ns (Levels of Logic = 18)
+  Source:            XLXI_368/XLXI_1/Q3 (FF)
   Destination:       XLXI_274/XLXI_2/Q_0 (FF)
   Source Clock:      OSC falling
   Destination Clock: OSC rising
 
-  Data Path: XLXI_210/XLXI_1/Q3 to XLXI_274/XLXI_2/Q_0
+  Data Path: XLXI_368/XLXI_1/Q3 to XLXI_274/XLXI_2/Q_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDCE:C->Q             3   0.447   0.898  Q3 (Q3)
      LUT4:I0->O            5   0.203   0.715  Mmux_TC11 (TC)
-     end scope: 'XLXI_210/XLXI_1:CEO'
-     begin scope: 'XLXI_210/XLXI_14:CE'
+     end scope: 'XLXI_368/XLXI_1:CEO'
+     begin scope: 'XLXI_368/XLXI_14:CE'
      LUT5:I4->O            5   0.205   0.715  CEO1 (CEO)
-     end scope: 'XLXI_210/XLXI_14:CEO'
-     begin scope: 'XLXI_210/XLXI_17:CE'
+     end scope: 'XLXI_368/XLXI_14:CEO'
+     begin scope: 'XLXI_368/XLXI_17:CE'
      LUT5:I4->O            5   0.205   0.715  CEO1 (CEO)
-     end scope: 'XLXI_210/XLXI_17:CEO'
-     begin scope: 'XLXI_210/XLXI_22:CE'
+     end scope: 'XLXI_368/XLXI_17:CEO'
+     begin scope: 'XLXI_368/XLXI_22:CE'
      LUT5:I4->O            5   0.205   0.715  CEO1 (CEO)
-     end scope: 'XLXI_210/XLXI_22:CEO'
-     begin scope: 'XLXI_210/XLXI_25:CE'
+     end scope: 'XLXI_368/XLXI_22:CEO'
+     begin scope: 'XLXI_368/XLXI_25:CE'
      LUT5:I4->O            5   0.205   0.715  CEO1 (CEO)
-     end scope: 'XLXI_210/XLXI_25:CEO'
-     begin scope: 'XLXI_210/XLXI_28:CE'
+     end scope: 'XLXI_368/XLXI_25:CEO'
+     begin scope: 'XLXI_368/XLXI_28:CE'
      LUT5:I4->O            5   0.205   0.715  CEO1 (CEO)
-     end scope: 'XLXI_210/XLXI_28:CEO'
-     begin scope: 'XLXI_210/XLXI_31:CE'
-     LUT5:I4->O            2   0.205   0.981  CEO1 (CEO)
-     end scope: 'XLXI_210/XLXI_31:CEO'
-     AND2:I0->O            1   0.203   0.944  XLXI_210/XLXI_38 (XLXN_292)
-     AND2:I0->O            4   0.203   1.028  XLXI_218 (XLXN_422)
+     end scope: 'XLXI_368/XLXI_28:CEO'
+     begin scope: 'XLXI_368/XLXI_31:CE'
+     LUT5:I4->O            1   0.205   0.944  CEO1 (CEO)
+     end scope: 'XLXI_368/XLXI_31:CEO'
+     AND2:I0->O            3   0.203   0.995  XLXI_218 (XLXN_422)
      AND2:I1->O            3   0.223   0.995  XLXI_219 (XLXN_430)
      AND2B1:I1->O          2   0.223   0.961  XLXI_324 (XLXN_515)
      AND2:I1->O            8   0.223   0.802  XLXI_274/XLXI_8 (XLXI_274/XLXN_5)
      begin scope: 'XLXI_274/XLXI_2:CE'
      FDCE:CE                   0.322          Q_0
     ----------------------------------------
-    Total                     14.176ns (3.277ns logic, 10.899ns route)
-                                       (23.1% logic, 76.9% route)
+    Total                     12.959ns (3.074ns logic, 9.885ns route)
+                                       (23.7% logic, 76.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'OSC'
@@ -1277,7 +1274,7 @@ Offset:              3.087ns (Levels of Logic = 3)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'OSC'
-  Total number of paths / destination ports: 2118 / 27
+  Total number of paths / destination ports: 2112 / 25
 -------------------------------------------------------------------------
 Offset:              11.502ns (Levels of Logic = 12)
   Source:            XLXI_137/XLXI_4/Q0 (FF)
@@ -1311,9 +1308,9 @@ Offset:              11.502ns (Levels of Logic = 12)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 350 / 24
+  Total number of paths / destination ports: 348 / 22
 -------------------------------------------------------------------------
-Delay:               10.691ns (Levels of Logic = 9)
+Delay:               10.632ns (Levels of Logic = 9)
   Source:            BTN5 (PAD)
   Destination:       SSD_Segment<6> (PAD)
 
@@ -1321,7 +1318,7 @@ Delay:               10.691ns (Levels of Logic = 9)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             7   1.222   1.021  BTN5_IBUF (BTN5_IBUF)
+     IBUF:I->O             5   1.222   0.962  BTN5_IBUF (BTN5_IBUF)
      AND3B1:I2->O         17   0.320   1.256  XLXI_351 (XLXN_562)
      begin scope: 'XLXI_336/XLXI_8:S0'
      LUT3:I0->O            1   0.205   0.579  Mmux_O11 (O)
@@ -1333,8 +1330,8 @@ Delay:               10.691ns (Levels of Logic = 9)
      LUT4:I3->O            1   0.567   0.579  XLXI_283/XLXI_1 (SSD_Segment_6_OBUF)
      OBUF:I->O                 2.571          SSD_Segment_6_OBUF (SSD_Segment<6>)
     ----------------------------------------
-    Total                     10.691ns (5.656ns logic, 5.035ns route)
-                                       (52.9% logic, 47.1% route)
+    Total                     10.632ns (5.656ns logic, 4.976ns route)
+                                       (53.2% logic, 46.8% route)
 
 =========================================================================
 
@@ -1346,14 +1343,14 @@ Clock to Setup on destination clock OSC
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-OSC            |   14.353|   14.176|    8.006|         |
+OSC            |   14.353|   12.959|    7.184|         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 3.98 secs
+Total CPU time to Xst completion: 3.62 secs
  
 --> 
 
@@ -1361,5 +1358,5 @@ Total memory usage is 4517916 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    4 (   0 filtered)
-Number of infos    :   68 (   0 filtered)
+Number of infos    :   66 (   0 filtered)
 
