@@ -49,9 +49,10 @@ def main():
     pins: dict[str, str] = parse_pins(net_locs)
     nets: list[str] = re.findall(r'<iomarker.*?name="(.*?)".*?/>', schematic)
     output: list[str] = []
+    allocated_nets: set[str] = set()
     for net in nets:
         net = net.strip().replace("[", "(").replace("]", ")")
-        if not net:
+        if not net or net in allocated_nets:
             continue
         if "(" not in net:
             loc = pins.get(net, "")
@@ -60,6 +61,7 @@ def main():
                     Fore.LIGHTRED_EX
                     + f"Warning: NET {net} does not have corresponding LOC entry in pins file."
                 )
+            allocated_nets.add(net)
             output.append(f'NET "{net}" LOC = {loc};')
         else:
             match = re.search(r"(.*?)\((.*?):(.*?)\)", net)
@@ -75,6 +77,7 @@ def main():
                         Fore.LIGHTRED_EX
                         + f"Warning: NET {net}[{i}] does not have corresponding LOC entry in pins file."
                     )
+                allocated_nets.add(f"{net}[{i}]")
                 output.append(f'NET "{net}[{i}]" LOC = {loc};')
     output_str: str = "\n".join(output) + "\n"
     print("Output:")

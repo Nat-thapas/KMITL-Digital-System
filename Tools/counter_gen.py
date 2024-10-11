@@ -60,14 +60,19 @@ def parse_sequence(sequence: str, to_bcd: bool) -> list[int]:
     output: list[int] = []
     for number in numbers:
         if match := re.match(r"^(\d+)\-(\d+)$", number):
-            output.extend(
-                list(
-                    range(
-                        parse_number(match.group(1), to_bcd),
-                        parse_number(match.group(2), to_bcd) + 1,
+            start = parse_number(match.group(1), to_bcd)
+            end = parse_number(match.group(2), to_bcd)
+            if start > end:
+                output.extend(list(range(start, end - 1, -1)))
+            else:
+                output.extend(
+                    list(
+                        range(
+                            start,
+                            end + 1,
+                        )
                     )
                 )
-            )
         else:
             output.append(parse_number(number, to_bcd))
     return output
