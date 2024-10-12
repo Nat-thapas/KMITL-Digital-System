@@ -54,25 +54,22 @@ def parse_number(number_string: str, to_bcd: bool) -> int:
 
 
 def parse_sequence(sequence: str, to_bcd: bool) -> list[int]:
-    if re.match(r"^\d+$", sequence):
-        return list(range(parse_number(sequence, to_bcd)))
-    numbers = re.split(r", *| +", sequence)
     output: list[int] = []
+    if re.match(r"^\d+$", sequence):
+        for i in range(parse_number(sequence, False)):
+            output.append(parse_number(str(i), to_bcd))
+        return output
+    numbers = re.split(r", *| +", sequence)
     for number in numbers:
         if match := re.match(r"^(\d+)\-(\d+)$", number):
-            start = parse_number(match.group(1), to_bcd)
-            end = parse_number(match.group(2), to_bcd)
+            start = parse_number(match.group(1), False)
+            end = parse_number(match.group(2), False)
             if start > end:
-                output.extend(list(range(start, end - 1, -1)))
+                for i in range(start, end - 1, -1):
+                    output.append(parse_number(str(i), to_bcd))
             else:
-                output.extend(
-                    list(
-                        range(
-                            start,
-                            end + 1,
-                        )
-                    )
-                )
+                for i in range(start, end + 1):
+                    output.append(parse_number(str(i), to_bcd))
         else:
             output.append(parse_number(number, to_bcd))
     return output
