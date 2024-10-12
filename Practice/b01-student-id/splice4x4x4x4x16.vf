@@ -1,0 +1,68 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : splice4x4x4x4x16.vf
+// /___/   /\     Timestamp : 10/12/2024 12:56:57
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Classes-2024/Digital System Fundamentals Shared/Practice/b01-student-id/splice4x4x4x4x16.vf" -w "D:/Classes-2024/Digital System Fundamentals Shared/Practice/b01-student-id/splice4x4x4x4x16.sch"
+//Design Name: splice4x4x4x4x16
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module splice4x4x4x4x16(H, 
+                        L, 
+                        M, 
+                        Q, 
+                        O);
+
+    input [3:0] H;
+    input [3:0] L;
+    input [3:0] M;
+    input [3:0] Q;
+   output [15:0] O;
+   
+   
+   BUF  XLXI_1 (.I(L[0]), 
+               .O(O[0]));
+   BUF  XLXI_2 (.I(L[1]), 
+               .O(O[1]));
+   BUF  XLXI_3 (.I(L[2]), 
+               .O(O[2]));
+   BUF  XLXI_4 (.I(L[3]), 
+               .O(O[3]));
+   BUF  XLXI_5 (.I(M[0]), 
+               .O(O[4]));
+   BUF  XLXI_6 (.I(M[1]), 
+               .O(O[5]));
+   BUF  XLXI_7 (.I(M[2]), 
+               .O(O[6]));
+   BUF  XLXI_8 (.I(M[3]), 
+               .O(O[7]));
+   BUF  XLXI_9 (.I(Q[0]), 
+               .O(O[8]));
+   BUF  XLXI_10 (.I(Q[1]), 
+                .O(O[9]));
+   BUF  XLXI_11 (.I(Q[2]), 
+                .O(O[10]));
+   BUF  XLXI_12 (.I(Q[3]), 
+                .O(O[11]));
+   BUF  XLXI_13 (.I(H[0]), 
+                .O(O[12]));
+   BUF  XLXI_14 (.I(H[1]), 
+                .O(O[13]));
+   BUF  XLXI_15 (.I(H[2]), 
+                .O(O[14]));
+   BUF  XLXI_17 (.I(H[3]), 
+                .O(O[15]));
+endmodule

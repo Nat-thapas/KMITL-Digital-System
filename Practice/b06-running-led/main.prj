@@ -1,0 +1,6 @@
+verilog work "wtb8.vf"
+verilog work "edetect.vf"
+verilog work "counter706.vf"
+verilog work "clkdiv20k.vf"
+verilog work "and2x8b.vf"
+verilog work "main.vf"

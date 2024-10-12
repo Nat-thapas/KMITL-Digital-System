@@ -1,0 +1,68 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : split16x4x4x4x4.vf
+// /___/   /\     Timestamp : 10/12/2024 15:10:51
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Classes-2024/Digital System Fundamentals Shared/Practice/b09-a-z/split16x4x4x4x4.vf" -w "D:/Classes-2024/Digital System Fundamentals Shared/Practice/b09-a-z/split16x4x4x4x4.sch"
+//Design Name: split16x4x4x4x4
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module split16x4x4x4x4(I, 
+                       H, 
+                       L, 
+                       M, 
+                       Q);
+
+    input [15:0] I;
+   output [3:0] H;
+   output [3:0] L;
+   output [3:0] M;
+   output [3:0] Q;
+   
+   
+   BUF  XLXI_1 (.I(I[0]), 
+               .O(L[0]));
+   BUF  XLXI_2 (.I(I[1]), 
+               .O(L[1]));
+   BUF  XLXI_3 (.I(I[2]), 
+               .O(L[2]));
+   BUF  XLXI_4 (.I(I[3]), 
+               .O(L[3]));
+   BUF  XLXI_5 (.I(I[4]), 
+               .O(M[0]));
+   BUF  XLXI_6 (.I(I[5]), 
+               .O(M[1]));
+   BUF  XLXI_7 (.I(I[6]), 
+               .O(M[2]));
+   BUF  XLXI_8 (.I(I[7]), 
+               .O(M[3]));
+   BUF  XLXI_17 (.I(I[8]), 
+                .O(Q[0]));
+   BUF  XLXI_18 (.I(I[9]), 
+                .O(Q[1]));
+   BUF  XLXI_19 (.I(I[10]), 
+                .O(Q[2]));
+   BUF  XLXI_20 (.I(I[11]), 
+                .O(Q[3]));
+   BUF  XLXI_21 (.I(I[12]), 
+                .O(H[0]));
+   BUF  XLXI_22 (.I(I[13]), 
+                .O(H[1]));
+   BUF  XLXI_23 (.I(I[14]), 
+                .O(H[2]));
+   BUF  XLXI_24 (.I(I[15]), 
+                .O(H[3]));
+endmodule

@@ -1,0 +1,169 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : clkdiv20M.vf
+// /___/   /\     Timestamp : 10/12/2024 14:03:09
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Classes-2024/Digital System Fundamentals Shared/Practice/b07-prime/clkdiv20M.vf" -w "D:/Classes-2024/Digital System Fundamentals Shared/Practice/b07-prime/clkdiv20M.sch"
+//Design Name: clkdiv20M
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module CD4CE_HXILINX_clkdiv20M(CEO, Q0, Q1, Q2, Q3, TC, C, CE, CLR);
+   
+   parameter TERMINAL_COUNT = 4'b1001;
+   
+   output             CEO;
+   output             Q0;
+   output             Q1;
+   output             Q2;
+   output             Q3;
+   output             TC;
+
+   input 	      C;	
+   input 	      CE;	
+   input 	      CLR;	
+   
+   reg                Q0;
+   reg                Q1;
+   reg                Q2;
+   reg                Q3;
+   
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  {Q3, Q2, Q1, Q0} <= 4'b0000;
+
+	else if (CE)
+          begin
+             if ({Q3,Q2,Q1,Q0} == 4'b1001)
+               {Q3,Q2,Q1,Q0} <= 4'b0000;
+             else if({Q3,Q2,Q1,Q0} == 4'b1011)
+               {Q3,Q2,Q1,Q0} <= 4'b0110;
+             else if({Q3,Q2,Q1,Q0} == 4'b1101)
+               {Q3,Q2,Q1,Q0} <= 4'b0100;
+             else if({Q3,Q2,Q1,Q0} == 4'b1111)
+               {Q3,Q2,Q1,Q0} <= 4'b0010;
+            
+             else
+	      {Q3, Q2, Q1,Q0} <= {Q3, Q2, Q1,Q0} + 1;
+          end
+     end
+   
+   assign CEO = TC & CE;
+   assign TC = CLR ? 1'b0 : ({Q3, Q2, Q1, Q0} == TERMINAL_COUNT);
+   
+endmodule
+`timescale 1ns / 1ps
+
+module clkdiv20M(CLK, 
+                 CLKO);
+
+    input CLK;
+   output CLKO;
+   
+   wire CLK_I;
+   wire XLXN_3;
+   wire XLXN_9;
+   wire XLXN_14;
+   wire XLXN_15;
+   wire XLXN_27;
+   wire XLXN_37;
+   wire XLXN_44;
+   wire XLXN_51;
+   wire XLXN_56;
+   wire XLXN_58;
+   wire CLKO_DUMMY;
+   
+   assign CLKO = CLKO_DUMMY;
+   (* HU_SET = "XLXI_1_0" *) 
+   CD4CE_HXILINX_clkdiv20M  XLXI_1 (.C(CLK_I), 
+                                   .CE(XLXN_3), 
+                                   .CLR(XLXN_15), 
+                                   .CEO(XLXN_14), 
+                                   .Q0(), 
+                                   .Q1(), 
+                                   .Q2(), 
+                                   .Q3(), 
+                                   .TC());
+   VCC  XLXI_2 (.P(XLXN_3));
+   GND  XLXI_3 (.G(XLXN_15));
+   FD_1 #( .INIT(1'b0) ) XLXI_9 (.C(XLXN_58), 
+                .D(XLXN_9), 
+                .Q(CLKO_DUMMY));
+   INV  XLXI_11 (.I(CLKO_DUMMY), 
+                .O(XLXN_9));
+   (* HU_SET = "XLXI_14_1" *) 
+   CD4CE_HXILINX_clkdiv20M  XLXI_14 (.C(CLK_I), 
+                                    .CE(XLXN_14), 
+                                    .CLR(XLXN_15), 
+                                    .CEO(XLXN_27), 
+                                    .Q0(), 
+                                    .Q1(), 
+                                    .Q2(), 
+                                    .Q3(), 
+                                    .TC());
+   (* HU_SET = "XLXI_17_2" *) 
+   CD4CE_HXILINX_clkdiv20M  XLXI_17 (.C(CLK_I), 
+                                    .CE(XLXN_27), 
+                                    .CLR(XLXN_15), 
+                                    .CEO(XLXN_37), 
+                                    .Q0(), 
+                                    .Q1(), 
+                                    .Q2(), 
+                                    .Q3(), 
+                                    .TC());
+   (* HU_SET = "XLXI_22_3" *) 
+   CD4CE_HXILINX_clkdiv20M  XLXI_22 (.C(CLK_I), 
+                                    .CE(XLXN_37), 
+                                    .CLR(XLXN_15), 
+                                    .CEO(XLXN_44), 
+                                    .Q0(), 
+                                    .Q1(), 
+                                    .Q2(), 
+                                    .Q3(), 
+                                    .TC());
+   (* HU_SET = "XLXI_25_4" *) 
+   CD4CE_HXILINX_clkdiv20M  XLXI_25 (.C(CLK_I), 
+                                    .CE(XLXN_44), 
+                                    .CLR(XLXN_15), 
+                                    .CEO(XLXN_51), 
+                                    .Q0(), 
+                                    .Q1(), 
+                                    .Q2(), 
+                                    .Q3(), 
+                                    .TC());
+   (* HU_SET = "XLXI_28_5" *) 
+   CD4CE_HXILINX_clkdiv20M  XLXI_28 (.C(CLK_I), 
+                                    .CE(XLXN_51), 
+                                    .CLR(XLXN_15), 
+                                    .CEO(XLXN_56), 
+                                    .Q0(), 
+                                    .Q1(), 
+                                    .Q2(), 
+                                    .Q3(), 
+                                    .TC());
+   (* HU_SET = "XLXI_31_6" *) 
+   CD4CE_HXILINX_clkdiv20M  XLXI_31 (.C(CLK_I), 
+                                    .CE(XLXN_56), 
+                                    .CLR(XLXN_15), 
+                                    .CEO(), 
+                                    .Q0(), 
+                                    .Q1(), 
+                                    .Q2(), 
+                                    .Q3(), 
+                                    .TC(XLXN_58));
+   INV  XLXI_34 (.I(CLK), 
+                .O(CLK_I));
+endmodule

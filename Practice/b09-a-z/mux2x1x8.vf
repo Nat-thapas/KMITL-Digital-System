@@ -1,0 +1,96 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : mux2x1x8.vf
+// /___/   /\     Timestamp : 10/12/2024 15:27:35
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Classes-2024/Digital System Fundamentals Shared/Practice/b09-a-z/mux2x1x8.vf" -w "D:/Classes-2024/Digital System Fundamentals Shared/Practice/b09-a-z/mux2x1x8.sch"
+//Design Name: mux2x1x8
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale  100 ps / 10 ps
+
+module M2_1_HXILINX_mux2x1x8 (O, D0, D1, S0);
+    
+
+   output O;
+
+   input  D0;
+   input  D1;
+   input  S0;
+
+   reg O;
+
+   always @ ( D0 or D1 or S0)
+   begin
+      case(S0)
+      1'b0 : O <= D0;
+      1'b1 : O <= D1;
+      endcase
+   end
+    
+endmodule
+`timescale 1ns / 1ps
+
+module mux2x1x8(D0, 
+                D1, 
+                S, 
+                O);
+
+    input [7:0] D0;
+    input [7:0] D1;
+    input S;
+   output [7:0] O;
+   
+   
+   (* HU_SET = "XLXI_1_0" *) 
+   M2_1_HXILINX_mux2x1x8  XLXI_1 (.D0(D0[0]), 
+                                 .D1(D1[0]), 
+                                 .S0(S), 
+                                 .O(O[0]));
+   (* HU_SET = "XLXI_2_1" *) 
+   M2_1_HXILINX_mux2x1x8  XLXI_2 (.D0(D0[1]), 
+                                 .D1(D1[1]), 
+                                 .S0(S), 
+                                 .O(O[1]));
+   (* HU_SET = "XLXI_7_2" *) 
+   M2_1_HXILINX_mux2x1x8  XLXI_7 (.D0(D0[2]), 
+                                 .D1(D1[2]), 
+                                 .S0(S), 
+                                 .O(O[2]));
+   (* HU_SET = "XLXI_8_3" *) 
+   M2_1_HXILINX_mux2x1x8  XLXI_8 (.D0(D0[3]), 
+                                 .D1(D1[3]), 
+                                 .S0(S), 
+                                 .O(O[3]));
+   (* HU_SET = "XLXI_9_4" *) 
+   M2_1_HXILINX_mux2x1x8  XLXI_9 (.D0(D0[4]), 
+                                 .D1(D1[4]), 
+                                 .S0(S), 
+                                 .O(O[4]));
+   (* HU_SET = "XLXI_10_5" *) 
+   M2_1_HXILINX_mux2x1x8  XLXI_10 (.D0(D0[5]), 
+                                  .D1(D1[5]), 
+                                  .S0(S), 
+                                  .O(O[5]));
+   (* HU_SET = "XLXI_11_6" *) 
+   M2_1_HXILINX_mux2x1x8  XLXI_11 (.D0(D0[6]), 
+                                  .D1(D1[6]), 
+                                  .S0(S), 
+                                  .O(O[6]));
+   (* HU_SET = "XLXI_12_7" *) 
+   M2_1_HXILINX_mux2x1x8  XLXI_12 (.D0(D0[7]), 
+                                  .D1(D1[7]), 
+                                  .S0(S), 
+                                  .O(O[7]));
+endmodule

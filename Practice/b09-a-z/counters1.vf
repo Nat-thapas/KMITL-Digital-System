@@ -1,0 +1,134 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : counters1.vf
+// /___/   /\     Timestamp : 10/12/2024 15:17:46
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Classes-2024/Digital System Fundamentals Shared/Practice/b09-a-z/counters1.vf" -w "D:/Classes-2024/Digital System Fundamentals Shared/Practice/b09-a-z/counters1.sch"
+//Design Name: counters1
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module FJKCE_HXILINX_counters1(Q, C, CE, CLR, J, K);
+   
+   output             Q;
+
+   input 	      C;	
+   input 	      CE;	
+   input 	      CLR;	
+   input              J;
+   input              K;
+   
+   parameter INIT = 1'b0;
+   reg                Q = INIT;
+   
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 1'b0;
+	else if(CE)
+        begin
+          if(!J)
+          begin
+            if(K)
+            Q <= 1'b0;
+          end
+          else
+          begin
+            if(!K)
+            Q <= 1'b1;
+            else 
+            Q <= !Q;
+          end
+        end
+     end
+   
+endmodule
+`timescale 1ns / 1ps
+
+module counters1(CE, 
+                 CLK, 
+                 CLR, 
+                 CEO, 
+                 Q0, 
+                 Q1, 
+                 TC);
+
+    input CE;
+    input CLK;
+    input CLR;
+   output CEO;
+   output Q0;
+   output Q1;
+   output TC;
+   
+   wire Q2;
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_5;
+   wire XLXN_6;
+   wire XLXN_7;
+   wire XLXN_8;
+   wire Q0_DUMMY;
+   wire Q1_DUMMY;
+   wire TC_DUMMY;
+   
+   assign Q0 = Q0_DUMMY;
+   assign Q1 = Q1_DUMMY;
+   assign TC = TC_DUMMY;
+   (* HU_SET = "FlipFlop_A_0" *) 
+   FJKCE_HXILINX_counters1  FlipFlop_A (.C(CLK), 
+                                       .CE(CE), 
+                                       .CLR(CLR), 
+                                       .J(Q2), 
+                                       .K(XLXN_1), 
+                                       .Q(Q0_DUMMY));
+   (* HU_SET = "FlipFlop_B_1" *) 
+   FJKCE_HXILINX_counters1  FlipFlop_B (.C(CLK), 
+                                       .CE(CE), 
+                                       .CLR(CLR), 
+                                       .J(Q0_DUMMY), 
+                                       .K(XLXN_2), 
+                                       .Q(Q1_DUMMY));
+   (* HU_SET = "FlipFlop_C_2" *) 
+   FJKCE_HXILINX_counters1  FlipFlop_C (.C(CLK), 
+                                       .CE(CE), 
+                                       .CLR(CLR), 
+                                       .J(XLXN_4), 
+                                       .K(XLXN_3), 
+                                       .Q(Q2));
+   VCC  XLXI_1 (.P(XLXN_1));
+   VCC  XLXI_2 (.P(XLXN_2));
+   VCC  XLXI_3 (.P(XLXN_3));
+   AND2  XLXI_4 (.I0(XLXN_5), 
+                .I1(XLXN_6), 
+                .O(XLXN_4));
+   INV  XLXI_5 (.I(Q0_DUMMY), 
+               .O(XLXN_5));
+   INV  XLXI_6 (.I(Q1_DUMMY), 
+               .O(XLXN_6));
+   AND3  XLXI_7 (.I0(XLXN_7), 
+                .I1(Q1_DUMMY), 
+                .I2(XLXN_8), 
+                .O(TC_DUMMY));
+   INV  XLXI_8 (.I(Q0_DUMMY), 
+               .O(XLXN_7));
+   INV  XLXI_9 (.I(Q2), 
+               .O(XLXN_8));
+   AND2  XLXI_10 (.I0(CE), 
+                 .I1(TC_DUMMY), 
+                 .O(CEO));
+endmodule

@@ -1,0 +1,8 @@
+verilog work "wtb4.vf"
+verilog work "ssd4d0ftb.vf"
+verilog work "split16x4x4x4x4.vf"
+verilog work "splice4x4x4x4x16.vf"
+verilog work "mux2x1x16e.vf"
+verilog work "clkdiv20M.vf"
+verilog work "clkdiv20k.vf"
+verilog work "main.vf"

@@ -1,0 +1,7 @@
+verilog work "wtb4.vf"
+verilog work "ssd4d0ftlnpb.vf"
+verilog work "gnd4.vf"
+verilog work "counterprime.vf"
+verilog work "clkdiv20M.vf"
+verilog work "clkdiv20k.vf"
+verilog work "main.vf"

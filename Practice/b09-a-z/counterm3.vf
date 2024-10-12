@@ -1,0 +1,205 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : counterm3.vf
+// /___/   /\     Timestamp : 10/12/2024 15:10:51
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Classes-2024/Digital System Fundamentals Shared/Practice/b09-a-z/counterm3.vf" -w "D:/Classes-2024/Digital System Fundamentals Shared/Practice/b09-a-z/counterm3.sch"
+//Design Name: counterm3
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module FJKCE_HXILINX_counterm3(Q, C, CE, CLR, J, K);
+   
+   output             Q;
+
+   input 	      C;	
+   input 	      CE;	
+   input 	      CLR;	
+   input              J;
+   input              K;
+   
+   parameter INIT = 1'b0;
+   reg                Q = INIT;
+   
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 1'b0;
+	else if(CE)
+        begin
+          if(!J)
+          begin
+            if(K)
+            Q <= 1'b0;
+          end
+          else
+          begin
+            if(!K)
+            Q <= 1'b1;
+            else 
+            Q <= !Q;
+          end
+        end
+     end
+   
+endmodule
+`timescale 1ns / 1ps
+
+module counterm3(CE, 
+                 CLK, 
+                 CLR, 
+                 CEO, 
+                 Q0, 
+                 Q1, 
+                 Q2, 
+                 Q3, 
+                 Q4, 
+                 TC);
+
+    input CE;
+    input CLK;
+    input CLR;
+   output CEO;
+   output Q0;
+   output Q1;
+   output Q2;
+   output Q3;
+   output Q4;
+   output TC;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_5;
+   wire XLXN_6;
+   wire XLXN_7;
+   wire XLXN_8;
+   wire XLXN_9;
+   wire XLXN_10;
+   wire XLXN_11;
+   wire XLXN_12;
+   wire XLXN_13;
+   wire XLXN_14;
+   wire XLXN_15;
+   wire XLXN_16;
+   wire XLXN_17;
+   wire Q0_DUMMY;
+   wire Q1_DUMMY;
+   wire Q2_DUMMY;
+   wire Q3_DUMMY;
+   wire Q4_DUMMY;
+   wire TC_DUMMY;
+   
+   assign Q0 = Q0_DUMMY;
+   assign Q1 = Q1_DUMMY;
+   assign Q2 = Q2_DUMMY;
+   assign Q3 = Q3_DUMMY;
+   assign Q4 = Q4_DUMMY;
+   assign TC = TC_DUMMY;
+   (* HU_SET = "FlipFlop_A_37" *) 
+   FJKCE_HXILINX_counterm3  FlipFlop_A (.C(CLK), 
+                                       .CE(CE), 
+                                       .CLR(CLR), 
+                                       .J(XLXN_2), 
+                                       .K(XLXN_1), 
+                                       .Q(Q0_DUMMY));
+   (* HU_SET = "FlipFlop_B_38" *) 
+   FJKCE_HXILINX_counterm3  FlipFlop_B (.C(CLK), 
+                                       .CE(CE), 
+                                       .CLR(CLR), 
+                                       .J(Q0_DUMMY), 
+                                       .K(XLXN_6), 
+                                       .Q(Q1_DUMMY));
+   (* HU_SET = "FlipFlop_C_39" *) 
+   FJKCE_HXILINX_counterm3  FlipFlop_C (.C(CLK), 
+                                       .CE(CE), 
+                                       .CLR(CLR), 
+                                       .J(XLXN_9), 
+                                       .K(XLXN_8), 
+                                       .Q(Q2_DUMMY));
+   (* HU_SET = "FlipFlop_D_40" *) 
+   FJKCE_HXILINX_counterm3  FlipFlop_D (.C(CLK), 
+                                       .CE(CE), 
+                                       .CLR(CLR), 
+                                       .J(XLXN_13), 
+                                       .K(XLXN_10), 
+                                       .Q(Q3_DUMMY));
+   (* HU_SET = "FlipFlop_E_41" *) 
+   FJKCE_HXILINX_counterm3  FlipFlop_E (.C(CLK), 
+                                       .CE(CE), 
+                                       .CLR(CLR), 
+                                       .J(XLXN_15), 
+                                       .K(XLXN_14), 
+                                       .Q(Q4_DUMMY));
+   VCC  XLXI_1 (.P(XLXN_1));
+   OR3  XLXI_2 (.I0(XLXN_3), 
+               .I1(XLXN_4), 
+               .I2(XLXN_5), 
+               .O(XLXN_2));
+   INV  XLXI_3 (.I(Q1_DUMMY), 
+               .O(XLXN_3));
+   INV  XLXI_4 (.I(Q3_DUMMY), 
+               .O(XLXN_4));
+   INV  XLXI_5 (.I(Q4_DUMMY), 
+               .O(XLXN_5));
+   OR2  XLXI_6 (.I0(Q0_DUMMY), 
+               .I1(XLXN_7), 
+               .O(XLXN_6));
+   AND2  XLXI_7 (.I0(Q3_DUMMY), 
+                .I1(Q4_DUMMY), 
+                .O(XLXN_7));
+   AND2  XLXI_8 (.I0(Q0_DUMMY), 
+                .I1(Q1_DUMMY), 
+                .O(XLXN_8));
+   AND2  XLXI_9 (.I0(Q0_DUMMY), 
+                .I1(Q1_DUMMY), 
+                .O(XLXN_9));
+   OR2  XLXI_10 (.I0(XLXN_11), 
+                .I1(XLXN_12), 
+                .O(XLXN_10));
+   AND2  XLXI_11 (.I0(Q1_DUMMY), 
+                 .I1(Q4_DUMMY), 
+                 .O(XLXN_11));
+   AND3  XLXI_12 (.I0(Q0_DUMMY), 
+                 .I1(Q1_DUMMY), 
+                 .I2(Q2_DUMMY), 
+                 .O(XLXN_12));
+   AND3  XLXI_13 (.I0(Q0_DUMMY), 
+                 .I1(Q1_DUMMY), 
+                 .I2(Q2_DUMMY), 
+                 .O(XLXN_13));
+   AND2  XLXI_14 (.I0(Q1_DUMMY), 
+                 .I1(Q3_DUMMY), 
+                 .O(XLXN_14));
+   AND4  XLXI_15 (.I0(Q0_DUMMY), 
+                 .I1(Q1_DUMMY), 
+                 .I2(Q2_DUMMY), 
+                 .I3(Q3_DUMMY), 
+                 .O(XLXN_15));
+   AND5  XLXI_16 (.I0(XLXN_16), 
+                 .I1(Q1_DUMMY), 
+                 .I2(XLXN_17), 
+                 .I3(Q3_DUMMY), 
+                 .I4(Q4_DUMMY), 
+                 .O(TC_DUMMY));
+   INV  XLXI_17 (.I(Q0_DUMMY), 
+                .O(XLXN_16));
+   INV  XLXI_18 (.I(Q2_DUMMY), 
+                .O(XLXN_17));
+   AND2  XLXI_19 (.I0(CE), 
+                 .I1(TC_DUMMY), 
+                 .O(CEO));
+endmodule

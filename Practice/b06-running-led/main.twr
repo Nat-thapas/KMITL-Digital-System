@@ -1,0 +1,98 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf -ucf main.ucf
+
+Design file:              main.ncd
+Physical constraint file: main.pcf
+Device,package,speed:     xc6slx9,tqg144,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock OSC
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+BTN1        |    1.752(R)|      SLOW  |   -0.837(R)|      FAST  |OSC_BUFGP         |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock OSC to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+LED<0>      |         8.689(R)|      SLOW  |         4.648(R)|      FAST  |OSC_BUFGP         |   0.000|
+LED<1>      |         8.512(R)|      SLOW  |         4.515(R)|      FAST  |OSC_BUFGP         |   0.000|
+LED<2>      |         8.326(R)|      SLOW  |         4.386(R)|      FAST  |OSC_BUFGP         |   0.000|
+LED<3>      |         8.289(R)|      SLOW  |         4.336(R)|      FAST  |OSC_BUFGP         |   0.000|
+LED<4>      |         8.339(R)|      SLOW  |         4.425(R)|      FAST  |OSC_BUFGP         |   0.000|
+LED<5>      |         9.144(R)|      SLOW  |         4.907(R)|      FAST  |OSC_BUFGP         |   0.000|
+LED<6>      |         8.810(R)|      SLOW  |         4.695(R)|      FAST  |OSC_BUFGP         |   0.000|
+LED<7>      |         9.179(R)|      SLOW  |         4.934(R)|      FAST  |OSC_BUFGP         |   0.000|
+MN<0>       |         9.835(R)|      SLOW  |         4.924(R)|      FAST  |OSC_BUFGP         |   0.000|
+MN<1>       |        10.000(R)|      SLOW  |         4.924(R)|      FAST  |OSC_BUFGP         |   0.000|
+MN<2>       |         9.790(R)|      SLOW  |         4.821(R)|      FAST  |OSC_BUFGP         |   0.000|
+MN<3>       |         9.839(R)|      SLOW  |         4.821(R)|      FAST  |OSC_BUFGP         |   0.000|
+MN<4>       |         9.556(R)|      SLOW  |         4.583(R)|      FAST  |OSC_BUFGP         |   0.000|
+MN<5>       |         9.323(R)|      SLOW  |         4.583(R)|      FAST  |OSC_BUFGP         |   0.000|
+MN<6>       |         9.204(R)|      SLOW  |         4.371(R)|      FAST  |OSC_BUFGP         |   0.000|
+MN<7>       |         9.198(R)|      SLOW  |         4.472(R)|      FAST  |OSC_BUFGP         |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock OSC
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+OSC            |    2.249|         |         |    3.372|
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+SW<0>          |MN<0>          |    8.006|
+SW<1>          |MN<1>          |    8.626|
+SW<2>          |MN<2>          |    7.832|
+SW<3>          |MN<3>          |    8.401|
+SW<4>          |MN<4>          |    8.197|
+SW<5>          |MN<5>          |    8.262|
+SW<6>          |MN<6>          |    8.275|
+SW<7>          |MN<7>          |    8.269|
+---------------+---------------+---------+
+
+
+Analysis completed Sat Oct 12 14:27:33 2024 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4586 MB
+
+
+

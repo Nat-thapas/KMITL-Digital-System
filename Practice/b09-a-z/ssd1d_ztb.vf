@@ -1,0 +1,72 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : ssd1d_ztb.vf
+// /___/   /\     Timestamp : 10/12/2024 15:28:55
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Classes-2024/Digital System Fundamentals Shared/Practice/b09-a-z/ssd1d_ztb.vf" -w "D:/Classes-2024/Digital System Fundamentals Shared/Practice/b09-a-z/ssd1d_ztb.sch"
+//Design Name: ssd1d_ztb
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module ssd1d_ztb(A, 
+                 Segment);
+
+    input [4:0] A;
+   output [6:0] Segment;
+   
+   
+   LUT5 #( .INIT(32'h040FE0EA) ) XLXI_1 (.I0(A[0]), 
+                .I1(A[1]), 
+                .I2(A[2]), 
+                .I3(A[3]), 
+                .I4(A[4]), 
+                .O(Segment[0]));
+   LUT5 #( .INIT(32'h07A3C792) ) XLXI_2 (.I0(A[0]), 
+                .I1(A[1]), 
+                .I2(A[2]), 
+                .I3(A[3]), 
+                .I4(A[4]), 
+                .O(Segment[1]));
+   LUT5 #( .INIT(32'h036AE796) ) XLXI_3 (.I0(A[0]), 
+                .I1(A[1]), 
+                .I2(A[2]), 
+                .I3(A[3]), 
+                .I4(A[4]), 
+                .O(Segment[2]));
+   LUT5 #( .INIT(32'h06F894BC) ) XLXI_5 (.I0(A[0]), 
+                .I1(A[1]), 
+                .I2(A[2]), 
+                .I3(A[3]), 
+                .I4(A[4]), 
+                .O(Segment[3]));
+   LUT5 #( .INIT(32'h0475F97E) ) XLXI_6 (.I0(A[0]), 
+                .I1(A[1]), 
+                .I2(A[2]), 
+                .I3(A[3]), 
+                .I4(A[4]), 
+                .O(Segment[4]));
+   LUT5 #( .INIT(32'h02BFD9EE) ) XLXI_7 (.I0(A[0]), 
+                .I1(A[1]), 
+                .I2(A[2]), 
+                .I3(A[3]), 
+                .I4(A[4]), 
+                .O(Segment[5]));
+   LUT5 #( .INIT(32'h071B09F6) ) XLXI_8 (.I0(A[0]), 
+                .I1(A[1]), 
+                .I2(A[2]), 
+                .I3(A[3]), 
+                .I4(A[4]), 
+                .O(Segment[6]));
+endmodule

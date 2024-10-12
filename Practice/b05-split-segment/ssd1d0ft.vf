@@ -1,0 +1,83 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : ssd1d0ft.vf
+// /___/   /\     Timestamp : 10/12/2024 13:50:15
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Classes-2024/Digital System Fundamentals Shared/Practice/b05-split-segment/ssd1d0ft.vf" -w "D:/Classes-2024/Digital System Fundamentals Shared/Practice/b05-split-segment/ssd1d0ft.sch"
+//Design Name: ssd1d0ft
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module ssd1d0ft(A0, 
+                A1, 
+                A2, 
+                A3, 
+                a, 
+                b, 
+                c, 
+                d, 
+                e, 
+                f, 
+                g);
+
+    input A0;
+    input A1;
+    input A2;
+    input A3;
+   output a;
+   output b;
+   output c;
+   output d;
+   output e;
+   output f;
+   output g;
+   
+   
+   LUT4 #( .INIT(16'hEF7C) ) XLXI_1 (.I0(A0), 
+                .I1(A1), 
+                .I2(A2), 
+                .I3(A3), 
+                .O(g));
+   LUT4 #( .INIT(16'hDF71) ) XLXI_2 (.I0(A0), 
+                .I1(A1), 
+                .I2(A2), 
+                .I3(A3), 
+                .O(f));
+   LUT4 #( .INIT(16'hFD45) ) XLXI_3 (.I0(A0), 
+                .I1(A1), 
+                .I2(A2), 
+                .I3(A3), 
+                .O(e));
+   LUT4 #( .INIT(16'h7B6D) ) XLXI_4 (.I0(A0), 
+                .I1(A1), 
+                .I2(A2), 
+                .I3(A3), 
+                .O(d));
+   LUT4 #( .INIT(16'h2FFB) ) XLXI_5 (.I0(A0), 
+                .I1(A1), 
+                .I2(A2), 
+                .I3(A3), 
+                .O(c));
+   LUT4 #( .INIT(16'h279F) ) XLXI_6 (.I0(A0), 
+                .I1(A1), 
+                .I2(A2), 
+                .I3(A3), 
+                .O(b));
+   LUT4 #( .INIT(16'hD7ED) ) XLXI_7 (.I0(A0), 
+                .I1(A1), 
+                .I2(A2), 
+                .I3(A3), 
+                .O(a));
+endmodule
