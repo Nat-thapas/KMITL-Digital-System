@@ -581,6 +581,13 @@ def process_jk_flip_flop(
         )
         export_to_schematic = False
     if export_to_schematic:
+        schematic_name = input(
+            "Enter the schematic file name (leave blank for default): "
+        )
+        if not schematic_name:
+            schematic_name = "counter"
+        if schematic_name.endswith(".sch"):
+            schematic_name = schematic_name[:-4]
         output_bit_count = default_output_bit_count
         output_bit_count_input = input(
             "Enter the bit width for schematic export "
@@ -594,10 +601,12 @@ def process_jk_flip_flop(
             sequence[-1],
             bit_count,
             output_bit_count,
-            "counter.sch",
+            schematic_name + ".sch",
         )
         print(Fore.LIGHTGREEN_EX + "Schematic exported to counter.sch")
-        generate_counter_symbol(output_bit_count, "counter.sym")
+        generate_counter_symbol(
+            output_bit_count, schematic_name, schematic_name + ".sym"
+        )
         print(Fore.LIGHTGREEN_EX + "Symbol exported to counter.sym")
 
 

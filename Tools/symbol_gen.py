@@ -7,9 +7,9 @@ from components.rectangle import Rectangle
 
 
 def generate_counter_symbol(
-    bit_count: int, output_file_path: str | None = None
+    bit_count: int, symbol_name: str, output_file_path: str | None = None
 ) -> str | None:
-    symbol = Symbol(f"counter{bit_count}")
+    symbol = Symbol(symbol_name)
     ce_pin = Pin("CE", 0, -160, "input")
     clk_pin = Pin("CLK", 0, -96, "input")
     clr_pin = Pin("CLR", 0, 0, "input")
