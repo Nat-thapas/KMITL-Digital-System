@@ -1,5 +1,0 @@
-MODULE compositeTest
-	SUBMODULE clkdiv5
-		INSTANCE XLXI_1
-	SUBMODULE clkdiv3
-		INSTANCE XLXI_3
