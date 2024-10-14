@@ -1,1 +1,16 @@
 ssd{digit_count}d({first_supported_char}{last_supported_char} or {r} for raw input){t if LUT is used instead of combinatorial circuit}{l if ripple blanking is supported}{n if negative sign is supported}{p if point/dot segment is supported}{b if bus is used}.sch
+
+chars start at 0
+
+special cases for first and last supported char (_ = no display)
+_0_z : _0-9_a-z
+_0z  : _0-9a-z
+_09  : _0-9
+_a_9 : _a-z_0-9
+_a9  : _a-z0-9
+_az  : _a-z
+0_z  : 0-9_a-z
+0z   : 0-9a-z
+a_9  : a-z_0-9
+a9   : a-z0-9
+az   : a-z
