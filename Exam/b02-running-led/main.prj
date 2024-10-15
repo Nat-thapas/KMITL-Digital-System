@@ -1,0 +1,5 @@
+verilog work "edetect.vf"
+vhdl work "counter12.vhd"
+verilog work "clkdiv5.vf"
+verilog work "clkdiv2M.vf"
+verilog work "main.vf"

@@ -1,0 +1,87 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : main.vf
+// /___/   /\     Timestamp : 10/15/2024 13:08:40
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Classes-2024/Digital System Fundamentals Shared/Exam/b01-conditional-light/main.vf" -w "D:/Classes-2024/Digital System Fundamentals Shared/Exam/b01-conditional-light/main.sch"
+//Design Name: main
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module main(SW1, 
+            SW2, 
+            SW3, 
+            SW4, 
+            SW5, 
+            SW6, 
+            SW7, 
+            LED0);
+
+    input SW1;
+    input SW2;
+    input SW3;
+    input SW4;
+    input SW5;
+    input SW6;
+    input SW7;
+   output LED0;
+   
+   wire C;
+   wire E;
+   wire H;
+   wire P;
+   wire R;
+   wire S;
+   wire T;
+   wire XLXN_34;
+   wire XLXN_35;
+   wire XLXN_36;
+   wire XLXN_37;
+   
+   BUF  XLXI_1 (.I(SW7), 
+               .O(C));
+   BUF  XLXI_2 (.I(SW6), 
+               .O(R));
+   BUF  XLXI_3 (.I(SW5), 
+               .O(T));
+   BUF  XLXI_4 (.I(SW4), 
+               .O(P));
+   BUF  XLXI_5 (.I(SW3), 
+               .O(S));
+   BUF  XLXI_6 (.I(SW2), 
+               .O(E));
+   BUF  XLXI_7 (.I(SW1), 
+               .O(H));
+   AND3B2  XLXI_17 (.I0(E), 
+                   .I1(R), 
+                   .I2(C), 
+                   .O(XLXN_34));
+   AND2B1  XLXI_18 (.I0(T), 
+                   .I1(E), 
+                   .O(XLXN_35));
+   AND3B1  XLXI_19 (.I0(S), 
+                   .I1(E), 
+                   .I2(P), 
+                   .O(XLXN_36));
+   AND3B1  XLXI_20 (.I0(S), 
+                   .I1(H), 
+                   .I2(E), 
+                   .O(XLXN_37));
+   OR4  XLXI_21 (.I0(XLXN_37), 
+                .I1(XLXN_36), 
+                .I2(XLXN_35), 
+                .I3(XLXN_34), 
+                .O(LED0));
+endmodule

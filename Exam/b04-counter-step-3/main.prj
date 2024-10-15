@@ -1,0 +1,8 @@
+verilog work "dabble.vf"
+verilog work "ssd2d09b.vf"
+verilog work "dd8b.vf"
+vhdl work "counter-step-3.vhd"
+verilog work "clkdiv20M.vf"
+verilog work "clkdiv20k.vf"
+verilog work "clkdiv2.vf"
+verilog work "main.vf"

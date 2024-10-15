@@ -1,0 +1,3 @@
+MODULE main
+	SUBMODULE clkdiv256
+		INSTANCE XLXI_3

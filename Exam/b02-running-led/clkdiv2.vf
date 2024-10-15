@@ -1,0 +1,38 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : clkdiv2.vf
+// /___/   /\     Timestamp : 10/15/2024 13:23:28
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Classes-2024/Digital System Fundamentals Shared/Exam/b02-running-led/clkdiv2.vf" -w "D:/Classes-2024/Digital System Fundamentals Shared/Exam/b02-running-led/clkdiv2.sch"
+//Design Name: clkdiv2
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module clkdiv2(CLK, 
+               CLKO);
+
+    input CLK;
+   output CLKO;
+   
+   wire XLXN_27;
+   wire CLKO_DUMMY;
+   
+   assign CLKO = CLKO_DUMMY;
+   FD_1 #( .INIT(1'b0) ) XLXI_17 (.C(CLK), 
+                 .D(XLXN_27), 
+                 .Q(CLKO_DUMMY));
+   INV  XLXI_18 (.I(CLKO_DUMMY), 
+                .O(XLXN_27));
+endmodule

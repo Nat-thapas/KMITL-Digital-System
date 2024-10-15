@@ -1,0 +1,87 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : clkdiv256.vf
+// /___/   /\     Timestamp : 10/15/2024 14:27:14
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Classes-2024/Digital System Fundamentals Shared/Exam/b06-pwm/clkdiv256.vf" -w "D:/Classes-2024/Digital System Fundamentals Shared/Exam/b06-pwm/clkdiv256.sch"
+//Design Name: clkdiv256
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module clkdiv256(CLK, 
+                 CLKO);
+
+    input CLK;
+   output CLKO;
+   
+   wire XLXN_27;
+   wire XLXN_28;
+   wire XLXN_29;
+   wire XLXN_9999;
+   wire XLXN_10000;
+   wire XLXN_10001;
+   wire XLXN_10012;
+   wire XLXN_10013;
+   wire XLXN_10016;
+   wire XLXN_10017;
+   wire XLXN_10018;
+   wire XLXN_10019;
+   wire XLXN_10020;
+   wire XLXN_10021;
+   wire XLXN_10022;
+   wire CLKO_DUMMY;
+   
+   assign CLKO = CLKO_DUMMY;
+   FD_1 #( .INIT(1'b0) ) XLXI_17 (.C(CLK), 
+                 .D(XLXN_27), 
+                 .Q(XLXN_9999));
+   INV  XLXI_18 (.I(XLXN_9999), 
+                .O(XLXN_27));
+   FD_1 #( .INIT(1'b0) ) XLXI_19 (.C(XLXN_9999), 
+                 .D(XLXN_29), 
+                 .Q(XLXN_28));
+   INV  XLXI_20 (.I(XLXN_28), 
+                .O(XLXN_29));
+   FD_1 #( .INIT(1'b0) ) XLXI_21 (.C(XLXN_28), 
+                 .D(XLXN_10001), 
+                 .Q(XLXN_10000));
+   INV  XLXI_22 (.I(XLXN_10000), 
+                .O(XLXN_10001));
+   FD_1 #( .INIT(1'b0) ) XLXI_31 (.C(XLXN_10000), 
+                 .D(XLXN_10012), 
+                 .Q(XLXN_10013));
+   INV  XLXI_32 (.I(XLXN_10013), 
+                .O(XLXN_10012));
+   FD_1 #( .INIT(1'b0) ) XLXI_34 (.C(XLXN_10013), 
+                 .D(XLXN_10016), 
+                 .Q(XLXN_10017));
+   INV  XLXI_35 (.I(XLXN_10017), 
+                .O(XLXN_10016));
+   FD_1 #( .INIT(1'b0) ) XLXI_36 (.C(XLXN_10017), 
+                 .D(XLXN_10018), 
+                 .Q(XLXN_10019));
+   INV  XLXI_37 (.I(XLXN_10019), 
+                .O(XLXN_10018));
+   FD_1 #( .INIT(1'b0) ) XLXI_38 (.C(XLXN_10019), 
+                 .D(XLXN_10020), 
+                 .Q(XLXN_10021));
+   INV  XLXI_39 (.I(XLXN_10021), 
+                .O(XLXN_10020));
+   FD_1 #( .INIT(1'b0) ) XLXI_40 (.C(XLXN_10021), 
+                 .D(XLXN_10022), 
+                 .Q(CLKO_DUMMY));
+   INV  XLXI_41 (.I(CLKO_DUMMY), 
+                .O(XLXN_10022));
+endmodule

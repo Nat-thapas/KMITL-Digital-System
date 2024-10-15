@@ -1,0 +1,7 @@
+verilog work "wtb8.vf"
+verilog work "ssd4drpb.vf"
+verilog work "mux2x1x8e.vf"
+verilog work "clkdiv5.vf"
+verilog work "clkdiv2M.vf"
+verilog work "clkdiv20k.vf"
+verilog work "main.vf"

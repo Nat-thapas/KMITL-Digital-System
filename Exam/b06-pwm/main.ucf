@@ -1,0 +1,12 @@
+NET "SW[7]" LOC = P55;
+NET "SW[6]" LOC = P56;
+NET "SW[5]" LOC = P57;
+NET "SW[4]" LOC = P58;
+NET "SW[3]" LOC = P59;
+NET "SW[2]" LOC = P61;
+NET "SW[1]" LOC = P62;
+NET "SW[0]" LOC = P66;
+
+NET "OSC" LOC = P123;
+
+NET "LED1" LOC = P81;

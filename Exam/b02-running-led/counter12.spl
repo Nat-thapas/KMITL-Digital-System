@@ -1,0 +1,9 @@
+[Inputs]
+CE
+CLK
+CLR
+[Outputs]
+CEO
+TC
+=Q[3:0]=
+[BiDir]

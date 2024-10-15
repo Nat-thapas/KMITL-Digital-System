@@ -1,0 +1,2 @@
+vhdtdtfi -lib work counter-step-3.vhd -prj b04-counter-step-3 -o counter100.spl -module counter100 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 counter100.spl {D:/Classes-2024/Digital System Fundamentals Shared/Exam/b04-counter-step-3/counter100.sym} 

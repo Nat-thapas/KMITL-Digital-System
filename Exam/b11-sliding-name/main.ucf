@@ -1,0 +1,18 @@
+NET "OSC" LOC = P123;
+
+NET "BTN1" LOC = P45;
+
+NET "SSD_Segment[0]" LOC = P41;
+NET "SSD_Segment[1]" LOC = P40;
+NET "SSD_Segment[2]" LOC = P35;
+NET "SSD_Segment[3]" LOC = P34;
+NET "SSD_Segment[4]" LOC = P32;
+NET "SSD_Segment[5]" LOC = P29;
+NET "SSD_Segment[6]" LOC = P27;
+
+NET "SSD_Segment[7]" LOC = P26;
+
+NET "SSD_COM[3]" LOC = P30;
+NET "SSD_COM[2]" LOC = P33;
+NET "SSD_COM[1]" LOC = P43;
+NET "SSD_COM[0]" LOC = P44;

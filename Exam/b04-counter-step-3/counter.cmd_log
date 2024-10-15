@@ -1,0 +1,1 @@
+vhdtdtfi -lib work counter-step-3.vhd -prj b04-counter-step-3 -o counter.spl -module counter -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 

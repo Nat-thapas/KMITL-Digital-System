@@ -1,0 +1,1 @@
+vhdtdtfi -lib work counter12.vhd -prj b02-running-led -o counter89.spl -module counter89 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 

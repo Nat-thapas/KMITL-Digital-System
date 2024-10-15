@@ -1,0 +1,3 @@
+verilog work "edetect.vf"
+verilog work "clkdiv20M.vf"
+verilog work "main.vf"

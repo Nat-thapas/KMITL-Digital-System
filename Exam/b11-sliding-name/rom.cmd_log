@@ -1,0 +1,2 @@
+vhdtdtfi -lib work charrom.vhd -prj b11-sliding-name -o rom.spl -module rom -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 rom.spl {D:/Classes-2024/Digital System Fundamentals Shared/Exam/b11-sliding-name/rom.sym} 

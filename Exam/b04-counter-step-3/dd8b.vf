@@ -1,0 +1,218 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : dd8b.vf
+// /___/   /\     Timestamp : 10/15/2024 13:58:34
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Classes-2024/Digital System Fundamentals Shared/Exam/b04-counter-step-3/dd8b.vf" -w "D:/Classes-2024/Digital System Fundamentals Shared/Exam/b04-counter-step-3/dd8b.sch"
+//Design Name: dd8b
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale  100 ps / 10 ps
+
+module M2_1_HXILINX_dd8b (O, D0, D1, S0);
+    
+
+   output O;
+
+   input  D0;
+   input  D1;
+   input  S0;
+
+   reg O;
+
+   always @ ( D0 or D1 or S0)
+   begin
+      case(S0)
+      1'b0 : O <= D0;
+      1'b1 : O <= D1;
+      endcase
+   end
+    
+endmodule
+`timescale 1ns / 1ps
+
+module dabble_MUSER_dd8b(D0, 
+                         D1, 
+                         D2, 
+                         D3, 
+                         Q0, 
+                         Q1, 
+                         Q2, 
+                         Q3);
+
+    input D0;
+    input D1;
+    input D2;
+    input D3;
+   output Q0;
+   output Q1;
+   output Q2;
+   output Q3;
+   
+   wire XLXN_13;
+   wire XLXN_14;
+   wire XLXN_15;
+   wire XLXN_19;
+   wire XLXN_23;
+   wire XLXN_24;
+   wire XLXN_25;
+   wire XLXN_26;
+   wire XLXN_27;
+   wire XLXN_30;
+   wire Q0_DUMMY;
+   
+   assign Q0 = Q0_DUMMY;
+   INV  XLXI_1 (.I(D2), 
+               .O(XLXN_13));
+   NOR2  XLXI_2 (.I0(D3), 
+                .I1(D2), 
+                .O(XLXN_25));
+   AND2  XLXI_3 (.I0(D2), 
+                .I1(D1), 
+                .O(XLXN_15));
+   INV  XLXI_4 (.I(D0), 
+               .O(XLXN_14));
+   NOR2  XLXI_25 (.I0(XLXN_13), 
+                 .I1(D1), 
+                 .O(XLXN_19));
+   NAND2  XLXI_26 (.I0(XLXN_14), 
+                  .I1(D2), 
+                  .O(XLXN_23));
+   OR2  XLXI_27 (.I0(XLXN_15), 
+                .I1(D3), 
+                .O(XLXN_24));
+   NAND2  XLXI_28 (.I0(D3), 
+                  .I1(XLXN_14), 
+                  .O(XLXN_26));
+   (* HU_SET = "XLXI_37_0" *) 
+   M2_1_HXILINX_dd8b  XLXI_37 (.D0(XLXN_19), 
+                              .D1(D3), 
+                              .S0(D0), 
+                              .O(Q1));
+   NAND2  XLXI_38 (.I0(XLXN_23), 
+                  .I1(D1), 
+                  .O(XLXN_27));
+   (* HU_SET = "XLXI_39_1" *) 
+   M2_1_HXILINX_dd8b  XLXI_39 (.D0(XLXN_24), 
+                              .D1(XLXN_25), 
+                              .S0(D0), 
+                              .O(Q0_DUMMY));
+   INV  XLXI_40 (.I(Q0_DUMMY), 
+                .O(XLXN_30));
+   NAND2  XLXI_41 (.I0(XLXN_26), 
+                  .I1(XLXN_27), 
+                  .O(Q2));
+   (* HU_SET = "XLXI_42_2" *) 
+   M2_1_HXILINX_dd8b  XLXI_42 (.D0(Q0_DUMMY), 
+                              .D1(XLXN_30), 
+                              .S0(D0), 
+                              .O(Q3));
+endmodule
+`timescale 1ns / 1ps
+
+module dd8b(B, 
+            H, 
+            O, 
+            T);
+
+    input [7:0] B;
+   output [3:0] H;
+   output [3:0] O;
+   output [3:0] T;
+   
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_5;
+   wire XLXN_6;
+   wire XLXN_7;
+   wire XLXN_8;
+   wire XLXN_9;
+   wire XLXN_10;
+   wire XLXN_12;
+   wire XLXN_13;
+   wire XLXN_14;
+   wire XLXN_15;
+   wire XLXN_16;
+   wire XLXN_17;
+   wire XLXN_18;
+   wire XLXN_19;
+   wire XLXN_20;
+   wire XLXN_22;
+   wire XLXN_23;
+   wire XLXN_24;
+   
+   dabble_MUSER_dd8b  XLXI_1 (.D0(B[5]), 
+                             .D1(B[6]), 
+                             .D2(B[7]), 
+                             .D3(XLXN_23), 
+                             .Q0(XLXN_2), 
+                             .Q1(XLXN_4), 
+                             .Q2(XLXN_3), 
+                             .Q3(XLXN_14));
+   dabble_MUSER_dd8b  XLXI_2 (.D0(B[4]), 
+                             .D1(XLXN_2), 
+                             .D2(XLXN_3), 
+                             .D3(XLXN_4), 
+                             .Q0(XLXN_7), 
+                             .Q1(XLXN_5), 
+                             .Q2(XLXN_6), 
+                             .Q3(XLXN_13));
+   dabble_MUSER_dd8b  XLXI_3 (.D0(B[3]), 
+                             .D1(XLXN_7), 
+                             .D2(XLXN_6), 
+                             .D3(XLXN_5), 
+                             .Q0(XLXN_8), 
+                             .Q1(XLXN_10), 
+                             .Q2(XLXN_9), 
+                             .Q3(XLXN_12));
+   dabble_MUSER_dd8b  XLXI_4 (.D0(B[2]), 
+                             .D1(XLXN_8), 
+                             .D2(XLXN_9), 
+                             .D3(XLXN_10), 
+                             .Q0(XLXN_22), 
+                             .Q1(XLXN_19), 
+                             .Q2(XLXN_20), 
+                             .Q3(XLXN_18));
+   dabble_MUSER_dd8b  XLXI_5 (.D0(XLXN_12), 
+                             .D1(XLXN_13), 
+                             .D2(XLXN_14), 
+                             .D3(XLXN_24), 
+                             .Q0(XLXN_17), 
+                             .Q1(XLXN_15), 
+                             .Q2(XLXN_16), 
+                             .Q3(H[1]));
+   dabble_MUSER_dd8b  XLXI_6 (.D0(B[1]), 
+                             .D1(XLXN_22), 
+                             .D2(XLXN_20), 
+                             .D3(XLXN_19), 
+                             .Q0(O[1]), 
+                             .Q1(O[3]), 
+                             .Q2(O[2]), 
+                             .Q3(T[0]));
+   dabble_MUSER_dd8b  XLXI_7 (.D0(XLXN_18), 
+                             .D1(XLXN_17), 
+                             .D2(XLXN_16), 
+                             .D3(XLXN_15), 
+                             .Q0(T[1]), 
+                             .Q1(T[3]), 
+                             .Q2(T[2]), 
+                             .Q3(H[0]));
+   GND  XLXI_8 (.G(XLXN_23));
+   GND  XLXI_9 (.G(XLXN_24));
+   BUF  XLXI_36 (.I(B[0]), 
+                .O(O[0]));
+   GND  XLXI_37 (.G(H[2]));
+   GND  XLXI_38 (.G(H[3]));
+endmodule

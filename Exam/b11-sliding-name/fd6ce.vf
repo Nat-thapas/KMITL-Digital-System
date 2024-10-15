@@ -1,0 +1,66 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : fd6ce.vf
+// /___/   /\     Timestamp : 10/15/2024 15:25:31
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Classes-2024/Digital System Fundamentals Shared/Exam/b11-sliding-name/fd6ce.vf" -w "D:/Classes-2024/Digital System Fundamentals Shared/Exam/b11-sliding-name/fd6ce.sch"
+//Design Name: fd6ce
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module fd6ce(CE, 
+             CLK, 
+             CLR, 
+             D, 
+             Q);
+
+    input CE;
+    input CLK;
+    input CLR;
+    input [5:0] D;
+   output [5:0] Q;
+   
+   
+   FDCE  XLXI_1 (.C(CLK), 
+                .CE(CE), 
+                .CLR(CLR), 
+                .D(D[0]), 
+                .Q(Q[0]));
+   FDCE  XLXI_2 (.C(CLK), 
+                .CE(CE), 
+                .CLR(CLR), 
+                .D(D[1]), 
+                .Q(Q[1]));
+   FDCE  XLXI_3 (.C(CLK), 
+                .CE(CE), 
+                .CLR(CLR), 
+                .D(D[2]), 
+                .Q(Q[2]));
+   FDCE  XLXI_4 (.C(CLK), 
+                .CE(CE), 
+                .CLR(CLR), 
+                .D(D[3]), 
+                .Q(Q[3]));
+   FDCE  XLXI_6 (.C(CLK), 
+                .CE(CE), 
+                .CLR(CLR), 
+                .D(D[4]), 
+                .Q(Q[4]));
+   FDCE  XLXI_7 (.C(CLK), 
+                .CE(CE), 
+                .CLR(CLR), 
+                .D(D[5]), 
+                .Q(Q[5]));
+endmodule

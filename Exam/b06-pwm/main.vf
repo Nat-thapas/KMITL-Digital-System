@@ -1,0 +1,163 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : main.vf
+// /___/   /\     Timestamp : 10/15/2024 14:27:14
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "D:/Classes-2024/Digital System Fundamentals Shared/Exam/b06-pwm/main.vf" -w "D:/Classes-2024/Digital System Fundamentals Shared/Exam/b06-pwm/main.sch"
+//Design Name: main
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale  100 ps / 10 ps
+
+module COMPM8_HXILINX_main (GT, LT, A, B);
+    
+
+   output GT;
+   output LT;
+
+   input  [7:0] A;
+   input  [7:0] B;
+
+
+   assign GT = A > B  ;
+   assign LT = A < B  ;
+
+endmodule
+`timescale 100 ps / 10 ps
+
+module CB8CE_HXILINX_main(CEO, Q, TC, C, CE, CLR);
+   
+   localparam TERMINAL_COUNT = 8'b1111_1111;
+   
+   output             CEO;
+   output [7:0]       Q;
+   output             TC;
+
+   input 	      C;	
+   input 	      CE;	
+   input 	      CLR;	
+   
+   reg   [7:0]        Q;
+   
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 8'b0000_0000;
+	else if (CE)
+	  Q <= Q + 1;
+     end
+   
+   assign CEO = TC & CE;
+   assign TC = (Q == TERMINAL_COUNT);
+   
+endmodule
+`timescale 1ns / 1ps
+
+module clkdiv256_MUSER_main(CLK, 
+                            CLKO);
+
+    input CLK;
+   output CLKO;
+   
+   wire XLXN_27;
+   wire XLXN_28;
+   wire XLXN_29;
+   wire XLXN_9999;
+   wire XLXN_10000;
+   wire XLXN_10001;
+   wire XLXN_10012;
+   wire XLXN_10013;
+   wire XLXN_10016;
+   wire XLXN_10017;
+   wire XLXN_10018;
+   wire XLXN_10019;
+   wire XLXN_10020;
+   wire XLXN_10021;
+   wire XLXN_10022;
+   wire CLKO_DUMMY;
+   
+   assign CLKO = CLKO_DUMMY;
+   FD_1 #( .INIT(1'b0) ) XLXI_17 (.C(CLK), 
+                 .D(XLXN_27), 
+                 .Q(XLXN_9999));
+   INV  XLXI_18 (.I(XLXN_9999), 
+                .O(XLXN_27));
+   FD_1 #( .INIT(1'b0) ) XLXI_19 (.C(XLXN_9999), 
+                 .D(XLXN_29), 
+                 .Q(XLXN_28));
+   INV  XLXI_20 (.I(XLXN_28), 
+                .O(XLXN_29));
+   FD_1 #( .INIT(1'b0) ) XLXI_21 (.C(XLXN_28), 
+                 .D(XLXN_10001), 
+                 .Q(XLXN_10000));
+   INV  XLXI_22 (.I(XLXN_10000), 
+                .O(XLXN_10001));
+   FD_1 #( .INIT(1'b0) ) XLXI_31 (.C(XLXN_10000), 
+                 .D(XLXN_10012), 
+                 .Q(XLXN_10013));
+   INV  XLXI_32 (.I(XLXN_10013), 
+                .O(XLXN_10012));
+   FD_1 #( .INIT(1'b0) ) XLXI_34 (.C(XLXN_10013), 
+                 .D(XLXN_10016), 
+                 .Q(XLXN_10017));
+   INV  XLXI_35 (.I(XLXN_10017), 
+                .O(XLXN_10016));
+   FD_1 #( .INIT(1'b0) ) XLXI_36 (.C(XLXN_10017), 
+                 .D(XLXN_10018), 
+                 .Q(XLXN_10019));
+   INV  XLXI_37 (.I(XLXN_10019), 
+                .O(XLXN_10018));
+   FD_1 #( .INIT(1'b0) ) XLXI_38 (.C(XLXN_10019), 
+                 .D(XLXN_10020), 
+                 .Q(XLXN_10021));
+   INV  XLXI_39 (.I(XLXN_10021), 
+                .O(XLXN_10020));
+   FD_1 #( .INIT(1'b0) ) XLXI_40 (.C(XLXN_10021), 
+                 .D(XLXN_10022), 
+                 .Q(CLKO_DUMMY));
+   INV  XLXI_41 (.I(CLKO_DUMMY), 
+                .O(XLXN_10022));
+endmodule
+`timescale 1ns / 1ps
+
+module main(OSC, 
+            SW, 
+            LED1);
+
+    input OSC;
+    input [7:0] SW;
+   output LED1;
+   
+   wire [7:0] XLXN_2;
+   wire XLXN_5;
+   wire XLXN_7;
+   wire XLXN_8;
+   
+   (* HU_SET = "XLXI_1_1" *) 
+   COMPM8_HXILINX_main  XLXI_1 (.A(XLXN_2[7:0]), 
+                               .B(SW[7:0]), 
+                               .GT(), 
+                               .LT(LED1));
+   (* HU_SET = "XLXI_2_0" *) 
+   CB8CE_HXILINX_main  XLXI_2 (.C(XLXN_5), 
+                              .CE(XLXN_8), 
+                              .CLR(XLXN_7), 
+                              .CEO(), 
+                              .Q(XLXN_2[7:0]), 
+                              .TC());
+   clkdiv256_MUSER_main  XLXI_3 (.CLK(OSC), 
+                                .CLKO(XLXN_5));
+   GND  XLXI_4 (.G(XLXN_7));
+   VCC  XLXI_6 (.P(XLXN_8));
+endmodule

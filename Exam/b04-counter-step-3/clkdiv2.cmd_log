@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan6 -refsym clkdiv2 {D:/Classes-2024/Digital System Fundamentals Shared/Exam/b04-counter-step-3/clkdiv2.sch} {D:/Classes-2024/Digital System Fundamentals Shared/Exam/b04-counter-step-3/clkdiv2.sym} 

@@ -1,0 +1,615 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Reading design: main.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "main.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "main"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-tqg144
+
+---- Source Options
+Top Module Name                    : main
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\edetect.vf" into library work
+Parsing module <edetect>.
+Analyzing Verilog file "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\clkdiv20M.vf" into library work
+Parsing module <CD4CE_HXILINX_clkdiv20M>.
+Parsing module <clkdiv20M>.
+Analyzing Verilog file "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\main.vf" into library work
+Parsing module <INV4_HXILINX_main>.
+Parsing module <CD4CE_HXILINX_main>.
+Parsing module <D2_4E_HXILINX_main>.
+Parsing module <CB2CLED_HXILINX_main>.
+Parsing module <clkdiv20M_MUSER_main>.
+Parsing module <edetect_MUSER_main>.
+Parsing module <main>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <main>.
+
+Elaborating module <CB2CLED_HXILINX_main>.
+WARNING:HDLCompiler:413 - "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\main.vf" Line 156: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\main.vf" Line 158: Result of 32-bit expression is truncated to fit in 2-bit target.
+
+Elaborating module <GND>.
+
+Elaborating module <edetect_MUSER_main>.
+
+Elaborating module <FD(INIT=1'b0)>.
+
+Elaborating module <AND2B1>.
+
+Elaborating module <OR2>.
+
+Elaborating module <VCC>.
+
+Elaborating module <D2_4E_HXILINX_main>.
+
+Elaborating module <INV4_HXILINX_main>.
+
+Elaborating module <AND2>.
+
+Elaborating module <AND2B2>.
+
+Elaborating module <clkdiv20M_MUSER_main>.
+
+Elaborating module <CD4CE_HXILINX_main>.
+WARNING:HDLCompiler:413 - "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\main.vf" Line 81: Result of 5-bit expression is truncated to fit in 4-bit target.
+
+Elaborating module <FD_1(INIT=1'b0)>.
+
+Elaborating module <INV>.
+WARNING:HDLCompiler:552 - "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\main.vf" Line 343: Input port D0 is not connected on this instance
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <main>.
+    Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\main.vf".
+    Set property "HU_SET = XLXI_19_24" for instance <XLXI_19>.
+    Set property "HU_SET = XLXI_64_25" for instance <XLXI_64>.
+    Set property "HU_SET = XLXI_65_26" for instance <XLXI_65>.
+WARNING:Xst:2898 - Port 'D0', unconnected in block instance 'XLXI_19', is tied to GND.
+WARNING:Xst:2898 - Port 'D1', unconnected in block instance 'XLXI_19', is tied to GND.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\main.vf" line 343: Output port <CEO> of the instance <XLXI_19> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\main.vf" line 343: Output port <TC> of the instance <XLXI_19> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <main> synthesized.
+
+Synthesizing Unit <CB2CLED_HXILINX_main>.
+    Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\main.vf".
+        TERMINAL_COUNT_UP = 2'b11
+        TERMINAL_COUNT_DOWN = 2'b00
+    Found 1-bit register for signal <Q1>.
+    Found 1-bit register for signal <Q0>.
+    Found 2-bit adder for signal <Q1_GND_2_o_add_0_OUT> created at line 156.
+    Found 2-bit subtractor for signal <GND_2_o_GND_2_o_sub_2_OUT<1:0>> created at line 158.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred   2 D-type flip-flop(s).
+	inferred   5 Multiplexer(s).
+Unit <CB2CLED_HXILINX_main> synthesized.
+
+Synthesizing Unit <edetect_MUSER_main>.
+    Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\main.vf".
+    Summary:
+	no macro.
+Unit <edetect_MUSER_main> synthesized.
+
+Synthesizing Unit <D2_4E_HXILINX_main>.
+    Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\main.vf".
+    Summary:
+	inferred   4 Multiplexer(s).
+Unit <D2_4E_HXILINX_main> synthesized.
+
+Synthesizing Unit <INV4_HXILINX_main>.
+    Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\main.vf".
+    Summary:
+	no macro.
+Unit <INV4_HXILINX_main> synthesized.
+
+Synthesizing Unit <clkdiv20M_MUSER_main>.
+    Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\main.vf".
+    Set property "HU_SET = XLXI_1_17" for instance <XLXI_1>.
+    Set property "HU_SET = XLXI_14_18" for instance <XLXI_14>.
+    Set property "HU_SET = XLXI_17_19" for instance <XLXI_17>.
+    Set property "HU_SET = XLXI_22_20" for instance <XLXI_22>.
+    Set property "HU_SET = XLXI_25_21" for instance <XLXI_25>.
+    Set property "HU_SET = XLXI_28_22" for instance <XLXI_28>.
+    Set property "HU_SET = XLXI_31_23" for instance <XLXI_31>.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\main.vf" line 189: Output port <Q0> of the instance <XLXI_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\main.vf" line 189: Output port <Q1> of the instance <XLXI_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\main.vf" line 189: Output port <Q2> of the instance <XLXI_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\main.vf" line 189: Output port <Q3> of the instance <XLXI_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\main.vf" line 189: Output port <TC> of the instance <XLXI_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\main.vf" line 206: Output port <Q0> of the instance <XLXI_14> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\main.vf" line 206: Output port <Q1> of the instance <XLXI_14> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\main.vf" line 206: Output port <Q2> of the instance <XLXI_14> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\main.vf" line 206: Output port <Q3> of the instance <XLXI_14> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\main.vf" line 206: Output port <TC> of the instance <XLXI_14> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\main.vf" line 216: Output port <Q0> of the instance <XLXI_17> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\main.vf" line 216: Output port <Q1> of the instance <XLXI_17> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\main.vf" line 216: Output port <Q2> of the instance <XLXI_17> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\main.vf" line 216: Output port <Q3> of the instance <XLXI_17> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\main.vf" line 216: Output port <TC> of the instance <XLXI_17> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\main.vf" line 226: Output port <Q0> of the instance <XLXI_22> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\main.vf" line 226: Output port <Q1> of the instance <XLXI_22> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\main.vf" line 226: Output port <Q2> of the instance <XLXI_22> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\main.vf" line 226: Output port <Q3> of the instance <XLXI_22> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\main.vf" line 226: Output port <TC> of the instance <XLXI_22> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\main.vf" line 236: Output port <Q0> of the instance <XLXI_25> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\main.vf" line 236: Output port <Q1> of the instance <XLXI_25> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\main.vf" line 236: Output port <Q2> of the instance <XLXI_25> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\main.vf" line 236: Output port <Q3> of the instance <XLXI_25> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\main.vf" line 236: Output port <TC> of the instance <XLXI_25> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\main.vf" line 246: Output port <Q0> of the instance <XLXI_28> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\main.vf" line 246: Output port <Q1> of the instance <XLXI_28> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\main.vf" line 246: Output port <Q2> of the instance <XLXI_28> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\main.vf" line 246: Output port <Q3> of the instance <XLXI_28> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\main.vf" line 246: Output port <TC> of the instance <XLXI_28> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\main.vf" line 256: Output port <CEO> of the instance <XLXI_31> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\main.vf" line 256: Output port <Q0> of the instance <XLXI_31> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\main.vf" line 256: Output port <Q1> of the instance <XLXI_31> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\main.vf" line 256: Output port <Q2> of the instance <XLXI_31> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\main.vf" line 256: Output port <Q3> of the instance <XLXI_31> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <clkdiv20M_MUSER_main> synthesized.
+
+Synthesizing Unit <CD4CE_HXILINX_main>.
+    Related source file is "D:\Classes-2024\Digital System Fundamentals Shared\Exam\b03-cursor\main.vf".
+        TERMINAL_COUNT = 4'b1001
+    Found 1-bit register for signal <Q1>.
+    Found 1-bit register for signal <Q2>.
+    Found 1-bit register for signal <Q3>.
+    Found 1-bit register for signal <Q0>.
+    Found 4-bit adder for signal <Q3_GND_14_o_add_4_OUT> created at line 81.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   4 D-type flip-flop(s).
+	inferred   7 Multiplexer(s).
+Unit <CD4CE_HXILINX_main> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 9
+ 2-bit adder                                           : 1
+ 2-bit subtractor                                      : 1
+ 4-bit adder                                           : 7
+# Registers                                            : 30
+ 1-bit register                                        : 30
+# Multiplexers                                         : 58
+ 1-bit 2-to-1 multiplexer                              : 58
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 9
+ 2-bit adder                                           : 1
+ 2-bit subtractor                                      : 1
+ 4-bit adder                                           : 7
+# Registers                                            : 35
+ Flip-Flops                                            : 35
+# Multiplexers                                         : 58
+ 1-bit 2-to-1 multiplexer                              : 58
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <main> ...
+
+Optimizing unit <clkdiv20M_MUSER_main> ...
+
+Optimizing unit <CB2CLED_HXILINX_main> ...
+
+Optimizing unit <CD4CE_HXILINX_main> ...
+
+Optimizing unit <D2_4E_HXILINX_main> ...
+
+Optimizing unit <INV4_HXILINX_main> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block main, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 35
+ Flip-Flops                                            : 35
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : main.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 56
+#      AND2                        : 1
+#      AND2B1                      : 4
+#      AND2B2                      : 1
+#      GND                         : 1
+#      INV                         : 14
+#      LUT3                        : 19
+#      LUT4                        : 9
+#      LUT5                        : 5
+#      OR2                         : 1
+#      VCC                         : 1
+# FlipFlops/Latches                : 35
+#      FD                          : 4
+#      FD_1                        : 1
+#      FDCE                        : 30
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 14
+#      IBUF                        : 2
+#      OBUF                        : 12
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              35  out of  11440     0%  
+ Number of Slice LUTs:                   47  out of   5720     0%  
+    Number used as Logic:                47  out of   5720     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     82
+   Number with an unused Flip Flop:      47  out of     82    57%  
+   Number with an unused LUT:            35  out of     82    42%  
+   Number of fully used LUT-FF pairs:     0  out of     82     0%  
+   Number of unique control sets:        10
+
+IO Utilization: 
+ Number of IOs:                          15
+ Number of bonded IOBs:                  15  out of    102    14%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------------------+------------------------+-------+
+Clock Signal                                   | Clock buffer(FF name)  | Load  |
+-----------------------------------------------+------------------------+-------+
+OSC                                            | BUFGP                  | 34    |
+XLXI_70/XLXI_31/TC(XLXI_70/XLXI_31/Mmux_TC11:O)| NONE(*)(XLXI_70/XLXI_9)| 1     |
+-----------------------------------------------+------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 7.153ns (Maximum Frequency: 139.805MHz)
+   Minimum input arrival time before clock: 1.903ns
+   Maximum output required time after clock: 5.588ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'OSC'
+  Clock period: 7.153ns (frequency: 139.805MHz)
+  Total number of paths / destination ports: 438 / 58
+-------------------------------------------------------------------------
+Delay:               7.153ns (Levels of Logic = 12)
+  Source:            XLXI_70/XLXI_1/Q3 (FF)
+  Destination:       XLXI_70/XLXI_31/Q3 (FF)
+  Source Clock:      OSC falling
+  Destination Clock: OSC falling
+
+  Data Path: XLXI_70/XLXI_1/Q3 to XLXI_70/XLXI_31/Q3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.447   0.898  Q3 (Q3)
+     LUT4:I0->O            5   0.203   0.715  Mmux_TC11 (TC)
+     end scope: 'XLXI_70/XLXI_1:CEO'
+     begin scope: 'XLXI_70/XLXI_14:CE'
+     LUT5:I4->O            5   0.205   0.715  CEO1 (CEO)
+     end scope: 'XLXI_70/XLXI_14:CEO'
+     begin scope: 'XLXI_70/XLXI_17:CE'
+     LUT5:I4->O            5   0.205   0.715  CEO1 (CEO)
+     end scope: 'XLXI_70/XLXI_17:CEO'
+     begin scope: 'XLXI_70/XLXI_22:CE'
+     LUT5:I4->O            5   0.205   0.715  CEO1 (CEO)
+     end scope: 'XLXI_70/XLXI_22:CEO'
+     begin scope: 'XLXI_70/XLXI_25:CE'
+     LUT5:I4->O            5   0.205   0.715  CEO1 (CEO)
+     end scope: 'XLXI_70/XLXI_25:CEO'
+     begin scope: 'XLXI_70/XLXI_28:CE'
+     LUT5:I4->O            4   0.205   0.683  CEO1 (CEO)
+     end scope: 'XLXI_70/XLXI_28:CEO'
+     begin scope: 'XLXI_70/XLXI_31:CE'
+     FDCE:CE                   0.322          Q3
+    ----------------------------------------
+    Total                      7.153ns (1.997ns logic, 5.156ns route)
+                                       (27.9% logic, 72.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_70/XLXI_31/TC'
+  Clock period: 2.410ns (frequency: 414.964MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.410ns (Levels of Logic = 1)
+  Source:            XLXI_70/XLXI_9 (FF)
+  Destination:       XLXI_70/XLXI_9 (FF)
+  Source Clock:      XLXI_70/XLXI_31/TC falling
+  Destination Clock: XLXI_70/XLXI_31/TC falling
+
+  Data Path: XLXI_70/XLXI_9 to XLXI_70/XLXI_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD_1:C->Q             5   0.447   0.714  XLXI_70/XLXI_9 (XLXN_80)
+     INV:I->O              1   0.568   0.579  XLXI_70/XLXI_11 (XLXI_70/XLXN_9)
+     FD_1:D                    0.102          XLXI_70/XLXI_9
+    ----------------------------------------
+    Total                      2.410ns (1.117ns logic, 1.293ns route)
+                                       (46.4% logic, 53.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'OSC'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              1.903ns (Levels of Logic = 1)
+  Source:            BTN4 (PAD)
+  Destination:       XLXI_33/XLXI_1 (FF)
+  Destination Clock: OSC rising
+
+  Data Path: BTN4 to XLXI_33/XLXI_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  BTN4_IBUF (BTN4_IBUF)
+     FD:D                      0.102          XLXI_33/XLXI_1
+    ----------------------------------------
+    Total                      1.903ns (1.324ns logic, 0.579ns route)
+                                       (69.6% logic, 30.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'OSC'
+  Total number of paths / destination ports: 8 / 4
+-------------------------------------------------------------------------
+Offset:              5.588ns (Levels of Logic = 6)
+  Source:            XLXI_19/Q1 (FF)
+  Destination:       SSD_COM2 (PAD)
+  Source Clock:      OSC rising
+
+  Data Path: XLXI_19/Q1 to SSD_COM2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             7   0.447   1.002  Q1 (Q1)
+     end scope: 'XLXI_19:Q1'
+     begin scope: 'XLXI_64:A1'
+     LUT3:I0->O            1   0.205   0.579  Mmux_D211 (D2)
+     end scope: 'XLXI_64:D2'
+     begin scope: 'XLXI_65:I1'
+     INV:I->O              1   0.206   0.579  O11_INV_0 (O1)
+     end scope: 'XLXI_65:O1'
+     OBUF:I->O                 2.571          SSD_COM2_OBUF (SSD_COM2)
+    ----------------------------------------
+    Total                      5.588ns (3.429ns logic, 2.159ns route)
+                                       (61.4% logic, 38.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_70/XLXI_31/TC'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              5.530ns (Levels of Logic = 5)
+  Source:            XLXI_70/XLXI_9 (FF)
+  Destination:       SSD_COM0 (PAD)
+  Source Clock:      XLXI_70/XLXI_31/TC falling
+
+  Data Path: XLXI_70/XLXI_9 to SSD_COM0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD_1:C->Q             5   0.447   0.943  XLXI_70/XLXI_9 (XLXN_80)
+     begin scope: 'XLXI_64:E'
+     LUT3:I0->O            1   0.205   0.579  Mmux_D011 (D0)
+     end scope: 'XLXI_64:D0'
+     begin scope: 'XLXI_65:I3'
+     INV:I->O              1   0.206   0.579  O31_INV_0 (O3)
+     end scope: 'XLXI_65:O3'
+     OBUF:I->O                 2.571          SSD_COM0_OBUF (SSD_COM0)
+    ----------------------------------------
+    Total                      5.530ns (3.429ns logic, 2.101ns route)
+                                       (62.0% logic, 38.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock OSC
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+OSC            |    5.086|         |    7.153|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXI_70/XLXI_31/TC
+------------------+---------+---------+---------+---------+
+                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------+---------+---------+---------+---------+
+XLXI_70/XLXI_31/TC|         |         |    2.410|         |
+------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 3.03 secs
+ 
+--> 
+
+Total memory usage is 4501776 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    6 (   0 filtered)
+Number of infos    :   38 (   0 filtered)
+
