@@ -603,11 +603,11 @@ def process_jk_flip_flop(
             output_bit_count,
             schematic_name + ".sch",
         )
-        print(Fore.LIGHTGREEN_EX + "Schematic exported to counter.sch")
+        print(Fore.LIGHTGREEN_EX + f"Schematic exported to {schematic_name}.sch")
         generate_counter_symbol(
             output_bit_count, schematic_name, schematic_name + ".sym"
         )
-        print(Fore.LIGHTGREEN_EX + "Symbol exported to counter.sym")
+        print(Fore.LIGHTGREEN_EX + f"Symbol exported to {schematic_name}.sym")
 
 
 def main() -> None:
