@@ -29,11 +29,9 @@ def parse_pins(net_locs: str) -> dict[str, str]:
 
 def multi_range(start: int, end: int) -> Generator[int, None, None]:
     if start < end:
-        for i in range(start, end + 1):
-            yield i
+        yield from range(start, end + 1)
     else:
-        for i in range(start, end - 1, -1):
-            yield i
+        yield from range(start, end - 1, -1)
 
 
 def main():
@@ -42,10 +40,19 @@ def main():
     else:
         schematic_path = input("Enter the path to the schematic file: ")
         schematic_path = schematic_path.strip().strip('"')
+    schematic_file_folder = os.path.dirname(schematic_path)
+    schematic_file_name = os.path.basename(schematic_path)
+    schematic_file_name_no_ext = os.path.splitext(schematic_file_name)[0]
+    ucf_path = os.path.join(schematic_file_folder, f"{schematic_file_name_no_ext}.ucf")
     with open(schematic_path, "r", encoding="utf-8") as f:
         schematic = f.read()
     with open(PINS_FILE_PATH, "r", encoding="utf-8") as f:
         net_locs = f.read()
+    if os.path.isfile(ucf_path):
+        with open(ucf_path, "r", encoding="utf-8") as f:
+            ucf = f.read()
+    else:
+        ucf = ""
     pins: dict[str, str] = parse_pins(net_locs)
     nets: list[str] = re.findall(r'<iomarker.*?name="(.*?)".*?/>', schematic)
     output: list[str] = []
@@ -82,15 +89,13 @@ def main():
     output_str: str = "\n".join(output) + "\n"
     print("Output:")
     print(output_str[:-1])
-    schematic_file_folder = os.path.dirname(schematic_path)
-    schematic_file_name = os.path.basename(schematic_path)
-    schematic_file_name_no_ext = os.path.splitext(schematic_file_name)[0]
-    ucf_save_path = os.path.join(
-        schematic_file_folder, f"{schematic_file_name_no_ext}.ucf"
-    )
-    print(f"Saving to {ucf_save_path}")
-    with open(ucf_save_path, "w", encoding="utf-8") as f:
-        f.write(output_str)
+    ucf = re.sub(r'NET "(.*?)" LOC = (.*?);', "", ucf)
+    ucf = re.sub(r"\n{3,}", "\n\n", ucf)
+    ucf = ucf.rstrip("\n")
+    ucf += "\n\n\n" if ucf else "" + output_str
+    print(f"Saving to {ucf_path}")
+    with open(ucf_path, "w", encoding="utf-8") as f:
+        f.write(ucf)
     print(Fore.LIGHTGREEN_EX + "File saved successfully.")
     print(Style.RESET_ALL, end="")
     input("Press Enter to exit.")
