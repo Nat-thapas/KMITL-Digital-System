@@ -90,7 +90,7 @@ def main():
     print("Output:")
     print(output_str[:-1])
     ucf = re.sub(r'NET "(.*?)" LOC = (.*?);', "", ucf)
-    ucf = re.sub(r"\n{3,}", "\n\n", ucf)
+    ucf = re.sub(r"\n{4,}", "\n\n\n", ucf)
     ucf = ucf.rstrip("\n")
     ucf += "\n\n\n" if ucf else "" + output_str
     print(f"Saving to {ucf_path}")
