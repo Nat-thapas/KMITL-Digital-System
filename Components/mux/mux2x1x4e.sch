@@ -16,22 +16,8 @@
         <signal name="D1(1)" />
         <signal name="D1(0)" />
         <signal name="D0(0)" />
-        <signal name="XLXN_8" />
-        <signal name="XLXN_15" />
-        <signal name="XLXN_16" />
-        <signal name="XLXN_17" />
-        <signal name="XLXN_18" />
-        <signal name="XLXN_19" />
         <signal name="Enable" />
-        <signal name="XLXN_23" />
-        <signal name="XLXN_24" />
-        <signal name="XLXN_25" />
-        <signal name="XLXN_26" />
-        <signal name="XLXN_27" />
-        <signal name="XLXN_29" />
         <signal name="S" />
-        <signal name="XLXN_31" />
-        <signal name="XLXN_32" />
         <signal name="O(3:0)" />
         <signal name="O(0)" />
         <signal name="O(1)" />
@@ -41,7 +27,7 @@
         <port polarity="Input" name="D1(3:0)" />
         <port polarity="Input" name="Enable" />
         <port polarity="Input" name="S" />
-        <port polarity="Input" name="O(3:0)" />
+        <port polarity="Output" name="O(3:0)" />
         <blockdef name="m2_1e">
             <timestamp>2000-1-1T10:10:10</timestamp>
             <line x2="96" y1="-96" y2="-96" x1="0" />
